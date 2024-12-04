@@ -25,6 +25,10 @@ public class MovementController : MonoBehaviour
     [SerializeField] float dashForce;
     [SerializeField] AnimationCurve dashCurve;
 
+    //Debug Area
+    [SerializeField] GameObject debugPrefab;
+    [SerializeField] float spawnDistance;
+
     void Awake()
     {
         playerRigidbody = GetComponent<Rigidbody>();
@@ -77,11 +81,18 @@ public class MovementController : MonoBehaviour
     public void Dash(InputAction.CallbackContext _callbackContext)
     {
         if (!_callbackContext.started || !(dashCooldownTimer <= 0)) return;
-        
+
         dashDirection = transform.TransformDirection(moveInput.x, 0, moveInput.y).normalized;
         if (dashDirection == Vector3.zero) dashDirection = transform.forward;
         dashTime = dashDuration;
         dashCooldownTimer = dashCooldown;
         playerRigidbody.AddForce(dashDirection * dashForce, ForceMode.Impulse);
+    }
+
+    public void Fire(InputAction.CallbackContext _callbackContext)
+    {
+        if (!_callbackContext.started) return;
+        var instance = Instantiate(debugPrefab, playerCamera.transform.position + playerCamera.transform.forward * spawnDistance, playerCamera.transform.rotation);
+        instance.GetComponent<Rigidbody>().AddForce(playerCamera.transform.forward * 50, ForceMode.Impulse);
     }
 }
