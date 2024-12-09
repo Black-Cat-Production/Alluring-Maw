@@ -29,6 +29,10 @@ public class MovementController : MonoBehaviour
     
     [SerializeField] float spawnDistance;
 
+    //Debug Area
+    [SerializeField] GameObject debugPrefab;
+    [SerializeField] float spawnDistance;
+
     void Awake()
     {
         skillSelector = GetComponent<SkillSelector>();
