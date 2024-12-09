@@ -243,6 +243,7 @@ GameObject:
   - component: {fileID: 829835247}
   - component: {fileID: 829835245}
   - component: {fileID: 829835244}
+  - component: {fileID: 829835252}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -320,8 +321,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  debugPrefab: {fileID: 6358866230775880048, guid: e1a9740e36f91b84dae093be009170e6,
-    type: 3}
   spawnDistance: 1
 --- !u!114 &829835247
 MonoBehaviour:
@@ -413,6 +412,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: a62c313e-1e33-4309-b917-e82828db93f9
     m_ActionName: Player/Dash[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 829835245}
+        m_TargetAssemblyTypeName: MovementController, Assembly-CSharp
+        m_MethodName: ChangeSkill
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: d76f2bae-0ed1-4584-a65b-56a6211730ad
+    m_ActionName: Player/SelectSkill[/Mouse/scroll/y]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -507,6 +522,22 @@ Transform:
   - {fileID: 1706076581}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 13.118, z: 0}
+--- !u!114 &829835252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829835243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a24a196d05fd415da752125e91d85714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availableSkills:
+  - {fileID: -4000970847017838827, guid: e1a9740e36f91b84dae093be009170e6, type: 3}
+  - {fileID: -4000970847017838827, guid: db25e8e57c857b44ab50d801926a1217, type: 3}
+  - {fileID: -4000970847017838827, guid: 05cc2294f22be0a4fbb870fc3dc0afc5, type: 3}
 --- !u!1 &1145182734
 GameObject:
   m_ObjectHideFlags: 0

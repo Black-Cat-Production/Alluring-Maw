@@ -3,7 +3,7 @@ using UnityEngine;
 using LL_Unity_Utils.Timers;
 namespace Lukas.Scripts.Core
 {
-    public class Projectile : MonoBehaviour
+    public class Projectile : Skill
     {
         [SerializeField] float despawnTimerDuration;
 
