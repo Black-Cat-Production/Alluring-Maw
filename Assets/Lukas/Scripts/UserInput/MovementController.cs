@@ -1,3 +1,4 @@
+using Lukas.Scripts.Core.Skills;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Networking;
@@ -10,6 +11,7 @@ public class MovementController : MonoBehaviour
     Vector3 dashDirection;
     Vector3 currentDashVelocity;
     Rigidbody playerRigidbody;
+    SkillSelector skillSelector;
 
     float xRotation;
 
@@ -24,6 +26,8 @@ public class MovementController : MonoBehaviour
     [SerializeField] float dashCooldown = 1f;
     [SerializeField] float dashForce;
     [SerializeField] AnimationCurve dashCurve;
+    
+    [SerializeField] float spawnDistance;
 
     //Debug Area
     [SerializeField] GameObject debugPrefab;
@@ -31,6 +35,7 @@ public class MovementController : MonoBehaviour
 
     void Awake()
     {
+        skillSelector = GetComponent<SkillSelector>();
         playerRigidbody = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
         dashCurve ??= AnimationCurve.EaseInOut(0, 1, 1, 0);
@@ -89,10 +94,20 @@ public class MovementController : MonoBehaviour
         playerRigidbody.AddForce(dashDirection * dashForce, ForceMode.Impulse);
     }
 
+    public void ChangeSkill(InputAction.CallbackContext _callbackContext)
+    {
+        if (_callbackContext.phase != InputActionPhase.Started) return;
+        float scrollDirection = _callbackContext.ReadValue<float>();
+        Debug.Log(scrollDirection);
+        if(scrollDirection > 0) skillSelector.UpdateSelectedSkill(1);
+        else skillSelector.UpdateSelectedSkill(-1);
+        Debug.Log(skillSelector.CurrentSelectedSkill.name);
+    }
+
     public void Fire(InputAction.CallbackContext _callbackContext)
     {
         if (!_callbackContext.started) return;
-        var instance = Instantiate(debugPrefab, playerCamera.transform.position + playerCamera.transform.forward * spawnDistance, playerCamera.transform.rotation);
+        var instance = Instantiate(skillSelector.CurrentSelectedSkill, playerCamera.transform.position + playerCamera.transform.forward * spawnDistance, playerCamera.transform.rotation);
         instance.GetComponent<Rigidbody>().AddForce(playerCamera.transform.forward * 50, ForceMode.Impulse);
     }
 }
