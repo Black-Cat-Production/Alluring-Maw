@@ -26,8 +26,6 @@ public class MovementController : MonoBehaviour
     [SerializeField] float dashCooldown = 1f;
     [SerializeField] float dashForce;
     [SerializeField] AnimationCurve dashCurve;
-    
-    [SerializeField] float spawnDistance;
 
     //Debug Area
     [SerializeField] GameObject debugPrefab;
