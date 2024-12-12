@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using Lukas.Scripts.Core;
+using Lukas.Scripts.Core.KI;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -26,6 +26,8 @@ public class RoomSpawner : MonoBehaviour
         if (spawnedEnemies.Count != 0) return;
         Destroy(door.gameObject);
         Debug.Log("Room Cleared");
+        //I dont know if this is good, will see, depending on SpawnerFunctions
+        Destroy(gameObject);
     }
 
     Enemy SpawnEnemy()
