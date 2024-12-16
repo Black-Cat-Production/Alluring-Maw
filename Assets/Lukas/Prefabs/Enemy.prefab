@@ -134,6 +134,9 @@ MonoBehaviour:
   idleDuration: 0.75
   PatrolRange: 3
   PatrolPointDistanceThreshhold: 1
+  attackCooldown: 1
+  attackRange: 2
+  player: {fileID: 0}
 --- !u!136 &8631193644574395239
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -171,7 +174,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0.5
+  m_StoppingDistance: 1.75
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1

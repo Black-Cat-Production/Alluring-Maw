@@ -1560,6 +1560,7 @@ GameObject:
   - component: {fileID: 829835245}
   - component: {fileID: 829835244}
   - component: {fileID: 829835252}
+  - component: {fileID: 829835253}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -1832,7 +1833,7 @@ Transform:
   m_GameObject: {fileID: 829835243}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.11422818, z: -0, w: 0.9934545}
-  m_LocalPosition: {x: 1.959, y: 1.031, z: -15.8}
+  m_LocalPosition: {x: 1.959, y: 1.031, z: -42.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1855,6 +1856,22 @@ MonoBehaviour:
   - {fileID: -4000970847017838827, guid: e1a9740e36f91b84dae093be009170e6, type: 3}
   - {fileID: -4000970847017838827, guid: db25e8e57c857b44ab50d801926a1217, type: 3}
   - {fileID: -4000970847017838827, guid: 05cc2294f22be0a4fbb870fc3dc0afc5, type: 3}
+--- !u!114 &829835253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829835243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ae9a864e5a248a4918584e31aefdf63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 500
+  OnDeathEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &845251750
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2339,7 +2356,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 98183dc0c517e4b42b54eb463376a13e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.023768902
+      value: 0.023769379
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 98183dc0c517e4b42b54eb463376a13e,
         type: 3}
@@ -2521,9 +2538,9 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
+  m_VoxelSize: 0.083333336
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: e53ddc3b4aa57b644861bf4ee0e3667e, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1099079494 stripped
 GameObject:
@@ -3950,7 +3967,7 @@ Transform:
   m_GameObject: {fileID: 1503081056}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.9762306, y: 3.3865333, z: -6.6986494}
+  m_LocalPosition: {x: 1.957, y: 3.3865333, z: -6.6986494}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4721,7 +4738,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4629f303dd56d5d42bef3228bf6027df,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.0237689
+      value: 1.0237694
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4629f303dd56d5d42bef3228bf6027df,
         type: 3}
@@ -4867,9 +4884,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4674795a007e65845b526d270843f0b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 6106210285313226886, guid: 3f31a8bd4d8479843b04488e2e4c6100,
-    type: 3}
-  spawnAmount: 3
+  enemyAIModulePrefab: {fileID: 0}
+  spawnAmount: 1
   door: {fileID: 1503081056}
 --- !u!4 &1880767920
 Transform:
@@ -4880,7 +4896,7 @@ Transform:
   m_GameObject: {fileID: 1880767918}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.77146, y: 3.56, z: 2.4913824}
+  m_LocalPosition: {x: 0.81, y: 1.04, z: -8.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

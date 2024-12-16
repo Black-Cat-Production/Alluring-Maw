@@ -17,6 +17,8 @@ namespace Lukas.Scripts.Core.KI
         [SerializeField] float idleDuration;
         [SerializeField] float PatrolRange;
         [SerializeField] float PatrolPointDistanceThreshhold;
+        [SerializeField] float attackCooldown;
+        [SerializeField] float attackRange;
 
         TargetComponent targetComponent;
         TargetComponent idleTargetComponent;
@@ -24,6 +26,11 @@ namespace Lukas.Scripts.Core.KI
         IdleState idleState;
         NavMeshAgent agent;
         Vector3 patrolRadiusCenter;
+        
+        float distanceToTarget => Vector3.Distance(transform.position, targetComponent.TargetPosition);
+        
+        
+        GameObject player;
 
         void Awake()
         {
@@ -37,6 +44,9 @@ namespace Lukas.Scripts.Core.KI
             idleState = new IdleState(idleTimer, agent);
             State chaseState = new WalkToPointState(agent, targetComponent);
             State patrolState = new PatrolState(agent, idleTargetComponent, RecalculatePatrolPoint);
+            //DEBUG TESTING AREA. NEEDS TO GO
+            player = GameObject.Find("Player");
+            State attackState = new AttackState(player, new Timer(attackCooldown));
             
             //Setup StateMachine
             stateMachine = new StateMachine(idleState,gameObject,true);
@@ -44,6 +54,8 @@ namespace Lukas.Scripts.Core.KI
             //Setup Transitions
             var anyToChase = new Transition(chaseState, FindTarget);
             var chaseToIdle = new Transition(idleState,()=> !FindTarget());
+            var chaseToAttack = new Transition(attackState, () => distanceToTarget < attackRange);
+            var attackToChase = new Transition(chaseState, () => distanceToTarget > attackRange);
             var idleToPatrol = new Transition(patrolState, () => idleState.IsTimerFinished == true);
             var movingToIdle = new Transition(idleState, () => agent.remainingDistance < agent.stoppingDistance);
             
@@ -51,10 +63,13 @@ namespace Lukas.Scripts.Core.KI
             idleState.AddTransition(anyToChase);
             idleState.AddTransition(idleToPatrol);
             
+            chaseState.AddTransition(chaseToAttack);
             chaseState.AddTransition(chaseToIdle);
 
             patrolState.AddTransition(anyToChase);
             patrolState.AddTransition(movingToIdle);
+            
+            attackState.AddTransition(attackToChase);
         }
 
         void FixedUpdate()
