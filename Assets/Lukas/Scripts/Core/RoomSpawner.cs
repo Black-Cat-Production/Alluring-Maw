@@ -6,15 +6,15 @@ using Random = UnityEngine.Random;
 
 public class RoomSpawner : MonoBehaviour
 {
-    [SerializeField] Enemy enemyPrefab;
+    [SerializeField] EnemyAIModule enemyAIModulePrefab;
     [SerializeField] int spawnAmount;
     [SerializeField] GameObject door;
 
-    List<Enemy> spawnedEnemies;
+    List<EnemyAIModule> spawnedEnemies;
 
     void Awake()
     {
-        spawnedEnemies = new List<Enemy>();
+        spawnedEnemies = new List<EnemyAIModule>();
         for (int i = 0; i < spawnAmount; i++)
         {
             spawnedEnemies.Add(SpawnEnemy());
@@ -30,18 +30,18 @@ public class RoomSpawner : MonoBehaviour
         Destroy(gameObject);
     }
 
-    Enemy SpawnEnemy()
+    EnemyAIModule SpawnEnemy()
     {
         var randomPos = Random.insideUnitSphere * 5;
         var instantiatePos = new Vector3(randomPos.x, 0, randomPos.z);
         instantiatePos += new Vector3(transform.position.x, 1, transform.position.z);
-        var spawnedEnemy = Instantiate(enemyPrefab, instantiatePos, Quaternion.identity);
+        var spawnedEnemy = Instantiate(enemyAIModulePrefab, instantiatePos, Quaternion.identity);
         spawnedEnemy.SetSpawner(this);
         return spawnedEnemy;
     }
 
-    public void EnemyDied(Enemy _enemy)
+    public void EnemyDied(EnemyAIModule _enemyAIModule)
     {
-        spawnedEnemies.Remove(_enemy);
+        spawnedEnemies.Remove(_enemyAIModule);
     }
 }

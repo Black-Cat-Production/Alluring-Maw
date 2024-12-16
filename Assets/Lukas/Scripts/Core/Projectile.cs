@@ -25,7 +25,7 @@ namespace Lukas.Scripts.Core
 
         void OnCollisionEnter(Collision _hit)
         {
-            if(_hit.gameObject.TryGetComponent(out HealthSystem healthSystem))
+            if(_hit.gameObject.TryGetComponent(out HealthSystemModule healthSystem))
             {
                 healthSystem.TakeDamage(damageValue);
             }

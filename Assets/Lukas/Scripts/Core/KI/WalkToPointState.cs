@@ -19,6 +19,7 @@ namespace Lukas.Scripts.Core.KI
         public override void StateEnter()
         {
             agent.transform.LookAt(target.TargetPosition);
+            agent.SetDestination(target.TargetPosition);
         }
 
         public override void StateExit()

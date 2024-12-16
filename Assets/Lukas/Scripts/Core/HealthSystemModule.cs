@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 namespace Lukas.Scripts.Core
 {
-    public class HealthSystem : MonoBehaviour
+    public class HealthSystemModule : MonoBehaviour
     {
         [SerializeField] float maxHealth;
         float currentHealth;

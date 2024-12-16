@@ -1,0 +1,106 @@
+﻿using LL_Unity_Utils.Misc;
+using LL_Unity_Utils.Timers;
+using UnityEngine;
+using UnityEngine.AI;
+
+namespace Lukas.Scripts.Core.KI
+{
+    [RequireComponent(typeof(HealthSystemModule))]
+    public class EnemyAIModule : MonoBehaviour
+    {
+        HealthSystemModule healthSystemModule;
+
+        RoomSpawner spawner;
+
+        [SerializeField] float searchRadius;
+        [SerializeField] LayerMask detectionMask;
+        [SerializeField] float idleDuration;
+        [SerializeField] float PatrolRange;
+        [SerializeField] float PatrolPointDistanceThreshhold;
+
+        TargetComponent targetComponent;
+        TargetComponent idleTargetComponent;
+        StateMachine stateMachine;
+        IdleState idleState;
+        NavMeshAgent agent;
+        Vector3 patrolRadiusCenter;
+
+        void Awake()
+        {
+            patrolRadiusCenter = transform.position;
+            targetComponent = new TargetComponent();
+            idleTargetComponent = new TargetComponent();
+            agent = GetComponent<NavMeshAgent>();
+            healthSystemModule = GetComponent<HealthSystemModule>();
+            var idleTimer = new Timer(idleDuration);
+            //State Creation
+            idleState = new IdleState(idleTimer, agent);
+            State chaseState = new WalkToPointState(agent, targetComponent);
+            State patrolState = new PatrolState(agent, idleTargetComponent, RecalculatePatrolPoint);
+            
+            //Setup StateMachine
+            stateMachine = new StateMachine(idleState,gameObject,true);
+            
+            //Setup Transitions
+            var anyToChase = new Transition(chaseState, FindTarget);
+            var chaseToIdle = new Transition(idleState,()=> !FindTarget());
+            var idleToPatrol = new Transition(patrolState, () => idleState.IsTimerFinished == true);
+            var movingToIdle = new Transition(idleState, () => agent.remainingDistance < agent.stoppingDistance);
+            
+            //Link Transitions
+            idleState.AddTransition(anyToChase);
+            idleState.AddTransition(idleToPatrol);
+            
+            chaseState.AddTransition(chaseToIdle);
+
+            patrolState.AddTransition(anyToChase);
+            patrolState.AddTransition(movingToIdle);
+        }
+
+        void FixedUpdate()
+        {
+            stateMachine.CheckSwapState();
+        }
+
+        public void Die()
+        {
+            spawner.EnemyDied(this);
+            Destroy(gameObject);
+        }
+
+        public void SetSpawner(RoomSpawner _spawner)
+        {
+            spawner = _spawner;
+        }
+
+        bool FindTarget()
+        {
+            var overlap = Physics.OverlapSphere(transform.position, searchRadius, detectionMask);
+            if (overlap.Length > 0)
+            {
+                targetComponent.SetTarget(overlap[0].transform);
+                return true;
+            }
+
+            return false;
+        }
+        
+        void RecalculatePatrolPoint()
+        {
+            Vector3 randomPoint;
+            do
+            {
+                var unitSphere = Random.insideUnitSphere * PatrolRange;
+                randomPoint = new Vector3(unitSphere.x, 0, unitSphere.z);
+                randomPoint += patrolRadiusCenter;
+            } while (!NavMesh.SamplePosition(randomPoint, out _, agent.radius * 2, agent.areaMask) || Vector3.Distance(transform.position, randomPoint) < PatrolPointDistanceThreshhold);
+
+            idleTargetComponent.SetPoint(randomPoint);
+        }
+        
+        void OnValidate()
+        {
+            PatrolPointDistanceThreshhold = Mathf.Clamp(PatrolPointDistanceThreshhold, 1, PatrolRange - 1);
+        }
+    }
+}
