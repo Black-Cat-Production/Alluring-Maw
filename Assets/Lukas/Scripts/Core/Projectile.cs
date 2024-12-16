@@ -6,13 +6,11 @@ namespace Lukas.Scripts.Core
     public class Projectile : Skill
     {
         [SerializeField] float despawnTimerDuration;
-
         Timer despawnTimer;
-        
         //Only for debugging
-        [SerializeField] int damageValue;
+        [SerializeField] int hitDamageValue;
         
-        void Awake()
+        protected virtual void Awake()
         {
             despawnTimer = new Timer(despawnTimerDuration);
             despawnTimer.StartTimer();
@@ -23,11 +21,16 @@ namespace Lukas.Scripts.Core
             if(despawnTimer.CheckTimer()) Destroy(gameObject);
         }
 
+        protected virtual void ApplyToTarget(HealthSystemModule _target)
+        {
+            _target.TakeDamage(hitDamageValue);
+        }
+
         void OnCollisionEnter(Collision _hit)
         {
             if(_hit.gameObject.TryGetComponent(out HealthSystemModule healthSystem))
             {
-                healthSystem.TakeDamage(damageValue);
+                ApplyToTarget(healthSystem);
             }
             Destroy(gameObject);
         }

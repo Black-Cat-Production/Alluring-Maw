@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Skill : MonoBehaviour, ISkill
+public abstract class Skill : MonoBehaviour, ISkill
 {
+   public string SkillName;
 }

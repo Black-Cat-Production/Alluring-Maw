@@ -96,10 +96,9 @@ public class MovementController : MonoBehaviour
     {
         if (_callbackContext.phase != InputActionPhase.Started) return;
         float scrollDirection = _callbackContext.ReadValue<float>();
-        Debug.Log(scrollDirection);
         if(scrollDirection > 0) skillSelector.UpdateSelectedSkill(1);
         else skillSelector.UpdateSelectedSkill(-1);
-        Debug.Log(skillSelector.CurrentSelectedSkill.name);
+        Debug.Log(skillSelector.CurrentSelectedSkill.SkillName);
     }
 
     public void Fire(InputAction.CallbackContext _callbackContext)

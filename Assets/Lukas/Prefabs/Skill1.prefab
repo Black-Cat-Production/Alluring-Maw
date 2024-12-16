@@ -146,5 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1df3e4f3b2c4c018413116684e54d0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SkillName: Default Skill
   despawnTimerDuration: 5
   damageValue: 5

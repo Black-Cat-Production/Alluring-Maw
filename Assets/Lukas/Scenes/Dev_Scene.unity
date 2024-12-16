@@ -1833,7 +1833,7 @@ Transform:
   m_GameObject: {fileID: 829835243}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.11422818, z: -0, w: 0.9934545}
-  m_LocalPosition: {x: 1.959, y: 1.031, z: -42.92}
+  m_LocalPosition: {x: -4.79, y: 1.031, z: -16.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1855,7 +1855,7 @@ MonoBehaviour:
   availableSkills:
   - {fileID: -4000970847017838827, guid: e1a9740e36f91b84dae093be009170e6, type: 3}
   - {fileID: -4000970847017838827, guid: db25e8e57c857b44ab50d801926a1217, type: 3}
-  - {fileID: -4000970847017838827, guid: 05cc2294f22be0a4fbb870fc3dc0afc5, type: 3}
+  - {fileID: 3601469147373110378, guid: 05cc2294f22be0a4fbb870fc3dc0afc5, type: 3}
 --- !u!114 &829835253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3345,6 +3345,50 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1908559742721855743, guid: 891dbe5ebc77bdf46b99d3f1732dcb66, type: 3}
+--- !u!1 &1283150442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1283150444}
+  - component: {fileID: 1283150443}
+  m_Layer: 0
+  m_Name: EffectRunner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1283150443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283150442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff3620a836f84cb7808ab5ff6a9ff9ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1283150444
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283150442}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.707678, y: -10.328122, z: -10.701937}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1289403768 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 084cef758a4f85f44b5c66bb9d87acee,
@@ -4884,7 +4928,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4674795a007e65845b526d270843f0b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyAIModulePrefab: {fileID: 0}
+  enemyAIModulePrefab: {fileID: 6106210285313226886, guid: 3f31a8bd4d8479843b04488e2e4c6100,
+    type: 3}
   spawnAmount: 1
   door: {fileID: 1503081056}
 --- !u!4 &1880767920
@@ -5859,3 +5904,4 @@ SceneRoots:
   - {fileID: 2125629286}
   - {fileID: 1503081057}
   - {fileID: 357624517}
+  - {fileID: 1283150444}

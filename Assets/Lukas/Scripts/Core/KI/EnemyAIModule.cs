@@ -1,5 +1,6 @@
 ﻿using LL_Unity_Utils.Misc;
 using LL_Unity_Utils.Timers;
+using Lukas.Scripts.Core.Skills.Effects;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -39,6 +40,7 @@ namespace Lukas.Scripts.Core.KI
             idleTargetComponent = new TargetComponent();
             agent = GetComponent<NavMeshAgent>();
             healthSystemModule = GetComponent<HealthSystemModule>();
+            healthSystemModule.RegisterEffectHandler(EffectType.DamageOverTime, new DamageOverTimeHandler());
             var idleTimer = new Timer(idleDuration);
             //State Creation
             idleState = new IdleState(idleTimer, agent);
@@ -49,7 +51,7 @@ namespace Lukas.Scripts.Core.KI
             State attackState = new AttackState(player, new Timer(attackCooldown));
             
             //Setup StateMachine
-            stateMachine = new StateMachine(idleState,gameObject,true);
+            stateMachine = new StateMachine(idleState,gameObject,false);
             
             //Setup Transitions
             var anyToChase = new Transition(chaseState, FindTarget);

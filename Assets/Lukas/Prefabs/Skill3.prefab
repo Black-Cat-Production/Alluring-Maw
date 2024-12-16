@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2876733034307259094}
   - component: {fileID: 4148998474975177640}
   - component: {fileID: 3749685564224631242}
-  - component: {fileID: -4000970847017838827}
+  - component: {fileID: 3601469147373110378}
   m_Layer: 0
   m_Name: Skill3
   m_TagString: Untagged
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 1931a5158a1821c47a18f011eaeabe23, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -134,7 +134,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-4000970847017838827
+--- !u!114 &3601469147373110378
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,8 +143,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6358866230775880048}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1df3e4f3b2c4c018413116684e54d0e, type: 3}
+  m_Script: {fileID: 11500000, guid: f1c23ca7538a4f8c885694e7b4f7c826, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  despawnTimerDuration: 5
-  damageValue: 5
+  SkillName: Poison Projectile
+  despawnTimerDuration: 1
+  hitDamageValue: 1
