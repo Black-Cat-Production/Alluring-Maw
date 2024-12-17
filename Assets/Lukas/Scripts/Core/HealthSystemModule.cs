@@ -1,5 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
 using Lukas.Scripts.Core.Skills.Effects;
 using UnityEngine;
 using UnityEngine.Events;
@@ -24,8 +24,17 @@ namespace Lukas.Scripts.Core
 
         public void AddEffect(Effect _effect)
         {
-            activeEffects.Add(_effect);
-            Debug.Log($"Added effect: {_effect.Name} to enemy {gameObject.name}!");
+            var existingEffect = activeEffects.FirstOrDefault((_checkedEffect) => _checkedEffect.Name == _effect.Name);
+            if (existingEffect != null)
+            {
+                existingEffect.Duration = _effect.Duration;
+                Debug.Log($"Refreshed effect: {_effect.Name} on enemy {gameObject.name}!");
+            }
+            else
+            {
+                activeEffects.Add(_effect);
+                Debug.Log($"Added effect: {_effect.Name} to enemy {gameObject.name}!");
+            }
         }
 
         public void RegisterEffectHandler(EffectType _type, IEffectHandler _handler)
@@ -46,7 +55,7 @@ namespace Lukas.Scripts.Core
                 effect.Duration -= Time.deltaTime;
 
                 if (effectHandlers.TryGetValue(effect.Type, out var handler)) handler.ApplyEffect(this, effect);
-                
+
                 if (effect.Duration <= 0) activeEffects.RemoveAt(i);
             }
         }

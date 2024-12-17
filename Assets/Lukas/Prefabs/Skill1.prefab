@@ -147,5 +147,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SkillName: Default Skill
+  ShootingSpeed: 50
   despawnTimerDuration: 5
-  damageValue: 5
+  hitDamageValue: 5

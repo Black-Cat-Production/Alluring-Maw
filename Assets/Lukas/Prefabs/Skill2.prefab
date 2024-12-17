@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2876733034307259094}
   - component: {fileID: 4148998474975177640}
   - component: {fileID: 3749685564224631242}
-  - component: {fileID: -4000970847017838827}
+  - component: {fileID: 268409246096098221}
   m_Layer: 0
   m_Name: Skill2
   m_TagString: Untagged
@@ -31,8 +31,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.396, y: 2.171, z: 1.754}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 0.01, z: 0.05}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -101,12 +101,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 128
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 3.7482262, z: 1.877389}
+  m_Center: {x: 0, y: 0.24838448, z: 0.048794746}
 --- !u!54 &3749685564224631242
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -126,15 +126,15 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &-4000970847017838827
+  m_Constraints: 112
+  m_CollisionDetection: 2
+--- !u!114 &268409246096098221
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,9 +143,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6358866230775880048}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1df3e4f3b2c4c018413116684e54d0e, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d1bac2d9d9b47fba030114335452ebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SkillName: Red Skill
+  SkillName: RedArc
+  ShootingSpeed: 30
   despawnTimerDuration: 5
-  damageValue: 5
+  hitDamageValue: 2
+  environmentLayer:
+    serializedVersion: 2
+    m_Bits: 64

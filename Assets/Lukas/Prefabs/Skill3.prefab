@@ -147,5 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SkillName: Poison Projectile
+  ShootingSpeed: 30
+  effectData: {fileID: 11400000, guid: 6a1595061d3363240b60986e49d254b2, type: 2}
   despawnTimerDuration: 1
   hitDamageValue: 1
