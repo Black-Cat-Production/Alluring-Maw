@@ -106,7 +106,5 @@ public class MovementController : MonoBehaviour
     {
         if (!_callbackContext.started) return;
         skillController.CastSkill(playerCamera,spawnDistance);
-        //var instance = Instantiate(skillSelector.CurrentSelectedSkill, playerCamera.transform.position + playerCamera.transform.forward * spawnDistance, playerCamera.transform.rotation);
-        //instance.GetComponent<Rigidbody>().AddForce(playerCamera.transform.forward * skillSelector.CurrentSelectedSkill.ShootingSpeed, ForceMode.Impulse);
     }
 }

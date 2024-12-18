@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace Lukas.Scripts.Core.Skills
@@ -25,7 +23,7 @@ namespace Lukas.Scripts.Core.Skills
             if (currentIndex < 0) currentIndex = availableSkills.Count - 1;
             else if (currentIndex > availableSkills.Count - 1) currentIndex = 0;
             skillController.SetSkill(availableSkills[currentIndex]);
-            Debug.Log(skillController.SelectedSkill.SkillName);
+            Debug.Log(availableSkills[currentIndex].SkillName);
         }
     }
 }

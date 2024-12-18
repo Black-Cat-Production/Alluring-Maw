@@ -4,5 +4,4 @@ using UnityEngine;
 
 public interface ISkill
 {
-    public string SkillName { get; protected set; }
 }
