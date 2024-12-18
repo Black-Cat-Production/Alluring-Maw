@@ -8,4 +8,10 @@ public abstract class Skill : MonoBehaviour, ISkill
    public string SkillName;
    public int ShootingSpeed;
    [SerializeField] protected EffectData effectData;
+
+   string ISkill.SkillName
+   {
+      get => SkillName;
+      set => throw new System.NotImplementedException();
+   }
 }

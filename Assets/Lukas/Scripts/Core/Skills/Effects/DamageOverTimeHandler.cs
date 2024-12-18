@@ -21,7 +21,7 @@ namespace Lukas.Scripts.Core.Skills.Effects
             {
                 _target.TakeDamage(_effect.Intensity);
                 float waitTime = Mathf.Min(_effect.TickInterval, _effect.Duration);
-                yield return new WaitForSeconds(_effect.TickInterval);
+                yield return new WaitForSeconds(waitTime);
             }
 
             _effect.IsRunning = false;

@@ -98,13 +98,12 @@ public class MovementController : MonoBehaviour
         float scrollDirection = _callbackContext.ReadValue<float>();
         if(scrollDirection > 0) skillSelector.UpdateSelectedSkill(1);
         else skillSelector.UpdateSelectedSkill(-1);
-        Debug.Log(skillSelector.CurrentSelectedSkill.SkillName);
     }
 
     public void Fire(InputAction.CallbackContext _callbackContext)
     {
         if (!_callbackContext.started) return;
-        var instance = Instantiate(skillSelector.CurrentSelectedSkill, playerCamera.transform.position + playerCamera.transform.forward * spawnDistance, playerCamera.transform.rotation);
-        instance.GetComponent<Rigidbody>().AddForce(playerCamera.transform.forward * skillSelector.CurrentSelectedSkill.ShootingSpeed, ForceMode.Impulse);
+        //var instance = Instantiate(skillSelector.CurrentSelectedSkill, playerCamera.transform.position + playerCamera.transform.forward * spawnDistance, playerCamera.transform.rotation);
+        //instance.GetComponent<Rigidbody>().AddForce(playerCamera.transform.forward * skillSelector.CurrentSelectedSkill.ShootingSpeed, ForceMode.Impulse);
     }
 }
