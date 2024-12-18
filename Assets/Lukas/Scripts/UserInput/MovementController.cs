@@ -12,6 +12,7 @@ public class MovementController : MonoBehaviour
     Vector3 currentDashVelocity;
     Rigidbody playerRigidbody;
     SkillSelector skillSelector;
+    SkillController skillController;
 
     float xRotation;
 
@@ -34,6 +35,7 @@ public class MovementController : MonoBehaviour
     void Awake()
     {
         skillSelector = GetComponent<SkillSelector>();
+        skillController = GetComponent<SkillController>();
         playerRigidbody = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
         dashCurve ??= AnimationCurve.EaseInOut(0, 1, 1, 0);
@@ -103,6 +105,7 @@ public class MovementController : MonoBehaviour
     public void Fire(InputAction.CallbackContext _callbackContext)
     {
         if (!_callbackContext.started) return;
+        skillController.CastSkill(playerCamera,spawnDistance);
         //var instance = Instantiate(skillSelector.CurrentSelectedSkill, playerCamera.transform.position + playerCamera.transform.forward * spawnDistance, playerCamera.transform.rotation);
         //instance.GetComponent<Rigidbody>().AddForce(playerCamera.transform.forward * skillSelector.CurrentSelectedSkill.ShootingSpeed, ForceMode.Impulse);
     }
