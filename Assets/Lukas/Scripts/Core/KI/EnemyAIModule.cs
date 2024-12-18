@@ -15,6 +15,7 @@ namespace Lukas.Scripts.Core.KI
 
         [SerializeField] float searchRadius;
         [SerializeField] LayerMask detectionMask;
+        [SerializeField] LayerMask obstructionMask;
         [SerializeField] float idleDuration;
         [SerializeField] float PatrolRange;
         [SerializeField] float PatrolPointDistanceThreshhold;
@@ -93,13 +94,18 @@ namespace Lukas.Scripts.Core.KI
         bool FindTarget()
         {
             var overlap = Physics.OverlapSphere(transform.position, searchRadius, detectionMask);
-            if (overlap.Length > 0)
+            if (overlap.Length > 0 && !DetectObstruction(overlap[0].transform))
             {
                 targetComponent.SetTarget(overlap[0].transform);
                 return true;
             }
 
             return false;
+        }
+
+        bool DetectObstruction(Transform _target)
+        {
+            return Physics.Raycast(transform.position, (_target.position - transform.position).normalized, 10f, obstructionMask);
         }
         
         void RecalculatePatrolPoint()

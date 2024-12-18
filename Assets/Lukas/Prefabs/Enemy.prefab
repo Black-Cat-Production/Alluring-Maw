@@ -131,12 +131,14 @@ MonoBehaviour:
   detectionMask:
     serializedVersion: 2
     m_Bits: 128
+  obstructionMask:
+    serializedVersion: 2
+    m_Bits: 64
   idleDuration: 0.75
   PatrolRange: 3
   PatrolPointDistanceThreshhold: 1
   attackCooldown: 1
   attackRange: 2
-  player: {fileID: 0}
 --- !u!136 &8631193644574395239
 CapsuleCollider:
   m_ObjectHideFlags: 0
