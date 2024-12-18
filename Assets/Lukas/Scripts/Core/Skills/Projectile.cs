@@ -1,8 +1,8 @@
-﻿using System;
+﻿using LL_Unity_Utils.Timers;
+using Lukas.Scripts.Core.Modules;
 using UnityEngine;
-using LL_Unity_Utils.Timers;
 
-namespace Lukas.Scripts.Core
+namespace Lukas.Scripts.Core.Skills
 {
     public class Projectile : Skill
     {

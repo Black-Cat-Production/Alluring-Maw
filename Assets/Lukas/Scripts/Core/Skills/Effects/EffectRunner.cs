@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Lukas.Scripts.Core
+namespace Lukas.Scripts.Core.Skills.Effects
 {
     public class EffectRunner : MonoBehaviour
     {

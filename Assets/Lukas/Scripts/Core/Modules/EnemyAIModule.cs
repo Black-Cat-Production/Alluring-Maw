@@ -1,10 +1,12 @@
 ﻿using LL_Unity_Utils.Misc;
 using LL_Unity_Utils.Timers;
+using Lukas.Scripts.Core.KI;
+using Lukas.Scripts.Core.Rooms;
 using Lukas.Scripts.Core.Skills.Effects;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Lukas.Scripts.Core.KI
+namespace Lukas.Scripts.Core.Modules
 {
     [RequireComponent(typeof(HealthSystemModule))]
     public class EnemyAIModule : MonoBehaviour

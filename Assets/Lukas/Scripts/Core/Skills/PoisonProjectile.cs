@@ -1,4 +1,5 @@
-﻿using Lukas.Scripts.Core.Skills.Effects;
+﻿using Lukas.Scripts.Core.Modules;
+using Lukas.Scripts.Core.Skills.Effects;
 
 namespace Lukas.Scripts.Core.Skills
 {

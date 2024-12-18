@@ -4,7 +4,7 @@ using Lukas.Scripts.Core.Skills.Effects;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Lukas.Scripts.Core
+namespace Lukas.Scripts.Core.Modules
 {
     public class HealthSystemModule : MonoBehaviour
     {
@@ -28,12 +28,12 @@ namespace Lukas.Scripts.Core
             if (existingEffect != null)
             {
                 existingEffect.Duration = _effect.Duration;
-                Debug.Log($"Refreshed effect: {_effect.Name} on enemy {gameObject.name}!");
+                //Debug.Log($"Refreshed effect: {_effect.Name} on enemy {gameObject.name}!");
             }
             else
             {
                 activeEffects.Add(_effect);
-                Debug.Log($"Added effect: {_effect.Name} to enemy {gameObject.name}!");
+                //Debug.Log($"Added effect: {_effect.Name} to enemy {gameObject.name}!");
             }
         }
 
@@ -63,7 +63,6 @@ namespace Lukas.Scripts.Core
         public void TakeDamage(float _damageAmount)
         {
             CurrentHealth = Mathf.Max(0, CurrentHealth - _damageAmount);
-            Debug.Log(CurrentHealth);
             if (CurrentHealth != 0) return;
             isDead = true;
             OnDeathEvent.Invoke();

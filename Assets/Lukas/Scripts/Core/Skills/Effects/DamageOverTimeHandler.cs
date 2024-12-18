@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Lukas.Scripts.Core.Modules;
 using UnityEngine;
 
 namespace Lukas.Scripts.Core.Skills.Effects
