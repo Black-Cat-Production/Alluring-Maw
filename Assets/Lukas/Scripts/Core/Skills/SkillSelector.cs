@@ -5,10 +5,9 @@ namespace Lukas.Scripts.Core.Skills
 {
     public class SkillSelector : MonoBehaviour
     {
-        [SerializeField] List<Skill> availableSkills = new List<Skill>();
-
+        [SerializeField] List<SkillBridgeUnity> availableSkills = new();
         SkillController skillController;
-        
+
 
         void Awake()
         {
@@ -18,7 +17,7 @@ namespace Lukas.Scripts.Core.Skills
 
         public void UpdateSelectedSkill(int _changeDirection)
         {
-            int currentIndex = availableSkills.FindIndex((_a) => _a == (Skill)skillController.SelectedSkill);
+            int currentIndex = availableSkills.FindIndex((_a) => _a == skillController.SelectedSkill);
             currentIndex = currentIndex + _changeDirection;
             if (currentIndex < 0) currentIndex = availableSkills.Count - 1;
             else if (currentIndex > availableSkills.Count - 1) currentIndex = 0;

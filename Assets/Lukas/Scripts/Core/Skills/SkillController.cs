@@ -4,9 +4,8 @@ namespace Lukas.Scripts.Core.Skills
 {
     public class SkillController : MonoBehaviour
     {
-        public ISkill SelectedSkill { get; private set; }
-
-        public void SetSkill(ISkill _skill)
+        public SkillBridgeUnity SelectedSkill { get; private set; }
+        public void SetSkill(SkillBridgeUnity _skill)
         {
             SelectedSkill = _skill;
         }
@@ -20,9 +19,12 @@ namespace Lukas.Scripts.Core.Skills
             }
 
             var cameraTransform = _playerCamera.transform;
-            var selectedSkillMono = (Skill)SelectedSkill;
-            var instance = Instantiate(selectedSkillMono, cameraTransform.position + cameraTransform.forward * _spawnDistance, cameraTransform.rotation);
-            instance.GetComponent<Rigidbody>().AddForce(cameraTransform.transform.forward * selectedSkillMono.ShootingSpeed , ForceMode.Impulse);
+            var instance = Instantiate(SelectedSkill, cameraTransform.position + cameraTransform.forward * _spawnDistance, cameraTransform.rotation);
+            instance.GetComponent<Rigidbody>().AddForce(cameraTransform.transform.forward * 50f, ForceMode.Impulse);
+
+            // var selectedSkillMono = (Skill)SelectedSkill;
+            // var instance = Instantiate(selectedSkillMono, cameraTransform.position + cameraTransform.forward * _spawnDistance, cameraTransform.rotation);
+            // instance.GetComponent<Rigidbody>().AddForce(cameraTransform.transform.forward * selectedSkillMono.ShootingSpeed , ForceMode.Impulse);
         }
     }
 }

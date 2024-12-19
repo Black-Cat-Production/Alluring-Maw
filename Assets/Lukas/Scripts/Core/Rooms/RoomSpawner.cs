@@ -57,6 +57,7 @@ namespace Lukas.Scripts.Core.Rooms
             if (_collider.gameObject.name == "Player")
             {
                 OnRoomEnter.Invoke(this);
+                Debug.Log("Player entered room");
             }
         }
     }

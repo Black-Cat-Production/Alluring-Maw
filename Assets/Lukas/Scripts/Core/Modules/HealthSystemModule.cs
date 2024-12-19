@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Lukas.Scripts.Core.Skills.Effects;
 using UnityEngine;
@@ -19,8 +20,11 @@ namespace Lukas.Scripts.Core.Modules
         public UnityEvent OnDeathEvent;
 
         //Effect Management
-        readonly List<Effect> activeEffects = new List<Effect>();
+        readonly List<Effect> activeEffects = new();
         readonly Dictionary<EffectType, IEffectHandler> effectHandlers = new Dictionary<EffectType, IEffectHandler>();
+        
+        //Damage and Decorator Management
+        public event Func<float, float> OnBeforeTakeDamage;
 
         public void AddEffect(Effect _effect)
         {
@@ -62,6 +66,13 @@ namespace Lukas.Scripts.Core.Modules
 
         public void TakeDamage(float _damageAmount)
         {
+            if (OnBeforeTakeDamage != null)
+            {
+                foreach (var modifier in OnBeforeTakeDamage.GetInvocationList())
+                {
+                    _damageAmount = ((Func<float, float>)modifier).Invoke(_damageAmount);
+                }
+            }
             CurrentHealth = Mathf.Max(0, CurrentHealth - _damageAmount);
             if (CurrentHealth != 0) return;
             isDead = true;

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 8569759464300348227}
   - component: {fileID: 3021342988634603300}
   - component: {fileID: 2876733034307259094}
-  - component: {fileID: 4148998474975177640}
   - component: {fileID: 3749685564224631242}
-  - component: {fileID: 3601469147373110378}
+  - component: {fileID: -8338599243776381739}
+  - component: {fileID: -2151756387830590307}
   m_Layer: 0
   m_Name: Skill3
   m_TagString: Untagged
@@ -86,27 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4148998474975177640
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6358866230775880048}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 128
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &3749685564224631242
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -134,7 +113,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3601469147373110378
+--- !u!114 &-8338599243776381739
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,11 +122,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 6358866230775880048}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1c23ca7538a4f8c885694e7b4f7c826, type: 3}
+  m_Script: {fileID: 11500000, guid: fa93502fb53f4fb3aa2dab9e8528080f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SkillName: Poison Projectile
-  ShootingSpeed: 50
+  skillName: Poison Attack
+  despawnTimerDuration: 5
+  baseSkillHitDamage: 0
+  obstructionLayer:
+    serializedVersion: 2
+    m_Bits: 64
   effectData: {fileID: 11400000, guid: 6a1595061d3363240b60986e49d254b2, type: 2}
-  despawnTimerDuration: 1
-  hitDamageValue: 1
+--- !u!135 &-2151756387830590307
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6358866230775880048}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.56887484
+  m_Center: {x: 0, y: 0, z: -0.068874955}

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 8569759464300348227}
   - component: {fileID: 3021342988634603300}
   - component: {fileID: 2876733034307259094}
-  - component: {fileID: 4148998474975177640}
   - component: {fileID: 3749685564224631242}
-  - component: {fileID: 268409246096098221}
+  - component: {fileID: 3431179757756633822}
+  - component: {fileID: 3792778511690929792}
   m_Layer: 0
   m_Name: Skill2
   m_TagString: Untagged
@@ -86,27 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4148998474975177640
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6358866230775880048}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 128
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 3.7482262, z: 1.877389}
-  m_Center: {x: 0, y: 0.24838448, z: 0.048794746}
 --- !u!54 &3749685564224631242
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -134,7 +113,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
---- !u!114 &268409246096098221
+--- !u!114 &3431179757756633822
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,14 +122,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 6358866230775880048}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d1bac2d9d9b47fba030114335452ebe, type: 3}
+  m_Script: {fileID: 11500000, guid: 9fd7c52e22e84e809db1ec57b62a5bf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SkillName: RedArc
-  ShootingSpeed: 35
-  effectData: {fileID: 0}
+  skillName: Arc Attack
   despawnTimerDuration: 5
-  hitDamageValue: 2
-  environmentLayer:
+  baseSkillHitDamage: 1
+  obstructionLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!135 &3792778511690929792
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6358866230775880048}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
