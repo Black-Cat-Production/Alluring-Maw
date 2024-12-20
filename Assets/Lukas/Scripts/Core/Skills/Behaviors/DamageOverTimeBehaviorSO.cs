@@ -9,12 +9,12 @@ namespace Lukas.Scripts.Core.Skills
     public class DamageOverTimeBehaviorSO : SkillBehaviorSO
     {
         [SerializeField] string specificName;
-        [SerializeField] List<string> tags;
+        [SerializeField] List<ESkillTag> tags;
         [SerializeField] EffectData effectData;
 
         public override string SpecificName => specificName;
 
-        public override List<string> Tags => tags;
+        public override List<ESkillTag> Tags => tags;
 
         public override void Execute(SkillContext _context, ref int _totalDamage)
         {

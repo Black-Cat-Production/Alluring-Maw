@@ -6,10 +6,10 @@ namespace Lukas.Scripts.Core.Skills
     public abstract class SkillBridgeUnity : MonoBehaviour
     {
         [SerializeField] string skillName;
-        [SerializeField] List<string> tags;
+        [SerializeField] List<ESkillTag> tags;
         [SerializeField] protected List<SkillBehaviorSO> behaviors = new();
         public string SkillName => skillName;
-        public List<string> Tags => tags;
+        public List<ESkillTag> Tags => tags;
 
 
         public void AddBehavior(SkillBehaviorSO _behavior)
