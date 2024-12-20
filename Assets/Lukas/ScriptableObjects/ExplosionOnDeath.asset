@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: ExplosionOnDeath
   m_EditorClassIdentifier: 
   specificName: 
-  tags: []
+  tags: 
+  explosionDamage: 5
+  explosionRange: 5

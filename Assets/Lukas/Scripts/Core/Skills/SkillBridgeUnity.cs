@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Lukas.Scripts.Core.Skills
@@ -10,8 +11,6 @@ namespace Lukas.Scripts.Core.Skills
         [SerializeField] protected List<SkillBehaviorSO> behaviors = new();
         public string SkillName => skillName;
         public List<ESkillTag> Tags => tags;
-
-
         public void AddBehavior(SkillBehaviorSO _behavior)
         {
             behaviors.Add(_behavior);
@@ -25,6 +24,11 @@ namespace Lukas.Scripts.Core.Skills
         public bool HasBehavior(SkillBehaviorSO _behavior)
         {
             return behaviors.Contains(_behavior);
+        }
+
+        public void ResetBehaviorList()
+        {
+            behaviors.Clear();
         }
     }
 }

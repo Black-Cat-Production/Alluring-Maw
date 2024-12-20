@@ -126,6 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: Arc Attack
+  tags: 
   behaviors: []
   despawnTimerDuration: 5
   baseSkillHitDamage: 2

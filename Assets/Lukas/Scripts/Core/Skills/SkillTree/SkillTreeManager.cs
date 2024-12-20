@@ -26,6 +26,11 @@ namespace Lukas.Scripts.Core.Skills
             {
                 Destroy(gameObject);
             }
+
+            foreach (var skill in playerSkills)
+            {
+                skill.ResetBehaviorList();
+            }
         }
 
         void UnlockBehavior(SkillTreeNode _skillTreeNode)
