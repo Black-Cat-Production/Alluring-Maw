@@ -17,14 +17,9 @@ namespace Lukas.Scripts.Core.Skills
                 Debug.LogWarning("No skill assigned to SkillController!");
                 return;
             }
-
             var cameraTransform = _playerCamera.transform;
             var instance = Instantiate(SelectedSkill, cameraTransform.position + cameraTransform.forward * _spawnDistance, cameraTransform.rotation);
             instance.GetComponent<Rigidbody>().AddForce(cameraTransform.transform.forward * 50f, ForceMode.Impulse);
-
-            // var selectedSkillMono = (Skill)SelectedSkill;
-            // var instance = Instantiate(selectedSkillMono, cameraTransform.position + cameraTransform.forward * _spawnDistance, cameraTransform.rotation);
-            // instance.GetComponent<Rigidbody>().AddForce(cameraTransform.transform.forward * selectedSkillMono.ShootingSpeed , ForceMode.Impulse);
         }
     }
 }

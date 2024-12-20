@@ -8,24 +8,15 @@ namespace Lukas.Scripts.Core.Skills
 {
     public abstract class GenericSkill<T> : SkillBridgeUnity where T : ISkill
     {
-        public T Skill { get; protected set; }
         [SerializeField] float despawnTimerDuration;
-        [SerializeField] protected float baseSkillHitDamage;
+        [SerializeField] protected int baseSkillHitDamage;
         [SerializeField] protected LayerMask obstructionLayer;
         Timer despawnTimer;
-        protected ISkill skillLogic;
-
-
-        public void Initialize(ISkill _skillLogic)
-        {
-            skillLogic = _skillLogic;
-        }
-
+        
         protected virtual void Awake()
         {
             despawnTimer = new Timer(despawnTimerDuration);
             despawnTimer.StartTimer();
-            skillLogic = Skill;
         }
 
         void FixedUpdate()
@@ -33,11 +24,24 @@ namespace Lukas.Scripts.Core.Skills
             if (despawnTimer.CheckTimer()) Destroy(gameObject);
         }
 
+        protected virtual void Use(Vector3 _startPosition, List<HealthSystemModule> _enemiesInRange)
+        {
+            int totalDamage = baseSkillHitDamage;
+            foreach (var behavior in behaviors)
+            {
+                behavior.Execute(_startPosition, _enemiesInRange, ref totalDamage);
+            }
+
+            if (_enemiesInRange.Count <= 0) return;
+            var target = _enemiesInRange[0];
+            target.TakeDamage(totalDamage);
+        }
+
         public virtual void OnTriggerEnter(Collider _collider)
         {
             if (_collider.TryGetComponent(out HealthSystemModule target))
             {
-                skillLogic.Use(transform.position, new List<HealthSystemModule> { target });
+                Use(transform.position, new List<HealthSystemModule> { target });
             }
 
             Destroy(gameObject);

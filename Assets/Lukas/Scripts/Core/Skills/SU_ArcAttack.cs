@@ -6,12 +6,11 @@ namespace Lukas.Scripts.Core.Skills
 {
     public sealed class SU_ArcAttack : GenericSkill<ArcAttack>
     {
-        protected override void Awake()
-        {
-            Skill = new ArcAttack(name, baseSkillHitDamage);
-            skillLogic = Skill;
-            base.Awake();
-        }
+        //protected override void Awake()
+        //{
+        //    Skill = new ArcAttack(name, baseSkillHitDamage);
+        //    base.Awake();
+        //}
 
         public override void OnTriggerEnter(Collider _collider)
         {
@@ -22,7 +21,7 @@ namespace Lukas.Scripts.Core.Skills
             }
             if (_collider.TryGetComponent(out HealthSystemModule target))
             {
-                skillLogic.Use(transform.position, new List<HealthSystemModule> { target });
+                Use(transform.position, new List<HealthSystemModule> { target });
             }
         }
     }

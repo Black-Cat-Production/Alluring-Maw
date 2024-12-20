@@ -126,6 +126,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: Default Attack
+  behaviors:
+  - {fileID: 11400000, guid: 5b0481119b8b7d3458013eddd47f3f0e, type: 2}
   despawnTimerDuration: 5
   baseSkillHitDamage: 5
   obstructionLayer:

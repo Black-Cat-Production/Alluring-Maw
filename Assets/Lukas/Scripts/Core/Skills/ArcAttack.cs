@@ -20,7 +20,7 @@ namespace Lukas.Scripts.Core.Skills
             {
                 var target = _enemiesInRange[0];
                 target.TakeDamage(Damage);
-                Debug.Log($"{Name} hits for {Damage} damage!");
+                
             }
         }
     }

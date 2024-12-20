@@ -3858,6 +3858,52 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3917748071848355574, guid: 084cef758a4f85f44b5c66bb9d87acee, type: 3}
+--- !u!1 &694753699
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 694753701}
+  - component: {fileID: 694753700}
+  m_Layer: 0
+  m_Name: DebugSkillTreeNode
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &694753700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694753699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e01af61f1eb9412798ec7d678bfc96ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behavior: {fileID: 11400000, guid: a4c1e7c1eb188a647bdd34e476769de8, type: 2}
+  prerequisites: []
+--- !u!4 &694753701
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694753699}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.339829, y: 9.759558, z: -16.31025}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &695998776
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4958,6 +5004,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: d76f2bae-0ed1-4584-a65b-56a6211730ad
     m_ActionName: Player/SelectSkill[/Mouse/scroll/y]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1283150445}
+        m_TargetAssemblyTypeName: Lukas.Scripts.Core.Skills.SkillTreeManager, Assembly-CSharp
+        m_MethodName: DebugUnlock
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7de39bff-559a-4069-909b-a07e321b0310
+    m_ActionName: Player/ActivateDebugBehavior[/Keyboard/p]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -7821,6 +7883,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1283150444}
   - component: {fileID: 1283150443}
+  - component: {fileID: 1283150445}
   m_Layer: 0
   m_Name: EffectRunner
   m_TagString: Untagged
@@ -7855,6 +7918,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1283150445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283150442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80ba193c2aa24bcf9e299d521e971b08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSkills:
+  - {fileID: 279931243049885083, guid: e1a9740e36f91b84dae093be009170e6, type: 3}
+  - {fileID: 3431179757756633822, guid: db25e8e57c857b44ab50d801926a1217, type: 3}
+  - {fileID: -8338599243776381739, guid: 05cc2294f22be0a4fbb870fc3dc0afc5, type: 3}
+  testNodeForDebug: {fileID: 694753700}
 --- !u!1 &1289403768 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 084cef758a4f85f44b5c66bb9d87acee,
@@ -12748,3 +12828,4 @@ SceneRoots:
   - {fileID: 557184862}
   - {fileID: 1747673539}
   - {fileID: 1523762152}
+  - {fileID: 694753701}

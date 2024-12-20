@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Lukas.Scripts.Core.Skills
@@ -7,7 +8,7 @@ namespace Lukas.Scripts.Core.Skills
     {
         [SerializeField] List<SkillBridgeUnity> availableSkills = new();
         SkillController skillController;
-
+        SkillTreeManager skillTreeManager;
 
         void Awake()
         {
