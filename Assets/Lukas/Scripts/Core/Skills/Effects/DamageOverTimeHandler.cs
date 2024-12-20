@@ -20,8 +20,8 @@ namespace Lukas.Scripts.Core.Skills.Effects
             while (_effect.Duration > 0 && !_target.IsDead)
             {
                 _target.TakeDamage(_effect.Intensity);
-                float waitTime = Mathf.Min(_effect.TickInterval, _effect.Duration);
-                yield return new WaitForSeconds(waitTime);
+                if(_target.IsDead && _effect.Context != null) _effect.Context.OnEnemyKilled.Invoke(_target);
+                yield return new WaitForSeconds(_effect.TickInterval);
             }
 
             _effect.IsRunning = false;

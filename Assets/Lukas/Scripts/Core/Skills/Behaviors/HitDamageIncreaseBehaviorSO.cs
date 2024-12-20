@@ -5,8 +5,8 @@ using UnityEngine;
 
 namespace Lukas.Scripts.Core.Skills
 {
-    [CreateAssetMenu(menuName = "Scriptables/Skills/BehaviorSO/HitDamageBehavior")]
-    public class HitDamageBehaviorSO : SkillBehaviorSO
+    [CreateAssetMenu(menuName = "Scriptables/Skills/BehaviorSO/HitDamageIncreaseBehavior")]
+    public class HitDamageIncreaseBehaviorSO : SkillBehaviorSO
     {
         [SerializeField] string specificName;
         [SerializeField] List<string> tags;
@@ -16,7 +16,7 @@ namespace Lukas.Scripts.Core.Skills
 
         public override List<string> Tags => tags;
 
-        public override void Execute(Vector3 _startPosition, List<HealthSystemModule> _enemiesInRange, ref int _totalDamage)
+        public override void Execute(SkillContext _context, ref int _totalDamage)
         {
             _totalDamage += damageIncrease;
         }

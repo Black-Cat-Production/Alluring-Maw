@@ -126,8 +126,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: Poison Attack
+  tags: []
   behaviors:
   - {fileID: 11400000, guid: a4c1e7c1eb188a647bdd34e476769de8, type: 2}
+  - {fileID: 11400000, guid: 00353cf3f38070745aca9fc89a50873c, type: 2}
   despawnTimerDuration: 5
   baseSkillHitDamage: 0
   obstructionLayer:

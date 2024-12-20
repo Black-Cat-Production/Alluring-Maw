@@ -8,6 +8,6 @@ namespace Lukas.Scripts.Core.Skills
     {
         public abstract string SpecificName { get;}
         public abstract List<string> Tags { get;}
-        public abstract void Execute(Vector3 _startPosition, List<HealthSystemModule> _enemiesInRange, ref int _totalDamage);
+        public abstract void Execute(SkillContext _context, ref int _totalDamage);
     }
 }

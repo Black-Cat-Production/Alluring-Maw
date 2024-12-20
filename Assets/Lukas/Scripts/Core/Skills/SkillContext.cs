@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Numerics;
 using Lukas.Scripts.Core.Modules;
+using Lukas.Scripts.Core.Skills.Effects;
+using UnityEngine;
 
 namespace Lukas.Scripts.Core.Skills
 {
@@ -10,12 +11,13 @@ namespace Lukas.Scripts.Core.Skills
         public Vector3 StartingPosition;
         public List<HealthSystemModule> Targets;
         public Action<HealthSystemModule> OnEnemyKilled;
+        public Effect Effect;
 
-        public SkillContext(Vector3 _startingPosition, List<HealthSystemModule> _targets, Action<HealthSystemModule> _onEnemyKilled)
+        public SkillContext(Vector3 _startingPosition, List<HealthSystemModule> _targets, Effect _effect)
         {
             StartingPosition = _startingPosition;
             Targets = _targets;
-            OnEnemyKilled = _onEnemyKilled;
+            Effect = _effect;
         }
 
         public void TriggerEnemyKilled(HealthSystemModule _target)

@@ -24,16 +24,16 @@ namespace Lukas.Scripts.Core.Skills
             if (despawnTimer.CheckTimer()) Destroy(gameObject);
         }
 
-        protected virtual void Use(Vector3 _startPosition, List<HealthSystemModule> _enemiesInRange)
+        protected virtual void Use(SkillContext _context)
         {
             int totalDamage = baseSkillHitDamage;
             foreach (var behavior in behaviors)
             {
-                behavior.Execute(_startPosition, _enemiesInRange, ref totalDamage);
+                behavior.Execute(_context, ref totalDamage);
             }
 
-            if (_enemiesInRange.Count <= 0) return;
-            var target = _enemiesInRange[0];
+            if (_context.Targets.Count <= 0) return;
+            var target = _context.Targets[0];
             target.TakeDamage(totalDamage);
         }
 
@@ -41,7 +41,8 @@ namespace Lukas.Scripts.Core.Skills
         {
             if (_collider.TryGetComponent(out HealthSystemModule target))
             {
-                Use(transform.position, new List<HealthSystemModule> { target });
+                var context = new SkillContext(transform.position, new List<HealthSystemModule> { target }, null);
+                Use(context);
             }
 
             Destroy(gameObject);

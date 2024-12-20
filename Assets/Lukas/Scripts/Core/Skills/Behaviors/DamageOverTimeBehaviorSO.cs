@@ -16,7 +16,7 @@ namespace Lukas.Scripts.Core.Skills
 
         public override List<string> Tags => tags;
 
-        public override void Execute(Vector3 _startPosition, List<HealthSystemModule> _enemiesInRange, ref int _totalDamage)
+        public override void Execute(SkillContext _context, ref int _totalDamage)
         {
             var effect = new Effect
             {
@@ -24,12 +24,14 @@ namespace Lukas.Scripts.Core.Skills
                 Duration = effectData.EffectDuration,
                 Intensity = effectData.EffectIntensity,
                 TickInterval = effectData.EffectTickInterval,
-                Type = effectData.EffectType
+                Type = effectData.EffectType,
+                Context = _context
             };
+            _context.Effect = effect;
             
-            if (_enemiesInRange.Count > 0)
+            if (_context.Targets.Count > 0)
             {
-                var target = _enemiesInRange[0];
+                var target = _context.Targets[0];
                 target.AddEffect(effect);
             }
         }

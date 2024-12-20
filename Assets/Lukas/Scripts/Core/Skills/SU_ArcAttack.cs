@@ -21,7 +21,8 @@ namespace Lukas.Scripts.Core.Skills
             }
             if (_collider.TryGetComponent(out HealthSystemModule target))
             {
-                Use(transform.position, new List<HealthSystemModule> { target });
+                var context = new SkillContext(transform.position, new List<HealthSystemModule> { target }, null);
+                Use(context);
             }
         }
     }

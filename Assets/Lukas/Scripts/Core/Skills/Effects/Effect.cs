@@ -7,6 +7,7 @@
         public float Intensity { get; set; }
         public float TickInterval { get; set; }
         public EffectType Type { get; set; }
+        public SkillContext Context { get; set; }
 
         public bool IsRunning { get; set; }
     }
