@@ -19,9 +19,9 @@ namespace Lukas.Scripts.Core.Skills
                 Destroy(gameObject);
                 return;
             }
-            if (_collider.TryGetComponent(out HealthSystemModule target))
+            if (_collider.TryGetComponent(out EnemyAIModule target))
             {
-                var context = new SkillContext(transform.position, new List<HealthSystemModule> { target }, null);
+                var context = new SkillContext(transform.position, new List<EnemyAIModule> { target }, null);
                 Use(context);
             }
         }

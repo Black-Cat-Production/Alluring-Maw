@@ -11,7 +11,7 @@ namespace Lukas.Scripts.Core.Modules
     [RequireComponent(typeof(HealthSystemModule))]
     public class EnemyAIModule : MonoBehaviour
     {
-        HealthSystemModule healthSystemModule;
+        public HealthSystemModule HealthSystemModule { get; private set; }
 
         RoomSpawner spawner;
 
@@ -42,8 +42,8 @@ namespace Lukas.Scripts.Core.Modules
             targetComponent = new TargetComponent();
             idleTargetComponent = new TargetComponent();
             agent = GetComponent<NavMeshAgent>();
-            healthSystemModule = GetComponent<HealthSystemModule>();
-            healthSystemModule.RegisterEffectHandler(EffectType.DamageOverTime, new DamageOverTimeHandler());
+            HealthSystemModule = GetComponent<HealthSystemModule>();
+            HealthSystemModule.RegisterEffectHandler(EffectType.DamageOverTime, new DamageOverTimeHandler());
             var idleTimer = new Timer(idleDuration);
             //State Creation
             idleState = new IdleState(idleTimer, agent);

@@ -22,7 +22,7 @@ namespace Lukas.Scripts.Core.Skills
             _context.OnEnemyKilled += HandleEnemyDeath;
         }
 
-        void HandleEnemyDeath(HealthSystemModule _target)
+        void HandleEnemyDeath(EnemyAIModule _target)
         {
             var nearbyEnemies = Physics.OverlapSphere(_target.transform.position, explosionRange)
                 .Select(_collider => _collider.GetComponent<HealthSystemModule>())

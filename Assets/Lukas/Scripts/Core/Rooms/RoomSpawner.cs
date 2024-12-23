@@ -12,6 +12,7 @@ namespace Lukas.Scripts.Core.Rooms
         [SerializeField] EnemyAIModule enemyAIModulePrefab;
         [SerializeField] int spawnAmount;
         [SerializeField] GameObject door;
+        [SerializeField] bool isLastRoom;
         public string RoomName;
         
         List<EnemyAIModule> spawnedEnemies;
@@ -19,14 +20,16 @@ namespace Lukas.Scripts.Core.Rooms
         //Tracker Events
         public static Action<RoomSpawner> OnRoomEnter;
         public static Action OnEnemyKilled;
+        public Action OnFinalRoomCleared;
 
-        void Awake()
+        void Start()
         {
             spawnedEnemies = new List<EnemyAIModule>();
             for (int i = 0; i < spawnAmount; i++)
             {
                 spawnedEnemies.Add(SpawnEnemy());
             }
+            if(isLastRoom)GameManager.Instance.RegisterLastRoom(this);
         }
 
         EnemyAIModule SpawnEnemy()
@@ -50,6 +53,7 @@ namespace Lukas.Scripts.Core.Rooms
         {
             Destroy(door.gameObject);
             Debug.Log("Room Cleared");
+            if(isLastRoom)OnFinalRoomCleared.Invoke();
         }
 
         void OnTriggerEnter(Collider _collider)

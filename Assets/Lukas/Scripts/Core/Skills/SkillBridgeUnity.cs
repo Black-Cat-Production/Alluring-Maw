@@ -9,7 +9,9 @@ namespace Lukas.Scripts.Core.Skills
         [SerializeField] string skillName;
         [SerializeField] List<ESkillTag> tags;
         [SerializeField] protected List<SkillBehaviorSO> behaviors = new();
+        [SerializeField] float manaCost;
         public string SkillName => skillName;
+        public float ManaCost => manaCost;
         public List<ESkillTag> Tags => tags;
         public void AddBehavior(SkillBehaviorSO _behavior)
         {

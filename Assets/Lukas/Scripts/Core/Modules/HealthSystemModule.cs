@@ -12,6 +12,7 @@ namespace Lukas.Scripts.Core.Modules
         [SerializeField] float maxHealth;
         bool isDead;
 
+        EnemyAIModule owner;
         public float MaxHealth => maxHealth;
         public float CurrentHealth { get; private set; }
 
@@ -45,6 +46,7 @@ namespace Lukas.Scripts.Core.Modules
 
         void Awake()
         {
+            owner = GetComponent<EnemyAIModule>();
             CurrentHealth = maxHealth;
         }
 
@@ -55,7 +57,7 @@ namespace Lukas.Scripts.Core.Modules
                 var effect = activeEffects[i];
                 effect.Duration -= Time.deltaTime;
 
-                if (effectHandlers.TryGetValue(effect.Type, out var handler)) handler.ApplyEffect(this, effect);
+                if (effectHandlers.TryGetValue(effect.Type, out var handler)) handler.ApplyEffect(owner, effect);
 
                 if (effect.Duration <= 0) activeEffects.RemoveAt(i);
             }

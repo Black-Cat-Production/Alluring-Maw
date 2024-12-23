@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7d6dc3b5b9f4381a1a1864deb9a1324, type: 3}
   m_Name: ExplosionOnDeath
   m_EditorClassIdentifier: 
-  specificName: 
+  specificName: Default Attack
   tags: 
   explosionDamage: 5
   explosionRange: 5

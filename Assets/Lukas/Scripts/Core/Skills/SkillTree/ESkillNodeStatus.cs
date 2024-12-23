@@ -4,6 +4,7 @@
     {
         Disabled,
         Locked,
-        Unlocked
+        Unlocked,
+        Unlockable
     }
 }

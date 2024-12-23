@@ -32,7 +32,7 @@ namespace Lukas.Scripts.Core.Skills
             if (_context.Targets.Count > 0)
             {
                 var target = _context.Targets[0];
-                target.AddEffect(effect);
+                target.HealthSystemModule.AddEffect(effect);
             }
         }
     }

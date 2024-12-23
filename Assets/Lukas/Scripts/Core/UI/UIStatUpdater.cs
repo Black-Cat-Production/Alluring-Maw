@@ -1,4 +1,5 @@
 ﻿using System;
+using Lukas.Scripts.Core.Modules;
 using TMPro;
 using UnityEngine;
 
@@ -8,6 +9,8 @@ namespace Lukas.Scripts.Core.UI
     {
         [SerializeField] TextMeshProUGUI totalKillStat;
         [SerializeField] TextMeshProUGUI currentRoomName;
+        [SerializeField] TextMeshProUGUI currentMana;
+        [SerializeField] TextMeshProUGUI maximumMana;
 
         void Awake()
         {
@@ -22,6 +25,12 @@ namespace Lukas.Scripts.Core.UI
         public void UpdateCurrentRoomName(string _name)
         {
             currentRoomName.text = _name;
+        }
+
+        public void UpdateManaUI(float _currentMana, int _maximumMana)
+        {
+            currentMana.text = _currentMana.ToString("0");
+            maximumMana.text = _maximumMana.ToString();
         }
     }
 }

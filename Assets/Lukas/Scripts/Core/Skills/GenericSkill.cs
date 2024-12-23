@@ -34,14 +34,14 @@ namespace Lukas.Scripts.Core.Skills
 
             if (_context.Targets.Count <= 0) return;
             var target = _context.Targets[0];
-            target.TakeDamage(totalDamage);
+            target.HealthSystemModule.TakeDamage(totalDamage);
         }
 
         public virtual void OnTriggerEnter(Collider _collider)
         {
-            if (_collider.TryGetComponent(out HealthSystemModule target))
+            if (_collider.TryGetComponent(out EnemyAIModule target))
             {
-                var context = new SkillContext(transform.position, new List<HealthSystemModule> { target }, null);
+                var context = new SkillContext(transform.position, new List<EnemyAIModule> { target }, null);
                 Use(context);
             }
 
