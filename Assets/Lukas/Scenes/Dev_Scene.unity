@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2429,9 +2429,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyAIModulePrefab: {fileID: 6106210285313226886, guid: 3f31a8bd4d8479843b04488e2e4c6100,
     type: 3}
-  spawnAmount: 4
+  spawnAmount: 0
   door: {fileID: 1907023055}
-  isLastRoom: 1
+  isLastRoom: 0
   RoomName: Room 1
 --- !u!65 &363361933
 BoxCollider:
@@ -5487,6 +5487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 811868307}
   - component: {fileID: 811868308}
+  - component: {fileID: 811868309}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5521,6 +5522,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cda3952d63d40e9b4c3ba7a3d947407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &811868309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811868306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db9f78e3e6a642efae0ce955a88360ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneLoader: {fileID: 11400000, guid: 59f826e3d1d2fbd43bcf9fbf085f42a0, type: 2}
 --- !u!1 &813789131
 GameObject:
   m_ObjectHideFlags: 0
@@ -5794,6 +5808,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 7a86e629-296d-49fb-9e69-c6f0a24d5aab
     m_ActionName: SkillTree/CloseMenu[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 811868309}
+        m_TargetAssemblyTypeName: Lukas.Scripts.Core.SceneHandler.SceneChanger, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: d8b83fb3-e2ae-4664-b66a-07b9b94d13b5
+    m_ActionName: Player/BackToMainMenu[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -8178,7 +8208,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1145182735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8192,7 +8222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Version: 3
-  m_UsePipelineSettings: 1
+  m_UsePipelineSettings: 0
   m_AdditionalLightsShadowResolutionTier: 2
   m_LightLayerMask: 1
   m_RenderingLayers: 1
@@ -8201,7 +8231,7 @@ MonoBehaviour:
   m_ShadowRenderingLayers: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
-  m_SoftShadowQuality: 1
+  m_SoftShadowQuality: 3
 --- !u!108 &1145182736
 Light:
   m_ObjectHideFlags: 0
@@ -8225,7 +8255,7 @@ Light:
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.05
-    m_NormalBias: 0.4
+    m_NormalBias: 0
     m_NearPlane: 0.2
     m_CullingMatrixOverride:
       e00: 1
@@ -8273,7 +8303,7 @@ Transform:
   m_GameObject: {fileID: 1145182734}
   serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 21.88, y: 3.09, z: 12.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10177,6 +10207,11 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c43385386e34d3d43aea12e2f3c41db3,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c43385386e34d3d43aea12e2f3c41db3,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: c43385386e34d3d43aea12e2f3c41db3,
@@ -12328,9 +12363,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyAIModulePrefab: {fileID: 6106210285313226886, guid: 3f31a8bd4d8479843b04488e2e4c6100,
     type: 3}
-  spawnAmount: 4
+  spawnAmount: 1
   door: {fileID: 1503081056}
-  isLastRoom: 0
+  isLastRoom: 1
   RoomName: Start Room
 --- !u!4 &1880767920
 Transform:
