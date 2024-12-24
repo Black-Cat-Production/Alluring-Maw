@@ -8,7 +8,10 @@ namespace Lukas.Scripts.Core.Skills
     {
         [SerializeField] string skillName;
         [SerializeField] List<ESkillTag> tags;
+        
+        //why does this need to be SF? Otherwise, behavior adding does not work?
         [SerializeField] protected List<SkillBehaviorSO> behaviors = new();
+        
         [SerializeField] float manaCost;
         public string SkillName => skillName;
         public float ManaCost => manaCost;

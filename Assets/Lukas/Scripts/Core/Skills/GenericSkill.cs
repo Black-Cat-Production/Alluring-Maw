@@ -11,13 +11,24 @@ namespace Lukas.Scripts.Core.Skills
         [SerializeField] float despawnTimerDuration;
         [SerializeField] protected int baseSkillHitDamage;
         [SerializeField] protected LayerMask obstructionLayer;
+        [SerializeField] protected List<SkillBehaviorSO> baseBehaviours;
         Timer despawnTimer;
+        
         
         protected virtual void Awake()
         {
             despawnTimer = new Timer(despawnTimerDuration);
             despawnTimer.StartTimer();
         }
+
+        void Start()
+        {
+            foreach (var behaviour in baseBehaviours)
+            {
+                AddBehavior(behaviour);
+            }
+        }
+        
 
         void FixedUpdate()
         {
