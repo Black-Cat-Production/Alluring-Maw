@@ -54,7 +54,7 @@ namespace Lukas.Scripts.Core.Modules
             State attackState = new AttackState(player, new Timer(attackCooldown));
             
             //Setup StateMachine
-            stateMachine = new StateMachine(idleState,gameObject,false);
+            stateMachine = new StateMachine(idleState,gameObject,true);
             
             //Setup Transitions
             var anyToChase = new Transition(chaseState, FindTarget);
@@ -107,7 +107,7 @@ namespace Lukas.Scripts.Core.Modules
 
         bool DetectObstruction(Transform _target)
         {
-            return Physics.Raycast(transform.position, (_target.position - transform.position).normalized, 10f, obstructionMask);
+            return Physics.Raycast(transform.position, (_target.position - transform.position).normalized, Vector3.Distance(transform.position,_target.position), obstructionMask);
         }
         
         void RecalculatePatrolPoint()

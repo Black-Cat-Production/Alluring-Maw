@@ -22,7 +22,6 @@ namespace Lukas.Scripts.Core.KI
             if (currentState.CheckTransitions(out var nextState))
             {
                 currentState.StateExit();
-                if (debug) Debug.Log(agent.name + "Leaving State: " + currentState);
                 currentState = nextState;
                 if (debug) Debug.Log(agent.name + "Enter State: " + currentState);
                 currentState.StateEnter();
