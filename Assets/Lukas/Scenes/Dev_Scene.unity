@@ -5824,6 +5824,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: d8b83fb3-e2ae-4664-b66a-07b9b94d13b5
     m_ActionName: Player/BackToMainMenu[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 829835245}
+        m_TargetAssemblyTypeName: MovementController, Assembly-CSharp
+        m_MethodName: CastSkill
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 275bfaf2-111b-4454-8e11-99315e2f5594
+    m_ActionName: Player/CastSkill[/Mouse/rightButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -5974,6 +5990,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1d7f35f7fc548fd92c882060afafa8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultAttack: {fileID: 279931243049885083, guid: e1a9740e36f91b84dae093be009170e6,
+    type: 3}
 --- !u!114 &829835255
 MonoBehaviour:
   m_ObjectHideFlags: 0

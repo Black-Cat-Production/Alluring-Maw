@@ -7,6 +7,7 @@ namespace Lukas.Scripts.Core.Skills
 {
     public class SkillController : MonoBehaviour
     {
+        [SerializeField] SkillBridgeUnity defaultAttack;
         public SkillBridgeUnity SelectedSkill { get; private set; }
 
         ManaSystemModule manaSystemModule;
@@ -37,6 +38,13 @@ namespace Lukas.Scripts.Core.Skills
             manaSystemModule.ReduceMana(SelectedSkill.ManaCost);
             var cameraTransform = _playerCamera.transform;
             var instance = Instantiate(SelectedSkill, cameraTransform.position + cameraTransform.forward * _spawnDistance, cameraTransform.rotation);
+            instance.GetComponent<Rigidbody>().AddForce(cameraTransform.transform.forward * 50f, ForceMode.Impulse);
+        }
+
+        public void CastDefaultAttack(Camera _playerCamera, float _spawnDistance)
+        {
+            var cameraTransform = _playerCamera.transform;
+            var instance = Instantiate(defaultAttack, cameraTransform.position + cameraTransform.forward * _spawnDistance, cameraTransform.rotation);
             instance.GetComponent<Rigidbody>().AddForce(cameraTransform.transform.forward * 50f, ForceMode.Impulse);
         }
     }

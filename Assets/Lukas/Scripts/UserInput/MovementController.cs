@@ -19,6 +19,8 @@ public class MovementController : MonoBehaviour
     float dashTime;
     float dashCooldownTimer;
 
+    bool isAllowedCasting;
+    
     [SerializeField] [Min(1)] float moveSpeed = 1.0f;
     [SerializeField] float lookSensitivity = 2.0f;
     [SerializeField] Camera playerCamera;
@@ -86,7 +88,7 @@ public class MovementController : MonoBehaviour
     public void Dash(InputAction.CallbackContext _callbackContext)
     {
         if (!_callbackContext.started || !(dashCooldownTimer <= 0)) return;
-
+        isAllowedCasting = false;
         dashDirection = transform.TransformDirection(moveInput.x, 0, moveInput.y).normalized;
         if (dashDirection == Vector3.zero) dashDirection = transform.forward;
         dashTime = dashDuration;
@@ -105,6 +107,13 @@ public class MovementController : MonoBehaviour
     public void Fire(InputAction.CallbackContext _callbackContext)
     {
         if (!_callbackContext.started) return;
-        skillController.CastSkill(playerCamera,spawnDistance);
+        skillController.CastDefaultAttack(playerCamera,spawnDistance);
+    }
+
+    public void CastSkill(InputAction.CallbackContext _callbackContext)
+    {
+        if (_callbackContext.phase == InputActionPhase.Started) isAllowedCasting = true;
+        if (_callbackContext.phase != InputActionPhase.Canceled) return;
+        if(isAllowedCasting) skillController.CastSkill(playerCamera,spawnDistance);
     }
 }

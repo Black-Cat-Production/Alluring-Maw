@@ -33,6 +33,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "CastSkill",
+                    "type": "Button",
+                    "id": "275bfaf2-111b-4454-8e11-99315e2f5594",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Dash",
                     "type": "Button",
                     "id": "a62c313e-1e33-4309-b917-e82828db93f9",
@@ -331,6 +340,17 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "BackToMainMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "df9bea85-e6a1-470b-9ae4-add034bb2d87",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "CastSkill",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
