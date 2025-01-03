@@ -5,6 +5,7 @@ using Lukas.Scripts.Core.Rooms;
 using Lukas.Scripts.Core.Skills.Effects;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 namespace Lukas.Scripts.Core.Modules
 {
@@ -24,6 +25,10 @@ namespace Lukas.Scripts.Core.Modules
         [SerializeField] float attackCooldown;
         [SerializeField] float attackRange;
 
+        [Header("Drop Values")]
+        [SerializeField] int memoryFragmentDropMin;
+        [SerializeField] int memoryFragmentDropMax;
+
         TargetComponent targetComponent;
         TargetComponent idleTargetComponent;
         StateMachine stateMachine;
@@ -33,6 +38,7 @@ namespace Lukas.Scripts.Core.Modules
 
         float distanceToTarget => Vector3.Distance(transform.position, targetComponent.TargetPosition);
 
+        public UnityEvent<int> OnDeathEvent;
 
         GameObject player;
 
@@ -54,7 +60,7 @@ namespace Lukas.Scripts.Core.Modules
             State attackState = new AttackState(player, new Timer(attackCooldown));
 
             //Setup StateMachine
-            stateMachine = new StateMachine(idleState, gameObject, true);
+            stateMachine = new StateMachine(idleState, gameObject, false);
 
             //Setup Transitions
             var anyToChase = new Transition(chaseState, FindTarget);
@@ -85,9 +91,14 @@ namespace Lukas.Scripts.Core.Modules
         public void Die()
         {
             spawner.EnemyDied(this);
+            OnDeathEvent.Invoke(CalculateDrop());
             Destroy(gameObject);
         }
 
+        int CalculateDrop()
+        {
+            return Random.Range(memoryFragmentDropMin, memoryFragmentDropMax + 1);
+        }
         public void SetSpawner(RoomSpawner _spawner)
         {
             spawner = _spawner;

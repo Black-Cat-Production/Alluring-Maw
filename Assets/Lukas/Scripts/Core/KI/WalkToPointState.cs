@@ -24,7 +24,7 @@ namespace Lukas.Scripts.Core.KI
 
         public override void StateExit()
         {
-            base.StateExit();
+            agent.SetDestination(agent.transform.position + (agent.transform.forward * 0.15f));
         }
 
         public override void Tick()

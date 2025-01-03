@@ -15,6 +15,7 @@ namespace Lukas.Scripts.Core.Skills
         void Awake()
         {
             manaSystemModule = GetComponent<ManaSystemModule>();
+            // SkillTreeManager.Instance.UpdateBehaviors();
         }
 
         public void SetSkill(SkillBridgeUnity _skill)

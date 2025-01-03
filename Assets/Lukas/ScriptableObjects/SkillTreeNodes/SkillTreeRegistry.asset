@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1b3e3e0c3bc435193d0a24683f408f6, type: 3}
-  m_Name: PoisonAttack
+  m_Script: {fileID: 11500000, guid: 29eb8eb079624d16983df9e4e7af64c5, type: 3}
+  m_Name: SkillTreeRegistry
   m_EditorClassIdentifier: 
-  SkillName: Poison Attack
-  skillPrefab: {fileID: 6358866230775880048, guid: 05cc2294f22be0a4fbb870fc3dc0afc5,
-    type: 3}
+  SkillTreeNodesData:
+  - {fileID: 11400000, guid: 21248ff295e32164ea8c66a9c01d7265, type: 2}
+  - {fileID: 11400000, guid: 3fc2373b3963554439ef734ba8f66f64, type: 2}

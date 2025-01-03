@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Lukas.Scripts.Core.System;
 using UnityEngine;
 
 namespace Lukas.Scripts.Core.Skills
@@ -8,42 +9,57 @@ namespace Lukas.Scripts.Core.Skills
     public class SkillTreeManager : MonoBehaviour
     {
         [SerializeField] List<SkillBridgeUnity> playerSkills = new();
-
-        List<SkillTreeNode> nodes = new List<SkillTreeNode>();
-
-        //DEBUG
-        // [SerializeField] SkillTreeNode testNodeForDebug;
+        [SerializeField] SaveGameSO saveGame;
+        [SerializeField] SkillTreeNodeRegistry nodeRegistry;
 
         public static SkillTreeManager Instance { get; private set; }
 
-        // public Action OnBuildingComplete;
-
-        void Awake()
+        void Start()
         {
             if (Instance == null)
             {
                 Instance = this;
+                DontDestroyOnLoad(this);
+                foreach (var skill in playerSkills)
+                {
+                    skill.ResetBehaviorList();
+                }
+                BuildSkillTree();
             }
             else
             {
                 Destroy(gameObject);
             }
-
-            foreach (var skill in playerSkills)
-            {
-                skill.ResetBehaviorList();
-            }
         }
 
-        public void UnlockBehavior(SkillTreeNode _skillTreeNode)
+        public void UnlockBehavior(SkillTreeNodeDataSO _skillTreeNodeData, bool _useCost)
         {
-            var behavior = _skillTreeNode.GetBehavior();
+            if (GameManager.Instance == null)
+            {
+                Debug.LogError("No Game Manager found!");
+                return;
+            }
+
+            if (_skillTreeNodeData == null || _skillTreeNodeData.Data == null)
+            {
+                Debug.LogError("No SkillNodeData Found!");
+                return;
+            }
+
+            if (GameManager.Instance.MemoryFragmentsAmount < _skillTreeNodeData.Data.MemoryFragmentCost)
+            {
+                Debug.Log("You do not have enough memory fragments!");
+                return;
+            }
+
+            if (_useCost) GameManager.Instance.DecreaseMemoryFragmentsAmount(_skillTreeNodeData.Data.MemoryFragmentCost);
+            var behavior = _skillTreeNodeData.Data.Behavior;
             if (behavior.SpecificName != null)
             {
                 foreach (var playerSkill in playerSkills.Where(_playerSkill => _playerSkill.SkillName == behavior.SpecificName))
                 {
                     playerSkill.AddBehavior(behavior);
-                    _skillTreeNode.ChangeStatus(ESkillNodeStatus.Unlocked);
+                    _skillTreeNodeData.Data.ChangeStatus(ESkillNodeStatus.Unlocked);
                 }
             }
             else
@@ -52,33 +68,66 @@ namespace Lukas.Scripts.Core.Skills
                 foreach (var playerSkill in from playerSkill in playerSkills from tag in behavior.Tags.Where(_tag => playerSkill.Tags.Contains(_tag)) select playerSkill)
                 {
                     playerSkill.AddBehavior(behavior);
-                    _skillTreeNode.ChangeStatus(ESkillNodeStatus.Unlocked);
+                    _skillTreeNodeData.Data.ChangeStatus(ESkillNodeStatus.Unlocked);
                 }
             }
 
             UpdateTree();
         }
 
-        public void RegisterNode(SkillTreeNode _skillTreeNode)
-        {
-            nodes.Add(_skillTreeNode);
-            BuildSkillTree();
-        }
-
         void UpdateTree()
         {
-            foreach (var node in nodes.Where(_node => _node.status != ESkillNodeStatus.Unlocked))
+            foreach (var node in nodeRegistry.SkillTreeNodesData.Where(_node => _node.Data.Status != ESkillNodeStatus.Unlocked))
             {
-                node.ChangeStatus(node.Prerequisites.TrueForAll((_node) => _node.status == ESkillNodeStatus.Unlocked) ? ESkillNodeStatus.Unlockable : ESkillNodeStatus.Locked);
+                node.Data.ChangeStatus(node.Data.Prerequisites.TrueForAll((_node) => _node.Data.Status == ESkillNodeStatus.Unlocked) ? ESkillNodeStatus.Unlockable : ESkillNodeStatus.Locked);
             }
         }
 
         public void BuildSkillTree()
         {
-            foreach (var node in nodes)
+            if (saveGame.HasSaved)
             {
-                node.ChangeStatus(node.Prerequisites.Count == 0 ? ESkillNodeStatus.Unlockable : ESkillNodeStatus.Locked);
+                //LoadSkillTree(saveGame.SavedNodes);
+                foreach (var node in nodeRegistry.SkillTreeNodesData.Where(_node => _node.Data.Status == ESkillNodeStatus.Unlocked))
+                {
+                    UnlockBehavior(node, false);
+                }
+
+                Debug.Log("Found Saved Skill Tree!");
             }
+            else
+            {
+                Debug.Log("No saved tree found!");
+                foreach (var node in nodeRegistry.SkillTreeNodesData)
+                {
+                    node.Data.ChangeStatus(node.Data.Prerequisites.Count == 0 ? ESkillNodeStatus.Unlockable : ESkillNodeStatus.Locked);
+                }
+            }
+        }
+
+        public void SaveSkillTree()
+        {
+            var savedNodeData = nodeRegistry.SkillTreeNodesData;
+            saveGame.SaveNodes(savedNodeData);
+        }
+
+        public void ResetSkillTree()
+        {
+            foreach (var node in nodeRegistry.SkillTreeNodesData)
+            {
+                node.Data.ChangeStatus(ESkillNodeStatus.Disabled);
+            }
+            foreach (var skill in playerSkills)
+            {
+                skill.ResetBehaviorList();
+            }
+
+            BuildSkillTree();
+        }
+
+        void OnDisable()
+        {
+            SaveSkillTree();
         }
     }
 }

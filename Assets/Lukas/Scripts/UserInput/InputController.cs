@@ -1,10 +1,11 @@
+using Lukas.Scripts.Core;
 using Lukas.Scripts.Core.Skills;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Networking;
 
 [RequireComponent(typeof(Rigidbody), typeof(Collider))]
-public class MovementController : MonoBehaviour
+public class InputController : MonoBehaviour
 {
     Vector2 moveInput;
     Vector2 playerLook;
@@ -115,5 +116,10 @@ public class MovementController : MonoBehaviour
         if (_callbackContext.phase == InputActionPhase.Started) isAllowedCasting = true;
         if (_callbackContext.phase != InputActionPhase.Canceled) return;
         if(isAllowedCasting) skillController.CastSkill(playerCamera,spawnDistance);
+    }
+
+    public void ReturnToMainMenu(InputAction.CallbackContext _callbackContext)
+    {
+        GameManager.Instance.RetreatToMainMenu();
     }
 }

@@ -60,15 +60,6 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "OpenSkillTree",
-                    "type": "Button",
-                    "id": "7de39bff-559a-4069-909b-a07e321b0310",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "BackToMainMenu",
                     "type": "Button",
                     "id": "d8b83fb3-e2ae-4664-b66a-07b9b94d13b5",
@@ -323,17 +314,6 @@
                 },
                 {
                     "name": "",
-                    "id": "75de4365-797f-43db-978b-8b056cdf05fe",
-                    "path": "<Keyboard>/p",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "OpenSkillTree",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "4015bf09-dbf1-478d-a7e5-490672585cca",
                     "path": "<Keyboard>/escape",
                     "interactions": "",
@@ -351,45 +331,6 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "CastSkill",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "SkillTree",
-            "id": "d07e962a-c837-4b93-a08e-91bc3c58857a",
-            "actions": [
-                {
-                    "name": "CloseMenu",
-                    "type": "Button",
-                    "id": "7a86e629-296d-49fb-9e69-c6f0a24d5aab",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "c36e0f28-3112-4ce5-abb7-614f950ec8fe",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "CloseMenu",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "e7a31434-457f-4e33-9915-3551b0f4548d",
-                    "path": "<Keyboard>/p",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "CloseMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -50,8 +50,9 @@ namespace Lukas.Scripts.Core.Skills
 
         public virtual void OnTriggerEnter(Collider _collider)
         {
-            if (_collider.TryGetComponent(out EnemyAIModule target))
+            if (_collider.gameObject.CompareTag("HitBox"))
             {
+                var target = _collider.gameObject.GetComponentInParent<EnemyAIModule>();
                 var context = new SkillContext(transform.position, new List<EnemyAIModule> { target }, null);
                 Use(context);
             }

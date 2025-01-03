@@ -1,5 +1,4 @@
-﻿using System;
-using Lukas.Scripts.Core.Modules;
+﻿using Lukas.Scripts.Core.Modules;
 using Lukas.Scripts.Core.Rooms;
 using Lukas.Scripts.Core.UI;
 using UnityEngine;
