@@ -1,3 +1,4 @@
+using System.Collections;
 using Lukas.Scripts.Core;
 using Lukas.Scripts.Core.Skills;
 using UnityEngine;
@@ -30,11 +31,11 @@ public class InputController : MonoBehaviour
     [SerializeField] float dashCooldown = 1f;
     [SerializeField] float dashForce;
     [SerializeField] AnimationCurve dashCurve;
+    [SerializeField] Animator animator;
+    [SerializeField] float cancelCastCooldown;
 
-    //Debug Area
-    [SerializeField] GameObject debugPrefab;
-    [SerializeField] float spawnDistance;
 
+    bool castingBlockRunning;
     void Awake()
     {
         skillSelector = GetComponent<SkillSelector>();
@@ -89,7 +90,14 @@ public class InputController : MonoBehaviour
     public void Dash(InputAction.CallbackContext _callbackContext)
     {
         if (!_callbackContext.started || !(dashCooldownTimer <= 0)) return;
-        isAllowedCasting = false;
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("SkillHoldState"))
+        {
+            animator.SetBool("CanRelease", false);
+            animator.SetBool("isHoldingSkill", false);
+            animator.SetTrigger("CancelCasting");
+            if (castingBlockRunning) return;
+            StartCoroutine(BlockCasting());
+        }
         dashDirection = transform.TransformDirection(moveInput.x, 0, moveInput.y).normalized;
         if (dashDirection == Vector3.zero) dashDirection = transform.forward;
         dashTime = dashDuration;
@@ -107,19 +115,39 @@ public class InputController : MonoBehaviour
 
     public void Fire(InputAction.CallbackContext _callbackContext)
     {
+        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("IdleState")) return;
         if (!_callbackContext.started) return;
-        skillController.CastDefaultAttack(playerCamera,spawnDistance);
+        animator.SetTrigger("BaseAttack");
+        //skillController.CastDefaultAttack();
     }
 
     public void CastSkill(InputAction.CallbackContext _callbackContext)
     {
-        if (_callbackContext.phase == InputActionPhase.Started) isAllowedCasting = true;
+        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("IdleState") && !animator.GetCurrentAnimatorStateInfo(0).IsName("SkillHoldState") || animator.GetBool("IsCastingBlocked")) return;
+        if (_callbackContext.phase == InputActionPhase.Started) animator.SetBool("isHoldingSkill", true);
         if (_callbackContext.phase != InputActionPhase.Canceled) return;
-        if(isAllowedCasting) skillController.CastSkill(playerCamera,spawnDistance);
+        animator.SetTrigger("ReleaseSkill");
+        animator.ResetTrigger("CacelCasting");
+        animator.SetBool("isHoldingSkill", false);
+    }
+
+    public void ChangeReleaseBool(int _value)
+    {
+        bool value = _value != 0;
+        animator.SetBool("CanRelease", value) ;
     }
 
     public void ReturnToMainMenu(InputAction.CallbackContext _callbackContext)
     {
         GameManager.Instance.RetreatToMainMenu();
+    }
+
+    IEnumerator BlockCasting()
+    {
+        castingBlockRunning = true;
+        animator.SetBool("IsCastingBlocked", true);
+        yield return new WaitForSeconds(cancelCastCooldown);
+        animator.SetBool("IsCastingBlocked", false);
+        castingBlockRunning = false;
     }
 }
