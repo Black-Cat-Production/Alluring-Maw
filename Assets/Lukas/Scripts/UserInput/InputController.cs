@@ -14,7 +14,6 @@ public class InputController : MonoBehaviour
     Vector3 currentDashVelocity;
     Rigidbody playerRigidbody;
     SkillSelector skillSelector;
-    SkillController skillController;
 
     float xRotation;
 
@@ -39,7 +38,6 @@ public class InputController : MonoBehaviour
     void Awake()
     {
         skillSelector = GetComponent<SkillSelector>();
-        skillController = GetComponent<SkillController>();
         playerRigidbody = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
         dashCurve ??= AnimationCurve.EaseInOut(0, 1, 1, 0);

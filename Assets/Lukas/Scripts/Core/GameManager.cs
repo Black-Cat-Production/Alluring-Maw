@@ -1,8 +1,7 @@
-﻿using System;
-using Lukas.Scripts.Core.Modules;
-using Lukas.Scripts.Core.Rooms;
+﻿using Lukas.Scripts.Core.Rooms;
 using Lukas.Scripts.Core.SceneHandler;
 using Lukas.Scripts.Core.System;
+using Lukas.Scripts.Program;
 using UnityEditor;
 using UnityEngine;
 
@@ -12,6 +11,7 @@ namespace Lukas.Scripts.Core
     {
         [SerializeField] SaveGameSO saveGame;
         [SerializeField] SceneLoader mainMenuSceneLoader;
+        [SerializeField] SaveGameManager saveGameManager;
         public static GameManager Instance { get; private set; }
         public int MemoryFragmentsAmount { get; private set; }
         void Awake()
@@ -20,6 +20,7 @@ namespace Lukas.Scripts.Core
             {
                 Instance = this;
                 DontDestroyOnLoad(this);
+                LoadGame();
                 LoadMemoryFragmentsAmount();
             }
             else
@@ -75,6 +76,20 @@ namespace Lukas.Scripts.Core
         public void LoadMemoryFragmentsAmount()
         {
             MemoryFragmentsAmount = saveGame.MemoryFragmentsAmount;
+        }
+
+        public void SaveGame()
+        {
+            saveGameManager.Save();
+            #if UNITY_EDITOR
+            EditorApplication.ExitPlaymode();
+            #endif
+            Application.Quit();
+        }
+
+        void LoadGame()
+        {
+            saveGameManager.Load();
         }
     }
 }

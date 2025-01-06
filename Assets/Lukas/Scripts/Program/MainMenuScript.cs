@@ -23,6 +23,11 @@ namespace Lukas.Scripts.Program
             GameManager.Instance.LoadMemoryFragmentsAmount();
             SkillTreeManager.Instance.ResetSkillTree();
         }
+
+        public void SaveGame()
+        {
+            GameManager.Instance.SaveGame();
+        }
         
     }
 }
