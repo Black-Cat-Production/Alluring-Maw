@@ -9,11 +9,12 @@ namespace Lukas.Scripts.Core.Skills
     {
         [JsonIgnore]
         public SkillBehaviorSO Behavior;
-        
+        [JsonIgnore]
         public List<SkillTreeNodeDataSO> Prerequisites;
-        public ESkillNodeStatus Status;
+        [JsonIgnore]
         public int MemoryFragmentCost;
         
+        public ESkillNodeStatus Status;
         public void ChangeStatus(ESkillNodeStatus _newStatus)
         {
             Status = _newStatus;
