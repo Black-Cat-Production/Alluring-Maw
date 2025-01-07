@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using Lukas.Scripts.Core.Modules;
-using Lukas.Scripts.Core.Tracker;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -36,7 +35,7 @@ namespace Lukas.Scripts.Core.Rooms
         {
             var randomPos = Random.insideUnitSphere * 5;
             var instantiatePos = new Vector3(randomPos.x, 0, randomPos.z);
-            instantiatePos += new Vector3(transform.position.x, 1, transform.position.z);
+            instantiatePos += new Vector3(transform.position.x, 0, transform.position.z);
             var spawnedEnemy = Instantiate(enemyAIModulePrefab, instantiatePos, Quaternion.identity);
             spawnedEnemy.SetSpawner(this);
             return spawnedEnemy;

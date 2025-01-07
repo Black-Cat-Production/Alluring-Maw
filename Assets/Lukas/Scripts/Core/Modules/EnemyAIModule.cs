@@ -5,6 +5,7 @@ using Lukas.Scripts.Core.Rooms;
 using Lukas.Scripts.Core.Skills.Effects;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 namespace Lukas.Scripts.Core.Modules
 {
@@ -24,16 +25,21 @@ namespace Lukas.Scripts.Core.Modules
         [SerializeField] float attackCooldown;
         [SerializeField] float attackRange;
 
+        [Header("Drop Values")]
+        [SerializeField] int memoryFragmentDropMin;
+        [SerializeField] int memoryFragmentDropMax;
+
         TargetComponent targetComponent;
         TargetComponent idleTargetComponent;
         StateMachine stateMachine;
         IdleState idleState;
         NavMeshAgent agent;
         Vector3 patrolRadiusCenter;
-        
+
         float distanceToTarget => Vector3.Distance(transform.position, targetComponent.TargetPosition);
-        
-        
+
+        public UnityEvent<int> OnDeathEvent;
+
         GameObject player;
 
         void Awake()
@@ -52,28 +58,28 @@ namespace Lukas.Scripts.Core.Modules
             //DEBUG TESTING AREA. NEEDS TO GO
             player = GameObject.Find("Player");
             State attackState = new AttackState(player, new Timer(attackCooldown));
-            
+
             //Setup StateMachine
-            stateMachine = new StateMachine(idleState,gameObject,true);
-            
+            stateMachine = new StateMachine(idleState, gameObject, false);
+
             //Setup Transitions
             var anyToChase = new Transition(chaseState, FindTarget);
-            var chaseToIdle = new Transition(idleState,()=> !FindTarget());
+            var chaseToIdle = new Transition(idleState, () => !FindTarget());
             var chaseToAttack = new Transition(attackState, () => distanceToTarget < attackRange);
             var attackToChase = new Transition(chaseState, () => distanceToTarget > attackRange);
             var idleToPatrol = new Transition(patrolState, () => idleState.IsTimerFinished == true);
             var movingToIdle = new Transition(idleState, () => agent.remainingDistance < agent.stoppingDistance);
-            
+
             //Link Transitions
             idleState.AddTransition(anyToChase);
             idleState.AddTransition(idleToPatrol);
-            
+
             chaseState.AddTransition(chaseToAttack);
             chaseState.AddTransition(chaseToIdle);
 
             patrolState.AddTransition(anyToChase);
             patrolState.AddTransition(movingToIdle);
-            
+
             attackState.AddTransition(attackToChase);
         }
 
@@ -85,9 +91,14 @@ namespace Lukas.Scripts.Core.Modules
         public void Die()
         {
             spawner.EnemyDied(this);
+            OnDeathEvent.Invoke(CalculateDrop());
             Destroy(gameObject);
         }
 
+        int CalculateDrop()
+        {
+            return Random.Range(memoryFragmentDropMin, memoryFragmentDropMax + 1);
+        }
         public void SetSpawner(RoomSpawner _spawner)
         {
             spawner = _spawner;
@@ -107,9 +118,9 @@ namespace Lukas.Scripts.Core.Modules
 
         bool DetectObstruction(Transform _target)
         {
-            return Physics.Raycast(transform.position, (_target.position - transform.position).normalized, Vector3.Distance(transform.position,_target.position), obstructionMask);
+            return Physics.Raycast(transform.position, (_target.position - transform.position).normalized, Vector3.Distance(transform.position, _target.position), obstructionMask);
         }
-        
+
         void RecalculatePatrolPoint()
         {
             Vector3 randomPoint;
@@ -122,7 +133,7 @@ namespace Lukas.Scripts.Core.Modules
 
             idleTargetComponent.SetPoint(randomPoint);
         }
-        
+
         void OnValidate()
         {
             PatrolPointDistanceThreshhold = Mathf.Clamp(PatrolPointDistanceThreshhold, 1, PatrolRange - 1);

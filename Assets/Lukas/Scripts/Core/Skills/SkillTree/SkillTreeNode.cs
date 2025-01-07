@@ -7,30 +7,16 @@ namespace Lukas.Scripts.Core.Skills
 {
     public class SkillTreeNode : MonoBehaviour
     {
-        [SerializeField] SkillBehaviorSO behavior;
-        [SerializeField] List<SkillTreeNode> prerequisites;
+        [SerializeField] SkillTreeNodeDataSO nodeData;
+        public SkillTreeNodeDataSO NodeData => nodeData;
 
-        public List<SkillTreeNode> Prerequisites => prerequisites;
-        public ESkillNodeStatus status { get; private set; }
-
-        bool isRegistered;
-
-        void Start()
-        {
-            SkillTreeManager.Instance.RegisterNode(this);
-        }
-
-        public void ChangeStatus(ESkillNodeStatus _newStatus)
-        {
-            status = _newStatus;
-        }
-
+        public Action OnClick;
         public void Clicked()
         {
-            switch (status)
+            switch (nodeData.Data.Status)
             {
                 case ESkillNodeStatus.Unlockable:
-                    SkillTreeManager.Instance.UnlockBehavior(this);
+                    SkillTreeManager.Instance.UnlockBehavior(nodeData, true);
                     break;
                 case ESkillNodeStatus.Unlocked:
                     Debug.Log("You already have this skill!");
@@ -39,11 +25,8 @@ namespace Lukas.Scripts.Core.Skills
                     Debug.Log("You cannot unlock this skill!");
                     break;
             }
-        }
 
-        public SkillBehaviorSO GetBehavior()
-        {
-            return behavior;
+            OnClick.Invoke();
         }
     }
 }

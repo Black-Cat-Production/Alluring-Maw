@@ -7,6 +7,9 @@ namespace Lukas.Scripts.Core.Skills
 {
     public class SkillController : MonoBehaviour
     {
+        [SerializeField] SkillBridgeUnity defaultAttack;
+        [SerializeField] float spawnDistance;
+        [SerializeField] Camera playerCamera;
         public SkillBridgeUnity SelectedSkill { get; private set; }
 
         ManaSystemModule manaSystemModule;
@@ -14,6 +17,7 @@ namespace Lukas.Scripts.Core.Skills
         void Awake()
         {
             manaSystemModule = GetComponent<ManaSystemModule>();
+            // SkillTreeManager.Instance.UpdateBehaviors();
         }
 
         public void SetSkill(SkillBridgeUnity _skill)
@@ -21,7 +25,7 @@ namespace Lukas.Scripts.Core.Skills
             SelectedSkill = _skill;
         }
 
-        public void CastSkill(Camera _playerCamera, float _spawnDistance)
+        public void UseSkill()
         {
             if (SelectedSkill == null)
             {
@@ -35,8 +39,15 @@ namespace Lukas.Scripts.Core.Skills
                 return;
             }
             manaSystemModule.ReduceMana(SelectedSkill.ManaCost);
-            var cameraTransform = _playerCamera.transform;
-            var instance = Instantiate(SelectedSkill, cameraTransform.position + cameraTransform.forward * _spawnDistance, cameraTransform.rotation);
+            var cameraTransform = playerCamera.transform;
+            var instance = Instantiate(SelectedSkill, cameraTransform.position + cameraTransform.forward * spawnDistance, cameraTransform.rotation);
+            instance.GetComponent<Rigidbody>().AddForce(cameraTransform.transform.forward * 50f, ForceMode.Impulse);
+        }
+
+        public void CastDefaultAttack()
+        {
+            var cameraTransform = playerCamera.transform;
+            var instance = Instantiate(defaultAttack, cameraTransform.position + cameraTransform.forward * spawnDistance, cameraTransform.rotation);
             instance.GetComponent<Rigidbody>().AddForce(cameraTransform.transform.forward * 50f, ForceMode.Impulse);
         }
     }

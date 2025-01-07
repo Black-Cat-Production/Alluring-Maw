@@ -13,5 +13,10 @@ namespace Lukas.Scripts.Core.SceneHandler
         {
             SceneManager.LoadScene((int)sceneToLoad);
         }
+
+        public void LoadAsync()
+        {
+            SceneManager.LoadSceneAsync((int)sceneToLoad);
+        }
     }
 }
