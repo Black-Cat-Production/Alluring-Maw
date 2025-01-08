@@ -10,6 +10,7 @@ namespace Lukas.Scripts.Core.Rooms
     {
         [SerializeField] EnemyAIModule enemyAIModulePrefab;
         [SerializeField] int spawnAmount;
+        //TODO: Replace with a list of doors!!
         [SerializeField] GameObject door;
         [SerializeField] bool isLastRoom;
         public string RoomName;
@@ -50,7 +51,7 @@ namespace Lukas.Scripts.Core.Rooms
 
         void TriggerRoomCleared()
         {
-            Destroy(door.gameObject);
+            door.SetActive(false);
             Debug.Log("Room Cleared");
             if(isLastRoom)OnFinalRoomCleared.Invoke();
         }
