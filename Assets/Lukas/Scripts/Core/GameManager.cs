@@ -1,4 +1,5 @@
-﻿using Lukas.Scripts.Core.Rooms;
+﻿using System.Collections;
+using Lukas.Scripts.Core.Rooms;
 using Lukas.Scripts.Core.SceneHandler;
 using Lukas.Scripts.Core.Skills;
 using Lukas.Scripts.Core.System;
@@ -21,13 +22,24 @@ namespace Lukas.Scripts.Core
             {
                 Instance = this;
                 DontDestroyOnLoad(this);
-                LoadGame();
-                LoadMemoryFragmentsAmount();
+                StartCoroutine(Startup());
             }
             else
             {
                 Destroy(gameObject);
             }
+        }
+
+        IEnumerator Startup()
+        {
+            int ticks = 0;
+            while (!saveGameManager.SavePathsCreated || ticks > 25000)
+            {
+                yield return null;
+                ticks++;
+            }
+            LoadGame();
+            LoadMemoryFragmentsAmount();
         }
 
         public void RegisterLastRoom(RoomSpawner _lastRoom)

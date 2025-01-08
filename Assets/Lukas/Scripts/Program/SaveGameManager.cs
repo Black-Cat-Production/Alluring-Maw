@@ -16,6 +16,9 @@ namespace Lukas.Scripts.Program
         [SerializeField] SaveGameSO saveGameSO;
 
         const string SaveFolder = "ScriptableObjectSaves";
+        string savePathSaveGameSO;
+        string savePathRegistry;
+        public bool SavePathsCreated;
 
         static SaveGameManager instance;
 
@@ -25,6 +28,15 @@ namespace Lukas.Scripts.Program
             {
                 instance = this;
                 DontDestroyOnLoad(this);
+                #if UNITY_EDITOR
+                savePathSaveGameSO = Path.Combine(Application.persistentDataPath, SaveFolder, "saveGameSO.json");
+                savePathRegistry = Path.Combine(Application.persistentDataPath, SaveFolder, "registry.json");
+                SavePathsCreated = true;
+#else
+                savePathSaveGameSO = Path.Combine(Application.dataPath, SaveFolder, "saveGameSO.json");
+                savePathRegistry = Path.Combine(Application.dataPath, SaveFolder, "registry.json");
+                SavePathsCreated = true;
+#endif
             }
             else
             {
@@ -36,32 +48,29 @@ namespace Lukas.Scripts.Program
         [Button]
         public void Save()
         {
-            string savePath = Path.Combine(Application.persistentDataPath, SaveFolder, $"saveGameSO.json");
-            Directory.CreateDirectory(Path.GetDirectoryName(savePath));
+            Directory.CreateDirectory(Path.GetDirectoryName(savePathSaveGameSO));
 
             string json = JsonUtility.ToJson(saveGameSO);
-            File.WriteAllText(savePath,json);
-            Debug.Log($"Saved ScriptableObject to {savePath}");
-
-            savePath = Path.Combine(Application.persistentDataPath, SaveFolder, $"registry.json");
+            File.WriteAllText(savePathSaveGameSO,json);
+            Debug.Log($"Saved ScriptableObject to {savePathSaveGameSO}");
+            
 
             var serializedSkillTreeData = registry.SkillTreeNodesData.Select(JsonUtility.ToJson).ToList();
             json = JsonConvert.SerializeObject(serializedSkillTreeData, Formatting.Indented);
-            File.WriteAllText(savePath,json);
+            File.WriteAllText(savePathRegistry,json);
         }
         
         [Button]
         public void Load()
         {
-            string savePath = Path.Combine(Application.persistentDataPath, SaveFolder, $"saveGameSO.json");
-            if (File.Exists(savePath))
+            if (File.Exists(savePathSaveGameSO))
             {
-                string json = File.ReadAllText(savePath);
+                string json = File.ReadAllText(savePathSaveGameSO);
                 JsonUtility.FromJsonOverwrite(json,saveGameSO);
                 Debug.Log("Loaded ScriptableObject!");
                 
-                savePath = Path.Combine(Application.persistentDataPath, SaveFolder, $"registry.json");
-                json = File.ReadAllText(savePath);
+                
+                json = File.ReadAllText(savePathRegistry);
                 var serializedSkillTreeData = JsonConvert.DeserializeObject<List<string>>(json);
                 for (int i = 0; i < serializedSkillTreeData.Count; i++)
                 {

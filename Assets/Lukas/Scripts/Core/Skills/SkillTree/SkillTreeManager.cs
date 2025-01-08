@@ -46,7 +46,7 @@ namespace Lukas.Scripts.Core.Skills
                 return;
             }
 
-            if (GameManager.Instance.MemoryFragmentsAmount < _skillTreeNodeData.Data.MemoryFragmentCost)
+            if (GameManager.Instance.MemoryFragmentsAmount < _skillTreeNodeData.Data.MemoryFragmentCost && _useCost)
             {
                 Debug.Log("You do not have enough memory fragments!");
                 return;

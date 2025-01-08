@@ -2948,6 +2948,8 @@ MonoBehaviour:
   - {fileID: 81767641}
   - {fileID: 259986000}
   currentFragmentAmountField: {fileID: 608807741}
+  lockedSkill: {fileID: 21300000, guid: f93749b47e3569c4f8142396b1e0c348, type: 3}
+  unlockableSkill: {fileID: 21300000, guid: ff61109bada7eb44699eb37ba96f2ddb, type: 3}
 --- !u!114 &1716924114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3067,6 +3069,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1338692790}
         m_TargetAssemblyTypeName: Lukas.Scripts.Core.Skills.SkillTreeUIManager, Assembly-CSharp
         m_MethodName: CloseSkillTreeUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1338692790}
+        m_TargetAssemblyTypeName: Lukas.Scripts.Core.Skills.SkillTreeUIManager, Assembly-CSharp
+        m_MethodName: CloseHoveredNodePanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3718,6 +3732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   registry: {fileID: 11400000, guid: 497934ab88d7cdb4896d1d48cde3019b, type: 2}
   saveGameSO: {fileID: 11400000, guid: 58c6ef996ca9c794a90dca0e436eeeb1, type: 2}
+  SavePathsCreated: 0
 --- !u!4 &2139306345
 Transform:
   m_ObjectHideFlags: 0

@@ -18,7 +18,8 @@ namespace Lukas.Scripts.Core.Skills
         public SkillTreeNodeDataSO NodeData => nodeData;
 
         public Action OnClick;
-        public static Action<SkillTreeNode> OnHoverStatusChange;
+        public static Action<SkillTreeNode> OnHoverEnter;
+        public static Action OnHoverExit;
         public void Clicked()
         {
             switch (nodeData.Data.Status)
@@ -39,12 +40,12 @@ namespace Lukas.Scripts.Core.Skills
 
         public void OnPointerEnter(PointerEventData _eventData)
         {
-            OnHoverStatusChange.Invoke(this);
+            OnHoverEnter.Invoke(this);
         }
 
         public void OnPointerExit(PointerEventData _eventData)
         {
-            OnHoverStatusChange.Invoke(this);
+            OnHoverExit.Invoke();
         }
 
         public bool IsUnlockableByCost()
