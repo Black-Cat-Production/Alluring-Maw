@@ -2,15 +2,23 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Lukas.Scripts.Core.Skills
 {
-    public class SkillTreeNode : MonoBehaviour
+    public class SkillTreeNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         [SerializeField] SkillTreeNodeDataSO nodeData;
+        [SerializeField] string nodeName;
+        [TextArea]
+        [SerializeField] string description;
+
+        public string NodeDescription => description;
+        public string NodeName => nodeName;
         public SkillTreeNodeDataSO NodeData => nodeData;
 
         public Action OnClick;
+        public static Action<SkillTreeNode> OnHoverStatusChange;
         public void Clicked()
         {
             switch (nodeData.Data.Status)
@@ -27,6 +35,21 @@ namespace Lukas.Scripts.Core.Skills
             }
 
             OnClick.Invoke();
+        }
+
+        public void OnPointerEnter(PointerEventData _eventData)
+        {
+            OnHoverStatusChange.Invoke(this);
+        }
+
+        public void OnPointerExit(PointerEventData _eventData)
+        {
+            OnHoverStatusChange.Invoke(this);
+        }
+
+        public bool IsUnlockableByCost()
+        {
+            return nodeData.Data.MemoryFragmentCost <= GameManager.Instance.MemoryFragmentsAmount;
         }
     }
 }

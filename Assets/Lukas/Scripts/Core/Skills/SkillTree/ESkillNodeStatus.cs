@@ -5,6 +5,6 @@
         Disabled,
         Locked,
         Unlocked,
-        Unlockable
+        Unlockable,
     }
 }
