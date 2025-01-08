@@ -7,7 +7,6 @@ namespace Lukas.Scripts.Core.Skills
     [Serializable]
     public class SkillTreeNodeData
     {
-        [JsonIgnore]
         public SkillBehaviorSO Behavior;
         [JsonIgnore]
         public List<SkillTreeNodeDataSO> Prerequisites;

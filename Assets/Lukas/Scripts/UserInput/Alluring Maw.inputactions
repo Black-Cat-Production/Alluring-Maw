@@ -335,6 +335,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "MainMenu",
+            "id": "3d4b9fe6-bc95-4935-8028-d5fef78e30fb",
+            "actions": [
+                {
+                    "name": "CloseSkillTree",
+                    "type": "Button",
+                    "id": "0b3e955e-24ab-4004-8e3f-da2c98b25524",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d9e6ee45-0f99-44b4-8610-50a55b0b5d64",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "CloseSkillTree",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
