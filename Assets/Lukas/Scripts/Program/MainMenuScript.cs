@@ -10,6 +10,12 @@ namespace Lukas.Scripts.Program
     {
         [SerializeField] SaveGameSO saveGameSO;
         [SerializeField] SaveGameSO defaultSaveGameSO;
+
+        private void Start()
+        {
+            Screen.SetResolution(1920, 1080, true);
+        }
+
         void OnEnable()
         {
             Cursor.lockState = CursorLockMode.None;

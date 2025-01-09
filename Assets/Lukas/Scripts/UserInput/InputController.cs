@@ -125,7 +125,7 @@ public class InputController : MonoBehaviour
         if (_callbackContext.phase == InputActionPhase.Started) animator.SetBool("isHoldingSkill", true);
         if (_callbackContext.phase != InputActionPhase.Canceled) return;
         animator.SetTrigger("ReleaseSkill");
-        animator.ResetTrigger("CacelCasting");
+        animator.ResetTrigger("CancelCasting");
         animator.SetBool("isHoldingSkill", false);
     }
 

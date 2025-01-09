@@ -14903,7 +14903,6 @@ GameObject:
   m_Component:
   - component: {fileID: 876172814}
   - component: {fileID: 876172817}
-  - component: {fileID: 876172816}
   - component: {fileID: 876172815}
   m_Layer: 7
   m_Name: ArmCamera
@@ -14971,14 +14970,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!81 &876172816
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 876172813}
-  m_Enabled: 1
 --- !u!20 &876172817
 Camera:
   m_ObjectHideFlags: 0
