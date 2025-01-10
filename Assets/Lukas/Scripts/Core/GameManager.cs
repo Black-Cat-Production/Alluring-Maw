@@ -75,7 +75,7 @@ namespace Lukas.Scripts.Core
                     Debug.Log($"You gained {_amount} memory fragments!");
                     break;
                 case < 0:
-                    Debug.Log($"You spent {_amount} memory fragments!");
+                    Debug.Log($"You spent {-_amount} memory fragments!");
                     break;
             }
             saveGame.SaveMemoryFragmentsAmount(MemoryFragmentsAmount);

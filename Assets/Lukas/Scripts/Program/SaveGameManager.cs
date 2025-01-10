@@ -56,7 +56,8 @@ namespace Lukas.Scripts.Program
             
 
             var serializedSkillTreeData = registry.SkillTreeNodesData.Select(JsonUtility.ToJson).ToList();
-            json = JsonConvert.SerializeObject(serializedSkillTreeData, Formatting.Indented);
+            var testData = registry.SkillTreeNodesData.Select(_nodeDataSO => JsonConvert.SerializeObject(_nodeDataSO, Formatting.Indented)).ToList();
+            json = JsonConvert.SerializeObject(testData, Formatting.Indented);
             File.WriteAllText(savePathRegistry,json);
         }
         
