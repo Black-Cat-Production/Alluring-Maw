@@ -341,7 +341,7 @@
             "id": "3d4b9fe6-bc95-4935-8028-d5fef78e30fb",
             "actions": [
                 {
-                    "name": "CloseSkillTree",
+                    "name": "CloseCurrentMenu",
                     "type": "Button",
                     "id": "0b3e955e-24ab-4004-8e3f-da2c98b25524",
                     "expectedControlType": "Button",
@@ -358,7 +358,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "CloseSkillTree",
+                    "action": "CloseCurrentMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

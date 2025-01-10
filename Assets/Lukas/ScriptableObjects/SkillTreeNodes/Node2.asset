@@ -17,4 +17,4 @@ MonoBehaviour:
     Prerequisites:
     - {fileID: 11400000, guid: 21248ff295e32164ea8c66a9c01d7265, type: 2}
     MemoryFragmentCost: 5
-    Status: 2
+    Status: 1

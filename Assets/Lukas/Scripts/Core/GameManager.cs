@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using Lukas.Scripts.Core.Events;
 using Lukas.Scripts.Core.Rooms;
 using Lukas.Scripts.Core.SceneHandler;
-using Lukas.Scripts.Core.Skills;
 using Lukas.Scripts.Core.System;
+using Lukas.Scripts.Core.UI;
 using Lukas.Scripts.Program;
 using UnityEditor;
 using UnityEngine;
@@ -14,8 +16,16 @@ namespace Lukas.Scripts.Core
         [SerializeField] SaveGameSO saveGame;
         [SerializeField] SceneLoader mainMenuSceneLoader;
         [SerializeField] SaveGameManager saveGameManager;
+        [SerializeField] PlayerNameInputUI playerNameInputUI;
+        [SerializeField] MainMenuScript mainMenuScript;
+        [SerializeField] NotifyLeaderboardEvent notifyEvent;
         public static GameManager Instance { get; private set; }
         public int MemoryFragmentsAmount { get; private set; }
+        public Action OnWinGetScores;
+
+        public float TimeScore { get; private set; }
+        public int DamageTakenScore{ get; private set; }
+        
         void Awake()
         {
             if (Instance == null)
@@ -38,8 +48,26 @@ namespace Lukas.Scripts.Core
                 yield return null;
                 ticks++;
             }
+            if(string.IsNullOrEmpty(saveGame.PlayerName)) PromptNameInput();
             LoadGame();
             LoadMemoryFragmentsAmount();
+        }
+
+        public void ResetPlayerName()
+        {
+            saveGame.PlayerName = "";
+            PromptNameInput();
+        }
+
+        public void SetPlayerName(string _name)
+        {
+            saveGame.PlayerName = _name;
+            mainMenuScript.UpdatePlayerName(GetPlayerName());
+        }
+
+        void PromptNameInput()
+        {
+            playerNameInputUI.ShowInputUI();
         }
 
         public void RegisterLastRoom(RoomSpawner _lastRoom)
@@ -47,11 +75,20 @@ namespace Lukas.Scripts.Core
             _lastRoom.OnFinalRoomCleared += TriggerWin;
         }
 
+
         void TriggerWin()
         {
+            OnWinGetScores.Invoke();
             Debug.Log("You won the game!!");
             saveGame.SaveMemoryFragmentsAmount(MemoryFragmentsAmount);
+            notifyEvent.Invoke();
             mainMenuSceneLoader.LoadAsync();
+        }
+
+        public void SetLeaderboardScores(float _timeTakenInMil, int _damageTaken)
+        {
+            TimeScore = _timeTakenInMil;
+            DamageTakenScore = _damageTaken;
         }
 
         public void TriggerLoss()
@@ -103,6 +140,11 @@ namespace Lukas.Scripts.Core
         void LoadGame()
         {
             saveGameManager.Load();
+        }
+
+        public string GetPlayerName()
+        {
+            return saveGame.PlayerName;
         }
     }
 }

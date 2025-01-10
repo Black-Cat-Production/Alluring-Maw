@@ -53,7 +53,7 @@ namespace Lukas.Scripts.Core.Rooms
         {
             door.SetActive(false);
             Debug.Log("Room Cleared");
-            if(isLastRoom)OnFinalRoomCleared.Invoke();
+            if(isLastRoom)OnFinalRoomCleared?.Invoke();
         }
 
         void OnTriggerEnter(Collider _collider)

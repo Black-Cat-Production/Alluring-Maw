@@ -19,6 +19,7 @@ namespace Lukas.Scripts.Core.Modules
         public bool IsDead => isDead;
 
         public UnityEvent OnDeathEvent;
+        public Action<int> OnDamageTaken;
 
         //Effect Management
         readonly List<Effect> activeEffects = new();
@@ -67,6 +68,7 @@ namespace Lukas.Scripts.Core.Modules
         {
             CurrentHealth = Mathf.Max(0, CurrentHealth - _damageAmount);
             Debug.Log($"{CurrentHealth}");
+            OnDamageTaken?.Invoke((int)_damageAmount);
             if (CurrentHealth != 0) return;
             isDead = true;
             OnDeathEvent.Invoke();

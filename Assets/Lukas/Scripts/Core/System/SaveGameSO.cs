@@ -11,6 +11,8 @@ namespace Lukas.Scripts.Core.System
 
         public bool HasSaved;
 
+        public string PlayerName;
+
         public void SaveNodes(List<SkillTreeNodeDataSO> _nodeList)
         {
             if (!HasSaved) HasSaved = true;

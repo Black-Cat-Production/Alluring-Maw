@@ -18,7 +18,7 @@ namespace Lukas.Scripts.Program
         const string SaveFolder = "ScriptableObjectSaves";
         string savePathSaveGameSO;
         string savePathRegistry;
-        public bool SavePathsCreated;
+        [NonSerialized]public bool SavePathsCreated;
 
         static SaveGameManager instance;
 
