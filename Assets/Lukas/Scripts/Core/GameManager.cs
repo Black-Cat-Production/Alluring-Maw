@@ -4,7 +4,6 @@ using Lukas.Scripts.Core.Events;
 using Lukas.Scripts.Core.Rooms;
 using Lukas.Scripts.Core.SceneHandler;
 using Lukas.Scripts.Core.System;
-using Lukas.Scripts.Core.UI;
 using Lukas.Scripts.Program;
 using UnityEditor;
 using UnityEngine;
@@ -16,15 +15,17 @@ namespace Lukas.Scripts.Core
         [SerializeField] SaveGameSO saveGame;
         [SerializeField] SceneLoader mainMenuSceneLoader;
         [SerializeField] SaveGameManager saveGameManager;
-        [SerializeField] PlayerNameInputUI playerNameInputUI;
-        [SerializeField] MainMenuScript mainMenuScript;
-        [SerializeField] NotifyLeaderboardEvent notifyEvent;
+        [SerializeField] NotifyEvent notifyPlayerInputUI;
+        [SerializeField] NotifyEvent notifyMainMenu;
+        [SerializeField] NotifyEvent notifyEvent;
         public static GameManager Instance { get; private set; }
         public int MemoryFragmentsAmount { get; private set; }
         public Action OnWinGetScores;
 
         public float TimeScore { get; private set; }
         public int DamageTakenScore{ get; private set; }
+
+        public bool FinishedLoading { get; private set; }
         
         void Awake()
         {
@@ -43,16 +44,19 @@ namespace Lukas.Scripts.Core
         IEnumerator Startup()
         {
             int ticks = 0;
-            while (!saveGameManager.SavePathsCreated || ticks > 25000)
+            while (!saveGameManager.SavePathsCreated && ticks < 200)
             {
                 yield return null;
                 ticks++;
             }
-            if(string.IsNullOrEmpty(saveGame.PlayerName)) PromptNameInput();
             LoadGame();
+            if(ticks >= 200) Debug.LogError("Startup failed due to max ticks reached!");
+            if(string.IsNullOrEmpty(saveGame.PlayerName)) PromptNameInput();
             LoadMemoryFragmentsAmount();
+            yield return null;
+            FinishedLoading = true;
         }
-
+        
         public void ResetPlayerName()
         {
             saveGame.PlayerName = "";
@@ -62,12 +66,12 @@ namespace Lukas.Scripts.Core
         public void SetPlayerName(string _name)
         {
             saveGame.PlayerName = _name;
-            mainMenuScript.UpdatePlayerName(GetPlayerName());
+            notifyMainMenu.Invoke();
         }
 
         void PromptNameInput()
         {
-            playerNameInputUI.ShowInputUI();
+            notifyPlayerInputUI.Invoke();
         }
 
         public void RegisterLastRoom(RoomSpawner _lastRoom)

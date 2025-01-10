@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Lukas.Scripts.Core;
 using Lukas.Scripts.Core.Skills;
 using Lukas.Scripts.Core.System;
 using NaughtyAttributes;
@@ -14,6 +15,7 @@ namespace Lukas.Scripts.Program
     {
         [SerializeField] SkillTreeNodeRegistry registry;
         [SerializeField] SaveGameSO saveGameSO;
+        [SerializeField] SaveGameSO defaultSaveGameSO;
 
         const string SaveFolder = "ScriptableObjectSaves";
         string savePathSaveGameSO;
@@ -28,7 +30,7 @@ namespace Lukas.Scripts.Program
             {
                 instance = this;
                 DontDestroyOnLoad(this);
-                #if UNITY_EDITOR
+ #if UNITY_EDITOR
                 savePathSaveGameSO = Path.Combine(Application.persistentDataPath, SaveFolder, "saveGameSO.json");
                 savePathRegistry = Path.Combine(Application.persistentDataPath, SaveFolder, "registry.json");
                 SavePathsCreated = true;
@@ -49,8 +51,8 @@ namespace Lukas.Scripts.Program
         public void Save()
         {
             Directory.CreateDirectory(Path.GetDirectoryName(savePathSaveGameSO));
-
-            string json = JsonUtility.ToJson(saveGameSO);
+            
+            string json = JsonConvert.SerializeObject(saveGameSO);
             File.WriteAllText(savePathSaveGameSO,json);
             Debug.Log($"Saved ScriptableObject to {savePathSaveGameSO}");
             
@@ -80,6 +82,9 @@ namespace Lukas.Scripts.Program
             }
             else
             {
+                saveGameSO.HasSaved = defaultSaveGameSO.HasSaved;
+                saveGameSO.MemoryFragmentsAmount = defaultSaveGameSO.MemoryFragmentsAmount;
+                GameManager.Instance.ResetPlayerName();
                 Debug.LogWarning("Save file not found!");
             }
         }

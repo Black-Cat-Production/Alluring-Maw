@@ -1,7 +1,7 @@
 ﻿using System;
+using Lukas.Scripts.Core.Events;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Lukas.Scripts.Core.UI
 {
@@ -10,9 +10,20 @@ namespace Lukas.Scripts.Core.UI
     {
         [SerializeField] TMP_InputField inputField;
         [SerializeField] Canvas inputUICanvas;
-        
+        [SerializeField] NotifyEvent notifyEvent;
 
-        public void ShowInputUI()
+        void OnEnable()
+        {
+            notifyEvent.OnNotify += ShowInputUI;
+        }
+
+        void OnDisable()
+        {
+            notifyEvent.OnNotify -= ShowInputUI;
+        }
+
+
+        void ShowInputUI()
         {
             inputField.text = string.Empty;
             inputUICanvas.gameObject.SetActive(true);
