@@ -9,6 +9,7 @@ namespace Lukas.Scripts.Core.UI
     public class LeaderboardManager : MonoBehaviour
     {
         [SerializeField] NotifyEvent notifyEvent;
+        [SerializeField] NotifyEvent nameChanged;
         static LeaderboardManager instance;
         public  const string PublicLeaderboardKeyTime = "fd75063a77e518e3f564853366bfcd5a8b34d8457a29f399408f8a7de5df7f69";
         public const string PublicLeaderboardKeyDamage = "4e6ba1477fca70f969b3bed6730f8eec8256bc2ed612da124041a29ae6a14e19";
@@ -34,11 +35,18 @@ namespace Lukas.Scripts.Core.UI
         void OnEnable()
         {
             notifyEvent.OnNotify += SetLeaderboards;
+            nameChanged.OnNotify += SetNewName;
         }
 
         void OnDisable()
         {
             notifyEvent.OnNotify -= SetLeaderboards;
+            nameChanged.OnNotify -= SetNewName;
+        }
+
+        void SetNewName()
+        {
+            currentName = GameManager.Instance.GetPlayerName();
         }
 
         void SetLeaderboards()

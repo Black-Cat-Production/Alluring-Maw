@@ -1984,7 +1984,7 @@ MonoBehaviour:
   saveGameSO: {fileID: 11400000, guid: 58c6ef996ca9c794a90dca0e436eeeb1, type: 2}
   defaultSaveGameSO: {fileID: 11400000, guid: e8a3c5fc97eeebc47a61ff935b8afbd3, type: 2}
   nameValue: {fileID: 970789118}
-  notifyEvent: {fileID: 11400000, guid: d872bfa0288e4194fa4341f6f8679f91, type: 2}
+  notifyEvent: {fileID: 11400000, guid: 62834afd776f7a143b49bb0fc9ddd3dd, type: 2}
 --- !u!1 &608807739
 GameObject:
   m_ObjectHideFlags: 0
@@ -5938,8 +5938,11 @@ MonoBehaviour:
   saveGameManager: {fileID: 2139306344}
   notifyPlayerInputUI: {fileID: 11400000, guid: 8cb98b2b36d91a143987bd50245ad53e,
     type: 2}
-  notifyMainMenu: {fileID: 11400000, guid: d872bfa0288e4194fa4341f6f8679f91, type: 2}
-  notifyEvent: {fileID: 11400000, guid: 6b09dfb1dd911484896f734b3ad3e2d8, type: 2}
+  notifyMainMenu: {fileID: 11400000, guid: 62834afd776f7a143b49bb0fc9ddd3dd, type: 2}
+  notifyLeaderboardToSet: {fileID: 11400000, guid: 6b09dfb1dd911484896f734b3ad3e2d8,
+    type: 2}
+  notifyLeaderboardOnNameChange: {fileID: 11400000, guid: 62834afd776f7a143b49bb0fc9ddd3dd,
+    type: 2}
 --- !u!4 &1628741620
 Transform:
   m_ObjectHideFlags: 0
@@ -5985,6 +5988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notifyEvent: {fileID: 11400000, guid: 6b09dfb1dd911484896f734b3ad3e2d8, type: 2}
+  nameChanged: {fileID: 11400000, guid: 62834afd776f7a143b49bb0fc9ddd3dd, type: 2}
 --- !u!4 &1645333684
 Transform:
   m_ObjectHideFlags: 0

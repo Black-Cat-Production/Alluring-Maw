@@ -17,7 +17,8 @@ namespace Lukas.Scripts.Core
         [SerializeField] SaveGameManager saveGameManager;
         [SerializeField] NotifyEvent notifyPlayerInputUI;
         [SerializeField] NotifyEvent notifyMainMenu;
-        [SerializeField] NotifyEvent notifyEvent;
+        [SerializeField] NotifyEvent notifyLeaderboardToSet;
+        [SerializeField] NotifyEvent notifyLeaderboardOnNameChange;
         public static GameManager Instance { get; private set; }
         public int MemoryFragmentsAmount { get; private set; }
         public Action OnWinGetScores;
@@ -66,6 +67,7 @@ namespace Lukas.Scripts.Core
         public void SetPlayerName(string _name)
         {
             saveGame.PlayerName = _name;
+            notifyLeaderboardOnNameChange.Invoke();
             notifyMainMenu.Invoke();
         }
 
@@ -85,7 +87,7 @@ namespace Lukas.Scripts.Core
             OnWinGetScores.Invoke();
             Debug.Log("You won the game!!");
             saveGame.SaveMemoryFragmentsAmount(MemoryFragmentsAmount);
-            notifyEvent.Invoke();
+            notifyLeaderboardToSet.Invoke();
             mainMenuSceneLoader.LoadAsync();
         }
 
