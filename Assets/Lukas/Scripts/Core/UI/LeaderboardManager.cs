@@ -11,9 +11,10 @@ namespace Lukas.Scripts.Core.UI
         [SerializeField] NotifyEvent notifyEvent;
         [SerializeField] NotifyEvent nameChanged;
         static LeaderboardManager instance;
-        public  const string PublicLeaderboardKeyTime = "fd75063a77e518e3f564853366bfcd5a8b34d8457a29f399408f8a7de5df7f69";
+        public const string PublicLeaderboardKeyTime = "fd75063a77e518e3f564853366bfcd5a8b34d8457a29f399408f8a7de5df7f69";
         public const string PublicLeaderboardKeyDamage = "4e6ba1477fca70f969b3bed6730f8eec8256bc2ed612da124041a29ae6a14e19";
         string currentName;
+
         IEnumerator Start()
         {
             if (instance == null)
@@ -24,6 +25,7 @@ namespace Lukas.Scripts.Core.UI
                 {
                     yield return null;
                 }
+
                 currentName = GameManager.Instance.GetPlayerName();
             }
             else
@@ -56,14 +58,14 @@ namespace Lukas.Scripts.Core.UI
             SetLeaderboardEntry(currentName, milliseconds, PublicLeaderboardKeyTime);
             SetLeaderboardEntry(currentName, damageTaken, PublicLeaderboardKeyDamage);
         }
-        
+
         void GetScoresFromGameManager(out float _timeScore, out int _damageTakenScore)
         {
             _timeScore = GameManager.Instance.TimeScore;
             _damageTakenScore = GameManager.Instance.DamageTakenScore;
         }
-        
-        
+
+
         void SetLeaderboardEntry(string _name, int _score, string _leaderboardKey)
         {
             LeaderboardCreator.ResetPlayer();

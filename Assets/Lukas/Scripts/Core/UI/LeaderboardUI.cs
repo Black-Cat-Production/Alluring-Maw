@@ -88,7 +88,7 @@ namespace Lukas.Scripts.Core.UI
             Debug.Log(_milliseconds);
             var timeSpan = TimeSpan.FromMilliseconds(_milliseconds);
             UnpackTimeSpan(timeSpan, out int min, out int sec, out int mil);
-            return $"{min}m : {sec}s : {mil}ms";
+            return $"{min:00}m : {sec:00}s : {mil:000}ms";
         }
 
         void UpdateHeader(ELeaderboardType _type)
