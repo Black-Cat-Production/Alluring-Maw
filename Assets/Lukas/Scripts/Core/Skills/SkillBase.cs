@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using LL_Unity_Utils.Timers;
 using Lukas.Scripts.Core.Modules;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Lukas.Scripts.Core.Skills
 {
@@ -13,7 +14,8 @@ namespace Lukas.Scripts.Core.Skills
         [SerializeField] protected LayerMask obstructionLayer;
         [SerializeField] protected List<SkillBehaviorSO> baseBehaviours;
         Timer despawnTimer;
-        
+
+        [SerializeField] UnityEvent OnSpawn;
         
         protected virtual void Awake()
         {
@@ -27,6 +29,7 @@ namespace Lukas.Scripts.Core.Skills
             {
                 AddBehavior(behaviour);
             }
+            OnSpawn?.Invoke();
         }
         
 
