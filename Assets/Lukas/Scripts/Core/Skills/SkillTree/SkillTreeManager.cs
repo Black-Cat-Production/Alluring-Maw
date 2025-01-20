@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Lukas.Scripts.Core.System;
@@ -14,16 +15,22 @@ namespace Lukas.Scripts.Core.Skills
 
         public static SkillTreeManager Instance { get; private set; }
 
-        void Start()
+        IEnumerator Start()
         {
             if (Instance == null)
             {
                 Instance = this;
                 DontDestroyOnLoad(this);
+                while (!GameManager.Instance.FinishedLoading)
+                {
+                    yield return null;
+                }
+
                 foreach (var skill in playerSkills)
                 {
                     skill.ResetBehaviorList();
                 }
+
                 BuildSkillTree();
             }
             else
@@ -83,32 +90,22 @@ namespace Lukas.Scripts.Core.Skills
             }
         }
 
-        public void BuildSkillTree()
+        void BuildSkillTree()
         {
-            if (saveGame.HasSaved)
+            bool loadedNodes = false;
+            foreach (var node in nodeRegistry.SkillTreeNodesData.Where(_node => _node.Data.Status == ESkillNodeStatus.Unlocked))
             {
-                //LoadSkillTree(saveGame.SavedNodes);
-                foreach (var node in nodeRegistry.SkillTreeNodesData.Where(_node => _node.Data.Status == ESkillNodeStatus.Unlocked))
-                {
-                    UnlockBehavior(node, false);
-                }
-
-                Debug.Log("Found Saved Skill Tree!");
+                Debug.Log("Found unlocked node!");
+                UnlockBehavior(node, false);
+                loadedNodes = true;
             }
-            else
+
+            if (loadedNodes) return;
+            Debug.Log("No saved tree found!");
+            foreach (var node in nodeRegistry.SkillTreeNodesData)
             {
-                Debug.Log("No saved tree found!");
-                foreach (var node in nodeRegistry.SkillTreeNodesData)
-                {
-                    node.Data.ChangeStatus(node.Data.Prerequisites.Count == 0 ? ESkillNodeStatus.Unlockable : ESkillNodeStatus.Locked);
-                }
+                node.Data.ChangeStatus(node.Data.Prerequisites.Count == 0 ? ESkillNodeStatus.Unlockable : ESkillNodeStatus.Locked);
             }
-        }
-
-        public void SaveSkillTree()
-        {
-            var savedNodeData = nodeRegistry.SkillTreeNodesData;
-            saveGame.SaveNodes(savedNodeData);
         }
 
         public void ResetSkillTree()
@@ -117,17 +114,13 @@ namespace Lukas.Scripts.Core.Skills
             {
                 node.Data.ChangeStatus(ESkillNodeStatus.Disabled);
             }
+
             foreach (var skill in playerSkills)
             {
                 skill.ResetBehaviorList();
             }
 
             BuildSkillTree();
-        }
-
-        void OnDisable()
-        {
-            SaveSkillTree();
         }
     }
 }

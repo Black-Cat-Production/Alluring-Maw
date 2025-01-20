@@ -521,8 +521,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nodeData: {fileID: 11400000, guid: 21248ff295e32164ea8c66a9c01d7265, type: 2}
-  nodeName: Poisonous Darkness
-  description: Adds a poison effect to the dark arc skill. <Debug Node>
+  nodeName: Explosive Corruption
+  description: If an enemy dies to the damage over time of the Corruption Orb, it
+    explodes, dealing 5 damage to any enemies in an area and afflicting them with
+    a new damage over time debuff.
 --- !u!1 &96275452
 GameObject:
   m_ObjectHideFlags: 0

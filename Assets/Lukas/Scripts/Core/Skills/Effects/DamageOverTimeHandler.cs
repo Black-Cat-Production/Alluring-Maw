@@ -20,11 +20,10 @@ namespace Lukas.Scripts.Core.Skills.Effects
             while (_effect.Duration > 0 && !_target.HealthSystemModule.IsDead)
             {
                 _target.HealthSystemModule.TakeDamage(_effect.Intensity);
+                if(_target.HealthSystemModule.IsDead && _effect.Context != null) _effect.Context.OnEnemyKilled?.Invoke(_target);
                 if (_target == null || !_target.isActiveAndEnabled) break;
-                if(_target.HealthSystemModule.IsDead && _effect.Context != null) _effect.Context.OnEnemyKilled.Invoke(_target);
                 yield return new WaitForSeconds(_effect.TickInterval);
             }
-
             _effect.IsRunning = false;
             Debug.Log("Coroutine Ended! Effect ran out and/or target died!");
         }

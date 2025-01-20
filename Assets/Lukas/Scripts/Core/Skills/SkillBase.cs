@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Lukas.Scripts.Core.Skills
 {
-    public abstract class GenericSkill<T> : SkillBridgeUnity where T : ISkill
+    public abstract class SkillBase : SkillBridgeUnity
     {
         [SerializeField] float despawnTimerDuration;
         [SerializeField] protected int baseSkillHitDamage;

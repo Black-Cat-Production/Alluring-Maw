@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 3021342988634603300}
   - component: {fileID: 2876733034307259094}
   - component: {fileID: 3749685564224631242}
-  - component: {fileID: 279931243049885083}
-  - component: {fileID: -2318598544419306653}
+  - component: {fileID: -8338599243776381739}
+  - component: {fileID: -2151756387830590307}
   m_Layer: 0
-  m_Name: Skill1
+  m_Name: CorruptedSkill_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 1931a5158a1821c47a18f011eaeabe23, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -105,7 +105,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
@@ -113,7 +113,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &279931243049885083
+--- !u!114 &-8338599243776381739
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,21 +122,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 6358866230775880048}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ffcb97083634703a7b6414d2b93d9c3, type: 3}
+  m_Script: {fileID: 11500000, guid: fa93502fb53f4fb3aa2dab9e8528080f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: Default Attack
+  skillName: Corruption Orb
   tags: 
   behaviors:
-  - {fileID: 11400000, guid: 5b0481119b8b7d3458013eddd47f3f0e, type: 2}
-  manaCost: 0
+  - {fileID: 11400000, guid: 00353cf3f38070745aca9fc89a50873c, type: 2}
+  manaCost: 22
+  hasPreviewCast: 0
   despawnTimerDuration: 5
-  baseSkillHitDamage: 5
+  baseSkillHitDamage: 0
   obstructionLayer:
     serializedVersion: 2
     m_Bits: 64
-  baseBehaviours: []
---- !u!135 &-2318598544419306653
+  baseBehaviours:
+  - {fileID: 11400000, guid: a4c1e7c1eb188a647bdd34e476769de8, type: 2}
+--- !u!135 &-2151756387830590307
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -155,5 +157,5 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.545722
-  m_Center: {x: 0, y: 0, z: -0.045722127}
+  m_Radius: 0.56887484
+  m_Center: {x: 0, y: 0, z: -0.068874955}
