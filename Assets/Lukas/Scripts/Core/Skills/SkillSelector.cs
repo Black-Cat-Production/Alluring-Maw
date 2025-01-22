@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Lukas.Scripts.Core.Skills.SkillTree;
 using UnityEngine;
 
@@ -20,7 +19,7 @@ namespace Lukas.Scripts.Core.Skills
         public void UpdateSelectedSkill(int _changeDirection)
         {
             int currentIndex = availableSkills.FindIndex((_a) => _a == skillController.SelectedSkill);
-            currentIndex = currentIndex + _changeDirection;
+            currentIndex += _changeDirection;
             if (currentIndex < 0) currentIndex = availableSkills.Count - 1;
             else if (currentIndex > availableSkills.Count - 1) currentIndex = 0;
             skillController.SetSkill(availableSkills[currentIndex]);

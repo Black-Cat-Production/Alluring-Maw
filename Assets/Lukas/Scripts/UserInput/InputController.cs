@@ -56,7 +56,7 @@ namespace Lukas.Scripts.UserInput
             if (dashTime > 0)
             {
                 dashTime -= Time.fixedDeltaTime;
-                float dashFactor = dashCurve.Evaluate(1 - (dashTime / dashDuration));
+                float dashFactor = dashCurve.Evaluate(1 - dashTime / dashDuration);
                 currentDashVelocity = dashDirection * (dashForce * dashFactor);
             }
             else
@@ -127,7 +127,7 @@ namespace Lukas.Scripts.UserInput
 
         public void CastSkill(InputAction.CallbackContext _callbackContext)
         {
-            if (!animator.GetCurrentAnimatorStateInfo(0).IsName("IdleState") && !animator.GetCurrentAnimatorStateInfo(0).IsName("SkillHoldState") || animator.GetBool("IsCastingBlocked")) return;
+            if ((!animator.GetCurrentAnimatorStateInfo(0).IsName("IdleState") && !animator.GetCurrentAnimatorStateInfo(0).IsName("SkillHoldState")) || animator.GetBool("IsCastingBlocked")) return;
             if (!skillSelector.CanCastSpell()) return;
             if (_callbackContext.phase == InputActionPhase.Started)
             {

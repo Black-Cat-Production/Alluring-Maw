@@ -10,7 +10,6 @@ namespace Lukas.Scripts.Core.Skills
         [SerializeField] float spawnDistance;
         [SerializeField] Camera playerCamera;
         [SerializeField] GameObject castPreviewPrefab;
-        [SerializeField] LayerMask layerMask;
         public SkillBridgeUnity SelectedSkill { get; private set; }
 
         public ManaSystemModule ManaSystemModule { get; private set; }
@@ -46,7 +45,6 @@ namespace Lukas.Scripts.Core.Skills
 
         IEnumerator HoldPreview()
         {
-            int debugSafety = 0;
             var cameraTransform = playerCamera.transform;
             while (castPreview)
             {

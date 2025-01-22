@@ -9,7 +9,6 @@ namespace Lukas.Scripts.Core.Skills.SkillTree
     public class SkillTreeManager : MonoBehaviour
     {
         [SerializeField] List<SkillBridgeUnity> playerSkills = new();
-        [SerializeField] SaveGameSO saveGame;
         [SerializeField] SkillTreeNodeRegistry nodeRegistry;
 
         public static SkillTreeManager Instance { get; private set; }

@@ -8,11 +8,9 @@ namespace Lukas.Scripts.Core.Skills.Effects
     {
         public void ApplyEffect(EnemyAIModule _target, Effect _effect)
         {
-            if (!_effect.IsRunning)
-            {
-                _effect.IsRunning = true;
-                EffectRunner.Instance.StartCoroutine(ApplyPeriodicDamage(_target, _effect));
-            }
+            if (_effect.IsRunning) return;
+            _effect.IsRunning = true;
+            EffectRunner.Instance.StartCoroutine(ApplyPeriodicDamage(_target, _effect));
         }
 
         IEnumerator ApplyPeriodicDamage(EnemyAIModule _target, Effect _effect)
