@@ -32,7 +32,7 @@ namespace Lukas.Scripts.Core.Skills.SkillTree
         {
             foreach (var node in skillTreeNode)
             {
-                var imageComponent =  node.GetComponent<Image>();
+                var imageComponent = node.GetComponent<Image>();
                 imageComponent.sprite = node.NodeData.Data.Status switch
                 {
                     ESkillNodeStatus.Disabled => lockedSkill,

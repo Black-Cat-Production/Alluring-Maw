@@ -54,9 +54,10 @@ namespace Lukas.Scripts.Core.Skills
                 Debug.Log(hit);
                 if (!hit)
                 {
-                    if(castPreviewPrefabInstance != null) Destroy(castPreviewPrefabInstance);
+                    if (castPreviewPrefabInstance != null) Destroy(castPreviewPrefabInstance);
                     yield return null;
                 }
+
                 var spawnPosition = new Vector3(rayHit.point.x, 0.1f, rayHit.point.z);
                 if (castPreviewPrefabInstance != null) castPreviewPrefabInstance.transform.position = spawnPosition;
                 else castPreviewPrefabInstance = Instantiate(castPreviewPrefab, spawnPosition, Quaternion.identity);

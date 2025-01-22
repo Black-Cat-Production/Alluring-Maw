@@ -20,10 +20,7 @@ namespace Lukas.Scripts.Program
         IEnumerator Start()
         {
             Screen.SetResolution(1920, 1080, true);
-            while (!GameManager.Instance.FinishedLoading)
-            {
-                yield return null;
-            }
+            while (!GameManager.Instance.FinishedLoading) yield return null;
             UpdatePlayerName();
         }
 
@@ -32,7 +29,6 @@ namespace Lukas.Scripts.Program
             notifyEvent.OnNotify += UpdatePlayerName;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-            
         }
 
         void OnDisable()

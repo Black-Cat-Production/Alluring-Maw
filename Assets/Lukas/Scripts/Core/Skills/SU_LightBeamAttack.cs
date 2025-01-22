@@ -2,6 +2,5 @@
 {
     public class SU_LightBeamAttack : SkillBase
     {
-        
     }
 }

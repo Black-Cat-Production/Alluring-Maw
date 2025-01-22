@@ -16,6 +16,7 @@ namespace Lukas.Scripts.Core.Skills.SkillTree
                 Debug.LogError("Given node was invalid or got destroyed!");
                 return;
             }
+
             nodeNameField.text = _node.NodeName;
             nodeDescField.text = _node.NodeDescription;
             if (_node.NodeData.Data.Status == ESkillNodeStatus.Unlocked) nodeDescField.text = _node.NodeDescription + "  --UNLOCKED--  ";
@@ -25,6 +26,7 @@ namespace Lukas.Scripts.Core.Skills.SkillTree
                 nodeCostValueField.color = Color.green;
                 return;
             }
+
             nodeCostValueField.color = !_node.IsUnlockableByCost() ? Color.red : Color.black;
         }
     }

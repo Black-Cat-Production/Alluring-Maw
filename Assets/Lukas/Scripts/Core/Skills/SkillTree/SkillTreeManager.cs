@@ -20,15 +20,9 @@ namespace Lukas.Scripts.Core.Skills.SkillTree
             {
                 Instance = this;
                 DontDestroyOnLoad(this);
-                while (!GameManager.Instance.FinishedLoading)
-                {
-                    yield return null;
-                }
+                while (!GameManager.Instance.FinishedLoading) yield return null;
 
-                foreach (var skill in playerSkills)
-                {
-                    skill.ResetBehaviorList();
-                }
+                foreach (var skill in playerSkills) skill.ResetBehaviorList();
 
                 BuildSkillTree();
             }
@@ -61,32 +55,25 @@ namespace Lukas.Scripts.Core.Skills.SkillTree
             if (_useCost) GameManager.Instance.DecreaseMemoryFragmentsAmount(_skillTreeNodeData.Data.MemoryFragmentCost);
             var behavior = _skillTreeNodeData.Data.Behavior;
             if (behavior.SpecificName != null)
-            {
                 foreach (var playerSkill in playerSkills.Where(_playerSkill => _playerSkill.SkillName == behavior.SpecificName))
                 {
                     playerSkill.AddBehavior(behavior);
                     _skillTreeNodeData.Data.ChangeStatus(ESkillNodeStatus.Unlocked);
                 }
-            }
             else
-            {
                 //This LINQ selects every playerSkill that matches the tags of the behavior and adds the behavior to it
                 foreach (var playerSkill in from playerSkill in playerSkills from tag in behavior.Tags.Where(_tag => playerSkill.Tags.Contains(_tag)) select playerSkill)
                 {
                     playerSkill.AddBehavior(behavior);
                     _skillTreeNodeData.Data.ChangeStatus(ESkillNodeStatus.Unlocked);
                 }
-            }
 
             UpdateTree();
         }
 
         void UpdateTree()
         {
-            foreach (var node in nodeRegistry.SkillTreeNodesData.Where(_node => _node.Data.Status != ESkillNodeStatus.Unlocked))
-            {
-                node.Data.ChangeStatus(node.Data.Prerequisites.TrueForAll((_node) => _node.Data.Status == ESkillNodeStatus.Unlocked) ? ESkillNodeStatus.Unlockable : ESkillNodeStatus.Locked);
-            }
+            foreach (var node in nodeRegistry.SkillTreeNodesData.Where(_node => _node.Data.Status != ESkillNodeStatus.Unlocked)) node.Data.ChangeStatus(node.Data.Prerequisites.TrueForAll((_node) => _node.Data.Status == ESkillNodeStatus.Unlocked) ? ESkillNodeStatus.Unlockable : ESkillNodeStatus.Locked);
         }
 
         void BuildSkillTree()
@@ -101,23 +88,14 @@ namespace Lukas.Scripts.Core.Skills.SkillTree
 
             if (loadedNodes) return;
             Debug.Log("No saved tree found!");
-            foreach (var node in nodeRegistry.SkillTreeNodesData)
-            {
-                node.Data.ChangeStatus(node.Data.Prerequisites.Count == 0 ? ESkillNodeStatus.Unlockable : ESkillNodeStatus.Locked);
-            }
+            foreach (var node in nodeRegistry.SkillTreeNodesData) node.Data.ChangeStatus(node.Data.Prerequisites.Count == 0 ? ESkillNodeStatus.Unlockable : ESkillNodeStatus.Locked);
         }
 
         public void ResetSkillTree()
         {
-            foreach (var node in nodeRegistry.SkillTreeNodesData)
-            {
-                node.Data.ChangeStatus(ESkillNodeStatus.Disabled);
-            }
+            foreach (var node in nodeRegistry.SkillTreeNodesData) node.Data.ChangeStatus(ESkillNodeStatus.Disabled);
 
-            foreach (var skill in playerSkills)
-            {
-                skill.ResetBehaviorList();
-            }
+            foreach (var skill in playerSkills) skill.ResetBehaviorList();
 
             BuildSkillTree();
         }

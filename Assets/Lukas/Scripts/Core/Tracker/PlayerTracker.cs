@@ -19,10 +19,10 @@ namespace Lukas.Scripts.Core.Tracker
         public int EnemiesKilled { get; private set; }
         ManaSystemModule playerManaSystemModule;
         HealthSystemModule playerHealthSystemModule;
-        
+
         //This should prob. be any form of ID or similar
         RoomSpawner currentRoom;
-        
+
 
         void Awake()
         {

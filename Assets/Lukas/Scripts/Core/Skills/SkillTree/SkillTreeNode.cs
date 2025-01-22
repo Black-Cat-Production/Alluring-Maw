@@ -8,8 +8,7 @@ namespace Lukas.Scripts.Core.Skills.SkillTree
     {
         [SerializeField] SkillTreeNodeDataSO nodeData;
         [SerializeField] string nodeName;
-        [TextArea]
-        [SerializeField] string description;
+        [TextArea] [SerializeField] string description;
 
         public string NodeDescription => description;
         public string NodeName => nodeName;
@@ -18,6 +17,7 @@ namespace Lukas.Scripts.Core.Skills.SkillTree
         public Action OnClick;
         public static Action<SkillTreeNode> OnHoverEnter;
         public static Action OnHoverExit;
+
         public void Clicked()
         {
             switch (nodeData.Data.Status)

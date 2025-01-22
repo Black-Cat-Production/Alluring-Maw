@@ -17,7 +17,7 @@ namespace Lukas.Scripts.Core.Skills
         Timer despawnTimer;
 
         [SerializeField] UnityEvent OnSpawn;
-        
+
         protected virtual void Awake()
         {
             despawnTimer = new Timer(despawnTimerDuration);
@@ -26,13 +26,10 @@ namespace Lukas.Scripts.Core.Skills
 
         void Start()
         {
-            foreach (var behaviour in baseBehaviours)
-            {
-                AddBehavior(behaviour);
-            }
+            foreach (var behaviour in baseBehaviours) AddBehavior(behaviour);
             OnSpawn?.Invoke();
         }
-        
+
 
         void FixedUpdate()
         {
@@ -42,10 +39,7 @@ namespace Lukas.Scripts.Core.Skills
         protected virtual void Use(SkillContext _context)
         {
             int totalDamage = baseSkillHitDamage;
-            foreach (var behavior in behaviors)
-            {
-                behavior.Execute(_context, ref totalDamage);
-            }
+            foreach (var behavior in behaviors) behavior.Execute(_context, ref totalDamage);
 
             if (_context.Targets.Count <= 0) return;
             var target = _context.Targets[0];

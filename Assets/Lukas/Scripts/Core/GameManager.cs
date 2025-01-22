@@ -24,10 +24,10 @@ namespace Lukas.Scripts.Core
         public Action OnWinGetScores;
 
         public float TimeScore { get; private set; }
-        public int DamageTakenScore{ get; private set; }
+        public int DamageTakenScore { get; private set; }
 
         public bool FinishedLoading { get; private set; }
-        
+
         void Awake()
         {
             if (Instance == null)
@@ -50,14 +50,15 @@ namespace Lukas.Scripts.Core
                 yield return null;
                 ticks++;
             }
+
             LoadGame();
-            if(ticks >= 200) Debug.LogError("Startup failed due to max ticks reached!");
-            if(string.IsNullOrEmpty(saveGame.PlayerName)) PromptNameInput();
+            if (ticks >= 200) Debug.LogError("Startup failed due to max ticks reached!");
+            if (string.IsNullOrEmpty(saveGame.PlayerName)) PromptNameInput();
             LoadMemoryFragmentsAmount();
             yield return null;
             FinishedLoading = true;
         }
-        
+
         public void ResetPlayerName()
         {
             saveGame.PlayerName = "";
@@ -121,6 +122,7 @@ namespace Lukas.Scripts.Core
                     Debug.Log($"You spent {-_amount} memory fragments!");
                     break;
             }
+
             saveGame.SaveMemoryFragmentsAmount(MemoryFragmentsAmount);
         }
 
@@ -137,9 +139,9 @@ namespace Lukas.Scripts.Core
         public void SaveGame()
         {
             saveGameManager.Save();
-            #if UNITY_EDITOR
+#if UNITY_EDITOR
             EditorApplication.ExitPlaymode();
-            #endif
+#endif
             Application.Quit();
         }
 

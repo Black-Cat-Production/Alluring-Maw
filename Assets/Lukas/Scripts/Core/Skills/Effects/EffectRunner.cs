@@ -9,13 +9,9 @@ namespace Lukas.Scripts.Core.Skills.Effects
         void Awake()
         {
             if (Instance == null)
-            {
                 Instance = this;
-            }
             else
-            {
                 Destroy(gameObject);
-            }
         }
     }
 }

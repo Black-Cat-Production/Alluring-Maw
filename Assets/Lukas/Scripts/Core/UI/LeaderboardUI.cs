@@ -15,7 +15,7 @@ namespace Lukas.Scripts.Core.UI
         [SerializeField] List<TextMeshProUGUI> scores;
         [SerializeField] TextMeshProUGUI header;
         [SerializeField] Canvas leaderboardCanvas;
-        
+
         public void ShowUI()
         {
             leaderboardCanvas.gameObject.SetActive(true);
@@ -26,18 +26,12 @@ namespace Lukas.Scripts.Core.UI
         {
             leaderboardCanvas.gameObject.SetActive(false);
         }
-        
+
         void ResetTexts()
         {
-            foreach (var userName in names)
-            {
-                userName.text = "";
-            }
+            foreach (var userName in names) userName.text = "";
 
-            foreach (var score in scores)
-            {
-                score.text = "";
-            }
+            foreach (var score in scores) score.text = "";
         }
 
         public void DisplayLeaderboard(ELeaderboardType _type)
@@ -60,9 +54,9 @@ namespace Lukas.Scripts.Core.UI
 
         void GetLeaderboard(string _leaderboardKey)
         {
-            LeaderboardCreator.GetLeaderboard(_leaderboardKey, ((_msg) =>
+            LeaderboardCreator.GetLeaderboard(_leaderboardKey, (_msg) =>
             {
-                int loopLength = (_msg.Length < names.Count) ? _msg.Length : names.Count;
+                int loopLength = _msg.Length < names.Count ? _msg.Length : names.Count;
                 for (int i = 0; i < loopLength; i++)
                 {
                     names[i].text = _msg[i].Username;
@@ -73,7 +67,7 @@ namespace Lukas.Scripts.Core.UI
                         _ => scores[i].text
                     };
                 }
-            }));
+            });
         }
 
         void UnpackTimeSpan(TimeSpan _timeSpan, out int _minutes, out int _seconds, out int _milliseconds)

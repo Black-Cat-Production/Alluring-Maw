@@ -26,14 +26,13 @@ namespace Lukas.Scripts.Core.Skills
             skillController.SetSkill(availableSkills[currentIndex]);
             Debug.Log(availableSkills[currentIndex].SkillName);
         }
-        
-        
+
+
         public bool CanCastSpell()
         {
             if (!(skillController.SelectedSkill.ManaCost > skillController.ManaSystemModule.CurrentMana)) return true;
             Debug.Log("You dont have enough mana to cast!");
             return false;
-
         }
 
         public List<ESkillTag> GetSelectedSkillTags()

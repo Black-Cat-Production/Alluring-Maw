@@ -13,9 +13,8 @@
 
         public Effect()
         {
-            
         }
-        
+
         public Effect(Effect _effect)
         {
             Name = _effect.Name;

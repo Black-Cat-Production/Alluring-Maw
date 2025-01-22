@@ -13,6 +13,7 @@ namespace Lukas.Scripts.Core.Skills
                 Destroy(gameObject);
                 return;
             }
+
             if (!_collider.gameObject.CompareTag("HitBox")) return;
             var target = _collider.gameObject.GetComponentInParent<EnemyAIModule>();
             var context = new SkillContext(transform.position, new List<EnemyAIModule> { target }, null);

@@ -7,6 +7,6 @@
         AoE,
         Light,
         Dark,
-        Base,
+        Base
     }
 }

@@ -27,7 +27,7 @@ namespace Lukas.Scripts.Core.Skills.Behaviors
                 Context = _context
             };
             _context.Effect = effect;
-            
+
             if (_context.Targets.Count > 0)
             {
                 var target = _context.Targets[0];

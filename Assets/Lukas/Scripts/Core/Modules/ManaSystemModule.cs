@@ -11,7 +11,8 @@ namespace Lukas.Scripts.Core.Modules
         [SerializeField] float manaRegenerationTickTimeInSeconds;
 
         float currentMana;
-        public Action<float,int> OnManaChanged;
+        public Action<float, int> OnManaChanged;
+
         public float CurrentMana
         {
             get => currentMana;
@@ -58,7 +59,7 @@ namespace Lukas.Scripts.Core.Modules
         {
             AddManaRegeneration(-_value);
         }
-        
+
         IEnumerator RegenerateMana()
         {
             while (gameObject.activeSelf)

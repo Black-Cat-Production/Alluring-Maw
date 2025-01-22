@@ -9,14 +9,16 @@ namespace Lukas.Scripts.Core.Rooms
     public class RoomSpawner : MonoBehaviour
     {
         [SerializeField] EnemyAIModule enemyAIModulePrefab;
+
         [SerializeField] int spawnAmount;
+
         //TODO: Replace with a list of doors!!
         [SerializeField] GameObject door;
         [SerializeField] bool isLastRoom;
         public string RoomName;
-        
+
         List<EnemyAIModule> spawnedEnemies;
-        
+
         //Tracker Events
         public static Action<RoomSpawner> OnRoomEnter;
         public static Action OnEnemyKilled;
@@ -25,11 +27,8 @@ namespace Lukas.Scripts.Core.Rooms
         void Start()
         {
             spawnedEnemies = new List<EnemyAIModule>();
-            for (int i = 0; i < spawnAmount; i++)
-            {
-                spawnedEnemies.Add(SpawnEnemy());
-            }
-            if(isLastRoom)GameManager.Instance.RegisterLastRoom(this);
+            for (int i = 0; i < spawnAmount; i++) spawnedEnemies.Add(SpawnEnemy());
+            if (isLastRoom) GameManager.Instance.RegisterLastRoom(this);
         }
 
         EnemyAIModule SpawnEnemy()
@@ -53,7 +52,7 @@ namespace Lukas.Scripts.Core.Rooms
         {
             door.SetActive(false);
             Debug.Log("Room Cleared");
-            if(isLastRoom)OnFinalRoomCleared?.Invoke();
+            if (isLastRoom) OnFinalRoomCleared?.Invoke();
         }
 
         void OnTriggerEnter(Collider _collider)

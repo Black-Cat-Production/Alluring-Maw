@@ -1,5 +1,4 @@
-﻿
-using Lukas.Scripts.Core.Skills.Effects;
+﻿using Lukas.Scripts.Core.Skills.Effects;
 using UnityEngine;
 
 namespace Lukas.Scripts.Core.Skills

@@ -10,7 +10,6 @@ namespace Lukas.Scripts.Core.Skills.SkillTree
 
         void OnEnable()
         {
-            
             SkillTreeNode.OnHoverEnter += OpenHoveredNodePanel;
             SkillTreeNode.OnHoverExit += CloseHoveredNodePanel;
         }
@@ -39,7 +38,7 @@ namespace Lukas.Scripts.Core.Skills.SkillTree
 
         public void CloseHoveredNodePanel()
         {
-                hoveredNodePanelGroup.gameObject.SetActive(false);
+            hoveredNodePanelGroup.gameObject.SetActive(false);
         }
     }
 }

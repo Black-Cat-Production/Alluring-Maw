@@ -21,10 +21,7 @@ namespace Lukas.Scripts.Core.UI
             {
                 instance = this;
                 DontDestroyOnLoad(gameObject);
-                while (!GameManager.Instance.FinishedLoading)
-                {
-                    yield return null;
-                }
+                while (!GameManager.Instance.FinishedLoading) yield return null;
 
                 currentName = GameManager.Instance.GetPlayerName();
             }

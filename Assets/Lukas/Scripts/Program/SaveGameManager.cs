@@ -21,7 +21,7 @@ namespace Lukas.Scripts.Program
         const string SaveFolder = "ScriptableObjectSaves";
         string savePathSaveGameSO;
         string savePathRegistry;
-        [NonSerialized]public bool SavePathsCreated;
+        [NonSerialized] public bool SavePathsCreated;
 
         static SaveGameManager instance;
 
@@ -31,7 +31,7 @@ namespace Lukas.Scripts.Program
             {
                 instance = this;
                 DontDestroyOnLoad(this);
- #if UNITY_EDITOR
+#if UNITY_EDITOR
                 savePathSaveGameSO = Path.Combine(Application.persistentDataPath, SaveFolder, "saveGameSO.json");
                 savePathRegistry = Path.Combine(Application.persistentDataPath, SaveFolder, "registry.json");
                 SavePathsCreated = true;
@@ -52,34 +52,31 @@ namespace Lukas.Scripts.Program
         public void Save()
         {
             Directory.CreateDirectory(Path.GetDirectoryName(savePathSaveGameSO));
-            
+
             string json = JsonConvert.SerializeObject(saveGameSO);
-            File.WriteAllText(savePathSaveGameSO,json);
+            File.WriteAllText(savePathSaveGameSO, json);
             Debug.Log($"Saved ScriptableObject to {savePathSaveGameSO}");
-            
+
 
             var serializedSkillTreeData = registry.SkillTreeNodesData.Select(JsonUtility.ToJson).ToList();
             var testData = registry.SkillTreeNodesData.Select(_nodeDataSO => JsonConvert.SerializeObject(_nodeDataSO, Formatting.Indented)).ToList();
             json = JsonConvert.SerializeObject(testData, Formatting.Indented);
-            File.WriteAllText(savePathRegistry,json);
+            File.WriteAllText(savePathRegistry, json);
         }
-        
+
         [Button]
         public void Load()
         {
             if (File.Exists(savePathSaveGameSO))
             {
                 string json = File.ReadAllText(savePathSaveGameSO);
-                JsonUtility.FromJsonOverwrite(json,saveGameSO);
+                JsonUtility.FromJsonOverwrite(json, saveGameSO);
                 Debug.Log("Loaded ScriptableObject!");
-                
-                
+
+
                 json = File.ReadAllText(savePathRegistry);
                 var serializedSkillTreeData = JsonConvert.DeserializeObject<List<string>>(json);
-                for (int i = 0; i < serializedSkillTreeData.Count; i++)
-                {
-                    JsonUtility.FromJsonOverwrite(serializedSkillTreeData[i],registry.SkillTreeNodesData[i]);
-                }
+                for (int i = 0; i < serializedSkillTreeData.Count; i++) JsonUtility.FromJsonOverwrite(serializedSkillTreeData[i], registry.SkillTreeNodesData[i]);
             }
             else
             {

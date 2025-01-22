@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="46fe0c94-5cfe-4909-a357-da24a4c54e75" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Visual.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Visual/EMaterialType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Visual/EMaterialType.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Visual/MaterialHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Visual/MaterialHandler.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lukas/Animation/PlayerAnimController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lukas/Animation/PlayerAnimController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lukas/Prefabs/CorruptedSkill_Prefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lukas/Prefabs/CorruptedSkill_Prefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lukas/Prefabs/DarkArc_Prefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lukas/Prefabs/DarkArc_Prefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lukas/Prefabs/LightBeam_Prefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lukas/Prefabs/LightBeam_Prefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lukas/Prefabs/LightBolt_Prefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lukas/Prefabs/LightBolt_Prefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lukas/Scenes/Dev_Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lukas/Scenes/Dev_Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/Behaviors/DamageOverTimeBehaviorSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/Behaviors/DamageOverTimeBehaviorSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/Behaviors/ExplosionBehaviorSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/Behaviors/ExplosionBehaviorSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/Behaviors/HitDamageIncreaseBehaviorSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/Behaviors/HitDamageIncreaseBehaviorSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/Behaviors/SkillBehaviorSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/Behaviors/SkillBehaviorSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/ISkill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/ISkill.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/SkillBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/SkillBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/SkillBridgeUnity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/SkillBridgeUnity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/SkillController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/SkillController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/SkillSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/SkillSelector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/SkillTree/ESkillNodeStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/SkillTree/ESkillNodeStatus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/SkillTree/SkillTreeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/SkillTree/SkillTreeManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/SkillTree/SkillTreeNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/SkillTree/SkillTreeNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/SkillTree/SkillTreeNodeData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/SkillTree/SkillTreeNodeData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/SkillTree/SkillTreeNodeDataSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/SkillTree/SkillTreeNodeDataSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/SkillTree/SkillTreeNodeHoverDisplayManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/SkillTree/SkillTreeNodeHoverDisplayManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/SkillTree/SkillTreeNodeRegistry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/SkillTree/SkillTreeNodeRegistry.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/SkillTree/SkillTreeUIDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/SkillTree/SkillTreeUIDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/SkillTree/SkillTreeUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lukas/Scripts/Core/Skills/SkillTree/SkillTreeUIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lukas/Scripts/Program/MainMenuScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lukas/Scripts/Program/MainMenuScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lukas/Scripts/Program/SaveGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lukas/Scripts/Program/SaveGameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lukas/Scripts/UserInput/InputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lukas/Scripts/UserInput/InputController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Vicky/Animations/Assets/Assets/idle 1.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Vicky/Animations/Assets/Assets/idle 1.fbx.meta" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2ryq1515mfhXa1dVLQ5Uyi2bZyZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\Admin\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Admin\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\Admin\\AppData\\Local\\Symbols\\src"
+    ]
+  }
+}]]></component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../AlluringMawTestBuilds/Build_0.0.4_10_01_2025\Alluring Maw.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Admin\Desktop\Studium\AlluringMawTestBuilds\Build_0.0.4_10_01_2025" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.7f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;C:\Users\Admin\Desktop\Studium\Alluring Maw&quot; -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Admin\Desktop\Studium\Alluring Maw" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.7f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;C:\Users\Admin\Desktop\Studium\Alluring Maw&quot; -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Admin\Desktop\Studium\Alluring Maw" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="46fe0c94-5cfe-4909-a357-da24a4c54e75" name="Changes" comment="" />
+      <created>1737541444237</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1737541444237</updated>
+      <workItem from="1737541445878" duration="2472000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="VcsManagerConfiguration">
+    <confirmRemoveEmptyChangelist value="2" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>

@@ -33,7 +33,7 @@ namespace Lukas.Scripts.Core.UI
         {
             inputUICanvas.gameObject.SetActive(false);
         }
-        
+
         public void SubmitEntry()
         {
             if (inputField.text == string.Empty) return;

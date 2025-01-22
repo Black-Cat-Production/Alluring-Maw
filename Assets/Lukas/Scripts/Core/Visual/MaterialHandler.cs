@@ -21,10 +21,7 @@ namespace Lukas.Scripts.Core.Visual
                 EMaterialType.DarkProtag => darkProtagMaterial,
                 _ => throw new ArgumentOutOfRangeException(nameof(_materialType), _materialType, null)
             };
-            foreach (var skinnedMeshRenderer in meshRenderes)
-            {
-                skinnedMeshRenderer.material = selectedMaterial;
-            }
+            foreach (var skinnedMeshRenderer in meshRenderes) skinnedMeshRenderer.material = selectedMaterial;
         }
     }
 }

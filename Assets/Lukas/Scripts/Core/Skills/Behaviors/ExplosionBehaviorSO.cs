@@ -18,7 +18,7 @@ namespace Lukas.Scripts.Core.Skills.Behaviors
         public override List<ESkillTag> Tags => tags;
 
         [SerializeField] EffectData savedContextEffect;
-        
+
         public override void Execute(SkillContext _context, ref int _totalDamage)
         {
             _context.OnEnemyKilled += HandleEnemyDeath;

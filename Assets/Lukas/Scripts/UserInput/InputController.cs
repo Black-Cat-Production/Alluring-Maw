@@ -23,7 +23,7 @@ namespace Lukas.Scripts.UserInput
         float dashCooldownTimer;
 
         bool isAllowedCasting;
-    
+
         [SerializeField] [Min(1)] float moveSpeed = 1.0f;
         [SerializeField] float lookSensitivity = 2.0f;
         [SerializeField] Camera playerCamera;
@@ -34,12 +34,13 @@ namespace Lukas.Scripts.UserInput
         [SerializeField] AnimationCurve dashCurve;
         [SerializeField] Animator animator;
         [SerializeField] float cancelCastCooldown;
-    
-    
+
+
         [SerializeField] MaterialHandler materialHandler;
 
 
         bool castingBlockRunning;
+
         void Awake()
         {
             skillSelector = GetComponent<SkillSelector>();
@@ -101,6 +102,7 @@ namespace Lukas.Scripts.UserInput
                 if (castingBlockRunning) return;
                 StartCoroutine(BlockCasting());
             }
+
             dashDirection = transform.TransformDirection(moveInput.x, 0, moveInput.y).normalized;
             if (dashDirection == Vector3.zero) dashDirection = transform.forward;
             dashTime = dashDuration;
@@ -112,7 +114,7 @@ namespace Lukas.Scripts.UserInput
         {
             if (_callbackContext.phase != InputActionPhase.Started) return;
             float scrollDirection = _callbackContext.ReadValue<float>();
-            if(scrollDirection > 0) skillSelector.UpdateSelectedSkill(1);
+            if (scrollDirection > 0) skillSelector.UpdateSelectedSkill(1);
             else skillSelector.UpdateSelectedSkill(-1);
         }
 
@@ -132,6 +134,7 @@ namespace Lukas.Scripts.UserInput
                 animator.SetBool("isHoldingSkill", true);
                 PushMaterialChange(false);
             }
+
             if (_callbackContext.phase != InputActionPhase.Canceled) return;
             animator.SetTrigger("ReleaseSkill");
             animator.ResetTrigger("CancelCasting");
@@ -142,7 +145,7 @@ namespace Lukas.Scripts.UserInput
         public void ChangeReleaseBool(int _value)
         {
             bool value = _value != 0;
-            animator.SetBool("CanRelease", value) ;
+            animator.SetBool("CanRelease", value);
         }
 
         public void ReturnToMainMenu(InputAction.CallbackContext _callbackContext)
@@ -167,8 +170,9 @@ namespace Lukas.Scripts.UserInput
                 materialHandler.UpdateMaterialOnMeshes(EMaterialType.DefaultProtag);
                 return;
             }
-            if(tagList.Contains(ESkillTag.Light)) materialHandler.UpdateMaterialOnMeshes(EMaterialType.LightProtag);
-            if(tagList.Contains(ESkillTag.Dark)) materialHandler.UpdateMaterialOnMeshes(EMaterialType.DarkProtag);
+
+            if (tagList.Contains(ESkillTag.Light)) materialHandler.UpdateMaterialOnMeshes(EMaterialType.LightProtag);
+            if (tagList.Contains(ESkillTag.Dark)) materialHandler.UpdateMaterialOnMeshes(EMaterialType.DarkProtag);
         }
     }
 }
