@@ -19,7 +19,7 @@ namespace Lukas.Scripts.Core.Skills
             Targets = _targets;
             Effect = _effect;
         }
-
+        
         public void TriggerEnemyKilled(EnemyAIModule _target)
         {
             OnEnemyKilled?.Invoke(_target);
