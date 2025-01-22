@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using Lukas.Scripts.Core.Skills.Behaviors;
 using Newtonsoft.Json;
 
-namespace Lukas.Scripts.Core.Skills
+namespace Lukas.Scripts.Core.Skills.SkillTree
 {
     [Serializable]
     public class SkillTreeNodeData

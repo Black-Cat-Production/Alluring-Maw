@@ -4,7 +4,7 @@ using Lukas.Scripts.Core.Modules;
 using Lukas.Scripts.Core.Skills.Effects;
 using UnityEngine;
 
-namespace Lukas.Scripts.Core.Skills
+namespace Lukas.Scripts.Core.Skills.Behaviors
 {
     [CreateAssetMenu(menuName = "Scriptables/Skills/BehaviorSO/ExplosionBehaviorSO")]
     public class ExplosionBehaviorSO : SkillBehaviorSO

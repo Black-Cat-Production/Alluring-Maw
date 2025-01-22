@@ -126,15 +126,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: Arc Attack
-  tags: 
+  tags: 04000000
   behaviors: []
   manaCost: 5
+  hasPreviewCast: 0
   despawnTimerDuration: 5
   baseSkillHitDamage: 2
   obstructionLayer:
     serializedVersion: 2
     m_Bits: 64
   baseBehaviours: []
+  OnSpawn:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!135 &3792778511690929792
 SphereCollider:
   m_ObjectHideFlags: 0

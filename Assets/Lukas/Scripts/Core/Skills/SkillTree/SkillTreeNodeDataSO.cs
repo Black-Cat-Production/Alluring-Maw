@@ -1,8 +1,6 @@
-﻿using System.Collections.Generic;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Lukas.Scripts.Core.Skills
+namespace Lukas.Scripts.Core.Skills.SkillTree
 {
     [CreateAssetMenu(menuName = "Scriptables/SkillTree/SkillTreeNodeData")]
     public class SkillTreeNodeDataSO : ScriptableObject

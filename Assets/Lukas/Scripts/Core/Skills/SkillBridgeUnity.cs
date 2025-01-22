@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Lukas.Scripts.Core.Skills.Behaviors;
 using UnityEngine;
 
 namespace Lukas.Scripts.Core.Skills

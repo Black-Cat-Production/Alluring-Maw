@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: Light Beam
-  tags: 
+  tags: 03000000
   behaviors: []
   manaCost: 10
   hasPreviewCast: 1
@@ -157,3 +157,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   baseBehaviours: []
+  OnSpawn:
+    m_PersistentCalls:
+      m_Calls: []

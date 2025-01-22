@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using Lukas.Scripts.Core.Modules;
-using Unity.Mathematics;
-using UnityEditor.Rendering;
 using UnityEngine;
 
 namespace Lukas.Scripts.Core.Skills
@@ -16,14 +13,14 @@ namespace Lukas.Scripts.Core.Skills
         [SerializeField] LayerMask layerMask;
         public SkillBridgeUnity SelectedSkill { get; private set; }
 
-        ManaSystemModule manaSystemModule;
+        public ManaSystemModule ManaSystemModule { get; private set; }
 
         GameObject castPreviewPrefabInstance;
         bool castPreview;
 
         void Awake()
         {
-            manaSystemModule = GetComponent<ManaSystemModule>();
+            ManaSystemModule = GetComponent<ManaSystemModule>();
             // SkillTreeManager.Instance.UpdateBehaviors();
         }
 
@@ -76,13 +73,7 @@ namespace Lukas.Scripts.Core.Skills
                 return;
             }
 
-            if (SelectedSkill.ManaCost >= manaSystemModule.CurrentMana)
-            {
-                Debug.Log("You dont have enough mana to cast!");
-                return;
-            }
-
-            manaSystemModule.ReduceMana(SelectedSkill.ManaCost);
+            ManaSystemModule.ReduceMana(SelectedSkill.ManaCost);
             if (SelectedSkill.HasPreviewCast)
             {
                 if (castPreviewPrefabInstance == null) return;

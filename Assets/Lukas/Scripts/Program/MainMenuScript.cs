@@ -3,6 +3,7 @@ using System.Collections;
 using Lukas.Scripts.Core;
 using Lukas.Scripts.Core.Events;
 using Lukas.Scripts.Core.Skills;
+using Lukas.Scripts.Core.Skills.SkillTree;
 using Lukas.Scripts.Core.System;
 using TMPro;
 using UnityEngine;

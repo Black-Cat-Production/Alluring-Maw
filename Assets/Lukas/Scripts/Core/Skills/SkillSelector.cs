@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Lukas.Scripts.Core.Skills.SkillTree;
 using UnityEngine;
 
 namespace Lukas.Scripts.Core.Skills
@@ -24,6 +25,20 @@ namespace Lukas.Scripts.Core.Skills
             else if (currentIndex > availableSkills.Count - 1) currentIndex = 0;
             skillController.SetSkill(availableSkills[currentIndex]);
             Debug.Log(availableSkills[currentIndex].SkillName);
+        }
+        
+        
+        public bool CanCastSpell()
+        {
+            if (!(skillController.SelectedSkill.ManaCost > skillController.ManaSystemModule.CurrentMana)) return true;
+            Debug.Log("You dont have enough mana to cast!");
+            return false;
+
+        }
+
+        public List<ESkillTag> GetSelectedSkillTags()
+        {
+            return skillController.SelectedSkill.Tags;
         }
     }
 }

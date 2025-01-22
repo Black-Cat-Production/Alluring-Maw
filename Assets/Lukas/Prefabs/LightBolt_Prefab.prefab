@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: Light bolt
-  tags: 
+  tags: 03000000
   behaviors: []
   manaCost: 5
   hasPreviewCast: 0
@@ -157,3 +157,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   baseBehaviours: []
+  OnSpawn:
+    m_PersistentCalls:
+      m_Calls: []

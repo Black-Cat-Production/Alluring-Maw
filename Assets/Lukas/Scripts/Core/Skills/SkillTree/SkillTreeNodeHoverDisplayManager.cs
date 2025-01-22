@@ -1,9 +1,7 @@
-﻿using System;
-using System.Linq;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
-namespace Lukas.Scripts.Core.Skills
+namespace Lukas.Scripts.Core.Skills.SkillTree
 {
     public class SkillTreeNodeHoverDisplayManager : MonoBehaviour
     {

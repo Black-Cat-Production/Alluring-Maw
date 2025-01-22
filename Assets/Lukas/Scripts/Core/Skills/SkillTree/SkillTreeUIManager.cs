@@ -1,9 +1,6 @@
-﻿using System;
-using TMPro;
-using UnityEngine;
-using UnityEngine.InputSystem;
+﻿using UnityEngine;
 
-namespace Lukas.Scripts.Core.Skills
+namespace Lukas.Scripts.Core.Skills.SkillTree
 {
     public class SkillTreeUIManager : MonoBehaviour
     {

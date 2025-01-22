@@ -2991,6 +2991,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: -4137455359195835712, guid: c4bd777f67dd69e4a9a49e401a5e7e8f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c3c822c596d6a8a458bb49192ea85ae9, type: 2}
     - target: {fileID: -4078111650521157847, guid: c4bd777f67dd69e4a9a49e401a5e7e8f,
         type: 3}
       propertyPath: m_Layer
@@ -3156,6 +3161,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: -1101218503910478469, guid: c4bd777f67dd69e4a9a49e401a5e7e8f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c3c822c596d6a8a458bb49192ea85ae9, type: 2}
     - target: {fileID: -1038832484950680045, guid: c4bd777f67dd69e4a9a49e401a5e7e8f,
         type: 3}
       propertyPath: m_Layer
@@ -3246,6 +3256,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 394704780607202106, guid: c4bd777f67dd69e4a9a49e401a5e7e8f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c3c822c596d6a8a458bb49192ea85ae9, type: 2}
     - target: {fileID: 855543986156316118, guid: c4bd777f67dd69e4a9a49e401a5e7e8f,
         type: 3}
       propertyPath: m_Layer
@@ -3446,6 +3461,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -167.237
       objectReference: {fileID: 0}
+    - target: {fileID: 4415265278558408877, guid: c4bd777f67dd69e4a9a49e401a5e7e8f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c3c822c596d6a8a458bb49192ea85ae9, type: 2}
     - target: {fileID: 4436805663696350335, guid: c4bd777f67dd69e4a9a49e401a5e7e8f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -3604,7 +3624,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4831018558786363571, guid: c4bd777f67dd69e4a9a49e401a5e7e8f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 176818869}
   m_SourcePrefab: {fileID: 100100000, guid: c4bd777f67dd69e4a9a49e401a5e7e8f, type: 3}
 --- !u!4 &176818863 stripped
 Transform:
@@ -3612,6 +3636,57 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 176818862}
   m_PrefabAsset: {fileID: 0}
+--- !u!137 &176818864 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -1101218503910478469, guid: c4bd777f67dd69e4a9a49e401a5e7e8f,
+    type: 3}
+  m_PrefabInstance: {fileID: 176818862}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &176818865 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4415265278558408877, guid: c4bd777f67dd69e4a9a49e401a5e7e8f,
+    type: 3}
+  m_PrefabInstance: {fileID: 176818862}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &176818866 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -4137455359195835712, guid: c4bd777f67dd69e4a9a49e401a5e7e8f,
+    type: 3}
+  m_PrefabInstance: {fileID: 176818862}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &176818867 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 394704780607202106, guid: c4bd777f67dd69e4a9a49e401a5e7e8f,
+    type: 3}
+  m_PrefabInstance: {fileID: 176818862}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &176818868 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4831018558786363571, guid: c4bd777f67dd69e4a9a49e401a5e7e8f,
+    type: 3}
+  m_PrefabInstance: {fileID: 176818862}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &176818869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176818868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c24ee3308664c0092020452722ae01a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshRenderes:
+  - {fileID: 176818867}
+  - {fileID: 176818866}
+  - {fileID: 176818865}
+  - {fileID: 176818864}
+  defaultProtagMaterial: {fileID: 2100000, guid: c3c822c596d6a8a458bb49192ea85ae9,
+    type: 2}
+  lightProtagMaterial: {fileID: 2100000, guid: fb07203c1afc7b9499d88dcd03123165, type: 2}
+  darkProtagMaterial: {fileID: 2100000, guid: 22ccebd0f1f3cae44869b996c8a86c49, type: 2}
 --- !u!43 &195076957
 Mesh:
   m_ObjectHideFlags: 0
@@ -14341,6 +14416,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   animator: {fileID: 829835256}
   cancelCastCooldown: 0.2
+  materialHandler: {fileID: 176818869}
 --- !u!114 &829835247
 MonoBehaviour:
   m_ObjectHideFlags: 0
