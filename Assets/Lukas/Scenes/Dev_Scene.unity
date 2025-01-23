@@ -2995,7 +2995,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c3c822c596d6a8a458bb49192ea85ae9, type: 2}
+      objectReference: {fileID: 2100000, guid: 9fc86fc34e4160840b78667a868005dd, type: 2}
     - target: {fileID: -4078111650521157847, guid: c4bd777f67dd69e4a9a49e401a5e7e8f,
         type: 3}
       propertyPath: m_Layer
@@ -3165,7 +3165,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c3c822c596d6a8a458bb49192ea85ae9, type: 2}
+      objectReference: {fileID: 2100000, guid: 9fc86fc34e4160840b78667a868005dd, type: 2}
     - target: {fileID: -1038832484950680045, guid: c4bd777f67dd69e4a9a49e401a5e7e8f,
         type: 3}
       propertyPath: m_Layer
@@ -3260,7 +3260,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c3c822c596d6a8a458bb49192ea85ae9, type: 2}
+      objectReference: {fileID: 2100000, guid: 9fc86fc34e4160840b78667a868005dd, type: 2}
     - target: {fileID: 855543986156316118, guid: c4bd777f67dd69e4a9a49e401a5e7e8f,
         type: 3}
       propertyPath: m_Layer
@@ -3465,7 +3465,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c3c822c596d6a8a458bb49192ea85ae9, type: 2}
+      objectReference: {fileID: 2100000, guid: 9fc86fc34e4160840b78667a868005dd, type: 2}
     - target: {fileID: 4436805663696350335, guid: c4bd777f67dd69e4a9a49e401a5e7e8f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -3683,10 +3683,8 @@ MonoBehaviour:
   - {fileID: 176818866}
   - {fileID: 176818865}
   - {fileID: 176818864}
-  defaultProtagMaterial: {fileID: 2100000, guid: c3c822c596d6a8a458bb49192ea85ae9,
-    type: 2}
-  lightProtagMaterial: {fileID: 2100000, guid: fb07203c1afc7b9499d88dcd03123165, type: 2}
-  darkProtagMaterial: {fileID: 2100000, guid: 22ccebd0f1f3cae44869b996c8a86c49, type: 2}
+  protagMaterial: {fileID: 2100000, guid: 9fc86fc34e4160840b78667a868005dd, type: 2}
+  changePerFrame: 0.01
 --- !u!43 &195076957
 Mesh:
   m_ObjectHideFlags: 0
@@ -14716,9 +14714,6 @@ MonoBehaviour:
   playerCamera: {fileID: 1706076578}
   castPreviewPrefab: {fileID: 7377841027125007913, guid: 86739c6abe5a0944db56e464e853aea1,
     type: 3}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 1024
 --- !u!114 &829835255
 MonoBehaviour:
   m_ObjectHideFlags: 0
