@@ -7,8 +7,8 @@ namespace Lukas.Scripts.Core.SceneHandler
     public class SceneLoader : ScriptableObject
     {
         [SerializeField] EScenes sceneToLoad;
-        
-        
+
+
         public void Load()
         {
             SceneManager.LoadScene((int)sceneToLoad);

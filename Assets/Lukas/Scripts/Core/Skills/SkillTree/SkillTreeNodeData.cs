@@ -1,24 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using Lukas.Scripts.Core.Skills.Behaviors;
 using Newtonsoft.Json;
 
-namespace Lukas.Scripts.Core.Skills
+namespace Lukas.Scripts.Core.Skills.SkillTree
 {
     [Serializable]
     public class SkillTreeNodeData
     {
-        public SkillBehaviorSO Behavior;
-        [JsonIgnore]
-        public List<SkillTreeNodeDataSO> Prerequisites;
-        [JsonIgnore]
-        public int MemoryFragmentCost;
-        
+        [JsonIgnore] public SkillBehaviorSO Behavior;
+        [JsonIgnore] public List<SkillTreeNodeDataSO> Prerequisites;
+        [JsonIgnore] public int MemoryFragmentCost;
+
         public ESkillNodeStatus Status;
+
         public void ChangeStatus(ESkillNodeStatus _newStatus)
         {
             Status = _newStatus;
         }
-        
+
         public void SetNodeData(SkillTreeNodeData _data)
         {
             Behavior = _data.Behavior;

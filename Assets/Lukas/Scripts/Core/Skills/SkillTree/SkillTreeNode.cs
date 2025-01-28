@@ -1,24 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Lukas.Scripts.Core.Skills
+namespace Lukas.Scripts.Core.Skills.SkillTree
 {
     public class SkillTreeNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         [SerializeField] SkillTreeNodeDataSO nodeData;
         [SerializeField] string nodeName;
-        [TextArea]
-        [SerializeField] string description;
+        [TextArea] [SerializeField] string description;
 
         public string NodeDescription => description;
         public string NodeName => nodeName;
         public SkillTreeNodeDataSO NodeData => nodeData;
 
         public Action OnClick;
-        public static Action<SkillTreeNode> OnHoverStatusChange;
+        public static Action<SkillTreeNode> OnHoverEnter;
+        public static Action OnHoverExit;
+
         public void Clicked()
         {
             switch (nodeData.Data.Status)
@@ -39,12 +38,12 @@ namespace Lukas.Scripts.Core.Skills
 
         public void OnPointerEnter(PointerEventData _eventData)
         {
-            OnHoverStatusChange.Invoke(this);
+            OnHoverEnter.Invoke(this);
         }
 
         public void OnPointerExit(PointerEventData _eventData)
         {
-            OnHoverStatusChange.Invoke(this);
+            OnHoverExit.Invoke();
         }
 
         public bool IsUnlockableByCost()

@@ -1,10 +1,10 @@
-﻿namespace Lukas.Scripts.Core.Skills
+﻿namespace Lukas.Scripts.Core.Skills.SkillTree
 {
     public enum ESkillNodeStatus
     {
         Disabled,
         Locked,
         Unlocked,
-        Unlockable,
+        Unlockable
     }
 }

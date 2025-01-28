@@ -19,24 +19,21 @@ namespace Lukas.Scripts.Core.Modules
         public bool IsDead => isDead;
 
         public UnityEvent OnDeathEvent;
+        public Action<int> OnDamageTaken;
 
         //Effect Management
         readonly List<Effect> activeEffects = new();
-        readonly Dictionary<EffectType, IEffectHandler> effectHandlers = new Dictionary<EffectType, IEffectHandler>();
+        readonly Dictionary<EffectType, IEffectHandler> effectHandlers = new();
 
         public void AddEffect(Effect _effect)
         {
             var existingEffect = activeEffects.FirstOrDefault((_checkedEffect) => _checkedEffect.Name == _effect.Name);
             if (existingEffect != null)
-            {
                 existingEffect.Duration = _effect.Duration;
-                //Debug.Log($"Refreshed effect: {_effect.Name} on enemy {gameObject.name}!");
-            }
+            //Debug.Log($"Refreshed effect: {_effect.Name} on enemy {gameObject.name}!");
             else
-            {
                 activeEffects.Add(_effect);
-                //Debug.Log($"Added effect: {_effect.Name} to enemy {gameObject.name}!");
-            }
+            //Debug.Log($"Added effect: {_effect.Name} to enemy {gameObject.name}!");
         }
 
         public void RegisterEffectHandler(EffectType _type, IEffectHandler _handler)
@@ -67,6 +64,7 @@ namespace Lukas.Scripts.Core.Modules
         {
             CurrentHealth = Mathf.Max(0, CurrentHealth - _damageAmount);
             Debug.Log($"{CurrentHealth}");
+            OnDamageTaken?.Invoke((int)_damageAmount);
             if (CurrentHealth != 0) return;
             isDead = true;
             OnDeathEvent.Invoke();

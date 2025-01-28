@@ -1,9 +1,7 @@
-﻿using System;
-using System.Linq;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
-namespace Lukas.Scripts.Core.Skills
+namespace Lukas.Scripts.Core.Skills.SkillTree
 {
     public class SkillTreeNodeHoverDisplayManager : MonoBehaviour
     {
@@ -18,6 +16,7 @@ namespace Lukas.Scripts.Core.Skills
                 Debug.LogError("Given node was invalid or got destroyed!");
                 return;
             }
+
             nodeNameField.text = _node.NodeName;
             nodeDescField.text = _node.NodeDescription;
             if (_node.NodeData.Data.Status == ESkillNodeStatus.Unlocked) nodeDescField.text = _node.NodeDescription + "  --UNLOCKED--  ";
@@ -27,6 +26,7 @@ namespace Lukas.Scripts.Core.Skills
                 nodeCostValueField.color = Color.green;
                 return;
             }
+
             nodeCostValueField.color = !_node.IsUnlockableByCost() ? Color.red : Color.black;
         }
     }

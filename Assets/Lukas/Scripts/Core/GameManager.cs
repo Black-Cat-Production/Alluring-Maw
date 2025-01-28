@@ -1,6 +1,8 @@
-﻿using Lukas.Scripts.Core.Rooms;
+﻿using System;
+using System.Collections;
+using Lukas.Scripts.Core.Events;
+using Lukas.Scripts.Core.Rooms;
 using Lukas.Scripts.Core.SceneHandler;
-using Lukas.Scripts.Core.Skills;
 using Lukas.Scripts.Core.System;
 using Lukas.Scripts.Program;
 using UnityEditor;
@@ -13,16 +15,26 @@ namespace Lukas.Scripts.Core
         [SerializeField] SaveGameSO saveGame;
         [SerializeField] SceneLoader mainMenuSceneLoader;
         [SerializeField] SaveGameManager saveGameManager;
+        [SerializeField] NotifyEvent notifyPlayerInputUI;
+        [SerializeField] NotifyEvent notifyMainMenu;
+        [SerializeField] NotifyEvent notifyLeaderboardToSet;
+        [SerializeField] NotifyEvent notifyLeaderboardOnNameChange;
         public static GameManager Instance { get; private set; }
         public int MemoryFragmentsAmount { get; private set; }
+        public Action OnWinGetScores;
+
+        public float TimeScore { get; private set; }
+        public int DamageTakenScore { get; private set; }
+
+        public bool FinishedLoading { get; private set; }
+
         void Awake()
         {
             if (Instance == null)
             {
                 Instance = this;
                 DontDestroyOnLoad(this);
-                LoadGame();
-                LoadMemoryFragmentsAmount();
+                StartCoroutine(Startup());
             }
             else
             {
@@ -30,16 +42,60 @@ namespace Lukas.Scripts.Core
             }
         }
 
+        IEnumerator Startup()
+        {
+            int ticks = 0;
+            while (!saveGameManager.SavePathsCreated && ticks < 200)
+            {
+                yield return null;
+                ticks++;
+            }
+
+            LoadGame();
+            if (ticks >= 200) Debug.LogError("Startup failed due to max ticks reached!");
+            if (string.IsNullOrEmpty(saveGame.PlayerName)) PromptNameInput();
+            LoadMemoryFragmentsAmount();
+            yield return null;
+            FinishedLoading = true;
+        }
+
+        public void ResetPlayerName()
+        {
+            saveGame.PlayerName = "";
+            PromptNameInput();
+        }
+
+        public void SetPlayerName(string _name)
+        {
+            saveGame.PlayerName = _name;
+            notifyLeaderboardOnNameChange.Invoke();
+            notifyMainMenu.Invoke();
+        }
+
+        void PromptNameInput()
+        {
+            notifyPlayerInputUI.Invoke();
+        }
+
         public void RegisterLastRoom(RoomSpawner _lastRoom)
         {
             _lastRoom.OnFinalRoomCleared += TriggerWin;
         }
 
+
         void TriggerWin()
         {
+            OnWinGetScores.Invoke();
             Debug.Log("You won the game!!");
             saveGame.SaveMemoryFragmentsAmount(MemoryFragmentsAmount);
+            notifyLeaderboardToSet.Invoke();
             mainMenuSceneLoader.LoadAsync();
+        }
+
+        public void SetLeaderboardScores(float _timeTakenInMil, int _damageTaken)
+        {
+            TimeScore = _timeTakenInMil;
+            DamageTakenScore = _damageTaken;
         }
 
         public void TriggerLoss()
@@ -63,9 +119,10 @@ namespace Lukas.Scripts.Core
                     Debug.Log($"You gained {_amount} memory fragments!");
                     break;
                 case < 0:
-                    Debug.Log($"You spent {_amount} memory fragments!");
+                    Debug.Log($"You spent {-_amount} memory fragments!");
                     break;
             }
+
             saveGame.SaveMemoryFragmentsAmount(MemoryFragmentsAmount);
         }
 
@@ -82,15 +139,20 @@ namespace Lukas.Scripts.Core
         public void SaveGame()
         {
             saveGameManager.Save();
-            #if UNITY_EDITOR
+#if UNITY_EDITOR
             EditorApplication.ExitPlaymode();
-            #endif
+#endif
             Application.Quit();
         }
 
         void LoadGame()
         {
             saveGameManager.Load();
+        }
+
+        public string GetPlayerName()
+        {
+            return saveGame.PlayerName;
         }
     }
 }

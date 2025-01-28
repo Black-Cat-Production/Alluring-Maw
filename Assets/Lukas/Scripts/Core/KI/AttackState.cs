@@ -8,6 +8,7 @@ namespace Lukas.Scripts.Core.KI
     {
         GameObject player;
         Timer attackCooldown;
+
         public AttackState(GameObject _player, Timer _attackCooldown)
         {
             player = _player;

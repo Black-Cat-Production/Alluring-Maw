@@ -1,17 +1,6 @@
-﻿
-using Lukas.Scripts.Core.Skills.Effects;
-using UnityEngine;
-
-namespace Lukas.Scripts.Core.Skills
+﻿namespace Lukas.Scripts.Core.Skills
 {
-    public sealed class SU_PoisonAttack : GenericSkill<PoisonAttack>
+    public sealed class SU_PoisonAttack : SkillBase
     {
-       // [SerializeField] EffectData effectData;
-//
-       // protected override void Awake()
-       // {
-       //     Skill = new PoisonAttack(name, baseSkillHitDamage, effectData);
-       //     base.Awake();
-       // }
     }
 }

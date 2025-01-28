@@ -31,13 +31,11 @@ namespace Lukas.Scripts.Core.KI
         public bool CheckTransitions(out State _nextState)
         {
             foreach (var transition in Transitions)
-            {
                 if (transition.Condition())
                 {
                     _nextState = transition.NextState;
                     return true;
                 }
-            }
 
             _nextState = null;
             return false;

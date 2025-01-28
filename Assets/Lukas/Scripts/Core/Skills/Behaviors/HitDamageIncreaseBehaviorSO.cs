@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using Lukas.Scripts.Core.Modules;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Lukas.Scripts.Core.Skills
+namespace Lukas.Scripts.Core.Skills.Behaviors
 {
     [CreateAssetMenu(menuName = "Scriptables/Skills/BehaviorSO/HitDamageIncreaseBehavior")]
     public class HitDamageIncreaseBehaviorSO : SkillBehaviorSO

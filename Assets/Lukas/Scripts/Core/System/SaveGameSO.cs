@@ -11,10 +11,7 @@ namespace Lukas.Scripts.Core.System
 
         public bool HasSaved;
 
-        public void SaveNodes(List<SkillTreeNodeDataSO> _nodeList)
-        {
-            if (!HasSaved) HasSaved = true;
-        }
+        public string PlayerName;
 
         public void SaveMemoryFragmentsAmount(int _amount)
         {

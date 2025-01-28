@@ -1,9 +1,6 @@
-﻿using System;
-using TMPro;
-using UnityEngine;
-using UnityEngine.InputSystem;
+﻿using UnityEngine;
 
-namespace Lukas.Scripts.Core.Skills
+namespace Lukas.Scripts.Core.Skills.SkillTree
 {
     public class SkillTreeUIManager : MonoBehaviour
     {
@@ -13,12 +10,14 @@ namespace Lukas.Scripts.Core.Skills
 
         void OnEnable()
         {
-            SkillTreeNode.OnHoverStatusChange += ToggleHoveredNodePanel;
+            SkillTreeNode.OnHoverEnter += OpenHoveredNodePanel;
+            SkillTreeNode.OnHoverExit += CloseHoveredNodePanel;
         }
 
         void OnDisable()
         {
-            SkillTreeNode.OnHoverStatusChange -= ToggleHoveredNodePanel;
+            SkillTreeNode.OnHoverEnter -= OpenHoveredNodePanel;
+            SkillTreeNode.OnHoverExit -= CloseHoveredNodePanel;
         }
 
         public void OpenSkillTreeUI()
@@ -31,17 +30,15 @@ namespace Lukas.Scripts.Core.Skills
             skillTreeUICanvas.gameObject.SetActive(false);
         }
 
-        void ToggleHoveredNodePanel(SkillTreeNode _hoveredNode)
+        void OpenHoveredNodePanel(SkillTreeNode _hoveredNode)
         {
-            if (hoveredNodePanelGroup.isActiveAndEnabled)
-            {
-                hoveredNodePanelGroup.gameObject.SetActive(false);
-            }
-            else
-            {
-                hoverDisplayManager.PopulateInformation(_hoveredNode);
-                hoveredNodePanelGroup.gameObject.SetActive(true);
-            }
+            hoverDisplayManager.PopulateInformation(_hoveredNode);
+            hoveredNodePanelGroup.gameObject.SetActive(true);
+        }
+
+        public void CloseHoveredNodePanel()
+        {
+            hoveredNodePanelGroup.gameObject.SetActive(false);
         }
     }
 }

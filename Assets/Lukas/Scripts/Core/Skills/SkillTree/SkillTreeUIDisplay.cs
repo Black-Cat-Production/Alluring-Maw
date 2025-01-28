@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Lukas.Scripts.Core.Skills
+namespace Lukas.Scripts.Core.Skills.SkillTree
 {
     public class SkillTreeUIDisplay : MonoBehaviour
     {
@@ -32,25 +32,17 @@ namespace Lukas.Scripts.Core.Skills
         {
             foreach (var node in skillTreeNode)
             {
-                var imageComponent =  node.GetComponent<Image>();
-                switch (node.NodeData.Data.Status)
+                var imageComponent = node.GetComponent<Image>();
+                imageComponent.sprite = node.NodeData.Data.Status switch
                 {
-                    case ESkillNodeStatus.Disabled:
-                        imageComponent.sprite = lockedSkill;
-                        break;
-                    case ESkillNodeStatus.Locked:
-                        imageComponent.sprite = lockedSkill;
-                        break;
-                    case ESkillNodeStatus.Unlocked:
-                        imageComponent.sprite = unlockableSkill;
-                        break;
-                    case ESkillNodeStatus.Unlockable:
-                        imageComponent.sprite = unlockableSkill;
-                        break;
-                    default:
-                        throw new ArgumentOutOfRangeException();
-                }
-                if (node.NodeData.Data.Status == ESkillNodeStatus.Unlocked) imageComponent.color = Color.green;
+                    ESkillNodeStatus.Disabled => lockedSkill,
+                    ESkillNodeStatus.Locked => lockedSkill,
+                    ESkillNodeStatus.Unlocked => unlockableSkill,
+                    ESkillNodeStatus.Unlockable => unlockableSkill,
+                    _ => throw new ArgumentOutOfRangeException()
+                };
+
+                imageComponent.color = node.NodeData.Data.Status == ESkillNodeStatus.Unlocked ? Color.green : Color.white;
             }
         }
 

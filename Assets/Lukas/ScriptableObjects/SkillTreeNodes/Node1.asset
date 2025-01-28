@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Node1
   m_EditorClassIdentifier: 
   Data:
-    Behavior: {fileID: 11400000, guid: a4c1e7c1eb188a647bdd34e476769de8, type: 2}
+    Behavior: {fileID: 11400000, guid: 00353cf3f38070745aca9fc89a50873c, type: 2}
     Prerequisites: []
-    Status: 3
     MemoryFragmentCost: 2
+    Status: 3

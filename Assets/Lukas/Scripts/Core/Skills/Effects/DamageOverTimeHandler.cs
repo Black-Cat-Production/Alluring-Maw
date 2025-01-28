@@ -8,20 +8,18 @@ namespace Lukas.Scripts.Core.Skills.Effects
     {
         public void ApplyEffect(EnemyAIModule _target, Effect _effect)
         {
-            if (!_effect.IsRunning)
-            {
-                _effect.IsRunning = true;
-                EffectRunner.Instance.StartCoroutine(ApplyPeriodicDamage(_target, _effect));
-            }
+            if (_effect.IsRunning) return;
+            _effect.IsRunning = true;
+            EffectRunner.Instance.StartCoroutine(ApplyPeriodicDamage(_target, _effect));
         }
-        
+
         IEnumerator ApplyPeriodicDamage(EnemyAIModule _target, Effect _effect)
         {
             while (_effect.Duration > 0 && !_target.HealthSystemModule.IsDead)
             {
                 _target.HealthSystemModule.TakeDamage(_effect.Intensity);
+                if (_target.HealthSystemModule.IsDead && _effect.Context != null) _effect.Context.OnEnemyKilled?.Invoke(_target);
                 if (_target == null || !_target.isActiveAndEnabled) break;
-                if(_target.HealthSystemModule.IsDead && _effect.Context != null) _effect.Context.OnEnemyKilled.Invoke(_target);
                 yield return new WaitForSeconds(_effect.TickInterval);
             }
 

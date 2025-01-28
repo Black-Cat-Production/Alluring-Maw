@@ -10,5 +10,28 @@
         public SkillContext Context { get; set; }
 
         public bool IsRunning { get; set; }
+
+        public Effect()
+        {
+        }
+
+        public Effect(Effect _effect)
+        {
+            Name = _effect.Name;
+            Duration = _effect.Duration;
+            Intensity = _effect.Intensity;
+            TickInterval = _effect.TickInterval;
+            Type = _effect.Type;
+            IsRunning = false;
+        }
+
+        public Effect(EffectData _effectData)
+        {
+            Name = _effectData.EffectName;
+            Duration = _effectData.EffectDuration;
+            Intensity = _effectData.EffectIntensity;
+            TickInterval = _effectData.EffectTickInterval;
+            Type = _effectData.EffectType;
+        }
     }
 }

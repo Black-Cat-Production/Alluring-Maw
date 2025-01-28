@@ -27,6 +27,7 @@ namespace Lukas.Scripts.Core.Modules
 
         [Header("Drop Values")]
         [SerializeField] int memoryFragmentDropMin;
+
         [SerializeField] int memoryFragmentDropMax;
 
         TargetComponent targetComponent;
@@ -99,6 +100,7 @@ namespace Lukas.Scripts.Core.Modules
         {
             return Random.Range(memoryFragmentDropMin, memoryFragmentDropMax + 1);
         }
+
         public void SetSpawner(RoomSpawner _spawner)
         {
             spawner = _spawner;

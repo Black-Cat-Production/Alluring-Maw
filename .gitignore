@@ -70,5 +70,6 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
-.idea/.idea.Alluring Maw/.idea/indexLayout.xml
-.idea/.idea.Alluring Maw/.idea/vcs.xml
+/.idea
+/.idea/.idea.Alluring Maw
+/.idea/.idea.Alluring Maw/.idea
