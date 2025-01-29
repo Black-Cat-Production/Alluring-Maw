@@ -4,12 +4,12 @@ using UnityEngine;
 
 namespace Lukas.Scripts.Core.KI
 {
-    public class AttackState : State
+    public class AttackState : AnimationState
     {
         GameObject player;
         Timer attackCooldown;
 
-        public AttackState(GameObject _player, Timer _attackCooldown)
+        public AttackState(GameObject _player, Timer _attackCooldown, Animator _animator) : base(_animator)
         {
             player = _player;
             attackCooldown = _attackCooldown;
@@ -17,12 +17,12 @@ namespace Lukas.Scripts.Core.KI
 
         public override void StateEnter()
         {
-            base.StateEnter();
+           animator.SetBool(HashedAttack, true);
         }
 
         public override void StateExit()
         {
-            base.StateExit();
+            animator.SetBool(HashedAttack, false);
         }
 
         public override void Tick()

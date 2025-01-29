@@ -27,7 +27,6 @@ namespace Lukas.Scripts.Core.Modules
 
         [Header("Drop Values")]
         [SerializeField] int memoryFragmentDropMin;
-
         [SerializeField] int memoryFragmentDropMax;
 
         TargetComponent targetComponent;
@@ -36,8 +35,9 @@ namespace Lukas.Scripts.Core.Modules
         IdleState idleState;
         NavMeshAgent agent;
         Vector3 patrolRadiusCenter;
+        Animator animator;
 
-        float distanceToTarget => Vector3.Distance(transform.position, targetComponent.TargetPosition);
+        float distanceToTarget => Vector3.Distance(new Vector3(transform.position.x, 0, transform.position.z), new Vector3(targetComponent.TargetPosition.x, 0, targetComponent.TargetPosition.z));
 
         public UnityEvent<int> OnDeathEvent;
 
@@ -49,19 +49,20 @@ namespace Lukas.Scripts.Core.Modules
             targetComponent = new TargetComponent();
             idleTargetComponent = new TargetComponent();
             agent = GetComponent<NavMeshAgent>();
+            animator = GetComponent<Animator>();
             HealthSystemModule = GetComponent<HealthSystemModule>();
             HealthSystemModule.RegisterEffectHandler(EffectType.DamageOverTime, new DamageOverTimeHandler());
             var idleTimer = new Timer(idleDuration);
             //State Creation
-            idleState = new IdleState(idleTimer, agent);
-            State chaseState = new WalkToPointState(agent, targetComponent);
-            State patrolState = new PatrolState(agent, idleTargetComponent, RecalculatePatrolPoint);
+            idleState = new IdleState(idleTimer, agent,animator);
+            State chaseState = new WalkToPointState(agent, targetComponent,animator);
+            State patrolState = new PatrolState(agent, idleTargetComponent, RecalculatePatrolPoint,animator);
             //DEBUG TESTING AREA. NEEDS TO GO
             player = GameObject.Find("Player");
-            State attackState = new AttackState(player, new Timer(attackCooldown));
+            State attackState = new AttackState(player, new Timer(attackCooldown),animator);
 
             //Setup StateMachine
-            stateMachine = new StateMachine(idleState, gameObject, false);
+            stateMachine = new StateMachine(idleState, gameObject, true);
 
             //Setup Transitions
             var anyToChase = new Transition(chaseState, FindTarget);
