@@ -12,12 +12,14 @@ namespace Lukas.Scripts.Core.Skills
         public List<EnemyAIModule> Targets;
         public Action<EnemyAIModule> OnEnemyKilled;
         public Effect Effect;
+        public readonly HealthSystemModule CasterHealthModule;
 
         public SkillContext(Vector3 _startingPosition, List<EnemyAIModule> _targets, Effect _effect)
         {
             StartingPosition = _startingPosition;
             Targets = _targets;
             Effect = _effect;
+            CasterHealthModule = GameObject.Find("Player").GetComponent<HealthSystemModule>();
         }
         
         public void TriggerEnemyKilled(EnemyAIModule _target)

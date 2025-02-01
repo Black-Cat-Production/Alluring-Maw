@@ -6,13 +6,15 @@ namespace Lukas.Scripts.Core.KI
 {
     public class AttackState : AnimationState
     {
-        GameObject player;
-        Timer attackCooldown;
+        readonly GameObject player;
+        readonly Timer attackCooldown;
+        readonly EnemyAIModule owner;
 
-        public AttackState(GameObject _player, Timer _attackCooldown, Animator _animator) : base(_animator)
+        public AttackState(GameObject _player, Timer _attackCooldown, Animator _animator, EnemyAIModule _owner) : base(_animator)
         {
             player = _player;
             attackCooldown = _attackCooldown;
+            owner = _owner;
         }
 
         public override void StateEnter()
@@ -29,7 +31,7 @@ namespace Lukas.Scripts.Core.KI
         {
             if (attackCooldown.CheckTimer())
             {
-                player.GetComponent<HealthSystemModule>().TakeDamage(1);
+                player.GetComponent<HealthSystemModule>().TakeDamage(owner.CurrentAttackDamage);
                 attackCooldown.StartTimer();
             }
         }

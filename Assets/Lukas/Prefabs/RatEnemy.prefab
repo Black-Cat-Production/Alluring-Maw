@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ae9a864e5a248a4918584e31aefdf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 5
+  maxHealth: 10
   OnDeathEvent:
     m_PersistentCalls:
       m_Calls:
@@ -220,6 +220,8 @@ MonoBehaviour:
   PatrolPointDistanceThreshhold: 1.8
   attackCooldown: 1
   attackRange: 2
+  baseAttackDamage: 5
+  baseMoveSpeed: 3.5
   memoryFragmentDropMin: 1
   memoryFragmentDropMax: 2
   OnDeathEvent:

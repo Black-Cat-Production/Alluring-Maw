@@ -127,15 +127,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Default Attack
   tags: 
-  behaviors:
-  - {fileID: 11400000, guid: 5b0481119b8b7d3458013eddd47f3f0e, type: 2}
+  behaviors: []
   manaCost: 0
+  hasPreviewCast: 0
   despawnTimerDuration: 5
   baseSkillHitDamage: 5
   obstructionLayer:
     serializedVersion: 2
     m_Bits: 64
   baseBehaviours: []
+  OnSpawn:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!135 &-2318598544419306653
 SphereCollider:
   m_ObjectHideFlags: 0

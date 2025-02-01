@@ -1,11 +1,14 @@
-﻿using LL_Unity_Utils.Misc;
+﻿using System.Collections.Generic;
+using LL_Unity_Utils.Misc;
 using LL_Unity_Utils.Timers;
 using Lukas.Scripts.Core.KI;
 using Lukas.Scripts.Core.Rooms;
+using Lukas.Scripts.Core.Skills.Behaviors;
 using Lukas.Scripts.Core.Skills.Effects;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 namespace Lukas.Scripts.Core.Modules
 {
@@ -24,6 +27,8 @@ namespace Lukas.Scripts.Core.Modules
         [SerializeField] float PatrolPointDistanceThreshhold;
         [SerializeField] float attackCooldown;
         [SerializeField] float attackRange;
+        [SerializeField] float baseAttackDamage;
+        [SerializeField] float baseMoveSpeed;
 
         [Header("Drop Values")]
         [SerializeField] int memoryFragmentDropMin;
@@ -36,6 +41,7 @@ namespace Lukas.Scripts.Core.Modules
         NavMeshAgent agent;
         Vector3 patrolRadiusCenter;
         Animator animator;
+        public float CurrentAttackDamage { get; private set; }
 
         float distanceToTarget => Vector3.Distance(new Vector3(transform.position.x, 0, transform.position.z), new Vector3(targetComponent.TargetPosition.x, 0, targetComponent.TargetPosition.z));
 
@@ -45,13 +51,16 @@ namespace Lukas.Scripts.Core.Modules
 
         void Awake()
         {
+            CurrentAttackDamage = baseAttackDamage;
             patrolRadiusCenter = transform.position;
             targetComponent = new TargetComponent();
             idleTargetComponent = new TargetComponent();
             agent = GetComponent<NavMeshAgent>();
+            agent.speed = baseMoveSpeed;
             animator = GetComponent<Animator>();
             HealthSystemModule = GetComponent<HealthSystemModule>();
             HealthSystemModule.RegisterEffectHandler(EffectType.DamageOverTime, new DamageOverTimeHandler());
+            HealthSystemModule.RegisterEffectHandler(EffectType.Debuff, new RendTheFleshEffectHandler());
             var idleTimer = new Timer(idleDuration);
             //State Creation
             idleState = new IdleState(idleTimer, agent,animator);
@@ -59,10 +68,10 @@ namespace Lukas.Scripts.Core.Modules
             State patrolState = new PatrolState(agent, idleTargetComponent, RecalculatePatrolPoint,animator);
             //DEBUG TESTING AREA. NEEDS TO GO
             player = GameObject.Find("Player");
-            State attackState = new AttackState(player, new Timer(attackCooldown),animator);
+            State attackState = new AttackState(player, new Timer(attackCooldown),animator, this);
 
             //Setup StateMachine
-            stateMachine = new StateMachine(idleState, gameObject, true);
+            stateMachine = new StateMachine(idleState, gameObject, false);
 
             //Setup Transitions
             var anyToChase = new Transition(chaseState, FindTarget);
@@ -140,6 +149,27 @@ namespace Lukas.Scripts.Core.Modules
         void OnValidate()
         {
             PatrolPointDistanceThreshhold = Mathf.Clamp(PatrolPointDistanceThreshhold, 1, PatrolRange - 1);
+        }
+
+        public void UpdateMoveSpeed(float _newValue)
+        {
+            agent.speed = baseMoveSpeed + _newValue;
+        }
+
+        public void ResetMoveSpeed()
+        {
+            if (agent == null) return;
+            agent.speed = baseMoveSpeed;
+        }
+
+        public void UpdateAttackDamage(float _newValue)
+        {
+            CurrentAttackDamage = baseAttackDamage + _newValue;
+        }
+
+        public void ResetAttackDamage()
+        {
+            CurrentAttackDamage = baseAttackDamage;
         }
     }
 }
