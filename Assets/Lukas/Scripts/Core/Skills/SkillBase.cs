@@ -41,7 +41,7 @@ namespace Lukas.Scripts.Core.Skills
             int totalDamage = baseSkillHitDamage;
             foreach (var behavior in behaviors) behavior.Execute(_context, ref totalDamage);
 
-            if (_context.Targets.Count <= 0) return;
+            if (_context.Targets is not { Count: > 0 }) return;
             var target = _context.Targets[0];
             target.HealthSystemModule.TakeDamage(totalDamage);
         }
@@ -51,7 +51,7 @@ namespace Lukas.Scripts.Core.Skills
             if (_collider.gameObject.CompareTag("HitBox"))
             {
                 var target = _collider.gameObject.GetComponentInParent<EnemyAIModule>();
-                var context = new SkillContext(transform.position, new List<EnemyAIModule> { target }, null);
+                var context = new SkillContext(transform.position, new List<EnemyAIModule> { target }, null,this);
                 Use(context);
             }
 

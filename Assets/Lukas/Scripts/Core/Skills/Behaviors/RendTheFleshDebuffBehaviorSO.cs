@@ -6,7 +6,6 @@ using UnityEngine;
 namespace Lukas.Scripts.Core.Skills.Behaviors
 {
     [CreateAssetMenu(menuName = "Scriptables/Skills/BehaviorSO/RendTheFleshDebuffBehaviorSO")]
-    //TODO: Merge this SO with DamageOverTimeBehaviorSO as both just add effects to the target!
     public class RendTheFleshDebuffBehaviorSO : SkillBehaviorSO
     {
         [SerializeField] string specificName;

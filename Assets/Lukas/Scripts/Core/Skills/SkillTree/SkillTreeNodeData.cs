@@ -10,6 +10,7 @@ namespace Lukas.Scripts.Core.Skills.SkillTree
     {
         [JsonIgnore] public SkillBehaviorSO Behavior;
         [JsonIgnore] public List<SkillTreeNodeDataSO> Prerequisites;
+        [JsonIgnore] public List<SkillTreeNodeDataSO> Exclusives;
         [JsonIgnore] public int MemoryFragmentCost;
 
         public ESkillNodeStatus Status;

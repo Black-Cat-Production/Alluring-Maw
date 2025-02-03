@@ -1,6 +1,32 @@
-﻿namespace Lukas.Scripts.Core.Skills
+﻿using System.Collections.Generic;
+using Lukas.Scripts.Core.Modules;
+using UnityEngine;
+
+namespace Lukas.Scripts.Core.Skills
 {
     public class SU_LightBeamAttack : SkillBase
     {
+        SkillContext context;
+        bool hitEnemy;
+        bool hitGround;
+
+        protected void Start()
+        {
+            context = new SkillContext(transform.position, null, null, this);
+        }
+
+        public override void OnTriggerEnter(Collider _collider)
+        {
+            if (_collider.gameObject.CompareTag("HitBox"))
+            {
+                var target = _collider.gameObject.GetComponentInParent<EnemyAIModule>();
+                context.Targets = new List<EnemyAIModule> { target };
+            }
+            else
+            {
+                context.Targets = null;
+            }
+            Use(context);
+        }
     }
 }

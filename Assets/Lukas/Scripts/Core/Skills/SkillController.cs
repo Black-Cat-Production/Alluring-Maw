@@ -20,7 +20,6 @@ namespace Lukas.Scripts.Core.Skills
         void Awake()
         {
             ManaSystemModule = GetComponent<ManaSystemModule>();
-            // SkillTreeManager.Instance.UpdateBehaviors();
         }
 
         public void SetSkill(SkillBridgeUnity _skill)
@@ -49,7 +48,6 @@ namespace Lukas.Scripts.Core.Skills
             while (castPreview)
             {
                 bool hit = Physics.Raycast(cameraTransform.position + cameraTransform.forward * spawnDistance, cameraTransform.forward, out var rayHit, 10f);
-                Debug.Log(hit);
                 if (!hit)
                 {
                     if (castPreviewPrefabInstance != null) Destroy(castPreviewPrefabInstance);
@@ -76,7 +74,7 @@ namespace Lukas.Scripts.Core.Skills
             if (SelectedSkill.HasPreviewCast)
             {
                 if (castPreviewPrefabInstance == null) return;
-                instance = Instantiate(SelectedSkill, castPreviewPrefabInstance.transform.position + Vector3.up, Quaternion.identity);
+                instance = Instantiate(SelectedSkill, castPreviewPrefabInstance.transform.position, Quaternion.identity);
                 instance.GetComponent<Rigidbody>().AddForce(transform.up * 20f, ForceMode.Impulse);
                 return;
             }

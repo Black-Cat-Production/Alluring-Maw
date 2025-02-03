@@ -72,7 +72,10 @@ namespace Lukas.Scripts.Core.Skills.SkillTree
 
         void UpdateTree()
         {
+            //First Foreach checks every node that is not unlocked, if the prerequisites are met to be able to be unlocked
+            //Second Foreach checks every node that is not unlocked, if any of the nodes configured as "exclusive" are unlocked, and locks it accordingly
             foreach (var node in nodeRegistry.SkillTreeNodesData.Where(_node => _node.Data.Status != ESkillNodeStatus.Unlocked)) node.Data.ChangeStatus(node.Data.Prerequisites.TrueForAll((_node) => _node.Data.Status == ESkillNodeStatus.Unlocked) ? ESkillNodeStatus.Unlockable : ESkillNodeStatus.Locked);
+            foreach (var node in nodeRegistry.SkillTreeNodesData.Where(_node => _node.Data.Status != ESkillNodeStatus.Unlocked)) node.Data.ChangeStatus(node.Data.Exclusives.Any((_node => _node.Data.Status == ESkillNodeStatus.Unlocked )) ? ESkillNodeStatus.Locked : ESkillNodeStatus.Unlockable);
         }
 
         void BuildSkillTree()

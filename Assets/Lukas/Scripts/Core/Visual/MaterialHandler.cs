@@ -64,7 +64,6 @@ namespace Lukas.Scripts.Core.Visual
         void ApplyLightEnergy(float _change)
         {
             float calculatedFloat = protagMaterial.GetFloat(energyValue) + _change;
-            Debug.Log(calculatedFloat);
             protagMaterial.SetFloat(energyValue, calculatedFloat);
         }
     }

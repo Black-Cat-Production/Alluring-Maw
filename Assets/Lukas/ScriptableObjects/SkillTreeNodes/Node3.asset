@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0505f43de1754c01b2076c7521f60549, type: 3}
-  m_Name: Node1
+  m_Name: Node3
   m_EditorClassIdentifier: 
   Data:
-    Behavior: {fileID: 11400000, guid: 00353cf3f38070745aca9fc89a50873c, type: 2}
+    Behavior: {fileID: 11400000, guid: 5d66decef05f4e54984ed1686306ba78, type: 2}
     Prerequisites: []
-    Exclusives:
-    - {fileID: 11400000, guid: 3fc2373b3963554439ef734ba8f66f64, type: 2}
-    MemoryFragmentCost: 2
+    Exclusives: []
+    MemoryFragmentCost: 3
     Status: 3

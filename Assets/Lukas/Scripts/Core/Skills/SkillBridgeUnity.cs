@@ -34,6 +34,11 @@ namespace Lukas.Scripts.Core.Skills
             return behaviors.Contains(_behavior);
         }
 
+        public List<SkillBehaviorSO> GetBehaviors()
+        {
+            return behaviors;
+        }
+
         public void ResetBehaviorList()
         {
             behaviors.Clear();

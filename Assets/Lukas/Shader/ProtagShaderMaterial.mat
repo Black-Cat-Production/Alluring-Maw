@@ -33,11 +33,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _E_Dark:
-        m_Texture: {fileID: 2800000, guid: b4263a9f027f7554c869082504e2aba4, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9c333a8fee42b354e9f54375b3f26384, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _E_Light:
-        m_Texture: {fileID: 2800000, guid: c6673f8bb06c73f48935a6e3eb781e2f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 09b1784ca2d7d4940ab5acaf0547753f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MS_Normal:
@@ -58,7 +58,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _EnergyValue: 0
+    - _EnergyValue: 0.38999993
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:

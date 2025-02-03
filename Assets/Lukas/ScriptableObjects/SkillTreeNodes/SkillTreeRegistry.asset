@@ -15,3 +15,4 @@ MonoBehaviour:
   SkillTreeNodesData:
   - {fileID: 11400000, guid: 21248ff295e32164ea8c66a9c01d7265, type: 2}
   - {fileID: 11400000, guid: 3fc2373b3963554439ef734ba8f66f64, type: 2}
+  - {fileID: 11400000, guid: ad1ed16ad7f49ff4a921a7f838dc5f1c, type: 2}
