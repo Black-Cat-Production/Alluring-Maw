@@ -296,7 +296,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.4666667, g: 0.69628274, b: 1, a: 1}
   m_Intensity: 400
-  m_Range: 10.4
+  m_Range: 12.18
   m_SpotAngle: 84
   m_InnerSpotAngle: 0
   m_CookieSize: 10
@@ -427,6 +427,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Torch
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475045425052645332, guid: feaf92f9534bd6846a2f2a3148de2fa6,
+        type: 3}
+      propertyPath: m_Range
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475045425052645332, guid: feaf92f9534bd6846a2f2a3148de2fa6,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -863,7 +873,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c42e85ef06e38e34ebde2c0c4ef7be48, type: 2}
+      objectReference: {fileID: 2100000, guid: 63089cd07ff72ba498ca7a17cc7e72db, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -936,6 +946,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Torch (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475045425052645332, guid: feaf92f9534bd6846a2f2a3148de2fa6,
+        type: 3}
+      propertyPath: m_Range
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475045425052645332, guid: feaf92f9534bd6846a2f2a3148de2fa6,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
