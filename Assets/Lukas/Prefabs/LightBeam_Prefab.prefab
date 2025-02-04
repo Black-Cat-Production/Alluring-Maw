@@ -148,10 +148,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Light Beam
   tags: 03000000
-  behaviors:
-  - {fileID: 11400000, guid: 5d66decef05f4e54984ed1686306ba78, type: 2}
+  behaviors: []
   manaCost: 0
   hasPreviewCast: 1
+  defaultTags: 03000000
   despawnTimerDuration: 2
   baseSkillHitDamage: 4
   obstructionLayer:

@@ -1,4 +1,4 @@
-﻿namespace Lukas.Scripts.Core.Skills
+﻿namespace Scripts.Core.Skills
 {
     public class SU_LightBoltAttack : SkillBase
     {

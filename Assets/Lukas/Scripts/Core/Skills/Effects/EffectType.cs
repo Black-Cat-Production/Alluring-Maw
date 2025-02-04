@@ -1,8 +1,9 @@
-﻿namespace Lukas.Scripts.Core.Skills.Effects
+﻿namespace Scripts.Core.Skills.Effects
 {
     public enum EffectType
     {
         DamageOverTime,
-        Debuff
+        Debuff,
+        DamageOverTimeScaling
     }
 }

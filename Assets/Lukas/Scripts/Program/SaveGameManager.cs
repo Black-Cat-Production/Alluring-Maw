@@ -2,15 +2,14 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Lukas.Scripts.Core;
-using Lukas.Scripts.Core.Skills;
-using Lukas.Scripts.Core.Skills.SkillTree;
-using Lukas.Scripts.Core.System;
 using NaughtyAttributes;
 using Newtonsoft.Json;
+using Scripts.Core;
+using Scripts.Core.Skills.SkillTree;
+using Scripts.Core.System;
 using UnityEngine;
 
-namespace Lukas.Scripts.Program
+namespace Scripts.Program
 {
     public class SaveGameManager : MonoBehaviour
     {

@@ -1,9 +1,8 @@
 ﻿using System.Collections;
-using Lukas.Scripts.Core.Modules;
-using Lukas.Scripts.Core.Skills.Effects;
+using Scripts.Core.Modules;
 using UnityEngine;
 
-namespace Lukas.Scripts.Core.Skills.Behaviors
+namespace Scripts.Core.Skills.Effects
 {
     public class RendTheFleshEffectHandler : IEffectHandler
     {

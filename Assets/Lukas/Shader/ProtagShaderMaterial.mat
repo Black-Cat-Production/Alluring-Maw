@@ -58,7 +58,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _EnergyValue: 0.38999993
+    - _EnergyValue: 0.000000014901161
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:

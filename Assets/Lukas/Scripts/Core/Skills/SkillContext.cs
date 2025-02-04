@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using Lukas.Scripts.Core.Modules;
-using Lukas.Scripts.Core.Skills.Effects;
+using Scripts.Core.Modules;
+using Scripts.Core.Skills.Effects;
 using UnityEngine;
 
-namespace Lukas.Scripts.Core.Skills
+namespace Scripts.Core.Skills
 {
     public class SkillContext
     {

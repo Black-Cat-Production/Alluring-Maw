@@ -1,16 +1,14 @@
-﻿using System.Collections.Generic;
-using LL_Unity_Utils.Misc;
+﻿using LL_Unity_Utils.Misc;
 using LL_Unity_Utils.Timers;
-using Lukas.Scripts.Core.KI;
-using Lukas.Scripts.Core.Rooms;
-using Lukas.Scripts.Core.Skills.Behaviors;
-using Lukas.Scripts.Core.Skills.Effects;
+using Scripts.Core.KI;
+using Scripts.Core.Rooms;
+using Scripts.Core.Skills.Behaviors;
+using Scripts.Core.Skills.Effects;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 
-namespace Lukas.Scripts.Core.Modules
+namespace Scripts.Core.Modules
 {
     [RequireComponent(typeof(HealthSystemModule))]
     public class EnemyAIModule : MonoBehaviour
@@ -61,6 +59,7 @@ namespace Lukas.Scripts.Core.Modules
             HealthSystemModule = GetComponent<HealthSystemModule>();
             HealthSystemModule.RegisterEffectHandler(EffectType.DamageOverTime, new DamageOverTimeHandler());
             HealthSystemModule.RegisterEffectHandler(EffectType.Debuff, new RendTheFleshEffectHandler());
+            HealthSystemModule.RegisterEffectHandler(EffectType.DamageOverTimeScaling, new DamageOverTimeScalingHandler());
             var idleTimer = new Timer(idleDuration);
             //State Creation
             idleState = new IdleState(idleTimer, agent,animator);

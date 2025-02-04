@@ -1,10 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Lukas.Scripts.Core.System;
 using UnityEngine;
 
-namespace Lukas.Scripts.Core.Skills.SkillTree
+namespace Scripts.Core.Skills.SkillTree
 {
     public class SkillTreeManager : MonoBehaviour
     {
@@ -66,6 +65,8 @@ namespace Lukas.Scripts.Core.Skills.SkillTree
                     playerSkill.AddBehavior(behavior);
                     _skillTreeNodeData.Data.ChangeStatus(ESkillNodeStatus.Unlocked);
                 }
+            
+            if(_skillTreeNodeData.Data.HasOnUnlockExecution) _skillTreeNodeData.Data.Behavior.OnUnlockExecute();
 
             UpdateTree();
         }

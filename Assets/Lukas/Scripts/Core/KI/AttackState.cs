@@ -1,8 +1,8 @@
 ﻿using LL_Unity_Utils.Timers;
-using Lukas.Scripts.Core.Modules;
+using Scripts.Core.Modules;
 using UnityEngine;
 
-namespace Lukas.Scripts.Core.KI
+namespace Scripts.Core.KI
 {
     public class AttackState : AnimationState
     {

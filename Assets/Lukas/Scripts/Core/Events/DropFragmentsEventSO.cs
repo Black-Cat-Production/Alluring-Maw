@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Lukas.Scripts.Core.Events
+namespace Scripts.Core.Events
 {
     [CreateAssetMenu(menuName = "Scriptables/Events/DropFragmentsEvent")]
     public class DropFragmentsEventSO : ScriptableObject

@@ -1,4 +1,4 @@
-﻿namespace Lukas.Scripts.Core.Visual
+﻿namespace Scripts.Core.Visual
 {
     public enum EMaterialType
     {

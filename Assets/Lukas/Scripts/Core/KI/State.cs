@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Lukas.Scripts.Core.KI
+namespace Scripts.Core.KI
 {
     public abstract class State
     {

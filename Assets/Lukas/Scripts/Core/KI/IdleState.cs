@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Lukas.Scripts.Core.KI
+namespace Scripts.Core.KI
 {
     public class IdleState : AnimationState
     {

@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace Lukas.Scripts.Core.Visual
+namespace Scripts.Core.Visual
 {
     public class MaterialHandler : MonoBehaviour
     {

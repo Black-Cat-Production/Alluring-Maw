@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7d6dc3b5b9f4381a1a1864deb9a1324, type: 3}
-  m_Name: ExplosionOnDeath
+  m_Script: {fileID: 11500000, guid: 1bfc648875c24b5b95409d6158459a76, type: 3}
+  m_Name: HolyFlameBehavior
   m_EditorClassIdentifier: 
-  specificName: Corruption Orb
+  specificName: Light Bolt
   tags: 
-  explosionDamage: 5
-  explosionRange: 5
-  savedContextEffect: {fileID: 11400000, guid: 6a1595061d3363240b60986e49d254b2, type: 2}
+  effectData: {fileID: 11400000, guid: d10ced13f75064644b3fa9ee1ed147b0, type: 2}

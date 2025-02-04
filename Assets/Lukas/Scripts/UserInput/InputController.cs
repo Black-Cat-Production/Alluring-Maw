@@ -1,11 +1,11 @@
 using System.Collections;
-using Lukas.Scripts.Core;
-using Lukas.Scripts.Core.Skills;
-using Lukas.Scripts.Core.Visual;
+using Scripts.Core;
+using Scripts.Core.Skills;
+using Scripts.Core.Visual;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Lukas.Scripts.UserInput
+namespace Scripts.UserInput
 {
     [RequireComponent(typeof(Rigidbody), typeof(Collider))]
     public class InputController : MonoBehaviour

@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Lukas.Scripts.Core.KI
+namespace Scripts.Core.KI
 {
     //Add structure for AnimatedState -> Inherit from AnimatedState
     public class WalkToPointState : AnimationState

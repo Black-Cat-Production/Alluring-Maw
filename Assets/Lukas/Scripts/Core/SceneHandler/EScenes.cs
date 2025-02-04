@@ -1,4 +1,4 @@
-﻿namespace Lukas.Scripts.Core.SceneHandler
+﻿namespace Scripts.Core.SceneHandler
 {
     public enum EScenes
     {

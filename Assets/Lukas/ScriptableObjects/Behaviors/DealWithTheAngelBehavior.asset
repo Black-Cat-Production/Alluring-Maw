@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47f0c07242304f72a68ad81b8351f62a, type: 3}
+  m_Name: DealWithTheAngelBehavior
+  m_EditorClassIdentifier: 
+  specificName: Dark Arc
+  tags: 
+  tagToChangeTo: 3
+  prefabToChange: {fileID: 3431179757756633822, guid: db25e8e57c857b44ab50d801926a1217,
+    type: 3}
+  prefabToCopyBehaviorFrom: {fileID: 2557123038686212691, guid: c729662d47354824d8d20b3d86489a8e,
+    type: 3}

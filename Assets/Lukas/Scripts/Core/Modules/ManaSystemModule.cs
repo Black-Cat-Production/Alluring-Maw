@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Lukas.Scripts.Core.Modules
+namespace Scripts.Core.Modules
 {
     public class ManaSystemModule : MonoBehaviour
     {

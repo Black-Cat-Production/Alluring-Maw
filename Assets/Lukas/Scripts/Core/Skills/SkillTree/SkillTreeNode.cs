@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Lukas.Scripts.Core.Skills.SkillTree
+namespace Scripts.Core.Skills.SkillTree
 {
     public class SkillTreeNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {

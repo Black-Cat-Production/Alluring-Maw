@@ -1,6 +1,6 @@
-﻿using Lukas.Scripts.Core.Modules;
+﻿using Scripts.Core.Modules;
 
-namespace Lukas.Scripts.Core.Skills.Effects
+namespace Scripts.Core.Skills.Effects
 {
     public interface IEffectHandler
     {

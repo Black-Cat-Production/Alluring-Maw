@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Lukas.Scripts.Core.Skills.Effects
+namespace Scripts.Core.Skills.Effects
 {
     [CreateAssetMenu(menuName = "Scriptables/EffectData")]
     public class EffectData : ScriptableObject
@@ -8,7 +8,12 @@ namespace Lukas.Scripts.Core.Skills.Effects
         public string EffectName;
         public float EffectDuration;
         public float EffectIntensity;
+
         public float EffectTickInterval;
         public EffectType EffectType;
+
+        [Header("Only for DamageOverTimeScaling type")]
+        [Tooltip("This only works with the 'DamageOverTimeScaling' EffectType")]
+        public float EffectIntensityIncrease;
     }
 }

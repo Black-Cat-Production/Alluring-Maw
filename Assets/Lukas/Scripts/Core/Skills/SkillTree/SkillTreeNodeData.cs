@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using Lukas.Scripts.Core.Skills.Behaviors;
 using Newtonsoft.Json;
+using Scripts.Core.Skills.Behaviors;
 
-namespace Lukas.Scripts.Core.Skills.SkillTree
+namespace Scripts.Core.Skills.SkillTree
 {
     [Serializable]
     public class SkillTreeNodeData
@@ -12,6 +12,7 @@ namespace Lukas.Scripts.Core.Skills.SkillTree
         [JsonIgnore] public List<SkillTreeNodeDataSO> Prerequisites;
         [JsonIgnore] public List<SkillTreeNodeDataSO> Exclusives;
         [JsonIgnore] public int MemoryFragmentCost;
+        [JsonIgnore] public bool HasOnUnlockExecution;
 
         public ESkillNodeStatus Status;
 

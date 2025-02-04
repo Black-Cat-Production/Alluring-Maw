@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using Lukas.Scripts.Core.Modules;
+using Scripts.Core.Modules;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace Lukas.Scripts.Core.Rooms
+namespace Scripts.Core.Rooms
 {
     public class RoomSpawner : MonoBehaviour
     {

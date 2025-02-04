@@ -1,10 +1,11 @@
-﻿namespace Lukas.Scripts.Core.Skills.Effects
+﻿namespace Scripts.Core.Skills.Effects
 {
     public class Effect
     {
         public string Name { get; set; }
         public float Duration { get; set; }
         public float Intensity { get; set; }
+        public float IntensityIncrease { get; set; }
         public float TickInterval { get; set; }
         public EffectType Type { get; set; }
         public SkillContext Context { get; set; }
@@ -32,6 +33,7 @@
             Intensity = _effectData.EffectIntensity;
             TickInterval = _effectData.EffectTickInterval;
             Type = _effectData.EffectType;
+            IntensityIncrease = _effectData.EffectIntensityIncrease;
         }
     }
 }

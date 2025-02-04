@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Lukas.Scripts.Core.Skills.Effects
+namespace Scripts.Core.Skills.Effects
 {
     public class EffectRunner : MonoBehaviour
     {

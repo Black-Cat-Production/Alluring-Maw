@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Lukas.Scripts.Core.Skills.SkillTree
+namespace Scripts.Core.Skills.SkillTree
 {
     public class SkillTreeUIDisplay : MonoBehaviour
     {

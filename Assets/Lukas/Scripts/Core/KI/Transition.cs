@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Lukas.Scripts.Core.KI
+namespace Scripts.Core.KI
 {
     public class Transition
     {

@@ -1,4 +1,4 @@
-﻿namespace Lukas.Scripts.Core.Skills
+﻿namespace Scripts.Core.Skills
 {
     public sealed class SU_DefaultAttack : SkillBase
     {

@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections;
-using Lukas.Scripts.Core.Events;
-using Lukas.Scripts.Core.Rooms;
-using Lukas.Scripts.Core.SceneHandler;
-using Lukas.Scripts.Core.System;
-using Lukas.Scripts.Program;
+using Scripts.Core.Events;
+using Scripts.Core.Rooms;
+using Scripts.Core.SceneHandler;
+using Scripts.Core.System;
+using Scripts.Program;
 using UnityEditor;
 using UnityEngine;
 
-namespace Lukas.Scripts.Core
+namespace Scripts.Core
 {
     public class GameManager : MonoBehaviour
     {

@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Lukas.Scripts.Core.Modules;
+using Scripts.Core.Modules;
 using UnityEngine;
 
-namespace Lukas.Scripts.Core.Skills
+namespace Scripts.Core.Skills
 {
     public sealed class SU_ArcAttack : SkillBase
     {

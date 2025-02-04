@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Lukas.Scripts.Core.KI
+namespace Scripts.Core.KI
 {
     public class AnimationState : State
 

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections;
 using Dan.Main;
-using Lukas.Scripts.Core.Events;
+using Scripts.Core.Events;
 using UnityEngine;
 
-namespace Lukas.Scripts.Core.UI
+namespace Scripts.Core.UI
 {
     public class LeaderboardManager : MonoBehaviour
     {

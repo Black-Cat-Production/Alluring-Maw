@@ -1,8 +1,6 @@
-﻿using System.Collections.Generic;
-using Lukas.Scripts.Core.Skills;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Lukas.Scripts.Core.System
+namespace Scripts.Core.System
 {
     [CreateAssetMenu(menuName = "Scriptables/SaveGame/SaveGameSO")]
     public class SaveGameSO : ScriptableObject

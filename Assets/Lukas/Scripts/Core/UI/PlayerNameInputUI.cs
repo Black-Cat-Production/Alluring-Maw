@@ -1,9 +1,8 @@
-﻿using System;
-using Lukas.Scripts.Core.Events;
+﻿using Scripts.Core.Events;
 using TMPro;
 using UnityEngine;
 
-namespace Lukas.Scripts.Core.UI
+namespace Scripts.Core.UI
 {
     public class PlayerNameInputUI : MonoBehaviour
 

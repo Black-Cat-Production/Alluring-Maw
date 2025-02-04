@@ -1,12 +1,12 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using LL_Unity_Utils.Timers;
-using Lukas.Scripts.Core.Modules;
-using Lukas.Scripts.Core.Skills.Behaviors;
+using Scripts.Core.Modules;
+using Scripts.Core.Skills.Behaviors;
+using TMPro.EditorUtilities;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Lukas.Scripts.Core.Skills
+namespace Scripts.Core.Skills
 {
     public abstract class SkillBase : SkillBridgeUnity
     {
@@ -44,6 +44,10 @@ namespace Lukas.Scripts.Core.Skills
             if (_context.Targets is not { Count: > 0 }) return;
             var target = _context.Targets[0];
             target.HealthSystemModule.TakeDamage(totalDamage);
+            if (target.HealthSystemModule.IsDead)
+            {
+                _context.TriggerEnemyKilled(target);
+            }
         }
 
         public virtual void OnTriggerEnter(Collider _collider)

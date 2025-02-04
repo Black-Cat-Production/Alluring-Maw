@@ -3,7 +3,7 @@ using LL_Unity_Utils.Misc;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Lukas.Scripts.Core.KI
+namespace Scripts.Core.KI
 {
     public class PatrolState : WalkToPointState
     {

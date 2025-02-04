@@ -1,8 +1,7 @@
-﻿using Lukas.Scripts.Core.System;
-using TMPro;
+﻿using Scripts.Core.System;
 using UnityEngine;
 
-namespace Lukas.Scripts.Core.UI
+namespace Scripts.Core.UI
 {
     public class LeaderboardTabSwapper : MonoBehaviour
     {

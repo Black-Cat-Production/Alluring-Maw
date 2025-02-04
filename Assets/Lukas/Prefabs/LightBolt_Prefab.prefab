@@ -146,13 +146,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 182c403860fe4bd2a76bb4e26966153d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: Light bolt
+  skillName: Light Bolt
   tags: 03000000
-  behaviors: []
+  behaviors:
+  - {fileID: 11400000, guid: a1b9bb07b8ed7cb46bf3fc41d86f43b0, type: 2}
   manaCost: 5
   hasPreviewCast: 0
   despawnTimerDuration: 5
-  baseSkillHitDamage: 8
+  baseSkillHitDamage: 1
   obstructionLayer:
     serializedVersion: 2
     m_Bits: 64

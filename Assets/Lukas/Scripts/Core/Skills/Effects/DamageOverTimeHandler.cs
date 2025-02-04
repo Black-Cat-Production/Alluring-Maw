@@ -1,8 +1,8 @@
 ﻿using System.Collections;
-using Lukas.Scripts.Core.Modules;
+using Scripts.Core.Modules;
 using UnityEngine;
 
-namespace Lukas.Scripts.Core.Skills.Effects
+namespace Scripts.Core.Skills.Effects
 {
     public class DamageOverTimeHandler : IEffectHandler
     {

@@ -1,9 +1,7 @@
-﻿using System;
-using Lukas.Scripts.Core.Modules;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
-namespace Lukas.Scripts.Core.UI
+namespace Scripts.Core.UI
 {
     public class UIStatUpdater : MonoBehaviour
     {

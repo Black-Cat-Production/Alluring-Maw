@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47f0c07242304f72a68ad81b8351f62a, type: 3}
+  m_Name: DealWithTheDevilBehavior
+  m_EditorClassIdentifier: 
+  specificName: Light Beam
+  tags: 
+  tagToChangeTo: 4
+  prefabToChange: {fileID: -5003438811203500287, guid: 660e9cf34ab64fd498fff38408c37009,
+    type: 3}
+  prefabToCopyBehaviorFrom: {fileID: -8338599243776381739, guid: 05cc2294f22be0a4fbb870fc3dc0afc5,
+    type: 3}

@@ -1,10 +1,10 @@
 ﻿using System.Diagnostics;
-using Lukas.Scripts.Core.Modules;
-using Lukas.Scripts.Core.Rooms;
-using Lukas.Scripts.Core.UI;
+using Scripts.Core.Modules;
+using Scripts.Core.Rooms;
+using Scripts.Core.UI;
 using UnityEngine;
 
-namespace Lukas.Scripts.Core.Tracker
+namespace Scripts.Core.Tracker
 {
     public class PlayerTracker : MonoBehaviour
     {

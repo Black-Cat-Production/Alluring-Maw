@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Lukas.Scripts.Core.Skills.Effects;
+using Scripts.Core.Skills.Effects;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Lukas.Scripts.Core.Modules
+namespace Scripts.Core.Modules
 {
     public class HealthSystemModule : MonoBehaviour
     {
@@ -24,6 +24,10 @@ namespace Lukas.Scripts.Core.Modules
         //Effect Management
         readonly List<Effect> activeEffects = new();
         readonly Dictionary<EffectType, IEffectHandler> effectHandlers = new();
+
+        //Tag Management
+        [SerializeField] bool isBoss;
+        public bool IsBoss => isBoss;
 
         public void AddEffect(Effect _effect)
         {
@@ -68,6 +72,11 @@ namespace Lukas.Scripts.Core.Modules
             if (CurrentHealth != 0) return;
             isDead = true;
             OnDeathEvent.Invoke();
+        }
+
+        public float GetCurrentPercentageHealth()
+        {
+            return CurrentHealth / maxHealth * 100;
         }
     }
 }

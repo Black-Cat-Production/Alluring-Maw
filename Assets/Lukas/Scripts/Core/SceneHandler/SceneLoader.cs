@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Lukas.Scripts.Core.SceneHandler
+namespace Scripts.Core.SceneHandler
 {
     [CreateAssetMenu(menuName = "Scriptables/Scene/SceneLoader")]
     public class SceneLoader : ScriptableObject

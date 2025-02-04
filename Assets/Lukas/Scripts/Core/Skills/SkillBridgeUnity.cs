@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Lukas.Scripts.Core.Skills.Behaviors;
+using Scripts.Core.Skills.Behaviors;
 using UnityEngine;
 
-namespace Lukas.Scripts.Core.Skills
+namespace Scripts.Core.Skills
 {
     public abstract class SkillBridgeUnity : MonoBehaviour
     {
@@ -14,6 +14,7 @@ namespace Lukas.Scripts.Core.Skills
 
         [SerializeField] float manaCost;
         [SerializeField] bool hasPreviewCast;
+        [SerializeField] List<ESkillTag> defaultTags;
         public string SkillName => skillName;
         public float ManaCost => manaCost;
         public List<ESkillTag> Tags => tags;
@@ -42,6 +43,11 @@ namespace Lukas.Scripts.Core.Skills
         public void ResetBehaviorList()
         {
             behaviors.Clear();
+            tags.Clear();
+            foreach (var defaultTag in defaultTags)
+            {
+                tags.Add(defaultTag);
+            }
         }
     }
 }

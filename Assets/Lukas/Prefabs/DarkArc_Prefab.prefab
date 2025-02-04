@@ -125,11 +125,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fd7c52e22e84e809db1ec57b62a5bf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: Arc Attack
-  tags: 04000000
-  behaviors: []
+  skillName: Dark Arc
+  tags: 03000000
+  behaviors:
+  - {fileID: 11400000, guid: b4647d837614f714ab3b4b02cdb37624, type: 2}
   manaCost: 5
   hasPreviewCast: 0
+  defaultTags: 04000000
   despawnTimerDuration: 5
   baseSkillHitDamage: 2
   obstructionLayer:

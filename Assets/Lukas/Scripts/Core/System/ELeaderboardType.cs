@@ -1,4 +1,4 @@
-﻿namespace Lukas.Scripts.Core.System
+﻿namespace Scripts.Core.System
 {
     public enum ELeaderboardType
     {

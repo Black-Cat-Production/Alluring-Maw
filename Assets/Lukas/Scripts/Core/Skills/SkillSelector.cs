@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Lukas.Scripts.Core.Skills.SkillTree;
+using Scripts.Core.Skills.SkillTree;
 using UnityEngine;
 
-namespace Lukas.Scripts.Core.Skills
+namespace Scripts.Core.Skills
 {
     public class SkillSelector : MonoBehaviour
     {

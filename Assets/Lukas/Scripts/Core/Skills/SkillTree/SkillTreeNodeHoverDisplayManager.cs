@@ -1,7 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
 
-namespace Lukas.Scripts.Core.Skills.SkillTree
+namespace Scripts.Core.Skills.SkillTree
 {
     public class SkillTreeNodeHoverDisplayManager : MonoBehaviour
     {

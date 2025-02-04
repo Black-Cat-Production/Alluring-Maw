@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections;
-using Lukas.Scripts.Core;
-using Lukas.Scripts.Core.Events;
-using Lukas.Scripts.Core.Skills;
-using Lukas.Scripts.Core.Skills.SkillTree;
-using Lukas.Scripts.Core.System;
+﻿using System.Collections;
+using Scripts.Core;
+using Scripts.Core.Events;
+using Scripts.Core.Skills.SkillTree;
+using Scripts.Core.System;
 using TMPro;
 using UnityEngine;
 
-namespace Lukas.Scripts.Program
+namespace Scripts.Program
 {
     public class MainMenuScript : MonoBehaviour
     {
