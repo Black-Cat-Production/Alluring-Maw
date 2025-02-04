@@ -7,36 +7,35 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Trail
-  m_Shader: {fileID: -6465566751694194690, guid: cf98e6d75c10b2b4ca9ac535176edaa8,
+  m_Name: Dark_Magic_5
+  m_Shader: {fileID: -6465566751694194690, guid: 42cdca44c8d08fd458e82dcec9823edc,
     type: 3}
-  m_Parent: {fileID: 2100000, guid: 679a533666552074db0e792ddb26d82b, type: 2}
-  m_ModifiedSerializedProperties: 2
-  m_ValidKeywords: []
-  m_InvalidKeywords:
+  m_Parent: {fileID: 2100000, guid: 7c94cce3342738045b9dc09f7611c4d5, type: 2}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
   - _SURFACE_TYPE_TRANSPARENT
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
+  stringTagMap:
+    RenderType: Transparent
+  disabledShaderPasses:
+  - DepthOnly
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 0b959206b76eb504b8685e9599d3f530, type: 3}
+        m_Texture: {fileID: 2800000, guid: d068eb6c631e88e418678d5601dd46c3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats: []
-    m_Colors:
-    - _Color01: {r: 1.4231786, g: 0, b: 2, a: 0}
-    - _Color02: {r: 0.1605552, g: 0, b: 0.8679245, a: 0}
-    - _MainTexSpeed: {r: 0.5, g: 0, b: 0, a: 0}
+    m_Colors: []
   m_BuildTextureStacks: []
---- !u!114 &7357945379016384229
+--- !u!114 &6856502456045545037
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
