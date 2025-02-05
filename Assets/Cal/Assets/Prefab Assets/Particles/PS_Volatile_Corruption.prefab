@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1464011448890811426}
   - component: {fileID: 5733504206473541736}
   m_Layer: 0
-  m_Name: Main_Shape (1)
+  m_Name: Splody_Shape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,7 +48,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -4898,7 +4898,7 @@ GameObject:
   - component: {fileID: 6625749958240643028}
   - component: {fileID: 6560782107162018312}
   m_Layer: 0
-  m_Name: Main_Shape
+  m_Name: Misty_Shape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4934,7 +4934,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -9797,7 +9797,7 @@ Transform:
   m_GameObject: {fileID: 8888337589377538123}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -15.188323, y: -0.00000047683716, z: 9.168875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
