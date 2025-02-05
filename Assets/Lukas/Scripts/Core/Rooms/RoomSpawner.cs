@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Scripts.Core.AnimationScripts;
 using Scripts.Core.Modules;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -13,7 +14,7 @@ namespace Scripts.Core.Rooms
         [SerializeField] int spawnAmount;
 
         //TODO: Replace with a list of doors!!
-        [SerializeField] GameObject door;
+        [SerializeField] List<Door> doors;
         [SerializeField] bool isLastRoom;
         public string RoomName;
 
@@ -50,7 +51,7 @@ namespace Scripts.Core.Rooms
 
         void TriggerRoomCleared()
         {
-            door.SetActive(false);
+            OpenDoors();
             Debug.Log("Room Cleared");
             if (isLastRoom) OnFinalRoomCleared?.Invoke();
         }
@@ -61,6 +62,23 @@ namespace Scripts.Core.Rooms
             {
                 OnRoomEnter.Invoke(this);
                 Debug.Log("Player entered room");
+                CloseDoors();
+            }
+        }
+
+        void OpenDoors()
+        {
+            foreach (var door in doors)
+            {
+                door.Open();
+            }
+        }
+
+        void CloseDoors()
+        {
+            foreach (var door in doors)
+            {
+                door.Close();
             }
         }
     }
