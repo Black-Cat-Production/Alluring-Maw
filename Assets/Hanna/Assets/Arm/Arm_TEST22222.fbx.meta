@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Hanna/Assets/Arm/Arm_TEST22222.fbx.meta
 guid: 5146d62ca3d4ba44ea8314ad540e5588
+========
+guid: e542f9549117ad142b04468231b3be42
+>>>>>>>> artist_dev_branch:Assets/Cal/Assets/Particles/Particle Mats/Particle_Textures/cone.fbx.meta
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []

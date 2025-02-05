@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Cal/Assets/Particles/Particle Mats/Trail 1.mat.meta
 guid: 0e86054095115264fa22c723474f89d1
+========
+guid: be5a8d750ae518344a2ce8ff7566e6a3
+>>>>>>>> artist_dev_branch:Assets/Cal/Assets/Particles/Particle Mats/Dark_Magic 2.mat.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 2100000

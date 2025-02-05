@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Vicky/Animations/Assets/Assets/AS_Player_walk.fbx.meta
 guid: 96e4c1b47e4649b468c1c13f71a8b03e
+========
+guid: bc471d43f5a118440b631a80d8455470
+>>>>>>>> artist_dev_branch:Assets/Tim/Assets/Meshes/SM_fallenadventurer.fbx.meta
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
