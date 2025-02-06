@@ -111,7 +111,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _LiquidAmount: 0.53
+    - _LiquidAmount: 0.583
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
@@ -124,9 +124,9 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
-    - _Temperature: -0.5
+    - _Temperature: 0
     - _WaveHeight: 0.1
-    - _WaveSpeed: 1
+    - _WaveSpeed: 1.36
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
