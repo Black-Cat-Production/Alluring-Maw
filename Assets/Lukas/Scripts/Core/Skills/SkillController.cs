@@ -10,6 +10,7 @@ namespace Scripts.Core.Skills
         [SerializeField] float spawnDistance;
         [SerializeField] Camera playerCamera;
         [SerializeField] GameObject castPreviewPrefab;
+        [SerializeField] float skillAddedForce = 50f;
         public SkillBridgeUnity SelectedSkill { get; private set; }
 
         public ManaSystemModule ManaSystemModule { get; private set; }
@@ -81,7 +82,7 @@ namespace Scripts.Core.Skills
 
             var cameraTransform = playerCamera.transform;
             instance = Instantiate(SelectedSkill, cameraTransform.position + cameraTransform.forward * spawnDistance, cameraTransform.rotation);
-            instance.GetComponent<Rigidbody>().AddForce(cameraTransform.transform.forward * 50f, ForceMode.Impulse);
+            instance.GetComponent<Rigidbody>().AddForce(cameraTransform.transform.forward * skillAddedForce, ForceMode.Impulse);
         }
 
         public void CastDefaultAttack()

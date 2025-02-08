@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using LL_Unity_Utils.Scriptables;
 using LL_Unity_Utils.Timers;
 using Scripts.Core.Modules;
 using Scripts.Core.Skills.Behaviors;
@@ -17,6 +19,7 @@ namespace Scripts.Core.Skills
         Timer despawnTimer;
 
         [SerializeField] UnityEvent OnSpawn;
+        [SerializeField] VFXSpawner vfxSpawner;
 
         protected virtual void Awake()
         {
@@ -27,6 +30,12 @@ namespace Scripts.Core.Skills
         void Start()
         {
             foreach (var behaviour in baseBehaviours) AddBehavior(behaviour);
+            if (vfxSpawner != null)
+            {
+                vfxSpawner.Spawn(transform.position, out var spawned);
+                spawned.gameObject.transform.SetParent(transform, true);
+            }
+
             OnSpawn?.Invoke();
         }
 
@@ -44,6 +53,7 @@ namespace Scripts.Core.Skills
             if (_context.Targets is not { Count: > 0 }) return;
             var target = _context.Targets[0];
             target.HealthSystemModule.TakeDamage(totalDamage);
+            target.CallHit(Tags);
             if (target.HealthSystemModule.IsDead)
             {
                 _context.TriggerEnemyKilled(target);
@@ -55,7 +65,7 @@ namespace Scripts.Core.Skills
             if (_collider.gameObject.CompareTag("HitBox"))
             {
                 var target = _collider.gameObject.GetComponentInParent<EnemyAIModule>();
-                var context = new SkillContext(transform.position, new List<EnemyAIModule> { target }, null,this);
+                var context = new SkillContext(transform.position, new List<EnemyAIModule> { target }, null, this);
                 Use(context);
             }
 

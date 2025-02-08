@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using LL_Unity_Utils.Scriptables;
+using Scripts.Core.Skills;
 using Scripts.Core.Skills.Effects;
+using Scripts.Core.Skills.SkillTree;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -21,7 +24,11 @@ namespace Scripts.Core.Modules
         public UnityEvent OnDeathEvent;
         public Action<int> OnDamageTaken;
 
-        //Effect Management
+        //Visual Management
+        [SerializeField] VFXSpawner lightHit;
+        [SerializeField] VFXSpawner darkHit;
+
+    //Effect Management
         readonly List<Effect> activeEffects = new();
         readonly Dictionary<EffectType, IEffectHandler> effectHandlers = new();
 

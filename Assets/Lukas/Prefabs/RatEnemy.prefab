@@ -220,6 +220,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  lightHit: {fileID: 0}
+  darkHit: {fileID: 0}
   isBoss: 0
 --- !u!114 &1352161795334600830
 MonoBehaviour:
@@ -249,6 +251,8 @@ MonoBehaviour:
   baseMoveSpeed: 3.5
   memoryFragmentDropMin: 1
   memoryFragmentDropMax: 2
+  lightHit: {fileID: 11400000, guid: a0ebf168a30b8284aabacea7c8c5b3ea, type: 2}
+  darkHit: {fileID: 11400000, guid: 2f15d5ad78a579c419883bad73cadad9, type: 2}
   OnDeathEvent:
     m_PersistentCalls:
       m_Calls:

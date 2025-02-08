@@ -1,12 +1,20 @@
-﻿using LL_Unity_Utils.Misc;
-using LL_Unity_Utils.Timers;
+﻿using System;
+using System.Collections.Generic;
+using LL_Unity_Utils.Misc;
+using LL_Unity_Utils.Scriptables;
 using Scripts.Core.KI;
 using Scripts.Core.Rooms;
+using Scripts.Core.Skills;
 using Scripts.Core.Skills.Behaviors;
 using Scripts.Core.Skills.Effects;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
+using Random = UnityEngine.Random;
+using State = Scripts.Core.KI.State;
+using StateMachine = Scripts.Core.KI.StateMachine;
+using Timer = LL_Unity_Utils.Timers.Timer;
 
 namespace Scripts.Core.Modules
 {
@@ -32,6 +40,10 @@ namespace Scripts.Core.Modules
         [SerializeField] int memoryFragmentDropMin;
         [SerializeField] int memoryFragmentDropMax;
 
+        [Header("Visuals")]
+        [SerializeField] VFXSpawner lightHit;
+        [SerializeField] VFXSpawner darkHit;
+        
         TargetComponent targetComponent;
         TargetComponent idleTargetComponent;
         StateMachine stateMachine;
@@ -96,6 +108,22 @@ namespace Scripts.Core.Modules
         void FixedUpdate()
         {
             stateMachine.CheckSwapState();
+        }
+
+        public void CallHit(List<ESkillTag> _skillTags)
+        {
+            var skillTag = _skillTags.Contains(ESkillTag.Light) ? ESkillTag.Light : ESkillTag.Dark;
+            switch (skillTag)
+            {
+                case ESkillTag.Light:
+                    lightHit.Spawn(transform.position + new Vector3(0,transform.localScale.y * 0.5f,0));
+                    break;
+                case ESkillTag.Dark:
+                    darkHit.Spawn(transform.position + new Vector3(0,transform.localScale.y * 0.5f,0));
+                    break;
+                default:
+                    throw new NotImplementedException();
+            }
         }
 
         public void Die()
