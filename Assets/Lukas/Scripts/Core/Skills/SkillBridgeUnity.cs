@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Scripts.Core.Skills.Behaviors;
 using UnityEngine;
 
@@ -15,10 +16,12 @@ namespace Scripts.Core.Skills
         [SerializeField] float manaCost;
         [SerializeField] bool hasPreviewCast;
         [SerializeField] List<ESkillTag> defaultTags;
+        [SerializeField] Sprite skillSprite;
         public string SkillName => skillName;
         public float ManaCost => manaCost;
         public List<ESkillTag> Tags => tags;
         public bool HasPreviewCast => hasPreviewCast;
+        public Sprite SkillSprite => skillSprite;
 
         public void AddBehavior(SkillBehaviorSO _behavior)
         {

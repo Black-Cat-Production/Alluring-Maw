@@ -152,6 +152,7 @@ MonoBehaviour:
   manaCost: 0
   hasPreviewCast: 1
   defaultTags: 03000000
+  skillSprite: {fileID: 21300000, guid: 19fdab78848e0f94a89ff9164655c287, type: 3}
   despawnTimerDuration: 2
   baseSkillHitDamage: 4
   obstructionLayer:

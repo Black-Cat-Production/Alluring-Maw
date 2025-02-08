@@ -22,8 +22,6 @@ namespace Scripts.UserInput
         float dashTime;
         float dashCooldownTimer;
 
-        bool isAllowedCasting;
-
         [SerializeField] [Min(1)] float moveSpeed = 1.0f;
         [SerializeField] float lookSensitivity = 2.0f;
         [SerializeField] Camera playerCamera;
@@ -40,6 +38,7 @@ namespace Scripts.UserInput
 
 
         bool castingBlockRunning;
+        bool isCastingSkill;
 
         void Awake()
         {
@@ -113,6 +112,7 @@ namespace Scripts.UserInput
         public void ChangeSkill(InputAction.CallbackContext _callbackContext)
         {
             if (_callbackContext.phase != InputActionPhase.Started) return;
+            if (isCastingSkill) return;
             float scrollDirection = _callbackContext.ReadValue<float>();
             if (scrollDirection > 0) skillSelector.UpdateSelectedSkill(1);
             else skillSelector.UpdateSelectedSkill(-1);
@@ -131,6 +131,7 @@ namespace Scripts.UserInput
             if (!skillSelector.CanCastSpell()) return;
             if (_callbackContext.phase == InputActionPhase.Started)
             {
+                isCastingSkill = true;
                 animator.SetBool("isHoldingSkill", true);
                 PushMaterialChange(false);
             }
@@ -140,6 +141,7 @@ namespace Scripts.UserInput
             animator.ResetTrigger("CancelCasting");
             animator.SetBool("isHoldingSkill", false);
             PushMaterialChange(true);
+            isCastingSkill = false;
         }
 
         public void ChangeReleaseBool(int _value)

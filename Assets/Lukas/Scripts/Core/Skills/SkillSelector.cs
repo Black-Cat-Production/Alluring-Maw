@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Scripts.Core.Skills.SkillTree;
+using Scripts.Core.UI;
 using UnityEngine;
 
 namespace Scripts.Core.Skills
@@ -7,6 +8,7 @@ namespace Scripts.Core.Skills
     public class SkillSelector : MonoBehaviour
     {
         [SerializeField] List<SkillBridgeUnity> availableSkills = new();
+        [SerializeField] SkillSelectionUI skillSelectionUI;
         SkillController skillController;
         SkillTreeManager skillTreeManager;
 
@@ -14,6 +16,7 @@ namespace Scripts.Core.Skills
         {
             skillController = GetComponent<SkillController>();
             skillController.SetSkill(availableSkills[0]);
+            skillSelectionUI.UpdateSkillUI(skillController);
         }
 
         public void UpdateSelectedSkill(int _changeDirection)
@@ -23,6 +26,7 @@ namespace Scripts.Core.Skills
             if (currentIndex < 0) currentIndex = availableSkills.Count - 1;
             else if (currentIndex > availableSkills.Count - 1) currentIndex = 0;
             skillController.SetSkill(availableSkills[currentIndex]);
+            skillSelectionUI.UpdateSkillUI(skillController);
             Debug.Log(availableSkills[currentIndex].SkillName);
         }
 
