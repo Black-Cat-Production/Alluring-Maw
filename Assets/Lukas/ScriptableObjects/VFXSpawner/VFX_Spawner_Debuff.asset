@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c9f6dc212644f2d9561e5cb1d7ff578, type: 3}
-  m_Name: VFX_Spawner_CorruptionOrb
+  m_Name: VFX_Spawner_Debuff
   m_EditorClassIdentifier: 
-  vfxPrefab: {fileID: 3372384575586395038, guid: 5c9fda60f82a9cb4ba83beaa11375bc5,
+  vfxPrefab: {fileID: 2126546852271118619, guid: 9e54b29ae7c26474ba5c4f87baf695e9,
     type: 3}
   positionOffset: {x: 0, y: 0, z: 0}

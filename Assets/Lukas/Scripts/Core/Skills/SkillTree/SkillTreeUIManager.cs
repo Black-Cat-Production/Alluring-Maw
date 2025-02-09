@@ -5,21 +5,11 @@ namespace Scripts.Core.Skills.SkillTree
     public class SkillTreeUIManager : MonoBehaviour
     {
         [SerializeField] Canvas skillTreeUICanvas;
-        [SerializeField] CanvasGroup hoveredNodePanelGroup;
-        [SerializeField] SkillTreeNodeHoverDisplayManager hoverDisplayManager;
+        [SerializeField] CanvasGroup nodeDetailPanelGroup;
+        [SerializeField] SkillTreeNodeDetailDisplayManager detailDisplayManager;
 
-        void OnEnable()
-        {
-            SkillTreeNode.OnHoverEnter += OpenHoveredNodePanel;
-            SkillTreeNode.OnHoverExit += CloseHoveredNodePanel;
-        }
-
-        void OnDisable()
-        {
-            SkillTreeNode.OnHoverEnter -= OpenHoveredNodePanel;
-            SkillTreeNode.OnHoverExit -= CloseHoveredNodePanel;
-        }
-
+        public SkillTreeNode CurrentSelectedNode { get; private set; }
+        
         public void OpenSkillTreeUI()
         {
             skillTreeUICanvas.gameObject.SetActive(true);
@@ -30,15 +20,29 @@ namespace Scripts.Core.Skills.SkillTree
             skillTreeUICanvas.gameObject.SetActive(false);
         }
 
-        void OpenHoveredNodePanel(SkillTreeNode _hoveredNode)
+        public void UpdateDetailDisplay()
         {
-            hoverDisplayManager.PopulateInformation(_hoveredNode);
-            hoveredNodePanelGroup.gameObject.SetActive(true);
+            detailDisplayManager.PopulateInformation(CurrentSelectedNode);
         }
 
-        public void CloseHoveredNodePanel()
+        public void OpenNodeDetailPanel(SkillTreeNode _selectedNode)
         {
-            hoveredNodePanelGroup.gameObject.SetActive(false);
+            CurrentSelectedNode = _selectedNode;
+            if (nodeDetailPanelGroup.gameObject.activeInHierarchy)
+            {
+                UpdateDetailDisplay();
+            }
+            else
+            {
+                nodeDetailPanelGroup.gameObject.SetActive(true);
+                UpdateDetailDisplay();
+            }
+        }
+
+        public void CloseNodeDetailPanel()
+        {
+            nodeDetailPanelGroup.gameObject.SetActive(false);
+            CurrentSelectedNode = null;
         }
     }
 }

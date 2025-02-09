@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using LL_Unity_Utils.Scriptables;
+using UnityEngine;
 
 namespace Scripts.Core.Skills.Effects
 {
@@ -11,6 +12,8 @@ namespace Scripts.Core.Skills.Effects
 
         public float EffectTickInterval;
         public EffectType EffectType;
+
+        public VFXSpawner EffectSpawner;
 
         [Header("Only for DamageOverTimeScaling type")]
         [Tooltip("This only works with the 'DamageOverTimeScaling' EffectType")]

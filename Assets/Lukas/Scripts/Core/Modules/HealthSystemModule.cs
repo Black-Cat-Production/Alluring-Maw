@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using LL_Unity_Utils.Scriptables;
 using Scripts.Core.Skills;
 using Scripts.Core.Skills.Effects;
 using Scripts.Core.Skills.SkillTree;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -24,11 +26,7 @@ namespace Scripts.Core.Modules
         public UnityEvent OnDeathEvent;
         public Action<int> OnDamageTaken;
 
-        //Visual Management
-        [SerializeField] VFXSpawner lightHit;
-        [SerializeField] VFXSpawner darkHit;
-
-    //Effect Management
+        //Effect Management
         readonly List<Effect> activeEffects = new();
         readonly Dictionary<EffectType, IEffectHandler> effectHandlers = new();
 
@@ -43,7 +41,11 @@ namespace Scripts.Core.Modules
                 existingEffect.Duration = _effect.Duration;
             //Debug.Log($"Refreshed effect: {_effect.Name} on enemy {gameObject.name}!");
             else
+            {
                 activeEffects.Add(_effect);
+                if (_effect.VFXSpawner == null) return;
+                StartCoroutine(DisplayEffectVFX(_effect));
+            }
             //Debug.Log($"Added effect: {_effect.Name} to enemy {gameObject.name}!");
         }
 
@@ -84,6 +86,17 @@ namespace Scripts.Core.Modules
         public float GetCurrentPercentageHealth()
         {
             return CurrentHealth / maxHealth * 100;
+        }
+
+        IEnumerator DisplayEffectVFX(Effect _effect)
+        {
+            _effect.VFXSpawner.Spawn(transform.position, out var _vfxObject);
+            _vfxObject.transform.SetParent(gameObject.transform);
+            while(activeEffects.Contains(_effect))
+            {
+                yield return null;
+            }
+            Destroy(_vfxObject);
         }
     }
 }

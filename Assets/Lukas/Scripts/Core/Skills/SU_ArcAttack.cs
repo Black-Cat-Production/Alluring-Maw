@@ -6,6 +6,25 @@ namespace Scripts.Core.Skills
 {
     public sealed class SU_ArcAttack : SkillBase
     {
+        [Header("Skill Specific")]
+        [SerializeField] GameObject darkVFXObject;
+        [SerializeField] GameObject lightVFXObject;
+
+        protected override void Awake()
+        {
+            base.Awake();
+            if (Tags.Contains(ESkillTag.Dark))
+            {
+                if(lightVFXObject.activeInHierarchy) lightVFXObject.SetActive(false);
+                darkVFXObject.SetActive(true);
+            }
+            else
+            {
+                if(darkVFXObject.activeInHierarchy) darkVFXObject.SetActive(false);
+                lightVFXObject.SetActive(true);
+            }
+        }
+
         public override void OnTriggerEnter(Collider _collider)
         {
             if ((obstructionLayer.value & (1 << _collider.gameObject.layer)) != 0)

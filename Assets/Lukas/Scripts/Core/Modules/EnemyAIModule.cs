@@ -5,9 +5,7 @@ using LL_Unity_Utils.Scriptables;
 using Scripts.Core.KI;
 using Scripts.Core.Rooms;
 using Scripts.Core.Skills;
-using Scripts.Core.Skills.Behaviors;
 using Scripts.Core.Skills.Effects;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
@@ -43,7 +41,8 @@ namespace Scripts.Core.Modules
         [Header("Visuals")]
         [SerializeField] VFXSpawner lightHit;
         [SerializeField] VFXSpawner darkHit;
-        
+
+        AttackCollider attackCollider;
         TargetComponent targetComponent;
         TargetComponent idleTargetComponent;
         StateMachine stateMachine;
@@ -53,11 +52,11 @@ namespace Scripts.Core.Modules
         Animator animator;
         public float CurrentAttackDamage { get; private set; }
 
+        bool inAttack;
+
         float distanceToTarget => Vector3.Distance(new Vector3(transform.position.x, 0, transform.position.z), new Vector3(targetComponent.TargetPosition.x, 0, targetComponent.TargetPosition.z));
 
         public UnityEvent<int> OnDeathEvent;
-
-        GameObject player;
 
         void Awake()
         {
@@ -69,6 +68,7 @@ namespace Scripts.Core.Modules
             agent.speed = baseMoveSpeed;
             animator = GetComponent<Animator>();
             HealthSystemModule = GetComponent<HealthSystemModule>();
+            attackCollider = GetComponentInChildren<AttackCollider>();
             HealthSystemModule.RegisterEffectHandler(EffectType.DamageOverTime, new DamageOverTimeHandler());
             HealthSystemModule.RegisterEffectHandler(EffectType.Debuff, new RendTheFleshEffectHandler());
             HealthSystemModule.RegisterEffectHandler(EffectType.DamageOverTimeScaling, new DamageOverTimeScalingHandler());
@@ -77,9 +77,7 @@ namespace Scripts.Core.Modules
             idleState = new IdleState(idleTimer, agent,animator);
             State chaseState = new WalkToPointState(agent, targetComponent,animator);
             State patrolState = new PatrolState(agent, idleTargetComponent, RecalculatePatrolPoint,animator);
-            //DEBUG TESTING AREA. NEEDS TO GO
-            player = GameObject.Find("Player");
-            State attackState = new AttackState(player, new Timer(attackCooldown),animator, this);
+            State attackState = new AttackState(attackCollider, new Timer(attackCooldown),animator, this);
 
             //Setup StateMachine
             stateMachine = new StateMachine(idleState, gameObject, false);
@@ -88,7 +86,7 @@ namespace Scripts.Core.Modules
             var anyToChase = new Transition(chaseState, FindTarget);
             var chaseToIdle = new Transition(idleState, () => !FindTarget());
             var chaseToAttack = new Transition(attackState, () => distanceToTarget < attackRange);
-            var attackToChase = new Transition(chaseState, () => distanceToTarget > attackRange);
+            var attackToChase = new Transition(chaseState, () => distanceToTarget > attackRange && !inAttack);
             var idleToPatrol = new Transition(patrolState, () => idleState.IsTimerFinished == true);
             var movingToIdle = new Transition(idleState, () => agent.remainingDistance < agent.stoppingDistance);
 
@@ -197,6 +195,26 @@ namespace Scripts.Core.Modules
         public void ResetAttackDamage()
         {
             CurrentAttackDamage = baseAttackDamage;
+        }
+
+        public void EnableAttackCollider()
+        {
+            attackCollider.gameObject.SetActive(true);
+        }
+
+        public void DisableAttackCollider()
+        {
+            attackCollider.gameObject.SetActive(false);
+        }
+
+        public void EnableAttackBool()
+        {
+            inAttack = true;
+        }
+
+        public void DisableAttackBool()
+        {
+            inAttack = false;
         }
     }
 }

@@ -25,6 +25,7 @@ namespace Scripts.Core.Skills.Behaviors
                 Intensity = effectData.EffectIntensity,
                 TickInterval = effectData.EffectTickInterval,
                 Type = effectData.EffectType,
+                VFXSpawner = effectData.EffectSpawner,
                 Context = _context
             };
             _context.Effect = effect;

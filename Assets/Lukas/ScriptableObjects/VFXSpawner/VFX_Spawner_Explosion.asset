@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c9f6dc212644f2d9561e5cb1d7ff578, type: 3}
-  m_Name: VFX_Spawner_DarkHit
+  m_Name: VFX_Spawner_Explosion
   m_EditorClassIdentifier: 
-  vfxPrefab: {fileID: 7751983373130769312, guid: 3d2bf5538f0576a448a167dd82b378a2,
+  vfxPrefab: {fileID: 4315412269103498350, guid: 623f6ff94c010424fa13bb41e203cc5e,
     type: 3}
   positionOffset: {x: 0, y: 0, z: 0}

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using LL_Unity_Utils.Scriptables;
 using Scripts.Core.Modules;
 using Scripts.Core.Skills.Effects;
 using UnityEngine;
@@ -13,6 +14,7 @@ namespace Scripts.Core.Skills.Behaviors
         [SerializeField] List<ESkillTag> tags;
         [SerializeField] int explosionDamage;
         [SerializeField] float explosionRange;
+        [SerializeField] VFXSpawner explosionVFX;
         public override string SpecificName => specificName;
 
         public override List<ESkillTag> Tags => tags;
@@ -26,6 +28,7 @@ namespace Scripts.Core.Skills.Behaviors
 
         void HandleEnemyDeath(EnemyAIModule _target)
         {
+            explosionVFX.Spawn(_target.transform.position);
             var nearbyEnemies = Physics.OverlapSphere(_target.transform.position, explosionRange)
                 .Select(_collider => _collider.GetComponent<EnemyAIModule>())
                 .Where(_newTarget => _newTarget != null && !_newTarget.HealthSystemModule.IsDead)

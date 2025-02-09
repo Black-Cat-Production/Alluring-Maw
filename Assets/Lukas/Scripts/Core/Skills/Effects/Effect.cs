@@ -1,4 +1,6 @@
-﻿namespace Scripts.Core.Skills.Effects
+﻿using LL_Unity_Utils.Scriptables;
+
+namespace Scripts.Core.Skills.Effects
 {
     public class Effect
     {
@@ -9,6 +11,7 @@
         public float TickInterval { get; set; }
         public EffectType Type { get; set; }
         public SkillContext Context { get; set; }
+        public VFXSpawner VFXSpawner { get; set; }
 
         public bool IsRunning { get; set; }
 
@@ -23,6 +26,7 @@
             Intensity = _effect.Intensity;
             TickInterval = _effect.TickInterval;
             Type = _effect.Type;
+            VFXSpawner = _effect.VFXSpawner;
             IsRunning = false;
         }
 
@@ -34,6 +38,7 @@
             TickInterval = _effectData.EffectTickInterval;
             Type = _effectData.EffectType;
             IntensityIncrease = _effectData.EffectIntensityIncrease;
+            VFXSpawner = _effectData.EffectSpawner;
         }
     }
 }

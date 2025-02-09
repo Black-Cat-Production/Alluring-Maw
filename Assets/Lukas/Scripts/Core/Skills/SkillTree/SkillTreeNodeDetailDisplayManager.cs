@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Scripts.Core.Skills.SkillTree
 {
-    public class SkillTreeNodeHoverDisplayManager : MonoBehaviour
+    public class SkillTreeNodeDetailDisplayManager : MonoBehaviour
     {
         [SerializeField] TextMeshProUGUI nodeNameField;
         [SerializeField] TextMeshProUGUI nodeDescField;
@@ -26,7 +26,6 @@ namespace Scripts.Core.Skills.SkillTree
                 nodeCostValueField.color = Color.green;
                 return;
             }
-
             nodeCostValueField.color = !_node.IsUnlockableByCost() ? Color.red : Color.black;
         }
     }

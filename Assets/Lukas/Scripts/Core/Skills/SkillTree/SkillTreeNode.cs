@@ -1,24 +1,26 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace Scripts.Core.Skills.SkillTree
 {
-    public class SkillTreeNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+    public class SkillTreeNode : MonoBehaviour
     {
         [SerializeField] SkillTreeNodeDataSO nodeData;
         [SerializeField] string nodeName;
         [TextArea] [SerializeField] string description;
-
+        [SerializeField] Image connectionToNode;
+        
+        
         public string NodeDescription => description;
         public string NodeName => nodeName;
         public SkillTreeNodeDataSO NodeData => nodeData;
+        public Image ConnectionToNode => connectionToNode;
 
         public Action OnClick;
-        public static Action<SkillTreeNode> OnHoverEnter;
-        public static Action OnHoverExit;
 
-        public void Clicked()
+
+        public void Unlock()
         {
             switch (nodeData.Data.Status)
             {
@@ -34,16 +36,6 @@ namespace Scripts.Core.Skills.SkillTree
             }
 
             OnClick.Invoke();
-        }
-
-        public void OnPointerEnter(PointerEventData _eventData)
-        {
-            OnHoverEnter.Invoke(this);
-        }
-
-        public void OnPointerExit(PointerEventData _eventData)
-        {
-            OnHoverExit.Invoke();
         }
 
         public bool IsUnlockableByCost()

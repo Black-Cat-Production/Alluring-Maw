@@ -17,3 +17,5 @@ MonoBehaviour:
   EffectIntensity: 2
   EffectTickInterval: 1
   EffectType: 1
+  EffectSpawner: {fileID: 11400000, guid: b8b8e087335345f44b14b5f4aa16247c, type: 2}
+  EffectIntensityIncrease: 0

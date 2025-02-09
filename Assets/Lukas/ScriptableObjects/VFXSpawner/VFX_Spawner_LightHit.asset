@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c9f6dc212644f2d9561e5cb1d7ff578, type: 3}
   m_Name: VFX_Spawner_LightHit
   m_EditorClassIdentifier: 
-  vfxPrefab: {fileID: 6795911908898657927, guid: fec52a8569e48374c815ba1bca6a02a0,
+  vfxPrefab: {fileID: 2829606154152106413, guid: db6eaa56ad78f1e49a495f2887a53501,
     type: 3}
   positionOffset: {x: 0, y: 0, z: 0}

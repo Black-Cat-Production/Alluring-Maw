@@ -19,7 +19,6 @@ namespace Scripts.Core.Skills
         Timer despawnTimer;
 
         [SerializeField] UnityEvent OnSpawn;
-        [SerializeField] VFXSpawner vfxSpawner;
 
         protected virtual void Awake()
         {
@@ -30,12 +29,6 @@ namespace Scripts.Core.Skills
         void Start()
         {
             foreach (var behaviour in baseBehaviours) AddBehavior(behaviour);
-            if (vfxSpawner != null)
-            {
-                vfxSpawner.Spawn(transform.position, out var spawned);
-                spawned.gameObject.transform.SetParent(transform, true);
-            }
-
             OnSpawn?.Invoke();
         }
 

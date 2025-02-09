@@ -15,6 +15,8 @@ MonoBehaviour:
   Data:
     Behavior: {fileID: 11400000, guid: f220c7382ec74264fa195a4e4ae3e492, type: 2}
     Prerequisites: []
-    Exclusives: []
+    Exclusives:
+    - {fileID: 11400000, guid: a0e721e6ca995464f97a1aac1ce2f290, type: 2}
     MemoryFragmentCost: 8
-    Status: 3
+    HasOnUnlockExecution: 0
+    Status: 2

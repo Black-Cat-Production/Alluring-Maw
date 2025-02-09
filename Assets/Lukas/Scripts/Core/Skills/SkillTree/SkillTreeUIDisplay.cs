@@ -10,8 +10,12 @@ namespace Scripts.Core.Skills.SkillTree
     {
         [SerializeField] List<SkillTreeNode> skillTreeNode;
         [SerializeField] TextMeshProUGUI currentFragmentAmountField;
-        [SerializeField] Sprite lockedSkill;
-        [SerializeField] Sprite unlockableSkill;
+        [SerializeField] Sprite lockedFrame;
+        [SerializeField] Sprite lockedFrameHover;
+        [SerializeField] Sprite unlockedFrame;
+        [SerializeField] Sprite unlockedFrameHover;
+        [SerializeField] Sprite lockedConnection;
+        [SerializeField] Sprite unlockedConnection;
 
         void Start()
         {
@@ -33,16 +37,28 @@ namespace Scripts.Core.Skills.SkillTree
             foreach (var node in skillTreeNode)
             {
                 var imageComponent = node.GetComponent<Image>();
-                imageComponent.sprite = node.NodeData.Data.Status switch
-                {
-                    ESkillNodeStatus.Disabled => lockedSkill,
-                    ESkillNodeStatus.Locked => lockedSkill,
-                    ESkillNodeStatus.Unlocked => unlockableSkill,
-                    ESkillNodeStatus.Unlockable => unlockableSkill,
-                    _ => throw new ArgumentOutOfRangeException()
-                };
+                var buttonComponent = node.GetComponent<Button>();
 
-                imageComponent.color = node.NodeData.Data.Status == ESkillNodeStatus.Unlocked ? Color.green : Color.white;
+                if (node.NodeData.Data.Status == ESkillNodeStatus.Unlocked)
+                {
+                    imageComponent.sprite = unlockedFrame;
+                    buttonComponent.spriteState = new SpriteState()
+                    {
+                        highlightedSprite = unlockedFrameHover,
+                        selectedSprite = unlockedFrameHover
+                    };
+                    node.ConnectionToNode.sprite = unlockedConnection;
+                }
+                else
+                {
+                    imageComponent.sprite = lockedFrame;
+                    buttonComponent.spriteState = new SpriteState()
+                    {
+                        highlightedSprite = lockedFrameHover,
+                        selectedSprite = lockedFrameHover
+                    };
+                    node.ConnectionToNode.sprite = lockedConnection;
+                }
             }
         }
 
