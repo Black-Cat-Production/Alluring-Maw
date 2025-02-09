@@ -42,7 +42,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AORM_B:
-        m_Texture: {fileID: 2800000, guid: 22f15baa59d5b8448b84abad235e9ddb, type: 3}
+        m_Texture: {fileID: 2800000, guid: 133fbfc42b43d2546920b0ac12dcc370, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _AORM_C:
+        m_Texture: {fileID: 2800000, guid: b0c211c3b55afff43a718900f34d1b2d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _AORM_D:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColor_A:
@@ -50,7 +58,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColor_B:
-        m_Texture: {fileID: 2800000, guid: f68afcbb611fc144eb1a7f9cb2f1ab0e, type: 3}
+        m_Texture: {fileID: 2800000, guid: f18c0dc016ba7fc42b254444a98d3741, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseColor_C:
+        m_Texture: {fileID: 2800000, guid: c566338ec1ed83c49ba4fe7bf677cb36, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseColor_D:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -90,7 +106,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal_B:
-        m_Texture: {fileID: 2800000, guid: f8edbfe39f553ee41a74e6061fa901b6, type: 3}
+        m_Texture: {fileID: 2800000, guid: 28fbe4f99fd6e7a459111780c188ca6d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal_C:
+        m_Texture: {fileID: 2800000, guid: 33a172e94681409409590f424d03b0c1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal_D:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -142,6 +166,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _RoughnessStrength: 0.47
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
