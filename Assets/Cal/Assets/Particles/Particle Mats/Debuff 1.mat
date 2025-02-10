@@ -7,10 +7,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Debuff
+  m_Name: Debuff 1
   m_Shader: {fileID: -6465566751694194690, guid: 15c07f4250ec822479ed4a09f4081c64,
     type: 3}
-  m_Parent: {fileID: 2100000, guid: 7cfd662af3b421f4dbf1c5fa5c940b8e, type: 2}
+  m_Parent: {fileID: 2100000, guid: 0982efce644f69f4b987308d3d06bd19, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _SURFACE_TYPE_TRANSPARENT
