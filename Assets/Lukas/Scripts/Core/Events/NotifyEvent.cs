@@ -7,10 +7,16 @@ namespace Scripts.Core.Events
     public class NotifyEvent : ScriptableObject
     {
         public Action OnNotify;
+        public Action<bool> OnNotifyBool;
 
         public void Invoke()
         {
             OnNotify?.Invoke();
+        }
+
+        public void Invoke(bool _bool)
+        {
+            OnNotifyBool?.Invoke(_bool);
         }
     }
 }

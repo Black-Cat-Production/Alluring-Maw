@@ -15,4 +15,4 @@ MonoBehaviour:
   specificName: Corruption Orb
   tags: 
   effectData: {fileID: 11400000, guid: 6b9120566992d2d4e80463e6065b9d31, type: 2}
-  healAmount: 5
+  healAmount: 1

@@ -57,6 +57,7 @@ namespace Scripts.Core.Modules
         float distanceToTarget => Vector3.Distance(new Vector3(transform.position.x, 0, transform.position.z), new Vector3(targetComponent.TargetPosition.x, 0, targetComponent.TargetPosition.z));
 
         public UnityEvent<int> OnDeathEvent;
+        public UnityEvent<Vector3> OnDeathEffectEvent;
 
         void Awake()
         {
@@ -128,6 +129,7 @@ namespace Scripts.Core.Modules
         {
             spawner.EnemyDied(this);
             OnDeathEvent.Invoke(CalculateDrop());
+            OnDeathEffectEvent.Invoke(transform.position);
             Destroy(gameObject);
         }
 

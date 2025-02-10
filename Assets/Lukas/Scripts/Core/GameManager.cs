@@ -3,6 +3,7 @@ using System.Collections;
 using Scripts.Core.Events;
 using Scripts.Core.Rooms;
 using Scripts.Core.SceneHandler;
+using Scripts.Core.Skills;
 using Scripts.Core.System;
 using Scripts.Program;
 using UnityEditor;
@@ -19,6 +20,8 @@ namespace Scripts.Core
         [SerializeField] NotifyEvent notifyMainMenu;
         [SerializeField] NotifyEvent notifyLeaderboardToSet;
         [SerializeField] NotifyEvent notifyLeaderboardOnNameChange;
+        [SerializeField] NotifyEvent notifyPause;
+        [SerializeField] SkillBridgeUnity basicAttackSkill;
         public static GameManager Instance { get; private set; }
         public int MemoryFragmentsAmount { get; private set; }
         public Action OnWinGetScores;
@@ -27,7 +30,9 @@ namespace Scripts.Core
         public int DamageTakenScore { get; private set; }
 
         public bool FinishedLoading { get; private set; }
-
+        
+        public bool IsPaused { get; private set; }
+        
         void Awake()
         {
             if (Instance == null)
@@ -55,6 +60,7 @@ namespace Scripts.Core
             if (ticks >= 200) Debug.LogError("Startup failed due to max ticks reached!");
             if (string.IsNullOrEmpty(saveGame.PlayerName)) PromptNameInput();
             LoadMemoryFragmentsAmount();
+            notifyPause.OnNotifyBool += PauseGame;
             yield return null;
             FinishedLoading = true;
         }
@@ -98,15 +104,16 @@ namespace Scripts.Core
             DamageTakenScore = _damageTaken;
         }
 
-        public void TriggerLoss()
+        public void TriggerLoss(Canvas _deathScreenUI)
         {
-            Debug.Log("You lost!");
-            RetreatToMainMenu();
+            _deathScreenUI.gameObject.SetActive(true);
+            PauseGame(true);
         }
 
         public void RetreatToMainMenu()
         {
             MemoryFragmentsAmount = saveGame.MemoryFragmentsAmount;
+            PauseGame(false);
             mainMenuSceneLoader.LoadAsync();
         }
 
@@ -153,6 +160,41 @@ namespace Scripts.Core
         public string GetPlayerName()
         {
             return saveGame.PlayerName;
+        }
+
+        public void SetBasicAlignment(ESkillTag _skillTag)
+        {
+            switch (_skillTag)
+            {
+                case ESkillTag.Dark:
+                    if (basicAttackSkill.Tags.Contains(ESkillTag.Light)) basicAttackSkill.Tags.Remove(ESkillTag.Light);
+                    if (basicAttackSkill.Tags.Contains(ESkillTag.Dark)) return;
+                    basicAttackSkill.Tags.Add(ESkillTag.Dark);
+                    break;
+                case ESkillTag.Light:
+                    if (basicAttackSkill.Tags.Contains(ESkillTag.Dark)) basicAttackSkill.Tags.Remove(ESkillTag.Dark);
+                    if (basicAttackSkill.Tags.Contains(ESkillTag.Light)) return;
+                    basicAttackSkill.Tags.Add(ESkillTag.Light);
+                    break;
+            }
+        }
+
+        void PauseGame(bool _value)
+        {
+            if (_value)
+            {
+                Time.timeScale = 0f;
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                IsPaused = true;
+            }
+            else
+            {
+                Time.timeScale = 1f;
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+                IsPaused = false;
+            }
         }
     }
 }

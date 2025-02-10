@@ -57,7 +57,11 @@ namespace Scripts.Core.Skills
 
                 var spawnPosition = new Vector3(rayHit.point.x, 0.1f, rayHit.point.z);
                 if (castPreviewPrefabInstance != null) castPreviewPrefabInstance.transform.position = spawnPosition;
-                else castPreviewPrefabInstance = Instantiate(castPreviewPrefab, spawnPosition, Quaternion.identity);
+                else
+                {
+                    castPreviewPrefabInstance = Instantiate(castPreviewPrefab, spawnPosition, Quaternion.identity);
+                    castPreviewPrefabInstance.transform.forward = Vector3.up;
+                }
                 yield return null;
             }
         }

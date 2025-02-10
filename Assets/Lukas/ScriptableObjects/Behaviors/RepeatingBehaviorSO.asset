@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   specificName: Light Beam
   tags: 
-  repeatDelay: 5
+  repeatDelay: 1
   skillToRepeat: {fileID: -5003438811203500287, guid: 660e9cf34ab64fd498fff38408c37009,
     type: 3}

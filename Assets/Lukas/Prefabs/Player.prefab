@@ -308,6 +308,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   animator: {fileID: 809334920257422176}
   cancelCastCooldown: 0.2
+  optionsSaveSO: {fileID: 11400000, guid: 4d6ee7189b2f25a42bb543a94f6f6f79, type: 2}
   materialHandler: {fileID: 1842505569457808337}
 --- !u!54 &6110016668779060848
 Rigidbody:
@@ -353,6 +354,7 @@ MonoBehaviour:
   - {fileID: -8338599243776381739, guid: 05cc2294f22be0a4fbb870fc3dc0afc5, type: 3}
   - {fileID: -5003438811203500287, guid: 660e9cf34ab64fd498fff38408c37009, type: 3}
   - {fileID: 2557123038686212691, guid: c729662d47354824d8d20b3d86489a8e, type: 3}
+  skillSelectionUI: {fileID: 0}
 --- !u!114 &7906361622450315480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,10 +398,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultAttack: {fileID: 279931243049885083, guid: e1a9740e36f91b84dae093be009170e6,
     type: 3}
-  spawnDistance: 0.5
+  spawnDistance: 2
   playerCamera: {fileID: 1167966852231981699}
   castPreviewPrefab: {fileID: 7377841027125007913, guid: 86739c6abe5a0944db56e464e853aea1,
     type: 3}
+  skillAddedForce: 50
 --- !u!114 &4243303638199280073
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ namespace Scripts.Core.Tracker
     {
         [SerializeField] GameObject playerCharacter;
         [SerializeField] UIStatUpdater uiStatUpdater;
+        [SerializeField] Canvas deathScreenUI;
         public Vector3 PlayerPosition { get; private set; }
 
         float timeTaken;
@@ -57,6 +58,11 @@ namespace Scripts.Core.Tracker
             playerHealthSystemModule.OnDamageTaken -= _damageTaken => damageTaken += _damageTaken;
             if (playerCharacter == null || !playerCharacter.gameObject.activeInHierarchy) return;
             playerCharacter.GetComponent<ManaSystemModule>().OnManaChanged -= uiStatUpdater.UpdateManaUI;
+        }
+
+        public void NotifyGameManagerOfDeath()
+        {
+            GameManager.Instance.TriggerLoss(deathScreenUI);
         }
 
         void FixedUpdate()

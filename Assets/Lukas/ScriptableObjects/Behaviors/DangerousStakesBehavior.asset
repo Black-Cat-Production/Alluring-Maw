@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   specificName: Dark Arc
   tags: 
-  triggerChance: 100
+  triggerChance: 5

@@ -19,6 +19,10 @@ namespace Scripts.Core.Skills.SkillTree
 
         public Action OnClick;
 
+        public bool IsStaticNode;
+
+        public bool ISLOCKEDFORTESTING;
+
 
         public void Unlock()
         {

@@ -1,4 +1,5 @@
 ﻿using Scripts.Core.Events;
+using Scripts.Core.Skills;
 using TMPro;
 using UnityEngine;
 
@@ -7,9 +8,11 @@ namespace Scripts.Core.UI
     public class PlayerNameInputUI : MonoBehaviour
 
     {
-        [SerializeField] TMP_InputField inputField;
-        [SerializeField] Canvas inputUICanvas;
+        [SerializeField] TMP_InputField nameInputField;
+        [SerializeField] Canvas nameInputUICanvas;
         [SerializeField] NotifyEvent notifyEvent;
+
+        [SerializeField] Canvas alignmentInputUICanvas;
 
         void OnEnable()
         {
@@ -24,20 +27,42 @@ namespace Scripts.Core.UI
 
         void ShowInputUI()
         {
-            inputField.text = string.Empty;
-            inputUICanvas.gameObject.SetActive(true);
+            nameInputField.text = string.Empty;
+            nameInputUICanvas.gameObject.SetActive(true);
         }
 
         void HideInputUI()
         {
-            inputUICanvas.gameObject.SetActive(false);
+            nameInputUICanvas.gameObject.SetActive(false);
         }
 
         public void SubmitEntry()
         {
-            if (inputField.text == string.Empty) return;
-            GameManager.Instance.SetPlayerName(inputField.text);
+            if (nameInputField.text == string.Empty) return;
+            GameManager.Instance.SetPlayerName(nameInputField.text);
             HideInputUI();
+            ShowAlignmentUI();
+        }
+
+        void ShowAlignmentUI()
+        {
+            alignmentInputUICanvas.gameObject.SetActive(true);
+        }
+
+        void HideAlignmentUI()
+        {
+            alignmentInputUICanvas.gameObject.SetActive(false);
+        }
+
+        public void ChooseDarkAlignment()
+        {
+            GameManager.Instance.SetBasicAlignment(ESkillTag.Dark);
+            HideAlignmentUI();
+        }
+        public void ChooseLightAlignment()
+        {
+            GameManager.Instance.SetBasicAlignment(ESkillTag.Light);
+            HideAlignmentUI();
         }
     }
 }

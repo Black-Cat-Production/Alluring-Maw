@@ -17,5 +17,6 @@ MonoBehaviour:
     Prerequisites: []
     Exclusives:
     - {fileID: 11400000, guid: 1b074d2adad8d5947ac3407d056fd6df, type: 2}
-    MemoryFragmentCost: 11
-    Status: 3
+    MemoryFragmentCost: 6
+    HasOnUnlockExecution: 0
+    Status: 2

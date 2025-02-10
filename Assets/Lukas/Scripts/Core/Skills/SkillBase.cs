@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using LL_Unity_Utils.Scriptables;
+﻿using System.Collections.Generic;
 using LL_Unity_Utils.Timers;
 using Scripts.Core.Modules;
 using Scripts.Core.Skills.Behaviors;
-using TMPro.EditorUtilities;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -18,7 +15,7 @@ namespace Scripts.Core.Skills
         [SerializeField] protected List<SkillBehaviorSO> baseBehaviours;
         Timer despawnTimer;
 
-        [SerializeField] UnityEvent OnSpawn;
+        [SerializeField] protected UnityEvent<Vector3> OnSpawn;
 
         protected virtual void Awake()
         {
@@ -29,7 +26,7 @@ namespace Scripts.Core.Skills
         void Start()
         {
             foreach (var behaviour in baseBehaviours) AddBehavior(behaviour);
-            OnSpawn?.Invoke();
+            OnSpawn?.Invoke(gameObject.transform.position);
         }
 
 

@@ -75,6 +75,7 @@ namespace Scripts.Core.Modules
 
         public void TakeDamage(float _damageAmount)
         {
+            if (isDead) return;
             CurrentHealth = Mathf.Max(0, CurrentHealth - _damageAmount);
             Debug.Log($"{CurrentHealth}");
             OnDamageTaken?.Invoke((int)_damageAmount);

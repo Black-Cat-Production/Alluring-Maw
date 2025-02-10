@@ -91,7 +91,7 @@ namespace Scripts.Core.Skills.SkillTree
 
             if (loadedNodes) return;
             Debug.Log("No saved tree found!");
-            foreach (var node in nodeRegistry.SkillTreeNodesData) node.Data.ChangeStatus(node.Data.Prerequisites.Count == 0 ? ESkillNodeStatus.Unlockable : ESkillNodeStatus.Locked);
+            foreach (var node in nodeRegistry.SkillTreeNodesData){ node.Data.ChangeStatus(node.Data.Prerequisites.Count == 0 ? ESkillNodeStatus.Unlockable : ESkillNodeStatus.Locked);}
         }
 
         public void ResetSkillTree()

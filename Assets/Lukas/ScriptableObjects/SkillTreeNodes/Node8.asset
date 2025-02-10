@@ -18,6 +18,6 @@ MonoBehaviour:
     Exclusives:
     - {fileID: 11400000, guid: a0e721e6ca995464f97a1aac1ce2f290, type: 2}
     - {fileID: 11400000, guid: ad1ed16ad7f49ff4a921a7f838dc5f1c, type: 2}
-    MemoryFragmentCost: 11
+    MemoryFragmentCost: 9
     HasOnUnlockExecution: 1
-    Status: 3
+    Status: 0

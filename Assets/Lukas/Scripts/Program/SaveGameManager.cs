@@ -16,10 +16,12 @@ namespace Scripts.Program
         [SerializeField] SkillTreeNodeRegistry registry;
         [SerializeField] SaveGameSO saveGameSO;
         [SerializeField] SaveGameSO defaultSaveGameSO;
+        [SerializeField] OptionsSaveSO optionsSaveSO;
 
         const string SaveFolder = "ScriptableObjectSaves";
         string savePathSaveGameSO;
         string savePathRegistry;
+        string savePathOptions;
         [NonSerialized] public bool SavePathsCreated;
 
         static SaveGameManager instance;
@@ -33,10 +35,12 @@ namespace Scripts.Program
 #if UNITY_EDITOR
                 savePathSaveGameSO = Path.Combine(Application.persistentDataPath, SaveFolder, "saveGameSO.json");
                 savePathRegistry = Path.Combine(Application.persistentDataPath, SaveFolder, "registry.json");
+                savePathOptions = Path.Combine(Application.persistentDataPath, SaveFolder, "options.json");
                 SavePathsCreated = true;
 #else
                 savePathSaveGameSO = Path.Combine(Application.dataPath, SaveFolder, "saveGameSO.json");
                 savePathRegistry = Path.Combine(Application.dataPath, SaveFolder, "registry.json");
+                savePathOptions = Path.Combine(Application.dataPath, SaveFolder, "options.json"); 
                 SavePathsCreated = true;
 #endif
             }
@@ -56,6 +60,8 @@ namespace Scripts.Program
             File.WriteAllText(savePathSaveGameSO, json);
             Debug.Log($"Saved ScriptableObject to {savePathSaveGameSO}");
 
+            json = JsonConvert.SerializeObject(optionsSaveSO);
+            File.WriteAllText(savePathOptions, json);
 
             var serializedSkillTreeData = registry.SkillTreeNodesData.Select(JsonUtility.ToJson).ToList();
             var testData = registry.SkillTreeNodesData.Select(_nodeDataSO => JsonConvert.SerializeObject(_nodeDataSO, Formatting.Indented)).ToList();
@@ -71,6 +77,9 @@ namespace Scripts.Program
                 string json = File.ReadAllText(savePathSaveGameSO);
                 JsonUtility.FromJsonOverwrite(json, saveGameSO);
                 Debug.Log("Loaded ScriptableObject!");
+
+                json = File.ReadAllText(savePathOptions);
+                JsonUtility.FromJsonOverwrite(json, optionsSaveSO);
 
 
                 json = File.ReadAllText(savePathRegistry);

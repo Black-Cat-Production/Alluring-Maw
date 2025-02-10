@@ -21,7 +21,7 @@ namespace Scripts.Core.Skills.Behaviors
             {
                 float randomNumber = Random.Range(0f, 100f);
                 if (!(randomNumber <= triggerChance) || target.HealthSystemModule.IsBoss) continue;
-                _context.CasterHealthModule.TakeDamage(10);
+                _context.CasterHealthModule.TakeDamage(1);
                 target.HealthSystemModule.TakeDamage(9999);
             }
         }

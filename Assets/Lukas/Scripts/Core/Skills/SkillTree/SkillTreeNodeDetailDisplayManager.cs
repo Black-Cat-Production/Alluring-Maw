@@ -1,5 +1,6 @@
 ﻿using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Scripts.Core.Skills.SkillTree
 {
@@ -8,9 +9,12 @@ namespace Scripts.Core.Skills.SkillTree
         [SerializeField] TextMeshProUGUI nodeNameField;
         [SerializeField] TextMeshProUGUI nodeDescField;
         [SerializeField] TextMeshProUGUI nodeCostValueField;
+        [SerializeField] Button unlockButton;
 
         public void PopulateInformation(SkillTreeNode _node)
         {
+            if(_node.IsStaticNode || _node.NodeData.Data.Status == ESkillNodeStatus.Disabled || _node.NodeData.Data.Status == ESkillNodeStatus.Locked || _node.ISLOCKEDFORTESTING || _node.NodeData.Data.Status == ESkillNodeStatus.Unlocked) unlockButton.gameObject.SetActive(false);
+            else unlockButton.gameObject.SetActive(true);
             if (_node == null)
             {
                 Debug.LogError("Given node was invalid or got destroyed!");
@@ -19,6 +23,12 @@ namespace Scripts.Core.Skills.SkillTree
 
             nodeNameField.text = _node.NodeName;
             nodeDescField.text = _node.NodeDescription;
+            if (_node.IsStaticNode)
+            {
+                nodeCostValueField.text = "0";
+                nodeCostValueField.color = Color.black;
+                return;
+            }
             if (_node.NodeData.Data.Status == ESkillNodeStatus.Unlocked) nodeDescField.text = _node.NodeDescription + "  --UNLOCKED--  ";
             nodeCostValueField.text = _node.NodeData.Data.MemoryFragmentCost.ToString();
             if (_node.NodeData.Data.Status == ESkillNodeStatus.Unlocked)

@@ -1,7 +1,10 @@
 using System.Collections;
+using System.Runtime.InteropServices.WindowsRuntime;
 using Scripts.Core;
 using Scripts.Core.Skills;
+using Scripts.Core.UI;
 using Scripts.Core.Visual;
+using Scripts.Program;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -32,6 +35,8 @@ namespace Scripts.UserInput
         [SerializeField] AnimationCurve dashCurve;
         [SerializeField] Animator animator;
         [SerializeField] float cancelCastCooldown;
+        [SerializeField] PauseUI pauseUI;
+        [SerializeField] OptionsSaveSO optionsSaveSO;
 
 
         [SerializeField] MaterialHandler materialHandler;
@@ -46,10 +51,12 @@ namespace Scripts.UserInput
             playerRigidbody = GetComponent<Rigidbody>();
             Cursor.lockState = CursorLockMode.Locked;
             dashCurve ??= AnimationCurve.EaseInOut(0, 1, 1, 0);
+            lookSensitivity = Remap(optionsSaveSO.MouseSense, 0f, 100f, 0.01f, 1f);
         }
 
         void FixedUpdate()
         {
+            if (GameManager.Instance.IsPaused) return;
             DoMove();
             if (dashCooldownTimer > 0) dashCooldownTimer -= Time.fixedDeltaTime;
             if (dashTime > 0)
@@ -73,6 +80,7 @@ namespace Scripts.UserInput
 
         public void Look(InputAction.CallbackContext _callbackContext)
         {
+            if (GameManager.Instance.IsPaused) return;
             playerLook = _callbackContext.ReadValue<Vector2>();
             float lookX = playerLook.x * lookSensitivity;
             float lookY = playerLook.y * lookSensitivity;
@@ -120,6 +128,7 @@ namespace Scripts.UserInput
 
         public void Fire(InputAction.CallbackContext _callbackContext)
         {
+            if (GameManager.Instance.IsPaused) return;
             if (!animator.GetCurrentAnimatorStateInfo(0).IsName("IdleState")) return;
             if (!_callbackContext.started) return;
             animator.SetTrigger("BaseAttack");
@@ -127,6 +136,7 @@ namespace Scripts.UserInput
 
         public void CastSkill(InputAction.CallbackContext _callbackContext)
         {
+            if (GameManager.Instance.IsPaused) return;
             if ((!animator.GetCurrentAnimatorStateInfo(0).IsName("IdleState") && !animator.GetCurrentAnimatorStateInfo(0).IsName("SkillHoldState")) || animator.GetBool("IsCastingBlocked")) return;
             if (!skillSelector.CanCastSpell()) return;
             if (_callbackContext.phase == InputActionPhase.Started)
@@ -150,7 +160,14 @@ namespace Scripts.UserInput
             animator.SetBool("CanRelease", value);
         }
 
-        public void ReturnToMainMenu(InputAction.CallbackContext _callbackContext)
+        public void Pause(InputAction.CallbackContext _callbackContext)
+        {
+            if (_callbackContext.phase != InputActionPhase.Started) return;
+            pauseUI.TogglePauseUI();
+            
+        }
+        
+        public void ReturnToMainMenu()
         {
             GameManager.Instance.RetreatToMainMenu();
         }
@@ -175,6 +192,11 @@ namespace Scripts.UserInput
 
             if (tagList.Contains(ESkillTag.Light)) materialHandler.UpdateMaterialOnMeshes(EMaterialType.LightProtag);
             if (tagList.Contains(ESkillTag.Dark)) materialHandler.UpdateMaterialOnMeshes(EMaterialType.DarkProtag);
+        }
+
+        float Remap(float _value, float _fromMin, float _fromMax, float _toMin, float _toMax)
+        {
+            return _toMin + (_value - _fromMin) * (_toMax - _toMin) / (_fromMax - _fromMin);
         }
     }
 }

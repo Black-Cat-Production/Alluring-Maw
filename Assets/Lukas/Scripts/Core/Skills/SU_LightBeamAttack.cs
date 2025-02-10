@@ -10,9 +10,11 @@ namespace Scripts.Core.Skills
         bool hitEnemy;
         bool hitGround;
 
+
         protected void Start()
         {
             context = new SkillContext(transform.position, null, null, this);
+            OnSpawn.Invoke(gameObject.transform.position);
         }
 
         public override void OnTriggerEnter(Collider _collider)
