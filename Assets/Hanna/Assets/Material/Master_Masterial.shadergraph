@@ -1150,6 +1150,20 @@
             },
             "m_InputSlot": {
                 "m_Node": {
+                    "m_Id": "11e04dddbe9b4e8b92ad9cfc59229e5c"
+                },
+                "m_SlotId": 2
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "e64c21c6036f4dbfaae5b452799f6bbb"
+                },
+                "m_SlotId": 3
+            },
+            "m_InputSlot": {
+                "m_Node": {
                     "m_Id": "17ae91fe2cf94e80967a32ee3968a00c"
                 },
                 "m_SlotId": 2
@@ -1165,6 +1179,20 @@
             "m_InputSlot": {
                 "m_Node": {
                     "m_Id": "1f96fda6feb54cb39fa630b1995efde7"
+                },
+                "m_SlotId": 2
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "e64c21c6036f4dbfaae5b452799f6bbb"
+                },
+                "m_SlotId": 3
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "40b14cd5db034fa0850f38fb251bb79f"
                 },
                 "m_SlotId": 2
             }
@@ -1206,7 +1234,63 @@
             },
             "m_InputSlot": {
                 "m_Node": {
+                    "m_Id": "b84761bd0190487a876b983b75a7565d"
+                },
+                "m_SlotId": 2
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "e64c21c6036f4dbfaae5b452799f6bbb"
+                },
+                "m_SlotId": 3
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "bdcf3b928ae54c37b3ff3510d8256df4"
+                },
+                "m_SlotId": 2
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "e64c21c6036f4dbfaae5b452799f6bbb"
+                },
+                "m_SlotId": 3
+            },
+            "m_InputSlot": {
+                "m_Node": {
                     "m_Id": "db8b58868010493e960ad2e0a749ea84"
+                },
+                "m_SlotId": 2
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "e64c21c6036f4dbfaae5b452799f6bbb"
+                },
+                "m_SlotId": 3
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "dde04e5de6cf40dc913c56c1999eb158"
+                },
+                "m_SlotId": 2
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "e64c21c6036f4dbfaae5b452799f6bbb"
+                },
+                "m_SlotId": 3
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "e7d89b673afe4364b5a60d0352fded59"
                 },
                 "m_SlotId": 2
             }
@@ -1916,7 +2000,7 @@
     },
     "m_Name": "Sample Texture 2D",
     "m_DrawState": {
-        "m_Expanded": false,
+        "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
             "x": -472.7998962402344,
@@ -3586,7 +3670,7 @@
     },
     "m_Name": "Sample Texture 2D",
     "m_DrawState": {
-        "m_Expanded": false,
+        "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
             "x": -216.80006408691407,
@@ -6834,7 +6918,7 @@
     },
     "m_Name": "Sample Texture 2D",
     "m_DrawState": {
-        "m_Expanded": false,
+        "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
             "x": -703.199951171875,
@@ -6967,7 +7051,7 @@
     },
     "m_Name": "Sample Texture 2D",
     "m_DrawState": {
-        "m_Expanded": false,
+        "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
             "x": -692.0,
@@ -7711,7 +7795,7 @@
     },
     "m_Name": "Sample Texture 2D",
     "m_DrawState": {
-        "m_Expanded": false,
+        "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
             "x": -88.79998779296875,
@@ -7935,10 +8019,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -472.79998779296877,
-            "y": 380.0,
-            "width": 130.4000244140625,
-            "height": 141.5999755859375
+            "x": -488.9999084472656,
+            "y": 376.0000305175781,
+            "width": 130.00003051757813,
+            "height": 142.00003051757813
         }
     },
     "m_Slots": [
@@ -8102,7 +8186,7 @@
     },
     "m_Name": "Sample Texture 2D",
     "m_DrawState": {
-        "m_Expanded": false,
+        "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
             "x": -245.59996032714845,
