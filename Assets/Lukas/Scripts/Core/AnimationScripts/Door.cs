@@ -7,6 +7,8 @@ namespace Scripts.Core.AnimationScripts
     {
         Animator animator;
 
+        bool isClosed;
+
         void Awake()
         {
             animator = GetComponent<Animator>();
@@ -19,7 +21,9 @@ namespace Scripts.Core.AnimationScripts
 
         public void Close()
         {
+            if (isClosed) return;
             animator.SetTrigger("Close");
+            isClosed = true;
         }
     }
 }

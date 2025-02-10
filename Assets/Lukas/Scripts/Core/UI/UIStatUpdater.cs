@@ -9,6 +9,8 @@ namespace Scripts.Core.UI
         [SerializeField] TextMeshProUGUI currentRoomName;
         [SerializeField] TextMeshProUGUI currentMana;
         [SerializeField] TextMeshProUGUI maximumMana;
+        [SerializeField] Material manaOrbMaterial;
+        static readonly int liquidAmount = Shader.PropertyToID("_LiquidAmount");
 
         void Awake()
         {
@@ -27,8 +29,10 @@ namespace Scripts.Core.UI
 
         public void UpdateManaUI(float _currentMana, int _maximumMana)
         {
-            currentMana.text = _currentMana.ToString("0");
-            maximumMana.text = _maximumMana.ToString();
+            //currentMana.text = _currentMana.ToString("0");
+            //maximumMana.text = _maximumMana.ToString();
+            float percentageMana = _currentMana / _maximumMana;
+            manaOrbMaterial.SetFloat(liquidAmount, percentageMana);
         }
     }
 }

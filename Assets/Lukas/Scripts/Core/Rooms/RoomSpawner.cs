@@ -56,14 +56,12 @@ namespace Scripts.Core.Rooms
             if (isLastRoom) OnFinalRoomCleared?.Invoke();
         }
 
-        void OnTriggerEnter(Collider _collider)
+        public void TriggerRoomEntered()
         {
-            if (_collider.gameObject.name == "Player")
-            {
-                OnRoomEnter.Invoke(this);
-                Debug.Log("Player entered room");
-                CloseDoors();
-            }
+            if (spawnedEnemies.Count <= 0) return;
+            Debug.Log("Player entered room!");
+            CloseDoors();
+            
         }
 
         void OpenDoors()

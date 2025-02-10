@@ -72,6 +72,7 @@ namespace Scripts.Core.Tracker
 
         void SetCurrentRoom(RoomSpawner _newRoom)
         {
+            if (currentRoom == _newRoom) return;
             currentRoom = _newRoom;
             uiStatUpdater.UpdateCurrentRoomName(currentRoom.RoomName);
         }
