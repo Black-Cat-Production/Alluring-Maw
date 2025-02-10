@@ -59,7 +59,7 @@ namespace Scripts.Core.Rooms
         public void TriggerRoomEntered()
         {
             if (spawnedEnemies.Count <= 0) return;
-            Debug.Log("Player entered room!");
+            OnRoomEnter.Invoke(this);
             CloseDoors();
             
         }
