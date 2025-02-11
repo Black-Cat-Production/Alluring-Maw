@@ -41,6 +41,9 @@ namespace Scripts.Core.Modules
         [Header("Visuals")]
         [SerializeField] VFXSpawner lightHit;
         [SerializeField] VFXSpawner darkHit;
+        
+        [Header("Showcase")]
+        [SerializeField] bool showcase;
 
         AttackCollider attackCollider;
         TargetComponent targetComponent;
@@ -74,6 +77,8 @@ namespace Scripts.Core.Modules
             HealthSystemModule.RegisterEffectHandler(EffectType.Debuff, new RendTheFleshEffectHandler());
             HealthSystemModule.RegisterEffectHandler(EffectType.DamageOverTimeScaling, new DamageOverTimeScalingHandler());
             var idleTimer = new Timer(idleDuration);
+
+            if (showcase) return;
             //State Creation
             idleState = new IdleState(idleTimer, agent,animator);
             State chaseState = new WalkToPointState(agent, targetComponent,animator);
@@ -106,6 +111,7 @@ namespace Scripts.Core.Modules
 
         void FixedUpdate()
         {
+            if(showcase) return;
             stateMachine.CheckSwapState();
         }
 
