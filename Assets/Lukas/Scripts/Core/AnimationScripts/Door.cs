@@ -12,6 +12,8 @@ namespace Scripts.Core.AnimationScripts
         void Awake()
         {
             animator = GetComponent<Animator>();
+            Open();
+            isClosed = false;
         }
 
         public void Open()
