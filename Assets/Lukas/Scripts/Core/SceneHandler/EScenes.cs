@@ -3,6 +3,8 @@
     public enum EScenes
     {
         MainMenu,
-        Game
+        Game,
+        Artist_Level_Scene,
+        Artist_MainMenu_Scene
     }
 }
