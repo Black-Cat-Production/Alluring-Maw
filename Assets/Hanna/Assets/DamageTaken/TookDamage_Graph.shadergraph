@@ -1902,7 +1902,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "5563b1835b5740248548a49cf8176cfd",
     "m_Id": 0,
-    "m_DisplayName": "Vignette_Intensity",
+    "m_DisplayName": "Damage_Intensity",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -2720,10 +2720,10 @@
     "m_Guid": {
         "m_GuidSerialized": "dba7a4c6-f528-48cb-8210-a8c5fd6f8533"
     },
-    "m_Name": "Vignette_Intensity",
+    "m_Name": "Damage_Intensity",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Vignette_Intensity",
-    "m_DefaultReferenceName": "_Vignette_Intensity",
+    "m_RefNameGeneratedByDisplayName": "Damage_Intensity",
+    "m_DefaultReferenceName": "_Damage_Intensity",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -2733,7 +2733,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 1.0,
+    "m_Value": 0.0,
     "m_FloatType": 1,
     "m_RangeValues": {
         "x": 0.0,

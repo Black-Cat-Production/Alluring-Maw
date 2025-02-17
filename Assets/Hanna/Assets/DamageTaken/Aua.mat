@@ -39,9 +39,9 @@ Material:
     m_Ints: []
     m_Floats:
     - _BorderSphereness: 1
+    - _Damage_Intensity: 0
     - _Noisyness: 34
-    - _Vignette_Intensity: 1
-    - _Vignette_Radius: 0.55
+    - _Vignette_Radius: 0.45
     - _Vignette_Softness: 0.8
     m_Colors:
     - _Color: {r: 0.45882356, g: 0.007843138, b: 0.11372546, a: 1}
