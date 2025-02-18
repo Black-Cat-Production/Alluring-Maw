@@ -1,11 +1,13 @@
-﻿using Scripts.Core.Events;
+﻿using System;
+using Scripts.Core.Events;
 using Scripts.Core.Skills;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Scripts.Core.UI
 {
-    public class PlayerNameInputUI : MonoBehaviour
+    public class PlayerInputUI : MonoBehaviour
 
     {
         [SerializeField] TMP_InputField nameInputField;
@@ -14,6 +16,8 @@ namespace Scripts.Core.UI
 
         [SerializeField] Canvas alignmentInputUICanvas;
 
+        bool inputUIOpen;
+        
         void OnEnable()
         {
             notifyEvent.OnNotify += ShowInputUI;
@@ -24,21 +28,30 @@ namespace Scripts.Core.UI
             notifyEvent.OnNotify -= ShowInputUI;
         }
 
+        void Update()
+        {
+            if (Input.GetKeyUp(KeyCode.Return))
+            {
+                SubmitEntry();
+            }
+        }
 
         void ShowInputUI()
         {
             nameInputField.text = string.Empty;
             nameInputUICanvas.gameObject.SetActive(true);
+            inputUIOpen = true;
         }
 
         void HideInputUI()
         {
             nameInputUICanvas.gameObject.SetActive(false);
+            inputUIOpen = false;
         }
 
         public void SubmitEntry()
         {
-            if (nameInputField.text == string.Empty) return;
+            if (nameInputField.text == string.Empty || !inputUIOpen) return;
             GameManager.Instance.SetPlayerName(nameInputField.text);
             HideInputUI();
             ShowAlignmentUI();

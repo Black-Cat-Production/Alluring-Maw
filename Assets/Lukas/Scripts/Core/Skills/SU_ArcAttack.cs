@@ -27,6 +27,11 @@ namespace Scripts.Core.Skills
 
         public override void OnTriggerEnter(Collider _collider)
         {
+            if (_collider.gameObject.CompareTag("ProjectileKillBox"))
+            {
+                Destroy(gameObject);
+                return;
+            }
             if ((obstructionLayer.value & (1 << _collider.gameObject.layer)) != 0)
             {
                 Destroy(gameObject);

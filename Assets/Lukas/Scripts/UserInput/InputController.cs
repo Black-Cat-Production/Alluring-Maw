@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Scripts.Core;
@@ -5,6 +6,7 @@ using Scripts.Core.Skills;
 using Scripts.Core.UI;
 using Scripts.Core.Visual;
 using Scripts.Program;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -45,6 +47,8 @@ namespace Scripts.UserInput
         bool castingBlockRunning;
         bool isCastingSkill;
 
+        Coroutine routine;
+
         void Awake()
         {
             skillSelector = GetComponent<SkillSelector>();
@@ -52,6 +56,27 @@ namespace Scripts.UserInput
             Cursor.lockState = CursorLockMode.Locked;
             dashCurve ??= AnimationCurve.EaseInOut(0, 1, 1, 0);
             lookSensitivity = Remap(optionsSaveSO.MouseSense, 0f, 100f, 0.01f, 1f);
+        }
+
+        void OnEnable()
+        {
+            skillSelector.OnSkillGotCast += ResetIsCasting;
+        }
+
+        void OnDisable()
+        {
+            skillSelector.OnSkillGotCast -= ResetIsCasting;
+        }
+
+        void ResetIsCasting()
+        {
+            StartCoroutine(ResetCastingWithDelay());
+        }
+
+        IEnumerator ResetCastingWithDelay()
+        {
+            yield return new WaitForSeconds(0.1f);
+            isCastingSkill = false;
         }
 
         void FixedUpdate()
@@ -108,9 +133,13 @@ namespace Scripts.UserInput
                 animator.SetTrigger("CancelCasting");
                 if (castingBlockRunning) return;
                 StartCoroutine(BlockCasting());
+                ResetIsCasting();
             }
 
+            animator.SetTrigger("Dash");
             dashDirection = transform.TransformDirection(moveInput.x, 0, moveInput.y).normalized;
+            animator.SetFloat("XDirection", moveInput.normalized.x);
+            animator.SetFloat("YDirection", moveInput.normalized.y);
             if (dashDirection == Vector3.zero) dashDirection = transform.forward;
             dashTime = dashDuration;
             dashCooldownTimer = dashCooldown;
@@ -143,6 +172,7 @@ namespace Scripts.UserInput
             {
                 isCastingSkill = true;
                 animator.SetBool("isHoldingSkill", true);
+                if(routine != null) StopCoroutine(routine);
                 PushMaterialChange(false);
             }
 
@@ -150,8 +180,17 @@ namespace Scripts.UserInput
             animator.SetTrigger("ReleaseSkill");
             animator.ResetTrigger("CancelCasting");
             animator.SetBool("isHoldingSkill", false);
+            //PushMaterialChange(true);
+            routine = StartCoroutine(ReturnToDefaultMaterial());
+        }
+
+        IEnumerator ReturnToDefaultMaterial()
+        {
+            while (!materialHandler.IsFinishedChangingUp())
+            {
+                yield return null;
+            }
             PushMaterialChange(true);
-            isCastingSkill = false;
         }
 
         public void ChangeReleaseBool(int _value)

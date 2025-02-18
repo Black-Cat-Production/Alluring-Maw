@@ -18,3 +18,4 @@ MonoBehaviour:
   damageIncreaseStep: 10
   explosionRange: 5
   explosionDamage: 5
+  explosionVFX: {fileID: 11400000, guid: a279ca09fd45af64e8abf0f463d23ba3, type: 2}

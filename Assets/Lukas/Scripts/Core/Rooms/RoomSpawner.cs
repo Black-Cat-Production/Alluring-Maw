@@ -9,11 +9,9 @@ namespace Scripts.Core.Rooms
 {
     public class RoomSpawner : MonoBehaviour
     {
-        [SerializeField] EnemyAIModule enemyAIModulePrefab;
+        [SerializeField] EnemyListSO enemyList;
 
         [SerializeField] int spawnAmount;
-
-        //TODO: Replace with a list of doors!!
         [SerializeField] List<Door> doors;
         [SerializeField] bool isLastRoom;
         public string RoomName;
@@ -24,6 +22,10 @@ namespace Scripts.Core.Rooms
         public static Action<RoomSpawner> OnRoomEnter;
         public static Action OnEnemyKilled;
         public Action OnFinalRoomCleared;
+
+        bool alreadyEntered;
+
+        RoomCollider sideEnteredFrom;
 
         void Start()
         {
@@ -37,7 +39,7 @@ namespace Scripts.Core.Rooms
             var randomPos = Random.insideUnitSphere * 5;
             var instantiatePos = new Vector3(randomPos.x, 0, randomPos.z);
             instantiatePos += new Vector3(transform.position.x, 0, transform.position.z);
-            var spawnedEnemy = Instantiate(enemyAIModulePrefab, instantiatePos, Quaternion.identity);
+            var spawnedEnemy = Instantiate(enemyList.GetRandomModuleFromList(), instantiatePos, Quaternion.identity);
             spawnedEnemy.SetSpawner(this);
             return spawnedEnemy;
         }
@@ -52,16 +54,25 @@ namespace Scripts.Core.Rooms
         void TriggerRoomCleared()
         {
             OpenDoors();
-            Debug.Log("Room Cleared");
+            sideEnteredFrom.DisableTorches();
             if (isLastRoom) OnFinalRoomCleared?.Invoke();
         }
 
         public void TriggerRoomEntered()
         {
-            if (spawnedEnemies.Count <= 0) return;
+            if (spawnedEnemies.Count <= 0 || alreadyEntered) return;
+            alreadyEntered = true;
             OnRoomEnter.Invoke(this);
             CloseDoors();
-            
+            SetAllEnemiesAggro();
+        }
+
+        void SetAllEnemiesAggro()
+        {
+            foreach (var enemy in spawnedEnemies)
+            {
+                enemy.AllowedAggro = true;
+            }
         }
 
         void OpenDoors()
@@ -78,6 +89,12 @@ namespace Scripts.Core.Rooms
             {
                 door.Close();
             }
+        }
+
+        public void SetSideEnteredFrom(RoomCollider _roomCollider)
+        {
+            if (sideEnteredFrom != null) return;
+            sideEnteredFrom = _roomCollider;
         }
     }
 }

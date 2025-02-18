@@ -24,6 +24,7 @@ namespace Scripts.Core.Modules
         public bool IsDead => isDead;
 
         public UnityEvent OnDeathEvent;
+        public UnityEvent OnHitTaken;
         public Action<int> OnDamageTaken;
 
         //Effect Management
@@ -79,6 +80,7 @@ namespace Scripts.Core.Modules
             CurrentHealth = Mathf.Max(0, CurrentHealth - _damageAmount);
             Debug.Log($"{CurrentHealth}");
             OnDamageTaken?.Invoke((int)_damageAmount);
+            OnHitTaken?.Invoke();
             if (CurrentHealth != 0) return;
             isDead = true;
             OnDeathEvent.Invoke();

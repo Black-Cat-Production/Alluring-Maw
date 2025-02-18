@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using LL_Unity_Utils.Timers;
 using Scripts.Core.Skills.Behaviors;
 using UnityEngine;
 
@@ -14,6 +15,7 @@ namespace Scripts.Core.Skills
         [SerializeField] protected List<SkillBehaviorSO> behaviors = new();
 
         [SerializeField] float manaCost;
+        [SerializeField] protected float cooldown;
         [SerializeField] bool hasPreviewCast;
         [SerializeField] List<ESkillTag> defaultTags;
         [SerializeField] Sprite skillSprite;
@@ -22,6 +24,16 @@ namespace Scripts.Core.Skills
         public List<ESkillTag> Tags => tags;
         public bool HasPreviewCast => hasPreviewCast;
         public Sprite SkillSprite => skillSprite;
+
+        public float SkillCooldown => cooldown;
+
+        public Timer CooldownTimer;
+
+        void Awake()
+        {
+            CooldownTimer = new Timer(cooldown);
+        }
+
 
         public void AddBehavior(SkillBehaviorSO _behavior)
         {
@@ -51,6 +63,16 @@ namespace Scripts.Core.Skills
             {
                 tags.Add(defaultTag);
             }
+        }
+
+        public void StartCooldown()
+        {
+            CooldownTimer?.StartTimer();
+        }
+
+        public bool GetIsOnCooldown()
+        {
+            return !CooldownTimer.CheckTimer();
         }
     }
 }

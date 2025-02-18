@@ -66,6 +66,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnHitTaken:
+    m_PersistentCalls:
+      m_Calls: []
   isBoss: 0
 --- !u!114 &1658898378407204153
 MonoBehaviour:
@@ -97,7 +100,9 @@ MonoBehaviour:
   memoryFragmentDropMax: 2
   lightHit: {fileID: 11400000, guid: a0ebf168a30b8284aabacea7c8c5b3ea, type: 2}
   darkHit: {fileID: 11400000, guid: 2f15d5ad78a579c419883bad73cadad9, type: 2}
+  durationTillDespawnAfterDeath: 5
   showcase: 0
+  AllowedAggro: 0
   OnDeathEvent:
     m_PersistentCalls:
       m_Calls:
@@ -271,7 +276,7 @@ GameObject:
   - component: {fileID: 3764142852293911120}
   m_Layer: 9
   m_Name: Hitbox
-  m_TagString: Untagged
+  m_TagString: HitBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

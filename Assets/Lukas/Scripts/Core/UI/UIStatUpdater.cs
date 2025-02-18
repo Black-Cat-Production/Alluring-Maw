@@ -1,5 +1,7 @@
-﻿using TMPro;
+﻿using System.Collections;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Scripts.Core.UI
 {
@@ -10,6 +12,11 @@ namespace Scripts.Core.UI
         [SerializeField] TextMeshProUGUI currentMana;
         [SerializeField] TextMeshProUGUI maximumMana;
         [SerializeField] Material manaOrbMaterial;
+
+
+        [SerializeField] Image manaOrbFrameImageObject;
+        [SerializeField] Sprite manaOrbFrame;
+        [SerializeField] Sprite manaOrbFrameLowMana;
         static readonly int liquidAmount = Shader.PropertyToID("_LiquidAmount");
 
         void Awake()
@@ -33,6 +40,23 @@ namespace Scripts.Core.UI
             //maximumMana.text = _maximumMana.ToString();
             float percentageMana = _currentMana / _maximumMana;
             manaOrbMaterial.SetFloat(liquidAmount, percentageMana);
+        }
+
+        public void ShowNotEnoughMana()
+        {
+            StopAllCoroutines();
+            StartCoroutine(FlashManaOrbBorder());
+        }
+
+        IEnumerator FlashManaOrbBorder()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                manaOrbFrameImageObject.sprite = manaOrbFrameLowMana;
+                yield return new WaitForSeconds(0.1f);
+                manaOrbFrameImageObject.sprite = manaOrbFrame;
+                yield return new WaitForSeconds(0.1f);
+            }
         }
     }
 }

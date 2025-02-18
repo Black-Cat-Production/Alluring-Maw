@@ -52,6 +52,11 @@ namespace Scripts.Core.Skills
 
         public virtual void OnTriggerEnter(Collider _collider)
         {
+            if (_collider.gameObject.CompareTag("ProjectileKillBox"))
+            {
+                Destroy(gameObject);
+                return;
+            }
             if (_collider.gameObject.CompareTag("HitBox"))
             {
                 var target = _collider.gameObject.GetComponentInParent<EnemyAIModule>();

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using Scripts.Core.Modules;
 using UnityEngine;
 
@@ -10,13 +11,15 @@ namespace Scripts.Core.Skills
         [SerializeField] float spawnDistance;
         [SerializeField] Camera playerCamera;
         [SerializeField] GameObject castPreviewPrefab;
-        [SerializeField] float skillAddedForce = 50f;
+        [SerializeField] float skillAddedForce = 25f;
         public SkillBridgeUnity SelectedSkill { get; private set; }
 
         public ManaSystemModule ManaSystemModule { get; private set; }
 
         GameObject castPreviewPrefabInstance;
         bool castPreview;
+
+        public Action SkillWasCast;
 
         void Awake()
         {
@@ -54,7 +57,6 @@ namespace Scripts.Core.Skills
                     if (castPreviewPrefabInstance != null) Destroy(castPreviewPrefabInstance);
                     yield return null;
                 }
-
                 var spawnPosition = new Vector3(rayHit.point.x, 0.1f, rayHit.point.z);
                 if (castPreviewPrefabInstance != null) castPreviewPrefabInstance.transform.position = spawnPosition;
                 else
@@ -81,12 +83,16 @@ namespace Scripts.Core.Skills
                 if (castPreviewPrefabInstance == null) return;
                 instance = Instantiate(SelectedSkill, castPreviewPrefabInstance.transform.position, Quaternion.identity);
                 instance.GetComponent<Rigidbody>().AddForce(transform.up * 20f, ForceMode.Impulse);
+                SelectedSkill.StartCooldown();
+                SkillWasCast?.Invoke();
                 return;
             }
 
             var cameraTransform = playerCamera.transform;
             instance = Instantiate(SelectedSkill, cameraTransform.position + cameraTransform.forward * spawnDistance, cameraTransform.rotation);
             instance.GetComponent<Rigidbody>().AddForce(cameraTransform.transform.forward * skillAddedForce, ForceMode.Impulse);
+            SelectedSkill.StartCooldown();
+            SkillWasCast?.Invoke();
         }
 
         public void CastDefaultAttack()

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using LL_Unity_Utils.Scriptables;
 using Scripts.Core.Modules;
 using UnityEngine;
 
@@ -9,6 +10,9 @@ namespace Scripts.Core.Skills
         SkillContext context;
         bool hitEnemy;
         bool hitGround;
+
+        [SerializeField] VFXSpawner darkVFXSpawner;
+        [SerializeField] VFXSpawner lightVFXSpawner;
 
 
         protected void Start()
@@ -29,6 +33,18 @@ namespace Scripts.Core.Skills
                 context.Targets = null;
             }
             Use(context);
+        }
+
+        public void SpawnVFX(Vector3 _position)
+        {
+            if (Tags.Contains(ESkillTag.Dark))
+            {
+                darkVFXSpawner.Spawn(_position);
+            }
+            else
+            {
+                lightVFXSpawner.Spawn(_position);
+            }
         }
     }
 }

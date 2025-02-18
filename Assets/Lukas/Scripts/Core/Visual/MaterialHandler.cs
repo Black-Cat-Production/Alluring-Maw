@@ -54,6 +54,12 @@ namespace Scripts.Core.Visual
             }
         }
 
+        public bool IsFinishedChangingUp()
+        {
+            float currentFloat = protagMaterial.GetFloat(energyValue);
+            return Mathf.Approximately(currentFloat, -1) || Mathf.Approximately(currentFloat, 1);
+        }
+
 
         void ApplyDarkEnergy(float _change)
         {

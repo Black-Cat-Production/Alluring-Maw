@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Scripts.Core.Skills.SkillTree
 {
@@ -9,7 +10,19 @@ namespace Scripts.Core.Skills.SkillTree
         [SerializeField] SkillTreeNodeDetailDisplayManager detailDisplayManager;
 
         public SkillTreeNode CurrentSelectedNode { get; private set; }
-        
+
+        void OnEnable()
+        {
+            SkillTreeNode.OnHover += NodeHovered;
+            SkillTreeNode.OnEndHover += NodeEndHover;
+        }
+
+        void OnDisable()
+        {
+            SkillTreeNode.OnHover -= NodeHovered;
+            SkillTreeNode.OnEndHover -= NodeEndHover;
+        }
+
         public void OpenSkillTreeUI()
         {
             skillTreeUICanvas.gameObject.SetActive(true);
@@ -20,23 +33,39 @@ namespace Scripts.Core.Skills.SkillTree
             skillTreeUICanvas.gameObject.SetActive(false);
         }
 
-        public void UpdateDetailDisplay()
+        public void UpdateDetailDisplay(bool _showUnlockButton, SkillTreeNode _selectedNode)
         {
-            detailDisplayManager.PopulateInformation(CurrentSelectedNode);
+            detailDisplayManager.PopulateInformation(_selectedNode, _showUnlockButton);
         }
 
-        public void OpenNodeDetailPanel(SkillTreeNode _selectedNode)
+        void OpenNodeDetailPanel(SkillTreeNode _selectedNode, bool _showUnlockButton)
         {
-            CurrentSelectedNode = _selectedNode;
             if (nodeDetailPanelGroup.gameObject.activeInHierarchy)
             {
-                UpdateDetailDisplay();
+                UpdateDetailDisplay(_showUnlockButton, _selectedNode);
             }
             else
             {
                 nodeDetailPanelGroup.gameObject.SetActive(true);
-                UpdateDetailDisplay();
+                UpdateDetailDisplay(_showUnlockButton, _selectedNode);
             }
+        }
+
+        public void ButtonOpenNodeDetailPanel(SkillTreeNode _selectedNode)
+        {
+            CurrentSelectedNode = _selectedNode;
+            OpenNodeDetailPanel(_selectedNode, true);
+        }
+
+        void NodeHovered(SkillTreeNode _skillTreeNode)
+        {
+            OpenNodeDetailPanel(_skillTreeNode, false);
+        }
+
+        void NodeEndHover(SkillTreeNode _skillTreeNode)
+        {
+            if(CurrentSelectedNode != null) UpdateDetailDisplay(true, CurrentSelectedNode);
+            else CloseNodeDetailPanel();
         }
 
         public void CloseNodeDetailPanel()

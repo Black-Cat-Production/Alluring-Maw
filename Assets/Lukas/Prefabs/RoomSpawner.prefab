@@ -45,8 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4674795a007e65845b526d270843f0b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyAIModulePrefab: {fileID: 1352161795334600830, guid: c54c22768763f404fa32bb0a04359da6,
-    type: 3}
+  enemyList: {fileID: 11400000, guid: 3d52ba79852fd4f488b26627795160e3, type: 2}
   spawnAmount: 5
   doors:
   - {fileID: 0}

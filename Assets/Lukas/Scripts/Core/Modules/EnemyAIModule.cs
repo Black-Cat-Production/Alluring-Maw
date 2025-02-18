@@ -41,6 +41,9 @@ namespace Scripts.Core.Modules
         [Header("Visuals")]
         [SerializeField] VFXSpawner lightHit;
         [SerializeField] VFXSpawner darkHit;
+
+        [Header("Cleanup")]
+        [SerializeField] float durationTillDespawnAfterDeath;
         
         [Header("Showcase")]
         [SerializeField] bool showcase;
@@ -53,8 +56,12 @@ namespace Scripts.Core.Modules
         NavMeshAgent agent;
         Vector3 patrolRadiusCenter;
         Animator animator;
+
+        Timer despawnTimer;
         public float CurrentAttackDamage { get; private set; }
 
+        public bool AllowedAggro;
+        
         bool inAttack;
 
         float distanceToTarget => Vector3.Distance(new Vector3(transform.position.x, 0, transform.position.z), new Vector3(targetComponent.TargetPosition.x, 0, targetComponent.TargetPosition.z));
@@ -73,10 +80,12 @@ namespace Scripts.Core.Modules
             animator = GetComponent<Animator>();
             HealthSystemModule = GetComponent<HealthSystemModule>();
             attackCollider = GetComponentInChildren<AttackCollider>();
+            attackCollider.gameObject.SetActive(false);
             HealthSystemModule.RegisterEffectHandler(EffectType.DamageOverTime, new DamageOverTimeHandler());
             HealthSystemModule.RegisterEffectHandler(EffectType.Debuff, new RendTheFleshEffectHandler());
             HealthSystemModule.RegisterEffectHandler(EffectType.DamageOverTimeScaling, new DamageOverTimeScalingHandler());
             var idleTimer = new Timer(idleDuration);
+            despawnTimer = new Timer(durationTillDespawnAfterDeath);
 
             if (showcase) return;
             //State Creation
@@ -84,6 +93,7 @@ namespace Scripts.Core.Modules
             State chaseState = new WalkToPointState(agent, targetComponent,animator);
             State patrolState = new PatrolState(agent, idleTargetComponent, RecalculatePatrolPoint,animator);
             State attackState = new AttackState(attackCollider, new Timer(attackCooldown),animator, this);
+            State deathState = new DeathState(animator);
 
             //Setup StateMachine
             stateMachine = new StateMachine(idleState, gameObject, false);
@@ -95,23 +105,32 @@ namespace Scripts.Core.Modules
             var attackToChase = new Transition(chaseState, () => distanceToTarget > attackRange && !inAttack);
             var idleToPatrol = new Transition(patrolState, () => idleState.IsTimerFinished == true);
             var movingToIdle = new Transition(idleState, () => agent.remainingDistance < agent.stoppingDistance);
+            var anyToDeath = new Transition(deathState, (() => HealthSystemModule.IsDead == true));
 
             //Link Transitions
+            idleState.AddTransition(anyToDeath);
             idleState.AddTransition(anyToChase);
             idleState.AddTransition(idleToPatrol);
 
+            chaseState.AddTransition(anyToDeath);
             chaseState.AddTransition(chaseToAttack);
             chaseState.AddTransition(chaseToIdle);
 
+            patrolState.AddTransition(anyToDeath);
             patrolState.AddTransition(anyToChase);
             patrolState.AddTransition(movingToIdle);
 
+            attackState.AddTransition(anyToDeath);
             attackState.AddTransition(attackToChase);
         }
 
         void FixedUpdate()
         {
             if(showcase) return;
+            if (HealthSystemModule.IsDead)
+            {
+                if(despawnTimer.CheckTimer()) Destroy(gameObject);
+            }
             stateMachine.CheckSwapState();
         }
 
@@ -136,7 +155,7 @@ namespace Scripts.Core.Modules
             spawner.EnemyDied(this);
             OnDeathEvent.Invoke(CalculateDrop());
             OnDeathEffectEvent.Invoke(transform.position);
-            Destroy(gameObject);
+            despawnTimer.StartTimer();
         }
 
         int CalculateDrop()
@@ -151,13 +170,13 @@ namespace Scripts.Core.Modules
 
         bool FindTarget()
         {
+            if (!AllowedAggro) return false;
             var overlap = Physics.OverlapSphere(transform.position, searchRadius, detectionMask);
             if (overlap.Length > 0 && !DetectObstruction(overlap[0].transform))
             {
                 targetComponent.SetTarget(overlap[0].transform);
                 return true;
             }
-
             return false;
         }
 

@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 8243483941817800411}
   - component: {fileID: 4243303638199280073}
   - component: {fileID: 809334920257422176}
+  - component: {fileID: 8531676842639174740}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -35,7 +36,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325444607275319881}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.11422818, z: -0, w: 0.9934545}
+  m_LocalRotation: {x: 0, y: 0.11422625, z: 0, w: 0.99345475}
   m_LocalPosition: {x: 89.7, y: 1.031, z: -115.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -225,8 +226,8 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8248066730286701247}
-        m_TargetAssemblyTypeName: InputController, Assembly-CSharp
-        m_MethodName: ReturnToMainMenu
+        m_TargetAssemblyTypeName: Scripts.UserInput.InputController, Assembly-CSharp
+        m_MethodName: Pause
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -279,9 +280,9 @@ MonoBehaviour:
   lookSensitivity: 0.25
   playerCamera: {fileID: 1167966852231981699}
   cameraClampAngle: 60
-  dashDuration: 0.3
-  dashCooldown: 1
-  dashForce: 10
+  dashDuration: 0.5
+  dashCooldown: 2.5
+  dashForce: 15
   dashCurve:
     serializedVersion: 2
     m_Curve:
@@ -308,6 +309,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   animator: {fileID: 809334920257422176}
   cancelCastCooldown: 0.2
+  pauseUI: {fileID: 0}
   optionsSaveSO: {fileID: 11400000, guid: 4d6ee7189b2f25a42bb543a94f6f6f79, type: 2}
   materialHandler: {fileID: 1842505569457808337}
 --- !u!54 &6110016668779060848
@@ -355,6 +357,7 @@ MonoBehaviour:
   - {fileID: -5003438811203500287, guid: 660e9cf34ab64fd498fff38408c37009, type: 3}
   - {fileID: 2557123038686212691, guid: c729662d47354824d8d20b3d86489a8e, type: 3}
   skillSelectionUI: {fileID: 0}
+  statUI: {fileID: 0}
 --- !u!114 &7906361622450315480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367,13 +370,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ae9a864e5a248a4918584e31aefdf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 5000
+  maxHealth: 4
   OnDeathEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Lukas.Scripts.Core.GameManager, Assembly-CSharp
-        m_MethodName: TriggerLoss
+        m_TargetAssemblyTypeName: Scripts.Core.Tracker.PlayerTracker, Assembly-CSharp
+        m_MethodName: NotifyGameManagerOfDeath
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnHitTaken:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8531676842639174740}
+        m_TargetAssemblyTypeName: Scripts.Core.Visual.DamageShaderHandler, Assembly-CSharp
+        m_MethodName: HitTaken
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -402,7 +420,7 @@ MonoBehaviour:
   playerCamera: {fileID: 1167966852231981699}
   castPreviewPrefab: {fileID: 7377841027125007913, guid: 86739c6abe5a0944db56e464e853aea1,
     type: 3}
-  skillAddedForce: 50
+  skillAddedForce: 40
 --- !u!114 &4243303638199280073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -416,7 +434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maximumMana: 100
-  manaRegenerationPerTick: 0.5
+  manaRegenerationPerTick: 1
   manaRegenerationTickTimeInSeconds: 1
 --- !u!95 &809334920257422176
 Animator:
@@ -439,6 +457,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8531676842639174740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325444607275319881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e872341ec00a4d54a2e45293ca1c0d24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageShaderMaterial: {fileID: 2100000, guid: f58b48344fea05842a99a77fbe7fcb33,
+    type: 2}
+  flashDuration: 0.5
 --- !u!1 &5328332662486600013
 GameObject:
   m_ObjectHideFlags: 0
@@ -1658,7 +1691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   protagMaterial: {fileID: 2100000, guid: 9fc86fc34e4160840b78667a868005dd, type: 2}
-  changePerFrame: 0.01
+  changePerFrame: 0.03
 --- !u!4 &8456651666164380710 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c4bd777f67dd69e4a9a49e401a5e7e8f,
