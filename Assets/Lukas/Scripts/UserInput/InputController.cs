@@ -39,6 +39,7 @@ namespace Scripts.UserInput
         [SerializeField] float cancelCastCooldown;
         [SerializeField] PauseUI pauseUI;
         [SerializeField] OptionsSaveSO optionsSaveSO;
+        [SerializeField] float idleWalkBlendTime;
 
 
         [SerializeField] MaterialHandler materialHandler;
@@ -112,7 +113,7 @@ namespace Scripts.UserInput
             finalDirection += currentDashVelocity;
             playerRigidbody.velocity = new Vector3(finalDirection.x, playerRigidbody.velocity.y, finalDirection.z);
             float isMovingFloat = moveInput.magnitude > 0 ? 1 : 0;
-            animator.SetFloat("MoveInput", isMovingFloat);
+            animator.SetFloat("MoveInput", isMovingFloat, idleWalkBlendTime, Time.fixedDeltaTime);
         }
 
         public void Look(InputAction.CallbackContext _callbackContext)
