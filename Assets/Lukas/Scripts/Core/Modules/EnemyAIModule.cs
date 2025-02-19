@@ -60,7 +60,7 @@ namespace Scripts.Core.Modules
         Timer despawnTimer;
         public float CurrentAttackDamage { get; private set; }
 
-        public bool AllowedAggro;
+        [NonSerialized]public bool AllowedAggro;
         
         bool inAttack;
 

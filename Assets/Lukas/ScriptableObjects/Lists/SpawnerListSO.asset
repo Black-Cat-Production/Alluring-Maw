@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: SpawnerListSO
   m_EditorClassIdentifier: 
   enemyPrefabs:
+  - {fileID: 6106210285313226886, guid: 3f31a8bd4d8479843b04488e2e4c6100, type: 3}
   - {fileID: 1658898378407204153, guid: c54c22768763f404fa32bb0a04359da6, type: 3}

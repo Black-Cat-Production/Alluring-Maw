@@ -102,7 +102,6 @@ MonoBehaviour:
   darkHit: {fileID: 11400000, guid: 2f15d5ad78a579c419883bad73cadad9, type: 2}
   durationTillDespawnAfterDeath: 5
   showcase: 0
-  AllowedAggro: 0
   OnDeathEvent:
     m_PersistentCalls:
       m_Calls:
@@ -359,12 +358,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: dfebd2c175af1a4429d758660195ac33, type: 2}
+      objectReference: {fileID: 2100000, guid: efa338c47fc5c954ab6e9943a1ca5208, type: 2}
     - target: {fileID: -9039056344870024049, guid: be4843b98f1b9a744b84e061c4c6322b,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 9eeac03e049a0fa4c8ab60b5b5f86256, type: 2}
+      objectReference: {fileID: 2100000, guid: ea8e99fe3544a0443956cb6bb85a6dc7, type: 2}
     - target: {fileID: -9019444140378748578, guid: be4843b98f1b9a744b84e061c4c6322b,
         type: 3}
       propertyPath: m_Layer

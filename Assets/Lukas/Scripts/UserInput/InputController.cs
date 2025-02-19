@@ -48,6 +48,16 @@ namespace Scripts.UserInput
         bool isCastingSkill;
 
         Coroutine routine;
+        static readonly int canRelease = Animator.StringToHash("CanRelease");
+        //static readonly int isHoldingSkill = Animator.StringToHash("isHoldingSkill");
+        static readonly int cancelCasting = Animator.StringToHash("CancelCasting");
+        static readonly int dash = Animator.StringToHash("Dash");
+        static readonly int xDirection = Animator.StringToHash("XDirection");
+        static readonly int yDirection = Animator.StringToHash("YDirection");
+        static readonly int baseAttack = Animator.StringToHash("BaseAttack");
+        static readonly int isCastingBlocked = Animator.StringToHash("IsCastingBlocked");
+        static readonly int isHoldingSkillLight = Animator.StringToHash("isHoldingSkillLIGHT");
+        static readonly int isHoldingSkillDark = Animator.StringToHash("isHoldingSkillDARK");
 
         void Awake()
         {
@@ -101,6 +111,8 @@ namespace Scripts.UserInput
             var finalDirection = transform.TransformDirection(moveInput.x * moveSpeed, 0, moveInput.y * moveSpeed);
             finalDirection += currentDashVelocity;
             playerRigidbody.velocity = new Vector3(finalDirection.x, playerRigidbody.velocity.y, finalDirection.z);
+            float isMovingFloat = moveInput.magnitude > 0 ? 1 : 0;
+            animator.SetFloat("MoveInput", isMovingFloat);
         }
 
         public void Look(InputAction.CallbackContext _callbackContext)
@@ -128,18 +140,20 @@ namespace Scripts.UserInput
             if (!_callbackContext.started || !(dashCooldownTimer <= 0)) return;
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("SkillHoldState"))
             {
-                animator.SetBool("CanRelease", false);
-                animator.SetBool("isHoldingSkill", false);
-                animator.SetTrigger("CancelCasting");
+                animator.SetBool(canRelease, false);
+                animator.SetBool(isHoldingSkillLight, false);
+                animator.SetBool(isHoldingSkillDark, false);
+                animator.SetTrigger(cancelCasting);
                 if (castingBlockRunning) return;
                 StartCoroutine(BlockCasting());
                 ResetIsCasting();
+                StartCoroutine(ReturnToDefaultMaterial());
             }
 
-            animator.SetTrigger("Dash");
+            animator.SetTrigger(dash);
             dashDirection = transform.TransformDirection(moveInput.x, 0, moveInput.y).normalized;
-            animator.SetFloat("XDirection", moveInput.normalized.x);
-            animator.SetFloat("YDirection", moveInput.normalized.y);
+            animator.SetFloat(xDirection, moveInput.normalized.x);
+            animator.SetFloat(yDirection, moveInput.normalized.y);
             if (dashDirection == Vector3.zero) dashDirection = transform.forward;
             dashTime = dashDuration;
             dashCooldownTimer = dashCooldown;
@@ -160,26 +174,29 @@ namespace Scripts.UserInput
             if (GameManager.Instance.IsPaused) return;
             if (!animator.GetCurrentAnimatorStateInfo(0).IsName("IdleState")) return;
             if (!_callbackContext.started) return;
-            animator.SetTrigger("BaseAttack");
+            animator.SetTrigger(baseAttack);
         }
 
         public void CastSkill(InputAction.CallbackContext _callbackContext)
         {
             if (GameManager.Instance.IsPaused) return;
-            if ((!animator.GetCurrentAnimatorStateInfo(0).IsName("IdleState") && !animator.GetCurrentAnimatorStateInfo(0).IsName("SkillHoldState")) || animator.GetBool("IsCastingBlocked")) return;
+            if ((!animator.GetCurrentAnimatorStateInfo(0).IsName("IdleState") && !animator.GetCurrentAnimatorStateInfo(0).IsName("SkillHoldStateLIGHT") &&
+                 !animator.GetCurrentAnimatorStateInfo(0).IsName("SkillHoldStateDARK")) || animator.GetBool(isCastingBlocked)) return;
             if (!skillSelector.CanCastSpell()) return;
             if (_callbackContext.phase == InputActionPhase.Started)
             {
                 isCastingSkill = true;
-                animator.SetBool("isHoldingSkill", true);
+                animator.SetBool(skillSelector.GetSelectedSkillTags().Contains(ESkillTag.Light) ? isHoldingSkillLight : isHoldingSkillDark, true);
+                //animator.SetBool(isHoldingSkill, true);
                 if(routine != null) StopCoroutine(routine);
                 PushMaterialChange(false);
             }
 
             if (_callbackContext.phase != InputActionPhase.Canceled) return;
-            animator.SetTrigger("ReleaseSkill");
-            animator.ResetTrigger("CancelCasting");
-            animator.SetBool("isHoldingSkill", false);
+            animator.ResetTrigger(cancelCasting);
+            //animator.SetBool(isHoldingSkill, false);
+            animator.SetBool(isHoldingSkillLight, false);
+            animator.SetBool(isHoldingSkillDark, false);
             //PushMaterialChange(true);
             routine = StartCoroutine(ReturnToDefaultMaterial());
         }
@@ -196,7 +213,7 @@ namespace Scripts.UserInput
         public void ChangeReleaseBool(int _value)
         {
             bool value = _value != 0;
-            animator.SetBool("CanRelease", value);
+            animator.SetBool(canRelease, value);
         }
 
         public void Pause(InputAction.CallbackContext _callbackContext)
@@ -214,9 +231,9 @@ namespace Scripts.UserInput
         IEnumerator BlockCasting()
         {
             castingBlockRunning = true;
-            animator.SetBool("IsCastingBlocked", true);
+            animator.SetBool(isCastingBlocked, true);
             yield return new WaitForSeconds(cancelCastCooldown);
-            animator.SetBool("IsCastingBlocked", false);
+            animator.SetBool(isCastingBlocked, false);
             castingBlockRunning = false;
         }
 

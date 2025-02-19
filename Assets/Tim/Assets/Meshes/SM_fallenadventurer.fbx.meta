@@ -78,11 +78,977 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 1
+  importAnimation: 0
   humanDescription:
     serializedVersion: 3
-    human: []
-    skeleton: []
+    human:
+    - boneName: Fallen_adventurer:cog
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:thigh_l
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:thigh_r
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:knee_l
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:knee_r
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:foot_l
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:foot_r
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:spine_01
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:spine_02
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:neck_01
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:clavicle_l
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:clavicle_r
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:upperarm_l
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:upperarm_r
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:lowerarm_l
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:lowerarm_r
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:hand_l
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:hand_r
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:toes_01_l
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:toes_01_r
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:jaw
+      humanName: Jaw
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:thumb_01_l
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:thumb_02_l
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:thumb_03_l
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:index_01_l
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:index_02_l
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:index_03_l
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:middle_01_l
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:middle_02_l
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:middle_03_l
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:ring_01_l
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:ring_02_l
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:ring_03_l
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:pinky_01_l
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:pinky_02_l
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:pinky_03_l
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:thumb_01_r
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:thumb_02_r
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:thumb_03_r
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:index_01_r
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:index_02_r
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:index_03_r
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:middle_01_r
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:middle_02_r
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:middle_03_r
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:ring_01_r
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:ring_02_r
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:ring_03_r
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:pinky_01_r
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:pinky_02_r
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:pinky_03_r
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fallen_adventurer:spine_03
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: AS_Fallenadventurer_idle(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:DO_NOT_TOUCH
+      parentName: AS_Fallenadventurer_idle(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:geometry
+      parentName: Fallen_adventurer:DO_NOT_TOUCH
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:boot_armored
+      parentName: Fallen_adventurer:geometry
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:boot_leather
+      parentName: Fallen_adventurer:geometry
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:legs_corrupted
+      parentName: Fallen_adventurer:geometry
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:legs_normal
+      parentName: Fallen_adventurer:geometry
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:shoulderplates
+      parentName: Fallen_adventurer:geometry
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:torso_normal
+      parentName: Fallen_adventurer:geometry
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:torso_corrupted
+      parentName: Fallen_adventurer:geometry
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:arm_glove_corrupted
+      parentName: Fallen_adventurer:geometry
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:arm_glove_normal
+      parentName: Fallen_adventurer:geometry
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:arm_bare_wraps
+      parentName: Fallen_adventurer:geometry
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:arm_bare
+      parentName: Fallen_adventurer:geometry
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:head_corrupted
+      parentName: Fallen_adventurer:geometry
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:head_normal
+      parentName: Fallen_adventurer:geometry
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:claymore
+      parentName: Fallen_adventurer:geometry
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:axe
+      parentName: Fallen_adventurer:geometry
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:sword
+      parentName: Fallen_adventurer:geometry
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:skeleton
+      parentName: Fallen_adventurer:DO_NOT_TOUCH
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:root
+      parentName: Fallen_adventurer:skeleton
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:cog
+      parentName: Fallen_adventurer:root
+      position: {x: 0.0013239086, y: 0.92183805, z: 0.01281476}
+      rotation: {x: -0.04759313, y: -0.061912924, z: 0.004086065, w: 0.9969378}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:thigh_l
+      parentName: Fallen_adventurer:cog
+      position: {x: -0.08007606, y: 0.006403738, z: 0.010718707}
+      rotation: {x: 0.29692668, y: 0.1076722, z: 0.94879246, w: 0.0058443253}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:knee_l
+      parentName: Fallen_adventurer:thigh_l
+      position: {x: 0.0000047462777, y: 0.4273049, z: 0.000008584782}
+      rotation: {x: -0.2752095, y: 0.22884743, z: 0.008144728, w: 0.9337142}
+      scale: {x: 1.0000015, y: 1.0000023, z: 1.0000001}
+    - name: Fallen_adventurer:foot_twist_01_l
+      parentName: Fallen_adventurer:knee_l
+      position: {x: -3.8933678e-17, y: 0.4269028, z: -8.8817837e-17}
+      rotation: {x: -0.012853943, y: -0.062555104, z: 0.99747545, w: -0.031054126}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:thigh_follow_ikHandle
+      parentName: Fallen_adventurer:knee_l
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:foot_l
+      parentName: Fallen_adventurer:knee_l
+      position: {x: -1.4210854e-16, y: 0.4269028, z: 7.105427e-17}
+      rotation: {x: 0.03262933, y: 0.11935756, z: -0.99159485, w: 0.03780041}
+      scale: {x: 1.0000019, y: 1.0000012, z: 1.0000001}
+    - name: Fallen_adventurer:foot_aim_l
+      parentName: Fallen_adventurer:foot_l
+      position: {x: -0.14999999, y: 4.973799e-16, z: -1.7763568e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:toes_01_l
+      parentName: Fallen_adventurer:foot_l
+      position: {x: -0.008376142, y: -0.061705947, z: 0.024733573}
+      rotation: {x: 0.4241425, y: 0.4241425, z: 0.56577665, w: 0.5657766}
+      scale: {x: 1.0000014, y: 1.0000024, z: 1.0000014}
+    - name: Fallen_adventurer:toes_02_l
+      parentName: Fallen_adventurer:toes_01_l
+      position: {x: -1.7763568e-17, y: 0.07915314, z: 3.5527136e-17}
+      rotation: {x: -0, y: -0, z: -0.000000029802319, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 0.9999998}
+    - name: Fallen_adventurer:knee_twist_01_l
+      parentName: Fallen_adventurer:knee_l
+      position: {x: -1.7763568e-17, y: 0.2134514, z: -6.217249e-17}
+      rotation: {x: -0, y: -0, z: 0.000000014901159, w: 1}
+      scale: {x: 1.0000045, y: 1.0000039, z: 1.0000001}
+    - name: Fallen_adventurer:thigh_twist_01_l
+      parentName: Fallen_adventurer:thigh_l
+      position: {x: 3.5527136e-17, y: 0, z: 0}
+      rotation: {x: -0.21967639, y: 0.22616233, z: -0.018118137, w: 0.94882274}
+      scale: {x: 1.0000019, y: 1.0000026, z: 1}
+    - name: Fallen_adventurer:thigh_twist_02_l
+      parentName: Fallen_adventurer:thigh_twist_01_l
+      position: {x: -7.105427e-17, y: 0.21365245, z: -1.110223e-18}
+      rotation: {x: -0.000000011663131, y: -3.6379784e-12, z: 8.3114304e-10, w: 1}
+      scale: {x: 1.0000004, y: 1, z: 0.9999998}
+    - name: Fallen_adventurer:thigh_r
+      parentName: Fallen_adventurer:cog
+      position: {x: 0.07765244, y: -0.02159271, z: -0.008481092}
+      rotation: {x: -0.12537631, y: 0.9868633, z: -0.0042754775, w: 0.10180069}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:knee_r
+      parentName: Fallen_adventurer:thigh_r
+      position: {x: 0.00000020845087, y: -0.4273047, z: -0.000000005353674}
+      rotation: {x: -0.12488013, y: 0.14794488, z: 0.11335535, w: 0.974509}
+      scale: {x: 1.000003, y: 1.0000001, z: 1.0000043}
+    - name: Fallen_adventurer:foot_twist_01_r
+      parentName: Fallen_adventurer:knee_r
+      position: {x: -0.000000268804, y: -0.42690322, z: -0.00000009281671}
+      rotation: {x: -0.15265332, y: -0.057580166, z: 0.9858091, w: -0.039522275}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:thigh_follow_r_ikHandle
+      parentName: Fallen_adventurer:knee_r
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:knee_twist_01_r
+      parentName: Fallen_adventurer:knee_r
+      position: {x: -0.0000005969813, y: -0.21345223, z: -0.00000010560239}
+      rotation: {x: -0.000000014901159, y: -0, z: 0.000000009313225, w: 1}
+      scale: {x: 1.0000049, y: 1, z: 1.0000035}
+    - name: Fallen_adventurer:foot_r
+      parentName: Fallen_adventurer:knee_r
+      position: {x: -0.000000268804, y: -0.42690322, z: -0.00000009281671}
+      rotation: {x: -0.0019144993, y: -0.062891856, z: 0.99755645, w: -0.030366233}
+      scale: {x: 1.000001, y: 1.0000004, z: 1}
+    - name: Fallen_adventurer:foot_aim_r
+      parentName: Fallen_adventurer:foot_r
+      position: {x: 0.14999999, y: -7.105427e-17, z: -1.7763568e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:toes_01_r
+      parentName: Fallen_adventurer:foot_r
+      position: {x: 0.0083759995, y: 0.061706, z: -0.0247335}
+      rotation: {x: 0.42414245, y: 0.42414245, z: 0.5657766, w: 0.56577665}
+      scale: {x: 1.0000013, y: 1.000001, z: 1.0000017}
+    - name: Fallen_adventurer:toes_02_r
+      parentName: Fallen_adventurer:toes_01_r
+      position: {x: 5.4234156e-10, y: -0.079153284, z: 0.00000043134793}
+      rotation: {x: 0.00000011920929, y: 0.000000029802322, z: 0.00000008940697, w: 1}
+      scale: {x: 1.0000005, y: 1.0000014, z: 1.0000011}
+    - name: Fallen_adventurer:thigh_twist_01_r
+      parentName: Fallen_adventurer:thigh_r
+      position: {x: -0, y: -1.4210854e-16, z: -1.110223e-18}
+      rotation: {x: -0.06617901, y: 0.15388341, z: 0.09150223, w: 0.98161477}
+      scale: {x: 1.0000033, y: 1, z: 1.0000023}
+    - name: Fallen_adventurer:thigh_twist_02_r
+      parentName: Fallen_adventurer:thigh_twist_01_r
+      position: {x: 0.00000004767671, y: -0.21365283, z: 0.000000001391298}
+      rotation: {x: -0.0000000074505797, y: -0, z: -0.0000000046566124, w: 1}
+      scale: {x: 1.0000019, y: 1.0000001, z: 1.0000027}
+    - name: Fallen_adventurer:pelvis
+      parentName: Fallen_adventurer:cog
+      position: {x: 2.4780178e-15, y: 1.4495072e-14, z: -1.2434498e-16}
+      rotation: {x: 0.08686374, y: 0.061703674, z: -0.0065240134, w: 0.99428606}
+      scale: {x: 0.99999934, y: 1, z: 1}
+    - name: Fallen_adventurer:spine_01
+      parentName: Fallen_adventurer:pelvis
+      position: {x: -0, y: 0.100209996, z: -2.8865798e-17}
+      rotation: {x: -0.003762729, y: -0.0000000074505797, z: 0.0000000013969838, w: 0.9999929}
+      scale: {x: 0.9994106, y: 1.0005901, z: 0.9994108}
+    - name: Fallen_adventurer:spine_02
+      parentName: Fallen_adventurer:spine_01
+      position: {x: 3.8306563e-11, y: 0.1834147, z: 1.10189636e-16}
+      rotation: {x: -0.069018476, y: -0.0000000029120335, z: -7.2096334e-10, w: 0.99761546}
+      scale: {x: 0.9994106, y: 1.0006093, z: 0.99938864}
+    - name: Fallen_adventurer:spine_03
+      parentName: Fallen_adventurer:spine_02
+      position: {x: -0.0000012764285, y: 0.12739323, z: 0.00002051875}
+      rotation: {x: -0.074527554, y: 0.0000000063690337, z: 0.000000004810942, w: 0.99721897}
+      scale: {x: 0.99942154, y: 1.0005227, z: 0.9994682}
+    - name: Fallen_adventurer:clavicle_aim
+      parentName: Fallen_adventurer:spine_03
+      position: {x: -0, y: 0.1390857, z: -0.30602717}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:clavicle_l
+      parentName: Fallen_adventurer:spine_03
+      position: {x: -0.0513302, y: 0.067122005, z: 0.055427834}
+      rotation: {x: -0.061682116, y: -0.13553979, z: 0.6486333, w: 0.7463907}
+      scale: {x: 0.9992888, y: 1.0007443, z: 0.9999735}
+    - name: Fallen_adventurer:upperarm_l
+      parentName: Fallen_adventurer:clavicle_l
+      position: {x: -7.105427e-16, y: 0.14469355, z: 2.1316282e-16}
+      rotation: {x: 0.15008451, y: -0.19342218, z: 0.04645726, w: 0.96845454}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:upperarm_twist_01_l
+      parentName: Fallen_adventurer:upperarm_l
+      position: {x: -0, y: -4.2632563e-16, z: -6.217249e-17}
+      rotation: {x: -0.095931634, y: 0.007008059, z: -0.3550732, w: 0.92987686}
+      scale: {x: 0.9924299, y: 1.006459, z: 1.0011668}
+    - name: Fallen_adventurer:upperarm_twist_02_l
+      parentName: Fallen_adventurer:upperarm_twist_01_l
+      position: {x: 1.4210854e-16, y: 0.14411835, z: -1.7763568e-17}
+      rotation: {x: -0.000000014901158, y: -0.000000005587934, z: 0.00000019418071,
+        w: 1}
+      scale: {x: 0.99998724, y: 0.99999076, z: 1.0000223}
+    - name: Fallen_adventurer:lowerarm_l
+      parentName: Fallen_adventurer:upperarm_l
+      position: {x: -7.105427e-17, y: 0.2882367, z: -1.5987211e-16}
+      rotation: {x: 0.0015427318, y: -0.034473322, z: -0.029229734, w: 0.99897695}
+      scale: {x: 0.99484575, y: 1.0031823, z: 1.001993}
+    - name: Fallen_adventurer:hand_twist_01_l
+      parentName: Fallen_adventurer:lowerarm_l
+      position: {x: -4.2632563e-16, y: 0.26036644, z: -1.7763568e-17}
+      rotation: {x: 4.0203424e-16, y: -0.24553117, z: 1.6751426e-17, w: 0.9693887}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:upperarm_follow_l_ikHandle
+      parentName: Fallen_adventurer:lowerarm_l
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:hand_l
+      parentName: Fallen_adventurer:lowerarm_l
+      position: {x: 2.5992583e-10, y: 0.26036644, z: -4.3871665e-10}
+      rotation: {x: -0.000000013038513, y: 0.000000029802315, z: -0.000000052503296,
+        w: 1}
+      scale: {x: 1.0009004, y: 0.99956906, z: 0.9995349}
+    - name: Fallen_adventurer:hand_aim_l
+      parentName: Fallen_adventurer:hand_l
+      position: {x: -0, y: 7.105427e-17, z: -0.14999999}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:middle_01_l
+      parentName: Fallen_adventurer:hand_l
+      position: {x: -0.009915683, y: 0.12242355, z: 0.013096865}
+      rotation: {x: 0.008079123, y: 0.049350873, z: 0.10927366, w: 0.99275297}
+      scale: {x: 1.007017, y: 0.99256647, z: 1.0005003}
+    - name: Fallen_adventurer:middle_02_l
+      parentName: Fallen_adventurer:middle_01_l
+      position: {x: 0.000000040479538, y: 0.055724997, z: -0.000000017205133}
+      rotation: {x: -0.0023045244, y: 0.044562314, z: 0.025510887, w: 0.9986782}
+      scale: {x: 0.99725163, y: 1.0024488, z: 1.0003234}
+    - name: Fallen_adventurer:middle_03_l
+      parentName: Fallen_adventurer:middle_02_l
+      position: {x: 0.0000004979016, y: 0.045377944, z: 3.1468693e-12}
+      rotation: {x: -0.000000010681105, y: -0.000000036787238, z: -0.000000013562383,
+        w: 1}
+      scale: {x: 1.000572, y: 0.99942833, z: 1}
+    - name: Fallen_adventurer:thumb_01_l
+      parentName: Fallen_adventurer:hand_l
+      position: {x: -0.028235074, y: 0.04634556, z: 0.040085398}
+      rotation: {x: 0.3157987, y: -0.4293861, z: -0.22892852, w: 0.81454927}
+      scale: {x: 0.9948515, y: 0.99590266, z: 1.009332}
+    - name: Fallen_adventurer:thumb_02_l
+      parentName: Fallen_adventurer:thumb_01_l
+      position: {x: 0.00000049622156, y: 0.038982145, z: 0.000000022275517}
+      rotation: {x: -0.004052192, y: -0.011452019, z: 0.03636439, w: 0.9992648}
+      scale: {x: 1.001304, y: 1.0036128, z: 0.995093}
+    - name: Fallen_adventurer:thumb_03_l
+      parentName: Fallen_adventurer:thumb_02_l
+      position: {x: 0.0000008551416, y: 0.04692972, z: -1.7471535e-12}
+      rotation: {x: 0.000000014901161, y: 0.0000000018626451, z: -0.000000013489625,
+        w: 1}
+      scale: {x: 1.0010837, y: 0.99864125, z: 1.0002804}
+    - name: Fallen_adventurer:index_01_l
+      parentName: Fallen_adventurer:hand_l
+      position: {x: -0.009858993, y: 0.11887125, z: 0.039644327}
+      rotation: {x: 0.0070623457, y: 0.035560105, z: 0.11174737, w: 0.99307513}
+      scale: {x: 1.0050756, y: 0.9949691, z: 1.0000068}
+    - name: Fallen_adventurer:index_02_l
+      parentName: Fallen_adventurer:index_01_l
+      position: {x: 0.0000000144030246, y: 0.04752653, z: -0.00000004382649}
+      rotation: {x: -0.0074926214, y: 0.044529982, z: 0.03040027, w: 0.9985173}
+      scale: {x: 1.0025975, y: 0.9969499, z: 1.000463}
+    - name: Fallen_adventurer:index_03_l
+      parentName: Fallen_adventurer:index_02_l
+      position: {x: 0.00000029681797, y: 0.04137351, z: 3.755698e-12}
+      rotation: {x: 0.0000000142026675, y: 0.00000001536682, z: 0.00000001315493,
+        w: 1}
+      scale: {x: 1.0007495, y: 0.999253, z: 1}
+    - name: Fallen_adventurer:pinky_01_l
+      parentName: Fallen_adventurer:hand_l
+      position: {x: -0.023371195, y: 0.10391927, z: -0.03238036}
+      rotation: {x: 0.0119673, y: 0.060439177, z: 0.10374243, w: 0.992694}
+      scale: {x: 1.0093173, y: 0.9897793, z: 1.0010288}
+    - name: Fallen_adventurer:pinky_02_l
+      parentName: Fallen_adventurer:pinky_01_l
+      position: {x: 0.000000118793594, y: 0.044830035, z: -6.626766e-10}
+      rotation: {x: -0.00086906354, y: -0.005821671, z: 0.025299042, w: 0.9996626}
+      scale: {x: 0.9963185, y: 1.0037661, z: 0.9999549}
+    - name: Fallen_adventurer:pinky_03_l
+      parentName: Fallen_adventurer:pinky_02_l
+      position: {x: 0.00000061743657, y: 0.030326648, z: 3.3493562e-12}
+      rotation: {x: -0.00000002002343, y: 0.000000010244546, z: -0.000000035413898,
+        w: 1}
+      scale: {x: 0.9970732, y: 1.0029662, z: 0.99998564}
+    - name: Fallen_adventurer:ring_01_l
+      parentName: Fallen_adventurer:hand_l
+      position: {x: -0.017781444, y: 0.10554138, z: -0.01365115}
+      rotation: {x: 0.0030539224, y: 0.047058683, z: 0.10404506, w: 0.993454}
+      scale: {x: 1.007222, y: 0.99212307, z: 1.000744}
+    - name: Fallen_adventurer:ring_02_l
+      parentName: Fallen_adventurer:ring_01_l
+      position: {x: 0.000000049474945, y: 0.05806352, z: -0.000000007674257}
+      rotation: {x: -0.00032055858, y: 0.036783572, z: 0.024457239, w: 0.99902385}
+      scale: {x: 1.0057024, y: 0.99413794, z: 1.0001746}
+    - name: Fallen_adventurer:ring_03_l
+      parentName: Fallen_adventurer:ring_02_l
+      position: {x: 0.0000003636597, y: 0.04286676, z: -0.0000001709495}
+      rotation: {x: -0.000000008556525, y: 0.000000048428767, z: -0.00000013476755,
+        w: 1}
+      scale: {x: 0.9976072, y: 1.0022664, z: 1.00014}
+    - name: Fallen_adventurer:lowerarm_twist_01_l
+      parentName: Fallen_adventurer:lowerarm_l
+      position: {x: -2.842171e-16, y: 0.13018322, z: 3.5527136e-17}
+      rotation: {x: 0.0000000055879337, y: -0.000000029802312, z: -0.00000008044296,
+        w: 1}
+      scale: {x: 1.0000201, y: 1.0000018, z: 0.9999827}
+    - name: Fallen_adventurer:clavicle_r
+      parentName: Fallen_adventurer:spine_03
+      position: {x: 0.03270588, y: 0.058974873, z: 0.052928288}
+      rotation: {x: 0.7543885, y: -0.6402903, z: -0.13445665, w: 0.053363472}
+      scale: {x: 0.9988693, y: 1.0012885, z: 0.999848}
+    - name: Fallen_adventurer:upperarm_r
+      parentName: Fallen_adventurer:clavicle_r
+      position: {x: -0, y: -0.13670951, z: -2.3092638e-16}
+      rotation: {x: 0.15611464, y: -0.17847098, z: 0.049725585, w: 0.97020805}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:upperarm_twist_01_r
+      parentName: Fallen_adventurer:upperarm_r
+      position: {x: 1.4210854e-16, y: -2.842171e-16, z: 2.6645352e-17}
+      rotation: {x: 0.017200975, y: -0.030595299, z: 0.12202695, w: -0.991906}
+      scale: {x: 0.9923707, y: 1.0067159, z: 1.0009784}
+    - name: Fallen_adventurer:upperarm_twist_02_r
+      parentName: Fallen_adventurer:upperarm_twist_01_r
+      position: {x: -0.0000058862793, y: -0.14411326, z: 0.000000086779735}
+      rotation: {x: -0, y: 0.000000016763805, z: -0.00000006955815, w: 1}
+      scale: {x: 0.99998975, y: 0.9999912, z: 1.0000243}
+    - name: Fallen_adventurer:lowerarm_r
+      parentName: Fallen_adventurer:upperarm_r
+      position: {x: -0.0000040187174, y: -0.2882328, z: 0.000000037326597}
+      rotation: {x: -0.02376397, y: -0.02074796, z: 0.03234438, w: -0.9989788}
+      scale: {x: 0.9937748, y: 1.0044247, z: 1.0018448}
+    - name: Fallen_adventurer:hand_twist_01_r
+      parentName: Fallen_adventurer:lowerarm_r
+      position: {x: 0.0000018186943, y: -0.26036766, z: 0.00000036636575}
+      rotation: {x: 0.0000016970905, y: -0.24295865, z: 0.00000034186934, w: 0.9700366}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:upperarm_follow_r_ikHandle
+      parentName: Fallen_adventurer:lowerarm_r
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:hand_r
+      parentName: Fallen_adventurer:lowerarm_r
+      position: {x: 0.0000018186943, y: -0.26036766, z: 0.00000036636575}
+      rotation: {x: 0.00000002235174, y: -0.0000000074505797, z: 0.00000003795139,
+        w: 1}
+      scale: {x: 1.000032, y: 0.99995697, z: 1.0000105}
+    - name: Fallen_adventurer:hand_aim_r
+      parentName: Fallen_adventurer:hand_r
+      position: {x: 1.1051071e-11, y: -1.4210854e-16, z: 0.14999999}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:index_01_r
+      parentName: Fallen_adventurer:hand_r
+      position: {x: 0.012431079, y: -0.12019768, z: -0.039795086}
+      rotation: {x: 0.002464122, y: 0.034959923, z: 0.119810365, w: 0.992178}
+      scale: {x: 1.001172, y: 0.99883425, z: 1.0000014}
+    - name: Fallen_adventurer:index_02_r
+      parentName: Fallen_adventurer:index_01_r
+      position: {x: -0.0000024063743, y: -0.047522362, z: -0.000000805625}
+      rotation: {x: -0.0077609587, y: 0.0443978, z: 0.032398872, w: 0.99845827}
+      scale: {x: 1.0028089, y: 0.9974487, z: 0.9997546}
+    - name: Fallen_adventurer:index_03_r
+      parentName: Fallen_adventurer:index_02_r
+      position: {x: -0.00000067263755, y: -0.041373346, z: -0.00000006735222}
+      rotation: {x: 0.000000009575159, y: -0.000000032596287, z: 0.00000002235174,
+        w: 1}
+      scale: {x: 0.998937, y: 1.0004833, z: 1.0005846}
+    - name: Fallen_adventurer:thumb_01_r
+      parentName: Fallen_adventurer:hand_r
+      position: {x: 0.028237948, y: -0.046347994, z: -0.040086787}
+      rotation: {x: 0.34532106, y: -0.44162494, z: -0.19096515, w: 0.8057624}
+      scale: {x: 0.99752975, y: 0.9971099, z: 1.0053967}
+    - name: Fallen_adventurer:thumb_02_r
+      parentName: Fallen_adventurer:thumb_01_r
+      position: {x: -0.0000037335817, y: -0.038979392, z: 0.00000081922354}
+      rotation: {x: -0.004005909, y: -0.011571438, z: 0.03616804, w: 0.99927074}
+      scale: {x: 0.9993033, y: 1.0004339, z: 1.0002608}
+    - name: Fallen_adventurer:thumb_03_r
+      parentName: Fallen_adventurer:thumb_02_r
+      position: {x: 0.0000014079368, y: -0.046931673, z: -0.00000014562958}
+      rotation: {x: -0.0000000037252899, y: 0.000000059604638, z: 0.000000032639942,
+        w: 1}
+      scale: {x: 1.0025755, y: 0.99749446, z: 0.9999432}
+    - name: Fallen_adventurer:middle_01_r
+      parentName: Fallen_adventurer:hand_r
+      position: {x: 0.012469728, y: -0.12406326, z: -0.013086643}
+      rotation: {x: 0.0047387327, y: 0.04900063, z: 0.11853582, w: 0.99172866}
+      scale: {x: 1.0055197, y: 0.9942005, z: 1.0003351}
+    - name: Fallen_adventurer:middle_02_r
+      parentName: Fallen_adventurer:middle_01_r
+      position: {x: -0.0000009068336, y: -0.05572317, z: -0.00000026802027}
+      rotation: {x: -0.0023768742, y: 0.04448345, z: 0.026734646, w: 0.99864954}
+      scale: {x: 1.0011177, y: 0.9980263, z: 1.0008731}
+    - name: Fallen_adventurer:middle_03_r
+      parentName: Fallen_adventurer:middle_02_r
+      position: {x: 0.00000045915755, y: -0.04537736, z: 0.00000001649724}
+      rotation: {x: -0.00000002793967, y: -0.000000089406946, z: 0.000000002619344,
+        w: 1}
+      scale: {x: 0.9974131, y: 1.0024718, z: 1.000137}
+    - name: Fallen_adventurer:ring_01_r
+      parentName: Fallen_adventurer:hand_r
+      position: {x: 0.01760058, y: -0.10639407, z: 0.013795866}
+      rotation: {x: -0.0002591302, y: 0.046907295, z: 0.11310659, w: 0.992475}
+      scale: {x: 1.0074788, y: 0.9916708, z: 1.0009542}
+    - name: Fallen_adventurer:ring_02_r
+      parentName: Fallen_adventurer:ring_01_r
+      position: {x: 0.0000014901559, y: -0.058067787, z: 0.0000005290961}
+      rotation: {x: -0.00034453318, y: 0.03673631, z: 0.024766259, w: 0.999018}
+      scale: {x: 0.9903032, y: 1.0094917, z: 1.0003353}
+    - name: Fallen_adventurer:ring_03_r
+      parentName: Fallen_adventurer:ring_02_r
+      position: {x: -0.00000001786397, y: -0.042866312, z: 0.000000049203766}
+      rotation: {x: -0.000000006140907, y: 0.000000011175868, z: 0.000000042454747,
+        w: 1}
+      scale: {x: 1.0004213, y: 0.9995813, z: 1.0000023}
+    - name: Fallen_adventurer:pinky_01_r
+      parentName: Fallen_adventurer:hand_r
+      position: {x: 0.023370398, y: -0.10391949, z: 0.032378126}
+      rotation: {x: 0.009350416, y: 0.060585465, z: 0.1138433, w: 0.99160564}
+      scale: {x: 1.0086718, y: 0.990345, z: 1.0010972}
+    - name: Fallen_adventurer:pinky_02_r
+      parentName: Fallen_adventurer:pinky_01_r
+      position: {x: -0.00000028070437, y: -0.04483025, z: -0.00000006933078}
+      rotation: {x: -0.0008886894, y: -0.0058849826, z: 0.02607714, w: 0.99964225}
+      scale: {x: 1.0173604, y: 0.9828511, z: 0.99995923}
+    - name: Fallen_adventurer:pinky_03_r
+      parentName: Fallen_adventurer:pinky_02_r
+      position: {x: -0.000000074375286, y: -0.030325977, z: -0.0000000012957678}
+      rotation: {x: 0.000000045169134, y: -0.000000016298142, z: -0.000000005762557,
+        w: 1}
+      scale: {x: 0.98336595, y: 1.0171247, z: 0.99991924}
+    - name: Fallen_adventurer:weapon_r
+      parentName: Fallen_adventurer:hand_r
+      position: {x: 0.050200928, y: -0.11064829, z: 0.0075413883}
+      rotation: {x: 0.39501277, y: -0.9092898, z: 0.12013805, w: 0.052191425}
+      scale: {x: 0.99688536, y: 1.0031109, z: 1.0000005}
+    - name: Fallen_adventurer:lowerarm_twist_01_r
+      parentName: Fallen_adventurer:lowerarm_r
+      position: {x: 0.00000090934714, y: -0.13018385, z: 0.0000001348986}
+      rotation: {x: 0.000000029802315, y: -0.000000033527606, z: -0.000000049592916,
+        w: 1}
+      scale: {x: 0.9999991, y: 1.0000001, z: 1.0000027}
+    - name: Fallen_adventurer:neck_01
+      parentName: Fallen_adventurer:spine_03
+      position: {x: -0.0000035194744, y: 0.17545806, z: 0.000033109634}
+      rotation: {x: 0.20060661, y: -0.000001233435, z: -0.00000025686774, w: 0.9796719}
+      scale: {x: 1.000046, y: 0.9980164, z: 1.0019467}
+    - name: Fallen_adventurer:head
+      parentName: Fallen_adventurer:neck_01
+      position: {x: 0.0108308075, y: 0.10508352, z: -0.015810596}
+      rotation: {x: -0.000001475215, y: -0.0000000018987976, z: 0.0000000052767746,
+        w: 1}
+      scale: {x: 1.000099, y: 0.99741983, z: 1.0024916}
+    - name: Fallen_adventurer:eye_l
+      parentName: Fallen_adventurer:head
+      position: {x: -0.033329125, y: 0.09496142, z: 0.123614386}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:eye_r
+      parentName: Fallen_adventurer:head
+      position: {x: 0.033501968, y: 0.09499545, z: 0.12350464}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fallen_adventurer:jaw
+      parentName: Fallen_adventurer:head
+      position: {x: 0.00000056992417, y: 0.020835374, z: 0.034194835}
+      rotation: {x: -0.000000067055225, y: -0.000000010344934, z: -0.000000007660653,
+        w: 1}
+      scale: {x: 1.0000755, y: 0.99992484, z: 0.9999996}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -95,11 +1061,12 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: af3cda60a4f50a749a6d93d5d6be88d1,
+    type: 2}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 2
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
