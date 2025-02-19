@@ -12,6 +12,7 @@ namespace Scripts.Core.UI
         [SerializeField] TextMeshProUGUI currentMana;
         [SerializeField] TextMeshProUGUI maximumMana;
         [SerializeField] Material manaOrbMaterial;
+        [SerializeField] Material manaOrbNutMaterial;
 
 
         [SerializeField] Image manaOrbFrameImageObject;
@@ -40,6 +41,7 @@ namespace Scripts.Core.UI
             //maximumMana.text = _maximumMana.ToString();
             float percentageMana = _currentMana / _maximumMana;
             manaOrbMaterial.SetFloat(liquidAmount, percentageMana);
+            manaOrbNutMaterial.SetFloat(liquidAmount, percentageMana);
         }
 
         public void ShowNotEnoughMana()
