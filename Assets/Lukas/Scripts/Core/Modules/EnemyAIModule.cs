@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using LL_Unity_Utils.Misc;
 using LL_Unity_Utils.Scriptables;
+using Scripts.Core.AudioScripts;
 using Scripts.Core.KI;
 using Scripts.Core.Rooms;
 using Scripts.Core.Skills;
@@ -29,24 +31,22 @@ namespace Scripts.Core.Modules
         [SerializeField] float idleDuration;
         [SerializeField] float PatrolRange;
         [SerializeField] float PatrolPointDistanceThreshhold;
-        [SerializeField] float attackCooldown;
         [SerializeField] float attackRange;
         [SerializeField] float baseAttackDamage;
         [SerializeField] float baseMoveSpeed;
 
         [Header("Drop Values")]
         [SerializeField] int memoryFragmentDropMin;
+
         [SerializeField] int memoryFragmentDropMax;
 
         [Header("Visuals")]
         [SerializeField] VFXSpawner lightHit;
+
         [SerializeField] VFXSpawner darkHit;
 
         [Header("Cleanup")]
         [SerializeField] float durationTillDespawnAfterDeath;
-        
-        [Header("Showcase")]
-        [SerializeField] bool showcase;
 
         AttackCollider attackCollider;
         TargetComponent targetComponent;
@@ -56,12 +56,13 @@ namespace Scripts.Core.Modules
         NavMeshAgent agent;
         Vector3 patrolRadiusCenter;
         Animator animator;
+        EnemySoundSystem soundSystem;
 
         Timer despawnTimer;
         public float CurrentAttackDamage { get; private set; }
 
-        [NonSerialized]public bool AllowedAggro;
-        
+        [NonSerialized] public bool AllowedAggro;
+
         bool inAttack;
 
         float distanceToTarget => Vector3.Distance(new Vector3(transform.position.x, 0, transform.position.z), new Vector3(targetComponent.TargetPosition.x, 0, targetComponent.TargetPosition.z));
@@ -79,6 +80,7 @@ namespace Scripts.Core.Modules
             agent.speed = baseMoveSpeed;
             animator = GetComponent<Animator>();
             HealthSystemModule = GetComponent<HealthSystemModule>();
+            soundSystem = GetComponent<EnemySoundSystem>();
             attackCollider = GetComponentInChildren<AttackCollider>();
             attackCollider.gameObject.SetActive(false);
             HealthSystemModule.RegisterEffectHandler(EffectType.DamageOverTime, new DamageOverTimeHandler());
@@ -87,18 +89,17 @@ namespace Scripts.Core.Modules
             var idleTimer = new Timer(idleDuration);
             despawnTimer = new Timer(durationTillDespawnAfterDeath);
 
-            if (showcase) return;
-            //State Creation
-            idleState = new IdleState(idleTimer, agent,animator);
-            State chaseState = new WalkToPointState(agent, targetComponent,animator);
-            State patrolState = new PatrolState(agent, idleTargetComponent, RecalculatePatrolPoint,animator);
-            State attackState = new AttackState(attackCollider, new Timer(attackCooldown),animator, this);
+
+            idleState = new IdleState(idleTimer, animator);
+            State chaseState = new WalkToPointState(agent, targetComponent, animator);
+            State patrolState = new PatrolState(agent, idleTargetComponent, RecalculatePatrolPoint, animator);
+            State attackState = new AttackState(attackCollider, animator, this);
             State deathState = new DeathState(animator);
 
-            //Setup StateMachine
+
             stateMachine = new StateMachine(idleState, gameObject, false);
 
-            //Setup Transitions
+
             var anyToChase = new Transition(chaseState, FindTarget);
             var chaseToIdle = new Transition(idleState, () => !FindTarget());
             var chaseToAttack = new Transition(attackState, () => distanceToTarget < attackRange);
@@ -107,7 +108,7 @@ namespace Scripts.Core.Modules
             var movingToIdle = new Transition(idleState, () => agent.remainingDistance < agent.stoppingDistance);
             var anyToDeath = new Transition(deathState, (() => HealthSystemModule.IsDead == true));
 
-            //Link Transitions
+
             idleState.AddTransition(anyToDeath);
             idleState.AddTransition(anyToChase);
             idleState.AddTransition(idleToPatrol);
@@ -122,15 +123,26 @@ namespace Scripts.Core.Modules
 
             attackState.AddTransition(anyToDeath);
             attackState.AddTransition(attackToChase);
+
+            StartCoroutine(PlayIdleSounds());
+        }
+
+        IEnumerator PlayIdleSounds()
+        {
+            while (!HealthSystemModule.IsDead)
+            {
+                if(!soundSystem.GetIsPlaying()) soundSystem.PlayIdleClip();
+                yield return new WaitForSeconds(5);
+            }
         }
 
         void FixedUpdate()
         {
-            if(showcase) return;
             if (HealthSystemModule.IsDead)
             {
-                if(despawnTimer.CheckTimer()) Destroy(gameObject);
+                if (despawnTimer.CheckTimer()) Destroy(gameObject);
             }
+
             stateMachine.CheckSwapState();
         }
 
@@ -140,10 +152,10 @@ namespace Scripts.Core.Modules
             switch (skillTag)
             {
                 case ESkillTag.Light:
-                    lightHit.Spawn(transform.position + new Vector3(0,transform.localScale.y * 0.5f,0));
+                    lightHit.Spawn(transform.position + new Vector3(0, transform.localScale.y * 0.5f, 0));
                     break;
                 case ESkillTag.Dark:
-                    darkHit.Spawn(transform.position + new Vector3(0,transform.localScale.y * 0.5f,0));
+                    darkHit.Spawn(transform.position + new Vector3(0, transform.localScale.y * 0.5f, 0));
                     break;
                 default:
                     throw new NotImplementedException();
@@ -177,6 +189,7 @@ namespace Scripts.Core.Modules
                 targetComponent.SetTarget(overlap[0].transform);
                 return true;
             }
+
             return false;
         }
 
@@ -218,12 +231,12 @@ namespace Scripts.Core.Modules
         {
             CurrentAttackDamage = baseAttackDamage + _newValue;
         }
-
         public void ResetAttackDamage()
         {
             CurrentAttackDamage = baseAttackDamage;
         }
 
+        // Every function down below is for the animation event based system
         public void EnableAttackCollider()
         {
             attackCollider.gameObject.SetActive(true);

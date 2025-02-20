@@ -24,8 +24,6 @@ namespace Scripts.Core.Skills.SkillTree
 
         public bool IsStaticNode;
 
-        public bool ISLOCKEDFORTESTING;
-
 
         public void Unlock()
         {

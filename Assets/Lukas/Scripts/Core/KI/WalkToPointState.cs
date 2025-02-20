@@ -25,7 +25,7 @@ namespace Scripts.Core.KI
 
         public override void StateExit()
         {
-            agent.SetDestination(agent.transform.position + agent.transform.forward * 0.15f);
+            if (agent.isActiveAndEnabled) agent.SetDestination(agent.transform.position + agent.transform.forward * 0.15f);
             animator.SetBool(HashedWalk, false);
         }
 

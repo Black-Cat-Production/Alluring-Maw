@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7582258a47ad41ffa51318fc0324cf34, type: 3}
   m_Name: SaveGame1
   m_EditorClassIdentifier: 
-  MemoryFragmentsAmount: 100
+  MemoryFragmentsAmount: 992
   HasSaved: 0
-  PlayerName: Man
+  PlayerName: Build

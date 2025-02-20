@@ -12,6 +12,7 @@ namespace Scripts.Core.Skills.SkillTree
                 Debug.LogError("No Skill Tree Node selected! Something went wrong!");
             }
             skillTreeUIManager.CurrentSelectedNode.Unlock();
+            skillTreeUIManager.PlayUnlockSound();
             skillTreeUIManager.UpdateDetailDisplay(false, skillTreeUIManager.CurrentSelectedNode);
         }
     }

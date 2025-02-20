@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -10,6 +11,16 @@ namespace Scripts.Core.Visual
 
         Coroutine damageRoutine;
         static readonly int damageIntensity = Shader.PropertyToID("_Damage_Intensity");
+
+        void OnEnable()
+        {
+            damageShaderMaterial.SetFloat(damageIntensity,0);
+        }
+
+        void OnDisable()
+        {
+            damageShaderMaterial.SetFloat(damageIntensity,0);
+        }
 
         public void HitTaken()
         {
@@ -40,6 +51,7 @@ namespace Scripts.Core.Visual
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }
+            damageShaderMaterial.SetFloat(damageIntensity,0);
             damageRoutine = null;
         }
         

@@ -9,7 +9,14 @@ namespace Scripts.Core.Skills.SkillTree
         [SerializeField] CanvasGroup nodeDetailPanelGroup;
         [SerializeField] SkillTreeNodeDetailDisplayManager detailDisplayManager;
 
+        AudioSource audioSource;
+        
         public SkillTreeNode CurrentSelectedNode { get; private set; }
+
+        void Awake()
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
 
         void OnEnable()
         {
@@ -72,6 +79,12 @@ namespace Scripts.Core.Skills.SkillTree
         {
             nodeDetailPanelGroup.gameObject.SetActive(false);
             CurrentSelectedNode = null;
+        }
+
+        public void PlayUnlockSound()
+        {
+            audioSource.Stop();
+            audioSource.Play();
         }
     }
 }

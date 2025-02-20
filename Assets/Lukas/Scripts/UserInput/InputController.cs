@@ -48,6 +48,8 @@ namespace Scripts.UserInput
         bool castingBlockRunning;
         bool isCastingSkill;
 
+        public bool HasMoveInput => moveInput != Vector2.zero;
+
         Coroutine routine;
         static readonly int canRelease = Animator.StringToHash("CanRelease");
         //static readonly int isHoldingSkill = Animator.StringToHash("isHoldingSkill");
@@ -112,7 +114,7 @@ namespace Scripts.UserInput
             var finalDirection = transform.TransformDirection(moveInput.x * moveSpeed, 0, moveInput.y * moveSpeed);
             finalDirection += currentDashVelocity;
             playerRigidbody.velocity = new Vector3(finalDirection.x, playerRigidbody.velocity.y, finalDirection.z);
-            float isMovingFloat = moveInput.magnitude > 0 ? 1 : 0;
+            float isMovingFloat = moveInput.normalized.magnitude > 0 ? 1 : 0;
             animator.SetFloat("MoveInput", isMovingFloat, idleWalkBlendTime, Time.fixedDeltaTime);
         }
 

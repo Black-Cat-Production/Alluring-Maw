@@ -1,0 +1,223 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8089370098682279119
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2650753922562504926, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650753922562504926, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650753922562504926, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650753922562504926, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650753922562504926, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650753922562504926, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650753922562504926, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650753922562504926, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650753922562504926, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.4999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650753922562504926, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.4999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650753922562504926, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.4999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650753922562504926, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650753922562504926, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650753922562504926, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650753922562504926, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650753922562504926, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650753922562504926, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650753922562504926, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650753922562504926, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -581.39996
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650753922562504926, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -112.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650753922562504926, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650753922562504926, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650753922562504926, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650753922562504926, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3272213341582010212, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_Name
+      value: DarkArc Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5776921172128724129, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b4beff0e49685aa48a5dc855abdbb5fc,
+        type: 3}
+    - target: {fileID: 8436285551552413965, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8436285551552413965, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 89b2c2837554113468ff8a0b08052458,
+        type: 3}
+    - target: {fileID: 8436285551552413965, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 89b2c2837554113468ff8a0b08052458,
+        type: 3}
+    - target: {fileID: 8436285551552413965, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8436285551552413965, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8436285551552413965, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ButtonOpenNodeDetailPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8436285551552413965, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Scripts.Core.Skills.SkillTree.SkillTreeUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8436285551552413965, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 4017128544191492488}
+    - target: {fileID: 8436285551552413965, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: Scripts.Core.Skills.SkillTree.SkillTreeNode, Assembly-CSharp
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 1784529675988317017, guid: 4f9d75d95c24b434c8eb7080c503826c, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3272213341582010212, guid: 4f9d75d95c24b434c8eb7080c503826c,
+        type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 4017128544191492488}
+  m_SourcePrefab: {fileID: 100100000, guid: 4f9d75d95c24b434c8eb7080c503826c, type: 3}
+--- !u!1 &6713190893338596267 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3272213341582010212, guid: 4f9d75d95c24b434c8eb7080c503826c,
+    type: 3}
+  m_PrefabInstance: {fileID: 8089370098682279119}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4017128544191492488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6713190893338596267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e01af61f1eb9412798ec7d678bfc96ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeData: {fileID: 0}
+  nodeName: Dark Arc
+  description: This skill fires a arcing projectile forward that can pierce through
+    multiple enemies.
+  connectionToNode: {fileID: 0}
+  IsStaticNode: 1
+  ISLOCKEDFORTESTING: 0

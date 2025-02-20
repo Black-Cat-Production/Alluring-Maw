@@ -13,11 +13,19 @@ namespace Scripts.Core.Visual
         [SerializeField] Color startColor;
         [SerializeField] Color endColor;
         [SerializeField] float lerpDuration;
+        [SerializeField] AudioSource bgmSource;
 
         void Awake()
         {
             mainUIObject.SetActive(false);
+            bgmSource.volume = 0;
             StartCoroutine(LerpColorUp());
+            StartCoroutine(LerpSoundUp());
+        }
+
+        void OnDisable()
+        {
+            StopAllCoroutines();
         }
 
         IEnumerator LerpColorUp()
@@ -33,6 +41,19 @@ namespace Scripts.Core.Visual
                 yield return null;
             }
             mainUIObject.SetActive(true);
+        }
+
+        IEnumerator LerpSoundUp()
+        {
+            float timer = 0f;
+            while (timer < lerpDuration)
+            {
+                timer += Time.deltaTime;
+                float t = timer / lerpDuration;
+                bgmSource.volume = Mathf.Lerp(0f, 0.5f, t);
+                Debug.Log(t);
+                yield return null;
+            }
         }
     }
 }

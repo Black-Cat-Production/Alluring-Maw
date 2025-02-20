@@ -13,7 +13,7 @@ namespace Scripts.Core.Skills.SkillTree
 
         public void PopulateInformation(SkillTreeNode _node, bool _showButton)
         {
-            if(_node.IsStaticNode || _node.NodeData.Data.Status == ESkillNodeStatus.Disabled || _node.NodeData.Data.Status == ESkillNodeStatus.Locked || _node.ISLOCKEDFORTESTING || _node.NodeData.Data.Status == ESkillNodeStatus.Unlocked || !_showButton) unlockButton.gameObject.SetActive(false);
+            if(_node.IsStaticNode || _node.NodeData.Data.Status == ESkillNodeStatus.Disabled || _node.NodeData.Data.Status == ESkillNodeStatus.Locked || _node.NodeData.Data.Status == ESkillNodeStatus.Unlocked || !_showButton) unlockButton.gameObject.SetActive(false);
             else unlockButton.gameObject.SetActive(true);
             if (_node == null)
             {

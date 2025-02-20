@@ -3,6 +3,7 @@ using Scripts.Core;
 using Scripts.Core.Events;
 using Scripts.Core.Skills.SkillTree;
 using Scripts.Core.System;
+using Scripts.Core.UI;
 using TMPro;
 using UnityEngine;
 
@@ -14,12 +15,14 @@ namespace Scripts.Program
         [SerializeField] SaveGameSO defaultSaveGameSO;
         [SerializeField] TextMeshProUGUI nameValue;
         [SerializeField] NotifyEvent notifyEvent;
-
+        [SerializeField] OptionsMenuUI optionsMenuUI;
+        
         IEnumerator Start()
         {
             Screen.SetResolution(1920, 1080, true);
             while (!GameManager.Instance.FinishedLoading) yield return null;
             UpdatePlayerName();
+            optionsMenuUI.PushUpdateToAudioMixer();
         }
 
         void OnEnable()

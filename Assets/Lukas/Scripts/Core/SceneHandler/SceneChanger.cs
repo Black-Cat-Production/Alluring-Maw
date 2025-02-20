@@ -13,6 +13,10 @@ namespace Scripts.Core.SceneHandler
         [SerializeField] Transform checkpoint1;
         [SerializeField] Transform checkpoint2;
 
+        [SerializeField] AudioClip startButtonSound;
+        [SerializeField] AudioClip transitionSound;
+        AudioSource audioSource;
+        
         AsyncOperation loadRoutine;
         Camera mainMenuCamera;
         Vector3 startPoint;
@@ -21,6 +25,7 @@ namespace Scripts.Core.SceneHandler
         {
             mainMenuCamera = Camera.main;
             startPoint = mainMenuCamera.transform.position;
+            audioSource = GetComponent<AudioSource>();
         }
 
         public void LoadScene()
@@ -30,23 +35,41 @@ namespace Scripts.Core.SceneHandler
 
         public void LoadWithCameraPathing()
         {
-            loadRoutine = SceneManager.LoadSceneAsync((int)EScenes.Game);
-            loadRoutine.allowSceneActivation = false;
+            
+            audioSource.Stop();
+            audioSource.clip = startButtonSound;
+            audioSource.Play();
             StartCoroutine(StartLoadWithCamera());
             mainMenuGroup.gameObject.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
-
         IEnumerator StartLoadWithCamera()
         {
             float minDuration = 2f;
             float timer = 0f;
             
+            while (timer < minDuration)
+            {
+                timer += Time.deltaTime;
+                float t = Mathf.Clamp01(timer / minDuration);
+                mainMenuCamera.transform.position = Vector3.Lerp(startPoint, checkpoint1.transform.position, t);
+            }
+            
+            timer = 0f;
+            
+            loadRoutine = SceneManager.LoadSceneAsync((int)EScenes.Game);
+            loadRoutine.allowSceneActivation = false;
             while (timer < minDuration || loadRoutine.progress > 0.9f)
             {
                 timer += Time.deltaTime;
                 float t = Mathf.Clamp01(timer / minDuration);
                 mainMenuCamera.transform.position = Vector3.Lerp(startPoint, checkpoint2.transform.position, t);
-                
+                if (!audioSource.isPlaying)
+                {
+                    audioSource.clip = transitionSound;
+                    audioSource.Play();
+                } 
                 yield return null;
             }
 
