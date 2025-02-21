@@ -21,56 +21,57 @@ namespace Scripts.Core.Modules
     [RequireComponent(typeof(HealthSystemModule))]
     public class EnemyAIModule : MonoBehaviour
     {
-        public HealthSystemModule HealthSystemModule { get; private set; }
+        public HealthSystemModule HealthSystemModule { get; protected set; }
 
         RoomSpawner spawner;
 
-        [SerializeField] float searchRadius;
-        [SerializeField] LayerMask detectionMask;
-        [SerializeField] LayerMask obstructionMask;
-        [SerializeField] float idleDuration;
-        [SerializeField] float PatrolRange;
-        [SerializeField] float PatrolPointDistanceThreshhold;
-        [SerializeField] float attackRange;
-        [SerializeField] float baseAttackDamage;
-        [SerializeField] float baseMoveSpeed;
+        [SerializeField] protected float searchRadius;
+        [SerializeField] protected LayerMask detectionMask;
+        [SerializeField] protected LayerMask obstructionMask;
+        [SerializeField] protected float idleDuration;
+        [SerializeField] protected float PatrolRange;
+        [SerializeField] protected float PatrolPointDistanceThreshhold;
+        [SerializeField] protected float attackRange;
+        [SerializeField] protected float baseAttackDamage;
+        [SerializeField] protected float baseMoveSpeed;
 
         [Header("Drop Values")]
-        [SerializeField] int memoryFragmentDropMin;
+        [SerializeField] protected int memoryFragmentDropMin;
 
-        [SerializeField] int memoryFragmentDropMax;
+        [SerializeField] protected int memoryFragmentDropMax;
 
         [Header("Visuals")]
-        [SerializeField] VFXSpawner lightHit;
+        [SerializeField] protected VFXSpawner lightHit;
 
-        [SerializeField] VFXSpawner darkHit;
+        [SerializeField] protected VFXSpawner darkHit;
 
         [Header("Cleanup")]
-        [SerializeField] float durationTillDespawnAfterDeath;
+        [SerializeField] protected float durationTillDespawnAfterDeath;
 
-        AttackCollider attackCollider;
-        TargetComponent targetComponent;
-        TargetComponent idleTargetComponent;
-        StateMachine stateMachine;
-        IdleState idleState;
-        NavMeshAgent agent;
-        Vector3 patrolRadiusCenter;
-        Animator animator;
-        EnemySoundSystem soundSystem;
+        protected AttackCollider attackCollider;
+        protected TargetComponent targetComponent;
+        protected TargetComponent idleTargetComponent;
+        protected StateMachine stateMachine;
+        protected IdleState idleState;
+        protected NavMeshAgent agent;
+        protected Vector3 patrolRadiusCenter;
+        protected Animator animator;
+        protected EnemySoundSystem soundSystem;
 
-        Timer despawnTimer;
-        public float CurrentAttackDamage { get; private set; }
+        protected Timer despawnTimer;
+        public float CurrentAttackDamage { get; protected set; }
 
         [NonSerialized] public bool AllowedAggro;
 
-        bool inAttack;
+        protected bool inAttack;
+        public bool InAttack => inAttack;
 
-        float distanceToTarget => Vector3.Distance(new Vector3(transform.position.x, 0, transform.position.z), new Vector3(targetComponent.TargetPosition.x, 0, targetComponent.TargetPosition.z));
+        protected float distanceToTarget => Vector3.Distance(new Vector3(transform.position.x, 0, transform.position.z), new Vector3(targetComponent.TargetPosition.x, 0, targetComponent.TargetPosition.z));
 
         public UnityEvent<int> OnDeathEvent;
         public UnityEvent<Vector3> OnDeathEffectEvent;
 
-        void Awake()
+        protected virtual void Awake()
         {
             CurrentAttackDamage = baseAttackDamage;
             patrolRadiusCenter = transform.position;
@@ -127,7 +128,7 @@ namespace Scripts.Core.Modules
             StartCoroutine(PlayIdleSounds());
         }
 
-        IEnumerator PlayIdleSounds()
+        protected IEnumerator PlayIdleSounds()
         {
             while (!HealthSystemModule.IsDead)
             {
@@ -146,16 +147,16 @@ namespace Scripts.Core.Modules
             stateMachine.CheckSwapState();
         }
 
-        public void CallHit(List<ESkillTag> _skillTags)
+        public void CallHit(List<ESkillTag> _skillTags, Vector3 _positionToSpawn)
         {
             var skillTag = _skillTags.Contains(ESkillTag.Light) ? ESkillTag.Light : ESkillTag.Dark;
             switch (skillTag)
             {
                 case ESkillTag.Light:
-                    lightHit.Spawn(transform.position + new Vector3(0, transform.localScale.y * 0.5f, 0));
+                    lightHit.Spawn(_positionToSpawn + transform.forward);
                     break;
                 case ESkillTag.Dark:
-                    darkHit.Spawn(transform.position + new Vector3(0, transform.localScale.y * 0.5f, 0));
+                    darkHit.Spawn(_positionToSpawn + transform.forward);
                     break;
                 default:
                     throw new NotImplementedException();
@@ -180,7 +181,7 @@ namespace Scripts.Core.Modules
             spawner = _spawner;
         }
 
-        bool FindTarget()
+        protected bool FindTarget()
         {
             if (!AllowedAggro) return false;
             var overlap = Physics.OverlapSphere(transform.position, searchRadius, detectionMask);
@@ -198,7 +199,7 @@ namespace Scripts.Core.Modules
             return Physics.Raycast(transform.position, (_target.position - transform.position).normalized, Vector3.Distance(transform.position, _target.position), obstructionMask);
         }
 
-        void RecalculatePatrolPoint()
+        protected void RecalculatePatrolPoint()
         {
             Vector3 randomPoint;
             do
@@ -255,6 +256,11 @@ namespace Scripts.Core.Modules
         public void DisableAttackBool()
         {
             inAttack = false;
+        }
+        
+        public void TurnToTarget()
+        {
+            agent.transform.LookAt(targetComponent.TargetPosition);
         }
     }
 }

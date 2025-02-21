@@ -35,7 +35,7 @@ namespace Scripts.Core.Skills
             if (despawnTimer.CheckTimer()) Destroy(gameObject);
         }
 
-        protected virtual void Use(SkillContext _context)
+        protected virtual void Use(SkillContext _context, Vector3 _hitPosition)
         {
             int totalDamage = baseSkillHitDamage;
             foreach (var behavior in behaviors) behavior.Execute(_context, ref totalDamage);
@@ -43,7 +43,7 @@ namespace Scripts.Core.Skills
             if (_context.Targets is not { Count: > 0 }) return;
             var target = _context.Targets[0];
             target.HealthSystemModule.TakeDamage(totalDamage);
-            target.CallHit(Tags);
+            target.CallHit(Tags, _hitPosition);
             if (target.HealthSystemModule.IsDead)
             {
                 _context.TriggerEnemyKilled(target);
@@ -52,6 +52,7 @@ namespace Scripts.Core.Skills
 
         public virtual void OnTriggerEnter(Collider _collider)
         {
+           
             if (_collider.gameObject.CompareTag("ProjectileKillBox"))
             {
                 Destroy(gameObject);
@@ -61,7 +62,8 @@ namespace Scripts.Core.Skills
             {
                 var target = _collider.gameObject.GetComponentInParent<EnemyAIModule>();
                 var context = new SkillContext(transform.position, new List<EnemyAIModule> { target }, null, this);
-                Use(context);
+                var collidingPoint = _collider.ClosestPointOnBounds(transform.position);
+                Use(context, collidingPoint);
             }
 
             Destroy(gameObject);

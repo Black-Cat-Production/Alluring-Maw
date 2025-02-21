@@ -32,7 +32,8 @@ namespace Scripts.Core.Skills
             {
                 context.Targets = null;
             }
-            Use(context);
+            var collidingPoint = _collider.ClosestPointOnBounds(transform.position);
+            Use(context, collidingPoint);
         }
 
         public void SpawnVFX(Vector3 _position)

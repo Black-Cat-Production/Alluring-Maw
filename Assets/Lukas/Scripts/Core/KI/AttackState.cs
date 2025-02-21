@@ -6,7 +6,7 @@ namespace Scripts.Core.KI
 {
     public class AttackState : AnimationState
     {
-        readonly EnemyAIModule owner;
+        protected readonly EnemyAIModule owner;
 
         public AttackState(AttackCollider _attackCollider, Animator _animator, EnemyAIModule _owner) : base(_animator)
         {

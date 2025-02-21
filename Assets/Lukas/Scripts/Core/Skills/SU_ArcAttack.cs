@@ -41,7 +41,8 @@ namespace Scripts.Core.Skills
             if (!_collider.gameObject.CompareTag("HitBox")) return;
             var target = _collider.gameObject.GetComponentInParent<EnemyAIModule>();
             var context = new SkillContext(transform.position, new List<EnemyAIModule> { target }, null, this);
-            Use(context);
+            var collidingPoint = _collider.ClosestPointOnBounds(transform.position);
+            Use(context, collidingPoint);
         }
     }
 }
