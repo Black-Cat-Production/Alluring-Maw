@@ -39,7 +39,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _BorderSphereness: 1
-    - _Damage_Intensity: 0.012102246
+    - _Damage_Intensity: 0
     - _Noisyness: 34
     - _Vignette_Radius: 0.45
     - _Vignette_Softness: 0.8
