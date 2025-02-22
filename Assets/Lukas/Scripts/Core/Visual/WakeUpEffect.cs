@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Scripts.Core.UI;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -14,6 +15,7 @@ namespace Scripts.Core.Visual
         [SerializeField] Color endColor;
         [SerializeField] float lerpDuration;
         [SerializeField] AudioSource bgmSource;
+        [SerializeField] TutorialUI tutorialUI;
 
         void Awake()
         {
@@ -41,6 +43,7 @@ namespace Scripts.Core.Visual
                 yield return null;
             }
             mainUIObject.SetActive(true);
+            tutorialUI.StartTutorial();
         }
 
         IEnumerator LerpSoundUp()
