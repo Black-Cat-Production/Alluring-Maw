@@ -1,7 +1,10 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Scripts.Core.AnimationScripts;
 using Scripts.Core.Modules;
+using Scripts.Core.Visual;
+using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -14,12 +17,14 @@ namespace Scripts.Core.Rooms
         [SerializeField] int spawnAmount;
         [SerializeField] List<Door> doors;
         [SerializeField] float spawnRadius = 5f;
+        [SerializeField] GoodJobArm goodJobArm;
 
         List<EnemyAIModule> spawnedEnemies;
 
         //Tracker Events
         public static Action<RoomSpawner> OnRoomEnter;
         public static Action OnEnemyKilled;
+        public static Action OnRoomCleared;
 
         bool alreadyEntered;
 
@@ -52,6 +57,7 @@ namespace Scripts.Core.Rooms
         {
             OpenDoors();
             sideEnteredFrom.DisableTorches();
+            OnRoomCleared.Invoke();
         }
 
         public void TriggerRoomEntered()
@@ -91,6 +97,18 @@ namespace Scripts.Core.Rooms
         {
             if (sideEnteredFrom != null) return;
             sideEnteredFrom = _roomCollider;
+        }
+
+        public void FlawlessRoomTrigger()
+        {
+            var armObject = Instantiate(goodJobArm, transform.position, Quaternion.identity);
+            StartCoroutine(DestroyArm(armObject.gameObject));
+        }
+
+        IEnumerator DestroyArm(GameObject _armObject)
+        {
+            yield return new WaitForSeconds(5);
+            Destroy(_armObject);
         }
     }
 }

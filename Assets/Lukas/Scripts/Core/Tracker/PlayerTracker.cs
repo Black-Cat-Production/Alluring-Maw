@@ -17,6 +17,8 @@ namespace Scripts.Core.Tracker
         int damageTaken;
         Stopwatch stopwatch;
 
+        int currentRoomDamageTaken;
+
         public int EnemiesKilled { get; private set; }
         ManaSystemModule playerManaSystemModule;
         HealthSystemModule playerHealthSystemModule;
@@ -44,7 +46,12 @@ namespace Scripts.Core.Tracker
             GameManager.Instance.OnWinGetScores += SendScores;
             RoomSpawner.OnRoomEnter += SetCurrentRoom;
             RoomSpawner.OnEnemyKilled += CountUpEnemiesKilled;
-            playerHealthSystemModule.OnDamageTaken += _damageTaken => damageTaken += _damageTaken;
+            RoomSpawner.OnRoomCleared += RoomCleared;
+            playerHealthSystemModule.OnDamageTaken += _damageTaken =>
+            {
+                damageTaken += _damageTaken;
+                currentRoomDamageTaken += _damageTaken;
+            };
             playerCharacter.GetComponent<ManaSystemModule>().OnManaChanged += uiStatUpdater.UpdateManaUI;
             stopwatch = new Stopwatch();
             stopwatch.Start();
@@ -55,6 +62,7 @@ namespace Scripts.Core.Tracker
             GameManager.Instance.OnWinGetScores -= SendScores;
             RoomSpawner.OnRoomEnter -= SetCurrentRoom;
             RoomSpawner.OnEnemyKilled -= CountUpEnemiesKilled;
+            RoomSpawner.OnRoomCleared -= RoomCleared;
             playerHealthSystemModule.OnDamageTaken -= _damageTaken => damageTaken += _damageTaken;
             if (playerCharacter == null || !playerCharacter.gameObject.activeInHierarchy) return;
             playerCharacter.GetComponent<ManaSystemModule>().OnManaChanged -= uiStatUpdater.UpdateManaUI;
@@ -73,7 +81,13 @@ namespace Scripts.Core.Tracker
         void SetCurrentRoom(RoomSpawner _newRoom)
         {
             if (currentRoom == _newRoom) return;
+            currentRoomDamageTaken = 0;
             currentRoom = _newRoom;
+        }
+
+        void RoomCleared()
+        {
+            if(currentRoomDamageTaken == 0) currentRoom.FlawlessRoomTrigger();
         }
 
         void CountUpEnemiesKilled()
