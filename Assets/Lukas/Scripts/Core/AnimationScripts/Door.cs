@@ -7,6 +7,7 @@ namespace Scripts.Core.AnimationScripts
     public class Door : MonoBehaviour
     {
         [SerializeField] float closeDelay;
+        [SerializeField] bool isStartDoor;
         Animator animator;
 
         bool isClosed;
@@ -14,8 +15,15 @@ namespace Scripts.Core.AnimationScripts
         void Awake()
         {
             animator = GetComponent<Animator>();
-            Open();
-            isClosed = false;
+            if (!isStartDoor)
+            {
+                Open();
+                isClosed = false;
+            }
+            else
+            {
+                isClosed = true;
+            }
         }
 
         public void Open()

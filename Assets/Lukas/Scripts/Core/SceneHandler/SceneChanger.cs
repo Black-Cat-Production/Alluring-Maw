@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using Scripts.Core.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,6 +14,8 @@ namespace Scripts.Core.SceneHandler
         [SerializeField] Transform checkpoint1;
         [SerializeField] Transform checkpoint2;
 
+        [SerializeField] PresentTexts presentIntroText;
+        
         [SerializeField] AudioClip startButtonSound;
         [SerializeField] AudioClip transitionSound;
         AudioSource audioSource;
@@ -24,8 +27,7 @@ namespace Scripts.Core.SceneHandler
         void Awake()
         {
             mainMenuCamera = Camera.main;
-            startPoint = mainMenuCamera.transform.position;
-            audioSource = GetComponent<AudioSource>();
+            startPoint = mainMenuCamera.transform.position; audioSource = GetComponent<AudioSource>();
         }
 
         public void LoadScene()
@@ -72,8 +74,7 @@ namespace Scripts.Core.SceneHandler
                 } 
                 yield return null;
             }
-
-            loadRoutine.allowSceneActivation = true;
+            presentIntroText.PresentIntroText(loadRoutine);
         }
     }
 }

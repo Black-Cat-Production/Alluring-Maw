@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ae9a864e5a248a4918584e31aefdf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 2000
+  maxHealth: 10
   OnDeathEvent:
     m_PersistentCalls:
       m_Calls:
@@ -354,8 +354,7 @@ MonoBehaviour:
   idleClips:
   - {fileID: 8300000, guid: 0768b1dc7a20bb84fbb0931ad6a3ca5a, type: 3}
   - {fileID: 8300000, guid: 16dfa84fceb5e6a41824e12a01cff832, type: 3}
-  damageClips:
-  - {fileID: 8300000, guid: 2949d614b6a1d1b4390b46d4e129f66b, type: 3}
+  damageClips: []
   attackClips:
   - {fileID: 8300000, guid: 7a707e216acf7de42a2773e91b691a35, type: 3}
   audioSource: {fileID: 3637367432099633213}

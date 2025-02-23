@@ -84,10 +84,9 @@ namespace Scripts.Core
         }
 
 
-        void TriggerWin()
+        public void TriggerWin()
         {
             OnWinGetScores.Invoke();
-            Debug.Log("You won the game!!");
             saveGame.SaveMemoryFragmentsAmount(MemoryFragmentsAmount);
             notifyLeaderboardToSet.Invoke();
             mainMenuSceneLoader.LoadAsync();
@@ -102,6 +101,7 @@ namespace Scripts.Core
         public void TriggerLoss(Canvas _deathScreenUI)
         {
             _deathScreenUI.gameObject.SetActive(true);
+            saveGame.SaveMemoryFragmentsAmount(MemoryFragmentsAmount);
             PauseGame(true);
         }
 
