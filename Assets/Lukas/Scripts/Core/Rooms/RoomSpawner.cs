@@ -13,15 +13,13 @@ namespace Scripts.Core.Rooms
 
         [SerializeField] int spawnAmount;
         [SerializeField] List<Door> doors;
-        [SerializeField] bool isLastRoom;
-        public string RoomName;
+        [SerializeField] float spawnRadius = 5f;
 
         List<EnemyAIModule> spawnedEnemies;
 
         //Tracker Events
         public static Action<RoomSpawner> OnRoomEnter;
         public static Action OnEnemyKilled;
-        public Action OnFinalRoomCleared;
 
         bool alreadyEntered;
 
@@ -31,12 +29,11 @@ namespace Scripts.Core.Rooms
         {
             spawnedEnemies = new List<EnemyAIModule>();
             for (int i = 0; i < spawnAmount; i++) spawnedEnemies.Add(SpawnEnemy());
-            if (isLastRoom) GameManager.Instance.RegisterLastRoom(this);
         }
 
         EnemyAIModule SpawnEnemy()
         {
-            var randomPos = Random.insideUnitSphere * 5;
+            var randomPos = Random.insideUnitSphere * spawnRadius;
             var instantiatePos = new Vector3(randomPos.x, 0, randomPos.z);
             instantiatePos += new Vector3(transform.position.x, 0, transform.position.z);
             var spawnedEnemy = Instantiate(enemyList.GetRandomModuleFromList(), instantiatePos, Quaternion.identity);
@@ -55,7 +52,6 @@ namespace Scripts.Core.Rooms
         {
             OpenDoors();
             sideEnteredFrom.DisableTorches();
-            if (isLastRoom) OnFinalRoomCleared?.Invoke();
         }
 
         public void TriggerRoomEntered()

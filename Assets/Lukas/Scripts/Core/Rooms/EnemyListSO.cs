@@ -8,10 +8,19 @@ namespace Scripts.Core.Rooms
     public class EnemyListSO : ScriptableObject
     {
         [SerializeField] List<EnemyAIModule> enemyPrefabs;
+        [SerializeField] List<EnemyAIModule> fallenAdventurerPrefabList;
 
         public EnemyAIModule GetRandomModuleFromList()
         {
-            return enemyPrefabs[Random.Range(0, enemyPrefabs.Count)];
+            var list = GetRandomList();
+            return list[Random.Range(0, list.Count)];
+        }
+
+        List<EnemyAIModule> GetRandomList()
+        {
+            if (fallenAdventurerPrefabList.Count == 0) return enemyPrefabs;
+            var randomInt = Random.Range(0, 2);
+            return randomInt == 0 ? enemyPrefabs : fallenAdventurerPrefabList;
         }
     }
 }

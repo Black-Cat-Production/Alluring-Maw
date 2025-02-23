@@ -83,11 +83,6 @@ namespace Scripts.Core
             notifyPlayerInputUI.Invoke();
         }
 
-        public void RegisterLastRoom(RoomSpawner _lastRoom)
-        {
-            _lastRoom.OnFinalRoomCleared += TriggerWin;
-        }
-
 
         void TriggerWin()
         {
