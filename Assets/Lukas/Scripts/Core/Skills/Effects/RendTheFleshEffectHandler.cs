@@ -11,7 +11,6 @@ namespace Scripts.Core.Skills.Effects
             if (_effect.IsRunning) return;
             _effect.IsRunning = true;
             EffectRunner.Instance.StartCoroutine(ApplyDebuff(_target, _effect));
-
         }
 
         IEnumerator ApplyDebuff(EnemyAIModule _target, Effect _effect)
@@ -22,6 +21,7 @@ namespace Scripts.Core.Skills.Effects
                 _target.UpdateAttackDamage(-_effect.Intensity);
                 yield return new WaitForSeconds(_effect.TickInterval);
             }
+
             _target.ResetAttackDamage();
             _target.ResetMoveSpeed();
             _effect.Context.TriggerEnemyKilled(_target);

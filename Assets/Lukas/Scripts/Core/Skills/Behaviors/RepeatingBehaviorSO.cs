@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Scripts.Core.Skills.Behaviors
 {
     [CreateAssetMenu(menuName = "Scriptables/Skills/BehaviorSO/RepeatingBehaviorSO")]
-    public class RepeatingBehaviorSO: SkillBehaviorSO
+    public class RepeatingBehaviorSO : SkillBehaviorSO
     {
         [SerializeField] string specificName;
         [SerializeField] List<ESkillTag> tags;
@@ -18,7 +18,7 @@ namespace Scripts.Core.Skills.Behaviors
 
         public override List<ESkillTag> Tags => tags;
 
-        
+
         public override void Execute(SkillContext _context, ref int _totalDamage)
         {
             if (_context.timesCalled >= 1) return;

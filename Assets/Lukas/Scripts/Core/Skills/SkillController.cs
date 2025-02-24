@@ -57,13 +57,18 @@ namespace Scripts.Core.Skills
                     if (castPreviewPrefabInstance != null) Destroy(castPreviewPrefabInstance);
                     yield return null;
                 }
+
                 var spawnPosition = new Vector3(rayHit.point.x, 0.1f, rayHit.point.z);
-                if (castPreviewPrefabInstance != null) castPreviewPrefabInstance.transform.position = spawnPosition;
+                if (castPreviewPrefabInstance != null)
+                {
+                    castPreviewPrefabInstance.transform.position = spawnPosition;
+                }
                 else
                 {
                     castPreviewPrefabInstance = Instantiate(castPreviewPrefab, spawnPosition, Quaternion.identity);
                     castPreviewPrefabInstance.transform.forward = Vector3.up;
                 }
+
                 yield return null;
             }
         }

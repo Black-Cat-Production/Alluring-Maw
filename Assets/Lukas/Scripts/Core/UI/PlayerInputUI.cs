@@ -1,9 +1,7 @@
-﻿using System;
-using Scripts.Core.Events;
+﻿using Scripts.Core.Events;
 using Scripts.Core.Skills;
 using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace Scripts.Core.UI
 {
@@ -17,7 +15,7 @@ namespace Scripts.Core.UI
         [SerializeField] Canvas alignmentInputUICanvas;
 
         bool inputUIOpen;
-        
+
         void OnEnable()
         {
             notifyEvent.OnNotify += ShowInputUI;
@@ -30,10 +28,7 @@ namespace Scripts.Core.UI
 
         void Update()
         {
-            if (Input.GetKeyUp(KeyCode.Return))
-            {
-                SubmitEntry();
-            }
+            if (Input.GetKeyUp(KeyCode.Return)) SubmitEntry();
         }
 
         void ShowInputUI()
@@ -72,6 +67,7 @@ namespace Scripts.Core.UI
             GameManager.Instance.SetBasicAlignment(ESkillTag.Dark);
             HideAlignmentUI();
         }
+
         public void ChooseLightAlignment()
         {
             GameManager.Instance.SetBasicAlignment(ESkillTag.Light);

@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -8,25 +7,23 @@ namespace Scripts.Core.Visual
     {
         [SerializeField] Material damageShaderMaterial;
         [SerializeField] float flashDuration = 0.5f;
-
-        Coroutine damageRoutine;
         static readonly int damageIntensity = Shader.PropertyToID("_Damage_Intensity");
 
         void OnEnable()
         {
-            damageShaderMaterial.SetFloat(damageIntensity,0);
+            damageShaderMaterial.SetFloat(damageIntensity, 0);
         }
 
         void OnDisable()
         {
-            damageShaderMaterial.SetFloat(damageIntensity,0);
+            damageShaderMaterial.SetFloat(damageIntensity, 0);
         }
 
         public void HitTaken()
         {
-           StopAllCoroutines();
-           damageShaderMaterial.SetFloat(damageIntensity,0);
-           damageRoutine = StartCoroutine(ShowHitShader());
+            StopAllCoroutines();
+            damageShaderMaterial.SetFloat(damageIntensity, 0);
+            StartCoroutine(ShowHitShader());
         }
 
         IEnumerator ShowHitShader()
@@ -51,9 +48,8 @@ namespace Scripts.Core.Visual
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }
-            damageShaderMaterial.SetFloat(damageIntensity,0);
-            damageRoutine = null;
+
+            damageShaderMaterial.SetFloat(damageIntensity, 0);
         }
-        
     }
 }

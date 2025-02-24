@@ -1,5 +1,4 @@
 using System.Collections;
-using DG.Tweening;
 using Scripts.Core.SceneHandler;
 using Scripts.Core.UI;
 using Scripts.Core.Visual;

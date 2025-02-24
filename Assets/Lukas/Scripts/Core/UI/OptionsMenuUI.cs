@@ -58,9 +58,8 @@ namespace Scripts.Core.UI
             sfxVolumeSliderValue.text = sfxVolumeSlider.value.ToString();
             musicVolumeSliderValue.text = musicVolumeSlider.value.ToString();
             voiceVolumeSliderValue.text = voiceVolumeSlider.value.ToString();
-            
-           
         }
+
         public void PushUpdateToAudioMixer()
         {
             audioMixer.SetFloat("MasterVolume", Remap(optionsSaveSO.MasterVolume, sliderMin, sliderMax, audioMin, audioMax));

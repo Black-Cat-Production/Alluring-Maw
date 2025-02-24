@@ -4,7 +4,5 @@
     {
         MainMenu,
         Game,
-        Artist_Level_Scene,
-        Artist_MainMenu_Scene
     }
 }

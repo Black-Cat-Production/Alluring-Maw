@@ -9,7 +9,7 @@ namespace Scripts.Core.Visual
 
         void FixedUpdate()
         {
-            if(mainParticleSystem == null || mainParticleSystem.isEmitting == false)
+            if (mainParticleSystem == null || mainParticleSystem.isEmitting == false)
                 Destroy(gameObject);
         }
     }

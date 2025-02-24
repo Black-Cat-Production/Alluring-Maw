@@ -16,11 +16,13 @@ namespace Scripts.Core.Skills.Behaviors
 
         [Header("Explosion Config")]
         [SerializeField] float explosionRange;
+
         [SerializeField] float explosionDamage;
         [SerializeField] VFXSpawner explosionVFX;
         public override string SpecificName => specificName;
 
         public override List<ESkillTag> Tags => tags;
+
         public override void Execute(SkillContext _context, ref int _totalDamage)
         {
             if (_context.Targets.Count > 0)
@@ -42,10 +44,7 @@ namespace Scripts.Core.Skills.Behaviors
                 .Where(_newTarget => _newTarget != null && !_newTarget.HealthSystemModule.IsDead)
                 .ToList();
 
-            foreach (var target in nearbyEnemies)
-            {
-                target.HealthSystemModule.TakeDamage(explosionDamage);
-            }
+            foreach (var target in nearbyEnemies) target.HealthSystemModule.TakeDamage(explosionDamage);
         }
     }
 }

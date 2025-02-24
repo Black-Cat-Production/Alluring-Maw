@@ -5,7 +5,7 @@ namespace Scripts.Core.KI
 {
     public class BossAttackState : AttackState
     {
-        int chosenAttackIndexIndex;
+        readonly int chosenAttackIndexIndex;
         static readonly int meleeAttack = Animator.StringToHash("MeleeAttack");
         static readonly int jumpAttack = Animator.StringToHash("JumpAttack");
 
@@ -45,13 +45,13 @@ namespace Scripts.Core.KI
 
         public override void Tick()
         {
-            if(!owner.InAttack) owner.TurnToTarget();
+            if (!owner.InAttack) owner.TurnToTarget();
         }
 
         protected override void DealDamage(HealthSystemModule _target)
         {
-            if(animator.GetBool(meleeAttack)) _target.TakeDamage(normalDamage);
-            if(animator.GetBool(jumpAttack)) _target.TakeDamage(heavyDamage);
+            if (animator.GetBool(meleeAttack)) _target.TakeDamage(normalDamage);
+            if (animator.GetBool(jumpAttack)) _target.TakeDamage(heavyDamage);
         }
     }
 }

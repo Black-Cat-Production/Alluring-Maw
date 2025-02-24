@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -17,7 +16,7 @@ namespace Scripts.Core.UI
         IEnumerator ShowTutorial()
         {
             OpenTutorialUI();
-            yield return new WaitForSeconds(timeToShowTutorial); 
+            yield return new WaitForSeconds(timeToShowTutorial);
             CloseTutorialUI();
         }
 

@@ -11,19 +11,17 @@ namespace Scripts.Core.Skills
         [SerializeField] string skillName;
         [SerializeField] List<ESkillTag> tags;
 
-        //why does this need to be SF? Otherwise, behavior adding does not work?
+        
         [SerializeField] protected List<SkillBehaviorSO> behaviors = new();
 
         [SerializeField] float manaCost;
         [SerializeField] protected float cooldown;
         [SerializeField] bool hasPreviewCast;
         [SerializeField] List<ESkillTag> defaultTags;
-        [SerializeField] Sprite skillSprite;
         public string SkillName => skillName;
         public float ManaCost => manaCost;
         public List<ESkillTag> Tags => tags;
         public bool HasPreviewCast => hasPreviewCast;
-        public Sprite SkillSprite => skillSprite;
 
         public float SkillCooldown => cooldown;
 
@@ -59,10 +57,7 @@ namespace Scripts.Core.Skills
         {
             behaviors.Clear();
             tags.Clear();
-            foreach (var defaultTag in defaultTags)
-            {
-                tags.Add(defaultTag);
-            }
+            foreach (var defaultTag in defaultTags) tags.Add(defaultTag);
         }
 
         public void StartCooldown()

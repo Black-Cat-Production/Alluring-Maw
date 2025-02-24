@@ -62,10 +62,9 @@ namespace Scripts.Program
 
             json = JsonConvert.SerializeObject(optionsSaveSO);
             File.WriteAllText(savePathOptions, json);
-
-            var serializedSkillTreeData = registry.SkillTreeNodesData.Select(JsonUtility.ToJson).ToList();
-            var testData = registry.SkillTreeNodesData.Select(_nodeDataSO => JsonConvert.SerializeObject(_nodeDataSO, Formatting.Indented)).ToList();
-            json = JsonConvert.SerializeObject(testData, Formatting.Indented);
+            
+            var treeNodeData = registry.SkillTreeNodesData.Select(_nodeDataSO => JsonConvert.SerializeObject(_nodeDataSO, Formatting.Indented)).ToList();
+            json = JsonConvert.SerializeObject(treeNodeData, Formatting.Indented);
             File.WriteAllText(savePathRegistry, json);
         }
 

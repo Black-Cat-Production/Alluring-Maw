@@ -10,7 +10,7 @@ namespace Scripts.Core.Skills.SkillTree
         [SerializeField] SkillTreeNodeDetailDisplayManager detailDisplayManager;
 
         AudioSource audioSource;
-        
+
         public SkillTreeNode CurrentSelectedNode { get; private set; }
 
         void Awake()
@@ -71,7 +71,7 @@ namespace Scripts.Core.Skills.SkillTree
 
         void NodeEndHover(SkillTreeNode _skillTreeNode)
         {
-            if(CurrentSelectedNode != null) UpdateDetailDisplay(true, CurrentSelectedNode);
+            if (CurrentSelectedNode != null) UpdateDetailDisplay(true, CurrentSelectedNode);
             else CloseNodeDetailPanel();
         }
 

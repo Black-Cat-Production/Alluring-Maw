@@ -11,7 +11,7 @@ namespace Scripts.Core.KI
         protected readonly int HashedIdle = Animator.StringToHash("IsIdle");
         protected readonly int HashedWalk = Animator.StringToHash("IsWalking");
         protected readonly int HashedDeath = Animator.StringToHash("IsDead");
-        
+
         protected AnimationState(Animator _animator)
         {
             animator = _animator;

@@ -14,7 +14,6 @@ namespace Scripts.Core.Skills.Behaviors
         [SerializeField] ESkillTag tagToChangeTo;
 
         [SerializeField] SkillBridgeUnity prefabToChange;
-        // VFX to change to
 
         [Header("OnSkillCast Config")]
         [SerializeField] SkillBridgeUnity prefabToCopyBehaviorFrom;
@@ -26,10 +25,7 @@ namespace Scripts.Core.Skills.Behaviors
         public override void Execute(SkillContext _context, ref int _totalDamage)
         {
             var copiedBehaviors = prefabToCopyBehaviorFrom.GetBehaviors();
-            foreach (var behavior in _context.Targets.SelectMany(_ => copiedBehaviors))
-            {
-                behavior.Execute(_context, ref _totalDamage);
-            }
+            foreach (var behavior in _context.Targets.SelectMany(_ => copiedBehaviors)) behavior.Execute(_context, ref _totalDamage);
         }
 
         public override void OnUnlockExecute()

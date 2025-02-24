@@ -5,9 +5,8 @@ namespace Scripts.Core.KI
     public class StateMachine
     {
         State currentState;
-        public State CurrentState => currentState;
-        GameObject agent;
-        bool debug;
+        readonly GameObject agent;
+        readonly bool debug;
 
         public StateMachine(State _startState, GameObject _agent, bool _debug)
         {

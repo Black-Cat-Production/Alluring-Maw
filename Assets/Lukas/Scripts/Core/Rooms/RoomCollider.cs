@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,10 +20,7 @@ namespace Scripts.Core.Rooms
 
         public void DisableTorches()
         {
-            foreach (var torchlight in torchFireParentObjects)
-            {
-                torchlight.gameObject.SetActive(false);
-            }
+            foreach (var torchlight in torchFireParentObjects) torchlight.gameObject.SetActive(false);
         }
     }
 }

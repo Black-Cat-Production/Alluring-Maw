@@ -18,7 +18,7 @@ namespace Scripts.Core.Visual
         [SerializeField] TutorialUI tutorialUI;
 
         public bool IsDoneBlackout { get; private set; }
-        
+
         void Awake()
         {
             mainUIObject.SetActive(false);
@@ -49,6 +49,7 @@ namespace Scripts.Core.Visual
                 colorAdjustments.colorFilter.Interp(startColor, endColor, t);
                 yield return null;
             }
+
             mainUIObject.SetActive(true);
             tutorialUI.StartTutorial();
         }
@@ -88,6 +89,7 @@ namespace Scripts.Core.Visual
                 colorAdjustments.colorFilter.Interp(endColor, startColor, t);
                 yield return null;
             }
+
             IsDoneBlackout = true;
         }
     }

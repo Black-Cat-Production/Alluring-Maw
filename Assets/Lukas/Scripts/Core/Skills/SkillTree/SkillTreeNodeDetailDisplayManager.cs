@@ -13,7 +13,7 @@ namespace Scripts.Core.Skills.SkillTree
 
         public void PopulateInformation(SkillTreeNode _node, bool _showButton)
         {
-            if(_node.IsStaticNode || _node.NodeData.Data.Status == ESkillNodeStatus.Disabled || _node.NodeData.Data.Status == ESkillNodeStatus.Locked || _node.NodeData.Data.Status == ESkillNodeStatus.Unlocked || !_showButton) unlockButton.gameObject.SetActive(false);
+            if (_node.IsStaticNode || _node.NodeData.Data.Status == ESkillNodeStatus.Disabled || _node.NodeData.Data.Status == ESkillNodeStatus.Locked || _node.NodeData.Data.Status == ESkillNodeStatus.Unlocked || !_showButton) unlockButton.gameObject.SetActive(false);
             else unlockButton.gameObject.SetActive(true);
             if (_node == null)
             {
@@ -29,6 +29,7 @@ namespace Scripts.Core.Skills.SkillTree
                 nodeCostValueField.color = Color.black;
                 return;
             }
+
             if (_node.NodeData.Data.Status == ESkillNodeStatus.Unlocked) nodeDescField.text = _node.NodeDescription + "  --UNLOCKED--  ";
             nodeCostValueField.text = _node.NodeData.Data.MemoryFragmentCost.ToString();
             if (_node.NodeData.Data.Status == ESkillNodeStatus.Unlocked)
@@ -36,6 +37,7 @@ namespace Scripts.Core.Skills.SkillTree
                 nodeCostValueField.color = Color.green;
                 return;
             }
+
             nodeCostValueField.color = !_node.IsUnlockableByCost() ? Color.red : Color.black;
         }
     }

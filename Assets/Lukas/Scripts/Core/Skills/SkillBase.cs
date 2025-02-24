@@ -44,20 +44,17 @@ namespace Scripts.Core.Skills
             var target = _context.Targets[0];
             target.HealthSystemModule.TakeDamage(totalDamage);
             target.CallHit(Tags, _hitPosition);
-            if (target.HealthSystemModule.IsDead)
-            {
-                _context.TriggerEnemyKilled(target);
-            }
+            if (target.HealthSystemModule.IsDead) _context.TriggerEnemyKilled(target);
         }
 
         public virtual void OnTriggerEnter(Collider _collider)
         {
-           
             if (_collider.gameObject.CompareTag("ProjectileKillBox"))
             {
                 Destroy(gameObject);
                 return;
             }
+
             if (_collider.gameObject.CompareTag("HitBox"))
             {
                 var target = _collider.gameObject.GetComponentInParent<EnemyAIModule>();

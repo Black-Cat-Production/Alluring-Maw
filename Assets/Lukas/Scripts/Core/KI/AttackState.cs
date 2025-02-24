@@ -1,5 +1,4 @@
-﻿using LL_Unity_Utils.Timers;
-using Scripts.Core.Modules;
+﻿using Scripts.Core.Modules;
 using UnityEngine;
 
 namespace Scripts.Core.KI
@@ -7,7 +6,6 @@ namespace Scripts.Core.KI
     public class AttackState : AnimationState
     {
         protected readonly EnemyAIModule owner;
-        protected float attackDamage;
 
         protected BossAIModule bossOwner;
         protected float normalDamage;
@@ -31,10 +29,7 @@ namespace Scripts.Core.KI
 
         protected virtual void DealDamage(HealthSystemModule _target)
         {
-            if (bossOwner == null)
-            {
-                _target.TakeDamage(owner.CurrentAttackDamage);
-            }
+            if (bossOwner == null) _target.TakeDamage(owner.CurrentAttackDamage);
         }
     }
 }

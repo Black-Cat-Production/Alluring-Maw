@@ -16,6 +16,7 @@ namespace Scripts.Core.Skills.Behaviors
         public override List<ESkillTag> Tags => tags;
 
         SkillContext savedContext;
+
         public override void Execute(SkillContext _context, ref int _totalDamage)
         {
             var effect = new Effect

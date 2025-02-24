@@ -4,7 +4,6 @@ using UnityEngine.AI;
 
 namespace Scripts.Core.KI
 {
-    //Add structure for AnimatedState -> Inherit from AnimatedState
     public class WalkToPointState : AnimationState
     {
         readonly NavMeshAgent agent;

@@ -16,7 +16,7 @@ namespace Scripts.Core.Skills
         SkillTreeManager skillTreeManager;
 
         public Action OnSkillGotCast;
-        
+
         void Awake()
         {
             foreach (var skill in availableSkills)
@@ -24,6 +24,7 @@ namespace Scripts.Core.Skills
                 skill.CooldownTimer = new Timer(skill.SkillCooldown);
                 Debug.Log($"Skill {skill.SkillName} was given a timer with a duration of {skill.SkillCooldown}");
             }
+
             skillController = GetComponent<SkillController>();
             skillController.SetSkill(availableSkills[0]);
             skillSelectionUI.UpdateSkillUI(0);

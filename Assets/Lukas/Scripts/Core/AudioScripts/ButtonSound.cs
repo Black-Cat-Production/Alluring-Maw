@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
-using NotImplementedException = System.NotImplementedException;
 
 namespace Scripts.Core.AudioScripts
 {
@@ -9,14 +8,15 @@ namespace Scripts.Core.AudioScripts
     {
         [SerializeField] AudioClip hoverSound;
         [SerializeField] AudioClip clickSound;
-        
-        AudioSource audioSource; 
+
+        AudioSource audioSource;
+
         void Awake()
         {
             audioSource = GetComponent<AudioSource>();
         }
 
-        public void OnPointerEnter(PointerEventData eventData)
+        public void OnPointerEnter(PointerEventData _eventData)
         {
             audioSource.Stop();
             audioSource.clip = hoverSound;

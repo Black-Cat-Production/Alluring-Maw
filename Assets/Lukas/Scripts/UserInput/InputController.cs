@@ -1,13 +1,10 @@
-using System;
 using System.Collections;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Scripts.Core;
 using Scripts.Core.AudioScripts;
 using Scripts.Core.Skills;
 using Scripts.Core.UI;
 using Scripts.Core.Visual;
 using Scripts.Program;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -24,7 +21,6 @@ namespace Scripts.UserInput
         SkillSelector skillSelector;
 
         float xRotation;
-
         float dashTime;
         float dashCooldownTimer;
 
@@ -53,8 +49,8 @@ namespace Scripts.UserInput
         public bool HasMoveInput => moveInput != Vector2.zero;
 
         Coroutine routine;
+
         static readonly int canRelease = Animator.StringToHash("CanRelease");
-        //static readonly int isHoldingSkill = Animator.StringToHash("isHoldingSkill");
         static readonly int cancelCasting = Animator.StringToHash("CancelCasting");
         static readonly int dash = Animator.StringToHash("Dash");
         static readonly int xDirection = Animator.StringToHash("XDirection");
@@ -193,26 +189,20 @@ namespace Scripts.UserInput
             {
                 isCastingSkill = true;
                 animator.SetBool(skillSelector.GetSelectedSkillTags().Contains(ESkillTag.Light) ? isHoldingSkillLight : isHoldingSkillDark, true);
-                //animator.SetBool(isHoldingSkill, true);
-                if(routine != null) StopCoroutine(routine);
+                if (routine != null) StopCoroutine(routine);
                 PushMaterialChange(false);
             }
 
             if (_callbackContext.phase != InputActionPhase.Canceled) return;
             animator.ResetTrigger(cancelCasting);
-            //animator.SetBool(isHoldingSkill, false);
             animator.SetBool(isHoldingSkillLight, false);
             animator.SetBool(isHoldingSkillDark, false);
-            //PushMaterialChange(true);
             routine = StartCoroutine(ReturnToDefaultMaterial());
         }
 
         IEnumerator ReturnToDefaultMaterial()
         {
-            while (!materialHandler.IsFinishedChangingUp())
-            {
-                yield return null;
-            }
+            while (!materialHandler.IsFinishedChangingUp()) yield return null;
             PushMaterialChange(true);
         }
 
@@ -226,9 +216,8 @@ namespace Scripts.UserInput
         {
             if (_callbackContext.phase != InputActionPhase.Started) return;
             pauseUI.TogglePauseUI();
-            
         }
-        
+
         public void ReturnToMainMenu()
         {
             GameManager.Instance.RetreatToMainMenu();

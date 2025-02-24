@@ -19,7 +19,7 @@ namespace Scripts.Core.Rooms
         List<EnemyAIModule> GetRandomList()
         {
             if (fallenAdventurerPrefabList.Count == 0) return enemyPrefabs;
-            var randomInt = Random.Range(0, 2);
+            int randomInt = Random.Range(0, 2);
             return randomInt == 0 ? enemyPrefabs : fallenAdventurerPrefabList;
         }
     }

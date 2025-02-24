@@ -24,7 +24,7 @@ namespace Scripts.Core.Skills
             CasterHealthModule = GameObject.Find("Player").GetComponent<HealthSystemModule>();
             OriginalSkill = _skill;
         }
-        
+
         public void TriggerEnemyKilled(EnemyAIModule _target)
         {
             OnEnemyKilled?.Invoke(_target);

@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using Scripts.UserInput;
 using UnityEngine;
@@ -32,11 +31,12 @@ namespace Scripts.Core.AudioScripts
                 while (inputController.HasMoveInput)
                 {
                     audioSource.clip = audioClips[Random.Range(0, audioClips.Length)];
-                    if(!audioSource.isPlaying)audioSource.Play();
+                    if (!audioSource.isPlaying) audioSource.Play();
                     yield return new WaitForSeconds(delayBetweenClips);
                 }
+
                 yield return new WaitForSeconds(0.1f);
-            }            
+            }
         }
     }
 }

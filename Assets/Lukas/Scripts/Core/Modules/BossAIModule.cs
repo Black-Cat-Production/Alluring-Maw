@@ -12,6 +12,7 @@ namespace Scripts.Core.Modules
     {
         [SerializeField] float normalAttackDamage;
         [SerializeField] float heavyAttackDamage;
+
         protected override void Awake()
         {
             CurrentAttackDamage = baseAttackDamage;
@@ -30,17 +31,17 @@ namespace Scripts.Core.Modules
             HealthSystemModule.RegisterEffectHandler(EffectType.DamageOverTimeScaling, new DamageOverTimeScalingHandler());
             var idleTimer = new Timer(idleDuration);
             despawnTimer = new Timer(durationTillDespawnAfterDeath);
-            
+
             idleState = new IdleState(idleTimer, animator);
             State chaseState = new WalkToPointState(agent, targetComponent, animator);
             State patrolState = new PatrolState(agent, idleTargetComponent, RecalculatePatrolPoint, animator);
-            State meleeAttackState = new BossAttackState(attackCollider, animator, this,0, normalAttackDamage, heavyAttackDamage);
+            State meleeAttackState = new BossAttackState(attackCollider, animator, this, 0, normalAttackDamage, heavyAttackDamage);
             State jumpAttackState = new BossAttackState(attackCollider, animator, this, 1, normalAttackDamage, heavyAttackDamage);
             State deathState = new DeathState(animator);
 
 
             stateMachine = new StateMachine(idleState, gameObject, true);
-            
+
             var anyToChase = new Transition(chaseState, FindTarget);
             var chaseToIdle = new Transition(idleState, () => !FindTarget());
             var chaseToMeleeAttack = new Transition(meleeAttackState, () => distanceToTarget < attackRange && GetRandomAttack() == 0);
@@ -50,25 +51,25 @@ namespace Scripts.Core.Modules
             var jumpToMeleeAttack = new Transition(meleeAttackState, () => !inAttack && distanceToTarget < attackRange && GetRandomAttack() == 0);
             var idleToPatrol = new Transition(patrolState, () => idleState.IsTimerFinished == true);
             var movingToIdle = new Transition(idleState, () => agent.remainingDistance < agent.stoppingDistance);
-            var anyToDeath = new Transition(deathState, (() => HealthSystemModule.IsDead == true));
-            
+            var anyToDeath = new Transition(deathState, () => HealthSystemModule.IsDead == true);
+
             idleState.AddTransition(anyToDeath);
             idleState.AddTransition(anyToChase);
             idleState.AddTransition(idleToPatrol);
-            
+
             chaseState.AddTransition(anyToDeath);
             chaseState.AddTransition(chaseToMeleeAttack);
             chaseState.AddTransition(chaseToJumpAttack);
             chaseState.AddTransition(chaseToIdle);
-            
+
             patrolState.AddTransition(anyToDeath);
             patrolState.AddTransition(anyToChase);
             patrolState.AddTransition(movingToIdle);
-            
+
             meleeAttackState.AddTransition(anyToDeath);
             meleeAttackState.AddTransition(anyAttackToChase);
             meleeAttackState.AddTransition(meleeToJumpAttack);
-            
+
             jumpAttackState.AddTransition(anyToDeath);
             jumpAttackState.AddTransition(anyAttackToChase);
             jumpAttackState.AddTransition(jumpToMeleeAttack);

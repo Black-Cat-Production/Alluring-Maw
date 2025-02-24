@@ -107,7 +107,7 @@ namespace Scripts.Core.Modules
             var attackToChase = new Transition(chaseState, () => distanceToTarget > attackRange && !inAttack);
             var idleToPatrol = new Transition(patrolState, () => idleState.IsTimerFinished == true);
             var movingToIdle = new Transition(idleState, () => agent.remainingDistance < agent.stoppingDistance);
-            var anyToDeath = new Transition(deathState, (() => HealthSystemModule.IsDead == true));
+            var anyToDeath = new Transition(deathState, () => HealthSystemModule.IsDead == true);
 
 
             idleState.AddTransition(anyToDeath);
@@ -132,7 +132,7 @@ namespace Scripts.Core.Modules
         {
             while (!HealthSystemModule.IsDead)
             {
-                if(!soundSystem.GetIsPlaying()) soundSystem.PlayIdleClip();
+                if (!soundSystem.GetIsPlaying()) soundSystem.PlayIdleClip();
                 yield return new WaitForSeconds(5);
             }
         }
@@ -140,9 +140,8 @@ namespace Scripts.Core.Modules
         void FixedUpdate()
         {
             if (HealthSystemModule.IsDead)
-            {
-                if (despawnTimer.CheckTimer()) Destroy(gameObject);
-            }
+                if (despawnTimer.CheckTimer())
+                    Destroy(gameObject);
 
             stateMachine.CheckSwapState();
         }
@@ -175,10 +174,7 @@ namespace Scripts.Core.Modules
             agent.ResetPath();
             agent.radius = 0;
             var hitBoxObject = GetComponentsInChildren<Collider>();
-            foreach (var hitBox in hitBoxObject)
-            {
-                hitBox.enabled = false;
-            }
+            foreach (var hitBox in hitBoxObject) hitBox.enabled = false;
         }
 
         int CalculateDrop()
@@ -242,6 +238,7 @@ namespace Scripts.Core.Modules
         {
             CurrentAttackDamage = baseAttackDamage + _newValue;
         }
+
         public void ResetAttackDamage()
         {
             CurrentAttackDamage = baseAttackDamage;
@@ -267,7 +264,7 @@ namespace Scripts.Core.Modules
         {
             inAttack = false;
         }
-        
+
         public void TurnToTarget()
         {
             agent.transform.LookAt(targetComponent.TargetPosition);

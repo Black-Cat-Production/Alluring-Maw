@@ -1,7 +1,5 @@
 ﻿using LL_Unity_Utils.Timers;
-using Scripts.Core.AudioScripts;
 using UnityEngine;
-using UnityEngine.AI;
 
 namespace Scripts.Core.KI
 {
@@ -9,7 +7,7 @@ namespace Scripts.Core.KI
     {
         readonly Timer timer;
         public bool IsTimerFinished;
- 
+
         public IdleState(Timer _timer, Animator _animator) : base(_animator)
         {
             timer = _timer;

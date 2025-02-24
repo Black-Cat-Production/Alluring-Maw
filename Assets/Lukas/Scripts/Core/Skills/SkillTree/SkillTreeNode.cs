@@ -11,8 +11,8 @@ namespace Scripts.Core.Skills.SkillTree
         [SerializeField] string nodeName;
         [TextArea] [SerializeField] string description;
         [SerializeField] Image connectionToNode;
-        
-        
+
+
         public string NodeDescription => description;
         public string NodeName => nodeName;
         public SkillTreeNodeDataSO NodeData => nodeData;

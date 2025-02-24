@@ -10,10 +10,7 @@ namespace Scripts.Core.KI
 
         void OnTriggerEnter(Collider _target)
         {
-            if (_target.TryGetComponent(out HealthSystemModule healthSystemModule))
-            {
-                OnHit.Invoke(healthSystemModule);
-            }
+            if (_target.TryGetComponent(out HealthSystemModule healthSystemModule)) OnHit.Invoke(healthSystemModule);
         }
     }
 }

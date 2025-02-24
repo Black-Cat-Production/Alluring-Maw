@@ -1,4 +1,3 @@
-using System;
 using Scripts.Core.Events;
 using UnityEngine;
 
@@ -8,7 +7,7 @@ namespace Scripts.Core.UI
     {
         [SerializeField] Canvas pauseUICanvas;
         [SerializeField] NotifyEvent notifyPause;
-        
+
         public void TogglePauseUI()
         {
             notifyPause.Invoke(!GameManager.Instance.IsPaused);

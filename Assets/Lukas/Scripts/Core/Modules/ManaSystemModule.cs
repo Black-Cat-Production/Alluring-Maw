@@ -18,12 +18,10 @@ namespace Scripts.Core.Modules
             get => currentMana;
             private set
             {
-                if (value != currentMana)
-                {
-                    OnManaChanged.Invoke(value, MaximumMana);
-                    Debug.Log("Updated Mana");
-                    currentMana = value;
-                }
+                if (value == currentMana) return;
+                OnManaChanged.Invoke(value, MaximumMana);
+                Debug.Log("Updated Mana");
+                currentMana = value;
             }
         }
 

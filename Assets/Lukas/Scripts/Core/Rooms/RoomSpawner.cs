@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using Scripts.Core.AnimationScripts;
 using Scripts.Core.Modules;
 using Scripts.Core.Visual;
-using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -20,28 +19,26 @@ namespace Scripts.Core.Rooms
 
         [Header("Boss Room Additional Configuration")]
         [SerializeField] EnemyListSO additionalEnemyList;
+
         [SerializeField] float additionalSpawnAmount;
 
         List<EnemyAIModule> spawnedEnemies;
+        
+        bool alreadyEntered;
+        RoomCollider sideEnteredFrom;
 
         //Tracker Events
         public static Action<RoomSpawner> OnRoomEnter;
         public static Action OnEnemyKilled;
         public static Action OnRoomCleared;
 
-        bool alreadyEntered;
-
-        RoomCollider sideEnteredFrom;
 
         void Start()
         {
             spawnedEnemies = new List<EnemyAIModule>();
             for (int i = 0; i < spawnAmount; i++) spawnedEnemies.Add(SpawnEnemy(enemyList));
             if (additionalEnemyList == null) return;
-            for (int i = 0; i < additionalSpawnAmount; i++)
-            {
-                spawnedEnemies.Add(SpawnEnemy(additionalEnemyList));
-            }
+            for (int i = 0; i < additionalSpawnAmount; i++) spawnedEnemies.Add(SpawnEnemy(additionalEnemyList));
         }
 
         EnemyAIModule SpawnEnemy(EnemyListSO _enemyListSO)
@@ -79,26 +76,17 @@ namespace Scripts.Core.Rooms
 
         void SetAllEnemiesAggro()
         {
-            foreach (var enemy in spawnedEnemies)
-            {
-                enemy.AllowedAggro = true;
-            }
+            foreach (var enemy in spawnedEnemies) enemy.AllowedAggro = true;
         }
 
         void OpenDoors()
         {
-            foreach (var door in doors)
-            {
-                door.Open();
-            }
+            foreach (var door in doors) door.Open();
         }
 
         void CloseDoors()
         {
-            foreach (var door in doors)
-            {
-                door.Close();
-            }
+            foreach (var door in doors) door.Close();
         }
 
         public void SetSideEnteredFrom(RoomCollider _roomCollider)

@@ -25,20 +25,14 @@ namespace Scripts.Core.UI
             UpdateHeartDisplay();
         }
 
-        void UpdateHeartDisplay()        {
-
+        void UpdateHeartDisplay()
+        {
             int currentHearts = (int)playerHealthSystem.CurrentHealth;
             int maxHearts = (int)playerHealthSystem.MaxHealth;
-            
-            for (int i = 0; i < currentHearts; i++)
-            {
-                hearts[i].sprite = fullHeart;
-            }
 
-            for (int i = currentHearts; i < maxHearts; i++)
-            {
-                hearts[i].sprite = emptyHeart;
-            }
+            for (int i = 0; i < currentHearts; i++) hearts[i].sprite = fullHeart;
+
+            for (int i = currentHearts; i < maxHearts; i++) hearts[i].sprite = emptyHeart;
         }
     }
 }

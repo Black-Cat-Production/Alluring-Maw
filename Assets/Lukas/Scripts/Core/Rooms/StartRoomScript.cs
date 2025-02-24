@@ -26,7 +26,7 @@ namespace Scripts.Core.Rooms
             isTriggered = true;
             _playerInput.DeactivateInput();
             var startRotation = _playerInput.gameObject.transform.rotation;
-            var direction = (transform.position + Vector3.up) - _playerInput.gameObject.transform.position;
+            var direction = transform.position + Vector3.up - _playerInput.gameObject.transform.position;
             var targetRotation = Quaternion.LookRotation(direction);
             float elapsedTime = 0f;
             while (elapsedTime < cameraBlendDuration)

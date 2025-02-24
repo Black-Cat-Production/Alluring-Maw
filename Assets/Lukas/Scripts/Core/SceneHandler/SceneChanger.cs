@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using Scripts.Core.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -15,12 +14,12 @@ namespace Scripts.Core.SceneHandler
         [SerializeField] Transform checkpoint2;
 
         [SerializeField] PresentTexts presentIntroText;
-        
+
         [SerializeField] AudioClip startButtonSound;
         [SerializeField] AudioClip transitionSound;
         [SerializeField] AudioSource bgmSource;
         AudioSource audioSource;
-        
+
         AsyncOperation loadRoutine;
         Camera mainMenuCamera;
         Vector3 startPoint;
@@ -28,7 +27,8 @@ namespace Scripts.Core.SceneHandler
         void Awake()
         {
             mainMenuCamera = Camera.main;
-            startPoint = mainMenuCamera.transform.position; audioSource = GetComponent<AudioSource>();
+            if (mainMenuCamera != null) startPoint = mainMenuCamera.transform.position;
+            audioSource = GetComponent<AudioSource>();
         }
 
         public void LoadScene()
@@ -38,7 +38,6 @@ namespace Scripts.Core.SceneHandler
 
         public void LoadWithCameraPathing()
         {
-            
             audioSource.Stop();
             audioSource.clip = startButtonSound;
             audioSource.Play();
@@ -47,11 +46,12 @@ namespace Scripts.Core.SceneHandler
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
+
         IEnumerator StartLoadWithCamera()
         {
             float minDuration = 2f;
             float timer = 0f;
-            
+
             while (timer < minDuration)
             {
                 timer += Time.deltaTime;
@@ -59,9 +59,9 @@ namespace Scripts.Core.SceneHandler
                 mainMenuCamera.transform.position = Vector3.Lerp(startPoint, checkpoint1.transform.position, t);
                 bgmSource.volume = Mathf.Lerp(0.5f, 0, t);
             }
-            
+
             timer = 0f;
-            
+
             loadRoutine = SceneManager.LoadSceneAsync((int)EScenes.Game);
             loadRoutine.allowSceneActivation = false;
             while (timer < minDuration || loadRoutine.progress > 0.9f)
@@ -73,9 +73,11 @@ namespace Scripts.Core.SceneHandler
                 {
                     audioSource.clip = transitionSound;
                     audioSource.Play();
-                } 
+                }
+
                 yield return null;
             }
+
             presentIntroText.PresentIntroText(loadRoutine);
         }
     }

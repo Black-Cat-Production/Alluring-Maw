@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using Scripts.Core.Events;
-using Scripts.Core.Rooms;
 using Scripts.Core.SceneHandler;
 using Scripts.Core.Skills;
 using Scripts.Core.System;
@@ -30,9 +29,9 @@ namespace Scripts.Core
         public int DamageTakenScore { get; private set; }
 
         public bool FinishedLoading { get; private set; }
-        
+
         public bool IsPaused { get; private set; }
-        
+
         void Awake()
         {
             if (Instance == null)

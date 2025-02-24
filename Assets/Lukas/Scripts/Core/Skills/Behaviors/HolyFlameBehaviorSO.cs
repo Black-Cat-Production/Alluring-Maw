@@ -13,6 +13,7 @@ namespace Scripts.Core.Skills.Behaviors
         public override string SpecificName => specificName;
 
         public override List<ESkillTag> Tags => tags;
+
         public override void Execute(SkillContext _context, ref int _totalDamage)
         {
             _totalDamage = 0;

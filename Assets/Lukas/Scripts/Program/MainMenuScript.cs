@@ -16,7 +16,7 @@ namespace Scripts.Program
         [SerializeField] TextMeshProUGUI nameValue;
         [SerializeField] NotifyEvent notifyEvent;
         [SerializeField] OptionsMenuUI optionsMenuUI;
-        
+
         IEnumerator Start()
         {
             Screen.SetResolution(1920, 1080, true);

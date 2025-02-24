@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -14,6 +13,7 @@ namespace Scripts.Core.AudioScripts
 
         [Header("AudioSettings")]
         [SerializeField] float minAudioPitch;
+
         [SerializeField] float maxAudioPitch;
 
         [Header("Optional Walk Sounds")]
@@ -21,9 +21,10 @@ namespace Scripts.Core.AudioScripts
 
         [Header("Experimental Sound Settings")]
         [SerializeField] bool useExperimentalSettings;
+
         [SerializeField] AudioSource audioSource2;
         int currentAudioSourceToPlayAt;
-        
+
         public void PlayIdleClip()
         {
             if (idleClips.Length == 0) return;
@@ -63,12 +64,13 @@ namespace Scripts.Core.AudioScripts
                         break;
                     default:
                     {
-                        if(!audioSource2.isPlaying)
+                        if (!audioSource2.isPlaying)
                         {
                             audioSource2.clip = _clip;
                             audioSource2.pitch = GetRandomPitch();
                             audioSource2.Play();
                         }
+
                         break;
                     }
                 }

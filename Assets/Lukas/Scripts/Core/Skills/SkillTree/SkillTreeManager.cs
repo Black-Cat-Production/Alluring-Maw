@@ -65,8 +65,8 @@ namespace Scripts.Core.Skills.SkillTree
                     playerSkill.AddBehavior(behavior);
                     _skillTreeNodeData.Data.ChangeStatus(ESkillNodeStatus.Unlocked);
                 }
-            
-            if(_skillTreeNodeData.Data.HasOnUnlockExecution) _skillTreeNodeData.Data.Behavior.OnUnlockExecute();
+
+            if (_skillTreeNodeData.Data.HasOnUnlockExecution) _skillTreeNodeData.Data.Behavior.OnUnlockExecute();
 
             UpdateTree();
         }
@@ -76,7 +76,7 @@ namespace Scripts.Core.Skills.SkillTree
             //First Foreach checks every node that is not unlocked, if the prerequisites are met to be able to be unlocked
             //Second Foreach checks every node that is not unlocked, if any of the nodes configured as "exclusive" are unlocked, and locks it accordingly
             foreach (var node in nodeRegistry.SkillTreeNodesData.Where(_node => _node.Data.Status != ESkillNodeStatus.Unlocked)) node.Data.ChangeStatus(node.Data.Prerequisites.TrueForAll((_node) => _node.Data.Status == ESkillNodeStatus.Unlocked) ? ESkillNodeStatus.Unlockable : ESkillNodeStatus.Locked);
-            foreach (var node in nodeRegistry.SkillTreeNodesData.Where(_node => _node.Data.Status != ESkillNodeStatus.Unlocked)) node.Data.ChangeStatus(node.Data.Exclusives.Any((_node => _node.Data.Status == ESkillNodeStatus.Unlocked )) ? ESkillNodeStatus.Locked : ESkillNodeStatus.Unlockable);
+            foreach (var node in nodeRegistry.SkillTreeNodesData.Where(_node => _node.Data.Status != ESkillNodeStatus.Unlocked)) node.Data.ChangeStatus(node.Data.Exclusives.Any(_node => _node.Data.Status == ESkillNodeStatus.Unlocked) ? ESkillNodeStatus.Locked : ESkillNodeStatus.Unlockable);
         }
 
         void BuildSkillTree()
@@ -91,7 +91,7 @@ namespace Scripts.Core.Skills.SkillTree
 
             if (loadedNodes) return;
             Debug.Log("No saved tree found!");
-            foreach (var node in nodeRegistry.SkillTreeNodesData){ node.Data.ChangeStatus(node.Data.Prerequisites.Count == 0 ? ESkillNodeStatus.Unlockable : ESkillNodeStatus.Locked);}
+            foreach (var node in nodeRegistry.SkillTreeNodesData) node.Data.ChangeStatus(node.Data.Prerequisites.Count == 0 ? ESkillNodeStatus.Unlockable : ESkillNodeStatus.Locked);
         }
 
         public void ResetSkillTree()

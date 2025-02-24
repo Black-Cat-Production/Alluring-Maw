@@ -1,7 +1,5 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,19 +14,13 @@ namespace Scripts.Core.UI
 
         void Awake()
         {
-            foreach (var cooldownImage in skillCooldownImages)
-            {
-                cooldownImage.fillAmount = 0;
-            }
+            foreach (var cooldownImage in skillCooldownImages) cooldownImage.fillAmount = 0;
         }
 
 
         public void UpdateSkillUI(int _index)
         {
-            foreach (var frame in skillFrames)
-            {
-                frame.sprite = unselectedFrame;
-            }
+            foreach (var frame in skillFrames) frame.sprite = unselectedFrame;
             skillFrames[_index].sprite = selectedFrame;
         }
 

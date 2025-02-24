@@ -87,7 +87,7 @@ namespace Scripts.Core.Tracker
 
         void RoomCleared()
         {
-            if(currentRoomDamageTaken == 0) currentRoom.FlawlessRoomTrigger();
+            if (currentRoomDamageTaken == 0) currentRoom.FlawlessRoomTrigger();
         }
 
         void CountUpEnemiesKilled()

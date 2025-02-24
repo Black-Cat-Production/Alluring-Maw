@@ -32,6 +32,7 @@ namespace Scripts.Core.Skills
             {
                 context.Targets = null;
             }
+
             var collidingPoint = _collider.ClosestPointOnBounds(transform.position);
             Use(context, collidingPoint);
         }
@@ -39,13 +40,9 @@ namespace Scripts.Core.Skills
         public void SpawnVFX(Vector3 _position)
         {
             if (Tags.Contains(ESkillTag.Dark))
-            {
                 darkVFXSpawner.Spawn(_position);
-            }
             else
-            {
                 lightVFXSpawner.Spawn(_position);
-            }
         }
     }
 }
