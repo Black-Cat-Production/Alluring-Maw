@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Scripts.Core;
+using Scripts.Core.AudioScripts;
 using Scripts.Core.Skills;
 using Scripts.Core.UI;
 using Scripts.Core.Visual;
@@ -40,6 +41,7 @@ namespace Scripts.UserInput
         [SerializeField] PauseUI pauseUI;
         [SerializeField] OptionsSaveSO optionsSaveSO;
         [SerializeField] float idleWalkBlendTime;
+        [SerializeField] PlayerSkillAudio skillAudio;
 
 
         [SerializeField] MaterialHandler materialHandler;
@@ -141,7 +143,7 @@ namespace Scripts.UserInput
         public void Dash(InputAction.CallbackContext _callbackContext)
         {
             if (!_callbackContext.started || !(dashCooldownTimer <= 0)) return;
-            if (animator.GetCurrentAnimatorStateInfo(0).IsName("SkillHoldState"))
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("SkillHoldStateLIGHT") || animator.GetCurrentAnimatorStateInfo(0).IsName("SkillHoldStateDARK"))
             {
                 animator.SetBool(canRelease, false);
                 animator.SetBool(isHoldingSkillLight, false);
@@ -161,6 +163,7 @@ namespace Scripts.UserInput
             dashTime = dashDuration;
             dashCooldownTimer = dashCooldown;
             playerRigidbody.AddForce(dashDirection * dashForce, ForceMode.Impulse);
+            skillAudio.PlayDashAudio();
         }
 
         public void ChangeSkill(InputAction.CallbackContext _callbackContext)

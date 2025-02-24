@@ -9,9 +9,12 @@ namespace Scripts.Core.KI
         static readonly int meleeAttack = Animator.StringToHash("MeleeAttack");
         static readonly int jumpAttack = Animator.StringToHash("JumpAttack");
 
-        public BossAttackState(AttackCollider _attackCollider, Animator _animator, EnemyAIModule _owner, int _attackIndex) : base(_attackCollider, _animator, _owner)
+        public BossAttackState(AttackCollider _attackCollider, Animator _animator, BossAIModule _owner, int _attackIndex, float _normalDamage, float _heavyDamage) : base(_attackCollider, _animator, _owner)
         {
             chosenAttackIndexIndex = _attackIndex;
+            bossOwner = _owner;
+            normalDamage = _normalDamage;
+            heavyDamage = _heavyDamage;
         }
 
         public override void StateEnter()
@@ -43,6 +46,12 @@ namespace Scripts.Core.KI
         public override void Tick()
         {
             if(!owner.InAttack) owner.TurnToTarget();
+        }
+
+        protected override void DealDamage(HealthSystemModule _target)
+        {
+            if(animator.GetBool(meleeAttack)) _target.TakeDamage(normalDamage);
+            if(animator.GetBool(jumpAttack)) _target.TakeDamage(heavyDamage);
         }
     }
 }

@@ -13,11 +13,14 @@ namespace Scripts.Core.Rooms
     public class RoomSpawner : MonoBehaviour
     {
         [SerializeField] EnemyListSO enemyList;
-
         [SerializeField] int spawnAmount;
         [SerializeField] List<Door> doors;
         [SerializeField] float spawnRadius = 5f;
         [SerializeField] GoodJobArm goodJobArm;
+
+        [Header("Boss Room Additional Configuration")]
+        [SerializeField] EnemyListSO additionalEnemyList;
+        [SerializeField] float additionalSpawnAmount;
 
         List<EnemyAIModule> spawnedEnemies;
 
@@ -33,15 +36,20 @@ namespace Scripts.Core.Rooms
         void Start()
         {
             spawnedEnemies = new List<EnemyAIModule>();
-            for (int i = 0; i < spawnAmount; i++) spawnedEnemies.Add(SpawnEnemy());
+            for (int i = 0; i < spawnAmount; i++) spawnedEnemies.Add(SpawnEnemy(enemyList));
+            if (additionalEnemyList == null) return;
+            for (int i = 0; i < additionalSpawnAmount; i++)
+            {
+                spawnedEnemies.Add(SpawnEnemy(additionalEnemyList));
+            }
         }
 
-        EnemyAIModule SpawnEnemy()
+        EnemyAIModule SpawnEnemy(EnemyListSO _enemyListSO)
         {
             var randomPos = Random.insideUnitSphere * spawnRadius;
             var instantiatePos = new Vector3(randomPos.x, 0, randomPos.z);
             instantiatePos += new Vector3(transform.position.x, 0, transform.position.z);
-            var spawnedEnemy = Instantiate(enemyList.GetRandomModuleFromList(), instantiatePos, Quaternion.identity);
+            var spawnedEnemy = Instantiate(_enemyListSO.GetRandomModuleFromList(), instantiatePos, Quaternion.identity);
             spawnedEnemy.SetSpawner(this);
             return spawnedEnemy;
         }

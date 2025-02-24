@@ -38,6 +38,7 @@ namespace Scripts.Core.Rooms
 
             _playerAnimator.SetTrigger("Inspect");
             yield return new WaitForSeconds(5.5f);
+            _playerInput.gameObject.transform.rotation = startRotation;
             _playerInput.ActivateInput();
             mainUIObject.SetActive(true);
             GetComponent<Door>().Open();

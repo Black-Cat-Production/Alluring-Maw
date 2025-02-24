@@ -18,6 +18,7 @@ namespace Scripts.Core.SceneHandler
         
         [SerializeField] AudioClip startButtonSound;
         [SerializeField] AudioClip transitionSound;
+        [SerializeField] AudioSource bgmSource;
         AudioSource audioSource;
         
         AsyncOperation loadRoutine;
@@ -56,6 +57,7 @@ namespace Scripts.Core.SceneHandler
                 timer += Time.deltaTime;
                 float t = Mathf.Clamp01(timer / minDuration);
                 mainMenuCamera.transform.position = Vector3.Lerp(startPoint, checkpoint1.transform.position, t);
+                bgmSource.volume = Mathf.Lerp(0.5f, 0, t);
             }
             
             timer = 0f;

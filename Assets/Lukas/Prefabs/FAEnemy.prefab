@@ -37,7 +37,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 991531559062628934}
-  - {fileID: 907628355670711524}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6853695117909557899
@@ -109,8 +108,8 @@ MonoBehaviour:
   attackRange: 2
   baseAttackDamage: 1
   baseMoveSpeed: 1
-  memoryFragmentDropMin: 1
-  memoryFragmentDropMax: 5
+  memoryFragmentDropMin: 0
+  memoryFragmentDropMax: 1
   lightHit: {fileID: 11400000, guid: a0ebf168a30b8284aabacea7c8c5b3ea, type: 2}
   darkHit: {fileID: 11400000, guid: 2f15d5ad78a579c419883bad73cadad9, type: 2}
   durationTillDespawnAfterDeath: 5
@@ -402,77 +401,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 2, z: 0.7}
   m_Center: {x: 0, y: 0.9, z: 0}
---- !u!1001 &1189864323574486625
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1582573521242628459}
-    m_Modifications:
-    - target: {fileID: 1679953501044740159, guid: 1ba6a38d7f8e25e43828c374e21ae08d,
-        type: 3}
-      propertyPath: m_Name
-      value: Fallenadventurer_001 Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 2025410792282802821, guid: 1ba6a38d7f8e25e43828c374e21ae08d,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2025410792282802821, guid: 1ba6a38d7f8e25e43828c374e21ae08d,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2025410792282802821, guid: 1ba6a38d7f8e25e43828c374e21ae08d,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2025410792282802821, guid: 1ba6a38d7f8e25e43828c374e21ae08d,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2025410792282802821, guid: 1ba6a38d7f8e25e43828c374e21ae08d,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2025410792282802821, guid: 1ba6a38d7f8e25e43828c374e21ae08d,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2025410792282802821, guid: 1ba6a38d7f8e25e43828c374e21ae08d,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2025410792282802821, guid: 1ba6a38d7f8e25e43828c374e21ae08d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2025410792282802821, guid: 1ba6a38d7f8e25e43828c374e21ae08d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2025410792282802821, guid: 1ba6a38d7f8e25e43828c374e21ae08d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1ba6a38d7f8e25e43828c374e21ae08d, type: 3}
---- !u!4 &907628355670711524 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2025410792282802821, guid: 1ba6a38d7f8e25e43828c374e21ae08d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1189864323574486625}
-  m_PrefabAsset: {fileID: 0}

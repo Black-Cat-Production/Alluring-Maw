@@ -7,6 +7,11 @@ namespace Scripts.Core.KI
     public class AttackState : AnimationState
     {
         protected readonly EnemyAIModule owner;
+        protected float attackDamage;
+
+        protected BossAIModule bossOwner;
+        protected float normalDamage;
+        protected float heavyDamage;
 
         public AttackState(AttackCollider _attackCollider, Animator _animator, EnemyAIModule _owner) : base(_animator)
         {
@@ -24,9 +29,12 @@ namespace Scripts.Core.KI
             animator.SetBool(HashedAttack, false);
         }
 
-        void DealDamage(HealthSystemModule _target)
+        protected virtual void DealDamage(HealthSystemModule _target)
         {
-            _target.TakeDamage(owner.CurrentAttackDamage);
+            if (bossOwner == null)
+            {
+                _target.TakeDamage(owner.CurrentAttackDamage);
+            }
         }
     }
 }

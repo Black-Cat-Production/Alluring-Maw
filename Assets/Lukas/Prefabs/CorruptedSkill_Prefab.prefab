@@ -129,8 +129,8 @@ MonoBehaviour:
   skillName: Corruption Orb
   tags: 04000000
   behaviors: []
-  manaCost: 22
-  cooldown: 1
+  manaCost: 12
+  cooldown: 4
   hasPreviewCast: 0
   defaultTags: 04000000
   skillSprite: {fileID: 21300000, guid: 3ae6f862b336d93469d8e559887f2140, type: 3}

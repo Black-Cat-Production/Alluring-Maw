@@ -76,14 +76,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: Default Attack
-  tags: 
+  tags: 04000000
   behaviors: []
   manaCost: 0
+  cooldown: 0
   hasPreviewCast: 0
   defaultTags: 04000000
   skillSprite: {fileID: 0}
   despawnTimerDuration: 5
-  baseSkillHitDamage: 5
+  baseSkillHitDamage: 2
   obstructionLayer:
     serializedVersion: 2
     m_Bits: 64

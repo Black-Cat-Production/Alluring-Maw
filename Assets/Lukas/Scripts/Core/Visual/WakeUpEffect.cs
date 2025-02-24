@@ -47,7 +47,6 @@ namespace Scripts.Core.Visual
                 timer += Time.deltaTime;
                 float t = timer / lerpDuration;
                 colorAdjustments.colorFilter.Interp(startColor, endColor, t);
-                Debug.Log(t);
                 yield return null;
             }
             mainUIObject.SetActive(true);
@@ -62,7 +61,6 @@ namespace Scripts.Core.Visual
                 timer += Time.deltaTime;
                 float t = timer / lerpDuration;
                 bgmSource.volume = Mathf.Lerp(0f, 0.5f, t);
-                Debug.Log(t);
                 yield return null;
             }
         }
@@ -75,7 +73,6 @@ namespace Scripts.Core.Visual
                 timer += Time.deltaTime;
                 float t = timer / lerpDuration;
                 bgmSource.volume = Mathf.Lerp(0.5f, 0, t);
-                Debug.Log(t);
                 yield return null;
             }
         }
@@ -89,7 +86,6 @@ namespace Scripts.Core.Visual
                 timer += Time.deltaTime;
                 float t = timer / lerpDuration;
                 colorAdjustments.colorFilter.Interp(endColor, startColor, t);
-                Debug.Log(t);
                 yield return null;
             }
             IsDoneBlackout = true;

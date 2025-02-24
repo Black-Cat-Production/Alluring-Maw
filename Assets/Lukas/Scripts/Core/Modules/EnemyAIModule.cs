@@ -169,6 +169,16 @@ namespace Scripts.Core.Modules
             OnDeathEvent.Invoke(CalculateDrop());
             OnDeathEffectEvent.Invoke(transform.position);
             despawnTimer.StartTimer();
+            var foundCollider = GetComponent<Collider>();
+            foundCollider.enabled = false;
+            attackCollider.enabled = false;
+            agent.ResetPath();
+            agent.radius = 0;
+            var hitBoxObject = GetComponentsInChildren<Collider>();
+            foreach (var hitBox in hitBoxObject)
+            {
+                hitBox.enabled = false;
+            }
         }
 
         int CalculateDrop()

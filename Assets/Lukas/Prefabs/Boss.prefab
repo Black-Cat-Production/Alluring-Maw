@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ae9a864e5a248a4918584e31aefdf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 50
   OnDeathEvent:
     m_PersistentCalls:
       m_Calls:
@@ -197,8 +197,8 @@ MonoBehaviour:
   attackRange: 3
   baseAttackDamage: 0
   baseMoveSpeed: 1.7
-  memoryFragmentDropMin: 25
-  memoryFragmentDropMax: 30
+  memoryFragmentDropMin: 1
+  memoryFragmentDropMax: 3
   lightHit: {fileID: 11400000, guid: a0ebf168a30b8284aabacea7c8c5b3ea, type: 2}
   darkHit: {fileID: 11400000, guid: 2f15d5ad78a579c419883bad73cadad9, type: 2}
   durationTillDespawnAfterDeath: 20
@@ -220,6 +220,8 @@ MonoBehaviour:
   OnDeathEffectEvent:
     m_PersistentCalls:
       m_Calls: []
+  normalAttackDamage: 1
+  heavyAttackDamage: 4
 --- !u!195 &7491658064171084036
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -354,7 +356,9 @@ MonoBehaviour:
   idleClips:
   - {fileID: 8300000, guid: 0768b1dc7a20bb84fbb0931ad6a3ca5a, type: 3}
   - {fileID: 8300000, guid: 16dfa84fceb5e6a41824e12a01cff832, type: 3}
-  damageClips: []
+  damageClips:
+  - {fileID: 8300000, guid: 8da01e8f1d232fb4f9753d6fc91d1d36, type: 3}
+  - {fileID: 8300000, guid: 158db5af3f755124aa684cc85e92cfb7, type: 3}
   attackClips:
   - {fileID: 8300000, guid: 7a707e216acf7de42a2773e91b691a35, type: 3}
   audioSource: {fileID: 3637367432099633213}

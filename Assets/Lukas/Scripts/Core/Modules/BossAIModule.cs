@@ -10,6 +10,8 @@ namespace Scripts.Core.Modules
 {
     public class BossAIModule : EnemyAIModule
     {
+        [SerializeField] float normalAttackDamage;
+        [SerializeField] float heavyAttackDamage;
         protected override void Awake()
         {
             CurrentAttackDamage = baseAttackDamage;
@@ -32,8 +34,8 @@ namespace Scripts.Core.Modules
             idleState = new IdleState(idleTimer, animator);
             State chaseState = new WalkToPointState(agent, targetComponent, animator);
             State patrolState = new PatrolState(agent, idleTargetComponent, RecalculatePatrolPoint, animator);
-            State meleeAttackState = new BossAttackState(attackCollider, animator, this,0);
-            State jumpAttackState = new BossAttackState(attackCollider, animator, this, 1);
+            State meleeAttackState = new BossAttackState(attackCollider, animator, this,0, normalAttackDamage, heavyAttackDamage);
+            State jumpAttackState = new BossAttackState(attackCollider, animator, this, 1, normalAttackDamage, heavyAttackDamage);
             State deathState = new DeathState(animator);
 
 

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   specificName: Corruption Orb
   tags: 
-  explosionDamage: 5
+  explosionDamage: 4
   explosionRange: 5
   explosionVFX: {fileID: 11400000, guid: a16bf28d83221b9439296fd902dcbad7, type: 2}
   savedContextEffect: {fileID: 11400000, guid: 6a1595061d3363240b60986e49d254b2, type: 2}

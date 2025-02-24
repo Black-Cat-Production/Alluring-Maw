@@ -22,6 +22,7 @@ namespace Scripts.Core.Rooms
             if (!_collider.gameObject.CompareTag("Player") || isTriggered) return;
             var playerInput = _collider.gameObject.GetComponent<PlayerInput>();
             StartCoroutine(PlayEndGameCutscene(playerInput));
+            GameManager.Instance.TriggerWin();
         }
 
         IEnumerator PlayEndGameCutscene(PlayerInput _playerInput)

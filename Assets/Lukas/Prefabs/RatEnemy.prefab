@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ae9a864e5a248a4918584e31aefdf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 6
   OnDeathEvent:
     m_PersistentCalls:
       m_Calls:
@@ -70,7 +70,19 @@ MonoBehaviour:
         m_CallState: 2
   OnHitTaken:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6186800809471308051}
+        m_TargetAssemblyTypeName: Scripts.Core.AudioScripts.EnemySoundSystem, Assembly-CSharp
+        m_MethodName: PlayDamageClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   isBoss: 0
 --- !u!114 &1658898378407204153
 MonoBehaviour:
@@ -92,13 +104,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   idleDuration: 0.75
-  PatrolRange: 5
-  PatrolPointDistanceThreshhold: 1.8
+  PatrolRange: 10
+  PatrolPointDistanceThreshhold: 3
   attackRange: 1
   baseAttackDamage: 1
   baseMoveSpeed: 3.5
-  memoryFragmentDropMin: 1
-  memoryFragmentDropMax: 2
+  memoryFragmentDropMin: 0
+  memoryFragmentDropMax: 0
   lightHit: {fileID: 11400000, guid: a0ebf168a30b8284aabacea7c8c5b3ea, type: 2}
   darkHit: {fileID: 11400000, guid: 2f15d5ad78a579c419883bad73cadad9, type: 2}
   durationTillDespawnAfterDeath: 5
@@ -322,14 +334,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idleClips:
-  - {fileID: 8300000, guid: fdfd4e1ddb28f334fa4d4dde24e30fd8, type: 3}
+  - {fileID: 8300000, guid: b815f5400a8f894488d3918f9b9bcf3d, type: 3}
+  - {fileID: 8300000, guid: f049d85fc6eda3147a8af4a3c5552f5d, type: 3}
   damageClips:
-  - {fileID: 8300000, guid: 3a2c207c6f11c86409397803dd234d0a, type: 3}
+  - {fileID: 8300000, guid: cf7f1e392492bba4f8563ac90d8d013e, type: 3}
   attackClips:
-  - {fileID: 8300000, guid: 7036376d6689bf04288c1b255eb38027, type: 3}
+  - {fileID: 8300000, guid: b815f5400a8f894488d3918f9b9bcf3d, type: 3}
+  - {fileID: 8300000, guid: f049d85fc6eda3147a8af4a3c5552f5d, type: 3}
   audioSource: {fileID: 709237259909349006}
-  minAudioPitch: 1
-  maxAudioPitch: 1
+  minAudioPitch: 0.95
+  maxAudioPitch: 1.3
   walkClips: []
   useExperimentalSettings: 0
   audioSource2: {fileID: 0}

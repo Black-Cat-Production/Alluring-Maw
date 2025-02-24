@@ -89,7 +89,6 @@ namespace Scripts.Core
             OnWinGetScores.Invoke();
             saveGame.SaveMemoryFragmentsAmount(MemoryFragmentsAmount);
             notifyLeaderboardToSet.Invoke();
-            mainMenuSceneLoader.LoadAsync();
         }
 
         public void SetLeaderboardScores(float _timeTakenInMil, int _damageTaken)
