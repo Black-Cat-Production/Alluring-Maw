@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Lukas/Scenes/SplashScreenScene.unity
+    guid: a8d09a518d8a62649b9507d91f1ad1a8
+  - enabled: 1
     path: Assets/Lukas/Scenes/MainMenuScene.unity
     guid: cb608e9a6153abe4fbb9fef123f9922a
   - enabled: 1
