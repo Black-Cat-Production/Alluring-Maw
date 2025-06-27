@@ -16,9 +16,9 @@ namespace Scripts.Core.UI
 
         AsyncOperation loadRoutine;
 
-        void FixedUpdate()
+        void Update()
         {
-            if (Input.GetKeyUp(KeyCode.X))
+            if (Input.GetKeyDown(KeyCode.X))
             {
                 StopAllCoroutines();
                 if (loadRoutine != null) loadRoutine.allowSceneActivation = true;
