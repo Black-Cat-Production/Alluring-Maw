@@ -18,7 +18,7 @@ namespace Scripts.Core.SceneHandler
         [SerializeField] AudioClip startButtonSound;
         [SerializeField] AudioClip transitionSound;
         [SerializeField] AudioSource bgmSource;
-        AudioSource audioSource;
+        //AudioSource audioSource;
 
         AsyncOperation loadRoutine;
         Camera mainMenuCamera;
@@ -28,7 +28,7 @@ namespace Scripts.Core.SceneHandler
         {
             mainMenuCamera = Camera.main;
             if (mainMenuCamera != null) startPoint = mainMenuCamera.transform.position;
-            audioSource = GetComponent<AudioSource>();
+            
         }
 
         public void LoadScene()
@@ -38,9 +38,7 @@ namespace Scripts.Core.SceneHandler
 
         public void LoadWithCameraPathing()
         {
-            audioSource.Stop();
-            audioSource.clip = startButtonSound;
-            audioSource.Play();
+            
             StartCoroutine(StartLoadWithCamera());
             mainMenuGroup.gameObject.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
@@ -57,7 +55,7 @@ namespace Scripts.Core.SceneHandler
                 timer += Time.deltaTime;
                 float t = Mathf.Clamp01(timer / minDuration);
                 mainMenuCamera.transform.position = Vector3.Lerp(startPoint, checkpoint1.transform.position, t);
-                bgmSource.volume = Mathf.Lerp(0.5f, 0, t);
+               // bgmSource.volume = Mathf.Lerp(0.5f, 0, t);
             }
 
             timer = 0f;
@@ -69,11 +67,11 @@ namespace Scripts.Core.SceneHandler
                 timer += Time.deltaTime;
                 float t = Mathf.Clamp01(timer / minDuration);
                 mainMenuCamera.transform.position = Vector3.Lerp(startPoint, checkpoint2.transform.position, t);
-                if (!audioSource.isPlaying)
-                {
-                    audioSource.clip = transitionSound;
-                    audioSource.Play();
-                }
+                //if (!audioSource.isPlaying)
+                //{
+                //    audioSource.clip = transitionSound;
+                //    audioSource.Play();
+                //}
 
                 yield return null;
             }

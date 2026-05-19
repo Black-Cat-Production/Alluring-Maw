@@ -80,7 +80,6 @@ GameObject:
   - component: {fileID: 2110592321873408525}
   - component: {fileID: 7491658064171084036}
   - component: {fileID: 3637367432099633213}
-  - component: {fileID: 977006811539547785}
   - component: {fileID: 5823706757318785485}
   - component: {fileID: 2689241119254612341}
   m_Layer: 0
@@ -159,7 +158,7 @@ MonoBehaviour:
   OnHitTaken:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 977006811539547785}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Scripts.Core.AudioScripts.EnemySoundSystem, Assembly-CSharp
         m_MethodName: PlayDamageClip
         m_Mode: 1
@@ -341,33 +340,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &977006811539547785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7030137519594908327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5d0a9893f664c9b85ff8596e188ec34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  idleClips:
-  - {fileID: 8300000, guid: 0768b1dc7a20bb84fbb0931ad6a3ca5a, type: 3}
-  - {fileID: 8300000, guid: 16dfa84fceb5e6a41824e12a01cff832, type: 3}
-  damageClips:
-  - {fileID: 8300000, guid: 8da01e8f1d232fb4f9753d6fc91d1d36, type: 3}
-  - {fileID: 8300000, guid: 158db5af3f755124aa684cc85e92cfb7, type: 3}
-  attackClips:
-  - {fileID: 8300000, guid: 7a707e216acf7de42a2773e91b691a35, type: 3}
-  audioSource: {fileID: 3637367432099633213}
-  minAudioPitch: 1
-  maxAudioPitch: 1
-  walkClips:
-  - {fileID: 8300000, guid: 33a130297532399498a7ea1bf435ec9b, type: 3}
-  useExperimentalSettings: 1
-  audioSource2: {fileID: 2689241119254612341}
 --- !u!136 &5823706757318785485
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 1592707546957034440}
   - component: {fileID: 5184912552264397503}
   - component: {fileID: 5070089011261443229}
-  - component: {fileID: 6508147770369921599}
   m_Layer: 0
   m_Name: FAEnemy
   m_TagString: Untagged
@@ -70,7 +69,7 @@ MonoBehaviour:
   OnHitTaken:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6508147770369921599}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Scripts.Core.AudioScripts.EnemySoundSystem, Assembly-CSharp
         m_MethodName: PlayDamageClip
         m_Mode: 1
@@ -322,32 +321,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6508147770369921599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1948163526175804279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5d0a9893f664c9b85ff8596e188ec34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  idleClips:
-  - {fileID: 8300000, guid: fdfd4e1ddb28f334fa4d4dde24e30fd8, type: 3}
-  - {fileID: 8300000, guid: 3f4c21b30f4480b4f83838dc5571dc20, type: 3}
-  damageClips:
-  - {fileID: 8300000, guid: 3a2c207c6f11c86409397803dd234d0a, type: 3}
-  attackClips:
-  - {fileID: 8300000, guid: 7036376d6689bf04288c1b255eb38027, type: 3}
-  - {fileID: 8300000, guid: 247fb9105af331f4997b5fc4b6056941, type: 3}
-  audioSource: {fileID: 5070089011261443229}
-  minAudioPitch: 0.8
-  maxAudioPitch: 1.2
-  walkClips: []
-  useExperimentalSettings: 0
-  audioSource2: {fileID: 0}
 --- !u!1 &9151207168591687295
 GameObject:
   m_ObjectHideFlags: 0

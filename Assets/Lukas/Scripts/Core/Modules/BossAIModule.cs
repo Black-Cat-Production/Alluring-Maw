@@ -23,7 +23,7 @@ namespace Scripts.Core.Modules
             agent.speed = baseMoveSpeed;
             animator = GetComponent<Animator>();
             HealthSystemModule = GetComponent<HealthSystemModule>();
-            soundSystem = GetComponent<EnemySoundSystem>();
+            //soundSystem = GetComponent<EnemySoundSystem>();
             attackCollider = GetComponentInChildren<AttackCollider>();
             attackCollider.gameObject.SetActive(false);
             HealthSystemModule.RegisterEffectHandler(EffectType.DamageOverTime, new DamageOverTimeHandler());
@@ -85,7 +85,7 @@ namespace Scripts.Core.Modules
 
         public void PlayWalkSound()
         {
-            soundSystem.PlayWalkClip();
+            //soundSystem.PlayWalkClip();
         }
     }
 }

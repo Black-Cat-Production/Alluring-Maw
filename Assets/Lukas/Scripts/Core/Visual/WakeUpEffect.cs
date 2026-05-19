@@ -14,7 +14,7 @@ namespace Scripts.Core.Visual
         [SerializeField] Color startColor;
         [SerializeField] Color endColor;
         [SerializeField] float lerpDuration;
-        [SerializeField] AudioSource bgmSource;
+        //[SerializeField] AudioSource bgmSource;
         [SerializeField] TutorialUI tutorialUI;
 
         public bool IsDoneBlackout { get; private set; }
@@ -22,7 +22,7 @@ namespace Scripts.Core.Visual
         void Awake()
         {
             mainUIObject.SetActive(false);
-            bgmSource.volume = 0;
+           // bgmSource.volume = 0;
             StartCoroutine(LerpColorUp());
             StartCoroutine(LerpSoundUp());
         }
@@ -61,7 +61,7 @@ namespace Scripts.Core.Visual
             {
                 timer += Time.deltaTime;
                 float t = timer / lerpDuration;
-                bgmSource.volume = Mathf.Lerp(0f, 0.5f, t);
+                //bgmSource.volume = Mathf.Lerp(0f, 0.5f, t);
                 yield return null;
             }
         }
@@ -73,7 +73,7 @@ namespace Scripts.Core.Visual
             {
                 timer += Time.deltaTime;
                 float t = timer / lerpDuration;
-                bgmSource.volume = Mathf.Lerp(0.5f, 0, t);
+                //bgmSource.volume = Mathf.Lerp(0.5f, 0, t);
                 yield return null;
             }
         }
