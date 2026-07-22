@@ -70,8 +70,18 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+/Assets/AssetStoreTools
+/Assets/AddressableAssetsData/*/*.bin*
+*/Assets/StreamingAssets/aa.meta
+*/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset
+.collabignore
+
+
 /.idea
 /.idea/.idea.Alluring Maw
 /.idea/.idea.Alluring Maw/.idea
 /Assets/SoundImports
+
+
 
