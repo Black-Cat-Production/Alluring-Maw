@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}" SchemaVersion="110">
+	<Busses>
+		<WorkUnit Name="Default Work Unit" ID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}" PersistMode="Standalone">
+			<ChildrenList>
+				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<ReferenceList>
+						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
+							<ObjectRef Name="System" ID="{6B753D86-8FB6-4572-B1D6-42DC463F2242}" WorkUnitID="{325E00E9-2A11-496D-9ABF-DC362521CE66}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="Music Bus" ID="{BEF3C6D0-ACAA-4A5A-AF30-9AC2ED056053}"/>
+						<Bus Name="SFX Bus" ID="{0428BEA9-86B3-406D-9B6A-357CE32B9E02}"/>
+						<Bus Name="Voice Bus" ID="{342CAA02-47A2-4C12-837A-6682E05C0D90}"/>
+						<Bus Name="AUX" ID="{28FCA7E9-C1A6-4616-8EA5-B21AD4B9DCD3}">
+							<ChildrenList>
+								<AuxBus Name="Env_Small_Room" ID="{D2F4EBA1-DBAB-4A0C-8D09-6440A585B72A}">
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+											<ObjectRef Name="Room_Small" ID="{577F1466-A63B-47F7-98BD-C56E433F8B5D}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+									</ReferenceList>
+								</AuxBus>
+								<AuxBus Name="Env_Big_Room" ID="{2158C44F-2651-4565-AD37-10BF8685777A}">
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+											<ObjectRef Name="Room_Large" ID="{AD8EFAFC-7121-4D5F-BE4D-B13FBD6CEBAE}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+									</ReferenceList>
+								</AuxBus>
+								<AuxBus Name="Env_Corridor" ID="{3BBA4BFC-9BDF-4E3C-9B3D-F4EB9ACB7D7B}">
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+											<ObjectRef Name="Room_Medium" ID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+									</ReferenceList>
+								</AuxBus>
+							</ChildrenList>
+						</Bus>
+					</ChildrenList>
+				</Bus>
+			</ChildrenList>
+		</WorkUnit>
+	</Busses>
+</WwiseDocument>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{716993F7-A028-4044-90B6-644BB168AA00}" SchemaVersion="110">
+	<States>
+		<WorkUnit Name="Default Work Unit" ID="{716993F7-A028-4044-90B6-644BB168AA00}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="Gameplay" ID="{56F92789-D410-4E7F-B117-4831618FE163}">
+					<ChildrenList>
+						<State Name="None" ID="{C7560A49-B2F5-4408-A86F-DC2837DD56EA}"/>
+						<State Name="NoPause" ID="{7F901721-27FA-4FD7-93CD-25BDD1A9ECAF}"/>
+						<State Name="Pause" ID="{7CE44FF1-1353-4A0D-8B20-17B684DAEBE5}"/>
+					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="Pause" ID="{7CE44FF1-1353-4A0D-8B20-17B684DAEBE5}"/>
+							<EndState Name="NoPause" ID="{7F901721-27FA-4FD7-93CD-25BDD1A9ECAF}"/>
+							<Time>3</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="NoPause" ID="{7F901721-27FA-4FD7-93CD-25BDD1A9ECAF}"/>
+							<EndState Name="Pause" ID="{7CE44FF1-1353-4A0D-8B20-17B684DAEBE5}"/>
+							<Time>1</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>
