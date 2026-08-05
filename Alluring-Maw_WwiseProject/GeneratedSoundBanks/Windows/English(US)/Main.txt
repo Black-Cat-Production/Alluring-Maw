@@ -6,8 +6,10 @@ Event	ID	Name			Wwise Object Path	Notes
 	1905734753	Play_Menu_ATMO			\Default Work Unit\MENU\Play_Menu_ATMO	
 	2228153899	Play_Menu_MUSIC			\Default Work Unit\MENU\Play_Menu_MUSIC	
 	2914981333	Stop_Menu			\Default Work Unit\MENU\Stop_Menu	
+	2940525158	Play_ENV_Torch2			\Default Work Unit\ENVIRONMENT\Play_ENV_Torch2	
 	3103472528	Play_Intro			\Default Work Unit\MENU\INTRO\Play_Intro	
 	3257834436	Play_Menu_UI_MouseOver_01			\Default Work Unit\MENU\UI\Play_Menu_UI_MouseOver_01	
+	3621683420	Play_ENV_Torch			\Default Work Unit\ENVIRONMENT\Play_ENV_Torch	
 
 Effect plug-ins	ID	Name	Type				Notes
 	1416967478	All_Buttons_IN	Wwise Compressor			
@@ -23,8 +25,10 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	161092298	Menu - Atmo_LoRumble	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Menu - Atmo_LoRumble_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\MENU\ATMO\Menu - Atmo_LoRumble		17580896
 	496571148	Menu - Music_part2	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Menu - Music_part2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\MENU\MUSIC\Sequenzed\Menu - Music_part2		4608096
 	511381107	Menu - UI_Select1	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Menu - UI_Select1_D7D95507.wem		\Actor-Mixer Hierarchy\Default Work Unit\MENU\UI\Menu - UI_Select1		192096
+	540468758	ENV-Torch2	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\ENV-Torch2_261B6861.wem		\Actor-Mixer Hierarchy\Default Work Unit\MENU\ENV-Torch2		10412944
 	570276745	Menu - UI_LearnSkill1	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Menu - UI_LearnSkill1_F470CFDF.wem		\Actor-Mixer Hierarchy\Default Work Unit\MENU\UI\Menu - UI_LearnSkill1		614496
 	646596143	Menu - Music_part1	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Menu - Music_part1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\MENU\MUSIC\Sequenzed\Menu - Music_part1		4608096
+	655158912	ENV-Torch	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\ENV-Torch_82343188.wem		\Actor-Mixer Hierarchy\Default Work Unit\MENU\ENV-Torch		3900452
 	663628163	Menu - Music_part4	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Menu - Music_part4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\MENU\MUSIC\Sequenzed\Menu - Music_part4		3830496
 	673676232	Menu - ATMO_Thump	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Menu - ATMO_Thump_A32E7295.wem		\Actor-Mixer Hierarchy\Default Work Unit\MENU\ATMO\Menu - ATMO_Thump		14900428
 	790304389	Menu - Music_part3	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Menu - Music_part3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\MENU\MUSIC\Sequenzed\Menu - Music_part3		4608096

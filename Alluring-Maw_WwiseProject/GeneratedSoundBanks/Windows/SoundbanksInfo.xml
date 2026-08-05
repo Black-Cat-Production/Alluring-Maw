@@ -66,7 +66,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="English(US)" Hash="{FE5827A2-4E6B-E824-87C6-D855367BFC2E}">
+		<SoundBank Id="3161908922" Type="User" Language="English(US)" Hash="{C42466F7-9137-DE2B-883E-6577D4DE2356}">
 			<ShortName>Main</ShortName>
 			<Path>English(US)/Main.bnk</Path>
 			<Media>
@@ -110,6 +110,10 @@
 					<ShortName>Menu - UI_Select1.wav</ShortName>
 					<CachePath>SFX/Menu - UI_Select1_D7D95507.wem</CachePath>
 				</File>
+				<File Id="540468758" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ENV-Torch2.wav</ShortName>
+					<CachePath>SFX/ENV-Torch2_261B6861.wem</CachePath>
+				</File>
 				<File Id="570276745" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - UI_LearnSkill1.wav</ShortName>
 					<CachePath>SFX/Menu - UI_LearnSkill1_F470CFDF.wem</CachePath>
@@ -117,6 +121,10 @@
 				<File Id="646596143" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - Music_part1.wav</ShortName>
 					<CachePath>SFX/Menu - Music_part1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="655158912" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ENV-Torch.wav</ShortName>
+					<CachePath>SFX/ENV-Torch_82343188.wem</CachePath>
 				</File>
 				<File Id="663628163" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - Music_part4.wav</ShortName>
@@ -141,6 +149,16 @@
 				</ShareSets>
 			</Plugins>
 			<Events>
+				<Event Id="3621683420" Name="Play_ENV_Torch" MaxAttenuation="15" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="655158912"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2940525158" Name="Play_ENV_Torch2" MaxAttenuation="15" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="540468758"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3103472528" Name="Play_Intro" DurationType="OneShot" DurationMin="37.916668" DurationMax="37.916668">
 					<MediaRefs>
 						<MediaRef Id="31143423"/>
@@ -209,5 +227,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{CF91C24F-5BA8-0E57-C8F6-E04EF60372DD}</FileHash>
+	<FileHash>{57CDFA73-04B7-56CE-16BE-AD4F2B5F570A}</FileHash>
 </SoundBanksInfo>
