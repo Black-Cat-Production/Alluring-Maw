@@ -136,6 +136,76 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
+						<Event Name="Stop_Menu" ID="{7E0905EE-31F0-457B-9C5C-39DA99DCE4ED}">
+							<ChildrenList>
+								<Action Name="" ID="{8984BB4E-2BD6-4A15-BF9A-3ACE00DECA0F}" ShortID="315127823">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Sequenzed" ID="{C5DFBA08-9BF6-4A72-B778-8BA80B224FE5}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A79505CA-8542-4E5C-A9C6-EF8A5B4EE48A}" ShortID="232042122">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Menu - ATMO_Monsters" ID="{454F8C99-A574-43B0-9188-1778F09C2511}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{07FFFAA0-E42F-4D7F-835F-C73A0F0BF269}" ShortID="984091993">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Menu - ATMO_Thump" ID="{8FB02D5E-4A8C-487A-8C8E-F2C91BBCC22C}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{37D89C35-B3DD-4842-8CD6-B4F5C95028B8}" ShortID="407575676">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Menu - Atmo_Wind-01" ID="{D056924B-BC7C-4D9F-9C4B-77D8B93C2D77}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{825EEA69-8EAD-4F8C-B63C-13D243F5351D}" ShortID="252473077">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Menu - Atmo_LoRumble" ID="{EFE12D39-480C-4CD6-8827-2D927D60FBD9}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F58E9078-382E-476A-A7E2-68B757ADFA1F}" ShortID="35771496">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Menu - ATMO_Ketten" ID="{1F4ED7E4-41C2-4FAB-AC32-BE738A325322}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="PLAYER" ID="{90C613C9-56CD-4E3F-B77C-A06762A48879}" ShortID="182586963">
