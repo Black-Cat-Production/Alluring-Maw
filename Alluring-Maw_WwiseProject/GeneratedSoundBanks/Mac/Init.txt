@@ -1,3 +1,11 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	89505537	Gameplay			\Default Work Unit\Gameplay	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Gameplay			
+	1658147866	NoPause	Gameplay			
+	3092587493	Pause	Gameplay			
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	983310469	AUX			\Default Work Unit\Master Audio Bus\AUX	
 	1502772432	SFX Bus			\Default Work Unit\Master Audio Bus\SFX Bus	

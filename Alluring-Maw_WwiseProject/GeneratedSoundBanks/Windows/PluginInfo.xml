@@ -4,8 +4,9 @@
 		<PluginLib LibName="Wwise Silence" LibId="6619138" Type="Source" DLL="AkSilenceGenerator" StaticLib="AkSilenceSource"/>
 		<PluginLib LibName="Wwise Compressor" LibId="7077891" Type="Effect" DLL="AkCompressor" StaticLib="AkCompressorFX"/>
 		<PluginLib LibName="Wwise RoomVerb" LibId="7733251" Type="Effect" DLL="AkRoomVerb" StaticLib="AkRoomVerbFX"/>
+		<PluginLib LibName="Wwise Harmonizer" LibId="9043971" Type="Effect" DLL="AkHarmonizer" StaticLib="AkHarmonizerFX"/>
 		<PluginLib LibName="System" LibId="11403271" Type="AudioDevice"/>
 		<PluginLib LibName="No Output" LibId="11862023" Type="AudioDevice"/>
 	</PluginLibs>
-	<FileHash>{1F3BAFA9-7E4D-377F-63CC-483B6DCC8040}</FileHash>
+	<FileHash>{AE4C21A0-EA62-C450-AF8E-736C88F2C21D}</FileHash>
 </PluginInfo>
