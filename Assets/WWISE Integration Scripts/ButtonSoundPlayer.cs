@@ -1,16 +1,16 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-namespace WWISE_Integration_Scripts
+public class ButtonSoundPlayer : MonoBehaviour
 {
-    public class ButtonSoundPlayer : MonoBehaviour
+    [SerializeField] AK.Wwise.Event eventToPlay;
+    [SerializeField] GameObject gameObjectToPlayOn;
+
+
+    public void OnClicked()
     {
-        [SerializeField] AK.Wwise.Event eventToPlay;
-        [SerializeField] GameObject gameObjectToPlayOn;
-
-
-        public void OnClicked()
-        {
-            AkSoundEngine.PostEvent(eventToPlay.Name, gameObjectToPlayOn == null ? gameObject : gameObjectToPlayOn);
-        }
+        AkSoundEngine.PostEvent(eventToPlay.Name, gameObjectToPlayOn == null ? gameObject : gameObjectToPlayOn);
     }
 }
