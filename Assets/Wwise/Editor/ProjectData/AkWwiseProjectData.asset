@@ -194,7 +194,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 6fee4f8286acc84394f7b8f67b517463
     GuidInternal: 
-    m_lastTime: -8584161031944461728
+    m_lastTime: -8584156729698152494
     List:
     - name: Main
       guid: 7d25f11f0d584f49bd3f5167772f2c93
@@ -222,7 +222,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: f4ccbb95d042c543bd560120d28efaf5
     GuidInternal: 
-    m_lastTime: -8584156754510645094
+    m_lastTime: -8584156729698238864
     List:
     - name: BOSS
       guid: 34d61693d5e42d419f8b799d1ffe5126
@@ -372,7 +372,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 22fe80bbd96682459258ec5c2626c341
       Path: Events\Default Work Unit\ENVIRONMENT\Play_ENV_Torch
-      maxAttenuation: 15
+      maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
     - name: Play_ENV_Torch2
@@ -392,7 +392,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: e11e5c9999770a439bbebb80abf03daa
       Path: Events\Default Work Unit\ENVIRONMENT\Play_ENV_Torch2
-      maxAttenuation: 15
+      maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
     - name: Play_Intro
@@ -456,8 +456,8 @@ MonoBehaviour:
         guid: 41e9bf82bef7ed4ead55ee34d0097a9d
       Path: Events\Default Work Unit\MENU\Play_Menu_Descent
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 2.3956063
+      minDuration: 2.3956063
     - name: Play_Menu_MUSIC
       guid: be24c67fe3261348a7b35d3bfd408fbf
       id: 2228153899
@@ -499,8 +499,8 @@ MonoBehaviour:
         guid: b0c1c20168e12c47a97185e359b60e6f
       Path: Events\Default Work Unit\MENU\UI\Play_Menu_UI_LearnSkill1
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 3.2
+      minDuration: 3.2
     - name: Play_Menu_UI_MouseOver_01
       guid: 2e8521a322ad4c47a23c72c9ac34c24c
       id: 3257834436
@@ -522,8 +522,8 @@ MonoBehaviour:
         guid: 2e8521a322ad4c47a23c72c9ac34c24c
       Path: Events\Default Work Unit\MENU\UI\Play_Menu_UI_MouseOver_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.032541666
+      minDuration: 0.032541666
     - name: Play_Menu_UI_Select1
       guid: 3ccd1f1c05a07a419c9609a1d177a5a7
       id: 558031544
@@ -545,8 +545,8 @@ MonoBehaviour:
         guid: 3ccd1f1c05a07a419c9609a1d177a5a7
       Path: Events\Default Work Unit\MENU\UI\Play_Menu_UI_Select1
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1
+      minDuration: 1
     - name: Play_Menu_UI_select2_01
       guid: f68f2e93b271c44d9e7ca18af87da175
       id: 1590463151
@@ -568,8 +568,8 @@ MonoBehaviour:
         guid: f68f2e93b271c44d9e7ca18af87da175
       Path: Events\Default Work Unit\MENU\UI\Play_Menu_UI_select2_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.01545325
+      minDuration: 0.01545325
     - name: Play_Player_Attack_LMC
       guid: 66f06f65effa084b9ae67f05bccd652a
       id: 104602405
@@ -588,8 +588,8 @@ MonoBehaviour:
         guid: 66f06f65effa084b9ae67f05bccd652a
       Path: Events\Default Work Unit\PLAYER\Play_Player_Attack_LMC
       maxAttenuation: 0
-      maxDuration: 1.6135392
-      minDuration: 1.2806668
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Player_Dash
       guid: b4a55bfc6512d147b62cf3daf6f40798
       id: 2175711460
@@ -628,8 +628,8 @@ MonoBehaviour:
         guid: 2442c0ba3c81b94588dcd2fe71b900f4
       Path: Events\Default Work Unit\PLAYER\Play_Player_FS
       maxAttenuation: 0
-      maxDuration: 1.6166667
-      minDuration: 0.44800273
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Player_GettingHit
       guid: 554b1e1a1a2f054fb3a2a3a376305ea9
       id: 3353228327
@@ -861,6 +861,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Stop_Menu
+      guid: ee05097ef0317b459c5c39da99dce4ed
+      id: 2914981333
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: MENU
+        ObjectType: 4
+        guid: d5b00bb575b9f8448acb0ae52a065ad2
+      - ElementName: Stop_Menu
+        ObjectType: 3
+        guid: ee05097ef0317b459c5c39da99dce4ed
+      Path: Events\Default Work Unit\MENU\Stop_Menu
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: UI
       guid: abf80215975144419b66b3b4f8aa7dd1
       id: 1551306167
@@ -1035,7 +1055,7 @@ MonoBehaviour:
     m_lastTime: -8584160789805466732
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000060000000700000008000000090000000a0000000b0000000c0000002100000022000000d3000000d4000000d50000006f01000070010000
+  ExpandedWaapiItemIds: 0500000006000000070000000a0000000b0000002100000022000000d3000000d4000000d50000006f01000070010000
   AutoSyncSelection: 0
   autoPopulateEnabled: 0
   currentDataSource: 0

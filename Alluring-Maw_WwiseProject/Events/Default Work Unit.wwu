@@ -141,7 +141,6 @@
 								<Action Name="" ID="{8984BB4E-2BD6-4A15-BF9A-3ACE00DECA0F}" ShortID="315127823">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -201,6 +200,28 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Menu - ATMO_Ketten" ID="{1F4ED7E4-41C2-4FAB-AC32-BE738A325322}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{341ED33B-895A-442A-9387-B7EABFE26352}" ShortID="869468018">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ENV-Torch" ID="{1C09864C-3E6D-453F-8504-99D5B4E37CEB}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{6622A051-6846-4167-9607-02039392D9A9}" ShortID="931702720">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ENV-Torch2" ID="{21E0DA25-099E-427D-8A7B-B02DAA2C02F2}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
