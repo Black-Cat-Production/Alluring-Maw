@@ -11,6 +11,6 @@ public class ButtonSoundPlayer : MonoBehaviour
 
     public void OnClicked()
     {
-        AkSoundEngine.PostEvent(eventToPlay.Name, gameObjectToPlayOn);
+        AkSoundEngine.PostEvent(eventToPlay.Name, gameObjectToPlayOn == null ? gameObject : gameObjectToPlayOn);
     }
 }
