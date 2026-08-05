@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B0F2C634-5388-8C74-480A-A38612328304}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{37B903E9-2587-EB34-1522-9E7BB9680396}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -66,73 +66,25 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="English(US)" Hash="{BAA6CC8C-35CB-CCC6-DD4E-841FD0455F11}">
+		<SoundBank Id="3161908922" Type="User" Language="English(US)" Hash="{FE5827A2-4E6B-E824-87C6-D855367BFC2E}">
 			<ShortName>Main</ShortName>
 			<Path>English(US)/Main.bnk</Path>
 			<Media>
-				<File Id="13945456" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_steps-01.wav</ShortName>
-					<CachePath>SFX/Player-FS_steps-01_B5A128BB.wem</CachePath>
-				</File>
-				<File Id="14596070" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>PLAYER-RMC2_Release.wav</ShortName>
-					<CachePath>SFX/PLAYER-RMC2_Release_DA4BEBF0.wem</CachePath>
-				</File>
 				<File Id="17042488" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - UI_select2-01.wav</ShortName>
 					<CachePath>SFX/Menu - UI_select2-01_250C219A.wem</CachePath>
-				</File>
-				<File Id="23604221" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Cloth-13.wav</ShortName>
-					<CachePath>SFX/Player-FS_Cloth-13_A02FE05F.wem</CachePath>
 				</File>
 				<File Id="31143423" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Intro - Voice.wav</ShortName>
 					<CachePath>Voices/English(US)/Intro - Voice_10C4C929.wem</CachePath>
 				</File>
-				<File Id="39272691" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_steps-04.wav</ShortName>
-					<CachePath>SFX/Player-FS_steps-04_10C4C929.wem</CachePath>
-				</File>
-				<File Id="58214838" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_steps-24.wav</ShortName>
-					<CachePath>SFX/Player-FS_steps-24_10C4C929.wem</CachePath>
-				</File>
-				<File Id="72732113" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Player-Dash_Voice-03.wav</ShortName>
-					<CachePath>Voices/English(US)/Player-Dash_Voice-03_10C4C929.wem</CachePath>
-				</File>
-				<File Id="82516119" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Player-Dash_Voice-01.wav</ShortName>
-					<CachePath>Voices/English(US)/Player-Dash_Voice-01_10C4C929.wem</CachePath>
-				</File>
 				<File Id="89317104" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
 					<CachePath>SFX/Menu - ATMO_Ketten_BE6DC08E.wem</CachePath>
 				</File>
-				<File Id="92570979" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Cloth-03.wav</ShortName>
-					<CachePath>SFX/Player-FS_Cloth-03_90051D53.wem</CachePath>
-				</File>
-				<File Id="99215667" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-Dash_Cloth-01.wav</ShortName>
-					<CachePath>SFX/Player-Dash_Cloth-01_10C4C929.wem</CachePath>
-				</File>
-				<File Id="108173549" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Cloth-17.wav</ShortName>
-					<CachePath>SFX/Player-FS_Cloth-17_63572FB5.wem</CachePath>
-				</File>
-				<File Id="113311087" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Voice_Inhale-03.wav</ShortName>
-					<CachePath>Voices/English(US)/Player-FS_Voice_Inhale-03_10C4C929.wem</CachePath>
-				</File>
 				<File Id="118127717" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - Atmo_Wind-01.wav</ShortName>
 					<CachePath>SFX/Menu - Atmo_Wind-01_59F8D407.wem</CachePath>
-				</File>
-				<File Id="130895049" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Player-AttackRMC_Charge-02.wav</ShortName>
-					<CachePath>Voices/English(US)/Player-AttackRMC_Charge-02_7EAA9A05.wem</CachePath>
 				</File>
 				<File Id="145861600" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - UI_MouseOver-01.wav</ShortName>
@@ -150,388 +102,45 @@
 					<ShortName>Menu - Atmo_LoRumble.wav</ShortName>
 					<CachePath>SFX/Menu - Atmo_LoRumble_10C4C929.wem</CachePath>
 				</File>
-				<File Id="191419810" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Player-GettingHit-04.wav</ShortName>
-					<CachePath>Voices/English(US)/Player-GettingHit-04_FDE54F75.wem</CachePath>
-				</File>
-				<File Id="199119937" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_steps-20.wav</ShortName>
-					<CachePath>SFX/Player-FS_steps-20_10C4C929.wem</CachePath>
-				</File>
-				<File Id="203961088" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_steps-18.wav</ShortName>
-					<CachePath>SFX/Player-FS_steps-18_10C4C929.wem</CachePath>
-				</File>
-				<File Id="205670369" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Cloth-07.wav</ShortName>
-					<CachePath>SFX/Player-FS_Cloth-07_A4507962.wem</CachePath>
-				</File>
-				<File Id="212081728" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Player-Dash_Voice-05.wav</ShortName>
-					<CachePath>Voices/English(US)/Player-Dash_Voice-05_10C4C929.wem</CachePath>
-				</File>
-				<File Id="214269456" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-Dash_Leather-02.wav</ShortName>
-					<CachePath>SFX/Player-Dash_Leather-02_10C4C929.wem</CachePath>
-				</File>
-				<File Id="219254116" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Cloth-15.wav</ShortName>
-					<CachePath>SFX/Player-FS_Cloth-15_21B9E66E.wem</CachePath>
-				</File>
-				<File Id="226729483" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>PLAYER-RMC1_Release.wav</ShortName>
-					<CachePath>SFX/PLAYER-RMC1_Release_B94BAF26.wem</CachePath>
-				</File>
-				<File Id="229752212" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Cloth-22.wav</ShortName>
-					<CachePath>SFX/Player-FS_Cloth-22_94F6898F.wem</CachePath>
-				</File>
-				<File Id="285734244" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Leather-05.wav</ShortName>
-					<CachePath>SFX/Player-FS_Leather-05_10C4C929.wem</CachePath>
-				</File>
-				<File Id="307192257" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Voice_Inhale-06.wav</ShortName>
-					<CachePath>Voices/English(US)/Player-FS_Voice_Inhale-06_10C4C929.wem</CachePath>
-				</File>
-				<File Id="312145317" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Player-GettingHit-02.wav</ShortName>
-					<CachePath>Voices/English(US)/Player-GettingHit-02_64FE7110.wem</CachePath>
-				</File>
-				<File Id="331596387" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Cloth-09.wav</ShortName>
-					<CachePath>SFX/Player-FS_Cloth-09_DFC0FDEB.wem</CachePath>
-				</File>
-				<File Id="336767322" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Player-AttackRMC_Charge-01-01.wav</ShortName>
-					<CachePath>Voices/English(US)/Player-AttackRMC_Charge-01-01_BDD80407.wem</CachePath>
-				</File>
-				<File Id="348751237" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-Dash_Cloth-02.wav</ShortName>
-					<CachePath>SFX/Player-Dash_Cloth-02_10C4C929.wem</CachePath>
-				</File>
-				<File Id="393696138" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Player-GettingHit-08.wav</ShortName>
-					<CachePath>Voices/English(US)/Player-GettingHit-08_1DACF08F.wem</CachePath>
-				</File>
-				<File Id="419716388" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Cloth-12.wav</ShortName>
-					<CachePath>SFX/Player-FS_Cloth-12_3ACE5E77.wem</CachePath>
-				</File>
-				<File Id="422975555" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-Dash_Cloth-04.wav</ShortName>
-					<CachePath>SFX/Player-Dash_Cloth-04_10C4C929.wem</CachePath>
-				</File>
-				<File Id="426708470" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_steps-23.wav</ShortName>
-					<CachePath>SFX/Player-FS_steps-23_10C4C929.wem</CachePath>
-				</File>
-				<File Id="434197839" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Voice_Exhale-02.wav</ShortName>
-					<CachePath>Voices/English(US)/Player-FS_Voice_Exhale-02_10C4C929.wem</CachePath>
-				</File>
-				<File Id="435998273" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_steps-13.wav</ShortName>
-					<CachePath>SFX/Player-FS_steps-13_10C4C929.wem</CachePath>
-				</File>
-				<File Id="458521427" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Cloth-02.wav</ShortName>
-					<CachePath>SFX/Player-FS_Cloth-02_96F2DAEE.wem</CachePath>
-				</File>
-				<File Id="464805336" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Voice_Exhale-05.wav</ShortName>
-					<CachePath>Voices/English(US)/Player-FS_Voice_Exhale-05_9CC8BD8E.wem</CachePath>
-				</File>
-				<File Id="470704831" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Cloth-16.wav</ShortName>
-					<CachePath>SFX/Player-FS_Cloth-16_3B08769F.wem</CachePath>
-				</File>
-				<File Id="476043786" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Leather-16.wav</ShortName>
-					<CachePath>SFX/Player-FS_Leather-16_10C4C929.wem</CachePath>
-				</File>
-				<File Id="476320887" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Cloth-05.wav</ShortName>
-					<CachePath>SFX/Player-FS_Cloth-05_469BA6C1.wem</CachePath>
-				</File>
-				<File Id="485575061" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Player-Dash_Voice-04.wav</ShortName>
-					<CachePath>Voices/English(US)/Player-Dash_Voice-04_10C4C929.wem</CachePath>
-				</File>
 				<File Id="496571148" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - Music_part2.wav</ShortName>
 					<CachePath>SFX/Menu - Music_part2_10C4C929.wem</CachePath>
-				</File>
-				<File Id="503570863" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_steps-19.wav</ShortName>
-					<CachePath>SFX/Player-FS_steps-19_10C4C929.wem</CachePath>
 				</File>
 				<File Id="511381107" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - UI_Select1.wav</ShortName>
 					<CachePath>SFX/Menu - UI_Select1_D7D95507.wem</CachePath>
 				</File>
-				<File Id="517520188" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Leather-14.wav</ShortName>
-					<CachePath>SFX/Player-FS_Leather-14_10C4C929.wem</CachePath>
-				</File>
-				<File Id="540468758" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>ENV-Torch2.wav</ShortName>
-					<CachePath>SFX/ENV-Torch2_261B6861.wem</CachePath>
-				</File>
-				<File Id="547181476" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Voice_Exhale-03.wav</ShortName>
-					<CachePath>Voices/English(US)/Player-FS_Voice_Exhale-03_10C4C929.wem</CachePath>
-				</File>
 				<File Id="570276745" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - UI_LearnSkill1.wav</ShortName>
 					<CachePath>SFX/Menu - UI_LearnSkill1_F470CFDF.wem</CachePath>
-				</File>
-				<File Id="579335366" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-Dash_Leather-01.wav</ShortName>
-					<CachePath>SFX/Player-Dash_Leather-01_10C4C929.wem</CachePath>
-				</File>
-				<File Id="608851740" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Voice_Inhale-04.wav</ShortName>
-					<CachePath>Voices/English(US)/Player-FS_Voice_Inhale-04_10C4C929.wem</CachePath>
-				</File>
-				<File Id="609042276" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Voice_Inhale-09.wav</ShortName>
-					<CachePath>Voices/English(US)/Player-FS_Voice_Inhale-09_0B934AFE.wem</CachePath>
-				</File>
-				<File Id="609114711" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Leather-08.wav</ShortName>
-					<CachePath>SFX/Player-FS_Leather-08_10C4C929.wem</CachePath>
-				</File>
-				<File Id="613593918" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Leather-03.wav</ShortName>
-					<CachePath>SFX/Player-FS_Leather-03_10C4C929.wem</CachePath>
-				</File>
-				<File Id="614300081" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Player-GettingHit-06.wav</ShortName>
-					<CachePath>Voices/English(US)/Player-GettingHit-06_3375F516.wem</CachePath>
 				</File>
 				<File Id="646596143" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - Music_part1.wav</ShortName>
 					<CachePath>SFX/Menu - Music_part1_10C4C929.wem</CachePath>
 				</File>
-				<File Id="655158912" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>ENV-Torch.wav</ShortName>
-					<CachePath>SFX/ENV-Torch_82343188.wem</CachePath>
-				</File>
-				<File Id="661501275" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_steps-10.wav</ShortName>
-					<CachePath>SFX/Player-FS_steps-10_10C4C929.wem</CachePath>
-				</File>
-				<File Id="662154490" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-Dash_Stomp-02.wav</ShortName>
-					<CachePath>SFX/Player-Dash_Stomp-02_10C4C929.wem</CachePath>
-				</File>
 				<File Id="663628163" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - Music_part4.wav</ShortName>
 					<CachePath>SFX/Menu - Music_part4_10C4C929.wem</CachePath>
-				</File>
-				<File Id="667203179" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Voice_Exhale-01.wav</ShortName>
-					<CachePath>Voices/English(US)/Player-FS_Voice_Exhale-01_10C4C929.wem</CachePath>
-				</File>
-				<File Id="667726242" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Voice_Inhale-01.wav</ShortName>
-					<CachePath>Voices/English(US)/Player-FS_Voice_Inhale-01_10C4C929.wem</CachePath>
 				</File>
 				<File Id="673676232" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Thump.wav</ShortName>
 					<CachePath>SFX/Menu - ATMO_Thump_A32E7295.wem</CachePath>
 				</File>
-				<File Id="705872836" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_steps-08.wav</ShortName>
-					<CachePath>SFX/Player-FS_steps-08_10C4C929.wem</CachePath>
-				</File>
-				<File Id="718884290" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Player-Dash_Voice-06.wav</ShortName>
-					<CachePath>Voices/English(US)/Player-Dash_Voice-06_10C4C929.wem</CachePath>
-				</File>
-				<File Id="738238298" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Cloth-18.wav</ShortName>
-					<CachePath>SFX/Player-FS_Cloth-18_3FC9C5EA.wem</CachePath>
-				</File>
-				<File Id="743005053" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Cloth-20.wav</ShortName>
-					<CachePath>SFX/Player-FS_Cloth-20_92351A66.wem</CachePath>
-				</File>
-				<File Id="754061858" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Player-Dash_Voice-02.wav</ShortName>
-					<CachePath>Voices/English(US)/Player-Dash_Voice-02_10C4C929.wem</CachePath>
-				</File>
 				<File Id="790304389" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - Music_part3.wav</ShortName>
 					<CachePath>SFX/Menu - Music_part3_10C4C929.wem</CachePath>
-				</File>
-				<File Id="792333592" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Player-GettingHit-01.wav</ShortName>
-					<CachePath>Voices/English(US)/Player-GettingHit-01_4B042FC0.wem</CachePath>
-				</File>
-				<File Id="814521280" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-Dash_Cloth-03.wav</ShortName>
-					<CachePath>SFX/Player-Dash_Cloth-03_10C4C929.wem</CachePath>
-				</File>
-				<File Id="814818822" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Leather-06.wav</ShortName>
-					<CachePath>SFX/Player-FS_Leather-06_10C4C929.wem</CachePath>
-				</File>
-				<File Id="833108512" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Cloth-19.wav</ShortName>
-					<CachePath>SFX/Player-FS_Cloth-19_8EBA77B9.wem</CachePath>
-				</File>
-				<File Id="836914271" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Voice_Exhale-04.wav</ShortName>
-					<CachePath>Voices/English(US)/Player-FS_Voice_Exhale-04_10C4C929.wem</CachePath>
-				</File>
-				<File Id="837099645" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Cloth-11.wav</ShortName>
-					<CachePath>SFX/Player-FS_Cloth-11_C3E41F82.wem</CachePath>
 				</File>
 				<File Id="847593425" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - Descent.wav</ShortName>
 					<CachePath>SFX/Menu - Descent_825148B3.wem</CachePath>
 				</File>
-				<File Id="866224309" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>PLAYER-RMC4_Release.wav</ShortName>
-					<CachePath>SFX/PLAYER-RMC4_Release_F9459412.wem</CachePath>
-				</File>
-				<File Id="872721198" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Leather-04.wav</ShortName>
-					<CachePath>SFX/Player-FS_Leather-04_10C4C929.wem</CachePath>
-				</File>
-				<File Id="888679504" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Leather-18.wav</ShortName>
-					<CachePath>SFX/Player-FS_Leather-18_10C4C929.wem</CachePath>
-				</File>
-				<File Id="889376298" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>PLAYER-RMC_Charge2.wav</ShortName>
-					<CachePath>SFX/PLAYER-RMC_Charge2_758737D8.wem</CachePath>
-				</File>
-				<File Id="912214824" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Leather-02.wav</ShortName>
-					<CachePath>SFX/Player-FS_Leather-02_A206C8E7.wem</CachePath>
-				</File>
-				<File Id="912469435" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Cloth-14.wav</ShortName>
-					<CachePath>SFX/Player-FS_Cloth-14_1C2A3619.wem</CachePath>
-				</File>
-				<File Id="917403618" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-Attack_LMC.wav</ShortName>
-					<CachePath>SFX/Player-Attack_LMC_10C4C929.wem</CachePath>
-				</File>
-				<File Id="932713969" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Leather-20.wav</ShortName>
-					<CachePath>SFX/Player-FS_Leather-20_10C4C929.wem</CachePath>
-				</File>
-				<File Id="933774762" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Leather-11.wav</ShortName>
-					<CachePath>SFX/Player-FS_Leather-11_10C4C929.wem</CachePath>
-				</File>
-				<File Id="945827655" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_steps-15.wav</ShortName>
-					<CachePath>SFX/Player-FS_steps-15_10C4C929.wem</CachePath>
-				</File>
-				<File Id="949801487" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Cloth-08.wav</ShortName>
-					<CachePath>SFX/Player-FS_Cloth-08_57A1B8BC.wem</CachePath>
-				</File>
-				<File Id="967862557" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Player-Dash_Voice-07.wav</ShortName>
-					<CachePath>Voices/English(US)/Player-Dash_Voice-07_10C4C929.wem</CachePath>
-				</File>
-				<File Id="974729402" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>PLAYER-RMC3_Release.wav</ShortName>
-					<CachePath>SFX/PLAYER-RMC3_Release_10C4C929.wem</CachePath>
-				</File>
-				<File Id="983422228" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Player-AttackRMC_Charge-01.wav</ShortName>
-					<CachePath>Voices/English(US)/Player-AttackRMC_Charge-01_6391295F.wem</CachePath>
-				</File>
-				<File Id="989871151" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Player-GettingHit-05.wav</ShortName>
-					<CachePath>Voices/English(US)/Player-GettingHit-05_BA5DA460.wem</CachePath>
-				</File>
-				<File Id="995070210" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Cloth-10.wav</ShortName>
-					<CachePath>SFX/Player-FS_Cloth-10_62BD3916.wem</CachePath>
-				</File>
-				<File Id="1003067410" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-Dash_Stomp-01.wav</ShortName>
-					<CachePath>SFX/Player-Dash_Stomp-01_10C4C929.wem</CachePath>
-				</File>
-				<File Id="1015325291" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Cloth-06.wav</ShortName>
-					<CachePath>SFX/Player-FS_Cloth-06_83CCB70E.wem</CachePath>
-				</File>
-				<File Id="1025884227" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Voice_Inhale-10.wav</ShortName>
-					<CachePath>Voices/English(US)/Player-FS_Voice_Inhale-10_7E08D0EE.wem</CachePath>
-				</File>
-				<File Id="1034679750" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_steps-07.wav</ShortName>
-					<CachePath>SFX/Player-FS_steps-07_10C4C929.wem</CachePath>
-				</File>
-				<File Id="1036089617" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Cloth-04.wav</ShortName>
-					<CachePath>SFX/Player-FS_Cloth-04_D5867540.wem</CachePath>
-				</File>
-				<File Id="1052748530" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>PLAYER-RMC_Charge1.wav</ShortName>
-					<CachePath>SFX/PLAYER-RMC_Charge1_D513C6B6.wem</CachePath>
-				</File>
-				<File Id="1055398214" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Voice_Inhale-07.wav</ShortName>
-					<CachePath>Voices/English(US)/Player-FS_Voice_Inhale-07_EF55435E.wem</CachePath>
-				</File>
-				<File Id="1061041983" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Cloth-21.wav</ShortName>
-					<CachePath>SFX/Player-FS_Cloth-21_4B2302D3.wem</CachePath>
-				</File>
-				<File Id="1061093479" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Voice_Inhale-05.wav</ShortName>
-					<CachePath>Voices/English(US)/Player-FS_Voice_Inhale-05_10C4C929.wem</CachePath>
-				</File>
-				<File Id="1066085311" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Voice_Inhale-08.wav</ShortName>
-					<CachePath>Voices/English(US)/Player-FS_Voice_Inhale-08_F2E32FE5.wem</CachePath>
-				</File>
-				<File Id="1068300947" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Voice_Inhale-11.wav</ShortName>
-					<CachePath>Voices/English(US)/Player-FS_Voice_Inhale-11_14A06BDE.wem</CachePath>
-				</File>
-				<File Id="1072581976" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_steps-09.wav</ShortName>
-					<CachePath>SFX/Player-FS_steps-09_10C4C929.wem</CachePath>
-				</File>
-				<File Id="1073250613" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player-FS_Leather-12.wav</ShortName>
-					<CachePath>SFX/Player-FS_Leather-12_38178DE0.wem</CachePath>
-				</File>
 			</Media>
 			<Plugins>
-				<Custom>
-					<Plugin Id="344626603" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
-				</Custom>
 				<ShareSets>
 					<Plugin Id="1416967478" Name="All_Buttons_IN" LibName="Wwise Compressor" LibId="7077891"/>
-					<Plugin Id="3851006675" Name="Secret_message_Distant" LibName="Wwise Harmonizer" LibId="9043971"/>
-					<Plugin Id="4202347640" Name="Repeat_after_me" LibName="Wwise Harmonizer" LibId="9043971"/>
 				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="3621683420" Name="Play_ENV_Torch" MaxAttenuation="15" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="655158912"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="2940525158" Name="Play_ENV_Torch2" MaxAttenuation="15" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="540468758"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="3103472528" Name="Play_Intro" DurationType="OneShot" DurationMin="37.916668" DurationMax="37.916668">
 					<MediaRefs>
 						<MediaRef Id="31143423"/>
@@ -596,169 +205,9 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="104602405" Name="Play_Player_Attack_LMC" DurationType="OneShot" DurationMin="1.3765548" DurationMax="1.5011435">
-					<MediaRefs>
-						<MediaRef Id="917403618"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="2175711460" Name="Play_Player_Dash" DurationType="OneShot" DurationMin="1.55" DurationMax="2.455896">
-					<MediaRefs>
-						<MediaRef Id="72732113"/>
-						<MediaRef Id="82516119"/>
-						<MediaRef Id="99215667"/>
-						<MediaRef Id="212081728"/>
-						<MediaRef Id="214269456"/>
-						<MediaRef Id="348751237"/>
-						<MediaRef Id="422975555"/>
-						<MediaRef Id="485575061"/>
-						<MediaRef Id="579335366"/>
-						<MediaRef Id="662154490"/>
-						<MediaRef Id="718884290"/>
-						<MediaRef Id="754061858"/>
-						<MediaRef Id="814521280"/>
-						<MediaRef Id="967862557"/>
-						<MediaRef Id="1003067410"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="4078825889" Name="Play_Player_FS" DurationType="OneShot" DurationMin="0.44800273" DurationMax="1.6166667">
-					<MediaRefs>
-						<MediaRef Id="13945456"/>
-						<MediaRef Id="23604221"/>
-						<MediaRef Id="39272691"/>
-						<MediaRef Id="58214838"/>
-						<MediaRef Id="92570979"/>
-						<MediaRef Id="108173549"/>
-						<MediaRef Id="113311087"/>
-						<MediaRef Id="199119937"/>
-						<MediaRef Id="203961088"/>
-						<MediaRef Id="205670369"/>
-						<MediaRef Id="219254116"/>
-						<MediaRef Id="229752212"/>
-						<MediaRef Id="285734244"/>
-						<MediaRef Id="307192257"/>
-						<MediaRef Id="331596387"/>
-						<MediaRef Id="419716388"/>
-						<MediaRef Id="426708470"/>
-						<MediaRef Id="434197839"/>
-						<MediaRef Id="435998273"/>
-						<MediaRef Id="458521427"/>
-						<MediaRef Id="464805336"/>
-						<MediaRef Id="470704831"/>
-						<MediaRef Id="476043786"/>
-						<MediaRef Id="476320887"/>
-						<MediaRef Id="503570863"/>
-						<MediaRef Id="517520188"/>
-						<MediaRef Id="547181476"/>
-						<MediaRef Id="608851740"/>
-						<MediaRef Id="609042276"/>
-						<MediaRef Id="609114711"/>
-						<MediaRef Id="613593918"/>
-						<MediaRef Id="661501275"/>
-						<MediaRef Id="667203179"/>
-						<MediaRef Id="667726242"/>
-						<MediaRef Id="705872836"/>
-						<MediaRef Id="738238298"/>
-						<MediaRef Id="743005053"/>
-						<MediaRef Id="814818822"/>
-						<MediaRef Id="833108512"/>
-						<MediaRef Id="836914271"/>
-						<MediaRef Id="837099645"/>
-						<MediaRef Id="872721198"/>
-						<MediaRef Id="888679504"/>
-						<MediaRef Id="912214824"/>
-						<MediaRef Id="912469435"/>
-						<MediaRef Id="932713969"/>
-						<MediaRef Id="933774762"/>
-						<MediaRef Id="945827655"/>
-						<MediaRef Id="949801487"/>
-						<MediaRef Id="995070210"/>
-						<MediaRef Id="1015325291"/>
-						<MediaRef Id="1025884227"/>
-						<MediaRef Id="1034679750"/>
-						<MediaRef Id="1036089617"/>
-						<MediaRef Id="1055398214"/>
-						<MediaRef Id="1061041983"/>
-						<MediaRef Id="1061093479"/>
-						<MediaRef Id="1066085311"/>
-						<MediaRef Id="1068300947"/>
-						<MediaRef Id="1072581976"/>
-						<MediaRef Id="1073250613"/>
-					</MediaRefs>
-					<PluginRefs>
-						<Custom>
-							<PluginRef Id="344626603"/>
-						</Custom>
-					</PluginRefs>
-				</Event>
-				<Event Id="3353228327" Name="Play_Player_GettingHit" DurationType="OneShot" DurationMin="0.52135414" DurationMax="0.5503125">
-					<MediaRefs>
-						<MediaRef Id="191419810"/>
-						<MediaRef Id="312145317"/>
-						<MediaRef Id="393696138"/>
-						<MediaRef Id="614300081"/>
-						<MediaRef Id="792333592"/>
-						<MediaRef Id="989871151"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="2554632573" Name="Play_Player_RMC1_Release" DurationType="OneShot" DurationMin="0.89164853" DurationMax="0.89164853">
-					<MediaRefs>
-						<MediaRef Id="226729483"/>
-					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="4202347640"/>
-						</ShareSets>
-					</PluginRefs>
-				</Event>
-				<Event Id="4180070302" Name="Play_Player_RMC2_Release" DurationType="OneShot" DurationMin="1.7833542" DurationMax="1.7833542">
-					<MediaRefs>
-						<MediaRef Id="14596070"/>
-					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="4202347640"/>
-						</ShareSets>
-					</PluginRefs>
-				</Event>
-				<Event Id="1429342207" Name="Play_Player_RMC3_Release" DurationType="OneShot" DurationMin="1.1166875" DurationMax="1.1166875">
-					<MediaRefs>
-						<MediaRef Id="974729402"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="363320808" Name="Play_Player_RMC4_Release" DurationType="OneShot" DurationMin="1.682313" DurationMax="1.682313">
-					<MediaRefs>
-						<MediaRef Id="866224309"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="4193784842" Name="Play_Player_RMC_Charge1" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="130895049"/>
-						<MediaRef Id="336767322"/>
-						<MediaRef Id="983422228"/>
-						<MediaRef Id="1052748530"/>
-					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3851006675"/>
-						</ShareSets>
-					</PluginRefs>
-				</Event>
-				<Event Id="4193784841" Name="Play_Player_RMC_Charge2" DurationType="OneShot" DurationMin="3.531809" DurationMax="3.6988425">
-					<MediaRefs>
-						<MediaRef Id="130895049"/>
-						<MediaRef Id="336767322"/>
-						<MediaRef Id="889376298"/>
-						<MediaRef Id="983422228"/>
-					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="4202347640"/>
-						</ShareSets>
-					</PluginRefs>
-				</Event>
 				<Event Id="2914981333" Name="Stop_Menu" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E13AF80D-8A30-8421-0239-E6D07A6B8153}</FileHash>
+	<FileHash>{CF91C24F-5BA8-0E57-C8F6-E04EF60372DD}</FileHash>
 </SoundBanksInfo>
