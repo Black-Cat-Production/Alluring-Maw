@@ -441,6 +441,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_ENV_FireBowl" ID="{8BF1B607-A4D9-496C-8B3C-CDE69A760569}">
+							<ChildrenList>
+								<Action Name="" ID="{60979904-EE65-49AD-B4CF-29CC5DD8286F}" ShortID="95355915">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ENV-FireBowl" ID="{FC2C0469-9A83-44CD-82B9-492B9321330F}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_ENV_Blue_Fire" ID="{AFA481C9-0436-4AB4-8C43-F8E0798ABC13}">
+							<ChildrenList>
+								<Action Name="" ID="{7D42BB05-D8E5-4B58-8EC2-2BDCE8873D0E}" ShortID="230227326">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ENV-Blue-Fire" ID="{173CBABB-73CF-4ACF-A5F0-1943B454537D}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Event Name="Set_State_Pause" ID="{17D47647-E23A-410C-8C7C-8FF98A527C3B}">

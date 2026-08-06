@@ -14,6 +14,8 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_ATMO = 3133186549U;
+        static const AkUniqueID PLAY_ENV_BLUE_FIRE = 1849851393U;
+        static const AkUniqueID PLAY_ENV_FIREBOWL = 1468104246U;
         static const AkUniqueID PLAY_ENV_TORCH = 3621683420U;
         static const AkUniqueID PLAY_ENV_TORCH2 = 2940525158U;
         static const AkUniqueID PLAY_INTRO = 3103472528U;

@@ -3,14 +3,14 @@
 	<Attenuations>
 		<WorkUnit Name="Default Work Unit" ID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}" PersistMode="Standalone">
 			<ChildrenList>
-				<Attenuation Name="Torch_Attenuation" ID="{E7F76D55-103C-407D-A677-5F19C9A9E0C1}" ShortID="847965836">
+				<Attenuation Name="Environment_Attenuation" ID="{E7F76D55-103C-407D-A677-5F19C9A9E0C1}" ShortID="847965836">
 					<PropertyList>
 						<Property Name="ConeUse" Type="bool">
 							<ValueList>
 								<Value>True</Value>
 							</ValueList>
 						</Property>
-						<Property Name="RadiusMax" Type="Real64" Value="15"/>
+						<Property Name="RadiusMax" Type="Real64" Value="12"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -22,11 +22,21 @@
 									<PointList>
 										<Point>
 											<XPos>0</XPos>
-											<YPos>-7.24889</YPos>
+											<YPos>0</YPos>
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>15</XPos>
+											<XPos>6.01019</XPos>
+											<YPos>-2.49064</YPos>
+											<Flags>0</Flags>
+										</Point>
+										<Point>
+											<XPos>11.0017</XPos>
+											<YPos>-10.11729</YPos>
+											<Flags>0</Flags>
+										</Point>
+										<Point>
+											<XPos>12</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -49,12 +59,12 @@
 									<PointList>
 										<Point>
 											<XPos>0</XPos>
-											<YPos>40</YPos>
+											<YPos>24</YPos>
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>15</XPos>
-											<YPos>62</YPos>
+											<XPos>12</XPos>
+											<YPos>48</YPos>
 											<Flags>37</Flags>
 										</Point>
 									</PointList>

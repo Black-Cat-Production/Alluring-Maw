@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{4B111B02-56D7-E7C8-9F5C-5BCBB129F4F7}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{189EDF7A-6DAC-8B5E-949A-4EAD4BF62023}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -66,7 +66,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="English(US)" Hash="{3AD09B8F-B740-DA21-F227-5B52F800FFBF}">
+		<SoundBank Id="3161908922" Type="User" Language="English(US)" Hash="{B606BF07-3AF9-F950-8C23-6C1B400146B4}">
 			<ShortName>Main</ShortName>
 			<Path>English(US)/Main.bnk</Path>
 			<Media>
@@ -129,6 +129,10 @@
 				<File Id="118127717" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - Atmo_Wind-01.wav</ShortName>
 					<CachePath>SFX/Menu - Atmo_Wind-01_59F8D407.wem</CachePath>
+				</File>
+				<File Id="129770599" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Blue Fire.wav</ShortName>
+					<CachePath>SFX/Blue Fire_0582EB98.wem</CachePath>
 				</File>
 				<File Id="130895049" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-AttackRMC_Charge-02.wav</ShortName>
@@ -220,7 +224,7 @@
 				</File>
 				<File Id="411084714" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ENV-Torch.wav</ShortName>
-					<CachePath>SFX/ENV-Torch_299D6053.wem</CachePath>
+					<CachePath>SFX/ENV-Torch_9DDC35A1.wem</CachePath>
 				</File>
 				<File Id="419716388" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Cloth-12.wav</ShortName>
@@ -320,7 +324,7 @@
 				</File>
 				<File Id="655158912" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ENV-Torch.wav</ShortName>
-					<CachePath>SFX/ENV-Torch_974D2FE5.wem</CachePath>
+					<CachePath>SFX/ENV-Torch_A561301D.wem</CachePath>
 				</File>
 				<File Id="661501275" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_steps-10.wav</ShortName>
@@ -385,6 +389,10 @@
 				<File Id="814818822" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Leather-06.wav</ShortName>
 					<CachePath>SFX/Player-FS_Leather-06_10C4C929.wem</CachePath>
+				</File>
+				<File Id="820166616" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ENV-Torch.wav</ShortName>
+					<CachePath>SFX/ENV-Torch_64B45D0B.wem</CachePath>
 				</File>
 				<File Id="833108512" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Cloth-19.wav</ShortName>
@@ -524,9 +532,11 @@
 					<Plugin Id="344626603" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 				</Custom>
 				<ShareSets>
+					<Plugin Id="1182561210" Name="Cut_3dB_10KHz" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="1416967478" Name="All_Buttons_IN" LibName="Wwise Compressor" LibId="7077891"/>
 					<Plugin Id="1674078407" Name="Chorus_Like" LibName="Wwise Flanger" LibId="8192003"/>
 					<Plugin Id="3851006675" Name="Secret_message_Distant" LibName="Wwise Harmonizer" LibId="9043971"/>
+					<Plugin Id="4136714357" Name="Few_Odd_Harm_Peaks" LibName="Wwise Flanger" LibId="8192003"/>
 					<Plugin Id="4202347640" Name="Repeat_after_me" LibName="Wwise Harmonizer" LibId="9043971"/>
 				</ShareSets>
 			</Plugins>
@@ -542,15 +552,40 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="3621683420" Name="Play_ENV_Torch" MaxAttenuation="15" DurationType="Infinite">
+				<Event Id="1849851393" Name="Play_ENV_Blue_Fire" MaxAttenuation="12" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="129770599"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="4136714357"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="1468104246" Name="Play_ENV_FireBowl" MaxAttenuation="12" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="820166616"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3621683420" Name="Play_ENV_Torch" MaxAttenuation="12" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="655158912"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1182561210"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
-				<Event Id="2940525158" Name="Play_ENV_Torch2" MaxAttenuation="15" DurationType="Infinite">
+				<Event Id="2940525158" Name="Play_ENV_Torch2" MaxAttenuation="12" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="411084714"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1182561210"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="3103472528" Name="Play_Intro" DurationType="OneShot" DurationMin="37.916668" DurationMax="37.916668">
 					<MediaRefs>
@@ -790,5 +825,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{06E99622-9121-BD89-CF96-28AAC0D22C5E}</FileHash>
+	<FileHash>{CD756144-6764-A0FC-E082-A0E758E2026A}</FileHash>
 </SoundBanksInfo>

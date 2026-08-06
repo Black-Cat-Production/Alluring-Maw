@@ -5,12 +5,10 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{1FF1257D-580D-494F-BD3F-5167772F2C93}">
 					<ObjectInclusionList>
-						<ObjectRef Name="Play_ENV_Torch2" ID="{995C1EE1-7799-430A-9BBE-BB80ABF03DAA}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Spell_Hitmarker" ID="{48AF8237-AB04-4347-96E3-38CDCBA7F956}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ENVIRONMENT" ID="{B069477F-D6D4-437C-BC88-BD868DBE5645}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="MENU" ID="{B50BB0D5-B975-44F8-8ACB-0AE52A065AD2}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_ENV_Torch" ID="{BB80FE22-66D9-4582-9258-EC5C2626C341}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="PLAYER" ID="{90C613C9-56CD-4E3F-B77C-A06762A48879}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_Atmo" ID="{FCFBEDD9-F6DC-4E61-9DFE-1E2314911CEB}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

@@ -227,8 +227,8 @@
 										</Effect>
 										<Effect Name="Cut_3dB_10KHz" ID="{83EAB3EA-A43D-470F-A183-7F02DAA44A4D}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
 											<PropertyList>
-												<Property Name="FrequencyBand3" Type="Real32" Value="10000"/>
-												<Property Name="GainBand3" Type="Real32" Value="-3"/>
+												<Property Name="FrequencyBand3" Type="Real32" Value="2536"/>
+												<Property Name="GainBand3" Type="Real32" Value="-6"/>
 												<Property Name="OnOffBand1" Type="bool" Value="False"/>
 												<Property Name="OnOffBand2" Type="bool" Value="False"/>
 											</PropertyList>
@@ -680,10 +680,11 @@
 					<ChildrenList>
 						<Effect Name="Bathroom1" ID="{1969D30F-C165-45C0-B290-DE3ED07A7AA3}" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
 							<PropertyList>
+								<Property Name="DryLevel" Type="Real32" Value="-0.3"/>
 								<Property Name="HFRatio" Type="Real32" Value="4.5"/>
 								<Property Name="NumberOfDelays" Type="int32" Value="12"/>
 								<Property Name="ReverbTime" Type="Real32" Value="1"/>
-								<Property Name="WetLevel" Type="Real32" Value="-20"/>
+								<Property Name="WetLevel" Type="Real32" Value="-27"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="Big_Garage1" ID="{172402A8-22F4-40FC-BE1D-5269594CB633}" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
@@ -746,10 +747,11 @@
 						</Effect>
 						<Effect Name="Tunnel1" ID="{CC44B890-9865-4157-965F-86FED27BC4C6}" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
 							<PropertyList>
+								<Property Name="DryLevel" Type="Real32" Value="-0.3"/>
 								<Property Name="HFRatio" Type="Real32" Value="9.5"/>
 								<Property Name="NumberOfDelays" Type="int32" Value="12"/>
 								<Property Name="ReverbTime" Type="Real32" Value="5"/>
-								<Property Name="WetLevel" Type="Real32" Value="-30"/>
+								<Property Name="WetLevel" Type="Real32" Value="-32"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="Underground_Parking1" ID="{8DA66AA3-6CA0-41A0-B7A2-BB6FCABFCDA8}" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
@@ -1635,7 +1637,8 @@
 									<PropertyList>
 										<Property Name="DelayTime" Type="Real32" Value="0.4"/>
 										<Property Name="EnableLFO" Type="bool" Value="False"/>
-										<Property Name="FeedBackLevel" Type="Real32" Value="0.95"/>
+										<Property Name="FeedBackLevel" Type="Real32" Value="0.75"/>
+										<Property Name="WetDryMix" Type="Real32" Value="24"/>
 									</PropertyList>
 								</Effect>
 								<Effect Name="Many_Odd_Harm_Peaks" ID="{227BF0C2-EE7F-4962-AEFD-BE4C86E48398}" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
@@ -1650,6 +1653,7 @@
 										<Property Name="DelayTime" Type="Real32" Value="0.4"/>
 										<Property Name="EnableLFO" Type="bool" Value="False"/>
 										<Property Name="FeedForwardLevel" Type="Real32" Value="-1"/>
+										<Property Name="WetDryMix" Type="Real32" Value="37"/>
 									</PropertyList>
 								</Effect>
 								<Effect Name="Few_Even_Harm_Peaks" ID="{63235485-F861-422B-91D5-B5545F7FEE21}" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
