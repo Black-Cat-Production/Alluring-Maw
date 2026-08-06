@@ -31,7 +31,7 @@
 								<Action Name="" ID="{A73E4567-7D0A-46D5-AE12-4F6693F9CA16}" ShortID="971271252">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Menu - Atmo_Wind-01" ID="{D056924B-BC7C-4D9F-9C4B-77D8B93C2D77}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+											<ObjectRef Name="Menu - Atmo_Wind" ID="{D056924B-BC7C-4D9F-9C4B-77D8B93C2D77}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -177,7 +177,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Menu - Atmo_Wind-01" ID="{D056924B-BC7C-4D9F-9C4B-77D8B93C2D77}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+											<ObjectRef Name="Menu - Atmo_Wind" ID="{D056924B-BC7C-4D9F-9C4B-77D8B93C2D77}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -221,7 +221,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="ENV-Torch2" ID="{21E0DA25-099E-427D-8A7B-B02DAA2C02F2}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+											<ObjectRef Name="ENV-Torch_alt" ID="{606A99AD-E327-4DDD-BE19-D17E7F2853BA}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -417,7 +417,25 @@
 								<Action Name="" ID="{6668BBA2-A97E-4BDF-856B-FE80A3A6D07A}" ShortID="800594424">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="ENV-Torch2" ID="{21E0DA25-099E-427D-8A7B-B02DAA2C02F2}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+											<ObjectRef Name="ENV-Torch_alt" ID="{606A99AD-E327-4DDD-BE19-D17E7F2853BA}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Atmo" ID="{FCFBEDD9-F6DC-4E61-9DFE-1E2314911CEB}">
+							<ChildrenList>
+								<Action Name="" ID="{D2ED9A24-A90F-4A39-98CB-A8C752D57FB1}" ShortID="97191309">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Atmo_LoRumble" ID="{42125116-57F0-4650-8467-ACBDAAE5E2CA}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{56798AC3-932D-43F1-8BD0-24863E6CDAC5}" ShortID="203422291">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Atmo_Wind" ID="{94F9256A-D9A8-411A-9A86-25F6FD345210}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

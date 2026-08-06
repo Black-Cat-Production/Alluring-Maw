@@ -194,7 +194,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 6fee4f8286acc84394f7b8f67b517463
     GuidInternal: 
-    m_lastTime: -8584156686720957850
+    m_lastTime: -8584155787649993085
     List:
     - name: Main
       guid: 7d25f11f0d584f49bd3f5167772f2c93
@@ -222,7 +222,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: f4ccbb95d042c543bd560120d28efaf5
     GuidInternal: 
-    m_lastTime: -8584156695859450615
+    m_lastTime: -8584155762880780729
     List:
     - name: BOSS
       guid: 34d61693d5e42d419f8b799d1ffe5126
@@ -292,6 +292,26 @@ MonoBehaviour:
         ObjectType: 4
         guid: d5b00bb575b9f8448acb0ae52a065ad2
       Path: Events\Default Work Unit\MENU
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Atmo
+      guid: d9edfbfcdcf6614e9dfe1e2314911ceb
+      id: 3133186549
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: ENVIRONMENT
+        ObjectType: 4
+        guid: 7f4769b0d4d67c43bc88bd868dbe5645
+      - ElementName: Play_Atmo
+        ObjectType: 3
+        guid: d9edfbfcdcf6614e9dfe1e2314911ceb
+      Path: Events\Default Work Unit\ENVIRONMENT\Play_Atmo
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -588,8 +608,8 @@ MonoBehaviour:
         guid: 66f06f65effa084b9ae67f05bccd652a
       Path: Events\Default Work Unit\PLAYER\Play_Player_Attack_LMC
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.5011435
+      minDuration: 1.3765548
     - name: Play_Player_Dash
       guid: b4a55bfc6512d147b62cf3daf6f40798
       id: 2175711460
@@ -608,8 +628,8 @@ MonoBehaviour:
         guid: b4a55bfc6512d147b62cf3daf6f40798
       Path: Events\Default Work Unit\PLAYER\Play_Player_Dash
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 2.455896
+      minDuration: 1.55
     - name: Play_Player_FS
       guid: 2442c0ba3c81b94588dcd2fe71b900f4
       id: 4078825889
@@ -628,8 +648,8 @@ MonoBehaviour:
         guid: 2442c0ba3c81b94588dcd2fe71b900f4
       Path: Events\Default Work Unit\PLAYER\Play_Player_FS
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.6166667
+      minDuration: 0.44800273
     - name: Play_Player_GettingHit
       guid: 554b1e1a1a2f054fb3a2a3a376305ea9
       id: 3353228327
@@ -648,8 +668,8 @@ MonoBehaviour:
         guid: 554b1e1a1a2f054fb3a2a3a376305ea9
       Path: Events\Default Work Unit\PLAYER\Play_Player_GettingHit
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.5503125
+      minDuration: 0.52135414
     - name: Play_Player_RMC_Charge1
       guid: 825f6c780d6ee749b58eaf3f91dd9c4b
       id: 4193784842
@@ -688,8 +708,8 @@ MonoBehaviour:
         guid: ea0e4c97a1c12e4c8bc67b3e8d0d89be
       Path: Events\Default Work Unit\PLAYER\Play_Player_RMC_Charge2
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 3.6988425
+      minDuration: 3.531809
     - name: Play_Player_RMC1_Release
       guid: fb93422b34938c4c975874f3a250d7b2
       id: 2554632573
@@ -708,8 +728,8 @@ MonoBehaviour:
         guid: fb93422b34938c4c975874f3a250d7b2
       Path: Events\Default Work Unit\PLAYER\Play_Player_RMC1_Release
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.89164853
+      minDuration: 0.89164853
     - name: Play_Player_RMC2_Release
       guid: fa32bd7420bfc043b060ab307a47ce1a
       id: 4180070302
@@ -728,8 +748,8 @@ MonoBehaviour:
         guid: fa32bd7420bfc043b060ab307a47ce1a
       Path: Events\Default Work Unit\PLAYER\Play_Player_RMC2_Release
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.7833542
+      minDuration: 1.7833542
     - name: Play_Player_RMC3_Release
       guid: e5a35b56dffb3a4f93ce7c299849eb1a
       id: 1429342207
@@ -748,8 +768,8 @@ MonoBehaviour:
         guid: e5a35b56dffb3a4f93ce7c299849eb1a
       Path: Events\Default Work Unit\PLAYER\Play_Player_RMC3_Release
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.1166875
+      minDuration: 1.1166875
     - name: Play_Player_RMC4_Release
       guid: 4e8cc24fefd0084885abeff45c6f75ab
       id: 363320808
@@ -768,8 +788,8 @@ MonoBehaviour:
         guid: 4e8cc24fefd0084885abeff45c6f75ab
       Path: Events\Default Work Unit\PLAYER\Play_Player_RMC4_Release
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.682313
+      minDuration: 1.682313
     - name: Play_Spell_Hitmarker
       guid: 3782af4804ab474396e338cdcba7f956
       id: 1825965928
@@ -785,8 +805,8 @@ MonoBehaviour:
         guid: 3782af4804ab474396e338cdcba7f956
       Path: Events\Default Work Unit\Play_Spell_Hitmarker
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.42378527
+      minDuration: 0.36680162
     - name: Play_Zombie_Attack
       guid: 1e2fe2f98645c042b04ece4045383643
       id: 3597927707
@@ -1055,7 +1075,7 @@ MonoBehaviour:
     m_lastTime: -8584156743003430855
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000060000000900000029000000
+  ExpandedWaapiItemIds: 0100000005000000060000000700000008000000090000000a0000000b0000001100000012000000130000001b0000001c000000290000002e00000030000000310000003300000042000000d7000000d8000000
   AutoSyncSelection: 1
   autoPopulateEnabled: 1
   currentDataSource: 0

@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_ATMO = 3133186549U;
         static const AkUniqueID PLAY_ENV_TORCH = 3621683420U;
         static const AkUniqueID PLAY_ENV_TORCH2 = 2940525158U;
         static const AkUniqueID PLAY_INTRO = 3103472528U;
@@ -23,6 +24,17 @@ namespace AK
         static const AkUniqueID PLAY_MENU_UI_MOUSEOVER_01 = 3257834436U;
         static const AkUniqueID PLAY_MENU_UI_SELECT1 = 558031544U;
         static const AkUniqueID PLAY_MENU_UI_SELECT2_01 = 1590463151U;
+        static const AkUniqueID PLAY_PLAYER_ATTACK_LMC = 104602405U;
+        static const AkUniqueID PLAY_PLAYER_DASH = 2175711460U;
+        static const AkUniqueID PLAY_PLAYER_FS = 4078825889U;
+        static const AkUniqueID PLAY_PLAYER_GETTINGHIT = 3353228327U;
+        static const AkUniqueID PLAY_PLAYER_RMC1_RELEASE = 2554632573U;
+        static const AkUniqueID PLAY_PLAYER_RMC2_RELEASE = 4180070302U;
+        static const AkUniqueID PLAY_PLAYER_RMC3_RELEASE = 1429342207U;
+        static const AkUniqueID PLAY_PLAYER_RMC4_RELEASE = 363320808U;
+        static const AkUniqueID PLAY_PLAYER_RMC_CHARGE1 = 4193784842U;
+        static const AkUniqueID PLAY_PLAYER_RMC_CHARGE2 = 4193784841U;
+        static const AkUniqueID PLAY_SPELL_HITMARKER = 1825965928U;
         static const AkUniqueID STOP_MENU = 2914981333U;
     } // namespace EVENTS
 

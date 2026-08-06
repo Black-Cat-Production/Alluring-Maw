@@ -121,18 +121,21 @@
 										<ActiveSource Name="Menu - ATMO_Thump" ID="{80DA6435-8854-4952-BBA6-AFB50B79F7B1}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Menu - Atmo_Wind-01" ID="{D056924B-BC7C-4D9F-9C4B-77D8B93C2D77}" ShortID="961983660">
+								<Sound Name="Menu - Atmo_Wind" ID="{D056924B-BC7C-4D9F-9C4B-77D8B93C2D77}" ShortID="961983660">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>4</Value>
+												<Value>-4</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+										</Reference>
+										<Reference Name="Effect0" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
+											<ObjectRef Name="Chorus_Like" ID="{EEE0CC86-8CA5-4DBC-A6B7-568FCB26F290}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="SFX Bus" ID="{0428BEA9-86B3-406D-9B6A-357CE32B9E02}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
@@ -161,9 +164,15 @@
 								</Sound>
 								<Sound Name="Menu - Atmo_LoRumble" ID="{EFE12D39-480C-4CD6-8827-2D927D60FBD9}" ShortID="16092079">
 									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-400</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-7</Value>
+												<Value>-21</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -177,6 +186,12 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="Menu - Atmo_LoRumble" ID="{8380AC36-7906-403A-8D17-3C406194434A}">
+											<PropertyList>
+												<Property Name="CrossfadeDuration" Type="Real64" Value="2891.579"/>
+												<Property Name="LoopBegin" Type="Real64" Value="12.8782677791021"/>
+												<Property Name="LoopEnd" Type="Real64" Value="81.8533969010727"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Menu - Atmo_LoRumble.wav</AudioFile>
 											<MediaIDList>
@@ -308,81 +323,6 @@
 								</RandomSequenceContainer>
 							</ChildrenList>
 						</Folder>
-						<Sound Name="ENV-Torch" ID="{1C09864C-3E6D-453F-8504-99D5B4E37CEB}" ShortID="157392903">
-							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="1"/>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Attenuation">
-									<ObjectRef Name="Torch_Attenuation" ID="{E7F76D55-103C-407D-A677-5F19C9A9E0C1}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
-								</Reference>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="SFX Bus" ID="{0428BEA9-86B3-406D-9B6A-357CE32B9E02}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="ENV-Torch" ID="{EE4D6410-F925-4C3A-B959-FB03A213A4CF}">
-									<PropertyList>
-										<Property Name="CrossfadeDuration" Type="Real64" Value="4248.247"/>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.545751838235297"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.363834558823527"/>
-										<Property Name="LoopBegin" Type="Real64" Value="30.0163511029412"/>
-										<Property Name="LoopEnd" Type="Real64" Value="48.4506354166667"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="28.9854865196078"/>
-										<Property Name="TrimEnd" Type="Real64" Value="49.2995827205882"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>ENV-Torch.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="655158912"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="ENV-Torch" ID="{EE4D6410-F925-4C3A-B959-FB03A213A4CF}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="ENV-Torch2" ID="{21E0DA25-099E-427D-8A7B-B02DAA2C02F2}" ShortID="1033086433">
-							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="1"/>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Attenuation">
-									<ObjectRef Name="Torch_Attenuation" ID="{E7F76D55-103C-407D-A677-5F19C9A9E0C1}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
-								</Reference>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="SFX Bus" ID="{0428BEA9-86B3-406D-9B6A-357CE32B9E02}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="ENV-Torch2" ID="{D477E2AD-4D80-4BA3-A675-B5E64DFD1398}">
-									<PropertyList>
-										<Property Name="CrossfadeDuration" Type="Real64" Value="1998.07"/>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.413543936092956"/>
-										<Property Name="LoopBegin" Type="Real64" Value="1.53602033405955"/>
-										<Property Name="LoopEnd" Type="Real64" Value="28.4163761801017"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>ENV-Torch2.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="540468758"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="ENV-Torch2" ID="{D477E2AD-4D80-4BA3-A675-B5E64DFD1398}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<Folder Name="UI" ID="{21CCDBF6-914C-434D-9C5B-70EA32E1B2B1}" ShortID="916338415">
 							<ChildrenList>
 								<Sound Name="Menu - UI_LearnSkill1" ID="{33AC45D7-D527-4F2A-B6A8-CD4AC83AD606}" ShortID="853183974">
@@ -3728,7 +3668,7 @@
 										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>3</Value>
+												<Value>12</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -8144,7 +8084,7 @@
 					<PropertyList>
 						<Property Name="Lowpass" Type="int16">
 							<ValueList>
-								<Value>51</Value>
+								<Value>45</Value>
 							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
@@ -8203,6 +8143,245 @@
 						<ActiveSource Name="Spell-Hitmarker" ID="{355DCC48-9724-4622-8DA9-44F9EC395B17}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Folder Name="ENVIRONMENT" ID="{35613282-4C08-4643-A025-090B835A2B0A}" ShortID="9894469">
+					<ChildrenList>
+						<Sound Name="ENV-Torch" ID="{1C09864C-3E6D-453F-8504-99D5B4E37CEB}" ShortID="157392903">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>40</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Torch_Attenuation" ID="{E7F76D55-103C-407D-A677-5F19C9A9E0C1}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX Bus" ID="{0428BEA9-86B3-406D-9B6A-357CE32B9E02}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ENV-Torch" ID="{EE4D6410-F925-4C3A-B959-FB03A213A4CF}">
+									<PropertyList>
+										<Property Name="ChannelConfigOverride" Type="int64" Value="12546"/>
+										<Property Name="CrossfadeDuration" Type="Real64" Value="2650.79464285712"/>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.198809598214286"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.363834558823527"/>
+										<Property Name="LoopBegin" Type="Real64" Value="7.15324730829834"/>
+										<Property Name="LoopEnd" Type="Real64" Value="21.1348896402311"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="5.50039888392857"/>
+										<Property Name="TrimEnd" Type="Real64" Value="22.4602869616596"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>ENV-Torch.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="655158912"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ENV-Torch" ID="{EE4D6410-F925-4C3A-B959-FB03A213A4CF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Atmo_LoRumble" ID="{42125116-57F0-4650-8467-ACBDAAE5E2CA}" ShortID="299981086">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>70</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-18</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX Bus" ID="{0428BEA9-86B3-406D-9B6A-357CE32B9E02}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Menu - Atmo_LoRumble" ID="{B54E6890-9E65-4BAB-91FD-A26F898F1792}">
+									<Language>SFX</Language>
+									<AudioFile>Menu - Atmo_LoRumble.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="287189497"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Menu - Atmo_LoRumble" ID="{B54E6890-9E65-4BAB-91FD-A26F898F1792}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Atmo_Wind" ID="{94F9256A-D9A8-411A-9A86-25F6FD345210}" ShortID="125409868">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>55</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+								</Reference>
+								<Reference Name="Effect0" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
+									<ObjectRef Name="Chorus_Like" ID="{EEE0CC86-8CA5-4DBC-A6B7-568FCB26F290}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX Bus" ID="{0428BEA9-86B3-406D-9B6A-357CE32B9E02}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Menu - Atmo_Wind-01" ID="{14984581-7ADF-4AC3-9776-A6DA534D672A}">
+									<PropertyList>
+										<Property Name="CrossfadeDuration" Type="Real64" Value="2891.579"/>
+										<Property Name="FadeInDuration" Type="Real64" Value="2.36301075268817"/>
+										<Property Name="LoopBegin" Type="Real64" Value="5.24819593787335"/>
+										<Property Name="LoopEnd" Type="Real64" Value="86.2518518518518"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="2.36301075268817"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Menu - Atmo_Wind-01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="118127717"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Menu - Atmo_Wind-01" ID="{14984581-7ADF-4AC3-9776-A6DA534D672A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ENV-Torch_alt" ID="{606A99AD-E327-4DDD-BE19-D17E7F2853BA}" ShortID="368279019">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>40</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Torch_Attenuation" ID="{E7F76D55-103C-407D-A677-5F19C9A9E0C1}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX Bus" ID="{0428BEA9-86B3-406D-9B6A-357CE32B9E02}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ENV-Torch" ID="{72CC83B3-4E95-433D-88F5-2EC88CFB4936}">
+									<PropertyList>
+										<Property Name="ChannelConfigOverride" Type="int64" Value="12546"/>
+										<Property Name="CrossfadeDuration" Type="Real64" Value="2642.99818802526"/>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.530256883022395"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.363834558823527"/>
+										<Property Name="LoopBegin" Type="Real64" Value="8.80999396008406"/>
+										<Property Name="LoopEnd" Type="Real64" Value="20.1408416491596"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="6.57463255930619"/>
+										<Property Name="TrimEnd" Type="Real64" Value="21.8638581670168"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>ENV-Torch.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="411084714"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ENV-Torch" ID="{72CC83B3-4E95-433D-88F5-2EC88CFB4936}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ENV-FireBowl" ID="{FC2C0469-9A83-44CD-82B9-492B9321330F}" ShortID="364823104">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Torch_Attenuation" ID="{E7F76D55-103C-407D-A677-5F19C9A9E0C1}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX Bus" ID="{0428BEA9-86B3-406D-9B6A-357CE32B9E02}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ENV-Torch" ID="{1E9033BA-92DB-4E3E-8C6D-D78B08629B81}">
+									<PropertyList>
+										<Property Name="ChannelConfigOverride" Type="int64" Value="12546"/>
+										<Property Name="CrossfadeDuration" Type="Real64" Value="2642.99818802526"/>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.530256883022395"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.363834558823527"/>
+										<Property Name="LoopBegin" Type="Real64" Value="8.80999396008406"/>
+										<Property Name="LoopEnd" Type="Real64" Value="20.1408416491596"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="6.57463255930619"/>
+										<Property Name="TrimEnd" Type="Real64" Value="21.8638581670168"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>ENV-Torch.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="411084714"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ENV-Torch" ID="{1E9033BA-92DB-4E3E-8C6D-D78B08629B81}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
