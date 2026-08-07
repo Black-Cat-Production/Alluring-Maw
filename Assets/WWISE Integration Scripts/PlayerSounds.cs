@@ -14,6 +14,7 @@ namespace WWISE_Integration_Scripts
         [SerializeField] Event playerChargeLightEvent;
         [SerializeField] Event playerChargeDarkEvent;
         [SerializeField] Event playerHeartbeatStopEvent;
+        [SerializeField] Event playerSkillSelectionSoundEvent;
 
         [Header("Sound Settings")]
         [SerializeField] public float FootstepInterval;
@@ -57,6 +58,11 @@ namespace WWISE_Integration_Scripts
         public void PlayChargeDarkEvent()
         {
             PlayEvent(playerChargeDarkEvent);
+        }
+
+        public void PlaySkillSelectionSound()
+        {
+            PlayEvent(playerSkillSelectionSoundEvent);
         }
     }
 }

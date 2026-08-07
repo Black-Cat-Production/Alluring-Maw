@@ -173,6 +173,7 @@ namespace Scripts.UserInput
             float scrollDirection = _callbackContext.ReadValue<float>();
             if (scrollDirection > 0) skillSelector.UpdateSelectedSkill(1);
             else skillSelector.UpdateSelectedSkill(-1);
+            playerSounds.PlaySkillSelectionSound();
         }
 
         public void Fire(InputAction.CallbackContext _callbackContext)
