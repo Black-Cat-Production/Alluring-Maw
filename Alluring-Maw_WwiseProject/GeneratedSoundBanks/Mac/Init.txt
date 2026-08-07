@@ -19,9 +19,9 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	2521112689	Env_Big_Room			\Default Work Unit\Master Audio Bus\AUX\Env_Big_Room	
 
 Effect plug-ins	ID	Name	Type				Notes
-	602546716	Room_Large	Wwise RoomVerb			
+	506875765	Room_Small (Custom)	Wwise RoomVerb			
 	1990128658	Room_Medium	Wwise RoomVerb			
-	2995775460	Room_Small	Wwise RoomVerb			
+	3164629247	Holy	Wwise RoomVerb			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

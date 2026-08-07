@@ -8,6 +8,7 @@
 						<ObjectRef Name="Play_Spell_Hitmarker" ID="{48AF8237-AB04-4347-96E3-38CDCBA7F956}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="ENVIRONMENT" ID="{B069477F-D6D4-437C-BC88-BD868DBE5645}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="MENU" ID="{B50BB0D5-B975-44F8-8ACB-0AE52A065AD2}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_KS_Heartbeat_1" ID="{C167D5F5-70BD-49DC-A0EF-139EA9D80996}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="PLAYER" ID="{90C613C9-56CD-4E3F-B77C-A06762A48879}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

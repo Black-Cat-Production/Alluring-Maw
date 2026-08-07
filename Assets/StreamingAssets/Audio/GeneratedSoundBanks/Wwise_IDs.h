@@ -19,6 +19,7 @@ namespace AK
         static const AkUniqueID PLAY_ENV_TORCH = 3621683420U;
         static const AkUniqueID PLAY_ENV_TORCH2 = 2940525158U;
         static const AkUniqueID PLAY_INTRO = 3103472528U;
+        static const AkUniqueID PLAY_KS_HEARTBEAT_1 = 243833269U;
         static const AkUniqueID PLAY_MENU_ATMO = 1905734753U;
         static const AkUniqueID PLAY_MENU_DESCENT = 190377696U;
         static const AkUniqueID PLAY_MENU_MUSIC = 2228153899U;

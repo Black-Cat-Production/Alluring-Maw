@@ -9,14 +9,16 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{189EDF7A-6DAC-8B5E-949A-4EAD4BF62023}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{E1451450-3B8A-F677-318D-63CF0292D163}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
+				<Custom>
+					<Plugin Id="506875765" Name="Room_Small (Custom)" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</Custom>
 				<ShareSets>
-					<Plugin Id="602546716" Name="Room_Large" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="1990128658" Name="Room_Medium" LibName="Wwise RoomVerb" LibId="7733251"/>
-					<Plugin Id="2995775460" Name="Room_Small" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="3164629247" Name="Holy" LibName="Wwise RoomVerb" LibId="7733251"/>
 				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
@@ -40,15 +42,15 @@
 				</AuxBus>
 				<AuxBus Id="783969252" Name="Env_Small_Room">
 					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="2995775460"/>
-						</ShareSets>
+						<Custom>
+							<PluginRef Id="506875765"/>
+						</Custom>
 					</PluginRefs>
 				</AuxBus>
 				<AuxBus Id="2521112689" Name="Env_Big_Room">
 					<PluginRefs>
 						<ShareSets>
-							<PluginRef Id="602546716"/>
+							<PluginRef Id="3164629247"/>
 						</ShareSets>
 					</PluginRefs>
 				</AuxBus>
@@ -66,7 +68,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="English(US)" Hash="{B606BF07-3AF9-F950-8C23-6C1B400146B4}">
+		<SoundBank Id="3161908922" Type="User" Language="English(US)" Hash="{5A3FE255-840D-29BB-E7CB-EEFFB59F38A8}">
 			<ShortName>Main</ShortName>
 			<Path>English(US)/Main.bnk</Path>
 			<Media>
@@ -132,11 +134,15 @@
 				</File>
 				<File Id="129770599" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Blue Fire.wav</ShortName>
-					<CachePath>SFX/Blue Fire_0582EB98.wem</CachePath>
+					<CachePath>SFX/Blue Fire_9C2AC3F0.wem</CachePath>
 				</File>
 				<File Id="130895049" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-AttackRMC_Charge-02.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-AttackRMC_Charge-02_7EAA9A05.wem</CachePath>
+				</File>
+				<File Id="131508628" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>KS_Heartbeat_1.wav</ShortName>
+					<CachePath>SFX/KS_Heartbeat_1_5F4CA80C.wem</CachePath>
 				</File>
 				<File Id="145861600" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - UI_MouseOver-01.wav</ShortName>
@@ -392,7 +398,7 @@
 				</File>
 				<File Id="820166616" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ENV-Torch.wav</ShortName>
-					<CachePath>SFX/ENV-Torch_64B45D0B.wem</CachePath>
+					<CachePath>SFX/ENV-Torch_989F3494.wem</CachePath>
 				</File>
 				<File Id="833108512" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Cloth-19.wav</ShortName>
@@ -591,6 +597,11 @@
 					<MediaRefs>
 						<MediaRef Id="31143423"/>
 						<MediaRef Id="160074641"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="243833269" Name="Play_KS_Heartbeat_1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="131508628"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1905734753" Name="Play_Menu_ATMO" DurationType="Infinite">
@@ -825,5 +836,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{CD756144-6764-A0FC-E082-A0E758E2026A}</FileHash>
+	<FileHash>{E8EADB33-792F-BF09-8F2D-9CDF8259B1EF}</FileHash>
 </SoundBanksInfo>

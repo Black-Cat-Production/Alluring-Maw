@@ -611,6 +611,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_KS_Heartbeat_1" ID="{C167D5F5-70BD-49DC-A0EF-139EA9D80996}">
+					<ChildrenList>
+						<Action Name="" ID="{CCA43610-1542-4A64-8E07-59F22BE07F10}" ShortID="870321457">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="KS_Heartbeat_1" ID="{8BF09252-CF54-4C66-B2A0-CAB7FE5B6627}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

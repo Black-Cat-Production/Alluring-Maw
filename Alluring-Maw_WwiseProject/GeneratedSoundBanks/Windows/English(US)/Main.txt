@@ -1,6 +1,7 @@
 Event	ID	Name			Wwise Object Path	Notes
 	104602405	Play_Player_Attack_LMC			\Default Work Unit\PLAYER\Play_Player_Attack_LMC	
 	190377696	Play_Menu_Descent			\Default Work Unit\MENU\Play_Menu_Descent	
+	243833269	Play_KS_Heartbeat_1			\Default Work Unit\Play_KS_Heartbeat_1	
 	363320808	Play_Player_RMC4_Release			\Default Work Unit\PLAYER\Play_Player_RMC4_Release	
 	503090763	Play_Menu_UI_LearnSkill1			\Default Work Unit\MENU\UI\Play_Menu_UI_LearnSkill1	
 	558031544	Play_Menu_UI_Select1			\Default Work Unit\MENU\UI\Play_Menu_UI_Select1	
@@ -52,8 +53,9 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	108173549	Player-FS_Cloth-17	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Player-FS_Cloth-17_63572FB5.wem		\Actor-Mixer Hierarchy\Default Work Unit\PLAYER\FOOTSTEPS\Player-FS_Cloth\Player-FS_Cloth-17		78780
 	113311087	Player-FS_Voice_Inhale-03	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\Player-FS_Voice_Inhale-03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\PLAYER\FOOTSTEPS\Player-FS_Voice\Exhale\Player-FS_Voice_Inhale-03		249696
 	118127717	Atmo_Wind	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Menu - Atmo_Wind-01_59F8D407.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENVIRONMENT\Atmo_Wind		17127244
-	129770599	ENV-Blue-Fire	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Blue Fire_0582EB98.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENVIRONMENT\ENV-Blue-Fire		2355344
+	129770599	ENV-Blue-Fire	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Blue Fire_9C2AC3F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENVIRONMENT\ENV-Blue-Fire		2355344
 	130895049	Player-AttackRMC_Charge-02	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\Player-AttackRMC_Charge-02_7EAA9A05.wem		\Actor-Mixer Hierarchy\Default Work Unit\PLAYER\ATTACK\RMC\Charge\Player-Charge_Voice\Player-AttackRMC_Charge-02		153088
+	131508628	KS_Heartbeat_1	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\KS_Heartbeat_1_5F4CA80C.wem		\Actor-Mixer Hierarchy\Default Work Unit\PLAYER\KS_Heartbeat_1		1530140
 	145861600	Menu - UI_MouseOver-01	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Menu - UI_MouseOver-01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\MENU\UI\Menu - UI_MouseOver-01		6344
 	150956354	Menu - ATMO_Monsters	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Menu - ATMO_Monsters_145A5079.wem		\Actor-Mixer Hierarchy\Default Work Unit\MENU\ATMO\Menu - ATMO_Monsters		17267344
 	160074641	Intro - Music	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Intro - Music_F3FABB1B.wem		\Actor-Mixer Hierarchy\Default Work Unit\MENU\INTRO\Intro - Music		6651540
@@ -117,7 +119,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	792333592	Player-GettingHit-01	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\Player-GettingHit-01_4B042FC0.wem		\Actor-Mixer Hierarchy\Default Work Unit\PLAYER\Player-GettingHit\Player-GettingHit-01		105756
 	814521280	Player-Dash_Cloth-03	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Player-Dash_Cloth-03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\PLAYER\DASH\Player-Dash_Cloth\Player-Dash_Cloth-03		313700
 	814818822	Player-FS_Leather-06	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Player-FS_Leather-06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\PLAYER\FOOTSTEPS\Player-FS_Leather\Player-FS_Leather-06		76896
-	820166616	ENV-FireBowl	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\ENV-Torch_64B45D0B.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENVIRONMENT\ENV-FireBowl		3626112
+	820166616	ENV-FireBowl	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\ENV-Torch_989F3494.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENVIRONMENT\ENV-FireBowl		3626112
 	833108512	Player-FS_Cloth-19	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Player-FS_Cloth-19_8EBA77B9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PLAYER\FOOTSTEPS\Player-FS_Cloth\Player-FS_Cloth-19		86500
 	836914271	Player-FS_Voice_Exhale-04	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\Player-FS_Voice_Exhale-04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\PLAYER\FOOTSTEPS\Player-FS_Voice\Exhale\Player-FS_Voice_Exhale-04		246496
 	837099645	Player-FS_Cloth-11	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Player-FS_Cloth-11_C3E41F82.wem		\Actor-Mixer Hierarchy\Default Work Unit\PLAYER\FOOTSTEPS\Player-FS_Cloth\Player-FS_Cloth-11		83296
