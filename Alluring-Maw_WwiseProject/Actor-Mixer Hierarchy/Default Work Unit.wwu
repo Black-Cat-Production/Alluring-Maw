@@ -3830,729 +3830,6 @@
 				</Folder>
 				<Folder Name="ZOMBIE" ID="{2CCDFA8D-BBE4-4E99-ACB5-6CECD4F5893E}" ShortID="606581661">
 					<ChildrenList>
-						<Folder Name="FOOTSTEPS" ID="{48ED50DF-026A-4280-9D28-818EA7646274}" ShortID="412409192">
-							<ChildrenList>
-								<RandomSequenceContainer Name="Zombie-FS" ID="{297DDFB7-7C65-4668-8FAB-653CCECA0912}" ShortID="531560256">
-									<PropertyList>
-										<Property Name="MakeUpGain" Type="Real64">
-											<ValueList>
-												<Value>12</Value>
-											</ValueList>
-										</Property>
-										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
-										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="SFX Bus" ID="{0428BEA9-86B3-406D-9B6A-357CE32B9E02}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="Zombie-FS-01" ID="{83BF8445-C2C0-4A3D-871A-97452574A8D8}" ShortID="544199642">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Zombie-FS-01" ID="{412C7B41-7686-4667-B884-3D27AFB6FC7B}">
-													<Language>SFX</Language>
-													<AudioFile>Zombie-FS-01.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="660796908"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Zombie-FS-01" ID="{412C7B41-7686-4667-B884-3D27AFB6FC7B}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Zombie-FS-02" ID="{6E61EFF8-8797-4210-B24F-7588B9976D78}" ShortID="823256002">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Zombie-FS-02" ID="{B707C12A-06E2-4C31-A067-94C9D9E1F7B5}">
-													<Language>SFX</Language>
-													<AudioFile>Zombie-FS-02.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="153264191"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Zombie-FS-02" ID="{B707C12A-06E2-4C31-A067-94C9D9E1F7B5}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Zombie-FS-03" ID="{E13C0859-8EE5-4BEC-A2F3-26E19B1D98F0}" ShortID="67755107">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Zombie-FS-03" ID="{7BAE83A5-0580-4E09-A857-D2FFC97DFD64}">
-													<Language>SFX</Language>
-													<AudioFile>Zombie-FS-03.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="602203764"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Zombie-FS-03" ID="{7BAE83A5-0580-4E09-A857-D2FFC97DFD64}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Zombie-FS-04" ID="{CEB904F5-F6FF-4344-AFA4-011B63AB6E24}" ShortID="526173568">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Zombie-FS-04" ID="{C21568A5-B465-4A77-A9D3-A88F76CAB73B}">
-													<Language>SFX</Language>
-													<AudioFile>Zombie-FS-04.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="1019021512"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Zombie-FS-04" ID="{C21568A5-B465-4A77-A9D3-A88F76CAB73B}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Zombie-FS-05" ID="{C68CC946-1DB1-43DC-A127-66AAD73FEB10}" ShortID="940881777">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Zombie-FS-05" ID="{912FE3A9-2823-43D8-BDA5-D8E2BDC91B78}">
-													<Language>SFX</Language>
-													<AudioFile>Zombie-FS-05.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="436836057"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Zombie-FS-05" ID="{912FE3A9-2823-43D8-BDA5-D8E2BDC91B78}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Zombie-FS-06" ID="{F4D15692-3651-4F2C-B11E-85E029BAADE5}" ShortID="620918832">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Zombie-FS-06" ID="{C05B4173-6C35-4DDB-9D12-DCA1D39A28CD}">
-													<Language>SFX</Language>
-													<AudioFile>Zombie-FS-06.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="570181510"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Zombie-FS-06" ID="{C05B4173-6C35-4DDB-9D12-DCA1D39A28CD}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Zombie-FS-07" ID="{00C92D1A-9307-4E4C-B07B-16D246996D14}" ShortID="404501142">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Zombie-FS-07" ID="{E86D358D-CD02-4496-873E-1DB6E2482723}">
-													<Language>SFX</Language>
-													<AudioFile>Zombie-FS-07.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="997429940"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Zombie-FS-07" ID="{E86D358D-CD02-4496-873E-1DB6E2482723}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Zombie-FS-08" ID="{2D75E323-0466-4195-B757-B214FC211785}" ShortID="261505280">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Zombie-FS-08" ID="{FAADF55C-9A1A-44CA-B4AA-ECCB10778640}">
-													<Language>SFX</Language>
-													<AudioFile>Zombie-FS-08.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="403332333"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Zombie-FS-08" ID="{FAADF55C-9A1A-44CA-B4AA-ECCB10778640}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Zombie-FS-09" ID="{776A297A-2CEE-4794-BF08-90A5EE372141}" ShortID="703287654">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Zombie-FS-09" ID="{58A9A7D3-6859-4CE0-9ADB-1B567D97B462}">
-													<Language>SFX</Language>
-													<AudioFile>Zombie-FS-09.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="501544486"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Zombie-FS-09" ID="{58A9A7D3-6859-4CE0-9ADB-1B567D97B462}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Zombie-FS-10" ID="{5FBC4B05-6375-42BF-A489-688584D8137A}" ShortID="508924224">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Zombie-FS-10" ID="{E3E58479-0B70-4CE2-AAEF-223F06D5AE8A}">
-													<Language>SFX</Language>
-													<AudioFile>Zombie-FS-10.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="387754460"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Zombie-FS-10" ID="{E3E58479-0B70-4CE2-AAEF-223F06D5AE8A}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Zombie-FS-11" ID="{7647CA7F-85F2-4E2F-912F-238644335DD4}" ShortID="437150346">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Zombie-FS-11" ID="{6B3EE525-B8BE-4E58-BE70-413D279CCDCE}">
-													<Language>SFX</Language>
-													<AudioFile>Zombie-FS-11.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="724657752"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Zombie-FS-11" ID="{6B3EE525-B8BE-4E58-BE70-413D279CCDCE}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Zombie-FS-12" ID="{C11AF947-1F82-46D1-91D8-91BFA4DCEEFB}" ShortID="430678300">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Zombie-FS-12" ID="{A2D8E560-DBBC-4CBC-88C2-598084C4908A}">
-													<Language>SFX</Language>
-													<AudioFile>Zombie-FS-12.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="134795684"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Zombie-FS-12" ID="{A2D8E560-DBBC-4CBC-88C2-598084C4908A}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="Zombie-Idle_Voice" ID="{C1727CBF-17AC-49D2-95B1-962282900813}" ShortID="345508783">
-									<PropertyList>
-										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
-										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Voice Bus" ID="{342CAA02-47A2-4C12-837A-6682E05C0D90}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<RandomSequenceContainer Name="Zombie-Idle_Voice" ID="{CAC13E17-629C-4E42-AB21-B33C4FB1082D}" ShortID="317624285">
-											<PropertyList>
-												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="5"/>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>12</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="Zombie-VO-Idle-01" ID="{63E24BD4-B79C-42C3-A06C-2D3BA7A40A7B}" ShortID="396016047">
-													<PropertyList>
-														<Property Name="IsVoice" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie-VO-Idle-01" ID="{DD12F909-C4C7-40B0-9819-32BA37862C86}">
-															<Language>English(US)</Language>
-															<AudioFile>Zombie-VO-Idle-01.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="258955241"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie-VO-Idle-01" ID="{DD12F909-C4C7-40B0-9819-32BA37862C86}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Zombie-VO-Idle-02" ID="{AC12E588-47FC-4DF1-923C-B63A8FAB07B5}" ShortID="885899578">
-													<PropertyList>
-														<Property Name="IsVoice" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie-VO-Idle-02" ID="{A4DE447D-F3D6-4A8D-9D38-EF94A3D63FC4}">
-															<Language>English(US)</Language>
-															<AudioFile>Zombie-VO-Idle-02.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="95476277"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie-VO-Idle-02" ID="{A4DE447D-F3D6-4A8D-9D38-EF94A3D63FC4}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Zombie-VO-Idle-05" ID="{47B8C654-1EA5-4077-B7A2-9E42094FB9D2}" ShortID="811911296">
-													<PropertyList>
-														<Property Name="IsVoice" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie-VO-Idle-05" ID="{C088AD19-AEA3-49FD-9070-96463F551B5F}">
-															<Language>English(US)</Language>
-															<AudioFile>Zombie-VO-Idle-05.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="598126548"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie-VO-Idle-05" ID="{C088AD19-AEA3-49FD-9070-96463F551B5F}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Zombie-VO-Idle-06" ID="{F2A70A01-3B6B-440C-BF54-78CF355576DB}" ShortID="878148152">
-													<PropertyList>
-														<Property Name="IsVoice" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie-VO-Idle-06" ID="{F746A857-1F3C-432F-AEC0-0D752505FB93}">
-															<Language>English(US)</Language>
-															<AudioFile>Zombie-VO-Idle-06.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="361557719"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie-VO-Idle-06" ID="{F746A857-1F3C-432F-AEC0-0D752505FB93}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Zombie-VO-Idle-21" ID="{05F25125-CBB8-45C0-839F-BACFB31787E6}" ShortID="876592908">
-													<PropertyList>
-														<Property Name="IsVoice" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie-VO-Idle-21" ID="{36E2BDCA-DDA9-431D-A517-9AD7494C46DF}">
-															<Language>English(US)</Language>
-															<AudioFile>Zombie-VO-Idle-21.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="62348827"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie-VO-Idle-21" ID="{36E2BDCA-DDA9-431D-A517-9AD7494C46DF}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Zombie-VO-Idle-23" ID="{5C9FD137-DFD2-4474-A969-1A6FC2A894D9}" ShortID="17875865">
-													<PropertyList>
-														<Property Name="IsVoice" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie-VO-Idle-23" ID="{E508B135-14E0-4CE8-BF3E-34AC1AEDB6A4}">
-															<Language>English(US)</Language>
-															<AudioFile>Zombie-VO-Idle-23.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="16162616"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie-VO-Idle-23" ID="{E508B135-14E0-4CE8-BF3E-34AC1AEDB6A4}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Zombie-VO-Idle-24" ID="{40196684-25C2-4AE4-9662-6B26E43CF251}" ShortID="280041126">
-													<PropertyList>
-														<Property Name="IsVoice" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie-VO-Idle-24" ID="{1472B3B5-7DA2-4930-AACD-BF1BC20E52ED}">
-															<Language>English(US)</Language>
-															<AudioFile>Zombie-VO-Idle-24.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="335310361"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie-VO-Idle-24" ID="{1472B3B5-7DA2-4930-AACD-BF1BC20E52ED}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Zombie-VO-Idle-25" ID="{1B001799-480B-4F10-967A-C2500E52776F}" ShortID="205855693">
-													<PropertyList>
-														<Property Name="IsVoice" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie-VO-Idle-25" ID="{A554496E-8ADE-4C3A-B0F1-C198553DA5ED}">
-															<Language>English(US)</Language>
-															<AudioFile>Zombie-VO-Idle-25.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="946869976"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie-VO-Idle-25" ID="{A554496E-8ADE-4C3A-B0F1-C198553DA5ED}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Zombie-VO-Idle-26" ID="{13F0F0F4-223E-4480-8DE6-B7DFE88D17AB}" ShortID="139421484">
-													<PropertyList>
-														<Property Name="IsVoice" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie-VO-Idle-26" ID="{A0FA58CE-BA9A-4C5A-B819-B756E1696721}">
-															<Language>English(US)</Language>
-															<AudioFile>Zombie-VO-Idle-26.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="559189933"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie-VO-Idle-26" ID="{A0FA58CE-BA9A-4C5A-B819-B756E1696721}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Zombie-VO-Idle-27" ID="{E4967F01-8B49-4102-A663-2ACB951A49E5}" ShortID="625047187">
-													<PropertyList>
-														<Property Name="IsVoice" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie-VO-Idle-27" ID="{C64C6758-0600-461F-81D4-E140CE5FE946}">
-															<Language>English(US)</Language>
-															<AudioFile>Zombie-VO-Idle-27.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="837324074"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie-VO-Idle-27" ID="{C64C6758-0600-461F-81D4-E140CE5FE946}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Zombie-VO-Idle-29" ID="{CFE89F37-DC0D-4F7E-97F2-0401D7A58E75}" ShortID="1033790921">
-													<PropertyList>
-														<Property Name="IsVoice" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie-VO-Idle-29" ID="{6EFA3F4C-3132-4C1B-A121-F6E0D8DAB991}">
-															<Language>English(US)</Language>
-															<AudioFile>Zombie-VO-Idle-29.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="1011856105"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie-VO-Idle-29" ID="{6EFA3F4C-3132-4C1B-A121-F6E0D8DAB991}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Zombie-VO-Idle-30" ID="{954A1116-E955-455A-9625-015A5F57DDC2}" ShortID="384663371">
-													<PropertyList>
-														<Property Name="IsVoice" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie-VO-Idle-30" ID="{FC4E11CB-3511-441D-8BD2-76C33046A5F7}">
-															<Language>English(US)</Language>
-															<AudioFile>Zombie-VO-Idle-30.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="653409216"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie-VO-Idle-30" ID="{FC4E11CB-3511-441D-8BD2-76C33046A5F7}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Zombie-VO-Idle-31" ID="{E925ABAA-C1C0-431C-A4FE-BFA8CB0B3672}" ShortID="771348511">
-													<PropertyList>
-														<Property Name="IsVoice" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie-VO-Idle-31" ID="{6CC673D9-3264-42DC-AA31-26626189BF3B}">
-															<Language>English(US)</Language>
-															<AudioFile>Zombie-VO-Idle-31.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="76378267"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie-VO-Idle-31" ID="{6CC673D9-3264-42DC-AA31-26626189BF3B}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Zombie-VO-Idle-33" ID="{69499E36-75D9-4A22-AC07-30BB4AAD6FD8}" ShortID="140189874">
-													<PropertyList>
-														<Property Name="IsVoice" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie-VO-Idle-33" ID="{D069B725-7074-4BF5-ACD4-4157A97B76FA}">
-															<Language>English(US)</Language>
-															<AudioFile>Zombie-VO-Idle-33.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="958687390"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie-VO-Idle-33" ID="{D069B725-7074-4BF5-ACD4-4157A97B76FA}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Zombie-VO-Idle-34" ID="{D0A6E223-5EA9-4199-9ED8-9C3BC4AB7BD7}" ShortID="806632156">
-													<PropertyList>
-														<Property Name="IsVoice" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Zombie-VO-Idle-34" ID="{0D87E0EF-4953-4ACD-B216-CD9E22018CCA}">
-															<Language>English(US)</Language>
-															<AudioFile>Zombie-VO-Idle-34.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="475829584"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Zombie-VO-Idle-34" ID="{0D87E0EF-4953-4ACD-B216-CD9E22018CCA}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-										</RandomSequenceContainer>
-										<Sound Name="Silence" ID="{AFEE50C7-1F48-42C3-AFB4-04E296AA9B30}" ShortID="768963132">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<SourcePlugin Name="Silence" ID="{D2626A5F-DC1E-40E6-94C6-D9F410394815}" ShortID="522512632" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-													<Language>SFX</Language>
-												</SourcePlugin>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Silence" ID="{D2626A5F-DC1E-40E6-94C6-D9F410394815}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-									<Playlist>
-										<ItemRef Name="Zombie-Idle_Voice" ID="{CAC13E17-629C-4E42-AB21-B33C4FB1082D}"/>
-										<ItemRef Name="Silence" ID="{AFEE50C7-1F48-42C3-AFB4-04E296AA9B30}"/>
-										<ItemRef Name="Silence" ID="{AFEE50C7-1F48-42C3-AFB4-04E296AA9B30}"/>
-									</Playlist>
-								</RandomSequenceContainer>
-							</ChildrenList>
-						</Folder>
 						<Folder Name="ATTACK" ID="{108B5943-8F28-4A32-8399-BFE746720961}" ShortID="53943160">
 							<ChildrenList>
 								<RandomSequenceContainer Name="Zombie-Attack_Voice" ID="{E98A469F-008C-4956-B71D-0690834EFDD7}" ShortID="66670931">
@@ -5668,7 +4945,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+									<ObjectRef Name="Voice Bus" ID="{342CAA02-47A2-4C12-837A-6682E05C0D90}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -5855,7 +5132,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+									<ObjectRef Name="Voice Bus" ID="{342CAA02-47A2-4C12-837A-6682E05C0D90}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -6082,6 +5359,725 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="Zombie-Dies-09" ID="{699FDD6C-0A13-437D-8F26-AECFA7677EB7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Zombie-Idle_Voice" ID="{C1727CBF-17AC-49D2-95B1-962282900813}" ShortID="345508783">
+							<PropertyList>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Voice Bus" ID="{342CAA02-47A2-4C12-837A-6682E05C0D90}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Zombie-Idle_Voice" ID="{CAC13E17-629C-4E42-AB21-B33C4FB1082D}" ShortID="317624285">
+									<PropertyList>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="5"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Zombie-VO-Idle-01" ID="{63E24BD4-B79C-42C3-A06C-2D3BA7A40A7B}" ShortID="396016047">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Zombie-VO-Idle-01" ID="{DD12F909-C4C7-40B0-9819-32BA37862C86}">
+													<Language>English(US)</Language>
+													<AudioFile>Zombie-VO-Idle-01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="258955241"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Zombie-VO-Idle-01" ID="{DD12F909-C4C7-40B0-9819-32BA37862C86}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Zombie-VO-Idle-02" ID="{AC12E588-47FC-4DF1-923C-B63A8FAB07B5}" ShortID="885899578">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Zombie-VO-Idle-02" ID="{A4DE447D-F3D6-4A8D-9D38-EF94A3D63FC4}">
+													<Language>English(US)</Language>
+													<AudioFile>Zombie-VO-Idle-02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="95476277"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Zombie-VO-Idle-02" ID="{A4DE447D-F3D6-4A8D-9D38-EF94A3D63FC4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Zombie-VO-Idle-05" ID="{47B8C654-1EA5-4077-B7A2-9E42094FB9D2}" ShortID="811911296">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Zombie-VO-Idle-05" ID="{C088AD19-AEA3-49FD-9070-96463F551B5F}">
+													<Language>English(US)</Language>
+													<AudioFile>Zombie-VO-Idle-05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="598126548"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Zombie-VO-Idle-05" ID="{C088AD19-AEA3-49FD-9070-96463F551B5F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Zombie-VO-Idle-06" ID="{F2A70A01-3B6B-440C-BF54-78CF355576DB}" ShortID="878148152">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Zombie-VO-Idle-06" ID="{F746A857-1F3C-432F-AEC0-0D752505FB93}">
+													<Language>English(US)</Language>
+													<AudioFile>Zombie-VO-Idle-06.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="361557719"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Zombie-VO-Idle-06" ID="{F746A857-1F3C-432F-AEC0-0D752505FB93}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Zombie-VO-Idle-21" ID="{05F25125-CBB8-45C0-839F-BACFB31787E6}" ShortID="876592908">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Zombie-VO-Idle-21" ID="{36E2BDCA-DDA9-431D-A517-9AD7494C46DF}">
+													<Language>English(US)</Language>
+													<AudioFile>Zombie-VO-Idle-21.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="62348827"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Zombie-VO-Idle-21" ID="{36E2BDCA-DDA9-431D-A517-9AD7494C46DF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Zombie-VO-Idle-23" ID="{5C9FD137-DFD2-4474-A969-1A6FC2A894D9}" ShortID="17875865">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Zombie-VO-Idle-23" ID="{E508B135-14E0-4CE8-BF3E-34AC1AEDB6A4}">
+													<Language>English(US)</Language>
+													<AudioFile>Zombie-VO-Idle-23.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="16162616"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Zombie-VO-Idle-23" ID="{E508B135-14E0-4CE8-BF3E-34AC1AEDB6A4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Zombie-VO-Idle-24" ID="{40196684-25C2-4AE4-9662-6B26E43CF251}" ShortID="280041126">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Zombie-VO-Idle-24" ID="{1472B3B5-7DA2-4930-AACD-BF1BC20E52ED}">
+													<Language>English(US)</Language>
+													<AudioFile>Zombie-VO-Idle-24.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="335310361"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Zombie-VO-Idle-24" ID="{1472B3B5-7DA2-4930-AACD-BF1BC20E52ED}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Zombie-VO-Idle-25" ID="{1B001799-480B-4F10-967A-C2500E52776F}" ShortID="205855693">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Zombie-VO-Idle-25" ID="{A554496E-8ADE-4C3A-B0F1-C198553DA5ED}">
+													<Language>English(US)</Language>
+													<AudioFile>Zombie-VO-Idle-25.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="946869976"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Zombie-VO-Idle-25" ID="{A554496E-8ADE-4C3A-B0F1-C198553DA5ED}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Zombie-VO-Idle-26" ID="{13F0F0F4-223E-4480-8DE6-B7DFE88D17AB}" ShortID="139421484">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Zombie-VO-Idle-26" ID="{A0FA58CE-BA9A-4C5A-B819-B756E1696721}">
+													<Language>English(US)</Language>
+													<AudioFile>Zombie-VO-Idle-26.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="559189933"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Zombie-VO-Idle-26" ID="{A0FA58CE-BA9A-4C5A-B819-B756E1696721}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Zombie-VO-Idle-27" ID="{E4967F01-8B49-4102-A663-2ACB951A49E5}" ShortID="625047187">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Zombie-VO-Idle-27" ID="{C64C6758-0600-461F-81D4-E140CE5FE946}">
+													<Language>English(US)</Language>
+													<AudioFile>Zombie-VO-Idle-27.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="837324074"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Zombie-VO-Idle-27" ID="{C64C6758-0600-461F-81D4-E140CE5FE946}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Zombie-VO-Idle-29" ID="{CFE89F37-DC0D-4F7E-97F2-0401D7A58E75}" ShortID="1033790921">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Zombie-VO-Idle-29" ID="{6EFA3F4C-3132-4C1B-A121-F6E0D8DAB991}">
+													<Language>English(US)</Language>
+													<AudioFile>Zombie-VO-Idle-29.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1011856105"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Zombie-VO-Idle-29" ID="{6EFA3F4C-3132-4C1B-A121-F6E0D8DAB991}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Zombie-VO-Idle-30" ID="{954A1116-E955-455A-9625-015A5F57DDC2}" ShortID="384663371">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Zombie-VO-Idle-30" ID="{FC4E11CB-3511-441D-8BD2-76C33046A5F7}">
+													<Language>English(US)</Language>
+													<AudioFile>Zombie-VO-Idle-30.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="653409216"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Zombie-VO-Idle-30" ID="{FC4E11CB-3511-441D-8BD2-76C33046A5F7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Zombie-VO-Idle-31" ID="{E925ABAA-C1C0-431C-A4FE-BFA8CB0B3672}" ShortID="771348511">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Zombie-VO-Idle-31" ID="{6CC673D9-3264-42DC-AA31-26626189BF3B}">
+													<Language>English(US)</Language>
+													<AudioFile>Zombie-VO-Idle-31.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="76378267"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Zombie-VO-Idle-31" ID="{6CC673D9-3264-42DC-AA31-26626189BF3B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Zombie-VO-Idle-33" ID="{69499E36-75D9-4A22-AC07-30BB4AAD6FD8}" ShortID="140189874">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Zombie-VO-Idle-33" ID="{D069B725-7074-4BF5-ACD4-4157A97B76FA}">
+													<Language>English(US)</Language>
+													<AudioFile>Zombie-VO-Idle-33.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="958687390"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Zombie-VO-Idle-33" ID="{D069B725-7074-4BF5-ACD4-4157A97B76FA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Zombie-VO-Idle-34" ID="{D0A6E223-5EA9-4199-9ED8-9C3BC4AB7BD7}" ShortID="806632156">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Zombie-VO-Idle-34" ID="{0D87E0EF-4953-4ACD-B216-CD9E22018CCA}">
+													<Language>English(US)</Language>
+													<AudioFile>Zombie-VO-Idle-34.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="475829584"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Zombie-VO-Idle-34" ID="{0D87E0EF-4953-4ACD-B216-CD9E22018CCA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<Sound Name="Silence" ID="{AFEE50C7-1F48-42C3-AFB4-04E296AA9B30}" ShortID="768963132">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<SourcePlugin Name="Silence" ID="{D2626A5F-DC1E-40E6-94C6-D9F410394815}" ShortID="522512632" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+											<Language>SFX</Language>
+										</SourcePlugin>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Silence" ID="{D2626A5F-DC1E-40E6-94C6-D9F410394815}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<Playlist>
+								<ItemRef Name="Zombie-Idle_Voice" ID="{CAC13E17-629C-4E42-AB21-B33C4FB1082D}"/>
+								<ItemRef Name="Silence" ID="{AFEE50C7-1F48-42C3-AFB4-04E296AA9B30}"/>
+								<ItemRef Name="Silence" ID="{AFEE50C7-1F48-42C3-AFB4-04E296AA9B30}"/>
+							</Playlist>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Zombie-FS" ID="{297DDFB7-7C65-4668-8FAB-653CCECA0912}" ShortID="531560256">
+							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX Bus" ID="{0428BEA9-86B3-406D-9B6A-357CE32B9E02}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Zombie-FS-01" ID="{83BF8445-C2C0-4A3D-871A-97452574A8D8}" ShortID="544199642">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Zombie-FS-01" ID="{412C7B41-7686-4667-B884-3D27AFB6FC7B}">
+											<Language>SFX</Language>
+											<AudioFile>Zombie-FS-01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="660796908"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Zombie-FS-01" ID="{412C7B41-7686-4667-B884-3D27AFB6FC7B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Zombie-FS-02" ID="{6E61EFF8-8797-4210-B24F-7588B9976D78}" ShortID="823256002">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Zombie-FS-02" ID="{B707C12A-06E2-4C31-A067-94C9D9E1F7B5}">
+											<Language>SFX</Language>
+											<AudioFile>Zombie-FS-02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="153264191"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Zombie-FS-02" ID="{B707C12A-06E2-4C31-A067-94C9D9E1F7B5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Zombie-FS-03" ID="{E13C0859-8EE5-4BEC-A2F3-26E19B1D98F0}" ShortID="67755107">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Zombie-FS-03" ID="{7BAE83A5-0580-4E09-A857-D2FFC97DFD64}">
+											<Language>SFX</Language>
+											<AudioFile>Zombie-FS-03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="602203764"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Zombie-FS-03" ID="{7BAE83A5-0580-4E09-A857-D2FFC97DFD64}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Zombie-FS-04" ID="{CEB904F5-F6FF-4344-AFA4-011B63AB6E24}" ShortID="526173568">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Zombie-FS-04" ID="{C21568A5-B465-4A77-A9D3-A88F76CAB73B}">
+											<Language>SFX</Language>
+											<AudioFile>Zombie-FS-04.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1019021512"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Zombie-FS-04" ID="{C21568A5-B465-4A77-A9D3-A88F76CAB73B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Zombie-FS-05" ID="{C68CC946-1DB1-43DC-A127-66AAD73FEB10}" ShortID="940881777">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Zombie-FS-05" ID="{912FE3A9-2823-43D8-BDA5-D8E2BDC91B78}">
+											<Language>SFX</Language>
+											<AudioFile>Zombie-FS-05.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="436836057"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Zombie-FS-05" ID="{912FE3A9-2823-43D8-BDA5-D8E2BDC91B78}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Zombie-FS-06" ID="{F4D15692-3651-4F2C-B11E-85E029BAADE5}" ShortID="620918832">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Zombie-FS-06" ID="{C05B4173-6C35-4DDB-9D12-DCA1D39A28CD}">
+											<Language>SFX</Language>
+											<AudioFile>Zombie-FS-06.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="570181510"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Zombie-FS-06" ID="{C05B4173-6C35-4DDB-9D12-DCA1D39A28CD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Zombie-FS-07" ID="{00C92D1A-9307-4E4C-B07B-16D246996D14}" ShortID="404501142">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Zombie-FS-07" ID="{E86D358D-CD02-4496-873E-1DB6E2482723}">
+											<Language>SFX</Language>
+											<AudioFile>Zombie-FS-07.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="997429940"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Zombie-FS-07" ID="{E86D358D-CD02-4496-873E-1DB6E2482723}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Zombie-FS-08" ID="{2D75E323-0466-4195-B757-B214FC211785}" ShortID="261505280">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Zombie-FS-08" ID="{FAADF55C-9A1A-44CA-B4AA-ECCB10778640}">
+											<Language>SFX</Language>
+											<AudioFile>Zombie-FS-08.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="403332333"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Zombie-FS-08" ID="{FAADF55C-9A1A-44CA-B4AA-ECCB10778640}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Zombie-FS-09" ID="{776A297A-2CEE-4794-BF08-90A5EE372141}" ShortID="703287654">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Zombie-FS-09" ID="{58A9A7D3-6859-4CE0-9ADB-1B567D97B462}">
+											<Language>SFX</Language>
+											<AudioFile>Zombie-FS-09.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="501544486"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Zombie-FS-09" ID="{58A9A7D3-6859-4CE0-9ADB-1B567D97B462}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Zombie-FS-10" ID="{5FBC4B05-6375-42BF-A489-688584D8137A}" ShortID="508924224">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Zombie-FS-10" ID="{E3E58479-0B70-4CE2-AAEF-223F06D5AE8A}">
+											<Language>SFX</Language>
+											<AudioFile>Zombie-FS-10.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="387754460"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Zombie-FS-10" ID="{E3E58479-0B70-4CE2-AAEF-223F06D5AE8A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Zombie-FS-11" ID="{7647CA7F-85F2-4E2F-912F-238644335DD4}" ShortID="437150346">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Zombie-FS-11" ID="{6B3EE525-B8BE-4E58-BE70-413D279CCDCE}">
+											<Language>SFX</Language>
+											<AudioFile>Zombie-FS-11.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="724657752"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Zombie-FS-11" ID="{6B3EE525-B8BE-4E58-BE70-413D279CCDCE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Zombie-FS-12" ID="{C11AF947-1F82-46D1-91D8-91BFA4DCEEFB}" ShortID="430678300">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Zombie-FS-12" ID="{A2D8E560-DBBC-4CBC-88C2-598084C4908A}">
+											<Language>SFX</Language>
+											<AudioFile>Zombie-FS-12.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="134795684"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Zombie-FS-12" ID="{A2D8E560-DBBC-4CBC-88C2-598084C4908A}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -8670,7 +8666,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+							<ObjectRef Name="Voice Bus" ID="{342CAA02-47A2-4C12-837A-6682E05C0D90}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>

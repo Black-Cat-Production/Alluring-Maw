@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{A5944C0F-F024-C7B3-D06F-46266C7AF349}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{3928C435-0D94-3524-EDDE-90B0F1876B10}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -26,8 +26,10 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="89505537" Name="Gameplay"/>
 				<Bus Id="348963605" Name="REVERB"/>
 				<Bus Id="1502772432" Name="SFX Bus"/>
+				<Bus Id="2235087924" Name="UI-Sounds"/>
 				<Bus Id="3127962312" Name="Music Bus"/>
 				<Bus Id="3472939855" Name="Voice Bus"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
@@ -56,7 +58,11 @@
 				</AuxBus>
 			</AuxBusses>
 			<GameParameters>
+				<GameParameter Id="1006694123" Name="Music_Volume"/>
+				<GameParameter Id="1564184899" Name="SFX_Volume"/>
+				<GameParameter Id="3538560642" Name="Voice_Volume"/>
 				<GameParameter Id="3677180323" Name="Health"/>
+				<GameParameter Id="4179668880" Name="Master_Volume"/>
 			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="89505537" Name="Gameplay">
@@ -68,10 +74,26 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="English(US)" Hash="{0CC219C3-A103-9C28-F728-40D73F9F172C}">
+		<SoundBank Id="3161908922" Type="User" Language="English(US)" Hash="{9E983CDE-38F6-1212-DD4F-A9188C56CF76}">
 			<ShortName>Main</ShortName>
 			<Path>English(US)/Main.bnk</Path>
 			<Media>
+				<File Id="3300382" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Whoosh-b-05.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Whoosh-b-05_10C4C929.wem</CachePath>
+				</File>
+				<File Id="7062636" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Step_Low-01.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Step_Low-01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="10843605" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-VO_Attack-03.wav</ShortName>
+					<CachePath>SFX/Zombie-VO_Attack-03_10C4C929.wem</CachePath>
+				</File>
+				<File Id="13269472" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Step_High-04.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Step_High-04_10C4C929.wem</CachePath>
+				</File>
 				<File Id="13945456" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_steps-01.wav</ShortName>
 					<CachePath>SFX/Player-FS_steps-01_B5A128BB.wem</CachePath>
@@ -80,9 +102,17 @@
 					<ShortName>PLAYER-RMC2_Release.wav</ShortName>
 					<CachePath>SFX/PLAYER-RMC2_Release_DA4BEBF0.wem</CachePath>
 				</File>
+				<File Id="16162616" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Zombie-VO-Idle-23.wav</ShortName>
+					<CachePath>Voices/English(US)/Zombie-VO-Idle-23_10C4C929.wem</CachePath>
+				</File>
 				<File Id="17042488" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - UI_select2-01.wav</ShortName>
 					<CachePath>SFX/Menu - UI_select2-01_250C219A.wem</CachePath>
+				</File>
+				<File Id="23592762" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Step_Low-03.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Step_Low-03_10C4C929.wem</CachePath>
 				</File>
 				<File Id="23604221" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Cloth-13.wav</ShortName>
@@ -90,23 +120,75 @@
 				</File>
 				<File Id="31143423" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Intro - Voice.wav</ShortName>
-					<CachePath>Voices/English(US)/Intro - Voice_620FC5A0.wem</CachePath>
+					<CachePath>Voices/English(US)/Intro - Voice_5FAAA4E4.wem</CachePath>
+				</File>
+				<File Id="37348861" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-37.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-37_10C4C929.wem</CachePath>
+				</File>
+				<File Id="38188390" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Metal-06.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Metal-06_10C4C929.wem</CachePath>
 				</File>
 				<File Id="39272691" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_steps-04.wav</ShortName>
 					<CachePath>SFX/Player-FS_steps-04_10C4C929.wem</CachePath>
 				</File>
+				<File Id="55558778" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-VO_Attack-02.wav</ShortName>
+					<CachePath>SFX/Zombie-VO_Attack-02_10C4C929.wem</CachePath>
+				</File>
 				<File Id="58214838" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_steps-24.wav</ShortName>
 					<CachePath>SFX/Player-FS_steps-24_10C4C929.wem</CachePath>
+				</File>
+				<File Id="58968318" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Whoosh-b-04.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Whoosh-b-04_10C4C929.wem</CachePath>
+				</File>
+				<File Id="62348827" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Zombie-VO-Idle-21.wav</ShortName>
+					<CachePath>Voices/English(US)/Zombie-VO-Idle-21_10C4C929.wem</CachePath>
+				</File>
+				<File Id="64408550" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Whoosh-a-01.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Whoosh-a-01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="64608330" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-VO_Attack-01.wav</ShortName>
+					<CachePath>SFX/Zombie-VO_Attack-01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="67138420" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Whoosh-b-10.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Whoosh-b-10_10C4C929.wem</CachePath>
+				</File>
+				<File Id="70334053" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Chains-01.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Chains-01_10C4C929.wem</CachePath>
 				</File>
 				<File Id="72732113" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-Dash_Voice-03.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-Dash_Voice-03_10C4C929.wem</CachePath>
 				</File>
+				<File Id="76378267" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Zombie-VO-Idle-31.wav</ShortName>
+					<CachePath>Voices/English(US)/Zombie-VO-Idle-31_10C4C929.wem</CachePath>
+				</File>
 				<File Id="82516119" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-Dash_Voice-01.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-Dash_Voice-01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="83225490" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Step_Low-11.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Step_Low-11_10C4C929.wem</CachePath>
+				</File>
+				<File Id="84724703" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Stomp_Low-04.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Stomp_Low-04_10C4C929.wem</CachePath>
+				</File>
+				<File Id="85569822" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Metal-08.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Metal-08_10C4C929.wem</CachePath>
 				</File>
 				<File Id="89317104" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
@@ -116,6 +198,10 @@
 					<ShortName>Player-FS_Cloth-03.wav</ShortName>
 					<CachePath>SFX/Player-FS_Cloth-03_90051D53.wem</CachePath>
 				</File>
+				<File Id="95476277" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Zombie-VO-Idle-02.wav</ShortName>
+					<CachePath>Voices/English(US)/Zombie-VO-Idle-02_10C4C929.wem</CachePath>
+				</File>
 				<File Id="99215667" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-Dash_Cloth-01.wav</ShortName>
 					<CachePath>SFX/Player-Dash_Cloth-01_10C4C929.wem</CachePath>
@@ -124,13 +210,37 @@
 					<ShortName>Player-FS_Cloth-17.wav</ShortName>
 					<CachePath>SFX/Player-FS_Cloth-17_63572FB5.wem</CachePath>
 				</File>
+				<File Id="109976321" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Metal-07.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Metal-07_10C4C929.wem</CachePath>
+				</File>
 				<File Id="113311087" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Voice_Inhale-03.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-FS_Voice_Inhale-03_10C4C929.wem</CachePath>
 				</File>
+				<File Id="114367471" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-29.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-29_10C4C929.wem</CachePath>
+				</File>
+				<File Id="116764371" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Dies-07.wav</ShortName>
+					<CachePath>Voices/English(US)/Zombie-Dies-07_10C4C929.wem</CachePath>
+				</File>
 				<File Id="118127717" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - Atmo_Wind-01.wav</ShortName>
 					<CachePath>SFX/Menu - Atmo_Wind-01_59F8D407.wem</CachePath>
+				</File>
+				<File Id="122233681" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Whoosh-a-14.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Whoosh-a-14_10C4C929.wem</CachePath>
+				</File>
+				<File Id="124960730" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-17.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-17_10C4C929.wem</CachePath>
+				</File>
+				<File Id="126344969" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-30.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-30_10C4C929.wem</CachePath>
 				</File>
 				<File Id="129770599" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Blue Fire.wav</ShortName>
@@ -144,21 +254,69 @@
 					<ShortName>KS_Heartbeat_1.wav</ShortName>
 					<CachePath>SFX/KS_Heartbeat_1_5F4CA80C.wem</CachePath>
 				</File>
+				<File Id="132240131" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Chains-12.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Chains-12_10C4C929.wem</CachePath>
+				</File>
+				<File Id="133461549" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Hitmarker-06.wav</ShortName>
+					<CachePath>Voices/English(US)/Zombie-Hitmarker-06_10C4C929.wem</CachePath>
+				</File>
+				<File Id="134795684" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-FS-12.wav</ShortName>
+					<CachePath>SFX/Zombie-FS-12_10C4C929.wem</CachePath>
+				</File>
+				<File Id="143697608" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-VO_Attack-04.wav</ShortName>
+					<CachePath>SFX/Zombie-VO_Attack-04_10C4C929.wem</CachePath>
+				</File>
 				<File Id="145861600" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - UI_MouseOver-01.wav</ShortName>
 					<CachePath>SFX/Menu - UI_MouseOver-01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="147800549" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Metal-04.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Metal-04_10C4C929.wem</CachePath>
 				</File>
 				<File Id="150956354" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Monsters.wav</ShortName>
 					<CachePath>SFX/Menu - ATMO_Monsters_145A5079.wem</CachePath>
 				</File>
+				<File Id="153246880" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Chains-05.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Chains-05_10C4C929.wem</CachePath>
+				</File>
+				<File Id="153264191" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-FS-02.wav</ShortName>
+					<CachePath>SFX/Zombie-FS-02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="155268557" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Dies-01.wav</ShortName>
+					<CachePath>Voices/English(US)/Zombie-Dies-01_10C4C929.wem</CachePath>
+				</File>
 				<File Id="160074641" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Intro - Music.wav</ShortName>
-					<CachePath>SFX/Intro - Music_F2228D1E.wem</CachePath>
+					<CachePath>SFX/Intro - Music_5A033ECA.wem</CachePath>
 				</File>
 				<File Id="161092298" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - Atmo_LoRumble.wav</ShortName>
 					<CachePath>SFX/Menu - Atmo_LoRumble_D55CE5FA.wem</CachePath>
+				</File>
+				<File Id="169711916" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Step_High-02.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Step_High-02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="177343746" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Whoosh-b-06.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Whoosh-b-06_10C4C929.wem</CachePath>
+				</File>
+				<File Id="185773762" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Hitmarker-07.wav</ShortName>
+					<CachePath>Voices/English(US)/Zombie-Hitmarker-07_10C4C929.wem</CachePath>
+				</File>
+				<File Id="189036670" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-35.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-35_10C4C929.wem</CachePath>
 				</File>
 				<File Id="191419810" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-GettingHit-04.wav</ShortName>
@@ -168,6 +326,18 @@
 					<ShortName>Player-FS_steps-20.wav</ShortName>
 					<CachePath>SFX/Player-FS_steps-20_10C4C929.wem</CachePath>
 				</File>
+				<File Id="201483726" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Stomp_Low-03.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Stomp_Low-03_10C4C929.wem</CachePath>
+				</File>
+				<File Id="201973791" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Step_Low-10.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Step_Low-10_10C4C929.wem</CachePath>
+				</File>
+				<File Id="203580419" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-31.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-31_10C4C929.wem</CachePath>
+				</File>
 				<File Id="203961088" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_steps-18.wav</ShortName>
 					<CachePath>SFX/Player-FS_steps-18_10C4C929.wem</CachePath>
@@ -176,17 +346,45 @@
 					<ShortName>Player-FS_Cloth-07.wav</ShortName>
 					<CachePath>SFX/Player-FS_Cloth-07_A4507962.wem</CachePath>
 				</File>
+				<File Id="212043406" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Step_High-08.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Step_High-08_10C4C929.wem</CachePath>
+				</File>
 				<File Id="212081728" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-Dash_Voice-05.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-Dash_Voice-05_10C4C929.wem</CachePath>
+				</File>
+				<File Id="212380807" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-Jump_Stomp_raw-01.wav</ShortName>
+					<CachePath>SFX/Boss-Jump_Stomp_raw-01_10C4C929.wem</CachePath>
 				</File>
 				<File Id="214269456" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-Dash_Leather-02.wav</ShortName>
 					<CachePath>SFX/Player-Dash_Leather-02_10C4C929.wem</CachePath>
 				</File>
+				<File Id="218986277" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Hitmarker-04.wav</ShortName>
+					<CachePath>Voices/English(US)/Zombie-Hitmarker-04_10C4C929.wem</CachePath>
+				</File>
 				<File Id="219254116" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Cloth-15.wav</ShortName>
 					<CachePath>SFX/Player-FS_Cloth-15_21B9E66E.wem</CachePath>
+				</File>
+				<File Id="221271279" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Whoosh-b-03.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Whoosh-b-03_10C4C929.wem</CachePath>
+				</File>
+				<File Id="222674205" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Step_High-06.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Step_High-06_10C4C929.wem</CachePath>
+				</File>
+				<File Id="223932604" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Whoosh-a-08.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Whoosh-a-08_10C4C929.wem</CachePath>
+				</File>
+				<File Id="226041141" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Whoosh-b-13.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Whoosh-b-13_10C4C929.wem</CachePath>
 				</File>
 				<File Id="226729483" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PLAYER-RMC1_Release.wav</ShortName>
@@ -196,6 +394,26 @@
 					<ShortName>Player-FS_Cloth-22.wav</ShortName>
 					<CachePath>SFX/Player-FS_Cloth-22_94F6898F.wem</CachePath>
 				</File>
+				<File Id="235792914" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-21.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-21_10C4C929.wem</CachePath>
+				</File>
+				<File Id="239656092" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Step_High-03.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Step_High-03_10C4C929.wem</CachePath>
+				</File>
+				<File Id="242273507" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Whoosh-b-08.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Whoosh-b-08_10C4C929.wem</CachePath>
+				</File>
+				<File Id="258955241" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Zombie-VO-Idle-01.wav</ShortName>
+					<CachePath>Voices/English(US)/Zombie-VO-Idle-01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="281720878" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Stomp_Low-05.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Stomp_Low-05_10C4C929.wem</CachePath>
+				</File>
 				<File Id="285734244" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Leather-05.wav</ShortName>
 					<CachePath>SFX/Player-FS_Leather-05_10C4C929.wem</CachePath>
@@ -203,6 +421,14 @@
 				<File Id="287189497" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - Atmo_LoRumble.wav</ShortName>
 					<CachePath>SFX/Menu - Atmo_LoRumble_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="297104315" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Chains-16.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Chains-16_10C4C929.wem</CachePath>
+				</File>
+				<File Id="298468436" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Metal-09.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Metal-09_10C4C929.wem</CachePath>
 				</File>
 				<File Id="307192257" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Voice_Inhale-06.wav</ShortName>
@@ -212,21 +438,125 @@
 					<ShortName>Player-GettingHit-02.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-GettingHit-02_64FE7110.wem</CachePath>
 				</File>
+				<File Id="312416976" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Chains-08.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Chains-08_10C4C929.wem</CachePath>
+				</File>
+				<File Id="315293821" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-33.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-33_10C4C929.wem</CachePath>
+				</File>
+				<File Id="316526089" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Step_High-10.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Step_High-10_10C4C929.wem</CachePath>
+				</File>
+				<File Id="318140240" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Whoosh-a-12.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Whoosh-a-12_10C4C929.wem</CachePath>
+				</File>
+				<File Id="330273501" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-09.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-09_10C4C929.wem</CachePath>
+				</File>
 				<File Id="331596387" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Cloth-09.wav</ShortName>
 					<CachePath>SFX/Player-FS_Cloth-09_DFC0FDEB.wem</CachePath>
+				</File>
+				<File Id="334302628" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Whoosh-a-11.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Whoosh-a-11_10C4C929.wem</CachePath>
+				</File>
+				<File Id="335310361" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Zombie-VO-Idle-24.wav</ShortName>
+					<CachePath>Voices/English(US)/Zombie-VO-Idle-24_10C4C929.wem</CachePath>
 				</File>
 				<File Id="336767322" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-AttackRMC_Charge-01-01.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-AttackRMC_Charge-01-01_BDD80407.wem</CachePath>
 				</File>
+				<File Id="348550186" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Chains-14.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Chains-14_10C4C929.wem</CachePath>
+				</File>
 				<File Id="348751237" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-Dash_Cloth-02.wav</ShortName>
 					<CachePath>SFX/Player-Dash_Cloth-02_10C4C929.wem</CachePath>
 				</File>
+				<File Id="355203839" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-01.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="357323291" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Step_Low-08.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Step_Low-08_10C4C929.wem</CachePath>
+				</File>
+				<File Id="358780680" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Whoosh-a-05.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Whoosh-a-05_10C4C929.wem</CachePath>
+				</File>
+				<File Id="361557719" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Zombie-VO-Idle-06.wav</ShortName>
+					<CachePath>Voices/English(US)/Zombie-VO-Idle-06_10C4C929.wem</CachePath>
+				</File>
+				<File Id="367117727" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-03.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-03_10C4C929.wem</CachePath>
+				</File>
+				<File Id="371158611" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Whoosh-a-06.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Whoosh-a-06_10C4C929.wem</CachePath>
+				</File>
+				<File Id="372393383" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Hitmarker-01.wav</ShortName>
+					<CachePath>Voices/English(US)/Zombie-Hitmarker-01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="373397234" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Whoosh-a-13.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Whoosh-a-13_10C4C929.wem</CachePath>
+				</File>
+				<File Id="382004132" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-04.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-04_10C4C929.wem</CachePath>
+				</File>
+				<File Id="383821159" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-Jump_Stomp_raw-03.wav</ShortName>
+					<CachePath>SFX/Boss-Jump_Stomp_raw-03_10C4C929.wem</CachePath>
+				</File>
+				<File Id="387754460" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-FS-10.wav</ShortName>
+					<CachePath>SFX/Zombie-FS-10_10C4C929.wem</CachePath>
+				</File>
+				<File Id="388935191" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-VO_Attack-05.wav</ShortName>
+					<CachePath>SFX/Zombie-VO_Attack-05_10C4C929.wem</CachePath>
+				</File>
+				<File Id="391137521" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Step_High-07.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Step_High-07_10C4C929.wem</CachePath>
+				</File>
 				<File Id="393696138" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-GettingHit-08.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-GettingHit-08_1DACF08F.wem</CachePath>
+				</File>
+				<File Id="396744357" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Whoosh-a-07.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Whoosh-a-07_10C4C929.wem</CachePath>
+				</File>
+				<File Id="397819662" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Dies-09.wav</ShortName>
+					<CachePath>Voices/English(US)/Zombie-Dies-09_10C4C929.wem</CachePath>
+				</File>
+				<File Id="403332333" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-FS-08.wav</ShortName>
+					<CachePath>SFX/Zombie-FS-08_10C4C929.wem</CachePath>
+				</File>
+				<File Id="404207689" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-24.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-24_10C4C929.wem</CachePath>
+				</File>
+				<File Id="405528387" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Chains-15.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Chains-15_10C4C929.wem</CachePath>
 				</File>
 				<File Id="411084714" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ENV-Torch.wav</ShortName>
@@ -236,13 +566,45 @@
 					<ShortName>Player-FS_Cloth-12.wav</ShortName>
 					<CachePath>SFX/Player-FS_Cloth-12_3ACE5E77.wem</CachePath>
 				</File>
+				<File Id="420111776" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Metal-05.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Metal-05_10C4C929.wem</CachePath>
+				</File>
 				<File Id="422975555" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-Dash_Cloth-04.wav</ShortName>
 					<CachePath>SFX/Player-Dash_Cloth-04_10C4C929.wem</CachePath>
 				</File>
+				<File Id="424346327" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-06.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-06_10C4C929.wem</CachePath>
+				</File>
+				<File Id="425418450" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Dies-02.wav</ShortName>
+					<CachePath>Voices/English(US)/Zombie-Dies-02_10C4C929.wem</CachePath>
+				</File>
 				<File Id="426708470" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_steps-23.wav</ShortName>
 					<CachePath>SFX/Player-FS_steps-23_10C4C929.wem</CachePath>
+				</File>
+				<File Id="428328916" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-VO_Attack-08.wav</ShortName>
+					<CachePath>SFX/Zombie-VO_Attack-08_10C4C929.wem</CachePath>
+				</File>
+				<File Id="431773203" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Whoosh-b-01.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Whoosh-b-01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="431969396" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Step_High-05.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Step_High-05_10C4C929.wem</CachePath>
+				</File>
+				<File Id="431997461" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Metal-03.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Metal-03_10C4C929.wem</CachePath>
+				</File>
+				<File Id="432850913" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Whoosh-a-02.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Whoosh-a-02_10C4C929.wem</CachePath>
 				</File>
 				<File Id="434197839" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Voice_Exhale-02.wav</ShortName>
@@ -251,6 +613,14 @@
 				<File Id="435998273" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_steps-13.wav</ShortName>
 					<CachePath>SFX/Player-FS_steps-13_10C4C929.wem</CachePath>
+				</File>
+				<File Id="436836057" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-FS-05.wav</ShortName>
+					<CachePath>SFX/Zombie-FS-05_10C4C929.wem</CachePath>
+				</File>
+				<File Id="451210039" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Step_Low-07.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Step_Low-07_10C4C929.wem</CachePath>
 				</File>
 				<File Id="458521427" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Cloth-02.wav</ShortName>
@@ -264,6 +634,14 @@
 					<ShortName>Player-FS_Cloth-16.wav</ShortName>
 					<CachePath>SFX/Player-FS_Cloth-16_3B08769F.wem</CachePath>
 				</File>
+				<File Id="471927460" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-26.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-26_10C4C929.wem</CachePath>
+				</File>
+				<File Id="475829584" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Zombie-VO-Idle-34.wav</ShortName>
+					<CachePath>Voices/English(US)/Zombie-VO-Idle-34_10C4C929.wem</CachePath>
+				</File>
 				<File Id="476043786" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Leather-16.wav</ShortName>
 					<CachePath>SFX/Player-FS_Leather-16_10C4C929.wem</CachePath>
@@ -272,13 +650,29 @@
 					<ShortName>Player-FS_Cloth-05.wav</ShortName>
 					<CachePath>SFX/Player-FS_Cloth-05_469BA6C1.wem</CachePath>
 				</File>
+				<File Id="478656961" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Stomp_Low-02.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Stomp_Low-02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="479995752" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-20.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-20_10C4C929.wem</CachePath>
+				</File>
 				<File Id="485575061" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-Dash_Voice-04.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-Dash_Voice-04_10C4C929.wem</CachePath>
 				</File>
+				<File Id="486940195" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Chains-17.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Chains-17_10C4C929.wem</CachePath>
+				</File>
 				<File Id="496571148" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - Music_part2.wav</ShortName>
 					<CachePath>SFX/Menu - Music_part2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="501544486" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-FS-09.wav</ShortName>
+					<CachePath>SFX/Zombie-FS-09_10C4C929.wem</CachePath>
 				</File>
 				<File Id="503570863" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_steps-19.wav</ShortName>
@@ -288,13 +682,37 @@
 					<ShortName>Menu - UI_Select1.wav</ShortName>
 					<CachePath>SFX/Menu - UI_Select1_D7D95507.wem</CachePath>
 				</File>
+				<File Id="516432128" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-11.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-11_10C4C929.wem</CachePath>
+				</File>
 				<File Id="517520188" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Leather-14.wav</ShortName>
 					<CachePath>SFX/Player-FS_Leather-14_10C4C929.wem</CachePath>
 				</File>
+				<File Id="525433479" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Whoosh-b-09.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Whoosh-b-09_10C4C929.wem</CachePath>
+				</File>
+				<File Id="528407277" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-18.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-18_10C4C929.wem</CachePath>
+				</File>
+				<File Id="537424814" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Step_Low-09.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Step_Low-09_10C4C929.wem</CachePath>
+				</File>
 				<File Id="547181476" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Voice_Exhale-03.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-FS_Voice_Exhale-03_10C4C929.wem</CachePath>
+				</File>
+				<File Id="559189933" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Zombie-VO-Idle-26.wav</ShortName>
+					<CachePath>Voices/English(US)/Zombie-VO-Idle-26_10C4C929.wem</CachePath>
+				</File>
+				<File Id="570181510" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-FS-06.wav</ShortName>
+					<CachePath>SFX/Zombie-FS-06_10C4C929.wem</CachePath>
 				</File>
 				<File Id="570276745" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - UI_LearnSkill1.wav</ShortName>
@@ -303,6 +721,30 @@
 				<File Id="579335366" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-Dash_Leather-01.wav</ShortName>
 					<CachePath>SFX/Player-Dash_Leather-01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="580117343" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Chains-04.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Chains-04_10C4C929.wem</CachePath>
+				</File>
+				<File Id="582843911" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Chains-07.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Chains-07_10C4C929.wem</CachePath>
+				</File>
+				<File Id="582972300" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-VO_Attack-07.wav</ShortName>
+					<CachePath>SFX/Zombie-VO_Attack-07_10C4C929.wem</CachePath>
+				</File>
+				<File Id="585098382" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-Jump_Stomp_raw-05.wav</ShortName>
+					<CachePath>SFX/Boss-Jump_Stomp_raw-05_10C4C929.wem</CachePath>
+				</File>
+				<File Id="598126548" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Zombie-VO-Idle-05.wav</ShortName>
+					<CachePath>Voices/English(US)/Zombie-VO-Idle-05_10C4C929.wem</CachePath>
+				</File>
+				<File Id="602203764" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-FS-03.wav</ShortName>
+					<CachePath>SFX/Zombie-FS-03_10C4C929.wem</CachePath>
 				</File>
 				<File Id="608851740" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Voice_Inhale-04.wav</ShortName>
@@ -324,13 +766,61 @@
 					<ShortName>Player-GettingHit-06.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-GettingHit-06_3375F516.wem</CachePath>
 				</File>
+				<File Id="617922362" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Metal-01.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Metal-01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="619476318" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-13.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-13_10C4C929.wem</CachePath>
+				</File>
+				<File Id="625212483" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Step_High-11.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Step_High-11_10C4C929.wem</CachePath>
+				</File>
+				<File Id="628967965" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Step_Low-04.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Step_Low-04_10C4C929.wem</CachePath>
+				</File>
+				<File Id="629123916" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-15.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-15_10C4C929.wem</CachePath>
+				</File>
+				<File Id="643711713" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-Jump_Stomp_raw-04.wav</ShortName>
+					<CachePath>SFX/Boss-Jump_Stomp_raw-04_10C4C929.wem</CachePath>
+				</File>
 				<File Id="646596143" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - Music_part1.wav</ShortName>
 					<CachePath>SFX/Menu - Music_part1_10C4C929.wem</CachePath>
 				</File>
+				<File Id="648273129" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Step_Low-06.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Step_Low-06_10C4C929.wem</CachePath>
+				</File>
+				<File Id="650544792" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Chains-09.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Chains-09_10C4C929.wem</CachePath>
+				</File>
+				<File Id="651517426" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Chains-11.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Chains-11_10C4C929.wem</CachePath>
+				</File>
+				<File Id="653409216" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Zombie-VO-Idle-30.wav</ShortName>
+					<CachePath>Voices/English(US)/Zombie-VO-Idle-30_10C4C929.wem</CachePath>
+				</File>
+				<File Id="653411131" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-VO_Attack-10.wav</ShortName>
+					<CachePath>SFX/Zombie-VO_Attack-10_10C4C929.wem</CachePath>
+				</File>
 				<File Id="655158912" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ENV-Torch.wav</ShortName>
 					<CachePath>SFX/ENV-Torch_A561301D.wem</CachePath>
+				</File>
+				<File Id="660796908" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-FS-01.wav</ShortName>
+					<CachePath>SFX/Zombie-FS-01_10C4C929.wem</CachePath>
 				</File>
 				<File Id="661501275" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_steps-10.wav</ShortName>
@@ -352,9 +842,45 @@
 					<ShortName>Player-FS_Voice_Inhale-01.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-FS_Voice_Inhale-01_10C4C929.wem</CachePath>
 				</File>
+				<File Id="670316998" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-16.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-16_10C4C929.wem</CachePath>
+				</File>
 				<File Id="673676232" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Thump.wav</ShortName>
 					<CachePath>SFX/Menu - ATMO_Thump_A32E7295.wem</CachePath>
+				</File>
+				<File Id="676342641" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-25.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-25_10C4C929.wem</CachePath>
+				</File>
+				<File Id="688916233" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-22.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-22_10C4C929.wem</CachePath>
+				</File>
+				<File Id="689344564" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-23.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-23_10C4C929.wem</CachePath>
+				</File>
+				<File Id="690372986" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Dies-03.wav</ShortName>
+					<CachePath>Voices/English(US)/Zombie-Dies-03_10C4C929.wem</CachePath>
+				</File>
+				<File Id="694107721" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-07.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-07_10C4C929.wem</CachePath>
+				</File>
+				<File Id="696897113" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-32.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-32_10C4C929.wem</CachePath>
+				</File>
+				<File Id="701293133" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Step_Low-02.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Step_Low-02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="704141367" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Whoosh-a-10.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Whoosh-a-10_10C4C929.wem</CachePath>
 				</File>
 				<File Id="705872836" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_steps-08.wav</ShortName>
@@ -364,21 +890,69 @@
 					<ShortName>Player-Dash_Voice-06.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-Dash_Voice-06_10C4C929.wem</CachePath>
 				</File>
+				<File Id="720788434" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Whoosh-b-07.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Whoosh-b-07_10C4C929.wem</CachePath>
+				</File>
+				<File Id="724657752" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-FS-11.wav</ShortName>
+					<CachePath>SFX/Zombie-FS-11_10C4C929.wem</CachePath>
+				</File>
 				<File Id="725466761" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Spell-Hitmarker.wav</ShortName>
 					<CachePath>SFX/Spell-Hitmarker_AF536C17.wem</CachePath>
+				</File>
+				<File Id="726090828" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-27.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-27_10C4C929.wem</CachePath>
+				</File>
+				<File Id="727773599" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Metal-02.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Metal-02_10C4C929.wem</CachePath>
 				</File>
 				<File Id="738238298" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Cloth-18.wav</ShortName>
 					<CachePath>SFX/Player-FS_Cloth-18_3FC9C5EA.wem</CachePath>
 				</File>
+				<File Id="740326116" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-19.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-19_10C4C929.wem</CachePath>
+				</File>
 				<File Id="743005053" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Cloth-20.wav</ShortName>
 					<CachePath>SFX/Player-FS_Cloth-20_92351A66.wem</CachePath>
 				</File>
+				<File Id="748495761" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Hitmarker-02.wav</ShortName>
+					<CachePath>Voices/English(US)/Zombie-Hitmarker-02_10C4C929.wem</CachePath>
+				</File>
 				<File Id="754061858" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-Dash_Voice-02.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-Dash_Voice-02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="757332566" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Whoosh-a-09.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Whoosh-a-09_10C4C929.wem</CachePath>
+				</File>
+				<File Id="764511545" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Hitmarker-03.wav</ShortName>
+					<CachePath>Voices/English(US)/Zombie-Hitmarker-03_10C4C929.wem</CachePath>
+				</File>
+				<File Id="771262002" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-38.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-38_10C4C929.wem</CachePath>
+				</File>
+				<File Id="774208815" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Dies-05.wav</ShortName>
+					<CachePath>Voices/English(US)/Zombie-Dies-05_10C4C929.wem</CachePath>
+				</File>
+				<File Id="785606850" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-36.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-36_10C4C929.wem</CachePath>
+				</File>
+				<File Id="790204352" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-VO_Attack-06.wav</ShortName>
+					<CachePath>SFX/Zombie-VO_Attack-06_10C4C929.wem</CachePath>
 				</File>
 				<File Id="790304389" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - Music_part3.wav</ShortName>
@@ -387,6 +961,14 @@
 				<File Id="792333592" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-GettingHit-01.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-GettingHit-01_4B042FC0.wem</CachePath>
+				</File>
+				<File Id="796950873" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-05.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-05_10C4C929.wem</CachePath>
+				</File>
+				<File Id="813487492" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-VO_Attack-09.wav</ShortName>
+					<CachePath>SFX/Zombie-VO_Attack-09_10C4C929.wem</CachePath>
 				</File>
 				<File Id="814521280" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-Dash_Cloth-03.wav</ShortName>
@@ -400,6 +982,18 @@
 					<ShortName>ENV-Torch.wav</ShortName>
 					<CachePath>SFX/ENV-Torch_989F3494.wem</CachePath>
 				</File>
+				<File Id="832333941" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-28.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-28_10C4C929.wem</CachePath>
+				</File>
+				<File Id="832336272" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Stomp_Low-01.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Stomp_Low-01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="832800803" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Chains-02.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Chains-02_10C4C929.wem</CachePath>
+				</File>
 				<File Id="833108512" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Cloth-19.wav</ShortName>
 					<CachePath>SFX/Player-FS_Cloth-19_8EBA77B9.wem</CachePath>
@@ -412,13 +1006,37 @@
 					<ShortName>Player-FS_Cloth-11.wav</ShortName>
 					<CachePath>SFX/Player-FS_Cloth-11_C3E41F82.wem</CachePath>
 				</File>
+				<File Id="837324074" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Zombie-VO-Idle-27.wav</ShortName>
+					<CachePath>Voices/English(US)/Zombie-VO-Idle-27_10C4C929.wem</CachePath>
+				</File>
 				<File Id="847593425" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - Descent.wav</ShortName>
 					<CachePath>SFX/Menu - Descent_825148B3.wem</CachePath>
 				</File>
+				<File Id="852178587" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-34.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-34_10C4C929.wem</CachePath>
+				</File>
+				<File Id="852399883" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Whoosh-b-12.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Whoosh-b-12_10C4C929.wem</CachePath>
+				</File>
+				<File Id="859968394" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Step_High-01.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Step_High-01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="862864940" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Dies-06.wav</ShortName>
+					<CachePath>Voices/English(US)/Zombie-Dies-06_10C4C929.wem</CachePath>
+				</File>
 				<File Id="866224309" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PLAYER-RMC4_Release.wav</ShortName>
 					<CachePath>SFX/PLAYER-RMC4_Release_F9459412.wem</CachePath>
+				</File>
+				<File Id="872430339" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-12.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-12_10C4C929.wem</CachePath>
 				</File>
 				<File Id="872721198" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Leather-04.wav</ShortName>
@@ -430,7 +1048,7 @@
 				</File>
 				<File Id="889376298" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PLAYER-RMC_Charge2.wav</ShortName>
-					<CachePath>SFX/PLAYER-RMC_Charge2_758737D8.wem</CachePath>
+					<CachePath>SFX/PLAYER-RMC_Charge2_384155AC.wem</CachePath>
 				</File>
 				<File Id="912214824" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Leather-02.wav</ShortName>
@@ -444,6 +1062,14 @@
 					<ShortName>Player-Attack_LMC.wav</ShortName>
 					<CachePath>SFX/Player-Attack_LMC_10C4C929.wem</CachePath>
 				</File>
+				<File Id="923129639" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Whoosh-b-02.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Whoosh-b-02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="932035534" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Step_Low-05.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Step_Low-05_10C4C929.wem</CachePath>
+				</File>
 				<File Id="932713969" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Leather-20.wav</ShortName>
 					<CachePath>SFX/Player-FS_Leather-20_10C4C929.wem</CachePath>
@@ -456,9 +1082,29 @@
 					<ShortName>Player-FS_steps-15.wav</ShortName>
 					<CachePath>SFX/Player-FS_steps-15_10C4C929.wem</CachePath>
 				</File>
+				<File Id="946869976" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Zombie-VO-Idle-25.wav</ShortName>
+					<CachePath>Voices/English(US)/Zombie-VO-Idle-25_10C4C929.wem</CachePath>
+				</File>
 				<File Id="949801487" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Cloth-08.wav</ShortName>
 					<CachePath>SFX/Player-FS_Cloth-08_57A1B8BC.wem</CachePath>
+				</File>
+				<File Id="952933459" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Whoosh-b-11.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Whoosh-b-11_10C4C929.wem</CachePath>
+				</File>
+				<File Id="955521415" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Platzhalter-01.wav</ShortName>
+					<CachePath>Voices/English(US)/Platzhalter-01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="957383586" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Dies-08.wav</ShortName>
+					<CachePath>Voices/English(US)/Zombie-Dies-08_10C4C929.wem</CachePath>
+				</File>
+				<File Id="958687390" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Zombie-VO-Idle-33.wav</ShortName>
+					<CachePath>Voices/English(US)/Zombie-VO-Idle-33_10C4C929.wem</CachePath>
 				</File>
 				<File Id="967862557" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-Dash_Voice-07.wav</ShortName>
@@ -468,9 +1114,21 @@
 					<ShortName>PLAYER-RMC3_Release.wav</ShortName>
 					<CachePath>SFX/PLAYER-RMC3_Release_10C4C929.wem</CachePath>
 				</File>
+				<File Id="979965442" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Step_High-09.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Step_High-09_10C4C929.wem</CachePath>
+				</File>
+				<File Id="980504822" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-Jump_Stomp_raw-02.wav</ShortName>
+					<CachePath>SFX/Boss-Jump_Stomp_raw-02_10C4C929.wem</CachePath>
+				</File>
 				<File Id="983422228" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-AttackRMC_Charge-01.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-AttackRMC_Charge-01_6391295F.wem</CachePath>
+				</File>
+				<File Id="987030988" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Dies-04.wav</ShortName>
+					<CachePath>Voices/English(US)/Zombie-Dies-04_10C4C929.wem</CachePath>
 				</File>
 				<File Id="989871151" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-GettingHit-05.wav</ShortName>
@@ -480,13 +1138,37 @@
 					<ShortName>Player-FS_Cloth-10.wav</ShortName>
 					<CachePath>SFX/Player-FS_Cloth-10_62BD3916.wem</CachePath>
 				</File>
+				<File Id="997429940" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-FS-07.wav</ShortName>
+					<CachePath>SFX/Zombie-FS-07_10C4C929.wem</CachePath>
+				</File>
+				<File Id="998136672" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Chains-10.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Chains-10_10C4C929.wem</CachePath>
+				</File>
+				<File Id="999081096" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Metal-10.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Metal-10_10C4C929.wem</CachePath>
+				</File>
 				<File Id="1003067410" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-Dash_Stomp-01.wav</ShortName>
 					<CachePath>SFX/Player-Dash_Stomp-01_10C4C929.wem</CachePath>
 				</File>
+				<File Id="1011856105" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Zombie-VO-Idle-29.wav</ShortName>
+					<CachePath>Voices/English(US)/Zombie-VO-Idle-29_10C4C929.wem</CachePath>
+				</File>
 				<File Id="1015325291" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Cloth-06.wav</ShortName>
 					<CachePath>SFX/Player-FS_Cloth-06_83CCB70E.wem</CachePath>
+				</File>
+				<File Id="1018017788" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Chains-06.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Chains-06_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1019021512" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-FS-04.wav</ShortName>
+					<CachePath>SFX/Zombie-FS-04_10C4C929.wem</CachePath>
 				</File>
 				<File Id="1025884227" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Voice_Inhale-10.wav</ShortName>
@@ -496,13 +1178,29 @@
 					<ShortName>Player-FS_steps-07.wav</ShortName>
 					<CachePath>SFX/Player-FS_steps-07_10C4C929.wem</CachePath>
 				</File>
+				<File Id="1035202417" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Chains-13.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Chains-13_10C4C929.wem</CachePath>
+				</File>
 				<File Id="1036089617" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Cloth-04.wav</ShortName>
 					<CachePath>SFX/Player-FS_Cloth-04_D5867540.wem</CachePath>
 				</File>
+				<File Id="1037512816" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-10.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-10_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1047307675" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Hitmarker-05.wav</ShortName>
+					<CachePath>Voices/English(US)/Zombie-Hitmarker-05_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1052242071" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Chains-03.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Chains-03_10C4C929.wem</CachePath>
+				</File>
 				<File Id="1052748530" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PLAYER-RMC_Charge1.wav</ShortName>
-					<CachePath>SFX/PLAYER-RMC_Charge1_D513C6B6.wem</CachePath>
+					<CachePath>SFX/PLAYER-RMC_Charge1_8BAB5EEA.wem</CachePath>
 				</File>
 				<File Id="1055398214" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Voice_Inhale-07.wav</ShortName>
@@ -516,13 +1214,29 @@
 					<ShortName>Player-FS_Voice_Inhale-05.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-FS_Voice_Inhale-05_10C4C929.wem</CachePath>
 				</File>
+				<File Id="1062921778" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-02.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1064721512" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-14.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-14_10C4C929.wem</CachePath>
+				</File>
 				<File Id="1066085311" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Voice_Inhale-08.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-FS_Voice_Inhale-08_F2E32FE5.wem</CachePath>
 				</File>
+				<File Id="1067679039" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zombie-Attack_Whoosh-a-03.wav</ShortName>
+					<CachePath>SFX/Zombie-Attack_Whoosh-a-03_10C4C929.wem</CachePath>
+				</File>
 				<File Id="1068300947" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Voice_Inhale-11.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-FS_Voice_Inhale-11_14A06BDE.wem</CachePath>
+				</File>
+				<File Id="1069512068" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss-FS_Voice-08.wav</ShortName>
+					<CachePath>SFX/Boss-FS_Voice-08_10C4C929.wem</CachePath>
 				</File>
 				<File Id="1072581976" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_steps-09.wav</ShortName>
@@ -536,8 +1250,11 @@
 			<Plugins>
 				<Custom>
 					<Plugin Id="344626603" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="490516109" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="522512632" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 				</Custom>
 				<ShareSets>
+					<Plugin Id="535667444" Name="Bathroom1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="1182561210" Name="Cut_3dB_10KHz" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="1416967478" Name="All_Buttons_IN" LibName="Wwise Compressor" LibId="7077891"/>
 					<Plugin Id="1674078407" Name="Chorus_Like" LibName="Wwise Flanger" LibId="8192003"/>
@@ -557,6 +1274,114 @@
 							<PluginRef Id="1674078407"/>
 						</ShareSets>
 					</PluginRefs>
+				</Event>
+				<Event Id="1075280761" Name="Play_Boss_FS" DurationType="OneShot" DurationMin="0.422625" DurationMax="0.422625">
+					<MediaRefs>
+						<MediaRef Id="7062636"/>
+						<MediaRef Id="13269472"/>
+						<MediaRef Id="23592762"/>
+						<MediaRef Id="83225490"/>
+						<MediaRef Id="169711916"/>
+						<MediaRef Id="201973791"/>
+						<MediaRef Id="212043406"/>
+						<MediaRef Id="222674205"/>
+						<MediaRef Id="239656092"/>
+						<MediaRef Id="316526089"/>
+						<MediaRef Id="357323291"/>
+						<MediaRef Id="391137521"/>
+						<MediaRef Id="431969396"/>
+						<MediaRef Id="451210039"/>
+						<MediaRef Id="537424814"/>
+						<MediaRef Id="625212483"/>
+						<MediaRef Id="628967965"/>
+						<MediaRef Id="648273129"/>
+						<MediaRef Id="701293133"/>
+						<MediaRef Id="859968394"/>
+						<MediaRef Id="932035534"/>
+						<MediaRef Id="979965442"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="727530039" Name="Play_Boss_FS_Chain" DurationType="OneShot" DurationMin="0" DurationMax="1.0556353">
+					<MediaRefs>
+						<MediaRef Id="70334053"/>
+						<MediaRef Id="132240131"/>
+						<MediaRef Id="153246880"/>
+						<MediaRef Id="297104315"/>
+						<MediaRef Id="312416976"/>
+						<MediaRef Id="348550186"/>
+						<MediaRef Id="405528387"/>
+						<MediaRef Id="486940195"/>
+						<MediaRef Id="580117343"/>
+						<MediaRef Id="582843911"/>
+						<MediaRef Id="650544792"/>
+						<MediaRef Id="651517426"/>
+						<MediaRef Id="832800803"/>
+						<MediaRef Id="998136672"/>
+						<MediaRef Id="1018017788"/>
+						<MediaRef Id="1035202417"/>
+						<MediaRef Id="1052242071"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2050535857" Name="Play_Boss_Idle_Voice" DurationType="OneShot" DurationMin="0.71666664" DurationMax="1.3333334">
+					<MediaRefs>
+						<MediaRef Id="37348861"/>
+						<MediaRef Id="114367471"/>
+						<MediaRef Id="124960730"/>
+						<MediaRef Id="126344969"/>
+						<MediaRef Id="189036670"/>
+						<MediaRef Id="203580419"/>
+						<MediaRef Id="235792914"/>
+						<MediaRef Id="315293821"/>
+						<MediaRef Id="330273501"/>
+						<MediaRef Id="355203839"/>
+						<MediaRef Id="367117727"/>
+						<MediaRef Id="382004132"/>
+						<MediaRef Id="404207689"/>
+						<MediaRef Id="424346327"/>
+						<MediaRef Id="471927460"/>
+						<MediaRef Id="479995752"/>
+						<MediaRef Id="516432128"/>
+						<MediaRef Id="528407277"/>
+						<MediaRef Id="619476318"/>
+						<MediaRef Id="629123916"/>
+						<MediaRef Id="670316998"/>
+						<MediaRef Id="676342641"/>
+						<MediaRef Id="688916233"/>
+						<MediaRef Id="689344564"/>
+						<MediaRef Id="694107721"/>
+						<MediaRef Id="696897113"/>
+						<MediaRef Id="726090828"/>
+						<MediaRef Id="740326116"/>
+						<MediaRef Id="771262002"/>
+						<MediaRef Id="785606850"/>
+						<MediaRef Id="796950873"/>
+						<MediaRef Id="832333941"/>
+						<MediaRef Id="852178587"/>
+						<MediaRef Id="872430339"/>
+						<MediaRef Id="1037512816"/>
+						<MediaRef Id="1062921778"/>
+						<MediaRef Id="1064721512"/>
+						<MediaRef Id="1069512068"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="490516109"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="2284332626" Name="Play_Boss_Jump_Stomp" DurationType="OneShot" DurationMin="0.7283656" DurationMax="1.0103085">
+					<MediaRefs>
+						<MediaRef Id="84724703"/>
+						<MediaRef Id="201483726"/>
+						<MediaRef Id="212380807"/>
+						<MediaRef Id="281720878"/>
+						<MediaRef Id="383821159"/>
+						<MediaRef Id="478656961"/>
+						<MediaRef Id="585098382"/>
+						<MediaRef Id="643711713"/>
+						<MediaRef Id="832336272"/>
+						<MediaRef Id="980504822"/>
+					</MediaRefs>
 				</Event>
 				<Event Id="1849851393" Name="Play_ENV_Blue_Fire" MaxAttenuation="12" DurationType="Infinite">
 					<MediaRefs>
@@ -594,15 +1419,20 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
+				<Event Id="3765695918" Name="Play_Heartbeat" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="131508628"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="535667444"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
 				<Event Id="3103472528" Name="Play_Intro" DurationType="OneShot" DurationMin="36.91441" DurationMax="36.91441">
 					<MediaRefs>
 						<MediaRef Id="31143423"/>
 						<MediaRef Id="160074641"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="243833269" Name="Play_KS_Heartbeat_1" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="131508628"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1905734753" Name="Play_Menu_ATMO" DurationType="Infinite">
@@ -667,6 +1497,11 @@
 							<PluginRef Id="1416967478"/>
 						</ShareSets>
 					</PluginRefs>
+				</Event>
+				<Event Id="3911744873" Name="Play_Platzhalter" DurationType="OneShot" DurationMin="1.4666667" DurationMax="1.4666667">
+					<MediaRefs>
+						<MediaRef Id="955521415"/>
+					</MediaRefs>
 				</Event>
 				<Event Id="104602405" Name="Play_Player_Attack_LMC" DurationType="OneShot" DurationMin="1.3765548" DurationMax="1.5011435">
 					<MediaRefs>
@@ -815,7 +1650,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="4193784841" Name="Play_Player_RMC_Charge2" DurationType="OneShot" DurationMin="3.531809" DurationMax="3.6988425">
+				<Event Id="4193784841" Name="Play_Player_RMC_Charge2" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="130895049"/>
 						<MediaRef Id="336767322"/>
@@ -833,9 +1668,141 @@
 						<MediaRef Id="725466761"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3597927707" Name="Play_Zombie_Attack" DurationType="OneShot" DurationMin="0.7666875" DurationMax="1.1980625">
+					<MediaRefs>
+						<MediaRef Id="3300382"/>
+						<MediaRef Id="10843605"/>
+						<MediaRef Id="38188390"/>
+						<MediaRef Id="55558778"/>
+						<MediaRef Id="58968318"/>
+						<MediaRef Id="64408550"/>
+						<MediaRef Id="64608330"/>
+						<MediaRef Id="67138420"/>
+						<MediaRef Id="85569822"/>
+						<MediaRef Id="109976321"/>
+						<MediaRef Id="122233681"/>
+						<MediaRef Id="143697608"/>
+						<MediaRef Id="147800549"/>
+						<MediaRef Id="177343746"/>
+						<MediaRef Id="221271279"/>
+						<MediaRef Id="223932604"/>
+						<MediaRef Id="226041141"/>
+						<MediaRef Id="242273507"/>
+						<MediaRef Id="298468436"/>
+						<MediaRef Id="318140240"/>
+						<MediaRef Id="334302628"/>
+						<MediaRef Id="358780680"/>
+						<MediaRef Id="371158611"/>
+						<MediaRef Id="373397234"/>
+						<MediaRef Id="388935191"/>
+						<MediaRef Id="396744357"/>
+						<MediaRef Id="420111776"/>
+						<MediaRef Id="428328916"/>
+						<MediaRef Id="431773203"/>
+						<MediaRef Id="431997461"/>
+						<MediaRef Id="432850913"/>
+						<MediaRef Id="525433479"/>
+						<MediaRef Id="582972300"/>
+						<MediaRef Id="617922362"/>
+						<MediaRef Id="653411131"/>
+						<MediaRef Id="704141367"/>
+						<MediaRef Id="720788434"/>
+						<MediaRef Id="727773599"/>
+						<MediaRef Id="757332566"/>
+						<MediaRef Id="790204352"/>
+						<MediaRef Id="813487492"/>
+						<MediaRef Id="852399883"/>
+						<MediaRef Id="923129639"/>
+						<MediaRef Id="952933459"/>
+						<MediaRef Id="999081096"/>
+						<MediaRef Id="1067679039"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="635270414" Name="Play_Zombie_Dies" DurationType="OneShot" DurationMin="0.73335415" DurationMax="1.6500208">
+					<MediaRefs>
+						<MediaRef Id="116764371"/>
+						<MediaRef Id="155268557"/>
+						<MediaRef Id="397819662"/>
+						<MediaRef Id="425418450"/>
+						<MediaRef Id="690372986"/>
+						<MediaRef Id="774208815"/>
+						<MediaRef Id="862864940"/>
+						<MediaRef Id="957383586"/>
+						<MediaRef Id="987030988"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="895956798" Name="Play_Zombie_FS" DurationType="OneShot" DurationMin="0.2035" DurationMax="0.32464585">
+					<MediaRefs>
+						<MediaRef Id="134795684"/>
+						<MediaRef Id="153264191"/>
+						<MediaRef Id="387754460"/>
+						<MediaRef Id="403332333"/>
+						<MediaRef Id="436836057"/>
+						<MediaRef Id="501544486"/>
+						<MediaRef Id="570181510"/>
+						<MediaRef Id="602203764"/>
+						<MediaRef Id="660796908"/>
+						<MediaRef Id="724657752"/>
+						<MediaRef Id="997429940"/>
+						<MediaRef Id="1019021512"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="818595436" Name="Play_Zombie_Hitmarker" DurationType="OneShot" DurationMin="0.2505" DurationMax="0.53335416">
+					<MediaRefs>
+						<MediaRef Id="133461549"/>
+						<MediaRef Id="185773762"/>
+						<MediaRef Id="218986277"/>
+						<MediaRef Id="372393383"/>
+						<MediaRef Id="748495761"/>
+						<MediaRef Id="764511545"/>
+						<MediaRef Id="1047307675"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="880339566" Name="Play_Zombie_Idle_Voice" DurationType="OneShot" DurationMin="1" DurationMax="1.3833542">
+					<MediaRefs>
+						<MediaRef Id="16162616"/>
+						<MediaRef Id="62348827"/>
+						<MediaRef Id="76378267"/>
+						<MediaRef Id="95476277"/>
+						<MediaRef Id="258955241"/>
+						<MediaRef Id="335310361"/>
+						<MediaRef Id="361557719"/>
+						<MediaRef Id="475829584"/>
+						<MediaRef Id="559189933"/>
+						<MediaRef Id="598126548"/>
+						<MediaRef Id="653409216"/>
+						<MediaRef Id="837324074"/>
+						<MediaRef Id="946869976"/>
+						<MediaRef Id="958687390"/>
+						<MediaRef Id="1011856105"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="522512632"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="2829022778" Name="Set_State_Pause" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="89505537" Id="3092587493" Name="Pause"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="3319673256" Name="Stop_Heartbeat" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2914981333" Name="Stop_Menu" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="3677180323" Name="Health"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="89505537" Name="Gameplay">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="1658147866" Name="NoPause"/>
+						<State Id="3092587493" Name="Pause"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{268DD7B4-541C-1987-7B47-EC36CE07FB26}</FileHash>
+	<FileHash>{D2235907-5CD2-E0B1-1A97-51073460C8A7}</FileHash>
 </SoundBanksInfo>

@@ -6,9 +6,20 @@ State	ID	Name	State Group			Notes
 	1658147866	NoPause	Gameplay			
 	3092587493	Pause	Gameplay			
 
+Custom State	ID	Name	State Group	Owner		Notes
+	299422019	Pause	Gameplay	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus		
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1006694123	Music_Volume			\Default Work Unit\Music_Volume	
+	1564184899	SFX_Volume			\Default Work Unit\SFX_Volume	
+	3538560642	Voice_Volume			\Default Work Unit\Voice_Volume	
+	4179668880	Master_Volume			\Default Work Unit\Master_Volume	
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	89505537	Gameplay			\Default Work Unit\Master Audio Bus\SFX Bus\Gameplay	
 	348963605	REVERB			\Default Work Unit\Master Audio Bus\REVERB	
 	1502772432	SFX Bus			\Default Work Unit\Master Audio Bus\SFX Bus	
+	2235087924	UI-Sounds			\Default Work Unit\Master Audio Bus\SFX Bus\UI-Sounds	
 	3127962312	Music Bus			\Default Work Unit\Master Audio Bus\Music Bus	
 	3472939855	Voice Bus			\Default Work Unit\Master Audio Bus\Voice Bus	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	

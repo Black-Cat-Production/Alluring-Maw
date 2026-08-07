@@ -59,6 +59,10 @@
 							</ObjectLists>
 						</Bus>
 						<Bus Name="SFX Bus" ID="{0428BEA9-86B3-406D-9B6A-357CE32B9E02}">
+							<ChildrenList>
+								<Bus Name="UI-Sounds" ID="{A3D9B39C-F658-412F-9B32-D8A2B875E6E3}"/>
+								<Bus Name="Gameplay" ID="{BF44E5EA-3344-4A98-8169-843D4C4E7DB5}"/>
+							</ChildrenList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
 									<Reference>
@@ -175,6 +179,29 @@
 							</ChildrenList>
 						</Bus>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Gameplay" ID="{56F92789-D410-4E7F-B117-4831618FE163}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Pause" ID="{7CE44FF1-1353-4A0D-8B20-17B684DAEBE5}"/>
+								<CustomState Name="" ID="{397AE449-0111-4C38-96FD-B87151BC364B}" ShortID="299422019">
+									<PropertyList>
+										<Property Name="BusVolume" Type="Real64" Value="-12"/>
+										<Property Name="Lowpass" Type="int16" Value="-39"/>
+										<Property Name="Pitch" Type="int32" Value="-560"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="NoPause" ID="{7F901721-27FA-4FD7-93CD-25BDD1A9ECAF}"/>
+								<CustomState Name="" ID="{AD44F254-1205-4A86-A439-C1B80F4573DC}" ShortID="790133416"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 					<ObjectLists>
 						<ObjectList Name="RTPC">
 							<Reference>
