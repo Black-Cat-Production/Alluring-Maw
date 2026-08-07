@@ -81,7 +81,7 @@ namespace Scripts.Core.Skills
                 Debug.LogWarning("No skill assigned to SkillController!");
                 return;
             }
-            AkSoundEngine.PostEvent("Stop_PLAYER_RMC_Charge", gameObject);
+            AkSoundEngine.PostEvent("Stop_Player_RMC_Charge", gameObject);
             ManaSystemModule.ReduceMana(SelectedSkill.ManaCost);
             if (SelectedSkill.HasPreviewCast)
             {
