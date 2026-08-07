@@ -30,7 +30,7 @@ namespace WWISE_Integration_Scripts
 
         IEnumerator PlaySoundsRoutine()
         {
-            while (!GameManager.Instance.IsPaused)
+            while (gameObject.activeInHierarchy)
             {
                 float randomWaitTime = Random.Range(minSecondsToWait, maxSecondsToWait);
                 yield return new WaitForSeconds(randomWaitTime);
@@ -41,7 +41,7 @@ namespace WWISE_Integration_Scripts
 
         IEnumerator TeleportObject()
         {
-            while (!GameManager.Instance.IsPaused)
+            while (gameObject.activeInHierarchy)
             {
                 var unitSphere = Random.insideUnitSphere * distanceToPlayerInMeter;
                 var randomPoint = new Vector3(unitSphere.x, 0, unitSphere.z);
