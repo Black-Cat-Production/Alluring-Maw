@@ -74,7 +74,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="English(US)" Hash="{9E983CDE-38F6-1212-DD4F-A9188C56CF76}">
+		<SoundBank Id="3161908922" Type="User" Language="English(US)" Hash="{CFFCE7B9-1090-03EC-38D6-A806AC0E0AAD}">
 			<ShortName>Main</ShortName>
 			<Path>English(US)/Main.bnk</Path>
 			<Media>
@@ -117,6 +117,10 @@
 				<File Id="23604221" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Cloth-13.wav</ShortName>
 					<CachePath>SFX/Player-FS_Cloth-13_A02FE05F.wem</CachePath>
+				</File>
+				<File Id="25470229" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
+					<CachePath>SFX/Menu - ATMO_Ketten_F3F075E0.wem</CachePath>
 				</File>
 				<File Id="31143423" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Intro - Voice.wav</ShortName>
@@ -190,6 +194,10 @@
 					<ShortName>Zombie-Attack_Metal-08.wav</ShortName>
 					<CachePath>SFX/Zombie-Attack_Metal-08_10C4C929.wem</CachePath>
 				</File>
+				<File Id="86915881" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
+					<CachePath>SFX/Menu - ATMO_Ketten_B4FF5B82.wem</CachePath>
+				</File>
 				<File Id="89317104" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
 					<CachePath>SFX/Menu - ATMO_Ketten_BE6DC08E.wem</CachePath>
@@ -217,6 +225,10 @@
 				<File Id="113311087" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Voice_Inhale-03.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-FS_Voice_Inhale-03_10C4C929.wem</CachePath>
+				</File>
+				<File Id="114327810" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
+					<CachePath>SFX/Menu - ATMO_Ketten_FCF74EE3.wem</CachePath>
 				</File>
 				<File Id="114367471" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Voice-29.wav</ShortName>
@@ -322,6 +334,14 @@
 					<ShortName>Player-GettingHit-04.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-GettingHit-04_FDE54F75.wem</CachePath>
 				</File>
+				<File Id="195391025" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
+					<CachePath>SFX/Menu - ATMO_Ketten_284878C0.wem</CachePath>
+				</File>
+				<File Id="196007614" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
+					<CachePath>SFX/Menu - ATMO_Ketten_7512E335.wem</CachePath>
+				</File>
 				<File Id="199119937" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_steps-20.wav</ShortName>
 					<CachePath>SFX/Player-FS_steps-20_10C4C929.wem</CachePath>
@@ -410,6 +430,14 @@
 					<ShortName>Zombie-VO-Idle-01.wav</ShortName>
 					<CachePath>Voices/English(US)/Zombie-VO-Idle-01_10C4C929.wem</CachePath>
 				</File>
+				<File Id="261873939" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Menu - ATMO_Thump.wav</ShortName>
+					<CachePath>SFX/Menu - ATMO_Thump_7EAC0F8F.wem</CachePath>
+				</File>
+				<File Id="278365655" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
+					<CachePath>SFX/Menu - ATMO_Ketten_35BA5B91.wem</CachePath>
+				</File>
 				<File Id="281720878" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Stomp_Low-05.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Stomp_Low-05_10C4C929.wem</CachePath>
@@ -454,6 +482,10 @@
 					<ShortName>Zombie-Attack_Whoosh-a-12.wav</ShortName>
 					<CachePath>SFX/Zombie-Attack_Whoosh-a-12_10C4C929.wem</CachePath>
 				</File>
+				<File Id="322777483" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bounce Percussion [2026-07-30 104843]-1.wav</ShortName>
+					<CachePath>SFX/Bounce Percussion [2026-07-30 104843]-1_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="330273501" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Voice-09.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Voice-09_10C4C929.wem</CachePath>
@@ -481,6 +513,10 @@
 				<File Id="348751237" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-Dash_Cloth-02.wav</ShortName>
 					<CachePath>SFX/Player-Dash_Cloth-02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="351573158" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Menu - ATMO_Thump.wav</ShortName>
+					<CachePath>SFX/Menu - ATMO_Thump_A03FD4F9.wem</CachePath>
 				</File>
 				<File Id="355203839" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Voice-01.wav</ShortName>
@@ -590,6 +626,10 @@
 					<ShortName>Zombie-VO_Attack-08.wav</ShortName>
 					<CachePath>SFX/Zombie-VO_Attack-08_10C4C929.wem</CachePath>
 				</File>
+				<File Id="429419706" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
+					<CachePath>SFX/Menu - ATMO_Ketten_CF6F9520.wem</CachePath>
+				</File>
 				<File Id="431773203" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Zombie-Attack_Whoosh-b-01.wav</ShortName>
 					<CachePath>SFX/Zombie-Attack_Whoosh-b-01_10C4C929.wem</CachePath>
@@ -606,6 +646,10 @@
 					<ShortName>Zombie-Attack_Whoosh-a-02.wav</ShortName>
 					<CachePath>SFX/Zombie-Attack_Whoosh-a-02_10C4C929.wem</CachePath>
 				</File>
+				<File Id="433782296" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
+					<CachePath>SFX/Menu - ATMO_Ketten_08CEBC08.wem</CachePath>
+				</File>
 				<File Id="434197839" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Voice_Exhale-02.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-FS_Voice_Exhale-02_10C4C929.wem</CachePath>
@@ -621,6 +665,10 @@
 				<File Id="451210039" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Step_Low-07.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Step_Low-07_10C4C929.wem</CachePath>
+				</File>
+				<File Id="451662515" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
+					<CachePath>SFX/Menu - ATMO_Ketten_6864EC45.wem</CachePath>
 				</File>
 				<File Id="458521427" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Cloth-02.wav</ShortName>
@@ -698,6 +746,10 @@
 					<ShortName>Boss-FS_Voice-18.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Voice-18_10C4C929.wem</CachePath>
 				</File>
+				<File Id="529512090" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Menu - ATMO_Thump.wav</ShortName>
+					<CachePath>SFX/Menu - ATMO_Thump_0040FBCF.wem</CachePath>
+				</File>
 				<File Id="537424814" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Step_Low-09.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Step_Low-09_10C4C929.wem</CachePath>
@@ -742,9 +794,17 @@
 					<ShortName>Zombie-VO-Idle-05.wav</ShortName>
 					<CachePath>Voices/English(US)/Zombie-VO-Idle-05_10C4C929.wem</CachePath>
 				</File>
+				<File Id="599663629" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Menu - ATMO_Thump.wav</ShortName>
+					<CachePath>SFX/Menu - ATMO_Thump_D69AE239.wem</CachePath>
+				</File>
 				<File Id="602203764" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Zombie-FS-03.wav</ShortName>
 					<CachePath>SFX/Zombie-FS-03_10C4C929.wem</CachePath>
+				</File>
+				<File Id="605546710" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Toespfeife-wet.wav</ShortName>
+					<CachePath>SFX/Toespfeife-wet_10C4C929.wem</CachePath>
 				</File>
 				<File Id="608851740" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Voice_Inhale-04.wav</ShortName>
@@ -757,6 +817,10 @@
 				<File Id="609114711" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Leather-08.wav</ShortName>
 					<CachePath>SFX/Player-FS_Leather-08_10C4C929.wem</CachePath>
+				</File>
+				<File Id="611417319" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Menu - ATMO_Thump.wav</ShortName>
+					<CachePath>SFX/Menu - ATMO_Thump_747F8270.wem</CachePath>
 				</File>
 				<File Id="613593918" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Leather-03.wav</ShortName>
@@ -785,6 +849,10 @@
 				<File Id="629123916" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Voice-15.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Voice-15_10C4C929.wem</CachePath>
+				</File>
+				<File Id="629604209" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Menu - ATMO_Thump.wav</ShortName>
+					<CachePath>SFX/Menu - ATMO_Thump_D21499A8.wem</CachePath>
 				</File>
 				<File Id="643711713" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-Jump_Stomp_raw-04.wav</ShortName>
@@ -909,6 +977,10 @@
 				<File Id="727773599" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Zombie-Attack_Metal-02.wav</ShortName>
 					<CachePath>SFX/Zombie-Attack_Metal-02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="733090010" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Menu - ATMO_Thump.wav</ShortName>
+					<CachePath>SFX/Menu - ATMO_Thump_ADE3381D.wem</CachePath>
 				</File>
 				<File Id="738238298" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Cloth-18.wav</ShortName>
@@ -1054,6 +1126,10 @@
 					<ShortName>Player-FS_Leather-02.wav</ShortName>
 					<CachePath>SFX/Player-FS_Leather-02_A206C8E7.wem</CachePath>
 				</File>
+				<File Id="912216463" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bounce Drums [2026-07-30 104843]-1.wav</ShortName>
+					<CachePath>SFX/Bounce Drums [2026-07-30 104843]-1_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="912469435" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Cloth-14.wav</ShortName>
 					<CachePath>SFX/Player-FS_Cloth-14_1C2A3619.wem</CachePath>
@@ -1106,6 +1182,10 @@
 					<ShortName>Zombie-VO-Idle-33.wav</ShortName>
 					<CachePath>Voices/English(US)/Zombie-VO-Idle-33_10C4C929.wem</CachePath>
 				</File>
+				<File Id="959944303" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
+					<CachePath>SFX/Menu - ATMO_Ketten_6F9A605D.wem</CachePath>
+				</File>
 				<File Id="967862557" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-Dash_Voice-07.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-Dash_Voice-07_10C4C929.wem</CachePath>
@@ -1126,6 +1206,10 @@
 					<ShortName>Player-AttackRMC_Charge-01.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-AttackRMC_Charge-01_6391295F.wem</CachePath>
 				</File>
+				<File Id="985165359" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
+					<CachePath>SFX/Menu - ATMO_Ketten_B04690A0.wem</CachePath>
+				</File>
 				<File Id="987030988" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Zombie-Dies-04.wav</ShortName>
 					<CachePath>Voices/English(US)/Zombie-Dies-04_10C4C929.wem</CachePath>
@@ -1133,6 +1217,10 @@
 				<File Id="989871151" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-GettingHit-05.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-GettingHit-05_BA5DA460.wem</CachePath>
+				</File>
+				<File Id="992843410" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Menu - ATMO_Thump.wav</ShortName>
+					<CachePath>SFX/Menu - ATMO_Thump_66F01A3B.wem</CachePath>
 				</File>
 				<File Id="995070210" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Cloth-10.wav</ShortName>
@@ -1186,9 +1274,17 @@
 					<ShortName>Player-FS_Cloth-04.wav</ShortName>
 					<CachePath>SFX/Player-FS_Cloth-04_D5867540.wem</CachePath>
 				</File>
+				<File Id="1036381591" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
+					<CachePath>SFX/Menu - ATMO_Ketten_06DAE69A.wem</CachePath>
+				</File>
 				<File Id="1037512816" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Voice-10.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Voice-10_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1041115910" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Menu - ATMO_Thump.wav</ShortName>
+					<CachePath>SFX/Menu - ATMO_Thump_8B242FD6.wem</CachePath>
 				</File>
 				<File Id="1047307675" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Zombie-Hitmarker-05.wav</ShortName>
@@ -1234,6 +1330,10 @@
 					<ShortName>Player-FS_Voice_Inhale-11.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-FS_Voice_Inhale-11_14A06BDE.wem</CachePath>
 				</File>
+				<File Id="1068678857" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
+					<CachePath>SFX/Menu - ATMO_Ketten_AA13C7CA.wem</CachePath>
+				</File>
 				<File Id="1069512068" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Voice-08.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Voice-08_10C4C929.wem</CachePath>
@@ -1275,7 +1375,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="1075280761" Name="Play_Boss_FS" DurationType="OneShot" DurationMin="0.422625" DurationMax="0.422625">
+				<Event Id="1075280761" Name="Play_Boss_FS" MaxAttenuation="12" DurationType="OneShot" DurationMin="0.422625" DurationMax="0.422625">
 					<MediaRefs>
 						<MediaRef Id="7062636"/>
 						<MediaRef Id="13269472"/>
@@ -1301,7 +1401,7 @@
 						<MediaRef Id="979965442"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="727530039" Name="Play_Boss_FS_Chain" DurationType="OneShot" DurationMin="0" DurationMax="1.0556353">
+				<Event Id="727530039" Name="Play_Boss_FS_Chain" MaxAttenuation="12" DurationType="OneShot" DurationMin="0" DurationMax="1.0556353">
 					<MediaRefs>
 						<MediaRef Id="70334053"/>
 						<MediaRef Id="132240131"/>
@@ -1322,7 +1422,7 @@
 						<MediaRef Id="1052242071"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2050535857" Name="Play_Boss_Idle_Voice" DurationType="OneShot" DurationMin="0.71666664" DurationMax="1.3333334">
+				<Event Id="2050535857" Name="Play_Boss_Idle_Voice" MaxAttenuation="12" DurationType="OneShot" DurationMin="0.71666664" DurationMax="1.3333334">
 					<MediaRefs>
 						<MediaRef Id="37348861"/>
 						<MediaRef Id="114367471"/>
@@ -1369,7 +1469,7 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
-				<Event Id="2284332626" Name="Play_Boss_Jump_Stomp" DurationType="OneShot" DurationMin="0.7283656" DurationMax="1.0103085">
+				<Event Id="2284332626" Name="Play_Boss_Jump_Stomp" MaxAttenuation="12" DurationType="OneShot" DurationMin="0.7283656" DurationMax="1.0103085">
 					<MediaRefs>
 						<MediaRef Id="84724703"/>
 						<MediaRef Id="201483726"/>
@@ -1419,6 +1519,12 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
+				<Event Id="3479117988" Name="Play_Fight_Music" DurationType="OneShot" DurationMin="48.64771" DurationMax="48.64771">
+					<MediaRefs>
+						<MediaRef Id="322777483"/>
+						<MediaRef Id="912216463"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3765695918" Name="Play_Heartbeat" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="131508628"/>
@@ -1433,6 +1539,33 @@
 					<MediaRefs>
 						<MediaRef Id="31143423"/>
 						<MediaRef Id="160074641"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3147874366" Name="Play_Jumping_Atmo_Sound" MaxAttenuation="12" DurationType="OneShot" DurationMin="3.533899" DurationMax="9.643653">
+					<MediaRefs>
+						<MediaRef Id="25470229"/>
+						<MediaRef Id="86915881"/>
+						<MediaRef Id="114327810"/>
+						<MediaRef Id="195391025"/>
+						<MediaRef Id="196007614"/>
+						<MediaRef Id="261873939"/>
+						<MediaRef Id="278365655"/>
+						<MediaRef Id="351573158"/>
+						<MediaRef Id="429419706"/>
+						<MediaRef Id="433782296"/>
+						<MediaRef Id="451662515"/>
+						<MediaRef Id="529512090"/>
+						<MediaRef Id="599663629"/>
+						<MediaRef Id="605546710"/>
+						<MediaRef Id="611417319"/>
+						<MediaRef Id="629604209"/>
+						<MediaRef Id="733090010"/>
+						<MediaRef Id="959944303"/>
+						<MediaRef Id="985165359"/>
+						<MediaRef Id="992843410"/>
+						<MediaRef Id="1036381591"/>
+						<MediaRef Id="1041115910"/>
+						<MediaRef Id="1068678857"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1905734753" Name="Play_Menu_ATMO" DurationType="Infinite">
@@ -1464,9 +1597,6 @@
 						<MediaRef Id="663628163"/>
 						<MediaRef Id="790304389"/>
 					</MediaRefs>
-					<AuxBusRefs>
-						<AuxBusRef Id="2521112689" Name="Env_Big_Room"/>
-					</AuxBusRefs>
 				</Event>
 				<Event Id="503090763" Name="Play_Menu_UI_LearnSkill1" DurationType="OneShot" DurationMin="3.2" DurationMax="3.2">
 					<MediaRefs>
@@ -1498,7 +1628,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="3911744873" Name="Play_Platzhalter" DurationType="OneShot" DurationMin="1.4666667" DurationMax="1.4666667">
+				<Event Id="3911744873" Name="Play_Platzhalter" MaxAttenuation="12" DurationType="OneShot" DurationMin="1.4666667" DurationMax="1.4666667">
 					<MediaRefs>
 						<MediaRef Id="955521415"/>
 					</MediaRefs>
@@ -1663,12 +1793,12 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="1825965928" Name="Play_Spell_Hitmarker" DurationType="OneShot" DurationMin="0.36680162" DurationMax="0.42378527">
+				<Event Id="1825965928" Name="Play_Spell_Hitmarker" MaxAttenuation="12" DurationType="OneShot" DurationMin="0.36680162" DurationMax="0.42378527">
 					<MediaRefs>
 						<MediaRef Id="725466761"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3597927707" Name="Play_Zombie_Attack" DurationType="OneShot" DurationMin="0.7666875" DurationMax="1.1980625">
+				<Event Id="3597927707" Name="Play_Zombie_Attack" MaxAttenuation="12" DurationType="OneShot" DurationMin="0.7666875" DurationMax="1.1980625">
 					<MediaRefs>
 						<MediaRef Id="3300382"/>
 						<MediaRef Id="10843605"/>
@@ -1718,7 +1848,7 @@
 						<MediaRef Id="1067679039"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="635270414" Name="Play_Zombie_Dies" DurationType="OneShot" DurationMin="0.73335415" DurationMax="1.6500208">
+				<Event Id="635270414" Name="Play_Zombie_Dies" MaxAttenuation="12" DurationType="OneShot" DurationMin="0.73335415" DurationMax="1.6500208">
 					<MediaRefs>
 						<MediaRef Id="116764371"/>
 						<MediaRef Id="155268557"/>
@@ -1731,7 +1861,7 @@
 						<MediaRef Id="987030988"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="895956798" Name="Play_Zombie_FS" DurationType="OneShot" DurationMin="0.2035" DurationMax="0.32464585">
+				<Event Id="895956798" Name="Play_Zombie_FS" MaxAttenuation="12" DurationType="OneShot" DurationMin="0.2035" DurationMax="0.32464585">
 					<MediaRefs>
 						<MediaRef Id="134795684"/>
 						<MediaRef Id="153264191"/>
@@ -1747,7 +1877,7 @@
 						<MediaRef Id="1019021512"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="818595436" Name="Play_Zombie_Hitmarker" DurationType="OneShot" DurationMin="0.2505" DurationMax="0.53335416">
+				<Event Id="818595436" Name="Play_Zombie_Hitmarker" MaxAttenuation="12" DurationType="OneShot" DurationMin="0.2505" DurationMax="0.53335416">
 					<MediaRefs>
 						<MediaRef Id="133461549"/>
 						<MediaRef Id="185773762"/>
@@ -1758,7 +1888,7 @@
 						<MediaRef Id="1047307675"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="880339566" Name="Play_Zombie_Idle_Voice" DurationType="OneShot" DurationMin="1" DurationMax="1.3833542">
+				<Event Id="880339566" Name="Play_Zombie_Idle_Voice" MaxAttenuation="12" DurationType="OneShot" DurationMin="1" DurationMax="1.3833542">
 					<MediaRefs>
 						<MediaRef Id="16162616"/>
 						<MediaRef Id="62348827"/>
@@ -1787,8 +1917,10 @@
 						<ActionSetStateEntry GroupId="89505537" Id="3092587493" Name="Pause"/>
 					</ActionSetState>
 				</Event>
+				<Event Id="3386210082" Name="Stop_Fight_Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3319673256" Name="Stop_Heartbeat" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2914981333" Name="Stop_Menu" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1058366323" Name="Stop_Player_RMC_Charge" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<GameParameters>
 				<GameParameter Id="3677180323" Name="Health"/>
@@ -1804,5 +1936,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D2235907-5CD2-E0B1-1A97-51073460C8A7}</FileHash>
+	<FileHash>{BD4AD2B3-B4AD-9605-DC7E-ADBFBE4CD9EC}</FileHash>
 </SoundBanksInfo>

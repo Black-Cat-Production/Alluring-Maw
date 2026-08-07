@@ -423,6 +423,30 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Stop_Player_RMC_Charge" ID="{38B2D824-E666-453B-96A6-5CC783CB95D9}">
+							<ChildrenList>
+								<Action Name="" ID="{C9BF1FCB-88BF-421A-8DB4-46D1A0E14879}" ShortID="370019278">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PLAYER-RMC_Charge1" ID="{CDC43EA5-6360-4F73-AA92-F4EB0AC10B60}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{00B28321-D2EB-4EEF-9305-FE2A8862B211}" ShortID="919790641">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PLAYER-RMC_Charge2" ID="{242099CE-81BB-4E44-8611-84D767B77E25}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="ENVIRONMENT" ID="{B069477F-D6D4-437C-BC88-BD868DBE5645}" ShortID="402492592">
@@ -673,6 +697,74 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Platzhalter-01" ID="{1DCC736B-6CF9-4488-983E-4F0BEFE6E42D}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Jumping_Atmo_Sound" ID="{65E17AC9-6C6E-4215-9CA1-B86BE6A83A31}">
+					<ChildrenList>
+						<Action Name="" ID="{41DF2CDC-5E4B-46BF-A1B7-206D1C68C305}" ShortID="90236103">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Jumping Atmo Sound" ID="{9D063766-1052-463C-A9C9-DD289380A452}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Fight_Music" ID="{7D7EB9A1-400F-4B76-B5A1-13E87F18764F}">
+					<ChildrenList>
+						<Action Name="" ID="{1C7532A8-0C5E-4172-85B8-F9D2E4272863}" ShortID="721050291">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Fight Music" ID="{3D62A784-9D68-4B8D-8C69-3897B08509AA}" WorkUnitID="{ECD5F4F5-2924-48E3-BE75-5C19A122CB25}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Fight_Music" ID="{9AA42CB7-C2B6-4A97-AF06-5BE25C0014AA}">
+					<ChildrenList>
+						<Action Name="" ID="{CD5ACF37-405A-4D26-A2E6-EA9003CA63F1}" ShortID="936794817">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Fight Music" ID="{3D62A784-9D68-4B8D-8C69-3897B08509AA}" WorkUnitID="{ECD5F4F5-2924-48E3-BE75-5C19A122CB25}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9F790011-083F-4B1F-B2A3-4D70641C1C40}" ShortID="330213281">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sequenzed" ID="{C5DFBA08-9BF6-4A72-B778-8BA80B224FE5}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Boss_Music" ID="{80921146-8B05-495E-8982-8990E0332F4D}">
+					<ChildrenList>
+						<Action Name="" ID="{9D620D42-5A35-4594-AD5C-0E16B208AB9B}" ShortID="523192965">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sequenzed" ID="{C5DFBA08-9BF6-4A72-B778-8BA80B224FE5}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_daumen" ID="{D8B02C5B-38B2-44A7-9D02-9FD5AC811056}">
+					<ChildrenList>
+						<Action Name="" ID="{DFF7784C-5124-42D4-816F-9080E7A70728}" ShortID="908582062">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="daumen" ID="{6C3AF6B0-AF0F-4061-8289-8E73B7E3BA94}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

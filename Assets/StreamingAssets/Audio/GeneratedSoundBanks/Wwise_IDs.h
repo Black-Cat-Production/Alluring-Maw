@@ -22,8 +22,10 @@ namespace AK
         static const AkUniqueID PLAY_ENV_FIREBOWL = 1468104246U;
         static const AkUniqueID PLAY_ENV_TORCH = 3621683420U;
         static const AkUniqueID PLAY_ENV_TORCH2 = 2940525158U;
+        static const AkUniqueID PLAY_FIGHT_MUSIC = 3479117988U;
         static const AkUniqueID PLAY_HEARTBEAT = 3765695918U;
         static const AkUniqueID PLAY_INTRO = 3103472528U;
+        static const AkUniqueID PLAY_JUMPING_ATMO_SOUND = 3147874366U;
         static const AkUniqueID PLAY_MENU_ATMO = 1905734753U;
         static const AkUniqueID PLAY_MENU_DESCENT = 190377696U;
         static const AkUniqueID PLAY_MENU_MUSIC = 2228153899U;
@@ -49,8 +51,10 @@ namespace AK
         static const AkUniqueID PLAY_ZOMBIE_HITMARKER = 818595436U;
         static const AkUniqueID PLAY_ZOMBIE_IDLE_VOICE = 880339566U;
         static const AkUniqueID SET_STATE_PAUSE = 2829022778U;
+        static const AkUniqueID STOP_FIGHT_MUSIC = 3386210082U;
         static const AkUniqueID STOP_HEARTBEAT = 3319673256U;
         static const AkUniqueID STOP_MENU = 2914981333U;
+        static const AkUniqueID STOP_PLAYER_RMC_CHARGE = 1058366323U;
     } // namespace EVENTS
 
     namespace STATES

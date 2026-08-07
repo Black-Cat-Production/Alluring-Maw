@@ -3,7 +3,7 @@
 	<InteractiveMusic>
 		<WorkUnit Name="Default Work Unit" ID="{ECD5F4F5-2924-48E3-BE75-5C19A122CB25}" PersistMode="Standalone">
 			<ChildrenList>
-				<MusicSegment Name="Boss Music" ID="{3D62A784-9D68-4B8D-8C69-3897B08509AA}" ShortID="974506760">
+				<MusicSegment Name="Fight Music" ID="{3D62A784-9D68-4B8D-8C69-3897B08509AA}" ShortID="974506760">
 					<PropertyList>
 						<Property Name="EndPosition" Type="Real64" Value="49486.2083333333"/>
 					</PropertyList>
@@ -15,6 +15,108 @@
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<MusicTrack Name="Drums" ID="{2A40CC17-7AE0-4B4C-9381-212C0BD17A91}" ShortID="326024910">
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Bounce Drums [2026-07-30 104843]-1" ID="{C60FC815-2670-4735-A996-C7AF8F9A6600}">
+									<Language>SFX</Language>
+									<AudioFile>Bounce Drums [2026-07-30 104843]-1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="912216463"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{FCE1663B-C248-4BED-90A2-817196E7B96E}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<ObjectLists>
+								<ObjectList Name="Sequences">
+									<Reference>
+										<Local>
+											<MusicTrackSequence Name="" ID="{E69655BF-C1F1-4115-912C-59035840DCF2}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<Reference>
+															<Local>
+																<MusicClip Name="Bounce Drums [2026-07-30 104843]-1" ID="{0395CD2C-0EAE-4762-826A-2DE06C18E153}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="48647.7083333333"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Bounce Drums [2026-07-30 104843]-1" ID="{C60FC815-2670-4735-A996-C7AF8F9A6600}"/>
+																</MusicClip>
+															</Local>
+														</Reference>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicTrack>
+						<MusicTrack Name="Percussion" ID="{97D11A79-8656-4EEE-AB53-F6BB400CC120}" ShortID="833519513">
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Bounce Percussion [2026-07-30 104843]-1" ID="{C3482F38-66B1-4F6E-84AF-30D21FB2082A}">
+									<Language>SFX</Language>
+									<AudioFile>Bounce Percussion [2026-07-30 104843]-1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="322777483"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{A7EAB709-0CE8-4956-B1BC-1429CFAEE9BB}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<ObjectLists>
+								<ObjectList Name="Sequences">
+									<Reference>
+										<Local>
+											<MusicTrackSequence Name="" ID="{0CE2DA1C-516B-41AD-AC01-2543D17BA595}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<Reference>
+															<Local>
+																<MusicClip Name="Bounce Percussion [2026-07-30 104843]-1" ID="{38D76D80-8141-42A2-A04E-0DD7144F8EC4}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="48618.25"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Bounce Percussion [2026-07-30 104843]-1" ID="{C3482F38-66B1-4F6E-84AF-30D21FB2082A}"/>
+																</MusicClip>
+															</Local>
+														</Reference>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicTrack>
+					</ChildrenList>
 					<ObjectLists>
 						<ObjectList Name="Cues">
 							<Reference>
