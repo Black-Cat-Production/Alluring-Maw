@@ -62,10 +62,14 @@ namespace Scripts.Core.UI
 
         public void PushUpdateToAudioMixer()
         {
-            audioMixer.SetFloat("MasterVolume", Remap(optionsSaveSO.MasterVolume, sliderMin, sliderMax, audioMin, audioMax));
-            audioMixer.SetFloat("SFXVolume", Remap(optionsSaveSO.SFXVolume, sliderMin, sliderMax, audioMin, audioMax));
-            audioMixer.SetFloat("MusicVolume", Remap(optionsSaveSO.MusicVolume, sliderMin, sliderMax, audioMin, audioMax));
-            audioMixer.SetFloat("VoiceVolume", Remap(optionsSaveSO.VoiceVolume, sliderMin, sliderMax, audioMin, audioMax));
+            //audioMixer.SetFloat("MasterVolume", Remap(optionsSaveSO.MasterVolume, sliderMin, sliderMax, audioMin, audioMax));
+            //audioMixer.SetFloat("SFXVolume", Remap(optionsSaveSO.SFXVolume, sliderMin, sliderMax, audioMin, audioMax));
+            //audioMixer.SetFloat("MusicVolume", Remap(optionsSaveSO.MusicVolume, sliderMin, sliderMax, audioMin, audioMax));
+            //audioMixer.SetFloat("VoiceVolume", Remap(optionsSaveSO.VoiceVolume, sliderMin, sliderMax, audioMin, audioMax));
+            AkSoundEngine.SetRTPCValue("Master_Volume", masterVolumeSlider.value);
+            AkSoundEngine.SetRTPCValue("SFX_Volume", sfxVolumeSlider.value);
+            AkSoundEngine.SetRTPCValue("Music_Volume", musicVolumeSlider.value);
+            AkSoundEngine.SetRTPCValue("Voice_Volume", voiceVolumeSlider.value);
         }
 
         float Remap(float _input, float _oldMin, float _oldMax, float _newMin, float _newMax)

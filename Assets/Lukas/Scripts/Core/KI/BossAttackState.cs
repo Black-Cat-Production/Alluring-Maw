@@ -23,9 +23,11 @@ namespace Scripts.Core.KI
             {
                 case 0:
                     animator.SetBool(meleeAttack, true);
+                    bossOwner.StartAttackSound();
                     break;
                 case 1:
                     animator.SetBool(jumpAttack, true);
+                    bossOwner.PlayJumpAttackSound();
                     break;
             }
         }
