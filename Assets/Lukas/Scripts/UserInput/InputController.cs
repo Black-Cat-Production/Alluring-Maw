@@ -7,6 +7,7 @@ using Scripts.Core.Visual;
 using Scripts.Program;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using WWISE_Integration_Scripts;
 
 namespace Scripts.UserInput
 {
@@ -19,6 +20,7 @@ namespace Scripts.UserInput
         Vector3 currentDashVelocity;
         Rigidbody playerRigidbody;
         SkillSelector skillSelector;
+        PlayerSounds playerSounds;
 
         float xRotation;
         float dashTime;
@@ -38,7 +40,6 @@ namespace Scripts.UserInput
         [SerializeField] OptionsSaveSO optionsSaveSO;
         [SerializeField] float idleWalkBlendTime;
         [SerializeField] PlayerSkillAudio skillAudio;
-
 
 
         [SerializeField] MaterialHandler materialHandler;
@@ -65,9 +66,11 @@ namespace Scripts.UserInput
         {
             skillSelector = GetComponent<SkillSelector>();
             playerRigidbody = GetComponent<Rigidbody>();
+            playerSounds = GetComponent<PlayerSounds>();
             Cursor.lockState = CursorLockMode.Locked;
             dashCurve ??= AnimationCurve.EaseInOut(0, 1, 1, 0);
             lookSensitivity = Remap(optionsSaveSO.MouseSense, 0f, 100f, 0.01f, 1f);
+            StartCoroutine(FootstepRoutine());
         }
 
         void OnEnable()
@@ -160,7 +163,7 @@ namespace Scripts.UserInput
             dashTime = dashDuration;
             dashCooldownTimer = dashCooldown;
             playerRigidbody.AddForce(dashDirection * dashForce, ForceMode.Impulse);
-            skillAudio.PlayDashAudio();
+            playerSounds.PlayDashEvent();
         }
 
         public void ChangeSkill(InputAction.CallbackContext _callbackContext)
@@ -178,6 +181,7 @@ namespace Scripts.UserInput
             if (!animator.GetCurrentAnimatorStateInfo(0).IsName("IdleState")) return;
             if (!_callbackContext.started) return;
             animator.SetTrigger(baseAttack);
+            playerSounds.PlayLMCEvent();
         }
 
         public void CastSkill(InputAction.CallbackContext _callbackContext)
@@ -249,6 +253,24 @@ namespace Scripts.UserInput
         float Remap(float _value, float _fromMin, float _fromMax, float _toMin, float _toMax)
         {
             return _toMin + (_value - _fromMin) * (_toMax - _toMin) / (_fromMax - _fromMin);
+        }
+
+        IEnumerator FootstepRoutine()
+        {
+            while (gameObject.activeInHierarchy)
+            {
+                Debug.Log($"MoveInput: {HasMoveInput} -- CurrentDashVelocity: {currentDashVelocity}");
+                if (!HasMoveInput || currentDashVelocity == Vector3.zero)
+                {
+                    yield return null;
+                }
+                else
+                {
+                    playerSounds.PlayFootstepEvent();
+                    yield return null;
+                    yield return new WaitForSeconds(playerSounds.FootstepInterval);
+                }
+            }
         }
     }
 }

@@ -96,12 +96,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Light Beam
   tags: 03000000
+  SkillSoundEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 34e5a3a14c0328b42852264a1c8ca2f0,
+      type: 2}
   behaviors: []
   manaCost: 20
   cooldown: 7.5
   hasPreviewCast: 1
   defaultTags: 03000000
-  skillSprite: {fileID: 21300000, guid: 19fdab78848e0f94a89ff9164655c287, type: 3}
   despawnTimerDuration: 2
   baseSkillHitDamage: 8
   obstructionLayer:

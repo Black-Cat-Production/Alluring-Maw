@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using LL_Unity_Utils.Timers;
 using Scripts.Core.Skills.Behaviors;
 using UnityEngine;
+using Event = AK.Wwise.Event;
 
 namespace Scripts.Core.Skills
 {
@@ -10,7 +11,7 @@ namespace Scripts.Core.Skills
     {
         [SerializeField] string skillName;
         [SerializeField] List<ESkillTag> tags;
-
+        [SerializeField] public Event SkillSoundEvent;
         
         [SerializeField] protected List<SkillBehaviorSO> behaviors = new();
 

@@ -77,12 +77,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Dark Arc
   tags: 04000000
+  SkillSoundEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 72d8117178f00d44896b39d0b9780ea4,
+      type: 2}
   behaviors: []
   manaCost: 8
   cooldown: 3.5
   hasPreviewCast: 0
   defaultTags: 04000000
-  skillSprite: {fileID: 21300000, guid: ca19fe586b5fb6248b0ca680e38c82eb, type: 3}
   despawnTimerDuration: 5
   baseSkillHitDamage: 4
   obstructionLayer:

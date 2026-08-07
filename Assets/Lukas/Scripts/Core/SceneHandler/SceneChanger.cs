@@ -49,7 +49,6 @@ namespace Scripts.Core.SceneHandler
         {
             float minDuration = 2f;
             float timer = 0f;
-
             while (timer < minDuration)
             {
                 timer += Time.deltaTime;

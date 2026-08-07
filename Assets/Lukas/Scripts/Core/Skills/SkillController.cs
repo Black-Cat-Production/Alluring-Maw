@@ -90,6 +90,7 @@ namespace Scripts.Core.Skills
                 instance.GetComponent<Rigidbody>().AddForce(transform.up * 20f, ForceMode.Impulse);
                 SelectedSkill.StartCooldown();
                 SkillWasCast?.Invoke();
+                AkSoundEngine.PostEvent(SelectedSkill.SkillSoundEvent.Name, gameObject);
                 return;
             }
 
@@ -98,6 +99,7 @@ namespace Scripts.Core.Skills
             instance.GetComponent<Rigidbody>().AddForce(cameraTransform.transform.forward * skillAddedForce, ForceMode.Impulse);
             SelectedSkill.StartCooldown();
             SkillWasCast?.Invoke();
+            AkSoundEngine.PostEvent(SelectedSkill.SkillSoundEvent.Name, gameObject);
         }
 
         public void CastDefaultAttack()

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using Event = AK.Wwise.Event;
 
 namespace Scripts.Core.UI
 {
@@ -13,6 +14,7 @@ namespace Scripts.Core.UI
         [SerializeField] TextMeshProUGUI text;
         [SerializeField] Canvas uiCanvas;
 
+        [SerializeField] Event introAudioEvent;
 
         AsyncOperation loadRoutine;
 
@@ -23,6 +25,7 @@ namespace Scripts.Core.UI
                 StopAllCoroutines();
                 if (loadRoutine != null) loadRoutine.allowSceneActivation = true;
                 uiCanvas.gameObject.SetActive(false);
+                AkSoundEngine.StopAll(gameObject);
             }
         }
 
@@ -40,6 +43,7 @@ namespace Scripts.Core.UI
 
         IEnumerator ShowText(AsyncOperation _loadRoutine, List<string> _text)
         {
+            AkSoundEngine.PostEvent(introAudioEvent.Name, gameObject);
             loadRoutine = _loadRoutine;
             foreach (string msg in _text)
             {
