@@ -63,20 +63,20 @@ namespace Scripts.Core.Rooms
 
         void TriggerRoomCleared()
         {
+            AkSoundEngine.PostEvent(stopFightMusicEvent.Name, gameObject);
             OpenDoors();
             sideEnteredFrom.DisableTorches();
             OnRoomCleared.Invoke();
-            AkSoundEngine.PostEvent(stopFightMusicEvent.Name, gameObject);
         }
 
         public void TriggerRoomEntered()
         {
             if (spawnedEnemies.Count <= 0 || alreadyEntered) return;
+            AkSoundEngine.PostEvent(fightMusicEvent.Name, gameObject);
             alreadyEntered = true;
             OnRoomEnter.Invoke(this);
             CloseDoors();
             SetAllEnemiesAggro();
-            AkSoundEngine.PostEvent(fightMusicEvent.Name, gameObject);
         }
 
         void SetAllEnemiesAggro()

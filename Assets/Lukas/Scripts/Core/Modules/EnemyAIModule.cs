@@ -81,6 +81,7 @@ namespace Scripts.Core.Modules
 
         protected virtual void Awake()
         {
+            
             CurrentAttackDamage = baseAttackDamage;
             patrolRadiusCenter = transform.position;
             targetComponent = new TargetComponent();
@@ -135,6 +136,11 @@ namespace Scripts.Core.Modules
             StartCoroutine(PlayIdleSounds());
         }
 
+        void Start()
+        {
+            AkSoundEngine.RegisterGameObj(gameObject);
+        }
+
         protected IEnumerator PlayIdleSounds()
         {
             while (!HealthSystemModule.IsDead)
@@ -173,6 +179,7 @@ namespace Scripts.Core.Modules
 
         public void Die()
         {
+            AkSoundEngine.PostEvent(enemyDeathSound.Name, gameObject);
             spawner.EnemyDied(this);
             OnDeathEvent.Invoke(CalculateDrop());
             OnDeathEffectEvent.Invoke(transform.position);
@@ -184,7 +191,6 @@ namespace Scripts.Core.Modules
             agent.radius = 0;
             var hitBoxObject = GetComponentsInChildren<Collider>();
             foreach (var hitBox in hitBoxObject) hitBox.enabled = false;
-            AkSoundEngine.PostEvent(enemyDeathSound.Name, gameObject);
         }
 
         int CalculateDrop()

@@ -108,6 +108,7 @@ namespace Scripts.Core
         {
             MemoryFragmentsAmount = saveGame.MemoryFragmentsAmount;
             PauseGame(false);
+            AkSoundEngine.StopAll();
             mainMenuSceneLoader.LoadAsync();
         }
 
