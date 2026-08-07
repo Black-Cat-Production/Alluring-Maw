@@ -113,6 +113,31 @@ MonoBehaviour:
   lightHit: {fileID: 11400000, guid: a0ebf168a30b8284aabacea7c8c5b3ea, type: 2}
   darkHit: {fileID: 11400000, guid: 2f15d5ad78a579c419883bad73cadad9, type: 2}
   durationTillDespawnAfterDeath: 5
+  enemyIdleSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 442a72caf52f0c048942c0df104e8a50,
+      type: 2}
+  enemyAttackSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 442a72caf52f0c048942c0df104e8a50,
+      type: 2}
+  enemyFSSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 442a72caf52f0c048942c0df104e8a50,
+      type: 2}
+  enemyHitSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 442a72caf52f0c048942c0df104e8a50,
+      type: 2}
+  enemyDeathSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 442a72caf52f0c048942c0df104e8a50,
+      type: 2}
   OnDeathEvent:
     m_PersistentCalls:
       m_Calls:

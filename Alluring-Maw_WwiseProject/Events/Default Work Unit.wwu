@@ -397,6 +397,32 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Heartbeat" ID="{C167D5F5-70BD-49DC-A0EF-139EA9D80996}">
+							<ChildrenList>
+								<Action Name="" ID="{CCA43610-1542-4A64-8E07-59F22BE07F10}" ShortID="870321457">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="KS_Heartbeat_1" ID="{8BF09252-CF54-4C66-B2A0-CAB7FE5B6627}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Heartbeat" ID="{0A1A429D-E0C5-4EBE-9236-C5F929A40B19}">
+							<ChildrenList>
+								<Action Name="" ID="{2BB27799-F226-4F2D-8D2A-2B4D5ED25176}" ShortID="611646307">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="KS_Heartbeat_1" ID="{8BF09252-CF54-4C66-B2A0-CAB7FE5B6627}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="ENVIRONMENT" ID="{B069477F-D6D4-437C-BC88-BD868DBE5645}" ShortID="402492592">
@@ -490,13 +516,6 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{5D714E65-920A-4DE8-BCF0-8730284E6B04}" ShortID="483602578">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Zombie-FS_Voice" ID="{C1727CBF-17AC-49D2-95B1-962282900813}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Play_Zombie_Attack" ID="{F9E22F1E-4586-42C0-B04E-CE4045383643}">
@@ -540,6 +559,39 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Zombie_Idle_Voice" ID="{573DA106-84F7-48FA-A684-234F5F3917B4}">
+							<ChildrenList>
+								<Action Name="" ID="{26A7668E-1A97-47E5-A2C2-D6C3A137053F}" ShortID="942034632">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Zombie-Idle_Voice" ID="{C1727CBF-17AC-49D2-95B1-962282900813}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Zombie_Hitmarker" ID="{B10D28F5-B6F1-4F96-A269-8D87834FEE35}">
+							<ChildrenList>
+								<Action Name="" ID="{028E38A7-05D2-45AA-89D2-3A0A1B615F63}" ShortID="65437936">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Zombie-Hitmarker" ID="{A2D06A6D-FCAA-4816-A8DD-8F0AA9FE31FA}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Zombie_Dies" ID="{CFA1935A-252D-4372-8869-5D0A69551EA7}">
+							<ChildrenList>
+								<Action Name="" ID="{ADB05B53-442D-4F39-A872-1F68346B46FA}" ShortID="223183582">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Zombie-Dies" ID="{B8689083-81DB-49E3-8A92-68B3F96E0C15}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="BOSS" ID="{9316D634-E4D5-412D-9F8B-799D1FFE5126}" ShortID="386989133">
@@ -557,13 +609,6 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Boss-FS_Step_High" ID="{C8EC93C6-4071-4814-A32D-8D59827C051B}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{8CDF5916-B3F9-4630-A145-D2E0AAB9AC4D}" ShortID="333713914">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Boss-FS_Voice" ID="{5262E7EC-D76A-4A5E-B6E5-ADD288A3ED17}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -598,6 +643,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Boss_Idle_Voice" ID="{2BA097B4-75C8-4AE2-9382-5D46CF60D638}">
+							<ChildrenList>
+								<Action Name="" ID="{3E9F2E38-B307-45D0-83D0-C50D0B5A278D}" ShortID="978142002">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Boss-Idle_Voice" ID="{5262E7EC-D76A-4A5E-B6E5-ADD288A3ED17}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Event Name="Play_Spell_Hitmarker" ID="{48AF8237-AB04-4347-96E3-38CDCBA7F956}">
@@ -611,12 +667,12 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_KS_Heartbeat_1" ID="{C167D5F5-70BD-49DC-A0EF-139EA9D80996}">
+				<Event Name="Play_Platzhalter" ID="{A00A5C5C-92E8-4074-BE1A-151EF3F601CE}">
 					<ChildrenList>
-						<Action Name="" ID="{CCA43610-1542-4A64-8E07-59F22BE07F10}" ShortID="870321457">
+						<Action Name="" ID="{1A5490D7-339E-4BB2-AF9E-35FA4AF5BD10}" ShortID="37336613">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="KS_Heartbeat_1" ID="{8BF09252-CF54-4C66-B2A0-CAB7FE5B6627}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+									<ObjectRef Name="Platzhalter-01" ID="{1DCC736B-6CF9-4488-983E-4F0BEFE6E42D}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

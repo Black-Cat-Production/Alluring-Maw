@@ -68,7 +68,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="English(US)" Hash="{9129B8ED-5384-7027-29F8-C4D39B8F350C}">
+		<SoundBank Id="3161908922" Type="User" Language="English(US)" Hash="{0CC219C3-A103-9C28-F728-40D73F9F172C}">
 			<ShortName>Main</ShortName>
 			<Path>English(US)/Main.bnk</Path>
 			<Media>
@@ -90,7 +90,7 @@
 				</File>
 				<File Id="31143423" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Intro - Voice.wav</ShortName>
-					<CachePath>Voices/English(US)/Intro - Voice_10C4C929.wem</CachePath>
+					<CachePath>Voices/English(US)/Intro - Voice_620FC5A0.wem</CachePath>
 				</File>
 				<File Id="39272691" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_steps-04.wav</ShortName>
@@ -154,7 +154,7 @@
 				</File>
 				<File Id="160074641" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Intro - Music.wav</ShortName>
-					<CachePath>SFX/Intro - Music_F3FABB1B.wem</CachePath>
+					<CachePath>SFX/Intro - Music_F2228D1E.wem</CachePath>
 				</File>
 				<File Id="161092298" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - Atmo_LoRumble.wav</ShortName>
@@ -565,6 +565,7 @@
 					<PluginRefs>
 						<ShareSets>
 							<PluginRef Id="4136714357"/>
+							<PluginRef Id="4202347640"/>
 						</ShareSets>
 					</PluginRefs>
 				</Event>
@@ -593,7 +594,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="3103472528" Name="Play_Intro" DurationType="OneShot" DurationMin="37.916668" DurationMax="37.916668">
+				<Event Id="3103472528" Name="Play_Intro" DurationType="OneShot" DurationMin="36.91441" DurationMax="36.91441">
 					<MediaRefs>
 						<MediaRef Id="31143423"/>
 						<MediaRef Id="160074641"/>
@@ -836,5 +837,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D0071F06-8987-5EBF-270A-CDAD77BED889}</FileHash>
+	<FileHash>{268DD7B4-541C-1987-7B47-EC36CE07FB26}</FileHash>
 </SoundBanksInfo>

@@ -421,6 +421,31 @@ MonoBehaviour:
   lightHit: {fileID: 11400000, guid: a0ebf168a30b8284aabacea7c8c5b3ea, type: 2}
   darkHit: {fileID: 11400000, guid: 2f15d5ad78a579c419883bad73cadad9, type: 2}
   durationTillDespawnAfterDeath: 5
+  enemyIdleSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b7bfc2bd9d4329749b4012c1776e4e13,
+      type: 2}
+  enemyAttackSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d12060de4cf0f854083a7d148be37499,
+      type: 2}
+  enemyFSSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 878927da9281e7a45a72ec38d3240068,
+      type: 2}
+  enemyHitSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: daf90653a6fb768428aeb81746162a5b,
+      type: 2}
+  enemyDeathSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7c943b5531abb134386d6df82dd9331a,
+      type: 2}
   OnDeathEvent:
     m_PersistentCalls:
       m_Calls:
@@ -650,7 +675,6 @@ MonoBehaviour:
   attackClips:
   - {fileID: 8300000, guid: 7036376d6689bf04288c1b255eb38027, type: 3}
   - {fileID: 8300000, guid: 247fb9105af331f4997b5fc4b6056941, type: 3}
-  audioSource: {fileID: 8449021950405197516}
   minAudioPitch: 0.8
   maxAudioPitch: 1.2
   walkClips: []

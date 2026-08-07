@@ -205,6 +205,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closeDelay: 1
+  isStartDoor: 0
+  doorOpenSoundEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 442a72caf52f0c048942c0df104e8a50,
+      type: 2}
+  doorCloseSoundEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 442a72caf52f0c048942c0df104e8a50,
+      type: 2}
 --- !u!65 &3189180486724377147
 BoxCollider:
   m_ObjectHideFlags: 0
