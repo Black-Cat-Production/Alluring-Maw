@@ -11,6 +11,8 @@ using Scripts.Core.Skills.Effects;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
+using WWISE_Integration_Scripts;
+using Event = AK.Wwise.Event;
 using Random = UnityEngine.Random;
 using State = Scripts.Core.KI.State;
 using StateMachine = Scripts.Core.KI.StateMachine;
@@ -48,6 +50,13 @@ namespace Scripts.Core.Modules
         [Header("Cleanup")]
         [SerializeField] protected float durationTillDespawnAfterDeath;
 
+        [Header("Sounds")]
+        [SerializeField] Event enemyIdleSound;
+        [SerializeField] Event enemyAttackSound;
+        [SerializeField] Event enemyFSSound;
+        [SerializeField] Event enemyHitSound;
+        [SerializeField] Event enemyDeathSound;
+
         protected AttackCollider attackCollider;
         protected TargetComponent targetComponent;
         protected TargetComponent idleTargetComponent;
@@ -56,7 +65,6 @@ namespace Scripts.Core.Modules
         protected NavMeshAgent agent;
         protected Vector3 patrolRadiusCenter;
         protected Animator animator;
-        protected EnemySoundSystem soundSystem;
 
         protected Timer despawnTimer;
         public float CurrentAttackDamage { get; protected set; }
@@ -81,7 +89,6 @@ namespace Scripts.Core.Modules
             agent.speed = baseMoveSpeed;
             animator = GetComponent<Animator>();
             HealthSystemModule = GetComponent<HealthSystemModule>();
-            //soundSystem = GetComponent<EnemySoundSystem>();
             attackCollider = GetComponentInChildren<AttackCollider>();
             attackCollider.gameObject.SetActive(false);
             HealthSystemModule.RegisterEffectHandler(EffectType.DamageOverTime, new DamageOverTimeHandler());
@@ -132,8 +139,8 @@ namespace Scripts.Core.Modules
         {
             while (!HealthSystemModule.IsDead)
             {
-                //if (!soundSystem.GetIsPlaying()) soundSystem.PlayIdleClip();
-                yield return new WaitForSeconds(5);
+                if (!inAttack) AkSoundEngine.PostEvent(enemyIdleSound.Name, gameObject);
+                yield return new WaitForSeconds(2);
             }
         }
 
@@ -160,6 +167,8 @@ namespace Scripts.Core.Modules
                 default:
                     throw new NotImplementedException();
             }
+
+            AkSoundEngine.PostEvent(enemyHitSound.Name, gameObject);
         }
 
         public void Die()
@@ -175,6 +184,7 @@ namespace Scripts.Core.Modules
             agent.radius = 0;
             var hitBoxObject = GetComponentsInChildren<Collider>();
             foreach (var hitBox in hitBoxObject) hitBox.enabled = false;
+            AkSoundEngine.PostEvent(enemyDeathSound.Name, gameObject);
         }
 
         int CalculateDrop()
@@ -268,6 +278,16 @@ namespace Scripts.Core.Modules
         public void TurnToTarget()
         {
             agent.transform.LookAt(targetComponent.TargetPosition);
+        }
+
+        public void StartAttackSound()
+        {
+            AkSoundEngine.PostEvent(enemyAttackSound.Name, gameObject);
+        }
+
+        public void PlayFSSound()
+        {
+            AkSoundEngine.PostEvent(enemyFSSound.Name, gameObject);
         }
     }
 }
