@@ -5,6 +5,7 @@ using Scripts.Core.AnimationScripts;
 using Scripts.Core.Modules;
 using Scripts.Core.Visual;
 using UnityEngine;
+using Event = AK.Wwise.Event;
 using Random = UnityEngine.Random;
 
 namespace Scripts.Core.Rooms
@@ -16,6 +17,8 @@ namespace Scripts.Core.Rooms
         [SerializeField] List<Door> doors;
         [SerializeField] float spawnRadius = 5f;
         [SerializeField] GoodJobArm goodJobArm;
+        [SerializeField] Event fightMusicEvent;
+        [SerializeField] Event stopFightMusicEvent;
 
         [Header("Boss Room Additional Configuration")]
         [SerializeField] EnemyListSO additionalEnemyList;
@@ -63,6 +66,7 @@ namespace Scripts.Core.Rooms
             OpenDoors();
             sideEnteredFrom.DisableTorches();
             OnRoomCleared.Invoke();
+            AkSoundEngine.PostEvent(stopFightMusicEvent.Name, gameObject);
         }
 
         public void TriggerRoomEntered()
@@ -72,6 +76,7 @@ namespace Scripts.Core.Rooms
             OnRoomEnter.Invoke(this);
             CloseDoors();
             SetAllEnemiesAggro();
+            AkSoundEngine.PostEvent(fightMusicEvent.Name, gameObject);
         }
 
         void SetAllEnemiesAggro()
