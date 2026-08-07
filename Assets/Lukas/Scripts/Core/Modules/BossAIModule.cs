@@ -5,7 +5,6 @@ using Scripts.Core.KI;
 using Scripts.Core.Skills.Effects;
 using UnityEngine;
 using UnityEngine.AI;
-using Event = AK.Wwise.Event;
 
 namespace Scripts.Core.Modules
 {
@@ -14,11 +13,6 @@ namespace Scripts.Core.Modules
         [SerializeField] float normalAttackDamage;
         [SerializeField] float heavyAttackDamage;
 
-        [Header("Boss specific Sounds")]
-        [SerializeField] Event chainSoundEvent;
-        [SerializeField] Event jumpAttackSoundEvent;
-        [SerializeField] Event jumpAttackLandingSoundEvent;
-        
         protected override void Awake()
         {
             CurrentAttackDamage = baseAttackDamage;
@@ -89,19 +83,9 @@ namespace Scripts.Core.Modules
             return Random.Range(0, 2);
         }
 
-        public void PlayChainSound()
+        public void PlayWalkSound()
         {
-            AkSoundEngine.PostEvent(chainSoundEvent.Name, gameObject);
-        }
-
-        public void PlayJumpAttackSound()
-        {
-            AkSoundEngine.PostEvent(jumpAttackSoundEvent.Name, gameObject);
-        }
-
-        public void PlayLandingSound()
-        {
-            AkSoundEngine.PostEvent(jumpAttackLandingSoundEvent.Name, gameObject);
+            //soundSystem.PlayWalkClip();
         }
     }
 }

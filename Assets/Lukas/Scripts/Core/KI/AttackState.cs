@@ -1,6 +1,5 @@
 ﻿using Scripts.Core.Modules;
 using UnityEngine;
-using Event = AK.Wwise.Event;
 
 namespace Scripts.Core.KI
 {
@@ -21,7 +20,6 @@ namespace Scripts.Core.KI
         public override void StateEnter()
         {
             animator.SetBool(HashedAttack, true);
-            owner.StartAttackSound();
         }
 
         public override void StateExit()

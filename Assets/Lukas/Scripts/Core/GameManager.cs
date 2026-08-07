@@ -7,7 +7,6 @@ using Scripts.Core.System;
 using Scripts.Program;
 using UnityEditor;
 using UnityEngine;
-using Event = AK.Wwise.Event;
 
 namespace Scripts.Core
 {
@@ -177,7 +176,6 @@ namespace Scripts.Core
         {
             if (_value)
             {
-                AkSoundEngine.SetState("Gameplay", "Pause");
                 Time.timeScale = 0f;
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
@@ -185,7 +183,6 @@ namespace Scripts.Core
             }
             else
             {
-                AkSoundEngine.SetState("Gameplay", "NoPause");
                 Time.timeScale = 1f;
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;

@@ -11,9 +11,6 @@ namespace WWISE_Integration_Scripts
         [SerializeField] Event playerFootstepEvent;
         [SerializeField] Event playerDashEvent;
         [SerializeField] Event playerAttackLMCEvent;
-        [SerializeField] Event playerChargeLightEvent;
-        [SerializeField] Event playerChargeDarkEvent;
-        [SerializeField] Event playerHeartbeatStopEvent;
 
         [Header("Sound Settings")]
         [SerializeField] public float FootstepInterval;
@@ -31,7 +28,6 @@ namespace WWISE_Integration_Scripts
         public void PlayDeathEvent()
         {
             PlayEvent(playerDeathEvent);
-            PlayEvent(playerHeartbeatStopEvent);
         }
 
         public void PlayFootstepEvent()
@@ -47,16 +43,6 @@ namespace WWISE_Integration_Scripts
         public void PlayLMCEvent()
         {
             PlayEvent(playerAttackLMCEvent);
-        }
-
-        public void PlayChargeEventLight()
-        {
-            PlayEvent(playerChargeLightEvent);
-        }
-
-        public void PlayChargeDarkEvent()
-        {
-            PlayEvent(playerChargeDarkEvent);
         }
     }
 }

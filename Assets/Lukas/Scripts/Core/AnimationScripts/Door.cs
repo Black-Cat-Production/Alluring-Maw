@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using Event = AK.Wwise.Event;
 
 namespace Scripts.Core.AnimationScripts
 {
@@ -8,8 +7,6 @@ namespace Scripts.Core.AnimationScripts
     {
         [SerializeField] float closeDelay;
         [SerializeField] bool isStartDoor;
-        [SerializeField] Event doorOpenSoundEvent;
-        [SerializeField] Event doorCloseSoundEvent;
         Animator animator;
 
         bool isClosed;
@@ -31,7 +28,6 @@ namespace Scripts.Core.AnimationScripts
         public void Open()
         {
             animator.SetTrigger("Open");
-            AkSoundEngine.PostEvent(doorOpenSoundEvent.Name, gameObject);
         }
 
         public void Close()
@@ -45,7 +41,6 @@ namespace Scripts.Core.AnimationScripts
             yield return new WaitForSeconds(_delay);
             animator.SetTrigger("Close");
             isClosed = true;
-            AkSoundEngine.PostEvent(doorCloseSoundEvent.Name, gameObject);
         }
     }
 }

@@ -192,16 +192,6 @@ namespace Scripts.UserInput
             if (!skillSelector.CanCastSpell()) return;
             if (_callbackContext.phase == InputActionPhase.Started)
             {
-                bool isLightSkill = skillSelector.GetSelectedSkillTags().Contains(ESkillTag.Light);
-                switch (isLightSkill)
-                {
-                    case true:
-                        playerSounds.PlayChargeEventLight();
-                        break;
-                    case false:
-                        playerSounds.PlayChargeDarkEvent();
-                        break;
-                }
                 isCastingSkill = true;
                 animator.SetBool(skillSelector.GetSelectedSkillTags().Contains(ESkillTag.Light) ? isHoldingSkillLight : isHoldingSkillDark, true);
                 if (routine != null) StopCoroutine(routine);
