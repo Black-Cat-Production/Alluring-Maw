@@ -74,7 +74,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="English(US)" Hash="{CFFCE7B9-1090-03EC-38D6-A806AC0E0AAD}">
+		<SoundBank Id="3161908922" Type="User" Language="English(US)" Hash="{DB76DCE9-0926-2AC3-D0F0-4F9DC2E478FD}">
 			<ShortName>Main</ShortName>
 			<Path>English(US)/Main.bnk</Path>
 			<Media>
@@ -120,7 +120,7 @@
 				</File>
 				<File Id="25470229" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Ketten_F3F075E0.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Ketten_21E46C95.wem</CachePath>
 				</File>
 				<File Id="31143423" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Intro - Voice.wav</ShortName>
@@ -196,7 +196,7 @@
 				</File>
 				<File Id="86915881" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Ketten_B4FF5B82.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Ketten_39C8D1AA.wem</CachePath>
 				</File>
 				<File Id="89317104" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
@@ -228,7 +228,7 @@
 				</File>
 				<File Id="114327810" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Ketten_FCF74EE3.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Ketten_A84C9369.wem</CachePath>
 				</File>
 				<File Id="114367471" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Voice-29.wav</ShortName>
@@ -336,11 +336,11 @@
 				</File>
 				<File Id="195391025" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Ketten_284878C0.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Ketten_F0ABDD0E.wem</CachePath>
 				</File>
 				<File Id="196007614" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Ketten_7512E335.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Ketten_F1C451DA.wem</CachePath>
 				</File>
 				<File Id="199119937" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_steps-20.wav</ShortName>
@@ -432,11 +432,11 @@
 				</File>
 				<File Id="261873939" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Thump.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Thump_7EAC0F8F.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Thump_5561F37C.wem</CachePath>
 				</File>
 				<File Id="278365655" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Ketten_35BA5B91.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Ketten_FAD4D63F.wem</CachePath>
 				</File>
 				<File Id="281720878" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Stomp_Low-05.wav</ShortName>
@@ -516,7 +516,7 @@
 				</File>
 				<File Id="351573158" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Thump.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Thump_A03FD4F9.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Thump_006EE88F.wem</CachePath>
 				</File>
 				<File Id="355203839" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Voice-01.wav</ShortName>
@@ -628,7 +628,7 @@
 				</File>
 				<File Id="429419706" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Ketten_CF6F9520.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Ketten_F530A28A.wem</CachePath>
 				</File>
 				<File Id="431773203" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Zombie-Attack_Whoosh-b-01.wav</ShortName>
@@ -648,7 +648,7 @@
 				</File>
 				<File Id="433782296" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Ketten_08CEBC08.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Ketten_DC02FCED.wem</CachePath>
 				</File>
 				<File Id="434197839" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Voice_Exhale-02.wav</ShortName>
@@ -668,7 +668,7 @@
 				</File>
 				<File Id="451662515" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Ketten_6864EC45.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Ketten_BC26DECD.wem</CachePath>
 				</File>
 				<File Id="458521427" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Cloth-02.wav</ShortName>
@@ -748,7 +748,7 @@
 				</File>
 				<File Id="529512090" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Thump.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Thump_0040FBCF.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Thump_51D3CF83.wem</CachePath>
 				</File>
 				<File Id="537424814" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Step_Low-09.wav</ShortName>
@@ -796,7 +796,7 @@
 				</File>
 				<File Id="599663629" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Thump.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Thump_D69AE239.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Thump_E95A0EE5.wem</CachePath>
 				</File>
 				<File Id="602203764" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Zombie-FS-03.wav</ShortName>
@@ -820,7 +820,7 @@
 				</File>
 				<File Id="611417319" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Thump.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Thump_747F8270.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Thump_9E5F00CD.wem</CachePath>
 				</File>
 				<File Id="613593918" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Leather-03.wav</ShortName>
@@ -852,7 +852,7 @@
 				</File>
 				<File Id="629604209" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Thump.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Thump_D21499A8.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Thump_97A06868.wem</CachePath>
 				</File>
 				<File Id="643711713" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-Jump_Stomp_raw-04.wav</ShortName>
@@ -980,7 +980,7 @@
 				</File>
 				<File Id="733090010" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Thump.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Thump_ADE3381D.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Thump_FE16A571.wem</CachePath>
 				</File>
 				<File Id="738238298" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Cloth-18.wav</ShortName>
@@ -1184,7 +1184,7 @@
 				</File>
 				<File Id="959944303" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Ketten_6F9A605D.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Ketten_0E0AA2AE.wem</CachePath>
 				</File>
 				<File Id="967862557" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-Dash_Voice-07.wav</ShortName>
@@ -1208,7 +1208,7 @@
 				</File>
 				<File Id="985165359" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Ketten_B04690A0.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Ketten_A6BF21CC.wem</CachePath>
 				</File>
 				<File Id="987030988" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Zombie-Dies-04.wav</ShortName>
@@ -1220,7 +1220,7 @@
 				</File>
 				<File Id="992843410" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Thump.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Thump_66F01A3B.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Thump_F638C86F.wem</CachePath>
 				</File>
 				<File Id="995070210" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Cloth-10.wav</ShortName>
@@ -1276,7 +1276,7 @@
 				</File>
 				<File Id="1036381591" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Ketten_06DAE69A.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Ketten_4034C8EA.wem</CachePath>
 				</File>
 				<File Id="1037512816" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Voice-10.wav</ShortName>
@@ -1284,7 +1284,7 @@
 				</File>
 				<File Id="1041115910" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Thump.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Thump_8B242FD6.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Thump_60325A05.wem</CachePath>
 				</File>
 				<File Id="1047307675" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Zombie-Hitmarker-05.wav</ShortName>
@@ -1332,7 +1332,7 @@
 				</File>
 				<File Id="1068678857" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Ketten_AA13C7CA.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Ketten_62296EA3.wem</CachePath>
 				</File>
 				<File Id="1069512068" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Voice-08.wav</ShortName>
@@ -1936,5 +1936,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{BD4AD2B3-B4AD-9605-DC7E-ADBFBE4CD9EC}</FileHash>
+	<FileHash>{71915C6A-1F66-129C-8186-A14F1FDEA879}</FileHash>
 </SoundBanksInfo>
