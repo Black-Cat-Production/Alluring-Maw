@@ -9,16 +9,16 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{E1451450-3B8A-F677-318D-63CF0292D163}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{A5944C0F-F024-C7B3-D06F-46266C7AF349}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<Custom>
-					<Plugin Id="506875765" Name="Room_Small (Custom)" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="55816676" Name="Small_Wooden_Room1 (Custom)" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 				</Custom>
 				<ShareSets>
-					<Plugin Id="1990128658" Name="Room_Medium" LibName="Wwise RoomVerb" LibId="7733251"/>
-					<Plugin Id="3164629247" Name="Holy" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="702543456" Name="Tunnel1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="3673681183" Name="Large_Bright_Chamber1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
@@ -26,7 +26,7 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
-				<Bus Id="983310469" Name="AUX"/>
+				<Bus Id="348963605" Name="REVERB"/>
 				<Bus Id="1502772432" Name="SFX Bus"/>
 				<Bus Id="3127962312" Name="Music Bus"/>
 				<Bus Id="3472939855" Name="Voice Bus"/>
@@ -36,21 +36,21 @@
 				<AuxBus Id="194525819" Name="Env_Corridor">
 					<PluginRefs>
 						<ShareSets>
-							<PluginRef Id="1990128658"/>
+							<PluginRef Id="702543456"/>
 						</ShareSets>
 					</PluginRefs>
 				</AuxBus>
 				<AuxBus Id="783969252" Name="Env_Small_Room">
 					<PluginRefs>
 						<Custom>
-							<PluginRef Id="506875765"/>
+							<PluginRef Id="55816676"/>
 						</Custom>
 					</PluginRefs>
 				</AuxBus>
 				<AuxBus Id="2521112689" Name="Env_Big_Room">
 					<PluginRefs>
 						<ShareSets>
-							<PluginRef Id="3164629247"/>
+							<PluginRef Id="3673681183"/>
 						</ShareSets>
 					</PluginRefs>
 				</AuxBus>
@@ -68,7 +68,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="English(US)" Hash="{5A3FE255-840D-29BB-E7CB-EEFFB59F38A8}">
+		<SoundBank Id="3161908922" Type="User" Language="English(US)" Hash="{9129B8ED-5384-7027-29F8-C4D39B8F350C}">
 			<ShortName>Main</ShortName>
 			<Path>English(US)/Main.bnk</Path>
 			<Media>
@@ -836,5 +836,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E8EADB33-792F-BF09-8F2D-9CDF8259B1EF}</FileHash>
+	<FileHash>{D0071F06-8987-5EBF-270A-CDAD77BED889}</FileHash>
 </SoundBanksInfo>

@@ -70,9 +70,9 @@ namespace AK
 
     namespace BUSSES
     {
-        static const AkUniqueID AUX = 983310469U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MUSIC_BUS = 3127962312U;
+        static const AkUniqueID REVERB = 348963605U;
         static const AkUniqueID SFX_BUS = 1502772432U;
         static const AkUniqueID VOICE_BUS = 3472939855U;
     } // namespace BUSSES

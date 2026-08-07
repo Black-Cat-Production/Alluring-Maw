@@ -13,28 +13,18 @@
 						<Bus Name="Music Bus" ID="{BEF3C6D0-ACAA-4A5A-AF30-9AC2ED056053}"/>
 						<Bus Name="SFX Bus" ID="{0428BEA9-86B3-406D-9B6A-357CE32B9E02}"/>
 						<Bus Name="Voice Bus" ID="{342CAA02-47A2-4C12-837A-6682E05C0D90}"/>
-						<Bus Name="AUX" ID="{28FCA7E9-C1A6-4616-8EA5-B21AD4B9DCD3}">
+						<Bus Name="REVERB" ID="{28FCA7E9-C1A6-4616-8EA5-B21AD4B9DCD3}">
 							<ChildrenList>
 								<AuxBus Name="Env_Small_Room" ID="{D2F4EBA1-DBAB-4A0C-8D09-6440A585B72A}">
 									<ReferenceList>
 										<Reference Name="Effect0">
-											<Custom CreatedFrom="{577F1466-A63B-47F7-98BD-C56E433F8B5D}">
-												<Effect Name="Room_Small (Custom)" ID="{074A10AF-0D07-4454-8F9D-062824A56510}" ShortID="506875765" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+											<Custom CreatedFrom="{F7CBE859-36A8-4174-B553-AE32A7FE95FA}">
+												<Effect Name="Small_Wooden_Room1 (Custom)" ID="{95FEB34E-8CA4-460F-A37C-17DACFF1F34A}" ShortID="55816676" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
 													<PropertyList>
-														<Property Name="DecayTime" Type="Real32" Value="0.7"/>
-														<Property Name="Density" Type="Real32" Value="44"/>
-														<Property Name="Diffusion" Type="Real32" Value="46"/>
-														<Property Name="ERLevel" Type="Real32" Value="-23"/>
-														<Property Name="ERPattern" Type="int32" Value="22"/>
-														<Property Name="Filter1Freq" Type="Real32" Value="590"/>
-														<Property Name="Filter3Freq" Type="Real32" Value="8440"/>
-														<Property Name="Filter3Gain" Type="Real32" Value="-4.5"/>
-														<Property Name="HFDamping" Type="Real32" Value="2.7"/>
-														<Property Name="PreDelay" Type="Real32" Value="12"/>
-														<Property Name="ReverbLevel" Type="Real32" Value="-22"/>
-														<Property Name="RoomShape" Type="Real32" Value="55"/>
-														<Property Name="RoomSize" Type="Real32" Value="15"/>
-														<Property Name="StereoWidth" Type="Real32" Value="90"/>
+														<Property Name="HFRatio" Type="Real32" Value="10"/>
+														<Property Name="NumberOfDelays" Type="int32" Value="12"/>
+														<Property Name="ReverbTime" Type="Real32" Value="1.5"/>
+														<Property Name="WetLevel" Type="Real32" Value="-30"/>
 													</PropertyList>
 												</Effect>
 											</Custom>
@@ -42,23 +32,16 @@
 									</ReferenceList>
 								</AuxBus>
 								<AuxBus Name="Env_Big_Room" ID="{2158C44F-2651-4565-AD37-10BF8685777A}">
-									<PropertyList>
-										<Property Name="BusVolume" Type="Real64">
-											<ValueList>
-												<Value>12</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
 									<ReferenceList>
-										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
-											<ObjectRef Name="Holy" ID="{CC7B8638-C670-4AD5-B3FB-331EA81037F6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										<Reference Name="Effect0" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+											<ObjectRef Name="Large_Bright_Chamber1" ID="{0BFA2291-5716-4759-AC24-F59D29E8F2E4}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 										</Reference>
 									</ReferenceList>
 								</AuxBus>
 								<AuxBus Name="Env_Corridor" ID="{3BBA4BFC-9BDF-4E3C-9B3D-F4EB9ACB7D7B}">
 									<ReferenceList>
-										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
-											<ObjectRef Name="Room_Medium" ID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										<Reference Name="Effect0" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+											<ObjectRef Name="Tunnel1" ID="{CC44B890-9865-4157-965F-86FED27BC4C6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 										</Reference>
 									</ReferenceList>
 								</AuxBus>

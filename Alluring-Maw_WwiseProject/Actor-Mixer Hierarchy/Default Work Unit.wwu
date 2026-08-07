@@ -3658,11 +3658,6 @@
 						</RandomSequenceContainer>
 						<Sound Name="KS_Heartbeat_1" ID="{8BF09252-CF54-4C66-B2A0-CAB7FE5B6627}" ShortID="784035306">
 							<PropertyList>
-								<Property Name="GameAuxSendVolume" Type="Real64">
-									<ValueList>
-										<Value>12</Value>
-									</ValueList>
-								</Property>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 							</PropertyList>

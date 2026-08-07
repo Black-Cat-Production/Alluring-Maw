@@ -7,21 +7,21 @@ State	ID	Name	State Group			Notes
 	3092587493	Pause	Gameplay			
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
-	983310469	AUX			\Default Work Unit\Master Audio Bus\AUX	
+	348963605	REVERB			\Default Work Unit\Master Audio Bus\REVERB	
 	1502772432	SFX Bus			\Default Work Unit\Master Audio Bus\SFX Bus	
 	3127962312	Music Bus			\Default Work Unit\Master Audio Bus\Music Bus	
 	3472939855	Voice Bus			\Default Work Unit\Master Audio Bus\Voice Bus	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
-	194525819	Env_Corridor			\Default Work Unit\Master Audio Bus\AUX\Env_Corridor	
-	783969252	Env_Small_Room			\Default Work Unit\Master Audio Bus\AUX\Env_Small_Room	
-	2521112689	Env_Big_Room			\Default Work Unit\Master Audio Bus\AUX\Env_Big_Room	
+	194525819	Env_Corridor			\Default Work Unit\Master Audio Bus\REVERB\Env_Corridor	
+	783969252	Env_Small_Room			\Default Work Unit\Master Audio Bus\REVERB\Env_Small_Room	
+	2521112689	Env_Big_Room			\Default Work Unit\Master Audio Bus\REVERB\Env_Big_Room	
 
 Effect plug-ins	ID	Name	Type				Notes
-	506875765	Room_Small (Custom)	Wwise RoomVerb			
-	1990128658	Room_Medium	Wwise RoomVerb			
-	3164629247	Holy	Wwise RoomVerb			
+	55816676	Small_Wooden_Room1 (Custom)	Wwise Matrix Reverb			
+	702543456	Tunnel1	Wwise Matrix Reverb			
+	3673681183	Large_Bright_Chamber1	Wwise Matrix Reverb			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			
