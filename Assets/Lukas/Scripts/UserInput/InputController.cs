@@ -270,12 +270,13 @@ namespace Scripts.UserInput
             while (gameObject.activeInHierarchy)
             {
                 Debug.Log($"MoveInput: {HasMoveInput} -- CurrentDashVelocity: {currentDashVelocity}");
-                if (!HasMoveInput || currentDashVelocity == Vector3.zero)
+                if (!HasMoveInput || currentDashVelocity != Vector3.zero)
                 {
                     yield return null;
                 }
                 else
                 {
+                    Debug.Log("PLAYING FOOTSTEPS");
                     playerSounds.PlayFootstepEvent();
                     yield return null;
                     yield return new WaitForSeconds(playerSounds.FootstepInterval);
