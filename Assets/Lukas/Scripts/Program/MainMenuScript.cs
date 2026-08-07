@@ -22,7 +22,7 @@ namespace Scripts.Program
             Screen.SetResolution(1920, 1080, true);
             while (!GameManager.Instance.FinishedLoading) yield return null;
             UpdatePlayerName();
-            optionsMenuUI.PushUpdateToAudioMixer();
+            optionsMenuUI.PushUpdateOnLoad();
         }
 
         void OnEnable()

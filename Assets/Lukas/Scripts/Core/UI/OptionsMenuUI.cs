@@ -58,6 +58,7 @@ namespace Scripts.Core.UI
             sfxVolumeSliderValue.text = sfxVolumeSlider.value.ToString();
             musicVolumeSliderValue.text = musicVolumeSlider.value.ToString();
             voiceVolumeSliderValue.text = voiceVolumeSlider.value.ToString();
+            PushUpdateToAudioMixer();
         }
 
         public void PushUpdateToAudioMixer()
@@ -70,6 +71,14 @@ namespace Scripts.Core.UI
             AkSoundEngine.SetRTPCValue("SFX_Volume", sfxVolumeSlider.value);
             AkSoundEngine.SetRTPCValue("Music_Volume", musicVolumeSlider.value);
             AkSoundEngine.SetRTPCValue("Voice_Volume", voiceVolumeSlider.value);
+        }
+
+        public void PushUpdateOnLoad()
+        {
+            AkSoundEngine.SetRTPCValue("Master_Volume", optionsSaveSO.MasterVolume);
+            AkSoundEngine.SetRTPCValue("SFX_Volume", optionsSaveSO.SFXVolume);
+            AkSoundEngine.SetRTPCValue("Music_Volume", optionsSaveSO.MusicVolume);
+            AkSoundEngine.SetRTPCValue("Voice_Volume", optionsSaveSO.VoiceVolume);
         }
 
         float Remap(float _input, float _oldMin, float _oldMax, float _newMin, float _newMax)
