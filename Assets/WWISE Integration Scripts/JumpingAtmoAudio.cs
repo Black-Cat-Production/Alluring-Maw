@@ -45,7 +45,7 @@ namespace WWISE_Integration_Scripts
             {
                 var unitSphere = Random.insideUnitSphere * distanceToPlayerInMeter;
                 var randomPoint = new Vector3(unitSphere.x, 0, unitSphere.z);
-                randomPoint += transform.position;
+                randomPoint += playerObject.transform.position;
                 transform.position = randomPoint;
                 float randomWaitTime = Random.Range(minSecondsToWaitForJump, maxSecondsToWaitForJump);
                 yield return new WaitForSeconds(randomWaitTime);
