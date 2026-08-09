@@ -9,16 +9,14 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{485EABFB-BF81-BF67-4867-26A0F54C712D}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{48F3989D-899B-207A-16ED-A2BB9D6D78C9}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
-				<Custom>
-					<Plugin Id="55816676" Name="Small_Wooden_Room1 (Custom)" LibName="Wwise Matrix Reverb" LibId="7536643"/>
-				</Custom>
 				<ShareSets>
-					<Plugin Id="702543456" Name="Tunnel1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
-					<Plugin Id="3673681183" Name="Large_Bright_Chamber1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="602546716" Name="Room_Large" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="1990128658" Name="Room_Medium" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2995775460" Name="Room_Small" LibName="Wwise RoomVerb" LibId="7733251"/>
 				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
@@ -26,10 +24,8 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
-				<Bus Id="89505537" Name="Gameplay"/>
 				<Bus Id="348963605" Name="REVERB"/>
 				<Bus Id="1502772432" Name="SFX Bus"/>
-				<Bus Id="2235087924" Name="UI-Sounds"/>
 				<Bus Id="3127962312" Name="Music Bus"/>
 				<Bus Id="3472939855" Name="Voice Bus"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
@@ -38,21 +34,28 @@
 				<AuxBus Id="194525819" Name="Env_Corridor">
 					<PluginRefs>
 						<ShareSets>
-							<PluginRef Id="702543456"/>
+							<PluginRef Id="1990128658"/>
 						</ShareSets>
 					</PluginRefs>
 				</AuxBus>
 				<AuxBus Id="783969252" Name="Env_Small_Room">
 					<PluginRefs>
-						<Custom>
-							<PluginRef Id="55816676"/>
-						</Custom>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+				<AuxBus Id="960112437" Name="Env_Mid_Room">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1990128658"/>
+						</ShareSets>
 					</PluginRefs>
 				</AuxBus>
 				<AuxBus Id="2521112689" Name="Env_Big_Room">
 					<PluginRefs>
 						<ShareSets>
-							<PluginRef Id="3673681183"/>
+							<PluginRef Id="602546716"/>
 						</ShareSets>
 					</PluginRefs>
 				</AuxBus>
@@ -74,7 +77,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="English(US)" Hash="{DB76DCE9-0926-2AC3-D0F0-4F9DC2E478FD}">
+		<SoundBank Id="3161908922" Type="User" Language="English(US)" Hash="{315DD34F-B8BA-4C09-3EE5-7C1D6A283D51}">
 			<ShortName>Main</ShortName>
 			<Path>English(US)/Main.bnk</Path>
 			<Media>
@@ -89,6 +92,10 @@
 				<File Id="10843605" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Zombie-VO_Attack-03.wav</ShortName>
 					<CachePath>SFX/Zombie-VO_Attack-03_10C4C929.wem</CachePath>
+				</File>
+				<File Id="12044895" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_open_mechanic-03.wav</ShortName>
+					<CachePath>SFX/Env_Door_open_mechanic-03_10C4C929.wem</CachePath>
 				</File>
 				<File Id="13269472" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Step_High-04.wav</ShortName>
@@ -120,11 +127,15 @@
 				</File>
 				<File Id="25470229" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Ketten_21E46C95.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Ketten_F3F075E0.wem</CachePath>
 				</File>
 				<File Id="31143423" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Intro - Voice.wav</ShortName>
-					<CachePath>Voices/English(US)/Intro - Voice_5FAAA4E4.wem</CachePath>
+					<CachePath>Voices/English(US)/Intro - Voice_9A1994D4.wem</CachePath>
+				</File>
+				<File Id="37124856" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rat-Idle-09.wav</ShortName>
+					<CachePath>SFX/Rat-Idle-09_10C4C929.wem</CachePath>
 				</File>
 				<File Id="37348861" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Voice-37.wav</ShortName>
@@ -138,9 +149,21 @@
 					<ShortName>Player-FS_steps-04.wav</ShortName>
 					<CachePath>SFX/Player-FS_steps-04_10C4C929.wem</CachePath>
 				</File>
+				<File Id="42173254" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Boss-Hitmarker_VO-02.wav</ShortName>
+					<CachePath>Voices/English(US)/Boss-Hitmarker_VO-02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="55228012" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rat-Idle-07.wav</ShortName>
+					<CachePath>SFX/Rat-Idle-07_10C4C929.wem</CachePath>
+				</File>
 				<File Id="55558778" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Zombie-VO_Attack-02.wav</ShortName>
 					<CachePath>SFX/Zombie-VO_Attack-02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="55966271" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rat-Hitmarker-05.wav</ShortName>
+					<CachePath>SFX/Rat-Hitmarker-05_10C4C929.wem</CachePath>
 				</File>
 				<File Id="58214838" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_steps-24.wav</ShortName>
@@ -150,9 +173,17 @@
 					<ShortName>Zombie-Attack_Whoosh-b-04.wav</ShortName>
 					<CachePath>SFX/Zombie-Attack_Whoosh-b-04_10C4C929.wem</CachePath>
 				</File>
+				<File Id="59062343" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_close_hinge2-04.wav</ShortName>
+					<CachePath>SFX/Env_Door_close_hinge2-04_10C4C929.wem</CachePath>
+				</File>
 				<File Id="62348827" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Zombie-VO-Idle-21.wav</ShortName>
 					<CachePath>Voices/English(US)/Zombie-VO-Idle-21_10C4C929.wem</CachePath>
+				</File>
+				<File Id="63948037" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_open_hinge-01.wav</ShortName>
+					<CachePath>SFX/Env_Door_open_hinge-01_10C4C929.wem</CachePath>
 				</File>
 				<File Id="64408550" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Zombie-Attack_Whoosh-a-01.wav</ShortName>
@@ -196,7 +227,7 @@
 				</File>
 				<File Id="86915881" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Ketten_39C8D1AA.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Ketten_B4FF5B82.wem</CachePath>
 				</File>
 				<File Id="89317104" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
@@ -228,11 +259,15 @@
 				</File>
 				<File Id="114327810" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Ketten_A84C9369.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Ketten_FCF74EE3.wem</CachePath>
 				</File>
 				<File Id="114367471" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Voice-29.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Voice-29_10C4C929.wem</CachePath>
+				</File>
+				<File Id="115413513" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rat-Idle-01.wav</ShortName>
+					<CachePath>SFX/Rat-Idle-01_10C4C929.wem</CachePath>
 				</File>
 				<File Id="116764371" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Zombie-Dies-07.wav</ShortName>
@@ -254,6 +289,10 @@
 					<ShortName>Boss-FS_Voice-30.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Voice-30_10C4C929.wem</CachePath>
 				</File>
+				<File Id="129675704" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Player-Dying_VO-04.wav</ShortName>
+					<CachePath>Voices/English(US)/Player-Dying_VO-04_10C4C929.wem</CachePath>
+				</File>
 				<File Id="129770599" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Blue Fire.wav</ShortName>
 					<CachePath>SFX/Blue Fire_9C2AC3F0.wem</CachePath>
@@ -274,9 +313,17 @@
 					<ShortName>Zombie-Hitmarker-06.wav</ShortName>
 					<CachePath>Voices/English(US)/Zombie-Hitmarker-06_10C4C929.wem</CachePath>
 				</File>
+				<File Id="134227462" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_open_grinding-04.wav</ShortName>
+					<CachePath>SFX/Env_Door_open_grinding-04_10C4C929.wem</CachePath>
+				</File>
 				<File Id="134795684" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Zombie-FS-12.wav</ShortName>
 					<CachePath>SFX/Zombie-FS-12_10C4C929.wem</CachePath>
+				</File>
+				<File Id="138007222" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Boss-Hitmarker_VO-10.wav</ShortName>
+					<CachePath>Voices/English(US)/Boss-Hitmarker_VO-10_10C4C929.wem</CachePath>
 				</File>
 				<File Id="143697608" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Zombie-VO_Attack-04.wav</ShortName>
@@ -308,19 +355,47 @@
 				</File>
 				<File Id="160074641" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Intro - Music.wav</ShortName>
-					<CachePath>SFX/Intro - Music_5A033ECA.wem</CachePath>
+					<CachePath>SFX/Intro - Music_DC3258D1.wem</CachePath>
 				</File>
 				<File Id="161092298" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - Atmo_LoRumble.wav</ShortName>
 					<CachePath>SFX/Menu - Atmo_LoRumble_D55CE5FA.wem</CachePath>
 				</File>
+				<File Id="167639514" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Boss-Hitmarker_VO-11.wav</ShortName>
+					<CachePath>Voices/English(US)/Boss-Hitmarker_VO-11_10C4C929.wem</CachePath>
+				</File>
 				<File Id="169711916" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Step_High-02.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Step_High-02_10C4C929.wem</CachePath>
 				</File>
+				<File Id="170954186" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_close_grinding-02.wav</ShortName>
+					<CachePath>SFX/Env_Door_close_grinding-02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="171431546" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_open_grinding-02.wav</ShortName>
+					<CachePath>SFX/Env_Door_open_grinding-02_10C4C929.wem</CachePath>
+				</File>
 				<File Id="177343746" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Zombie-Attack_Whoosh-b-06.wav</ShortName>
 					<CachePath>SFX/Zombie-Attack_Whoosh-b-06_10C4C929.wem</CachePath>
+				</File>
+				<File Id="177677233" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rat-Dies-01.wav</ShortName>
+					<CachePath>SFX/Rat-Dies-01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="178935259" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rat-Dies-02.wav</ShortName>
+					<CachePath>SFX/Rat-Dies-02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="180897789" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_open_hinge-10.wav</ShortName>
+					<CachePath>SFX/Env_Door_open_hinge-10_10C4C929.wem</CachePath>
+				</File>
+				<File Id="181781887" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_close_grinding-03.wav</ShortName>
+					<CachePath>SFX/Env_Door_close_grinding-03_10C4C929.wem</CachePath>
 				</File>
 				<File Id="185773762" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Zombie-Hitmarker-07.wav</ShortName>
@@ -334,17 +409,25 @@
 					<ShortName>Player-GettingHit-04.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-GettingHit-04_FDE54F75.wem</CachePath>
 				</File>
+				<File Id="195250717" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rat-Attack-03.wav</ShortName>
+					<CachePath>SFX/Rat-Attack-03_10C4C929.wem</CachePath>
+				</File>
 				<File Id="195391025" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Ketten_F0ABDD0E.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Ketten_284878C0.wem</CachePath>
 				</File>
 				<File Id="196007614" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Ketten_F1C451DA.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Ketten_7512E335.wem</CachePath>
 				</File>
 				<File Id="199119937" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_steps-20.wav</ShortName>
 					<CachePath>SFX/Player-FS_steps-20_10C4C929.wem</CachePath>
+				</File>
+				<File Id="199145603" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Boss-Attack_VO-06.wav</ShortName>
+					<CachePath>Voices/English(US)/Boss-Attack_VO-06_10C4C929.wem</CachePath>
 				</File>
 				<File Id="201483726" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Stomp_Low-03.wav</ShortName>
@@ -366,6 +449,10 @@
 					<ShortName>Player-FS_Cloth-07.wav</ShortName>
 					<CachePath>SFX/Player-FS_Cloth-07_A4507962.wem</CachePath>
 				</File>
+				<File Id="210711380" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Player-Dying_VO-03.wav</ShortName>
+					<CachePath>Voices/English(US)/Player-Dying_VO-03_10C4C929.wem</CachePath>
+				</File>
 				<File Id="212043406" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Step_High-08.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Step_High-08_10C4C929.wem</CachePath>
@@ -381,6 +468,10 @@
 				<File Id="214269456" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-Dash_Leather-02.wav</ShortName>
 					<CachePath>SFX/Player-Dash_Leather-02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="216846426" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Boss-Attack_VO-05.wav</ShortName>
+					<CachePath>Voices/English(US)/Boss-Attack_VO-05_10C4C929.wem</CachePath>
 				</File>
 				<File Id="218986277" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Zombie-Hitmarker-04.wav</ShortName>
@@ -406,17 +497,41 @@
 					<ShortName>Zombie-Attack_Whoosh-b-13.wav</ShortName>
 					<CachePath>SFX/Zombie-Attack_Whoosh-b-13_10C4C929.wem</CachePath>
 				</File>
+				<File Id="226452255" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rat-FS_click-03.wav</ShortName>
+					<CachePath>SFX/Rat-FS_click-03_10C4C929.wem</CachePath>
+				</File>
 				<File Id="226729483" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PLAYER-RMC1_Release.wav</ShortName>
 					<CachePath>SFX/PLAYER-RMC1_Release_B94BAF26.wem</CachePath>
+				</File>
+				<File Id="229679170" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_close_hinge-04.wav</ShortName>
+					<CachePath>SFX/Env_Door_close_hinge-04_10C4C929.wem</CachePath>
 				</File>
 				<File Id="229752212" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Cloth-22.wav</ShortName>
 					<CachePath>SFX/Player-FS_Cloth-22_94F6898F.wem</CachePath>
 				</File>
+				<File Id="232034163" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rat-Idle-04.wav</ShortName>
+					<CachePath>SFX/Rat-Idle-04_10C4C929.wem</CachePath>
+				</File>
+				<File Id="233753292" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_open_grinding-08.wav</ShortName>
+					<CachePath>SFX/Env_Door_open_grinding-08_10C4C929.wem</CachePath>
+				</File>
+				<File Id="233848048" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Boss-Attack_VO-02.wav</ShortName>
+					<CachePath>Voices/English(US)/Boss-Attack_VO-02_10C4C929.wem</CachePath>
+				</File>
 				<File Id="235792914" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Voice-21.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Voice-21_10C4C929.wem</CachePath>
+				</File>
+				<File Id="237366140" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Boss-Hitmarker_VO-04.wav</ShortName>
+					<CachePath>Voices/English(US)/Boss-Hitmarker_VO-04_10C4C929.wem</CachePath>
 				</File>
 				<File Id="239656092" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Step_High-03.wav</ShortName>
@@ -426,17 +541,33 @@
 					<ShortName>Zombie-Attack_Whoosh-b-08.wav</ShortName>
 					<CachePath>SFX/Zombie-Attack_Whoosh-b-08_10C4C929.wem</CachePath>
 				</File>
+				<File Id="245519691" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Boss-Dies-05.wav</ShortName>
+					<CachePath>Voices/English(US)/Boss-Dies-05_10C4C929.wem</CachePath>
+				</File>
+				<File Id="250481480" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Boss-Hitmarker_VO-01.wav</ShortName>
+					<CachePath>Voices/English(US)/Boss-Hitmarker_VO-01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="255270975" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_close_grinding-07.wav</ShortName>
+					<CachePath>SFX/Env_Door_close_grinding-07_10C4C929.wem</CachePath>
+				</File>
 				<File Id="258955241" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Zombie-VO-Idle-01.wav</ShortName>
 					<CachePath>Voices/English(US)/Zombie-VO-Idle-01_10C4C929.wem</CachePath>
 				</File>
 				<File Id="261873939" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Thump.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Thump_5561F37C.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Thump_7EAC0F8F.wem</CachePath>
+				</File>
+				<File Id="273170643" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_open_hinge-02.wav</ShortName>
+					<CachePath>SFX/Env_Door_open_hinge-02_10C4C929.wem</CachePath>
 				</File>
 				<File Id="278365655" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Ketten_FAD4D63F.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Ketten_35BA5B91.wem</CachePath>
 				</File>
 				<File Id="281720878" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Stomp_Low-05.wav</ShortName>
@@ -454,9 +585,21 @@
 					<ShortName>Boss-FS_Chains-16.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Chains-16_10C4C929.wem</CachePath>
 				</File>
+				<File Id="297893360" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_close_grinding-01.wav</ShortName>
+					<CachePath>SFX/Env_Door_close_grinding-01_10C4C929.wem</CachePath>
+				</File>
 				<File Id="298468436" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Zombie-Attack_Metal-09.wav</ShortName>
 					<CachePath>SFX/Zombie-Attack_Metal-09_10C4C929.wem</CachePath>
+				</File>
+				<File Id="301706579" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_close_hinge-07.wav</ShortName>
+					<CachePath>SFX/Env_Door_close_hinge-07_10C4C929.wem</CachePath>
+				</File>
+				<File Id="303534719" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Boss-Hitmarker_VO-08.wav</ShortName>
+					<CachePath>Voices/English(US)/Boss-Hitmarker_VO-08_10C4C929.wem</CachePath>
 				</File>
 				<File Id="307192257" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Voice_Inhale-06.wav</ShortName>
@@ -486,6 +629,10 @@
 					<ShortName>Bounce Percussion [2026-07-30 104843]-1.wav</ShortName>
 					<CachePath>SFX/Bounce Percussion [2026-07-30 104843]-1_D79FB2B7.wem</CachePath>
 				</File>
+				<File Id="324565045" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rat-Idle-02.wav</ShortName>
+					<CachePath>SFX/Rat-Idle-02_10C4C929.wem</CachePath>
+				</File>
 				<File Id="330273501" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Voice-09.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Voice-09_10C4C929.wem</CachePath>
@@ -493,6 +640,10 @@
 				<File Id="331596387" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Cloth-09.wav</ShortName>
 					<CachePath>SFX/Player-FS_Cloth-09_DFC0FDEB.wem</CachePath>
+				</File>
+				<File Id="332383406" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_open_mechanic-04.wav</ShortName>
+					<CachePath>SFX/Env_Door_open_mechanic-04_10C4C929.wem</CachePath>
 				</File>
 				<File Id="334302628" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Zombie-Attack_Whoosh-a-11.wav</ShortName>
@@ -516,11 +667,19 @@
 				</File>
 				<File Id="351573158" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Thump.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Thump_006EE88F.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Thump_A03FD4F9.wem</CachePath>
+				</File>
+				<File Id="355023093" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_close_hinge-02.wav</ShortName>
+					<CachePath>SFX/Env_Door_close_hinge-02_10C4C929.wem</CachePath>
 				</File>
 				<File Id="355203839" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Voice-01.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Voice-01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="355660297" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_open_grinding-03.wav</ShortName>
+					<CachePath>SFX/Env_Door_open_grinding-03_10C4C929.wem</CachePath>
 				</File>
 				<File Id="357323291" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Step_Low-08.wav</ShortName>
@@ -546,9 +705,21 @@
 					<ShortName>Zombie-Hitmarker-01.wav</ShortName>
 					<CachePath>Voices/English(US)/Zombie-Hitmarker-01_10C4C929.wem</CachePath>
 				</File>
+				<File Id="372465155" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rat-FS_stone-04.wav</ShortName>
+					<CachePath>SFX/Rat-FS_stone-04_10C4C929.wem</CachePath>
+				</File>
 				<File Id="373397234" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Zombie-Attack_Whoosh-a-13.wav</ShortName>
 					<CachePath>SFX/Zombie-Attack_Whoosh-a-13_10C4C929.wem</CachePath>
+				</File>
+				<File Id="374277638" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Boss-Hitmarker_VO-07.wav</ShortName>
+					<CachePath>Voices/English(US)/Boss-Hitmarker_VO-07_10C4C929.wem</CachePath>
+				</File>
+				<File Id="375179020" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_close_grinding-06.wav</ShortName>
+					<CachePath>SFX/Env_Door_close_grinding-06_10C4C929.wem</CachePath>
 				</File>
 				<File Id="382004132" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Voice-04.wav</ShortName>
@@ -574,13 +745,21 @@
 					<ShortName>Player-GettingHit-08.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-GettingHit-08_1DACF08F.wem</CachePath>
 				</File>
+				<File Id="396402779" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_close_slam-01.wav</ShortName>
+					<CachePath>SFX/Env_Door_close_slam-01_10C4C929.wem</CachePath>
+				</File>
 				<File Id="396744357" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Zombie-Attack_Whoosh-a-07.wav</ShortName>
 					<CachePath>SFX/Zombie-Attack_Whoosh-a-07_10C4C929.wem</CachePath>
 				</File>
 				<File Id="397819662" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Zombie-Dies-09.wav</ShortName>
-					<CachePath>Voices/English(US)/Zombie-Dies-09_10C4C929.wem</CachePath>
+					<CachePath>Voices/English(US)/Zombie-Dies-09_679CF4D8.wem</CachePath>
+				</File>
+				<File Id="402273019" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rat-FS_click-01.wav</ShortName>
+					<CachePath>SFX/Rat-FS_click-01_10C4C929.wem</CachePath>
 				</File>
 				<File Id="403332333" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Zombie-FS-08.wav</ShortName>
@@ -628,7 +807,7 @@
 				</File>
 				<File Id="429419706" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Ketten_F530A28A.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Ketten_CF6F9520.wem</CachePath>
 				</File>
 				<File Id="431773203" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Zombie-Attack_Whoosh-b-01.wav</ShortName>
@@ -648,7 +827,7 @@
 				</File>
 				<File Id="433782296" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Ketten_DC02FCED.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Ketten_08CEBC08.wem</CachePath>
 				</File>
 				<File Id="434197839" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Voice_Exhale-02.wav</ShortName>
@@ -668,11 +847,15 @@
 				</File>
 				<File Id="451662515" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Ketten_BC26DECD.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Ketten_6864EC45.wem</CachePath>
 				</File>
 				<File Id="458521427" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Cloth-02.wav</ShortName>
 					<CachePath>SFX/Player-FS_Cloth-02_96F2DAEE.wem</CachePath>
+				</File>
+				<File Id="459226443" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_close_grinding-04.wav</ShortName>
+					<CachePath>SFX/Env_Door_close_grinding-04_10C4C929.wem</CachePath>
 				</File>
 				<File Id="464805336" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Voice_Exhale-05.wav</ShortName>
@@ -682,9 +865,17 @@
 					<ShortName>Player-FS_Cloth-16.wav</ShortName>
 					<CachePath>SFX/Player-FS_Cloth-16_3B08769F.wem</CachePath>
 				</File>
+				<File Id="470923622" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rat-Idle-06.wav</ShortName>
+					<CachePath>SFX/Rat-Idle-06_10C4C929.wem</CachePath>
+				</File>
 				<File Id="471927460" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Voice-26.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Voice-26_10C4C929.wem</CachePath>
+				</File>
+				<File Id="473904400" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_open_mechanic-01.wav</ShortName>
+					<CachePath>SFX/Env_Door_open_mechanic-01_10C4C929.wem</CachePath>
 				</File>
 				<File Id="475829584" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Zombie-VO-Idle-34.wav</ShortName>
@@ -702,9 +893,17 @@
 					<ShortName>Boss-FS_Stomp_Low-02.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Stomp_Low-02_10C4C929.wem</CachePath>
 				</File>
+				<File Id="478875553" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_close_grinding-05.wav</ShortName>
+					<CachePath>SFX/Env_Door_close_grinding-05_10C4C929.wem</CachePath>
+				</File>
 				<File Id="479995752" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Voice-20.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Voice-20_10C4C929.wem</CachePath>
+				</File>
+				<File Id="481592496" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rat-Attack-05.wav</ShortName>
+					<CachePath>SFX/Rat-Attack-05_10C4C929.wem</CachePath>
 				</File>
 				<File Id="485575061" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-Dash_Voice-04.wav</ShortName>
@@ -714,6 +913,18 @@
 					<ShortName>Boss-FS_Chains-17.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Chains-17_10C4C929.wem</CachePath>
 				</File>
+				<File Id="487517609" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Boss-Hitmarker_VO-09.wav</ShortName>
+					<CachePath>Voices/English(US)/Boss-Hitmarker_VO-09_10C4C929.wem</CachePath>
+				</File>
+				<File Id="493269044" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_open_mechanic-06.wav</ShortName>
+					<CachePath>SFX/Env_Door_open_mechanic-06_10C4C929.wem</CachePath>
+				</File>
+				<File Id="496570468" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_close_hinge2-01.wav</ShortName>
+					<CachePath>SFX/Env_Door_close_hinge2-01_10C4C929.wem</CachePath>
+				</File>
 				<File Id="496571148" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - Music_part2.wav</ShortName>
 					<CachePath>SFX/Menu - Music_part2_10C4C929.wem</CachePath>
@@ -721,6 +932,10 @@
 				<File Id="501544486" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Zombie-FS-09.wav</ShortName>
 					<CachePath>SFX/Zombie-FS-09_10C4C929.wem</CachePath>
+				</File>
+				<File Id="502014182" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rat-Hitmarker-04.wav</ShortName>
+					<CachePath>SFX/Rat-Hitmarker-04_10C4C929.wem</CachePath>
 				</File>
 				<File Id="503570863" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_steps-19.wav</ShortName>
@@ -742,13 +957,17 @@
 					<ShortName>Zombie-Attack_Whoosh-b-09.wav</ShortName>
 					<CachePath>SFX/Zombie-Attack_Whoosh-b-09_10C4C929.wem</CachePath>
 				</File>
+				<File Id="528250980" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rat-FS_stone-01.wav</ShortName>
+					<CachePath>SFX/Rat-FS_stone-01_10C4C929.wem</CachePath>
+				</File>
 				<File Id="528407277" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Voice-18.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Voice-18_10C4C929.wem</CachePath>
 				</File>
 				<File Id="529512090" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Thump.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Thump_51D3CF83.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Thump_0040FBCF.wem</CachePath>
 				</File>
 				<File Id="537424814" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Step_Low-09.wav</ShortName>
@@ -762,6 +981,10 @@
 					<ShortName>Zombie-VO-Idle-26.wav</ShortName>
 					<CachePath>Voices/English(US)/Zombie-VO-Idle-26_10C4C929.wem</CachePath>
 				</File>
+				<File Id="569587767" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_open_mechanic-08.wav</ShortName>
+					<CachePath>SFX/Env_Door_open_mechanic-08_10C4C929.wem</CachePath>
+				</File>
 				<File Id="570181510" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Zombie-FS-06.wav</ShortName>
 					<CachePath>SFX/Zombie-FS-06_10C4C929.wem</CachePath>
@@ -769,6 +992,10 @@
 				<File Id="570276745" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - UI_LearnSkill1.wav</ShortName>
 					<CachePath>SFX/Menu - UI_LearnSkill1_F470CFDF.wem</CachePath>
+				</File>
+				<File Id="578245728" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rat-Dies-04.wav</ShortName>
+					<CachePath>SFX/Rat-Dies-04_10C4C929.wem</CachePath>
 				</File>
 				<File Id="579335366" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-Dash_Leather-01.wav</ShortName>
@@ -796,15 +1023,31 @@
 				</File>
 				<File Id="599663629" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Thump.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Thump_E95A0EE5.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Thump_D69AE239.wem</CachePath>
+				</File>
+				<File Id="599847394" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_open_hinge-07.wav</ShortName>
+					<CachePath>SFX/Env_Door_open_hinge-07_10C4C929.wem</CachePath>
+				</File>
+				<File Id="600073589" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Boss-Attack_VO-07.wav</ShortName>
+					<CachePath>Voices/English(US)/Boss-Attack_VO-07_10C4C929.wem</CachePath>
+				</File>
+				<File Id="601537148" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rat-FS_click-02.wav</ShortName>
+					<CachePath>SFX/Rat-FS_click-02_10C4C929.wem</CachePath>
 				</File>
 				<File Id="602203764" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Zombie-FS-03.wav</ShortName>
 					<CachePath>SFX/Zombie-FS-03_10C4C929.wem</CachePath>
 				</File>
+				<File Id="602605990" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_open_grinding-07.wav</ShortName>
+					<CachePath>SFX/Env_Door_open_grinding-07_10C4C929.wem</CachePath>
+				</File>
 				<File Id="605546710" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Toespfeife-wet.wav</ShortName>
-					<CachePath>SFX/Toespfeife-wet_10C4C929.wem</CachePath>
+					<CachePath>SFX/Toespfeife-wet_CA5A7332.wem</CachePath>
 				</File>
 				<File Id="608851740" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Voice_Inhale-04.wav</ShortName>
@@ -818,9 +1061,13 @@
 					<ShortName>Player-FS_Leather-08.wav</ShortName>
 					<CachePath>SFX/Player-FS_Leather-08_10C4C929.wem</CachePath>
 				</File>
+				<File Id="610327250" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_close_hinge2-05.wav</ShortName>
+					<CachePath>SFX/Env_Door_close_hinge2-05_10C4C929.wem</CachePath>
+				</File>
 				<File Id="611417319" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Thump.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Thump_9E5F00CD.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Thump_747F8270.wem</CachePath>
 				</File>
 				<File Id="613593918" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Leather-03.wav</ShortName>
@@ -829,6 +1076,10 @@
 				<File Id="614300081" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-GettingHit-06.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-GettingHit-06_3375F516.wem</CachePath>
+				</File>
+				<File Id="614343127" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_close_hinge2-03.wav</ShortName>
+					<CachePath>SFX/Env_Door_close_hinge2-03_10C4C929.wem</CachePath>
 				</File>
 				<File Id="617922362" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Zombie-Attack_Metal-01.wav</ShortName>
@@ -842,6 +1093,10 @@
 					<ShortName>Boss-FS_Step_High-11.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Step_High-11_10C4C929.wem</CachePath>
 				</File>
+				<File Id="627468753" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_close_hinge-01.wav</ShortName>
+					<CachePath>SFX/Env_Door_close_hinge-01_10C4C929.wem</CachePath>
+				</File>
 				<File Id="628967965" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Step_Low-04.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Step_Low-04_10C4C929.wem</CachePath>
@@ -852,15 +1107,35 @@
 				</File>
 				<File Id="629604209" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Thump.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Thump_97A06868.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Thump_D21499A8.wem</CachePath>
+				</File>
+				<File Id="636797730" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rat-Idle-03.wav</ShortName>
+					<CachePath>SFX/Rat-Idle-03_10C4C929.wem</CachePath>
 				</File>
 				<File Id="643711713" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-Jump_Stomp_raw-04.wav</ShortName>
 					<CachePath>SFX/Boss-Jump_Stomp_raw-04_10C4C929.wem</CachePath>
 				</File>
+				<File Id="645752975" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_close_hinge-06.wav</ShortName>
+					<CachePath>SFX/Env_Door_close_hinge-06_10C4C929.wem</CachePath>
+				</File>
+				<File Id="645786117" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_open_hinge-04.wav</ShortName>
+					<CachePath>SFX/Env_Door_open_hinge-04_10C4C929.wem</CachePath>
+				</File>
+				<File Id="646144867" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_open_hinge-03.wav</ShortName>
+					<CachePath>SFX/Env_Door_open_hinge-03_10C4C929.wem</CachePath>
+				</File>
 				<File Id="646596143" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - Music_part1.wav</ShortName>
 					<CachePath>SFX/Menu - Music_part1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="647508355" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_close_hinge-05.wav</ShortName>
+					<CachePath>SFX/Env_Door_close_hinge-05_10C4C929.wem</CachePath>
 				</File>
 				<File Id="648273129" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Step_Low-06.wav</ShortName>
@@ -910,6 +1185,14 @@
 					<ShortName>Player-FS_Voice_Inhale-01.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-FS_Voice_Inhale-01_10C4C929.wem</CachePath>
 				</File>
+				<File Id="667984145" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Boss-Hitmarker_VO-03.wav</ShortName>
+					<CachePath>Voices/English(US)/Boss-Hitmarker_VO-03_10C4C929.wem</CachePath>
+				</File>
+				<File Id="669899163" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rat-Attack-04.wav</ShortName>
+					<CachePath>SFX/Rat-Attack-04_10C4C929.wem</CachePath>
+				</File>
 				<File Id="670316998" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Voice-16.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Voice-16_10C4C929.wem</CachePath>
@@ -922,6 +1205,14 @@
 					<ShortName>Boss-FS_Voice-25.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Voice-25_10C4C929.wem</CachePath>
 				</File>
+				<File Id="680923875" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_close_slam-04.wav</ShortName>
+					<CachePath>SFX/Env_Door_close_slam-04_10C4C929.wem</CachePath>
+				</File>
+				<File Id="681169603" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rat-FS_stone-03.wav</ShortName>
+					<CachePath>SFX/Rat-FS_stone-03_10C4C929.wem</CachePath>
+				</File>
 				<File Id="688916233" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Voice-22.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Voice-22_10C4C929.wem</CachePath>
@@ -929,10 +1220,6 @@
 				<File Id="689344564" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Voice-23.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Voice-23_10C4C929.wem</CachePath>
-				</File>
-				<File Id="690372986" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Zombie-Dies-03.wav</ShortName>
-					<CachePath>Voices/English(US)/Zombie-Dies-03_10C4C929.wem</CachePath>
 				</File>
 				<File Id="694107721" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Voice-07.wav</ShortName>
@@ -946,6 +1233,10 @@
 					<ShortName>Boss-FS_Step_Low-02.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Step_Low-02_10C4C929.wem</CachePath>
 				</File>
+				<File Id="701517095" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rat-Dies-03.wav</ShortName>
+					<CachePath>SFX/Rat-Dies-03_10C4C929.wem</CachePath>
+				</File>
 				<File Id="704141367" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Zombie-Attack_Whoosh-a-10.wav</ShortName>
 					<CachePath>SFX/Zombie-Attack_Whoosh-a-10_10C4C929.wem</CachePath>
@@ -953,6 +1244,10 @@
 				<File Id="705872836" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_steps-08.wav</ShortName>
 					<CachePath>SFX/Player-FS_steps-08_10C4C929.wem</CachePath>
+				</File>
+				<File Id="706592556" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Boss-Attack_VO-04.wav</ShortName>
+					<CachePath>Voices/English(US)/Boss-Attack_VO-04_10C4C929.wem</CachePath>
 				</File>
 				<File Id="718884290" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-Dash_Voice-06.wav</ShortName>
@@ -978,9 +1273,17 @@
 					<ShortName>Zombie-Attack_Metal-02.wav</ShortName>
 					<CachePath>SFX/Zombie-Attack_Metal-02_10C4C929.wem</CachePath>
 				</File>
+				<File Id="732750392" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_open_grinding-06.wav</ShortName>
+					<CachePath>SFX/Env_Door_open_grinding-06_10C4C929.wem</CachePath>
+				</File>
 				<File Id="733090010" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Thump.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Thump_FE16A571.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Thump_ADE3381D.wem</CachePath>
+				</File>
+				<File Id="738180145" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Boss-Attack_VO-01.wav</ShortName>
+					<CachePath>Voices/English(US)/Boss-Attack_VO-01_10C4C929.wem</CachePath>
 				</File>
 				<File Id="738238298" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Cloth-18.wav</ShortName>
@@ -993,6 +1296,14 @@
 				<File Id="743005053" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Cloth-20.wav</ShortName>
 					<CachePath>SFX/Player-FS_Cloth-20_92351A66.wem</CachePath>
+				</File>
+				<File Id="743938466" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_open_hinge-08.wav</ShortName>
+					<CachePath>SFX/Env_Door_open_hinge-08_10C4C929.wem</CachePath>
+				</File>
+				<File Id="746374884" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_close_slam-03.wav</ShortName>
+					<CachePath>SFX/Env_Door_close_slam-03_10C4C929.wem</CachePath>
 				</File>
 				<File Id="748495761" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Zombie-Hitmarker-02.wav</ShortName>
@@ -1010,6 +1321,10 @@
 					<ShortName>Zombie-Hitmarker-03.wav</ShortName>
 					<CachePath>Voices/English(US)/Zombie-Hitmarker-03_10C4C929.wem</CachePath>
 				</File>
+				<File Id="770034677" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rat-FS_stone-02.wav</ShortName>
+					<CachePath>SFX/Rat-FS_stone-02_10C4C929.wem</CachePath>
+				</File>
 				<File Id="771262002" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Voice-38.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Voice-38_10C4C929.wem</CachePath>
@@ -1017,6 +1332,10 @@
 				<File Id="774208815" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Zombie-Dies-05.wav</ShortName>
 					<CachePath>Voices/English(US)/Zombie-Dies-05_10C4C929.wem</CachePath>
+				</File>
+				<File Id="778110188" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_open_grinding-09.wav</ShortName>
+					<CachePath>SFX/Env_Door_open_grinding-09_10C4C929.wem</CachePath>
 				</File>
 				<File Id="785606850" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Voice-36.wav</ShortName>
@@ -1030,6 +1349,10 @@
 					<ShortName>Menu - Music_part3.wav</ShortName>
 					<CachePath>SFX/Menu - Music_part3_10C4C929.wem</CachePath>
 				</File>
+				<File Id="790691827" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rat-Hitmarker-01.wav</ShortName>
+					<CachePath>SFX/Rat-Hitmarker-01_10C4C929.wem</CachePath>
+				</File>
 				<File Id="792333592" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-GettingHit-01.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-GettingHit-01_4B042FC0.wem</CachePath>
@@ -1037,6 +1360,14 @@
 				<File Id="796950873" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Voice-05.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Voice-05_10C4C929.wem</CachePath>
+				</File>
+				<File Id="800886968" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Boss-Attack_VO-03.wav</ShortName>
+					<CachePath>Voices/English(US)/Boss-Attack_VO-03_10C4C929.wem</CachePath>
+				</File>
+				<File Id="804947972" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Boss-Hitmarker_VO-05.wav</ShortName>
+					<CachePath>Voices/English(US)/Boss-Hitmarker_VO-05_10C4C929.wem</CachePath>
 				</File>
 				<File Id="813487492" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Zombie-VO_Attack-09.wav</ShortName>
@@ -1050,9 +1381,25 @@
 					<ShortName>Player-FS_Leather-06.wav</ShortName>
 					<CachePath>SFX/Player-FS_Leather-06_10C4C929.wem</CachePath>
 				</File>
+				<File Id="816826383" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_open_hinge-09.wav</ShortName>
+					<CachePath>SFX/Env_Door_open_hinge-09_10C4C929.wem</CachePath>
+				</File>
+				<File Id="818093022" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_close_hinge2-07.wav</ShortName>
+					<CachePath>SFX/Env_Door_close_hinge2-07_10C4C929.wem</CachePath>
+				</File>
 				<File Id="820166616" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ENV-Torch.wav</ShortName>
 					<CachePath>SFX/ENV-Torch_989F3494.wem</CachePath>
+				</File>
+				<File Id="826040159" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_open_grinding-10.wav</ShortName>
+					<CachePath>SFX/Env_Door_open_grinding-10_10C4C929.wem</CachePath>
+				</File>
+				<File Id="831246282" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_open_hinge-05.wav</ShortName>
+					<CachePath>SFX/Env_Door_open_hinge-05_10C4C929.wem</CachePath>
 				</File>
 				<File Id="832333941" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Voice-28.wav</ShortName>
@@ -1081,6 +1428,10 @@
 				<File Id="837324074" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Zombie-VO-Idle-27.wav</ShortName>
 					<CachePath>Voices/English(US)/Zombie-VO-Idle-27_10C4C929.wem</CachePath>
+				</File>
+				<File Id="843313335" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rat-Attack-01.wav</ShortName>
+					<CachePath>SFX/Rat-Attack-01_10C4C929.wem</CachePath>
 				</File>
 				<File Id="847593425" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - Descent.wav</ShortName>
@@ -1114,6 +1465,18 @@
 					<ShortName>Player-FS_Leather-04.wav</ShortName>
 					<CachePath>SFX/Player-FS_Leather-04_10C4C929.wem</CachePath>
 				</File>
+				<File Id="877691035" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_open_grinding-01.wav</ShortName>
+					<CachePath>SFX/Env_Door_open_grinding-01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="885426643" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Boss-Dies-06.wav</ShortName>
+					<CachePath>Voices/English(US)/Boss-Dies-06_10C4C929.wem</CachePath>
+				</File>
+				<File Id="885804888" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rat-FS_click-04.wav</ShortName>
+					<CachePath>SFX/Rat-FS_click-04_10C4C929.wem</CachePath>
+				</File>
 				<File Id="888679504" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Leather-18.wav</ShortName>
 					<CachePath>SFX/Player-FS_Leather-18_10C4C929.wem</CachePath>
@@ -1121,6 +1484,14 @@
 				<File Id="889376298" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PLAYER-RMC_Charge2.wav</ShortName>
 					<CachePath>SFX/PLAYER-RMC_Charge2_384155AC.wem</CachePath>
+				</File>
+				<File Id="893349053" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_close_hinge2-06.wav</ShortName>
+					<CachePath>SFX/Env_Door_close_hinge2-06_10C4C929.wem</CachePath>
+				</File>
+				<File Id="894239876" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rat-Hitmarker-02.wav</ShortName>
+					<CachePath>SFX/Rat-Hitmarker-02_10C4C929.wem</CachePath>
 				</File>
 				<File Id="912214824" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Leather-02.wav</ShortName>
@@ -1133,6 +1504,10 @@
 				<File Id="912469435" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Cloth-14.wav</ShortName>
 					<CachePath>SFX/Player-FS_Cloth-14_1C2A3619.wem</CachePath>
+				</File>
+				<File Id="916946998" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_open_mechanic-02.wav</ShortName>
+					<CachePath>SFX/Env_Door_open_mechanic-02_10C4C929.wem</CachePath>
 				</File>
 				<File Id="917403618" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-Attack_LMC.wav</ShortName>
@@ -1166,9 +1541,17 @@
 					<ShortName>Player-FS_Cloth-08.wav</ShortName>
 					<CachePath>SFX/Player-FS_Cloth-08_57A1B8BC.wem</CachePath>
 				</File>
+				<File Id="950588409" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Skill Select-01.wav</ShortName>
+					<CachePath>SFX/Skill Select-01_FDB40797.wem</CachePath>
+				</File>
 				<File Id="952933459" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Zombie-Attack_Whoosh-b-11.wav</ShortName>
 					<CachePath>SFX/Zombie-Attack_Whoosh-b-11_10C4C929.wem</CachePath>
+				</File>
+				<File Id="954302497" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Player-Dying_VO-01.wav</ShortName>
+					<CachePath>Voices/English(US)/Player-Dying_VO-01_10C4C929.wem</CachePath>
 				</File>
 				<File Id="955521415" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Platzhalter-01.wav</ShortName>
@@ -1176,7 +1559,7 @@
 				</File>
 				<File Id="957383586" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Zombie-Dies-08.wav</ShortName>
-					<CachePath>Voices/English(US)/Zombie-Dies-08_10C4C929.wem</CachePath>
+					<CachePath>Voices/English(US)/Zombie-Dies-08_E9394D2F.wem</CachePath>
 				</File>
 				<File Id="958687390" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Zombie-VO-Idle-33.wav</ShortName>
@@ -1184,11 +1567,15 @@
 				</File>
 				<File Id="959944303" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Ketten_0E0AA2AE.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Ketten_6F9A605D.wem</CachePath>
 				</File>
 				<File Id="967862557" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-Dash_Voice-07.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-Dash_Voice-07_10C4C929.wem</CachePath>
+				</File>
+				<File Id="971546547" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_close_hinge-03.wav</ShortName>
+					<CachePath>SFX/Env_Door_close_hinge-03_10C4C929.wem</CachePath>
 				</File>
 				<File Id="974729402" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PLAYER-RMC3_Release.wav</ShortName>
@@ -1208,11 +1595,11 @@
 				</File>
 				<File Id="985165359" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Ketten_A6BF21CC.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Ketten_B04690A0.wem</CachePath>
 				</File>
 				<File Id="987030988" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Zombie-Dies-04.wav</ShortName>
-					<CachePath>Voices/English(US)/Zombie-Dies-04_10C4C929.wem</CachePath>
+					<CachePath>Voices/English(US)/Zombie-Dies-04_2308DD9A.wem</CachePath>
 				</File>
 				<File Id="989871151" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-GettingHit-05.wav</ShortName>
@@ -1220,7 +1607,7 @@
 				</File>
 				<File Id="992843410" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Thump.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Thump_F638C86F.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Thump_66F01A3B.wem</CachePath>
 				</File>
 				<File Id="995070210" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Cloth-10.wav</ShortName>
@@ -1238,13 +1625,29 @@
 					<ShortName>Zombie-Attack_Metal-10.wav</ShortName>
 					<CachePath>SFX/Zombie-Attack_Metal-10_10C4C929.wem</CachePath>
 				</File>
+				<File Id="1001743722" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_open_grinding-05.wav</ShortName>
+					<CachePath>SFX/Env_Door_open_grinding-05_10C4C929.wem</CachePath>
+				</File>
 				<File Id="1003067410" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-Dash_Stomp-01.wav</ShortName>
 					<CachePath>SFX/Player-Dash_Stomp-01_10C4C929.wem</CachePath>
 				</File>
+				<File Id="1003897671" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rat-Idle-08.wav</ShortName>
+					<CachePath>SFX/Rat-Idle-08_10C4C929.wem</CachePath>
+				</File>
 				<File Id="1011856105" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Zombie-VO-Idle-29.wav</ShortName>
 					<CachePath>Voices/English(US)/Zombie-VO-Idle-29_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1013725687" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Boss-Dies-04.wav</ShortName>
+					<CachePath>Voices/English(US)/Boss-Dies-04_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1013804174" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_close_hinge2-02.wav</ShortName>
+					<CachePath>SFX/Env_Door_close_hinge2-02_10C4C929.wem</CachePath>
 				</File>
 				<File Id="1015325291" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Cloth-06.wav</ShortName>
@@ -1254,13 +1657,29 @@
 					<ShortName>Boss-FS_Chains-06.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Chains-06_10C4C929.wem</CachePath>
 				</File>
+				<File Id="1018434102" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Boss-Hitmarker_VO-06.wav</ShortName>
+					<CachePath>Voices/English(US)/Boss-Hitmarker_VO-06_10C4C929.wem</CachePath>
+				</File>
 				<File Id="1019021512" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Zombie-FS-04.wav</ShortName>
 					<CachePath>SFX/Zombie-FS-04_10C4C929.wem</CachePath>
 				</File>
+				<File Id="1020274642" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_open_mechanic-07.wav</ShortName>
+					<CachePath>SFX/Env_Door_open_mechanic-07_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1025179396" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_close_slam-02.wav</ShortName>
+					<CachePath>SFX/Env_Door_close_slam-02_10C4C929.wem</CachePath>
+				</File>
 				<File Id="1025884227" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Voice_Inhale-10.wav</ShortName>
 					<CachePath>Voices/English(US)/Player-FS_Voice_Inhale-10_7E08D0EE.wem</CachePath>
+				</File>
+				<File Id="1032183701" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_open_mechanic-05.wav</ShortName>
+					<CachePath>SFX/Env_Door_open_mechanic-05_10C4C929.wem</CachePath>
 				</File>
 				<File Id="1034679750" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_steps-07.wav</ShortName>
@@ -1276,7 +1695,7 @@
 				</File>
 				<File Id="1036381591" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Ketten_4034C8EA.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Ketten_06DAE69A.wem</CachePath>
 				</File>
 				<File Id="1037512816" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Voice-10.wav</ShortName>
@@ -1284,11 +1703,31 @@
 				</File>
 				<File Id="1041115910" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Thump.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Thump_60325A05.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Thump_8B242FD6.wem</CachePath>
+				</File>
+				<File Id="1044761973" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_open_hinge-06.wav</ShortName>
+					<CachePath>SFX/Env_Door_open_hinge-06_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1046254883" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env_Door_close_slam-05.wav</ShortName>
+					<CachePath>SFX/Env_Door_close_slam-05_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1047265240" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rat-Hitmarker-03.wav</ShortName>
+					<CachePath>SFX/Rat-Hitmarker-03_10C4C929.wem</CachePath>
 				</File>
 				<File Id="1047307675" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Zombie-Hitmarker-05.wav</ShortName>
 					<CachePath>Voices/English(US)/Zombie-Hitmarker-05_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1047727762" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rat-Attack-02.wav</ShortName>
+					<CachePath>SFX/Rat-Attack-02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1048690125" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rat-Idle-05.wav</ShortName>
+					<CachePath>SFX/Rat-Idle-05_10C4C929.wem</CachePath>
 				</File>
 				<File Id="1052242071" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Chains-03.wav</ShortName>
@@ -1332,11 +1771,15 @@
 				</File>
 				<File Id="1068678857" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Ketten.wav</ShortName>
-					<CachePath>SFX/Menu - ATMO_Ketten_62296EA3.wem</CachePath>
+					<CachePath>SFX/Menu - ATMO_Ketten_AA13C7CA.wem</CachePath>
 				</File>
 				<File Id="1069512068" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-FS_Voice-08.wav</ShortName>
 					<CachePath>SFX/Boss-FS_Voice-08_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1070008858" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Player-Dying_VO-02.wav</ShortName>
+					<CachePath>Voices/English(US)/Player-Dying_VO-02_10C4C929.wem</CachePath>
 				</File>
 				<File Id="1072581976" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_steps-09.wav</ShortName>
@@ -1351,13 +1794,19 @@
 				<Custom>
 					<Plugin Id="344626603" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="490516109" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
-					<Plugin Id="522512632" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 				</Custom>
 				<ShareSets>
+					<Plugin Id="506891147" Name="Plate_Small" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="535667444" Name="Bathroom1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="819943492" Name="Fear_no_Evil" LibName="Wwise Harmonizer" LibId="9043971"/>
 					<Plugin Id="1182561210" Name="Cut_3dB_10KHz" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="1416967478" Name="All_Buttons_IN" LibName="Wwise Compressor" LibId="7077891"/>
 					<Plugin Id="1674078407" Name="Chorus_Like" LibName="Wwise Flanger" LibId="8192003"/>
+					<Plugin Id="2652646462" Name="Dialog_Leveler_Soft" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="3043085106" Name="High_Impact" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="3435419520" Name="New_Guitar_Distortion" LibName="Wwise Guitar Distortion" LibId="8257539"/>
+					<Plugin Id="3442768367" Name="Hall_Large_Dark" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="3604890626" Name="High_Pass_60Hz" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="3851006675" Name="Secret_message_Distant" LibName="Wwise Harmonizer" LibId="9043971"/>
 					<Plugin Id="4136714357" Name="Few_Odd_Harm_Peaks" LibName="Wwise Flanger" LibId="8192003"/>
 					<Plugin Id="4202347640" Name="Repeat_after_me" LibName="Wwise Harmonizer" LibId="9043971"/>
@@ -1375,7 +1824,25 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="1075280761" Name="Play_Boss_FS" MaxAttenuation="12" DurationType="OneShot" DurationMin="0.422625" DurationMax="0.422625">
+				<Event Id="4155093788" Name="Play_Boss_Attack" MaxAttenuation="10" DurationType="OneShot" DurationMin="1.3333541" DurationMax="1.4166666">
+					<MediaRefs>
+						<MediaRef Id="199145603"/>
+						<MediaRef Id="216846426"/>
+						<MediaRef Id="233848048"/>
+						<MediaRef Id="600073589"/>
+						<MediaRef Id="706592556"/>
+						<MediaRef Id="738180145"/>
+						<MediaRef Id="800886968"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="515021733" Name="Play_Boss_Dies" DurationType="OneShot" DurationMin="2.7666667" DurationMax="3.6315625">
+					<MediaRefs>
+						<MediaRef Id="245519691"/>
+						<MediaRef Id="885426643"/>
+						<MediaRef Id="1013725687"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1075280761" Name="Play_Boss_FS" MaxAttenuation="10" DurationType="OneShot" DurationMin="0.422625" DurationMax="0.422625">
 					<MediaRefs>
 						<MediaRef Id="7062636"/>
 						<MediaRef Id="13269472"/>
@@ -1401,7 +1868,7 @@
 						<MediaRef Id="979965442"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="727530039" Name="Play_Boss_FS_Chain" MaxAttenuation="12" DurationType="OneShot" DurationMin="0" DurationMax="1.0556353">
+				<Event Id="727530039" Name="Play_Boss_FS_Chain" MaxAttenuation="10" DurationType="OneShot" DurationMin="0" DurationMax="1.0556353">
 					<MediaRefs>
 						<MediaRef Id="70334053"/>
 						<MediaRef Id="132240131"/>
@@ -1422,7 +1889,22 @@
 						<MediaRef Id="1052242071"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2050535857" Name="Play_Boss_Idle_Voice" MaxAttenuation="12" DurationType="OneShot" DurationMin="0.71666664" DurationMax="1.3333334">
+				<Event Id="3682868997" Name="Play_Boss_Hitmarker" MaxAttenuation="10" DurationType="OneShot" DurationMin="0.6666667" DurationMax="0.6666875">
+					<MediaRefs>
+						<MediaRef Id="42173254"/>
+						<MediaRef Id="138007222"/>
+						<MediaRef Id="167639514"/>
+						<MediaRef Id="237366140"/>
+						<MediaRef Id="250481480"/>
+						<MediaRef Id="303534719"/>
+						<MediaRef Id="374277638"/>
+						<MediaRef Id="487517609"/>
+						<MediaRef Id="667984145"/>
+						<MediaRef Id="804947972"/>
+						<MediaRef Id="1018434102"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2050535857" Name="Play_Boss_Idle_Voice" MaxAttenuation="10" DurationType="OneShot" DurationMin="0.71666664" DurationMax="1.3333334">
 					<MediaRefs>
 						<MediaRef Id="37348861"/>
 						<MediaRef Id="114367471"/>
@@ -1469,7 +1951,7 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
-				<Event Id="2284332626" Name="Play_Boss_Jump_Stomp" MaxAttenuation="12" DurationType="OneShot" DurationMin="0.7283656" DurationMax="1.0103085">
+				<Event Id="2284332626" Name="Play_Boss_Jump_Stomp" MaxAttenuation="10" DurationType="OneShot" DurationMin="0.7283656" DurationMax="1.0103085">
 					<MediaRefs>
 						<MediaRef Id="84724703"/>
 						<MediaRef Id="201483726"/>
@@ -1483,7 +1965,20 @@
 						<MediaRef Id="980504822"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1849851393" Name="Play_ENV_Blue_Fire" MaxAttenuation="12" DurationType="Infinite">
+				<Event Id="1935154233" Name="Play_Boss_Music" DurationType="OneShot" DurationMin="91.95" DurationMax="91.95">
+					<MediaRefs>
+						<MediaRef Id="496571148"/>
+						<MediaRef Id="646596143"/>
+						<MediaRef Id="663628163"/>
+						<MediaRef Id="790304389"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="209295608" Name="Play_daumen" MaxAttenuation="20" DurationType="OneShot" DurationMin="3.2" DurationMax="3.2">
+					<MediaRefs>
+						<MediaRef Id="570276745"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1849851393" Name="Play_ENV_Blue_Fire" MaxAttenuation="10" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="129770599"/>
 					</MediaRefs>
@@ -1494,12 +1989,74 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="1468104246" Name="Play_ENV_FireBowl" MaxAttenuation="12" DurationType="Infinite">
+				<Event Id="1670183507" Name="Play_ENV_Door_close" MaxAttenuation="20" DurationType="OneShot" DurationMin="1.15" DurationMax="1.1666875">
+					<MediaRefs>
+						<MediaRef Id="59062343"/>
+						<MediaRef Id="170954186"/>
+						<MediaRef Id="181781887"/>
+						<MediaRef Id="229679170"/>
+						<MediaRef Id="255270975"/>
+						<MediaRef Id="297893360"/>
+						<MediaRef Id="301706579"/>
+						<MediaRef Id="355023093"/>
+						<MediaRef Id="375179020"/>
+						<MediaRef Id="396402779"/>
+						<MediaRef Id="459226443"/>
+						<MediaRef Id="478875553"/>
+						<MediaRef Id="496570468"/>
+						<MediaRef Id="610327250"/>
+						<MediaRef Id="614343127"/>
+						<MediaRef Id="627468753"/>
+						<MediaRef Id="645752975"/>
+						<MediaRef Id="647508355"/>
+						<MediaRef Id="680923875"/>
+						<MediaRef Id="746374884"/>
+						<MediaRef Id="818093022"/>
+						<MediaRef Id="893349053"/>
+						<MediaRef Id="971546547"/>
+						<MediaRef Id="1013804174"/>
+						<MediaRef Id="1025179396"/>
+						<MediaRef Id="1046254883"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1583912933" Name="Play_ENV_Door_Open" DurationType="OneShot" DurationMin="1.6" DurationMax="1.6000209">
+					<MediaRefs>
+						<MediaRef Id="12044895"/>
+						<MediaRef Id="63948037"/>
+						<MediaRef Id="134227462"/>
+						<MediaRef Id="171431546"/>
+						<MediaRef Id="180897789"/>
+						<MediaRef Id="233753292"/>
+						<MediaRef Id="273170643"/>
+						<MediaRef Id="332383406"/>
+						<MediaRef Id="355660297"/>
+						<MediaRef Id="473904400"/>
+						<MediaRef Id="493269044"/>
+						<MediaRef Id="569587767"/>
+						<MediaRef Id="599847394"/>
+						<MediaRef Id="602605990"/>
+						<MediaRef Id="645786117"/>
+						<MediaRef Id="646144867"/>
+						<MediaRef Id="732750392"/>
+						<MediaRef Id="743938466"/>
+						<MediaRef Id="778110188"/>
+						<MediaRef Id="816826383"/>
+						<MediaRef Id="826040159"/>
+						<MediaRef Id="831246282"/>
+						<MediaRef Id="877691035"/>
+						<MediaRef Id="916946998"/>
+						<MediaRef Id="1001743722"/>
+						<MediaRef Id="1020274642"/>
+						<MediaRef Id="1032183701"/>
+						<MediaRef Id="1044761973"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1468104246" Name="Play_ENV_FireBowl" MaxAttenuation="10" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="820166616"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3621683420" Name="Play_ENV_Torch" MaxAttenuation="12" DurationType="Infinite">
+				<Event Id="3621683420" Name="Play_ENV_Torch" MaxAttenuation="10" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="655158912"/>
 					</MediaRefs>
@@ -1509,7 +2066,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="2940525158" Name="Play_ENV_Torch2" MaxAttenuation="12" DurationType="Infinite">
+				<Event Id="2940525158" Name="Play_ENV_Torch2" MaxAttenuation="10" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="411084714"/>
 					</MediaRefs>
@@ -1524,6 +2081,11 @@
 						<MediaRef Id="322777483"/>
 						<MediaRef Id="912216463"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2652646462"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="3765695918" Name="Play_Heartbeat" DurationType="Infinite">
 					<MediaRefs>
@@ -1535,13 +2097,13 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="3103472528" Name="Play_Intro" DurationType="OneShot" DurationMin="36.91441" DurationMax="36.91441">
+				<Event Id="3103472528" Name="Play_Intro" DurationType="OneShot" DurationMin="32.905987" DurationMax="32.905987">
 					<MediaRefs>
 						<MediaRef Id="31143423"/>
 						<MediaRef Id="160074641"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3147874366" Name="Play_Jumping_Atmo_Sound" MaxAttenuation="12" DurationType="OneShot" DurationMin="3.533899" DurationMax="9.643653">
+				<Event Id="3147874366" Name="Play_Jumping_Atmo_Sound" MaxAttenuation="10" DurationType="OneShot" DurationMin="2.709157" DurationMax="9.643653">
 					<MediaRefs>
 						<MediaRef Id="25470229"/>
 						<MediaRef Id="86915881"/>
@@ -1567,6 +2129,11 @@
 						<MediaRef Id="1041115910"/>
 						<MediaRef Id="1068678857"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="3442768367"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="1905734753" Name="Play_Menu_ATMO" DurationType="Infinite">
 					<MediaRefs>
@@ -1628,7 +2195,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="3911744873" Name="Play_Platzhalter" MaxAttenuation="12" DurationType="OneShot" DurationMin="1.4666667" DurationMax="1.4666667">
+				<Event Id="3911744873" Name="Play_Platzhalter" MaxAttenuation="10" DurationType="OneShot" DurationMin="1.4666667" DurationMax="1.4666667">
 					<MediaRefs>
 						<MediaRef Id="955521415"/>
 					</MediaRefs>
@@ -1655,6 +2222,14 @@
 						<MediaRef Id="814521280"/>
 						<MediaRef Id="967862557"/>
 						<MediaRef Id="1003067410"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="902186995" Name="Play_Player_Dying_VO" DurationType="OneShot" DurationMin="1.1826667" DurationMax="1.2651875">
+					<MediaRefs>
+						<MediaRef Id="129675704"/>
+						<MediaRef Id="210711380"/>
+						<MediaRef Id="954302497"/>
+						<MediaRef Id="1070008858"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="4078825889" Name="Play_Player_FS" DurationType="OneShot" DurationMin="0.44800273" DurationMax="1.6166667">
@@ -1793,12 +2368,85 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="1825965928" Name="Play_Spell_Hitmarker" MaxAttenuation="12" DurationType="OneShot" DurationMin="0.36680162" DurationMax="0.42378527">
+				<Event Id="1532641738" Name="Play_Rat_Attack" MaxAttenuation="10" DurationType="OneShot" DurationMin="0.3131875" DurationMax="0.50625">
 					<MediaRefs>
-						<MediaRef Id="725466761"/>
+						<MediaRef Id="195250717"/>
+						<MediaRef Id="481592496"/>
+						<MediaRef Id="669899163"/>
+						<MediaRef Id="843313335"/>
+						<MediaRef Id="1047727762"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="819943492"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="3395282991" Name="Play_Rat_Dies" MaxAttenuation="10" DurationType="OneShot" DurationMin="0.61784434" DurationMax="0.89352477">
+					<MediaRefs>
+						<MediaRef Id="177677233"/>
+						<MediaRef Id="178935259"/>
+						<MediaRef Id="578245728"/>
+						<MediaRef Id="701517095"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3597927707" Name="Play_Zombie_Attack" MaxAttenuation="12" DurationType="OneShot" DurationMin="0.7666875" DurationMax="1.1980625">
+				<Event Id="31507663" Name="Play_Rat_FS" MaxAttenuation="10" DurationType="OneShot" DurationMin="0.2674181" DurationMax="0.42502084">
+					<MediaRefs>
+						<MediaRef Id="226452255"/>
+						<MediaRef Id="372465155"/>
+						<MediaRef Id="402273019"/>
+						<MediaRef Id="528250980"/>
+						<MediaRef Id="601537148"/>
+						<MediaRef Id="681169603"/>
+						<MediaRef Id="770034677"/>
+						<MediaRef Id="885804888"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3713921723" Name="Play_Rat_Hitmarker" MaxAttenuation="10" DurationType="OneShot" DurationMin="0.36680162" DurationMax="0.42378527">
+					<MediaRefs>
+						<MediaRef Id="55966271"/>
+						<MediaRef Id="502014182"/>
+						<MediaRef Id="725466761"/>
+						<MediaRef Id="790691827"/>
+						<MediaRef Id="894239876"/>
+						<MediaRef Id="1047265240"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="819943492"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="4168346700" Name="Play_Rat_Idle" MaxAttenuation="10" DurationType="OneShot" DurationMin="0.3618381" DurationMax="1.2908014">
+					<MediaRefs>
+						<MediaRef Id="37124856"/>
+						<MediaRef Id="55228012"/>
+						<MediaRef Id="115413513"/>
+						<MediaRef Id="232034163"/>
+						<MediaRef Id="324565045"/>
+						<MediaRef Id="470923622"/>
+						<MediaRef Id="636797730"/>
+						<MediaRef Id="1003897671"/>
+						<MediaRef Id="1048690125"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="3435419520"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="756798344" Name="Play_Skill_Select" DurationType="OneShot" DurationMin="0.25" DurationMax="0.25">
+					<MediaRefs>
+						<MediaRef Id="950588409"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="506891147"/>
+							<PluginRef Id="3604890626"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="3597927707" Name="Play_Zombie_Attack" MaxAttenuation="10" DurationType="OneShot" DurationMin="0.7666875" DurationMax="1.1980625">
 					<MediaRefs>
 						<MediaRef Id="3300382"/>
 						<MediaRef Id="10843605"/>
@@ -1848,20 +2496,24 @@
 						<MediaRef Id="1067679039"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="635270414" Name="Play_Zombie_Dies" MaxAttenuation="12" DurationType="OneShot" DurationMin="0.73335415" DurationMax="1.6500208">
+				<Event Id="635270414" Name="Play_Zombie_Dies" MaxAttenuation="10" DurationType="OneShot" DurationMin="0.65097857" DurationMax="1.6899129">
 					<MediaRefs>
 						<MediaRef Id="116764371"/>
 						<MediaRef Id="155268557"/>
 						<MediaRef Id="397819662"/>
 						<MediaRef Id="425418450"/>
-						<MediaRef Id="690372986"/>
 						<MediaRef Id="774208815"/>
 						<MediaRef Id="862864940"/>
 						<MediaRef Id="957383586"/>
 						<MediaRef Id="987030988"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2652646462"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
-				<Event Id="895956798" Name="Play_Zombie_FS" MaxAttenuation="12" DurationType="OneShot" DurationMin="0.2035" DurationMax="0.32464585">
+				<Event Id="895956798" Name="Play_Zombie_FS" MaxAttenuation="10" DurationType="OneShot" DurationMin="0.19207841" DurationMax="0.3439503">
 					<MediaRefs>
 						<MediaRef Id="134795684"/>
 						<MediaRef Id="153264191"/>
@@ -1876,19 +2528,25 @@
 						<MediaRef Id="997429940"/>
 						<MediaRef Id="1019021512"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="3043085106"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
-				<Event Id="818595436" Name="Play_Zombie_Hitmarker" MaxAttenuation="12" DurationType="OneShot" DurationMin="0.2505" DurationMax="0.53335416">
+				<Event Id="818595436" Name="Play_Zombie_Hitmarker" MaxAttenuation="10" DurationType="OneShot" DurationMin="0.36680162" DurationMax="0.53335416">
 					<MediaRefs>
 						<MediaRef Id="133461549"/>
 						<MediaRef Id="185773762"/>
 						<MediaRef Id="218986277"/>
 						<MediaRef Id="372393383"/>
+						<MediaRef Id="725466761"/>
 						<MediaRef Id="748495761"/>
 						<MediaRef Id="764511545"/>
 						<MediaRef Id="1047307675"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="880339566" Name="Play_Zombie_Idle_Voice" MaxAttenuation="12" DurationType="OneShot" DurationMin="1" DurationMax="1.3833542">
+				<Event Id="880339566" Name="Play_Zombie_Idle_Voice" MaxAttenuation="10" DurationType="OneShot" DurationMin="1.0333542" DurationMax="1.3833542">
 					<MediaRefs>
 						<MediaRef Id="16162616"/>
 						<MediaRef Id="62348827"/>
@@ -1906,11 +2564,6 @@
 						<MediaRef Id="958687390"/>
 						<MediaRef Id="1011856105"/>
 					</MediaRefs>
-					<PluginRefs>
-						<Custom>
-							<PluginRef Id="522512632"/>
-						</Custom>
-					</PluginRefs>
 				</Event>
 				<Event Id="2829022778" Name="Set_State_Pause" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetState>
@@ -1936,5 +2589,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F37A84C7-7CC3-AF12-F211-1C5A246CE995}</FileHash>
+	<FileHash>{F35BE954-5087-2796-9758-6CB12E04C1F5}</FileHash>
 </SoundBanksInfo>

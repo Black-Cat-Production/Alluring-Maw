@@ -13,13 +13,13 @@
 						<Transition>
 							<StartState Name="Pause" ID="{7CE44FF1-1353-4A0D-8B20-17B684DAEBE5}"/>
 							<EndState Name="NoPause" ID="{7F901721-27FA-4FD7-93CD-25BDD1A9ECAF}"/>
-							<Time>3</Time>
+							<Time>2</Time>
 							<IsShared>false</IsShared>
 						</Transition>
 						<Transition>
 							<StartState Name="NoPause" ID="{7F901721-27FA-4FD7-93CD-25BDD1A9ECAF}"/>
 							<EndState Name="Pause" ID="{7CE44FF1-1353-4A0D-8B20-17B684DAEBE5}"/>
-							<Time>1</Time>
+							<Time>0.2</Time>
 							<IsShared>false</IsShared>
 						</Transition>
 					</TransitionList>

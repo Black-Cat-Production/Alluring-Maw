@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 1801504fbd1cb94e81bf956803befb65
     GuidInternal: 
-    m_lastTime: -8584154956339299403
+    m_lastTime: -8584153056439453389
     List:
     - name: Env_Big_Room
       guid: 4fc4582151266545ad3710bf8685777a
@@ -80,6 +80,26 @@ MonoBehaviour:
         ObjectType: 1
         guid: fc4bba3bdf9b3c4e9b3df4eb9acb7d7b
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REVERB\Env_Corridor
+    - name: Env_Mid_Room
+      guid: 0b194fad5b56eb4585f603d481713d0c
+      id: 960112437
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1801504fbd1cb94e81bf956803befb65
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: REVERB
+        ObjectType: 2
+        guid: e9a7fc28a6c116468ea5b21ad4b9dcd3
+      - ElementName: Env_Mid_Room
+        ObjectType: 1
+        guid: 0b194fad5b56eb4585f603d481713d0c
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REVERB\Env_Mid_Room
     - name: Env_Small_Room
       guid: a1ebf4d2abdb0c4a8d096440a585b72a
       id: 783969252
@@ -100,26 +120,6 @@ MonoBehaviour:
         ObjectType: 1
         guid: a1ebf4d2abdb0c4a8d096440a585b72a
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REVERB\Env_Small_Room
-    - name: Gameplay
-      guid: eae544bf4433984a8169843d4c4e7db5
-      id: 89505537
-      PathAndIcons:
-      - ElementName: Master-Mixer Hierarchy
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 1801504fbd1cb94e81bf956803befb65
-      - ElementName: Master Audio Bus
-        ObjectType: 2
-        guid: d8a41415a61d2a41a17e75ca0c2149f3
-      - ElementName: SFX Bus
-        ObjectType: 2
-        guid: a9be2804b3866d409b6a357ce32b9e02
-      - ElementName: Gameplay
-        ObjectType: 2
-        guid: eae544bf4433984a8169843d4c4e7db5
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Bus\Gameplay
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -185,26 +185,6 @@ MonoBehaviour:
         ObjectType: 2
         guid: a9be2804b3866d409b6a357ce32b9e02
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Bus
-    - name: UI-Sounds
-      guid: 9cb3d9a358f62f419b32d8a2b875e6e3
-      id: 2235087924
-      PathAndIcons:
-      - ElementName: Master-Mixer Hierarchy
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 1801504fbd1cb94e81bf956803befb65
-      - ElementName: Master Audio Bus
-        ObjectType: 2
-        guid: d8a41415a61d2a41a17e75ca0c2149f3
-      - ElementName: SFX Bus
-        ObjectType: 2
-        guid: a9be2804b3866d409b6a357ce32b9e02
-      - ElementName: UI-Sounds
-        ObjectType: 2
-        guid: 9cb3d9a358f62f419b32d8a2b875e6e3
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Bus\UI-Sounds
     - name: Voice Bus
       guid: 02aa2c34a247124c837a6682e05c0d90
       id: 3472939855
@@ -234,7 +214,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 6fee4f8286acc84394f7b8f67b517463
     GuidInternal: 
-    m_lastTime: -8584154904076792199
+    m_lastTime: -8584153135857855367
     List:
     - name: Main
       guid: 7d25f11f0d584f49bd3f5167772f2c93
@@ -262,7 +242,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: f4ccbb95d042c543bd560120d28efaf5
     GuidInternal: 
-    m_lastTime: -8584154899585898992
+    m_lastTime: -8584153046543950188
     List:
     - name: BOSS
       guid: 34d61693d5e42d419f8b799d1ffe5126
@@ -274,10 +254,30 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: ENEMY
+        ObjectType: 4
+        guid: 9a1392d046b91a489f1b14224a71d4ea
       - ElementName: BOSS
         ObjectType: 4
         guid: 34d61693d5e42d419f8b799d1ffe5126
-      Path: Events\Default Work Unit\BOSS
+      Path: Events\Default Work Unit\ENEMY\BOSS
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: ENEMY
+      guid: 9a1392d046b91a489f1b14224a71d4ea
+      id: 2299321487
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: ENEMY
+        ObjectType: 4
+        guid: 9a1392d046b91a489f1b14224a71d4ea
+      Path: Events\Default Work Unit\ENEMY
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -308,13 +308,10 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: f4ccbb95d042c543bd560120d28efaf5
-      - ElementName: MENU
-        ObjectType: 4
-        guid: d5b00bb575b9f8448acb0ae52a065ad2
       - ElementName: INTRO
         ObjectType: 4
         guid: b59c6009acdfa14e8aee4be48519d312
-      Path: Events\Default Work Unit\MENU\INTRO
+      Path: Events\Default Work Unit\INTRO
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -332,6 +329,23 @@ MonoBehaviour:
         ObjectType: 4
         guid: d5b00bb575b9f8448acb0ae52a065ad2
       Path: Events\Default Work Unit\MENU
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: MUSIC
+      guid: 7ba5bf964145184480010a83aa6a1a59
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: MUSIC
+        ObjectType: 4
+        guid: 7ba5bf964145184480010a83aa6a1a59
+      Path: Events\Default Work Unit\MUSIC
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -355,6 +369,52 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Boss_Attack
+      guid: 8e2bcbba9a7d504b907702c35ff6457a
+      id: 4155093788
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: ENEMY
+        ObjectType: 4
+        guid: 9a1392d046b91a489f1b14224a71d4ea
+      - ElementName: BOSS
+        ObjectType: 4
+        guid: 34d61693d5e42d419f8b799d1ffe5126
+      - ElementName: Play_Boss_Attack
+        ObjectType: 3
+        guid: 8e2bcbba9a7d504b907702c35ff6457a
+      Path: Events\Default Work Unit\ENEMY\BOSS\Play_Boss_Attack
+      maxAttenuation: 10
+      maxDuration: 1.4166666
+      minDuration: 1.3333541
+    - name: Play_Boss_Dies
+      guid: 2b294a212c384b41a034478ecbad3721
+      id: 515021733
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: ENEMY
+        ObjectType: 4
+        guid: 9a1392d046b91a489f1b14224a71d4ea
+      - ElementName: BOSS
+        ObjectType: 4
+        guid: 34d61693d5e42d419f8b799d1ffe5126
+      - ElementName: Play_Boss_Dies
+        ObjectType: 3
+        guid: 2b294a212c384b41a034478ecbad3721
+      Path: Events\Default Work Unit\ENEMY\BOSS\Play_Boss_Dies
+      maxAttenuation: 0
+      maxDuration: 3.6315625
+      minDuration: 2.7666667
     - name: Play_Boss_FS
       guid: 4b9169fc9ec08f41abc08fb2404265f5
       id: 1075280761
@@ -365,14 +425,17 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: ENEMY
+        ObjectType: 4
+        guid: 9a1392d046b91a489f1b14224a71d4ea
       - ElementName: BOSS
         ObjectType: 4
         guid: 34d61693d5e42d419f8b799d1ffe5126
       - ElementName: Play_Boss_FS
         ObjectType: 3
         guid: 4b9169fc9ec08f41abc08fb2404265f5
-      Path: Events\Default Work Unit\BOSS\Play_Boss_FS
-      maxAttenuation: 12
+      Path: Events\Default Work Unit\ENEMY\BOSS\Play_Boss_FS
+      maxAttenuation: 10
       maxDuration: 0.422625
       minDuration: 0.422625
     - name: Play_Boss_FS_Chain
@@ -385,16 +448,42 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: ENEMY
+        ObjectType: 4
+        guid: 9a1392d046b91a489f1b14224a71d4ea
       - ElementName: BOSS
         ObjectType: 4
         guid: 34d61693d5e42d419f8b799d1ffe5126
       - ElementName: Play_Boss_FS_Chain
         ObjectType: 3
         guid: a0ac5a8d2f88fe41b09696ea925ec9b1
-      Path: Events\Default Work Unit\BOSS\Play_Boss_FS_Chain
-      maxAttenuation: 12
+      Path: Events\Default Work Unit\ENEMY\BOSS\Play_Boss_FS_Chain
+      maxAttenuation: 10
       maxDuration: 1.0556353
       minDuration: 0
+    - name: Play_Boss_Hitmarker
+      guid: 9949b71b79b5a74792d9d6d95bb2fd0d
+      id: 3682868997
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: ENEMY
+        ObjectType: 4
+        guid: 9a1392d046b91a489f1b14224a71d4ea
+      - ElementName: BOSS
+        ObjectType: 4
+        guid: 34d61693d5e42d419f8b799d1ffe5126
+      - ElementName: Play_Boss_Hitmarker
+        ObjectType: 3
+        guid: 9949b71b79b5a74792d9d6d95bb2fd0d
+      Path: Events\Default Work Unit\ENEMY\BOSS\Play_Boss_Hitmarker
+      maxAttenuation: 10
+      maxDuration: 0.6666875
+      minDuration: 0.6666667
     - name: Play_Boss_Idle_Voice
       guid: b497a02bc875e24a93825d46cf60d638
       id: 2050535857
@@ -405,14 +494,17 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: ENEMY
+        ObjectType: 4
+        guid: 9a1392d046b91a489f1b14224a71d4ea
       - ElementName: BOSS
         ObjectType: 4
         guid: 34d61693d5e42d419f8b799d1ffe5126
       - ElementName: Play_Boss_Idle_Voice
         ObjectType: 3
         guid: b497a02bc875e24a93825d46cf60d638
-      Path: Events\Default Work Unit\BOSS\Play_Boss_Idle_Voice
-      maxAttenuation: 12
+      Path: Events\Default Work Unit\ENEMY\BOSS\Play_Boss_Idle_Voice
+      maxAttenuation: 10
       maxDuration: 1.3333334
       minDuration: 0.71666664
     - name: Play_Boss_Jump_Stomp
@@ -425,14 +517,17 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: ENEMY
+        ObjectType: 4
+        guid: 9a1392d046b91a489f1b14224a71d4ea
       - ElementName: BOSS
         ObjectType: 4
         guid: 34d61693d5e42d419f8b799d1ffe5126
       - ElementName: Play_Boss_Jump_Stomp
         ObjectType: 3
         guid: e65752b817844e44b31d4f6507efe0f3
-      Path: Events\Default Work Unit\BOSS\Play_Boss_Jump_Stomp
-      maxAttenuation: 12
+      Path: Events\Default Work Unit\ENEMY\BOSS\Play_Boss_Jump_Stomp
+      maxAttenuation: 10
       maxDuration: 1.0103085
       minDuration: 0.7283656
     - name: Play_Boss_Music
@@ -445,13 +540,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: MUSIC
+        ObjectType: 4
+        guid: 7ba5bf964145184480010a83aa6a1a59
       - ElementName: Play_Boss_Music
         ObjectType: 3
         guid: 46119280058b5e4989828990e0332f4d
-      Path: Events\Default Work Unit\Play_Boss_Music
+      Path: Events\Default Work Unit\MUSIC\Play_Boss_Music
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 91.95
+      minDuration: 91.95
     - name: Play_daumen
       guid: 5b2cb0d8b238a7449d029fd5ac811056
       id: 209295608
@@ -462,13 +560,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: ENVIRONMENT
+        ObjectType: 4
+        guid: 7f4769b0d4d67c43bc88bd868dbe5645
       - ElementName: Play_daumen
         ObjectType: 3
         guid: 5b2cb0d8b238a7449d029fd5ac811056
-      Path: Events\Default Work Unit\Play_daumen
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      Path: Events\Default Work Unit\ENVIRONMENT\Play_daumen
+      maxAttenuation: 20
+      maxDuration: 3.2
+      minDuration: 3.2
     - name: Play_ENV_Blue_Fire
       guid: c981a4af3604b44a8c43f8e0798abc13
       id: 1849851393
@@ -486,9 +587,49 @@ MonoBehaviour:
         ObjectType: 3
         guid: c981a4af3604b44a8c43f8e0798abc13
       Path: Events\Default Work Unit\ENVIRONMENT\Play_ENV_Blue_Fire
-      maxAttenuation: 12
+      maxAttenuation: 10
       maxDuration: -1
       minDuration: -1
+    - name: Play_ENV_Door_close
+      guid: 5bfaccb11bfe8f45957d74ecb36a8ea7
+      id: 1670183507
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: ENVIRONMENT
+        ObjectType: 4
+        guid: 7f4769b0d4d67c43bc88bd868dbe5645
+      - ElementName: Play_ENV_Door_close
+        ObjectType: 3
+        guid: 5bfaccb11bfe8f45957d74ecb36a8ea7
+      Path: Events\Default Work Unit\ENVIRONMENT\Play_ENV_Door_close
+      maxAttenuation: 20
+      maxDuration: 1.1666875
+      minDuration: 1.15
+    - name: Play_ENV_Door_Open
+      guid: fd9b225789191447840401c0f83c8e66
+      id: 1583912933
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: ENVIRONMENT
+        ObjectType: 4
+        guid: 7f4769b0d4d67c43bc88bd868dbe5645
+      - ElementName: Play_ENV_Door_Open
+        ObjectType: 3
+        guid: fd9b225789191447840401c0f83c8e66
+      Path: Events\Default Work Unit\ENVIRONMENT\Play_ENV_Door_Open
+      maxAttenuation: 0
+      maxDuration: 1.6000209
+      minDuration: 1.6
     - name: Play_ENV_FireBowl
       guid: 07b6f18bd9a46c498b3ccde69a760569
       id: 1468104246
@@ -506,7 +647,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 07b6f18bd9a46c498b3ccde69a760569
       Path: Events\Default Work Unit\ENVIRONMENT\Play_ENV_FireBowl
-      maxAttenuation: 12
+      maxAttenuation: 10
       maxDuration: -1
       minDuration: -1
     - name: Play_ENV_Torch
@@ -526,7 +667,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 22fe80bbd96682459258ec5c2626c341
       Path: Events\Default Work Unit\ENVIRONMENT\Play_ENV_Torch
-      maxAttenuation: 12
+      maxAttenuation: 10
       maxDuration: -1
       minDuration: -1
     - name: Play_ENV_Torch2
@@ -546,7 +687,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: e11e5c9999770a439bbebb80abf03daa
       Path: Events\Default Work Unit\ENVIRONMENT\Play_ENV_Torch2
-      maxAttenuation: 12
+      maxAttenuation: 10
       maxDuration: -1
       minDuration: -1
     - name: Play_Fight_Music
@@ -559,10 +700,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: MUSIC
+        ObjectType: 4
+        guid: 7ba5bf964145184480010a83aa6a1a59
       - ElementName: Play_Fight_Music
         ObjectType: 3
         guid: a1b97e7d0f40764bb5a113e87f18764f
-      Path: Events\Default Work Unit\Play_Fight_Music
+      Path: Events\Default Work Unit\MUSIC\Play_Fight_Music
       maxAttenuation: 0
       maxDuration: 48.64771
       minDuration: 48.64771
@@ -596,19 +740,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: f4ccbb95d042c543bd560120d28efaf5
-      - ElementName: MENU
-        ObjectType: 4
-        guid: d5b00bb575b9f8448acb0ae52a065ad2
       - ElementName: INTRO
         ObjectType: 4
         guid: b59c6009acdfa14e8aee4be48519d312
       - ElementName: Play_Intro
         ObjectType: 3
         guid: c670aa04fe70ef418584830fb470d2d8
-      Path: Events\Default Work Unit\MENU\INTRO\Play_Intro
+      Path: Events\Default Work Unit\INTRO\Play_Intro
       maxAttenuation: 0
-      maxDuration: 36.91441
-      minDuration: 36.91441
+      maxDuration: 32.905987
+      minDuration: 32.905987
     - name: Play_Jumping_Atmo_Sound
       guid: c97ae1656e6c15429ca1b86be6a83a31
       id: 3147874366
@@ -619,13 +760,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: ENVIRONMENT
+        ObjectType: 4
+        guid: 7f4769b0d4d67c43bc88bd868dbe5645
       - ElementName: Play_Jumping_Atmo_Sound
         ObjectType: 3
         guid: c97ae1656e6c15429ca1b86be6a83a31
-      Path: Events\Default Work Unit\Play_Jumping_Atmo_Sound
-      maxAttenuation: 12
+      Path: Events\Default Work Unit\ENVIRONMENT\Play_Jumping_Atmo_Sound
+      maxAttenuation: 10
       maxDuration: 9.643653
-      minDuration: 3.533899
+      minDuration: 2.709157
     - name: Play_Menu_ATMO
       guid: bd394b4202938a46b39fb68384851c5c
       id: 1905734753
@@ -792,7 +936,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 5c5c0aa0e8927440be1a151ef3f601ce
       Path: Events\Default Work Unit\Play_Platzhalter
-      maxAttenuation: 12
+      maxAttenuation: 10
       maxDuration: 1.4666667
       minDuration: 1.4666667
     - name: Play_Player_Attack_LMC
@@ -835,6 +979,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 2.455896
       minDuration: 1.55
+    - name: Play_Player_Dying_VO
+      guid: e24da047dbd46e4d89f1c221ed6132c8
+      id: 902186995
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: PLAYER
+        ObjectType: 4
+        guid: c913c690cd563f4eb77ca06762a48879
+      - ElementName: Play_Player_Dying_VO
+        ObjectType: 3
+        guid: e24da047dbd46e4d89f1c221ed6132c8
+      Path: Events\Default Work Unit\PLAYER\Play_Player_Dying_VO
+      maxAttenuation: 0
+      maxDuration: 1.2651875
+      minDuration: 1.1826667
     - name: Play_Player_FS
       guid: 2442c0ba3c81b94588dcd2fe71b900f4
       id: 4078825889
@@ -995,9 +1159,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.682313
       minDuration: 1.682313
-    - name: Play_Spell_Hitmarker
-      guid: 3782af4804ab474396e338cdcba7f956
-      id: 1825965928
+    - name: Play_Rat_Attack
+      guid: 64304f9f8207f44b9fa0338771117c84
+      id: 1532641738
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -1005,13 +1169,128 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: f4ccbb95d042c543bd560120d28efaf5
-      - ElementName: Play_Spell_Hitmarker
+      - ElementName: ENEMY
+        ObjectType: 4
+        guid: 9a1392d046b91a489f1b14224a71d4ea
+      - ElementName: RAT
+        ObjectType: 4
+        guid: 70b0b2668712ef47aaa672006a754976
+      - ElementName: Play_Rat_Attack
         ObjectType: 3
-        guid: 3782af4804ab474396e338cdcba7f956
-      Path: Events\Default Work Unit\Play_Spell_Hitmarker
-      maxAttenuation: 12
+        guid: 64304f9f8207f44b9fa0338771117c84
+      Path: Events\Default Work Unit\ENEMY\RAT\Play_Rat_Attack
+      maxAttenuation: 10
+      maxDuration: 0.50625
+      minDuration: 0.3131875
+    - name: Play_Rat_Dies
+      guid: 248eb2445953e04787904a05015826c5
+      id: 3395282991
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: ENEMY
+        ObjectType: 4
+        guid: 9a1392d046b91a489f1b14224a71d4ea
+      - ElementName: RAT
+        ObjectType: 4
+        guid: 70b0b2668712ef47aaa672006a754976
+      - ElementName: Play_Rat_Dies
+        ObjectType: 3
+        guid: 248eb2445953e04787904a05015826c5
+      Path: Events\Default Work Unit\ENEMY\RAT\Play_Rat_Dies
+      maxAttenuation: 10
+      maxDuration: 0.89352477
+      minDuration: 0.61784434
+    - name: Play_Rat_FS
+      guid: 620ca03062a13c48bcd7ed148b3bb7c0
+      id: 31507663
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: ENEMY
+        ObjectType: 4
+        guid: 9a1392d046b91a489f1b14224a71d4ea
+      - ElementName: RAT
+        ObjectType: 4
+        guid: 70b0b2668712ef47aaa672006a754976
+      - ElementName: Play_Rat_FS
+        ObjectType: 3
+        guid: 620ca03062a13c48bcd7ed148b3bb7c0
+      Path: Events\Default Work Unit\ENEMY\RAT\Play_Rat_FS
+      maxAttenuation: 10
+      maxDuration: 0.42502084
+      minDuration: 0.2674181
+    - name: Play_Rat_Hitmarker
+      guid: 7afcee1123b17d41a5e7bb68075471ad
+      id: 3713921723
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: ENEMY
+        ObjectType: 4
+        guid: 9a1392d046b91a489f1b14224a71d4ea
+      - ElementName: RAT
+        ObjectType: 4
+        guid: 70b0b2668712ef47aaa672006a754976
+      - ElementName: Play_Rat_Hitmarker
+        ObjectType: 3
+        guid: 7afcee1123b17d41a5e7bb68075471ad
+      Path: Events\Default Work Unit\ENEMY\RAT\Play_Rat_Hitmarker
+      maxAttenuation: 10
       maxDuration: 0.42378527
       minDuration: 0.36680162
+    - name: Play_Rat_Idle
+      guid: c9ea5ea55a7858419b93da1ca06bf6d4
+      id: 4168346700
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: ENEMY
+        ObjectType: 4
+        guid: 9a1392d046b91a489f1b14224a71d4ea
+      - ElementName: RAT
+        ObjectType: 4
+        guid: 70b0b2668712ef47aaa672006a754976
+      - ElementName: Play_Rat_Idle
+        ObjectType: 3
+        guid: c9ea5ea55a7858419b93da1ca06bf6d4
+      Path: Events\Default Work Unit\ENEMY\RAT\Play_Rat_Idle
+      maxAttenuation: 10
+      maxDuration: 1.2908014
+      minDuration: 0.3618381
+    - name: Play_Skill_Select
+      guid: 1812d8b5cb661e4d9e63a4c911f15c9e
+      id: 756798344
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: Play_Skill_Select
+        ObjectType: 3
+        guid: 1812d8b5cb661e4d9e63a4c911f15c9e
+      Path: Events\Default Work Unit\Play_Skill_Select
+      maxAttenuation: 0
+      maxDuration: 0.25
+      minDuration: 0.25
     - name: Play_Zombie_Attack
       guid: 1e2fe2f98645c042b04ece4045383643
       id: 3597927707
@@ -1022,14 +1301,17 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: ENEMY
+        ObjectType: 4
+        guid: 9a1392d046b91a489f1b14224a71d4ea
       - ElementName: ZOMBIE
         ObjectType: 4
         guid: aa6be393ddf24e429a8074ee3a0af2ce
       - ElementName: Play_Zombie_Attack
         ObjectType: 3
         guid: 1e2fe2f98645c042b04ece4045383643
-      Path: Events\Default Work Unit\ZOMBIE\Play_Zombie_Attack
-      maxAttenuation: 12
+      Path: Events\Default Work Unit\ENEMY\ZOMBIE\Play_Zombie_Attack
+      maxAttenuation: 10
       maxDuration: 1.1980625
       minDuration: 0.7666875
     - name: Play_Zombie_Dies
@@ -1042,16 +1324,19 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: ENEMY
+        ObjectType: 4
+        guid: 9a1392d046b91a489f1b14224a71d4ea
       - ElementName: ZOMBIE
         ObjectType: 4
         guid: aa6be393ddf24e429a8074ee3a0af2ce
       - ElementName: Play_Zombie_Dies
         ObjectType: 3
         guid: 5a93a1cf2d25724388695d0a69551ea7
-      Path: Events\Default Work Unit\ZOMBIE\Play_Zombie_Dies
-      maxAttenuation: 12
-      maxDuration: 1.6500208
-      minDuration: 0.73335415
+      Path: Events\Default Work Unit\ENEMY\ZOMBIE\Play_Zombie_Dies
+      maxAttenuation: 10
+      maxDuration: 1.6899129
+      minDuration: 0.65097857
     - name: Play_Zombie_FS
       guid: 4770b47bc09ff949aed48edd4dd0efe6
       id: 895956798
@@ -1062,16 +1347,19 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: ENEMY
+        ObjectType: 4
+        guid: 9a1392d046b91a489f1b14224a71d4ea
       - ElementName: ZOMBIE
         ObjectType: 4
         guid: aa6be393ddf24e429a8074ee3a0af2ce
       - ElementName: Play_Zombie_FS
         ObjectType: 3
         guid: 4770b47bc09ff949aed48edd4dd0efe6
-      Path: Events\Default Work Unit\ZOMBIE\Play_Zombie_FS
-      maxAttenuation: 12
-      maxDuration: 0.32464585
-      minDuration: 0.2035
+      Path: Events\Default Work Unit\ENEMY\ZOMBIE\Play_Zombie_FS
+      maxAttenuation: 10
+      maxDuration: 0.3439503
+      minDuration: 0.19207841
     - name: Play_Zombie_Hitmarker
       guid: f5280db1f1b6964fa2698d87834fee35
       id: 818595436
@@ -1082,16 +1370,19 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: ENEMY
+        ObjectType: 4
+        guid: 9a1392d046b91a489f1b14224a71d4ea
       - ElementName: ZOMBIE
         ObjectType: 4
         guid: aa6be393ddf24e429a8074ee3a0af2ce
       - ElementName: Play_Zombie_Hitmarker
         ObjectType: 3
         guid: f5280db1f1b6964fa2698d87834fee35
-      Path: Events\Default Work Unit\ZOMBIE\Play_Zombie_Hitmarker
-      maxAttenuation: 12
+      Path: Events\Default Work Unit\ENEMY\ZOMBIE\Play_Zombie_Hitmarker
+      maxAttenuation: 10
       maxDuration: 0.53335416
-      minDuration: 0.2505
+      minDuration: 0.36680162
     - name: Play_Zombie_Idle_Voice
       guid: 06a13d57f784fa48a684234f5f3917b4
       id: 880339566
@@ -1102,16 +1393,19 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: ENEMY
+        ObjectType: 4
+        guid: 9a1392d046b91a489f1b14224a71d4ea
       - ElementName: ZOMBIE
         ObjectType: 4
         guid: aa6be393ddf24e429a8074ee3a0af2ce
       - ElementName: Play_Zombie_Idle_Voice
         ObjectType: 3
         guid: 06a13d57f784fa48a684234f5f3917b4
-      Path: Events\Default Work Unit\ZOMBIE\Play_Zombie_Idle_Voice
-      maxAttenuation: 12
+      Path: Events\Default Work Unit\ENEMY\ZOMBIE\Play_Zombie_Idle_Voice
+      maxAttenuation: 10
       maxDuration: 1.3833542
-      minDuration: 1
+      minDuration: 1.0333542
     - name: PLAYER
       guid: c913c690cd563f4eb77ca06762a48879
       id: 1069431850
@@ -1126,6 +1420,26 @@ MonoBehaviour:
         ObjectType: 4
         guid: c913c690cd563f4eb77ca06762a48879
       Path: Events\Default Work Unit\PLAYER
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: RAT
+      guid: 70b0b2668712ef47aaa672006a754976
+      id: 1047714102
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: ENEMY
+        ObjectType: 4
+        guid: 9a1392d046b91a489f1b14224a71d4ea
+      - ElementName: RAT
+        ObjectType: 4
+        guid: 70b0b2668712ef47aaa672006a754976
+      Path: Events\Default Work Unit\ENEMY\RAT
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1156,10 +1470,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: MUSIC
+        ObjectType: 4
+        guid: 7ba5bf964145184480010a83aa6a1a59
       - ElementName: Stop_Fight_Music
         ObjectType: 3
         guid: b72ca49ab6c2974aaf065be25c0014aa
-      Path: Events\Default Work Unit\Stop_Fight_Music
+      Path: Events\Default Work Unit\MUSIC\Stop_Fight_Music
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1253,10 +1570,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: ENEMY
+        ObjectType: 4
+        guid: 9a1392d046b91a489f1b14224a71d4ea
       - ElementName: ZOMBIE
         ObjectType: 4
         guid: aa6be393ddf24e429a8074ee3a0af2ce
-      Path: Events\Default Work Unit\ZOMBIE
+      Path: Events\Default Work Unit\ENEMY\ZOMBIE
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1356,7 +1676,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: f793697128a0444090b6644bb168aa00
     GuidInternal: 
-    m_lastTime: -8584160789805396648
+    m_lastTime: -8584153326063851926
     List:
     - name: Gameplay
       guid: 8927f95610d47f4eb1174831618fe163
@@ -1453,7 +1773,7 @@ MonoBehaviour:
     m_lastTime: -8584160789805466732
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0500000006000000070000000a0000000f00000033000000
+  ExpandedWaapiItemIds: 06000000070000000800000025000000330000004600000066000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

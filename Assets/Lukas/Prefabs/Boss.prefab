@@ -209,7 +209,7 @@ MonoBehaviour:
   enemyAttackSound:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 442a72caf52f0c048942c0df104e8a50,
+    WwiseObjectReference: {fileID: 11400000, guid: e2a3d65c2af2ead40a4744e85eecfc47,
       type: 2}
   enemyFSSound:
     idInternal: 0
@@ -219,12 +219,12 @@ MonoBehaviour:
   enemyHitSound:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 442a72caf52f0c048942c0df104e8a50,
+    WwiseObjectReference: {fileID: 11400000, guid: 82d5f35924045fb4c9c6e203fdf0bdad,
       type: 2}
   enemyDeathSound:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 442a72caf52f0c048942c0df104e8a50,
+    WwiseObjectReference: {fileID: 11400000, guid: 2f54141e44117314cbf4e27f374d4822,
       type: 2}
   OnDeathEvent:
     m_PersistentCalls:
@@ -254,7 +254,7 @@ MonoBehaviour:
   jumpAttackSoundEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 442a72caf52f0c048942c0df104e8a50,
+    WwiseObjectReference: {fileID: 11400000, guid: e2a3d65c2af2ead40a4744e85eecfc47,
       type: 2}
   jumpAttackLandingSoundEvent:
     idInternal: 0

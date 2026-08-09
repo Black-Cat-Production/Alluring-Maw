@@ -116,27 +116,27 @@ MonoBehaviour:
   enemyIdleSound:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 442a72caf52f0c048942c0df104e8a50,
+    WwiseObjectReference: {fileID: 11400000, guid: 5d7f800d1a3a21a44955415d99b6eef8,
       type: 2}
   enemyAttackSound:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 442a72caf52f0c048942c0df104e8a50,
+    WwiseObjectReference: {fileID: 11400000, guid: 92f07179338de014fac9dd435282bc4e,
       type: 2}
   enemyFSSound:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 442a72caf52f0c048942c0df104e8a50,
+    WwiseObjectReference: {fileID: 11400000, guid: 1b74d442b90315047a53a1f3402dbb5c,
       type: 2}
   enemyHitSound:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 442a72caf52f0c048942c0df104e8a50,
+    WwiseObjectReference: {fileID: 11400000, guid: d32ae4672e20aa841b1b7d9db8ae5436,
       type: 2}
   enemyDeathSound:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 442a72caf52f0c048942c0df104e8a50,
+    WwiseObjectReference: {fileID: 11400000, guid: e3528376e101b934bb4d18c768966ce5,
       type: 2}
   OnDeathEvent:
     m_PersistentCalls:

@@ -7,15 +7,13 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_Platzhalter" ID="{A00A5C5C-92E8-4074-BE1A-151EF3F601CE}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Set_State_Pause" ID="{17D47647-E23A-410C-8C7C-8FF98A527C3B}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="BOSS" ID="{9316D634-E4D5-412D-9F8B-799D1FFE5126}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_Jumping_Atmo_Sound" ID="{65E17AC9-6C6E-4215-9CA1-B86BE6A83A31}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="ZOMBIE" ID="{93E36BAA-F2DD-424E-9A80-74EE3A0AF2CE}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_Spell_Hitmarker" ID="{48AF8237-AB04-4347-96E3-38CDCBA7F956}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="ENVIRONMENT" ID="{B069477F-D6D4-437C-BC88-BD868DBE5645}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="MUSIC" ID="{96BFA57B-4541-4418-8001-0A83AA6A1A59}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="MENU" ID="{B50BB0D5-B975-44F8-8ACB-0AE52A065AD2}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Stop_Fight_Music" ID="{9AA42CB7-C2B6-4A97-AF06-5BE25C0014AA}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_Fight_Music" ID="{7D7EB9A1-400F-4B76-B5A1-13E87F18764F}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ENEMY" ID="{D092139A-B946-481A-9F1B-14224A71D4EA}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Skill_Select" ID="{B5D81218-66CB-4D1E-9E63-A4C911F15C9E}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="PLAYER" ID="{90C613C9-56CD-4E3F-B77C-A06762A48879}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="INTRO" ID="{09609CB5-DFAC-4EA1-8AEE-4BE48519D312}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

@@ -14,11 +14,18 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_ATMO = 3133186549U;
+        static const AkUniqueID PLAY_BOSS_ATTACK = 4155093788U;
+        static const AkUniqueID PLAY_BOSS_DIES = 515021733U;
         static const AkUniqueID PLAY_BOSS_FS = 1075280761U;
         static const AkUniqueID PLAY_BOSS_FS_CHAIN = 727530039U;
+        static const AkUniqueID PLAY_BOSS_HITMARKER = 3682868997U;
         static const AkUniqueID PLAY_BOSS_IDLE_VOICE = 2050535857U;
         static const AkUniqueID PLAY_BOSS_JUMP_STOMP = 2284332626U;
+        static const AkUniqueID PLAY_BOSS_MUSIC = 1935154233U;
+        static const AkUniqueID PLAY_DAUMEN = 209295608U;
         static const AkUniqueID PLAY_ENV_BLUE_FIRE = 1849851393U;
+        static const AkUniqueID PLAY_ENV_DOOR_CLOSE = 1670183507U;
+        static const AkUniqueID PLAY_ENV_DOOR_OPEN = 1583912933U;
         static const AkUniqueID PLAY_ENV_FIREBOWL = 1468104246U;
         static const AkUniqueID PLAY_ENV_TORCH = 3621683420U;
         static const AkUniqueID PLAY_ENV_TORCH2 = 2940525158U;
@@ -36,6 +43,7 @@ namespace AK
         static const AkUniqueID PLAY_PLATZHALTER = 3911744873U;
         static const AkUniqueID PLAY_PLAYER_ATTACK_LMC = 104602405U;
         static const AkUniqueID PLAY_PLAYER_DASH = 2175711460U;
+        static const AkUniqueID PLAY_PLAYER_DYING_VO = 902186995U;
         static const AkUniqueID PLAY_PLAYER_FS = 4078825889U;
         static const AkUniqueID PLAY_PLAYER_GETTINGHIT = 3353228327U;
         static const AkUniqueID PLAY_PLAYER_RMC1_RELEASE = 2554632573U;
@@ -44,7 +52,12 @@ namespace AK
         static const AkUniqueID PLAY_PLAYER_RMC4_RELEASE = 363320808U;
         static const AkUniqueID PLAY_PLAYER_RMC_CHARGE1 = 4193784842U;
         static const AkUniqueID PLAY_PLAYER_RMC_CHARGE2 = 4193784841U;
-        static const AkUniqueID PLAY_SPELL_HITMARKER = 1825965928U;
+        static const AkUniqueID PLAY_RAT_ATTACK = 1532641738U;
+        static const AkUniqueID PLAY_RAT_DIES = 3395282991U;
+        static const AkUniqueID PLAY_RAT_FS = 31507663U;
+        static const AkUniqueID PLAY_RAT_HITMARKER = 3713921723U;
+        static const AkUniqueID PLAY_RAT_IDLE = 4168346700U;
+        static const AkUniqueID PLAY_SKILL_SELECT = 756798344U;
         static const AkUniqueID PLAY_ZOMBIE_ATTACK = 3597927707U;
         static const AkUniqueID PLAY_ZOMBIE_DIES = 635270414U;
         static const AkUniqueID PLAY_ZOMBIE_FS = 895956798U;
@@ -90,12 +103,10 @@ namespace AK
 
     namespace BUSSES
     {
-        static const AkUniqueID GAMEPLAY = 89505537U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MUSIC_BUS = 3127962312U;
         static const AkUniqueID REVERB = 348963605U;
         static const AkUniqueID SFX_BUS = 1502772432U;
-        static const AkUniqueID UI_SOUNDS = 2235087924U;
         static const AkUniqueID VOICE_BUS = 3472939855U;
     } // namespace BUSSES
 
@@ -103,6 +114,7 @@ namespace AK
     {
         static const AkUniqueID ENV_BIG_ROOM = 2521112689U;
         static const AkUniqueID ENV_CORRIDOR = 194525819U;
+        static const AkUniqueID ENV_MID_ROOM = 960112437U;
         static const AkUniqueID ENV_SMALL_ROOM = 783969252U;
     } // namespace AUX_BUSSES
 
