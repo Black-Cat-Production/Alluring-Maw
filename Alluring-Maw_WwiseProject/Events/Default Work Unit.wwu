@@ -50,10 +50,10 @@
 						</Event>
 						<Event Name="Play_Menu_MUSIC" ID="{7FC624BE-26E3-4813-A7B3-5D3BFD408FBF}">
 							<ChildrenList>
-								<Action Name="" ID="{A0DF7D24-EFCD-4595-A08F-6E4C5CBEDE46}" ShortID="928250575">
+								<Action Name="" ID="{2EC6F55D-4834-45BC-BAD1-3C028896E551}" ShortID="815525841">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Sequenzed" ID="{C5DFBA08-9BF6-4A72-B778-8BA80B224FE5}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+											<ObjectRef Name="Menu Music" ID="{FA7BE6AA-AA38-4D87-A38B-2962B04F14D5}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -77,7 +77,7 @@
 										<Action Name="" ID="{FEFBC3CE-420A-48F3-B1C7-2B92C44686A6}" ShortID="230154724">
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="Menu - UI_MouseOver-01" ID="{CD28911D-7F38-4AE7-BDAD-AEBBD6F3035B}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+													<ObjectRef Name="Menu - UI_MouseOver" ID="{CD28911D-7F38-4AE7-BDAD-AEBBD6F3035B}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -99,7 +99,7 @@
 										<Action Name="" ID="{3ADD6ADA-95FE-4B63-88B4-77AEFB9F4CCA}" ShortID="338239020">
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="Menu - UI_select2-01" ID="{767B9BAE-C124-47A8-84F9-42DDCF03A097}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+													<ObjectRef Name="Menu - UI_select2" ID="{767B9BAE-C124-47A8-84F9-42DDCF03A097}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -120,16 +120,6 @@
 						</Event>
 						<Event Name="Stop_Menu" ID="{7E0905EE-31F0-457B-9C5C-39DA99DCE4ED}">
 							<ChildrenList>
-								<Action Name="" ID="{8984BB4E-2BD6-4A15-BF9A-3ACE00DECA0F}" ShortID="315127823">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Sequenzed" ID="{C5DFBA08-9BF6-4A72-B778-8BA80B224FE5}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 								<Action Name="" ID="{A79505CA-8542-4E5C-A9C6-EF8A5B4EE48A}" ShortID="232042122">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
@@ -192,7 +182,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="ENV-Torch" ID="{1C09864C-3E6D-453F-8504-99D5B4E37CEB}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+											<ObjectRef Name="Menu_Torch" ID="{5C93FE9F-F015-4578-B808-01543551D07A}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -203,7 +193,39 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="ENV-Torch_alt" ID="{606A99AD-E327-4DDD-BE19-D17E7F2853BA}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+											<ObjectRef Name="Menu_Torch_alt" ID="{0CD2AAD6-9F9C-4708-BFEE-C88CD00F727F}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{DCE97F26-0492-42E2-84D5-D26DA01BDD0C}" ShortID="466196540">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Menu Music" ID="{FA7BE6AA-AA38-4D87-A38B-2962B04F14D5}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Menu_Torch_Alt" ID="{B323B523-5B63-4280-858D-A61894BF920B}">
+							<ChildrenList>
+								<Action Name="" ID="{C3F4B620-4A38-4EC7-9B19-FF48C539CCA8}" ShortID="453333942">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Menu_Torch_alt" ID="{0CD2AAD6-9F9C-4708-BFEE-C88CD00F727F}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Menu_Torch" ID="{77C9ABF6-EF50-4248-ABB4-22CD30A1B2DA}">
+							<ChildrenList>
+								<Action Name="" ID="{540B2E75-89B9-4493-B7A6-A2AF866CECEA}" ShortID="291651587">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Menu_Torch" ID="{5C93FE9F-F015-4578-B808-01543551D07A}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -488,6 +510,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Skill_Select" ID="{B5D81218-66CB-4D1E-9E63-A4C911F15C9E}">
+							<ChildrenList>
+								<Action Name="" ID="{91CD19D1-6170-425A-9F9F-CD50B5673D0C}" ShortID="184547128">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Skill Select" ID="{44E2238C-C379-431A-BD60-7C330AA27CB6}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="ENVIRONMENT" ID="{B069477F-D6D4-437C-BC88-BD868DBE5645}" ShortID="402492592">
@@ -653,17 +686,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_Platzhalter" ID="{A00A5C5C-92E8-4074-BE1A-151EF3F601CE}">
-					<ChildrenList>
-						<Action Name="" ID="{1A5490D7-339E-4BB2-AF9E-35FA4AF5BD10}" ShortID="37336613">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Platzhalter-01" ID="{1DCC736B-6CF9-4488-983E-4F0BEFE6E42D}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Folder Name="ENEMY" ID="{D092139A-B946-481A-9F1B-14224A71D4EA}" ShortID="948480139">
 					<PropertyList>
 						<Property Name="Color" Type="int16" Value="10"/>
@@ -724,7 +746,7 @@
 										<Action Name="" ID="{3E9F2E38-B307-45D0-83D0-C50D0B5A278D}" ShortID="978142002">
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="Boss-Idle_Voice" ID="{5262E7EC-D76A-4A5E-B6E5-ADD288A3ED17}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+													<ObjectRef Name="Boss-Idle_VO" ID="{5262E7EC-D76A-4A5E-B6E5-ADD288A3ED17}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -736,6 +758,20 @@
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="Boss-Attack_VO" ID="{CAFF6A29-B1B7-4C2B-AC21-716AFD494829}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{8012B9E5-F4AE-458B-A193-CA6898AE1F8F}" ShortID="664848741">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Boss-Attack_Chain" ID="{2AA69522-8EB0-4C47-A031-5B3712140BB0}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{0B11DB99-3032-404A-8CCC-F2A09E29F448}" ShortID="390324870">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Boss-Attack_Whoosh" ID="{36F5E88F-4344-4C8D-B6B0-BBA52BD3301B}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -758,6 +794,38 @@
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="Boss-Hitmarker_VO" ID="{C2749227-5F33-4F84-810A-E0723704FF08}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{2DC13271-1ABB-459C-9FE3-2B15484C79B3}" ShortID="319798743">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Spell-Hitmarker" ID="{9452C7F6-7E6F-4B47-8C97-1B14C92E9EFD}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Boss_Jump" ID="{0268E7B1-3399-4DC7-BDAE-D056D5FF14BC}">
+									<ChildrenList>
+										<Action Name="" ID="{1396744B-0268-4128-9F21-FAD629061D3B}" ShortID="892047759">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Boss-Jump_VO" ID="{7AA460CB-AB0D-42C8-BD29-7A09758DA957}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{DD687AE5-FEAE-4786-B942-0A1EB38EFB02}" ShortID="252769172">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Bosss-Jump_Kette" ID="{4AE37F51-4340-483A-A59A-46EDEE8C255B}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{FF09C241-2609-4169-ABE6-A74AF4440F47}" ShortID="519124908">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Boss-Jump_MetalSlam" ID="{25B24C2A-9BB4-4871-AC4B-BAD524042BFD}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -948,10 +1016,10 @@
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
-								<Action Name="" ID="{9D620D42-5A35-4594-AD5C-0E16B208AB9B}" ShortID="523192965">
+								<Action Name="" ID="{69B0CE57-35CF-4DE4-944D-024577D46B2C}" ShortID="30361410">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Sequenzed" ID="{C5DFBA08-9BF6-4A72-B778-8BA80B224FE5}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+											<ObjectRef Name="Boss Music Playlist" ID="{B814B817-E079-41A7-BDD1-7694C7F24E6E}" WorkUnitID="{ECD5F4F5-2924-48E3-BE75-5C19A122CB25}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -963,10 +1031,10 @@
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
-								<Action Name="" ID="{1C7532A8-0C5E-4172-85B8-F9D2E4272863}" ShortID="721050291">
+								<Action Name="" ID="{FA651FD9-8084-4B41-9F34-4D5537A904A3}" ShortID="645497441">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Fight Music" ID="{3D62A784-9D68-4B8D-8C69-3897B08509AA}" WorkUnitID="{ECD5F4F5-2924-48E3-BE75-5C19A122CB25}"/>
+											<ObjectRef Name="Fight Music Playlist" ID="{98FFD824-F66B-4D2F-98B5-0A51B8D940F5}" WorkUnitID="{ECD5F4F5-2924-48E3-BE75-5C19A122CB25}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -978,23 +1046,25 @@
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
-								<Action Name="" ID="{CD5ACF37-405A-4D26-A2E6-EA9003CA63F1}" ShortID="936794817">
+								<Action Name="" ID="{0725C785-AD85-464A-AB45-A77B0213BB89}" ShortID="517310094">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Fight Music" ID="{3D62A784-9D68-4B8D-8C69-3897B08509AA}" WorkUnitID="{ECD5F4F5-2924-48E3-BE75-5C19A122CB25}"/>
+											<ObjectRef Name="Boss Music Playlist" ID="{B814B817-E079-41A7-BDD1-7694C7F24E6E}" WorkUnitID="{ECD5F4F5-2924-48E3-BE75-5C19A122CB25}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{9F790011-083F-4B1F-B2A3-4D70641C1C40}" ShortID="330213281">
+								<Action Name="" ID="{9059A84E-3CCE-4072-AC56-5009989A6EAB}" ShortID="566059111">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Sequenzed" ID="{C5DFBA08-9BF6-4A72-B778-8BA80B224FE5}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+											<ObjectRef Name="Fight Music Playlist" ID="{98FFD824-F66B-4D2F-98B5-0A51B8D940F5}" WorkUnitID="{ECD5F4F5-2924-48E3-BE75-5C19A122CB25}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -1020,7 +1090,7 @@
 								<Action Name="" ID="{071D6ED9-B316-4566-89A4-516D68B60F23}" ShortID="480484175">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Intro - Music" ID="{11FD5936-2730-410C-929C-FFD70F376B70}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+											<ObjectRef Name="Intro_Music" ID="{1D7B817B-B695-4A54-B684-C43D55149B0D}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -1028,17 +1098,6 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
-				<Event Name="Play_Skill_Select" ID="{B5D81218-66CB-4D1E-9E63-A4C911F15C9E}">
-					<ChildrenList>
-						<Action Name="" ID="{91CD19D1-6170-425A-9F9F-CD50B5673D0C}" ShortID="184547128">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Skill Select" ID="{44E2238C-C379-431A-BD60-7C330AA27CB6}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

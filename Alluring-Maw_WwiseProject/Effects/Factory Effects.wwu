@@ -558,10 +558,10 @@
 											<PropertyList>
 												<Property Name="FrequencyBand1" Type="Real32" Value="81"/>
 												<Property Name="FrequencyBand2" Type="Real32" Value="892"/>
-												<Property Name="FrequencyBand3" Type="Real32" Value="8967"/>
+												<Property Name="FrequencyBand3" Type="Real32" Value="6383"/>
 												<Property Name="GainBand1" Type="Real32" Value="-8"/>
-												<Property Name="GainBand2" Type="Real32" Value="3.5"/>
-												<Property Name="GainBand3" Type="Real32" Value="-3"/>
+												<Property Name="GainBand2" Type="Real32" Value="-3.5"/>
+												<Property Name="GainBand3" Type="Real32" Value="-12"/>
 											</PropertyList>
 										</Effect>
 										<Effect Name="Next_Room" ID="{6CAFD7CA-D8F8-4947-8B86-1B68A5EBDC0A}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
@@ -1205,9 +1205,10 @@
 								</Effect>
 								<Effect Name="Plate_Large" ID="{62CB7384-421D-4F9A-9CF1-E90F7336A07B}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
 									<PropertyList>
-										<Property Name="DecayTime" Type="Real32" Value="2.5"/>
+										<Property Name="DecayTime" Type="Real32" Value="1.4"/>
 										<Property Name="Density" Type="Real32" Value="60"/>
 										<Property Name="Diffusion" Type="Real32" Value="74"/>
+										<Property Name="DryLevel" Type="Real32" Value="-6.3"/>
 										<Property Name="ERLevel" Type="Real32" Value="-22"/>
 										<Property Name="ERPattern" Type="int32" Value="20"/>
 										<Property Name="Filter1Freq" Type="Real32" Value="590"/>
@@ -1216,7 +1217,7 @@
 										<Property Name="HFDamping" Type="Real32" Value="2.85"/>
 										<Property Name="PreDelay" Type="Real32" Value="38"/>
 										<Property Name="Quality" Type="int32" Value="10"/>
-										<Property Name="ReverbLevel" Type="Real32" Value="-22"/>
+										<Property Name="ReverbLevel" Type="Real32" Value="-28"/>
 										<Property Name="RoomShape" Type="Real32" Value="0"/>
 										<Property Name="RoomSize" Type="Real32" Value="20"/>
 									</PropertyList>
@@ -1974,7 +1975,10 @@
 								</Effect>
 								<Effect Name="Octave_Down" ID="{062EC4B1-5372-4D1E-917B-C757293F2B42}" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3">
 									<PropertyList>
+										<Property Name="DelayTime" Type="Real32" Value="32"/>
 										<Property Name="DryLevel" Type="Real32" Value="0"/>
+										<Property Name="FilterGain" Type="Real32" Value="-24"/>
+										<Property Name="FilterType" Type="int32" Value="3"/>
 										<Property Name="Pitch" Type="Real32" Value="-1200"/>
 									</PropertyList>
 								</Effect>

@@ -254,7 +254,7 @@ MonoBehaviour:
   jumpAttackSoundEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: e2a3d65c2af2ead40a4744e85eecfc47,
+    WwiseObjectReference: {fileID: 11400000, guid: b78381b4555ab14408904a2059f13e0d,
       type: 2}
   jumpAttackLandingSoundEvent:
     idInternal: 0

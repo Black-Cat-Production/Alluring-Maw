@@ -20,6 +20,7 @@ namespace AK
         static const AkUniqueID PLAY_BOSS_FS_CHAIN = 727530039U;
         static const AkUniqueID PLAY_BOSS_HITMARKER = 3682868997U;
         static const AkUniqueID PLAY_BOSS_IDLE_VOICE = 2050535857U;
+        static const AkUniqueID PLAY_BOSS_JUMP = 3271000828U;
         static const AkUniqueID PLAY_BOSS_JUMP_STOMP = 2284332626U;
         static const AkUniqueID PLAY_BOSS_MUSIC = 1935154233U;
         static const AkUniqueID PLAY_DAUMEN = 209295608U;
@@ -36,11 +37,12 @@ namespace AK
         static const AkUniqueID PLAY_MENU_ATMO = 1905734753U;
         static const AkUniqueID PLAY_MENU_DESCENT = 190377696U;
         static const AkUniqueID PLAY_MENU_MUSIC = 2228153899U;
+        static const AkUniqueID PLAY_MENU_TORCH = 4157937148U;
+        static const AkUniqueID PLAY_MENU_TORCH_ALT = 3045057056U;
         static const AkUniqueID PLAY_MENU_UI_LEARNSKILL1 = 503090763U;
         static const AkUniqueID PLAY_MENU_UI_MOUSEOVER_01 = 3257834436U;
         static const AkUniqueID PLAY_MENU_UI_SELECT1 = 558031544U;
         static const AkUniqueID PLAY_MENU_UI_SELECT2_01 = 1590463151U;
-        static const AkUniqueID PLAY_PLATZHALTER = 3911744873U;
         static const AkUniqueID PLAY_PLAYER_ATTACK_LMC = 104602405U;
         static const AkUniqueID PLAY_PLAYER_DASH = 2175711460U;
         static const AkUniqueID PLAY_PLAYER_DYING_VO = 902186995U;
