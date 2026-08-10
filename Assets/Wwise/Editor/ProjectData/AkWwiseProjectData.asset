@@ -242,7 +242,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: f4ccbb95d042c543bd560120d28efaf5
     GuidInternal: 
-    m_lastTime: -8584152384342790592
+    m_lastTime: -8584152146175230497
     List:
     - name: BOSS
       guid: 34d61693d5e42d419f8b799d1ffe5126
@@ -792,7 +792,7 @@ MonoBehaviour:
       Path: Events\Default Work Unit\ENVIRONMENT\Play_Jumping_Atmo_Sound
       maxAttenuation: 10
       maxDuration: 9.643653
-      minDuration: 2.709157
+      minDuration: 0.85526276
     - name: Play_Menu_ATMO
       guid: bd394b4202938a46b39fb68384851c5c
       id: 1905734753
@@ -985,6 +985,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.01545325
       minDuration: 0.01545325
+    - name: Play_Music_Start_Room_01
+      guid: 121098fb424a8843ba4c0063a86e3492
+      id: 1210216554
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: MUSIC
+        ObjectType: 4
+        guid: 7ba5bf964145184480010a83aa6a1a59
+      - ElementName: Play_Music_Start_Room_01
+        ObjectType: 3
+        guid: 121098fb424a8843ba4c0063a86e3492
+      Path: Events\Default Work Unit\MUSIC\Play_Music_Start_Room_01
+      maxAttenuation: 0
+      maxDuration: 24
+      minDuration: 24
     - name: Play_Player_Attack_LMC
       guid: 66f06f65effa084b9ae67f05bccd652a
       id: 104602405
@@ -1023,8 +1043,8 @@ MonoBehaviour:
         guid: b4a55bfc6512d147b62cf3daf6f40798
       Path: Events\Default Work Unit\PLAYER\Play_Player_Dash
       maxAttenuation: 0
-      maxDuration: 2.455896
-      minDuration: 1.55
+      maxDuration: 1.6715319
+      minDuration: 1.5321966
     - name: Play_Player_Dying_VO
       guid: e24da047dbd46e4d89f1c221ed6132c8
       id: 902186995
@@ -1569,6 +1589,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Stop_Music_Start_Room_01
+      guid: 23530e30b6e6e04d96ee947d28a02d93
+      id: 2480916340
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: MUSIC
+        ObjectType: 4
+        guid: 7ba5bf964145184480010a83aa6a1a59
+      - ElementName: Stop_Music_Start_Room_01
+        ObjectType: 3
+        guid: 23530e30b6e6e04d96ee947d28a02d93
+      Path: Events\Default Work Unit\MUSIC\Stop_Music_Start_Room_01
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Player_RMC_Charge
       guid: 24d8b23866e63b4596a65cc783cb95d9
       id: 1058366323
@@ -1822,7 +1862,7 @@ MonoBehaviour:
     m_lastTime: -8584160789805466732
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000060000000700000008000000250000003300000066000000f6000000f70000006a0100006b010000
+  ExpandedWaapiItemIds: 050000000600000007000000080000000b0000003300000066000000f6000000f70000006a0100006b010000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

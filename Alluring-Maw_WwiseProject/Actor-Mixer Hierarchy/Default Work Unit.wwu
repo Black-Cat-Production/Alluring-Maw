@@ -1637,7 +1637,7 @@
 									<PropertyList>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>4</Value>
+												<Value>6</Value>
 											</ValueList>
 										</Property>
 										<Property Name="Pitch" Type="int32">
@@ -2958,6 +2958,19 @@
 							<ChildrenList>
 								<RandomSequenceContainer Name="Player-Dash_Leather" ID="{BC66D585-912B-4670-B53D-FA0EC40D897D}" ShortID="955561164">
 									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{C8E4892C-224D-4C8B-879D-6EBD67E24148}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="20"/>
+															<Property Name="Min" Type="Real64" Value="-20"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
@@ -3017,7 +3030,25 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Player-Dash_Cloth" ID="{B780308C-9946-4CB5-BB8D-0DBAE612ABCD}" ShortID="3338382">
 									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{5677E88A-E378-47D4-BFBE-84076C7B7719}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="40"/>
+															<Property Name="Min" Type="Real64" Value="-40"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -3120,7 +3151,25 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Player-Dash_Stomp" ID="{9A6F02BF-1912-458C-A105-2DC7F0D8BA47}" ShortID="26425236">
 									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{6CC278CE-C02D-467D-986F-882FF762182B}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-110"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -3142,6 +3191,10 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Player-Dash_Stomp-01" ID="{4DB62662-A279-48E5-BB9A-5728D9863B26}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.200157790927022"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Player-Dash_Stomp-01.wav</AudioFile>
 													<MediaIDList>
@@ -3164,6 +3217,10 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Player-Dash_Stomp-02" ID="{05BDBFCD-8152-49D0-B36E-CA7044853778}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.200323372781065"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Player-Dash_Stomp-02.wav</AudioFile>
 													<MediaIDList>
@@ -3179,6 +3236,11 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Player-Dash_Voice" ID="{04A981F3-11A1-4F8B-8545-59F01330E546}" ShortID="647073153">
 									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
 										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
@@ -3313,56 +3375,6 @@
 											</ChildrenList>
 											<ActiveSourceList>
 												<ActiveSource Name="Player-Dash_Voice-05" ID="{59B0435C-1E39-42FE-86CB-3F565C28F717}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Player-Dash_Voice-06" ID="{8E8EC912-3944-474B-9A73-70290EA62355}" ShortID="541383153">
-											<PropertyList>
-												<Property Name="IsVoice" Type="bool" Value="True"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Player-Dash_Voice-06" ID="{39463692-B7B4-4057-93DE-62A837602BBA}">
-													<Language>English(US)</Language>
-													<AudioFile>Player-Dash_Voice-06.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="718884290"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Player-Dash_Voice-06" ID="{39463692-B7B4-4057-93DE-62A837602BBA}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Player-Dash_Voice-07" ID="{EFD38DE5-38A1-47BF-9991-2C0053E0B8B2}" ShortID="889304810">
-											<PropertyList>
-												<Property Name="IsVoice" Type="bool" Value="True"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Player-Dash_Voice-07" ID="{D1994BA5-C6DD-4ECA-9EBC-DAB020570541}">
-													<Language>English(US)</Language>
-													<AudioFile>Player-Dash_Voice-07.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="967862557"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Player-Dash_Voice-07" ID="{D1994BA5-C6DD-4ECA-9EBC-DAB020570541}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -3944,17 +3956,12 @@
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Pitch" Type="int32">
+								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-200</Value>
+										<Value>-3</Value>
 									</ValueList>
 								</Property>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-6</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -3963,32 +3970,30 @@
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
 								</Reference>
+								<Reference Name="Effect0" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+									<ObjectRef Name="Bass_Remover_1" ID="{D313DB05-6B33-4C1F-8C2F-F989052E8120}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="SFX Bus" ID="{0428BEA9-86B3-406D-9B6A-357CE32B9E02}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ENV-Torch" ID="{1E9033BA-92DB-4E3E-8C6D-D78B08629B81}">
+								<AudioFileSource Name="Feuerschale" ID="{21F61B87-0865-4D7F-AB91-7D375252B1E6}">
 									<PropertyList>
-										<Property Name="ChannelConfigOverride" Type="int64" Value="12546"/>
-										<Property Name="CrossfadeDuration" Type="Real64" Value="2642.99818802526"/>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.728101739001189"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.363834558823527"/>
-										<Property Name="LoopBegin" Type="Real64" Value="7.36801445417497"/>
-										<Property Name="LoopEnd" Type="Real64" Value="22.2610045701084"/>
+										<Property Name="CrossfadeDuration" Type="Real64" Value="791.053"/>
+										<Property Name="LoopBegin" Type="Real64" Value="1.06721893491124"/>
+										<Property Name="LoopEnd" Type="Real64" Value="18.7593372781065"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="5.22909430737219"/>
-										<Property Name="TrimEnd" Type="Real64" Value="24.1143544512023"/>
 									</PropertyList>
 									<Language>SFX</Language>
-									<AudioFile>ENV-Torch.wav</AudioFile>
+									<AudioFile>Feuerschale.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="820166616"/>
+										<MediaID ID="368226926"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="ENV-Torch" ID="{1E9033BA-92DB-4E3E-8C6D-D78B08629B81}" Platform="Linked"/>
+								<ActiveSource Name="Feuerschale" ID="{21F61B87-0865-4D7F-AB91-7D375252B1E6}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="ENV-Blue-Fire" ID="{173CBABB-73CF-4ACF-A5F0-1943B454537D}" ShortID="993677158">
@@ -13212,6 +13217,116 @@
 										<ActiveSource Name="Menu - ATMO_Ketten" ID="{8A23A693-44D6-48F4-A74F-D4A572F8950D}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<Sound Name="Fly_buzzing-02" ID="{5855C468-987B-4D71-8D72-75269848C440}" ShortID="161930300">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Fly_buzzing-02" ID="{B19FDA54-F2C9-4E72-86C9-8EDBA9B03B91}">
+											<Language>SFX</Language>
+											<AudioFile>Fly_buzzing-02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="745096792"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Fly_buzzing-02" ID="{B19FDA54-F2C9-4E72-86C9-8EDBA9B03B91}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Fly_buzzing-04" ID="{D0765805-A4C9-432F-BBC1-3CFC24173A2D}" ShortID="633728194">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Fly_buzzing-04" ID="{CD8D9E29-FF85-44F9-8BB3-5E2568574069}">
+											<Language>SFX</Language>
+											<AudioFile>Fly_buzzing-04.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="672089415"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Fly_buzzing-04" ID="{CD8D9E29-FF85-44F9-8BB3-5E2568574069}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Fly_buzzing-05" ID="{8CB6E8A8-6E42-4051-AACE-7DB6F6C2F169}" ShortID="295095106">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Fly_buzzing-05" ID="{F6C8EE7E-D238-490D-AD7D-4C6C1648DDA3}">
+											<Language>SFX</Language>
+											<AudioFile>Fly_buzzing-05.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="283354561"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Fly_buzzing-05" ID="{F6C8EE7E-D238-490D-AD7D-4C6C1648DDA3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Fly_buzzing-03" ID="{904BD3D7-2106-40BB-A7E6-461B9DC0130F}" ShortID="369194727">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Fly_buzzing-03" ID="{877F0957-6610-47AF-B162-2D532AF78D92}">
+											<Language>SFX</Language>
+											<AudioFile>Fly_buzzing-03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="275522009"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Fly_buzzing-03" ID="{877F0957-6610-47AF-B162-2D532AF78D92}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Fly_buzzing-01" ID="{009277A6-877B-45DF-90C5-D186D345A102}" ShortID="1029428763">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Fly_buzzing-01" ID="{46787AAF-F026-488E-B423-BCDF401090E1}">
+											<Language>SFX</Language>
+											<AudioFile>Fly_buzzing-01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="600292568"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Fly_buzzing-01" ID="{46787AAF-F026-488E-B423-BCDF401090E1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<Sound Name="Atmo_LoRumble" ID="{42125116-57F0-4650-8467-ACBDAAE5E2CA}" ShortID="299981086">
@@ -13222,9 +13337,14 @@
 										<Value>70</Value>
 									</ValueList>
 								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-14</Value>
+										<Value>-12</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -13260,6 +13380,11 @@
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
 										<Value>55</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
 									</ValueList>
 								</Property>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
@@ -13353,6 +13478,86 @@
 						<ActiveSource Name="Skill Select-01" ID="{33F7364C-D5DD-4783-A297-6F7676BA837C}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Folder Name="MUSIC Room" ID="{C0EE5842-83EB-420B-B772-A9A4122C2ABB}" ShortID="828788706">
+					<ChildrenList>
+						<Sound Name="Music_Start_Room-01" ID="{6C7FA595-DD45-475C-8D29-9891D6BBDBCA}" ShortID="637891020">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-30</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Music Bus" ID="{BEF3C6D0-ACAA-4A5A-AF30-9AC2ED056053}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Env_Big_Room" ID="{2158C44F-2651-4565-AD37-10BF8685777A}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Music_Start_Room-01" ID="{B3866C46-936C-4DDB-BEC5-D9A36C957D9A}">
+									<Language>SFX</Language>
+									<AudioFile>Music_Start_Room-01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="497828273"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Music_Start_Room-01" ID="{B3866C46-936C-4DDB-BEC5-D9A36C957D9A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Music_Start_Room-02" ID="{A7F53160-B4E7-4D22-A59B-93BBF5A23E69}" ShortID="975149725">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-12</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Music Bus" ID="{BEF3C6D0-ACAA-4A5A-AF30-9AC2ED056053}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Env_Big_Room" ID="{2158C44F-2651-4565-AD37-10BF8685777A}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Music_Start_Room-02" ID="{F5E7EB4C-C56F-4EC6-9D66-7031F9411230}">
+									<Language>SFX</Language>
+									<AudioFile>Music_Start_Room-02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="282198155"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Music_Start_Room-02" ID="{F5E7EB4C-C56F-4EC6-9D66-7031F9411230}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

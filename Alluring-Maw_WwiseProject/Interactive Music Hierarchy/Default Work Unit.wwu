@@ -12,7 +12,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+							<ObjectRef Name="Music Bus" ID="{BEF3C6D0-ACAA-4A5A-AF30-9AC2ED056053}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -755,12 +755,19 @@
 					</Playlist>
 				</MusicPlaylistContainer>
 				<MusicPlaylistContainer Name="Fight Music Playlist" ID="{98FFD824-F66B-4D2F-98B5-0A51B8D940F5}" ShortID="595914834">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-3</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+							<ObjectRef Name="Music Bus" ID="{BEF3C6D0-ACAA-4A5A-AF30-9AC2ED056053}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>

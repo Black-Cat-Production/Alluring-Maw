@@ -1017,6 +1017,9 @@
 							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{69B0CE57-35CF-4DE4-944D-024577D46B2C}" ShortID="30361410">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Boss Music Playlist" ID="{B814B817-E079-41A7-BDD1-7694C7F24E6E}" WorkUnitID="{ECD5F4F5-2924-48E3-BE75-5C19A122CB25}"/>
@@ -1032,6 +1035,9 @@
 							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{FA651FD9-8084-4B41-9F34-4D5537A904A3}" ShortID="645497441">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Fight Music Playlist" ID="{98FFD824-F66B-4D2F-98B5-0A51B8D940F5}" WorkUnitID="{ECD5F4F5-2924-48E3-BE75-5C19A122CB25}"/>
@@ -1049,7 +1055,7 @@
 								<Action Name="" ID="{0725C785-AD85-464A-AB45-A77B0213BB89}" ShortID="517310094">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+										<Property Name="FadeTime" Type="Real64" Value="3"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -1065,6 +1071,50 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Fight Music Playlist" ID="{98FFD824-F66B-4D2F-98B5-0A51B8D940F5}" WorkUnitID="{ECD5F4F5-2924-48E3-BE75-5C19A122CB25}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Music_Start_Room_01" ID="{FB981012-4A42-4388-BA4C-0063A86E3492}">
+							<ChildrenList>
+								<Action Name="" ID="{AE4F3228-7A79-413D-B06C-6C786C8B1225}" ShortID="385469686">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Music_Start_Room-01" ID="{6C7FA595-DD45-475C-8D29-9891D6BBDBCA}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{2833A363-E965-44FA-85CC-62F3534125BB}" ShortID="581779835">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Music_Start_Room-02" ID="{A7F53160-B4E7-4D22-A59B-93BBF5A23E69}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Music_Start_Room_01" ID="{300E5323-E6B6-4DE0-96EE-947D28A02D93}">
+							<ChildrenList>
+								<Action Name="" ID="{8ACB0B1A-0CCE-4358-ABF0-9AB37A3259A4}" ShortID="849145797">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Music_Start_Room-01" ID="{6C7FA595-DD45-475C-8D29-9891D6BBDBCA}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E84D22B8-23F4-4133-B4AA-4DF6F2642967}" ShortID="705357595">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Music_Start_Room-02" ID="{A7F53160-B4E7-4D22-A59B-93BBF5A23E69}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

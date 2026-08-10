@@ -43,6 +43,7 @@ namespace AK
         static const AkUniqueID PLAY_MENU_UI_MOUSEOVER_01 = 3257834436U;
         static const AkUniqueID PLAY_MENU_UI_SELECT1 = 558031544U;
         static const AkUniqueID PLAY_MENU_UI_SELECT2_01 = 1590463151U;
+        static const AkUniqueID PLAY_MUSIC_START_ROOM_01 = 1210216554U;
         static const AkUniqueID PLAY_PLAYER_ATTACK_LMC = 104602405U;
         static const AkUniqueID PLAY_PLAYER_DASH = 2175711460U;
         static const AkUniqueID PLAY_PLAYER_DYING_VO = 902186995U;
@@ -69,6 +70,7 @@ namespace AK
         static const AkUniqueID STOP_FIGHT_MUSIC = 3386210082U;
         static const AkUniqueID STOP_HEARTBEAT = 3319673256U;
         static const AkUniqueID STOP_MENU = 2914981333U;
+        static const AkUniqueID STOP_MUSIC_START_ROOM_01 = 2480916340U;
         static const AkUniqueID STOP_PLAYER_RMC_CHARGE = 1058366323U;
     } // namespace EVENTS
 
