@@ -2,6 +2,7 @@ using System.Collections;
 using Scripts.Core.AnimationScripts;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using WWISE_Integration_Scripts;
 
 namespace Scripts.Core.Rooms
 {
@@ -17,7 +18,9 @@ namespace Scripts.Core.Rooms
             if (!_collider.gameObject.CompareTag("Player") || isTriggered) return;
             var playerAnim = _collider.gameObject.GetComponent<Animator>();
             var playerInput = _collider.gameObject.GetComponent<PlayerInput>();
+            var playerSounds = _collider.gameObject.GetComponent<PlayerSounds>();
             StartCoroutine(PlayInspectCutscene(playerAnim, playerInput));
+            playerSounds.PlayDoorCutsceneSound();
         }
 
         IEnumerator PlayInspectCutscene(Animator _playerAnimator, PlayerInput _playerInput)

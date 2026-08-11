@@ -19,7 +19,7 @@ namespace Scripts.Core.AnimationScripts
             animator = GetComponent<Animator>();
             if (!isStartDoor)
             {
-                Open();
+                OpenWithoutSound();
                 isClosed = false;
             }
             else
@@ -32,6 +32,11 @@ namespace Scripts.Core.AnimationScripts
         {
             animator.SetTrigger("Open");
             AkSoundEngine.PostEvent(doorOpenSoundEvent.Name, gameObject);
+        }
+
+        public void OpenWithoutSound()
+        {
+            animator.SetTrigger("Open");
         }
 
         public void Close()

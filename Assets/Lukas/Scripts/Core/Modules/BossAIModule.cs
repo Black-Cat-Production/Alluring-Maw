@@ -46,7 +46,7 @@ namespace Scripts.Core.Modules
             State deathState = new DeathState(animator);
 
 
-            stateMachine = new StateMachine(idleState, gameObject, true);
+            stateMachine = new StateMachine(idleState, gameObject, false);
 
             var anyToChase = new Transition(chaseState, FindTarget);
             var chaseToIdle = new Transition(idleState, () => !FindTarget());

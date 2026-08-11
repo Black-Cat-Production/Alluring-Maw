@@ -15,6 +15,7 @@ namespace WWISE_Integration_Scripts
         [SerializeField] Event playerChargeDarkEvent;
         [SerializeField] Event playerHeartbeatStopEvent;
         [SerializeField] Event playerSkillSelectionSoundEvent;
+        [SerializeField] Event playerStartDoorCutsceneSoundEvent;
 
         [Header("Sound Settings")]
         [SerializeField] public float FootstepInterval;
@@ -63,6 +64,11 @@ namespace WWISE_Integration_Scripts
         public void PlaySkillSelectionSound()
         {
             PlayEvent(playerSkillSelectionSoundEvent);
+        }
+
+        public void PlayDoorCutsceneSound()
+        {
+            PlayEvent(playerStartDoorCutsceneSoundEvent);
         }
     }
 }

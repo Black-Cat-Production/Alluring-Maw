@@ -15,6 +15,7 @@ namespace Scripts.Core.UI
         [SerializeField] Canvas uiCanvas;
 
         [SerializeField] Event introAudioEvent;
+        [SerializeField] Event outroAudioEvent;
 
         AsyncOperation loadRoutine;
 
@@ -32,18 +33,18 @@ namespace Scripts.Core.UI
         public void PresentIntroText(AsyncOperation _loadRoutine)
         {
             uiCanvas.gameObject.SetActive(true);
-            StartCoroutine(ShowText(_loadRoutine, introText));
+            StartCoroutine(ShowText(_loadRoutine, introText, introAudioEvent));
         }
 
         public void PresentOutroText(AsyncOperation _loadRoutine)
         {
             uiCanvas.gameObject.SetActive(true);
-            StartCoroutine(ShowText(_loadRoutine, outroText));
+            StartCoroutine(ShowText(_loadRoutine, outroText, outroAudioEvent));
         }
 
-        IEnumerator ShowText(AsyncOperation _loadRoutine, List<string> _text)
+        IEnumerator ShowText(AsyncOperation _loadRoutine, List<string> _text, Event _audioEvent)
         {
-            AkSoundEngine.PostEvent(introAudioEvent.Name, gameObject);
+            AkSoundEngine.PostEvent(_audioEvent.Name, gameObject);
             loadRoutine = _loadRoutine;
             foreach (string msg in _text)
             {

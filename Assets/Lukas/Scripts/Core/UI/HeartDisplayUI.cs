@@ -33,7 +33,7 @@ namespace Scripts.Core.UI
             for (int i = 0; i < currentHearts; i++) hearts[i].sprite = fullHeart;
 
             for (int i = currentHearts; i < maxHearts; i++) hearts[i].sprite = emptyHeart;
-            var heartPercentage = currentHearts / maxHearts * 100;
+            float heartPercentage = playerHealthSystem.GetCurrentPercentageHealth();
             AkSoundEngine.SetRTPCValue("Health", heartPercentage);
         }
     }
