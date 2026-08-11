@@ -6,6 +6,7 @@ using Scripts.Core.System;
 using Scripts.Core.UI;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Scripts.Program
 {
@@ -17,6 +18,8 @@ namespace Scripts.Program
         [SerializeField] NotifyEvent notifyEvent;
         [SerializeField] OptionsMenuUI optionsMenuUI;
 
+        [SerializeField] Button saveGameButton;
+        
         IEnumerator Start()
         {
             Screen.SetResolution(1920, 1080, true);
@@ -30,11 +33,13 @@ namespace Scripts.Program
             notifyEvent.OnNotify += UpdatePlayerName;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            saveGameButton.onClick.AddListener(GameManager.Instance.SaveGame);;
         }
 
         void OnDisable()
         {
             notifyEvent.OnNotify -= UpdatePlayerName;
+            saveGameButton.onClick.RemoveListener(GameManager.Instance.SaveGame);
         }
 
         public void ResetSaveGame()
