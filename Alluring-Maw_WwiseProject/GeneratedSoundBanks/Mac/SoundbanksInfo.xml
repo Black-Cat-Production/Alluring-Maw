@@ -77,7 +77,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="English(US)" Hash="{F51C4B64-F57F-71C4-D2FD-02DA485F3A29}">
+		<SoundBank Id="3161908922" Type="User" Language="English(US)" Hash="{C3007CE5-9551-B94C-9CF9-667F7BF5D039}">
 			<ShortName>Main</ShortName>
 			<Path>English(US)/Main.bnk</Path>
 			<Media>
@@ -575,7 +575,7 @@
 				</File>
 				<File Id="250296667" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>WhisperBohni4.wav</ShortName>
-					<CachePath>Voices/English(US)/WhisperBohni4_E9F54508.wem</CachePath>
+					<CachePath>Voices/English(US)/WhisperBohni4_9D76E9CF.wem</CachePath>
 				</File>
 				<File Id="250481480" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Boss-Hitmarker_VO-01.wav</ShortName>
@@ -1155,7 +1155,7 @@
 				</File>
 				<File Id="611007190" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>WhisperBohni1.wav</ShortName>
-					<CachePath>Voices/English(US)/WhisperBohni1_3A916DC7.wem</CachePath>
+					<CachePath>Voices/English(US)/WhisperBohni1_4AF5661A.wem</CachePath>
 				</File>
 				<File Id="611417319" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Thump.wav</ShortName>
@@ -1407,7 +1407,7 @@
 				</File>
 				<File Id="770709155" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Outro_Music.wav</ShortName>
-					<CachePath>SFX/Outro_Music_C8560709.wem</CachePath>
+					<CachePath>SFX/Outro_Music_18B6C73F.wem</CachePath>
 				</File>
 				<File Id="773712954" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FightMusic-Strings_2-01.wav</ShortName>
@@ -1519,7 +1519,7 @@
 				</File>
 				<File Id="847990453" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>WhisperBohni2.wav</ShortName>
-					<CachePath>Voices/English(US)/WhisperBohni2_2C054FBD.wem</CachePath>
+					<CachePath>Voices/English(US)/WhisperBohni2_F9EF3765.wem</CachePath>
 				</File>
 				<File Id="852399883" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Zombie-Attack_Whoosh-b-12.wav</ShortName>
@@ -1543,7 +1543,7 @@
 				</File>
 				<File Id="863265550" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>WhisperBohni3.wav</ShortName>
-					<CachePath>Voices/English(US)/WhisperBohni3_97C2D53F.wem</CachePath>
+					<CachePath>Voices/English(US)/WhisperBohni3_2FA6FA3F.wem</CachePath>
 				</File>
 				<File Id="866224309" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PLAYER-RMC4_Release.wav</ShortName>
@@ -1787,7 +1787,7 @@
 				</File>
 				<File Id="1034361387" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Outro_VO.wav</ShortName>
-					<CachePath>Voices/English(US)/Outro_VO_A7A5C02E.wem</CachePath>
+					<CachePath>Voices/English(US)/Outro_VO_7A06C019.wem</CachePath>
 				</File>
 				<File Id="1034679750" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_steps-07.wav</ShortName>
@@ -2773,5 +2773,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{79E73100-1F18-4F9F-5A19-471BA7D656CB}</FileHash>
+	<FileHash>{F423DC62-5575-01B6-3C01-B32566357CE1}</FileHash>
 </SoundBanksInfo>

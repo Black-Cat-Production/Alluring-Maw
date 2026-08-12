@@ -1171,6 +1171,12 @@
 						</Event>
 						<Event Name="Play_Outro" ID="{4748532F-9996-4979-9964-65A7BEC526F6}">
 							<ChildrenList>
+								<Action Name="" ID="{428316F7-680D-4FD1-9C29-6909EB602C99}" ShortID="365404267">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="3"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
 								<Action Name="" ID="{9A6F519A-ED9E-4E6F-8336-36FED0885C9D}" ShortID="112010666">
 									<ReferenceList>
 										<Reference Name="Target">
