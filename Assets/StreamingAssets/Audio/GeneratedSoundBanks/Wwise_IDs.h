@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID NEW_EVENT = 3050945240U;
         static const AkUniqueID PLAY_ATMO = 3133186549U;
         static const AkUniqueID PLAY_BOSS_ATTACK = 4155093788U;
         static const AkUniqueID PLAY_BOSS_DIES = 515021733U;
@@ -23,6 +24,7 @@ namespace AK
         static const AkUniqueID PLAY_BOSS_JUMP = 3271000828U;
         static const AkUniqueID PLAY_BOSS_JUMP_STOMP = 2284332626U;
         static const AkUniqueID PLAY_BOSS_MUSIC = 1935154233U;
+        static const AkUniqueID PLAY_CUTSCENE = 2625316922U;
         static const AkUniqueID PLAY_DAUMEN = 209295608U;
         static const AkUniqueID PLAY_ENV_BLUE_FIRE = 1849851393U;
         static const AkUniqueID PLAY_ENV_DOOR_CLOSE = 1670183507U;
@@ -34,6 +36,8 @@ namespace AK
         static const AkUniqueID PLAY_HEARTBEAT = 3765695918U;
         static const AkUniqueID PLAY_INTRO = 3103472528U;
         static const AkUniqueID PLAY_JUMPING_ATMO_SOUND = 3147874366U;
+        static const AkUniqueID PLAY_MENU___UI_MOUSEOVER2 = 2806707962U;
+        static const AkUniqueID PLAY_MENU___UI_SELECT2 = 278397421U;
         static const AkUniqueID PLAY_MENU_ATMO = 1905734753U;
         static const AkUniqueID PLAY_MENU_DESCENT = 190377696U;
         static const AkUniqueID PLAY_MENU_MUSIC = 2228153899U;
@@ -44,6 +48,7 @@ namespace AK
         static const AkUniqueID PLAY_MENU_UI_SELECT1 = 558031544U;
         static const AkUniqueID PLAY_MENU_UI_SELECT2_01 = 1590463151U;
         static const AkUniqueID PLAY_MUSIC_START_ROOM_01 = 1210216554U;
+        static const AkUniqueID PLAY_OUTRO = 431014199U;
         static const AkUniqueID PLAY_PLAYER_ATTACK_LMC = 104602405U;
         static const AkUniqueID PLAY_PLAYER_DASH = 2175711460U;
         static const AkUniqueID PLAY_PLAYER_DYING_VO = 902186995U;

@@ -10,8 +10,9 @@
 						<ObjectRef Name="MUSIC" ID="{96BFA57B-4541-4418-8001-0A83AA6A1A59}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="MENU" ID="{B50BB0D5-B975-44F8-8ACB-0AE52A065AD2}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="ENEMY" ID="{D092139A-B946-481A-9F1B-14224A71D4EA}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Cutscene" ID="{1FD25530-9B1B-491F-98BB-D59B0F978778}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="PLAYER" ID="{90C613C9-56CD-4E3F-B77C-A06762A48879}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="INTRO" ID="{09609CB5-DFAC-4EA1-8AEE-4BE48519D312}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="INTRO_OUTRO" ID="{09609CB5-DFAC-4EA1-8AEE-4BE48519D312}" WorkUnitID="{95BBCCF4-42D0-43C5-BD56-0120D28EFAF5}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

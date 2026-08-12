@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{1BB4B372-D472-143A-72A0-08A7776CBF26}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{E516EAC0-37F9-7BA1-4818-3AC59228A667}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -77,7 +77,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="English(US)" Hash="{EDFD5E53-714A-8658-9711-C6FB3E2D3840}">
+		<SoundBank Id="3161908922" Type="User" Language="English(US)" Hash="{F51C4B64-F57F-71C4-D2FD-02DA485F3A29}">
 			<ShortName>Main</ShortName>
 			<Path>English(US)/Main.bnk</Path>
 			<Media>
@@ -573,6 +573,10 @@
 					<ShortName>Boss-Dies-05.wav</ShortName>
 					<CachePath>Voices/English(US)/Boss-Dies-05_10C4C929.wem</CachePath>
 				</File>
+				<File Id="250296667" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>WhisperBohni4.wav</ShortName>
+					<CachePath>Voices/English(US)/WhisperBohni4_E9F54508.wem</CachePath>
+				</File>
 				<File Id="250481480" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Boss-Hitmarker_VO-01.wav</ShortName>
 					<CachePath>Voices/English(US)/Boss-Hitmarker_VO-01_10C4C929.wem</CachePath>
@@ -737,9 +741,13 @@
 					<ShortName>Zombie-VO-Idle-06.wav</ShortName>
 					<CachePath>Voices/English(US)/Zombie-VO-Idle-06_10C4C929.wem</CachePath>
 				</File>
+				<File Id="365679400" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>WhisperVoices-03.wav</ShortName>
+					<CachePath>Voices/English(US)/WhisperVoices-03_5014E584.wem</CachePath>
+				</File>
 				<File Id="368226926" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Feuerschale.wav</ShortName>
-					<CachePath>SFX/Feuerschale_1190FD14.wem</CachePath>
+					<CachePath>SFX/Feuerschale_3E800C3F.wem</CachePath>
 				</File>
 				<File Id="371158611" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Zombie-Attack_Whoosh-a-06.wav</ShortName>
@@ -1089,6 +1097,10 @@
 					<ShortName>FightMusic-Strings_2-03.wav</ShortName>
 					<CachePath>SFX/FightMusic-Strings_2-03_D79FB2B7.wem</CachePath>
 				</File>
+				<File Id="596330386" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>WhisperVoices-01.wav</ShortName>
+					<CachePath>Voices/English(US)/WhisperVoices-01_5014E584.wem</CachePath>
+				</File>
 				<File Id="598126548" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Zombie-VO-Idle-05.wav</ShortName>
 					<CachePath>Voices/English(US)/Zombie-VO-Idle-05_10C4C929.wem</CachePath>
@@ -1140,6 +1152,10 @@
 				<File Id="610327250" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Env_Door_close_hinge2-05.wav</ShortName>
 					<CachePath>SFX/Env_Door_close_hinge2-05_10C4C929.wem</CachePath>
+				</File>
+				<File Id="611007190" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>WhisperBohni1.wav</ShortName>
+					<CachePath>Voices/English(US)/WhisperBohni1_3A916DC7.wem</CachePath>
 				</File>
 				<File Id="611417319" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Menu - ATMO_Thump.wav</ShortName>
@@ -1243,7 +1259,7 @@
 				</File>
 				<File Id="662154490" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-Dash_Stomp-02.wav</ShortName>
-					<CachePath>SFX/Player-Dash_Stomp-02_C22B9F47.wem</CachePath>
+					<CachePath>SFX/Player-Dash_Stomp-02_DC54200F.wem</CachePath>
 				</File>
 				<File Id="667203179" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_Voice_Exhale-01.wav</ShortName>
@@ -1389,6 +1405,10 @@
 					<ShortName>Rat-FS_stone-02.wav</ShortName>
 					<CachePath>SFX/Rat-FS_stone-02_10C4C929.wem</CachePath>
 				</File>
+				<File Id="770709155" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Outro_Music.wav</ShortName>
+					<CachePath>SFX/Outro_Music_C8560709.wem</CachePath>
+				</File>
 				<File Id="773712954" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FightMusic-Strings_2-01.wav</ShortName>
 					<CachePath>SFX/FightMusic-Strings_2-01_D79FB2B7.wem</CachePath>
@@ -1449,6 +1469,10 @@
 					<ShortName>Env_Door_close_hinge2-07.wav</ShortName>
 					<CachePath>SFX/Env_Door_close_hinge2-07_10C4C929.wem</CachePath>
 				</File>
+				<File Id="819896219" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>WhisperVoices-02.wav</ShortName>
+					<CachePath>Voices/English(US)/WhisperVoices-02_5014E584.wem</CachePath>
+				</File>
 				<File Id="826040159" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Env_Door_open_grinding-10.wav</ShortName>
 					<CachePath>SFX/Env_Door_open_grinding-10_10C4C929.wem</CachePath>
@@ -1493,9 +1517,17 @@
 					<ShortName>Menu - Descent.wav</ShortName>
 					<CachePath>SFX/Menu - Descent_825148B3.wem</CachePath>
 				</File>
+				<File Id="847990453" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>WhisperBohni2.wav</ShortName>
+					<CachePath>Voices/English(US)/WhisperBohni2_2C054FBD.wem</CachePath>
+				</File>
 				<File Id="852399883" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Zombie-Attack_Whoosh-b-12.wav</ShortName>
 					<CachePath>SFX/Zombie-Attack_Whoosh-b-12_10C4C929.wem</CachePath>
+				</File>
+				<File Id="855767861" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>WhisperVoices-04.wav</ShortName>
+					<CachePath>Voices/English(US)/WhisperVoices-04_5014E584.wem</CachePath>
 				</File>
 				<File Id="858066257" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boss-Jump_VO-02.wav</ShortName>
@@ -1508,6 +1540,10 @@
 				<File Id="862864940" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Zombie-Dies-06.wav</ShortName>
 					<CachePath>Voices/English(US)/Zombie-Dies-06_10C4C929.wem</CachePath>
+				</File>
+				<File Id="863265550" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>WhisperBohni3.wav</ShortName>
+					<CachePath>Voices/English(US)/WhisperBohni3_97C2D53F.wem</CachePath>
 				</File>
 				<File Id="866224309" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PLAYER-RMC4_Release.wav</ShortName>
@@ -1695,7 +1731,7 @@
 				</File>
 				<File Id="1003067410" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-Dash_Stomp-01.wav</ShortName>
-					<CachePath>SFX/Player-Dash_Stomp-01_EFA70990.wem</CachePath>
+					<CachePath>SFX/Player-Dash_Stomp-01_157C2F40.wem</CachePath>
 				</File>
 				<File Id="1003897671" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Rat-Idle-08.wav</ShortName>
@@ -1748,6 +1784,10 @@
 				<File Id="1032183701" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Env_Door_open_mechanic-05.wav</ShortName>
 					<CachePath>SFX/Env_Door_open_mechanic-05_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1034361387" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Outro_VO.wav</ShortName>
+					<CachePath>Voices/English(US)/Outro_VO_A7A5C02E.wem</CachePath>
 				</File>
 				<File Id="1034679750" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player-FS_steps-07.wav</ShortName>
@@ -1853,6 +1893,7 @@
 					<Plugin Id="1182561210" Name="Cut_3dB_10KHz" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="1293178626" Name="In_My_Car" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="1416967478" Name="All_Buttons_IN" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="1588715066" Name="Echoes_Linear" LibName="Wwise Delay" LibId="6946819"/>
 					<Plugin Id="1674078407" Name="Chorus_Like" LibName="Wwise Flanger" LibId="8192003"/>
 					<Plugin Id="2652646462" Name="Dialog_Leveler_Soft" LibName="Wwise Compressor" LibId="7077891"/>
 					<Plugin Id="2653529179" Name="Three_Voices" LibName="Wwise Harmonizer" LibId="9043971"/>
@@ -1868,6 +1909,7 @@
 				</ShareSets>
 			</Plugins>
 			<Events>
+				<Event Id="3050945240" Name="New_Event" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3133186549" Name="Play_Atmo" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="118127717"/>
@@ -1879,7 +1921,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="4155093788" Name="Play_Boss_Attack" MaxAttenuation="15" DurationType="OneShot" DurationMin="2.03575" DurationMax="2.1320503">
+				<Event Id="4155093788" Name="Play_Boss_Attack" MaxAttenuation="22" DurationType="OneShot" DurationMin="2.03575" DurationMax="2.1320503">
 					<MediaRefs>
 						<MediaRef Id="133104435"/>
 						<MediaRef Id="145418833"/>
@@ -1903,14 +1945,14 @@
 						<MediaRef Id="903149624"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="515021733" Name="Play_Boss_Dies" MaxAttenuation="15" DurationType="OneShot" DurationMin="3.0666666" DurationMax="3.9315624">
+				<Event Id="515021733" Name="Play_Boss_Dies" MaxAttenuation="22" DurationType="OneShot" DurationMin="3.0666666" DurationMax="3.9315624">
 					<MediaRefs>
 						<MediaRef Id="245519691"/>
 						<MediaRef Id="885426643"/>
 						<MediaRef Id="1013725687"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1075280761" Name="Play_Boss_FS" MaxAttenuation="15" DurationType="OneShot" DurationMin="0.422625" DurationMax="0.422625">
+				<Event Id="1075280761" Name="Play_Boss_FS" MaxAttenuation="22" DurationType="OneShot" DurationMin="0.422625" DurationMax="0.422625">
 					<MediaRefs>
 						<MediaRef Id="7062636"/>
 						<MediaRef Id="13269472"/>
@@ -1936,7 +1978,7 @@
 						<MediaRef Id="979965442"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="727530039" Name="Play_Boss_FS_Chain" MaxAttenuation="15" DurationType="OneShot" DurationMin="0" DurationMax="1.0556353">
+				<Event Id="727530039" Name="Play_Boss_FS_Chain" MaxAttenuation="22" DurationType="OneShot" DurationMin="0" DurationMax="1.0556353">
 					<MediaRefs>
 						<MediaRef Id="70334053"/>
 						<MediaRef Id="132240131"/>
@@ -1957,7 +1999,7 @@
 						<MediaRef Id="1052242071"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3682868997" Name="Play_Boss_Hitmarker" MaxAttenuation="15" DurationType="OneShot" DurationMin="0.6666667" DurationMax="0.6666875">
+				<Event Id="3682868997" Name="Play_Boss_Hitmarker" MaxAttenuation="22" DurationType="OneShot" DurationMin="0.6666667" DurationMax="0.6666875">
 					<MediaRefs>
 						<MediaRef Id="42173254"/>
 						<MediaRef Id="138007222"/>
@@ -1973,7 +2015,7 @@
 						<MediaRef Id="1018434102"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2050535857" Name="Play_Boss_Idle_Voice" MaxAttenuation="15" DurationType="OneShot" DurationMin="1.6833333" DurationMax="6.7833543">
+				<Event Id="2050535857" Name="Play_Boss_Idle_Voice" MaxAttenuation="22" DurationType="OneShot" DurationMin="1.6833333" DurationMax="6.7833543">
 					<MediaRefs>
 						<MediaRef Id="59374791"/>
 						<MediaRef Id="125684817"/>
@@ -1993,7 +2035,7 @@
 						<MediaRef Id="1026154622"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3271000828" Name="Play_Boss_Jump" MaxAttenuation="15" DurationType="OneShot" DurationMin="2.8166666" DurationMax="2.8166876">
+				<Event Id="3271000828" Name="Play_Boss_Jump" MaxAttenuation="22" DurationType="OneShot" DurationMin="2.8166666" DurationMax="2.8166876">
 					<MediaRefs>
 						<MediaRef Id="231791854"/>
 						<MediaRef Id="452612122"/>
@@ -2007,7 +2049,7 @@
 						<MediaRef Id="981319622"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2284332626" Name="Play_Boss_Jump_Stomp" MaxAttenuation="15" DurationType="OneShot" DurationMin="0.71585274" DurationMax="1.0103085">
+				<Event Id="2284332626" Name="Play_Boss_Jump_Stomp" MaxAttenuation="22" DurationType="OneShot" DurationMin="0.71585274" DurationMax="1.0103085">
 					<MediaRefs>
 						<MediaRef Id="84724703"/>
 						<MediaRef Id="201483726"/>
@@ -2033,6 +2075,18 @@
 						<MediaRef Id="697184488"/>
 						<MediaRef Id="723158860"/>
 						<MediaRef Id="773712954"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2625316922" Name="Play_Cutscene" DurationType="OneShot" DurationMin="9.5625" DurationMax="9.5625">
+					<MediaRefs>
+						<MediaRef Id="250296667"/>
+						<MediaRef Id="365679400"/>
+						<MediaRef Id="596330386"/>
+						<MediaRef Id="611007190"/>
+						<MediaRef Id="819896219"/>
+						<MediaRef Id="847990453"/>
+						<MediaRef Id="855767861"/>
+						<MediaRef Id="863265550"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="209295608" Name="Play_daumen" MaxAttenuation="20" DurationType="OneShot" DurationMin="3.2" DurationMax="3.2">
@@ -2207,6 +2261,29 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
+				<Event Id="2806707962" Name="Play_Menu___UI_MouseOver2" DurationType="OneShot" DurationMin="0.046020865" DurationMax="0.046020865">
+					<MediaRefs>
+						<MediaRef Id="145861600"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1416967478"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="278397421" Name="Play_Menu___UI_Select2" DurationType="OneShot" DurationMin="1.4142135" DurationMax="1.4142135">
+					<MediaRefs>
+						<MediaRef Id="511381107"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1588715066"/>
+						</ShareSets>
+					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="2521112689" Name="Env_Big_Room"/>
+					</AuxBusRefs>
+				</Event>
 				<Event Id="1905734753" Name="Play_Menu_ATMO" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="89317104"/>
@@ -2273,6 +2350,9 @@
 					<MediaRefs>
 						<MediaRef Id="511381107"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="960112437" Name="Env_Mid_Room"/>
+					</AuxBusRefs>
 				</Event>
 				<Event Id="1590463151" Name="Play_Menu_UI_select2_01" DurationType="OneShot" DurationMin="0.01545325" DurationMax="0.01545325">
 					<MediaRefs>
@@ -2292,6 +2372,12 @@
 					<AuxBusRefs>
 						<AuxBusRef Id="2521112689" Name="Env_Big_Room"/>
 					</AuxBusRefs>
+				</Event>
+				<Event Id="431014199" Name="Play_Outro" DurationType="OneShot" DurationMin="14.576146" DurationMax="14.576146">
+					<MediaRefs>
+						<MediaRef Id="770709155"/>
+						<MediaRef Id="1034361387"/>
+					</MediaRefs>
 				</Event>
 				<Event Id="104602405" Name="Play_Player_Attack_LMC" DurationType="OneShot" DurationMin="1.3765548" DurationMax="1.5011435">
 					<MediaRefs>
@@ -2687,5 +2773,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{901237AB-ED8B-7F19-6189-B8F19F99CB35}</FileHash>
+	<FileHash>{79E73100-1F18-4F9F-5A19-471BA7D656CB}</FileHash>
 </SoundBanksInfo>

@@ -3,7 +3,9 @@ Event	ID	Name			Wwise Object Path	Notes
 	104602405	Play_Player_Attack_LMC			\Default Work Unit\PLAYER\Play_Player_Attack_LMC	
 	190377696	Play_Menu_Descent			\Default Work Unit\MENU\Play_Menu_Descent	
 	209295608	Play_daumen			\Default Work Unit\ENVIRONMENT\Play_daumen	
+	278397421	Play_Menu___UI_Select2			\Default Work Unit\MENU\UI\Play_Menu___UI_Select2	
 	363320808	Play_Player_RMC4_Release			\Default Work Unit\PLAYER\Play_Player_RMC4_Release	
+	431014199	Play_Outro			\Default Work Unit\INTRO_OUTRO\Play_Outro	
 	503090763	Play_Menu_UI_LearnSkill1			\Default Work Unit\MENU\UI\Play_Menu_UI_LearnSkill1	
 	515021733	Play_Boss_Dies			\Default Work Unit\ENEMY\BOSS\Play_Boss_Dies	
 	558031544	Play_Menu_UI_Select1			\Default Work Unit\MENU\UI\Play_Menu_UI_Select1	
@@ -32,11 +34,14 @@ Event	ID	Name			Wwise Object Path	Notes
 	2284332626	Play_Boss_Jump_Stomp			\Default Work Unit\ENEMY\BOSS\Play_Boss_Jump_Stomp	
 	2480916340	Stop_Music_Start_Room_01			\Default Work Unit\MUSIC\Stop_Music_Start_Room_01	
 	2554632573	Play_Player_RMC1_Release			\Default Work Unit\PLAYER\Play_Player_RMC1_Release	
+	2625316922	Play_Cutscene			\Default Work Unit\Play_Cutscene	
+	2806707962	Play_Menu___UI_MouseOver2			\Default Work Unit\MENU\UI\Play_Menu___UI_MouseOver2	
 	2829022778	Set_State_Pause			\Default Work Unit\Set_State_Pause	
 	2914981333	Stop_Menu			\Default Work Unit\MENU\Stop_Menu	
 	2940525158	Play_ENV_Torch2			\Default Work Unit\ENVIRONMENT\Play_ENV_Torch2	
 	3045057056	Play_Menu_Torch_Alt			\Default Work Unit\MENU\Play_Menu_Torch_Alt	
-	3103472528	Play_Intro			\Default Work Unit\INTRO\Play_Intro	
+	3050945240	New_Event			\Default Work Unit\ENEMY\ZOMBIE\New_Event	
+	3103472528	Play_Intro			\Default Work Unit\INTRO_OUTRO\Play_Intro	
 	3133186549	Play_Atmo			\Default Work Unit\ENVIRONMENT\Play_Atmo	
 	3147874366	Play_Jumping_Atmo_Sound			\Default Work Unit\ENVIRONMENT\Play_Jumping_Atmo_Sound	
 	3257834436	Play_Menu_UI_MouseOver_01			\Default Work Unit\MENU\UI\Play_Menu_UI_MouseOver_01	
@@ -69,6 +74,7 @@ Effect plug-ins	ID	Name	Type				Notes
 	1182561210	Cut_3dB_10KHz	Wwise Parametric EQ			
 	1293178626	In_My_Car	Wwise Parametric EQ			
 	1416967478	All_Buttons_IN	Wwise Compressor			
+	1588715066	Echoes_Linear	Wwise Delay			
 	1674078407	Chorus_Like	Wwise Flanger			
 	2652646462	Dialog_Leveler_Soft	Wwise Compressor			
 	2653529179	Three_Voices	Wwise Harmonizer			
@@ -94,7 +100,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	13945456	Player-FS_steps-01	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Player-FS_steps-01_B5A128BB.wem		\Actor-Mixer Hierarchy\Default Work Unit\PLAYER\FOOTSTEPS\Player-FS_Step\Player-FS_steps-01		84768
 	14596070	PLAYER-RMC2_Release	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\PLAYER-RMC2_Release_DA4BEBF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\PLAYER\ATTACK\RMC\PLAYER-RMC2_Release		342500
 	16162616	Zombie-VO-Idle-23	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\Zombie-VO-Idle-23_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\ZOMBIE\Zombie-Idle_Voice\Zombie-Idle_Voice\Zombie-VO-Idle-23		198500
-	17042488	Menu - UI_select2	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Menu - UI_select2-01_250C219A.wem		\Actor-Mixer Hierarchy\Default Work Unit\MENU\UI\Menu - UI_select2		3064
+	17042488	Menu - UI_Choose	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Menu - UI_select2-01_250C219A.wem		\Actor-Mixer Hierarchy\Default Work Unit\MENU\UI\Menu - UI_Choose		3064
 	23592762	Boss-FS_Step_Low-03	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Boss-FS_Step_Low-03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\BOSS\FOOTSTEPS\Boss-FS_Step_Low\Boss-FS_Step_Low-03		81240
 	23604221	Player-FS_Cloth-13	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Player-FS_Cloth-13_A02FE05F.wem		\Actor-Mixer Hierarchy\Default Work Unit\PLAYER\FOOTSTEPS\Player-FS_Cloth\Player-FS_Cloth-13		89700
 	25470229	Menu - ATMO_Ketten	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Menu - ATMO_Ketten_F3F075E0.wem		\Actor-Mixer Hierarchy\Default Work Unit\ATMO\Jumping Atmo Sound\Menu - ATMO_Ketten		1273244
@@ -149,7 +155,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	138007222	Boss-Hitmarker_VO-10	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\Boss-Hitmarker_VO-10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\BOSS\Boss-Hitmarker_VO\Boss-Hitmarker_VO-10		128100
 	143697608	Zombie-VO_Attack-04	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Zombie-VO_Attack-04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\ZOMBIE\ATTACK\Zombie-Attack_Voice\Zombie-VO_Attack-04		185700
 	145418833	Boss-Attack_chain-07	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Boss-Attack_chain-07_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\BOSS\ATTACK\Boss-Attack_Chain\Boss-Attack_chain-07		400100
-	145861600	Menu - UI_MouseOver	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Menu - UI_MouseOver-01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\MENU\UI\Menu - UI_MouseOver		6344
+	145861600	Menu - UI_MouseOver1	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Menu - UI_MouseOver-01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\MENU\UI\Menu - UI_MouseOver1		6344
 	147800549	Zombie-Attack_Metal-04	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Zombie-Attack_Metal-04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\ZOMBIE\ATTACK\Zombie-Attack_Metallic\Zombie-Attack_Metal-04		80100
 	150956354	Menu - ATMO_Monsters	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Menu - ATMO_Monsters_145A5079.wem		\Actor-Mixer Hierarchy\Default Work Unit\MENU\ATMO\Menu - ATMO_Monsters		17267344
 	153246880	Boss-FS_Chains-05	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Boss-FS_Chains-05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\BOSS\FOOTSTEPS\Boss-FS_Chain\Boss-FS_Chains-05		147300
@@ -209,6 +215,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	239656092	Boss-FS_Step_High-03	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Boss-FS_Step_High-03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\BOSS\FOOTSTEPS\Boss-FS_Step_High\Boss-FS_Step_High-03		71272
 	242273507	Zombie-Attack_Whoosh-b-08	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Zombie-Attack_Whoosh-b-08_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\ZOMBIE\ATTACK\Zombie-Attack_Whoosh_b\Zombie-Attack_Whoosh-b-08		69772
 	245519691	Boss-Dies-05	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\Boss-Dies-05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\BOSS\Boss-Dies_VO\Boss-Dies-05		665700
+	250296667	WhisperBohni4	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\WhisperBohni4_E9F54508.wem		\Actor-Mixer Hierarchy\Default Work Unit\CUTSCENE\WhisperBohni4		1836096
 	250481480	Boss-Hitmarker_VO-01	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\Boss-Hitmarker_VO-01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\BOSS\Boss-Hitmarker_VO\Boss-Hitmarker_VO-01		128096
 	255270975	Env_Door_close_grinding-07	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Env_Door_close_grinding-07_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENVIRONMENT\DOOR\Door_close_grinding\Env_Door_close_grinding-07		224100
 	258955241	Zombie-VO-Idle-01	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\Zombie-VO-Idle-01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\ZOMBIE\Zombie-Idle_Voice\Zombie-Idle_Voice\Zombie-VO-Idle-01		204896
@@ -250,7 +257,8 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	357323291	Boss-FS_Step_Low-08	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Boss-FS_Step_Low-08_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\BOSS\FOOTSTEPS\Boss-FS_Step_Low\Boss-FS_Step_Low-08		81240
 	358780680	Zombie-Attack_Whoosh-a-05	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Zombie-Attack_Whoosh-a-05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\ZOMBIE\ATTACK\Zombie-Attack_Whoosh_a\Zombie-Attack_Whoosh-a-05		48096
 	361557719	Zombie-VO-Idle-06	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\Zombie-VO-Idle-06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\ZOMBIE\Zombie-Idle_Voice\Zombie-Idle_Voice\Zombie-VO-Idle-06		208100
-	368226926	ENV-FireBowl	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Feuerschale_1190FD14.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENVIRONMENT\ENV-FireBowl		3847824
+	365679400	WhisperVoices-03	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\WhisperVoices-03_5014E584.wem		\Actor-Mixer Hierarchy\Default Work Unit\CUTSCENE\WhisperVoices-03		1452096
+	368226926	ENV-FireBowl	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Feuerschale_3E800C3F.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENVIRONMENT\ENV-FireBowl		3847824
 	371158611	Zombie-Attack_Whoosh-a-06	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Zombie-Attack_Whoosh-a-06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\ZOMBIE\ATTACK\Zombie-Attack_Whoosh_a\Zombie-Attack_Whoosh-a-06		51716
 	371344186	Boss-Attack_chain-09	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Boss-Attack_chain-09_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\BOSS\ATTACK\Boss-Attack_Chain\Boss-Attack_chain-09		400088
 	372393383	Zombie-Hitmarker-01	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\Zombie-Hitmarker-01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\ZOMBIE\Zombie-Hitmarker\Zombie-Hitmarker-01		86496
@@ -338,6 +346,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	582972300	Zombie-VO_Attack-07	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Zombie-VO_Attack-07_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\ZOMBIE\ATTACK\Zombie-Attack_Voice\Zombie-VO_Attack-07		160096
 	585098382	Boss-Jump_Stomp_raw-05	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Boss-Jump_Stomp_raw-05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\BOSS\JUMP\Boss-Jump_Raw\Boss-Jump_Stomp_raw-05		144040
 	589460658	FightMusic-Strings_2-01	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\FightMusic-Strings_2-03_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Boss Music Playlist\Boss Music\FightMusic-Strings_2-01		3603208
+	596330386	WhisperVoices-01	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\WhisperVoices-01_5014E584.wem		\Actor-Mixer Hierarchy\Default Work Unit\CUTSCENE\WhisperVoices-01		1452096
 	598126548	Zombie-VO-Idle-05	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\Zombie-VO-Idle-05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\ZOMBIE\Zombie-Idle_Voice\Zombie-Idle_Voice\Zombie-VO-Idle-05		240100
 	599663629	Menu - ATMO_Thump_02	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Menu - ATMO_Thump_D69AE239.wem		\Actor-Mixer Hierarchy\Default Work Unit\ATMO\Jumping Atmo Sound\Menu - ATMO_Thump_02		970992
 	599847394	Env_Door_open_hinge-07	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Env_Door_open_hinge-07_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENVIRONMENT\DOOR\Door_open_hinge\Env_Door_open_hinge-07		307300
@@ -351,6 +360,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	609042276	Player-FS_Voice_Inhale-09	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\Player-FS_Voice_Inhale-09_0B934AFE.wem		\Actor-Mixer Hierarchy\Default Work Unit\PLAYER\FOOTSTEPS\Player-FS_Voice\Inhale\Player-FS_Voice_Inhale-09		140476
 	609114711	Player-FS_Leather-08	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Player-FS_Leather-08_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\PLAYER\FOOTSTEPS\Player-FS_Leather\Player-FS_Leather-08		80096
 	610327250	Env_Door_close_hinge2-05	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Env_Door_close_hinge2-05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENVIRONMENT\DOOR\Door_close_hinge2\Env_Door_close_hinge2-05		220896
+	611007190	WhisperBohni1	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\WhisperBohni1_3A916DC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\CUTSCENE\WhisperBohni1		1281700
 	611417319	Menu - ATMO_Thump_03	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Menu - ATMO_Thump_747F8270.wem		\Actor-Mixer Hierarchy\Default Work Unit\ATMO\Jumping Atmo Sound\Menu - ATMO_Thump_03		1203400
 	613593918	Player-FS_Leather-03	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Player-FS_Leather-03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\PLAYER\FOOTSTEPS\Player-FS_Leather\Player-FS_Leather-03		86496
 	614300081	Player-GettingHit-06	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\Player-GettingHit-06_3375F516.wem		\Actor-Mixer Hierarchy\Default Work Unit\PLAYER\Player-GettingHit\Player-GettingHit-06		100196
@@ -376,7 +386,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	655158912	ENV-Torch	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\ENV-Torch_A561301D.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENVIRONMENT\ENV-Torch		3256444
 	660796908	Zombie-FS-01	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Zombie-FS-01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\ZOMBIE\Zombie-FS\Zombie-FS-01		42924
 	661501275	Player-FS_steps-10	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Player-FS_steps-10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\PLAYER\FOOTSTEPS\Player-FS_Step\Player-FS_steps-10		84768
-	662154490	Player-Dash_Stomp-02	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Player-Dash_Stomp-02_C22B9F47.wem		\Actor-Mixer Hierarchy\Default Work Unit\PLAYER\DASH\Player-Dash_Stomp\Player-Dash_Stomp-02		280264
+	662154490	Player-Dash_Stomp-02	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Player-Dash_Stomp-02_DC54200F.wem		\Actor-Mixer Hierarchy\Default Work Unit\PLAYER\DASH\Player-Dash_Stomp\Player-Dash_Stomp-02		280264
 	667203179	Player-FS_Voice_Exhale-01	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\Player-FS_Voice_Exhale-01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\PLAYER\FOOTSTEPS\Player-FS_Voice\Exhale\Player-FS_Voice_Exhale-01		252896
 	667726242	Player-FS_Voice_Inhale-01	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\Player-FS_Voice_Inhale-01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\PLAYER\FOOTSTEPS\Player-FS_Voice\Inhale\Player-FS_Voice_Inhale-01		182496
 	667984145	Boss-Hitmarker_VO-03	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\Boss-Hitmarker_VO-03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\BOSS\Boss-Hitmarker_VO\Boss-Hitmarker_VO-03		128100
@@ -413,6 +423,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	762037427	Boss-Attack_whoosh-02	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Boss-Attack_whoosh-02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\BOSS\ATTACK\Boss-Attack_Whoosh\Boss-Attack_whoosh-02		400100
 	764511545	Zombie-Hitmarker-03	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\Zombie-Hitmarker-03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\ZOMBIE\Zombie-Hitmarker\Zombie-Hitmarker-03		76284
 	770034677	Rat-FS_stone-02	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Rat-FS_stone-02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\RAT\RAT FS\Rat_FS_stone\Rat-FS_stone-02		57696
+	770709155	Outro_Music	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Outro_Music_C8560709.wem		\Actor-Mixer Hierarchy\Default Work Unit\INTRO\Outro_Music		2798716
 	773712954	FightMusic-Strings_2-01	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\FightMusic-Strings_2-01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Boss Music Playlist\Boss Music\FightMusic-Strings_2-01		2949216
 	774208815	Zombie-Dies-05	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\Zombie-Dies-05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\ZOMBIE\Zombie-Dies\Zombie-Dies-05		182500
 	778110188	Env_Door_open_grinding-09	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Env_Door_open_grinding-09_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENVIRONMENT\DOOR\Door_open_grinding\Env_Door_open_grinding-09		307300
@@ -428,6 +439,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	814818822	Player-FS_Leather-06	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Player-FS_Leather-06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\PLAYER\FOOTSTEPS\Player-FS_Leather\Player-FS_Leather-06		76896
 	816826383	Env_Door_open_hinge-09	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Env_Door_open_hinge-09_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENVIRONMENT\DOOR\Door_open_hinge\Env_Door_open_hinge-09		307300
 	818093022	Env_Door_close_hinge2-07	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Env_Door_close_hinge2-07_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENVIRONMENT\DOOR\Door_close_hinge2\Env_Door_close_hinge2-07		220900
+	819896219	WhisperVoices-02	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\WhisperVoices-02_5014E584.wem		\Actor-Mixer Hierarchy\Default Work Unit\CUTSCENE\WhisperVoices-02		1452096
 	826040159	Env_Door_open_grinding-10	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Env_Door_open_grinding-10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENVIRONMENT\DOOR\Door_open_grinding\Env_Door_open_grinding-10		307300
 	829271364	FightMusic-Perc-01	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\FightMusic-Perc-01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Fight Music Playlist\Fight Music\FightMusic-Perc-01		2949216
 	831246282	Env_Door_open_hinge-05	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Env_Door_open_hinge-05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENVIRONMENT\DOOR\Door_open_hinge\Env_Door_open_hinge-05		307300
@@ -439,10 +451,13 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	837324074	Zombie-VO-Idle-27	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\Zombie-VO-Idle-27_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\ZOMBIE\Zombie-Idle_Voice\Zombie-Idle_Voice\Zombie-VO-Idle-27		227300
 	843313335	Rat-Attack-01	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Rat-Attack-01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\RAT\Rat_Attack\Rat-Attack-01		74712
 	847593425	Menu - Descent	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Menu - Descent_825148B3.wem		\Actor-Mixer Hierarchy\Default Work Unit\MENU\Menu - Descent		460052
+	847990453	WhisperBohni2	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\WhisperBohni2_2C054FBD.wem		\Actor-Mixer Hierarchy\Default Work Unit\CUTSCENE\WhisperBohni2		1836096
 	852399883	Zombie-Attack_Whoosh-b-12	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Zombie-Attack_Whoosh-b-12_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\ZOMBIE\ATTACK\Zombie-Attack_Whoosh_b\Zombie-Attack_Whoosh-b-12		69772
+	855767861	WhisperVoices-04	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\WhisperVoices-04_5014E584.wem		\Actor-Mixer Hierarchy\Default Work Unit\CUTSCENE\WhisperVoices-04		1452096
 	858066257	Boss-Jump_VO-02	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Boss-Jump_VO-02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\BOSS\JUMP\Boss-Jump_VO\Boss-Jump_VO-02		182496
 	859968394	Boss-FS_Step_High-01	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Boss-FS_Step_High-01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\BOSS\FOOTSTEPS\Boss-FS_Step_High\Boss-FS_Step_High-01		51804
 	862864940	Zombie-Dies-06	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\Zombie-Dies-06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\ZOMBIE\Zombie-Dies\Zombie-Dies-06		147300
+	863265550	WhisperBohni3	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\WhisperBohni3_97C2D53F.wem		\Actor-Mixer Hierarchy\Default Work Unit\CUTSCENE\WhisperBohni3		1836096
 	866224309	PLAYER-RMC4_Release	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\PLAYER-RMC4_Release_F9459412.wem		\Actor-Mixer Hierarchy\Default Work Unit\PLAYER\ATTACK\RMC\PLAYER-RMC4_Release		323100
 	872721198	Player-FS_Leather-04	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Player-FS_Leather-04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\PLAYER\FOOTSTEPS\Player-FS_Leather\Player-FS_Leather-04		86496
 	877691035	Env_Door_open_grinding-01	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Env_Door_open_grinding-01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENVIRONMENT\DOOR\Door_open_grinding\Env_Door_open_grinding-01		307296
@@ -489,7 +504,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	998136672	Boss-FS_Chains-10	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Boss-FS_Chains-10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\BOSS\FOOTSTEPS\Boss-FS_Chain\Boss-FS_Chains-10		108900
 	999081096	Zombie-Attack_Metal-10	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Zombie-Attack_Metal-10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\ZOMBIE\ATTACK\Zombie-Attack_Metallic\Zombie-Attack_Metal-10		70500
 	1001743722	Env_Door_open_grinding-05	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Env_Door_open_grinding-05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENVIRONMENT\DOOR\Door_open_grinding\Env_Door_open_grinding-05		307300
-	1003067410	Player-Dash_Stomp-01	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Player-Dash_Stomp-01_EFA70990.wem		\Actor-Mixer Hierarchy\Default Work Unit\PLAYER\DASH\Player-Dash_Stomp\Player-Dash_Stomp-01		236864
+	1003067410	Player-Dash_Stomp-01	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Player-Dash_Stomp-01_157C2F40.wem		\Actor-Mixer Hierarchy\Default Work Unit\PLAYER\DASH\Player-Dash_Stomp\Player-Dash_Stomp-01		236864
 	1003897671	Rat-Idle-08	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Rat-Idle-08_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\RAT\Rat_Idle\Rat-Idle-08		153700
 	1011856105	Zombie-VO-Idle-29	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\Zombie-VO-Idle-29_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\ZOMBIE\Zombie-Idle_Voice\Zombie-Idle_Voice\Zombie-VO-Idle-29		201700
 	1013725687	Boss-Dies-04	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\Boss-Dies-04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\BOSS\Boss-Dies_VO\Boss-Dies-04		531296
@@ -503,6 +518,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	1025884227	Player-FS_Voice_Inhale-10	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\Player-FS_Voice_Inhale-10_7E08D0EE.wem		\Actor-Mixer Hierarchy\Default Work Unit\PLAYER\FOOTSTEPS\Player-FS_Voice\Inhale\Player-FS_Voice_Inhale-10		179296
 	1026154622	Boss-Idle_VO-16	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Boss-Idle_VO-16_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\BOSS\Boss-Idle_VO\Boss-Idle_VO-16		524896
 	1032183701	Env_Door_open_mechanic-05	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Env_Door_open_mechanic-05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENVIRONMENT\DOOR\Door_open_mechanic\Env_Door_open_mechanic-05		307300
+	1034361387	Outro_VO	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\Voices\English(US)\Outro_VO_A7A5C02E.wem		\Actor-Mixer Hierarchy\Default Work Unit\INTRO\Outro_VO		2798712
 	1034679750	Player-FS_steps-07	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Player-FS_steps-07_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\PLAYER\FOOTSTEPS\Player-FS_Step\Player-FS_steps-07		84768
 	1035202417	Boss-FS_Chains-13	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Boss-FS_Chains-13_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ENEMY\BOSS\FOOTSTEPS\Boss-FS_Chain\Boss-FS_Chains-13		159256
 	1036089617	Player-FS_Cloth-04	D:\GitHub\A-M\Alluring-Maw\Alluring-Maw_WwiseProject\.cache\Windows\SFX\Player-FS_Cloth-04_D5867540.wem		\Actor-Mixer Hierarchy\Default Work Unit\PLAYER\FOOTSTEPS\Player-FS_Cloth\Player-FS_Cloth-04		108900

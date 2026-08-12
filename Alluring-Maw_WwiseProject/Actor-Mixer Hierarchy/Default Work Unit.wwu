@@ -443,14 +443,18 @@
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
-													<Modifier Name="" ID="{F8D74BC6-AB93-4A1F-9523-F97DBBFB15FD}"/>
+													<Modifier Name="" ID="{F8D74BC6-AB93-4A1F-9523-F97DBBFB15FD}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+														</PropertyList>
+													</Modifier>
 												</ModifierInfo>
 											</ModifierList>
 										</Property>
 										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-7</Value>
+												<Value>-3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -480,7 +484,7 @@
 										<ActiveSource Name="Menu - UI_LearnSkill1" ID="{EADB0423-0AA4-475C-ADBA-CBA516E8B6E4}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Menu - UI_MouseOver" ID="{CD28911D-7F38-4AE7-BDAD-AEBBD6F3035B}" ShortID="662169872">
+								<Sound Name="Menu - UI_MouseOver1" ID="{CD28911D-7F38-4AE7-BDAD-AEBBD6F3035B}" ShortID="662169872">
 									<PropertyList>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
@@ -551,6 +555,9 @@
 										<Reference Name="OutputBus">
 											<ObjectRef Name="SFX Bus" ID="{0428BEA9-86B3-406D-9B6A-357CE32B9E02}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
 										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="Env_Mid_Room" ID="{AD4F190B-565B-45EB-85F6-03D481713D0C}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+										</Reference>
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="Menu - UI_Select1" ID="{785A0FC8-8D9C-46D2-9DEB-99401D98856E}">
@@ -569,7 +576,7 @@
 										<ActiveSource Name="Menu - UI_Select1" ID="{785A0FC8-8D9C-46D2-9DEB-99401D98856E}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Menu - UI_select2" ID="{767B9BAE-C124-47A8-84F9-42DDCF03A097}" ShortID="336098109">
+								<Sound Name="Menu - UI_Choose" ID="{767B9BAE-C124-47A8-84F9-42DDCF03A097}" ShortID="336098109">
 									<PropertyList>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
@@ -621,6 +628,112 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="Menu - UI_select2-01" ID="{B72A31CC-7CE7-4D15-807D-1C275D0483E9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Menu - UI_MouseOver2" ID="{0594D00E-EF86-43C9-AD3D-FB685E0BB326}" ShortID="585401586">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>40</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-600</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{7D3B3473-FFD0-4783-8826-F6D97C4F7E82}">
+														<PropertyList>
+															<Property Name="Max" Type="Real64" Value="15"/>
+															<Property Name="Min" Type="Real64" Value="-15"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+										</Reference>
+										<Reference Name="Effect0" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+											<ObjectRef Name="All_Buttons_IN" ID="{E5FFEBA7-4F6F-421E-ABB7-286C011BD0C8}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX Bus" ID="{0428BEA9-86B3-406D-9B6A-357CE32B9E02}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Menu - UI_MouseOver-01" ID="{A931F5C2-15C0-4F6C-B007-091D47BE7AD8}">
+											<Language>SFX</Language>
+											<AudioFile>Menu - UI_MouseOver-01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="145861600"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Menu - UI_MouseOver-01" ID="{A931F5C2-15C0-4F6C-B007-091D47BE7AD8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Menu - UI_Select2" ID="{78D442DD-E3B7-47FA-9FF7-C0485037B3D2}" ShortID="685383945">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-600</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{418EA2BC-010A-4520-8335-742A40D9454F}">
+														<PropertyList>
+															<Property Name="Max" Type="Real64" Value="25"/>
+															<Property Name="Min" Type="Real64" Value="-25"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+										</Reference>
+										<Reference Name="Effect0" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
+											<ObjectRef Name="Echoes_Linear" ID="{D20F3717-EBA2-4E3A-84F8-C8BD431563FB}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX Bus" ID="{0428BEA9-86B3-406D-9B6A-357CE32B9E02}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="Env_Big_Room" ID="{2158C44F-2651-4565-AD37-10BF8685777A}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Menu - UI_Select1" ID="{6D8BC7A7-D3DF-42A0-90D9-1AB719E13C2B}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.736383442265795"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Menu - UI_Select1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="511381107"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Menu - UI_Select1" ID="{6D8BC7A7-D3DF-42A0-90D9-1AB719E13C2B}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -4110,7 +4223,7 @@
 										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>12</Value>
+												<Value>4</Value>
 											</ValueList>
 										</Property>
 										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="4"/>
@@ -4119,7 +4232,7 @@
 									<ReferenceList>
 										<Reference Name="Attenuation">
 											<Custom CreatedFrom="{E7F76D55-103C-407D-A677-5F19C9A9E0C1}">
-												<Attenuation Name="Environment_Att (Custom)" ID="{1A3385F3-E317-4B61-8A37-98E583788E4C}" ShortID="420256196">
+												<Attenuation Name="Environment_Att (Custom)" ID="{502A16AF-FE89-4411-9DD9-3FBB65FEBB19}" ShortID="549533888">
 													<PropertyList>
 														<Property Name="ConeUse" Type="bool">
 															<ValueList>
@@ -4131,7 +4244,7 @@
 													<CurveUsageInfoList>
 														<VolumeDryUsage>
 															<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-																<Curve Name="VolumeDry" ID="{F53FCBC9-91D7-414E-B231-82F24880BEE4}">
+																<Curve Name="VolumeDry" ID="{4DFD9CD6-ED18-4C7D-805E-FFEB4A99680B}">
 																	<PropertyList>
 																		<Property Name="Flags" Type="int32" Value="3"/>
 																	</PropertyList>
@@ -4163,7 +4276,7 @@
 														</VolumeWetUserUsage>
 														<LowPassFilterUsage>
 															<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-																<Curve Name="LowPassFilter" ID="{57482E22-6315-4A93-A4FC-8988BAA8A46D}">
+																<Curve Name="LowPassFilter" ID="{7ED3BBE6-443C-4088-B565-C4760B41571E}">
 																	<PropertyList>
 																		<Property Name="Flags" Type="int32" Value="65537"/>
 																	</PropertyList>
@@ -4397,9 +4510,10 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Door_close_hinge" ID="{FCDD5BD4-3B34-49B7-B828-A840FBAB494F}" ShortID="358998770">
 									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>12</Value>
+												<Value>7</Value>
 											</ValueList>
 										</Property>
 										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="4"/>
@@ -4689,7 +4803,7 @@
 										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>13</Value>
+												<Value>8</Value>
 											</ValueList>
 										</Property>
 										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="4"/>
@@ -4979,7 +5093,7 @@
 										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>10</Value>
+												<Value>8</Value>
 											</ValueList>
 										</Property>
 										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="4"/>
@@ -5224,7 +5338,7 @@
 									<PropertyList>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>1</Value>
+												<Value>-1</Value>
 											</ValueList>
 										</Property>
 										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="4"/>
@@ -5466,7 +5580,7 @@
 										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>12</Value>
+												<Value>9</Value>
 											</ValueList>
 										</Property>
 										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="4"/>
@@ -5822,7 +5936,7 @@
 										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>17</Value>
+												<Value>9</Value>
 											</ValueList>
 										</Property>
 										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="4"/>
@@ -6188,7 +6302,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+									<ObjectRef Name="Music Bus" ID="{BEF3C6D0-ACAA-4A5A-AF30-9AC2ED056053}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -6210,6 +6324,75 @@
 								<ActiveSource Name="Intro_Music" ID="{39A467AA-EDC8-4504-925A-9F0552828F93}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="Outro_Music" ID="{626BE4CE-0DD8-4337-BBAC-7EA45503958A}" ShortID="148754349">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Music Bus" ID="{BEF3C6D0-ACAA-4A5A-AF30-9AC2ED056053}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Outro_Music" ID="{04CDAF78-889F-4F46-882A-9C29ED5FBB11}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="3.50181935436321"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="2.6"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Outro_Music.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="770709155"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Outro_Music" ID="{04CDAF78-889F-4F46-882A-9C29ED5FBB11}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Outro_VO" ID="{EB9CF56A-480E-4716-890A-D4AF8A82C009}" ShortID="269154170">
+							<PropertyList>
+								<Property Name="IsVoice" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Voice Bus" ID="{342CAA02-47A2-4C12-837A-6682E05C0D90}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Outro_VO" ID="{34962BEC-5F79-42A1-B911-E92CD668E1D5}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.16203891509434"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="2.6"/>
+									</PropertyList>
+									<Language>English(US)</Language>
+									<AudioFile>Outro_VO.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1034361387"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Outro_VO" ID="{34962BEC-5F79-42A1-B911-E92CD668E1D5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="ENEMY" ID="{1B135178-C485-4158-B674-B64287244205}" ShortID="710869317">
@@ -6227,7 +6410,7 @@
 												<Property Name="3DSpatialization" Type="int16" Value="2"/>
 												<Property Name="MakeUpGain" Type="Real64">
 													<ValueList>
-														<Value>6</Value>
+														<Value>12</Value>
 													</ValueList>
 												</Property>
 												<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
@@ -6235,7 +6418,7 @@
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Attenuation">
-													<ObjectRef Name="Enemy_Att" ID="{BCDA6BA8-1944-4D30-A2D1-02BE636F650A}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
+													<ObjectRef Name="Boss_Att" ID="{C9BF17EE-DDD1-4793-9083-8D63B18B72CB}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
 												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
@@ -6494,7 +6677,7 @@
 												<Property Name="3DSpatialization" Type="int16" Value="2"/>
 												<Property Name="MakeUpGain" Type="Real64">
 													<ValueList>
-														<Value>6</Value>
+														<Value>12</Value>
 													</ValueList>
 												</Property>
 												<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
@@ -6502,7 +6685,7 @@
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Attenuation">
-													<ObjectRef Name="Enemy_Att" ID="{BCDA6BA8-1944-4D30-A2D1-02BE636F650A}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
+													<ObjectRef Name="Boss_Att" ID="{C9BF17EE-DDD1-4793-9083-8D63B18B72CB}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
 												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
@@ -6776,7 +6959,7 @@
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Attenuation">
-													<ObjectRef Name="Enemy_Att" ID="{BCDA6BA8-1944-4D30-A2D1-02BE636F650A}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
+													<ObjectRef Name="Boss_Att" ID="{C9BF17EE-DDD1-4793-9083-8D63B18B72CB}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
 												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
@@ -7202,7 +7385,7 @@
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Attenuation">
-													<ObjectRef Name="Enemy_Att" ID="{BCDA6BA8-1944-4D30-A2D1-02BE636F650A}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
+													<ObjectRef Name="Boss_Att" ID="{C9BF17EE-DDD1-4793-9083-8D63B18B72CB}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
 												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
@@ -7350,7 +7533,7 @@
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Attenuation">
-													<ObjectRef Name="Enemy_Att" ID="{BCDA6BA8-1944-4D30-A2D1-02BE636F650A}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
+													<ObjectRef Name="Boss_Att" ID="{C9BF17EE-DDD1-4793-9083-8D63B18B72CB}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
 												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
@@ -7484,7 +7667,7 @@
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Attenuation">
-													<ObjectRef Name="Enemy_Att" ID="{BCDA6BA8-1944-4D30-A2D1-02BE636F650A}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
+													<ObjectRef Name="Boss_Att" ID="{C9BF17EE-DDD1-4793-9083-8D63B18B72CB}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
 												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
@@ -7614,13 +7797,13 @@
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Attenuation">
-													<ObjectRef Name="Enemy_Att" ID="{BCDA6BA8-1944-4D30-A2D1-02BE636F650A}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
+													<ObjectRef Name="Boss_Att" ID="{C9BF17EE-DDD1-4793-9083-8D63B18B72CB}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
 												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+													<ObjectRef Name="SFX Bus" ID="{0428BEA9-86B3-406D-9B6A-357CE32B9E02}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -7685,7 +7868,7 @@
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Attenuation">
-													<ObjectRef Name="Enemy_Att" ID="{BCDA6BA8-1944-4D30-A2D1-02BE636F650A}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
+													<ObjectRef Name="Boss_Att" ID="{C9BF17EE-DDD1-4793-9083-8D63B18B72CB}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
 												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
@@ -7823,7 +8006,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="Enemy_Att" ID="{BCDA6BA8-1944-4D30-A2D1-02BE636F650A}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
+											<ObjectRef Name="Boss_Att" ID="{C9BF17EE-DDD1-4793-9083-8D63B18B72CB}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
@@ -8202,7 +8385,7 @@
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Attenuation">
-													<ObjectRef Name="Enemy_Att" ID="{BCDA6BA8-1944-4D30-A2D1-02BE636F650A}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
+													<ObjectRef Name="Boss_Att" ID="{C9BF17EE-DDD1-4793-9083-8D63B18B72CB}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
 												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
@@ -8414,7 +8597,7 @@
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Attenuation">
-													<ObjectRef Name="Enemy_Att" ID="{BCDA6BA8-1944-4D30-A2D1-02BE636F650A}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
+													<ObjectRef Name="Boss_Att" ID="{C9BF17EE-DDD1-4793-9083-8D63B18B72CB}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
 												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
@@ -8649,7 +8832,7 @@
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Attenuation">
-													<ObjectRef Name="Enemy_Att" ID="{BCDA6BA8-1944-4D30-A2D1-02BE636F650A}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
+													<ObjectRef Name="Boss_Att" ID="{C9BF17EE-DDD1-4793-9083-8D63B18B72CB}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
 												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
@@ -8764,7 +8947,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="Enemy_Att" ID="{BCDA6BA8-1944-4D30-A2D1-02BE636F650A}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
+											<ObjectRef Name="Boss_Att" ID="{C9BF17EE-DDD1-4793-9083-8D63B18B72CB}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
@@ -9068,7 +9251,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="Enemy_Att" ID="{BCDA6BA8-1944-4D30-A2D1-02BE636F650A}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
+											<ObjectRef Name="Boss_Att" ID="{C9BF17EE-DDD1-4793-9083-8D63B18B72CB}" WorkUnitID="{5DF89B65-9749-4DA7-9191-66D85F7B5A21}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
@@ -10054,7 +10237,7 @@
 												<Property Name="3DSpatialization" Type="int16" Value="2"/>
 												<Property Name="MakeUpGain" Type="Real64">
 													<ValueList>
-														<Value>18</Value>
+														<Value>15</Value>
 													</ValueList>
 												</Property>
 												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="4"/>
@@ -11208,7 +11391,7 @@
 										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>15</Value>
+												<Value>9</Value>
 											</ValueList>
 										</Property>
 										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
@@ -13485,7 +13668,7 @@
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-30</Value>
+										<Value>-24</Value>
 									</ValueList>
 								</Property>
 								<Property Name="UserAuxSendVolume0" Type="Real64">
@@ -13554,6 +13737,358 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="Music_Start_Room-02" ID="{F5E7EB4C-C56F-4EC6-9D66-7031F9411230}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="CUTSCENE" ID="{3558C5AC-7348-4840-91C9-1CA501F80B98}" ShortID="615372590">
+					<ChildrenList>
+						<Sound Name="WhisperBohni1" ID="{016DD2AD-9D5D-4F63-AA10-695BA66E37D8}" ShortID="506492263">
+							<PropertyList>
+								<Property Name="IsVoice" Type="bool" Value="True"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-12</Value>
+									</ValueList>
+								</Property>
+								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Voice Bus" ID="{342CAA02-47A2-4C12-837A-6682E05C0D90}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WhisperBohni1" ID="{A74827A0-4BA9-412D-A0A2-C7ECEAF49B72}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.062971894654088"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.732048275353773"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>English(US)</Language>
+									<AudioFile>WhisperBohni1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="611007190"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{FEC9670E-1F89-443D-B2CD-2BD3A7B09C97}">
+									<PropertyList>
+										<Property Name="PanX" Type="Real64" Value="-51.864406779661"/>
+										<Property Name="PanY" Type="Real64" Value="100"/>
+									</PropertyList>
+								</Panner>
+							</PositioningInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="WhisperBohni1" ID="{A74827A0-4BA9-412D-A0A2-C7ECEAF49B72}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WhisperBohni2" ID="{00F40AE4-C7AB-4D2D-B753-8572B9711F49}" ShortID="171429608">
+							<PropertyList>
+								<Property Name="IsVoice" Type="bool" Value="True"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-12</Value>
+									</ValueList>
+								</Property>
+								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Voice Bus" ID="{342CAA02-47A2-4C12-837A-6682E05C0D90}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WhisperBohni2" ID="{AF7B93A1-1118-4267-9491-C97F3553564D}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.484890919811321"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.620209316037736"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>English(US)</Language>
+									<AudioFile>WhisperBohni2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="847990453"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{53FB9AAD-6200-4D8D-8188-01D1BCD0D649}">
+									<PropertyList>
+										<Property Name="PanX" Type="Real64" Value="56.9491525423728"/>
+										<Property Name="PanY" Type="Real64" Value="100"/>
+									</PropertyList>
+								</Panner>
+							</PositioningInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="WhisperBohni2" ID="{AF7B93A1-1118-4267-9491-C97F3553564D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WhisperBohni3" ID="{DCB4A315-781E-4FBA-A3A5-A550A2DD6670}" ShortID="509020032">
+							<PropertyList>
+								<Property Name="IsVoice" Type="bool" Value="True"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-12</Value>
+									</ValueList>
+								</Property>
+								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Voice Bus" ID="{342CAA02-47A2-4C12-837A-6682E05C0D90}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WhisperBohni3" ID="{6F4D3BB6-D706-414C-A64F-239E1EB27E2D}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.496167452830189"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.642762382075473"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>English(US)</Language>
+									<AudioFile>WhisperBohni3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="863265550"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{0FCDC963-4E22-48B9-82CA-9760F1B5998A}">
+									<PropertyList>
+										<Property Name="PanX" Type="Real64" Value="-100"/>
+										<Property Name="PanY" Type="Real64" Value="-100"/>
+									</PropertyList>
+								</Panner>
+							</PositioningInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="WhisperBohni3" ID="{6F4D3BB6-D706-414C-A64F-239E1EB27E2D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WhisperBohni4" ID="{FC34D64D-208B-4EE6-89FD-88B9E0660F6E}" ShortID="993347164">
+							<PropertyList>
+								<Property Name="IsVoice" Type="bool" Value="True"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-12</Value>
+									</ValueList>
+								</Property>
+								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Voice Bus" ID="{342CAA02-47A2-4C12-837A-6682E05C0D90}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WhisperBohni4" ID="{7B842A11-DE25-4169-BDFC-EB0C640AC6C5}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="1.1614829009434"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.620209316037736"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>English(US)</Language>
+									<AudioFile>WhisperBohni4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="250296667"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{FE6ACF63-ECC2-4053-8BDF-0847E9CDD06A}">
+									<PropertyList>
+										<Property Name="PanX" Type="Real64" Value="100"/>
+										<Property Name="PanY" Type="Real64" Value="-100"/>
+									</PropertyList>
+								</Panner>
+							</PositioningInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="WhisperBohni4" ID="{7B842A11-DE25-4169-BDFC-EB0C640AC6C5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WhisperVoices-01" ID="{07DDDCDE-C6C0-4C5C-AE64-D1D7AA6B0C52}" ShortID="197059897">
+							<PropertyList>
+								<Property Name="IsVoice" Type="bool" Value="True"/>
+								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Voice Bus" ID="{342CAA02-47A2-4C12-837A-6682E05C0D90}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WhisperVoices-01" ID="{947A4301-C7D3-40B5-9DF4-FFADBB92ACDC}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="1"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="3"/>
+										<Property Name="TrimBegin" Type="Real64" Value="2"/>
+									</PropertyList>
+									<Language>English(US)</Language>
+									<AudioFile>WhisperVoices-01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="596330386"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{4B404094-18DE-45B4-9170-8366FE000020}">
+									<PropertyList>
+										<Property Name="PanX" Type="Real64" Value="-100"/>
+										<Property Name="PanY" Type="Real64" Value="100"/>
+									</PropertyList>
+								</Panner>
+							</PositioningInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="WhisperVoices-01" ID="{947A4301-C7D3-40B5-9DF4-FFADBB92ACDC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WhisperVoices-02" ID="{7F970C07-093F-4C66-82E2-D809601E0776}" ShortID="993831822">
+							<PropertyList>
+								<Property Name="IsVoice" Type="bool" Value="True"/>
+								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Voice Bus" ID="{342CAA02-47A2-4C12-837A-6682E05C0D90}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WhisperVoices-02" ID="{A953607A-3052-4BD7-8717-D9FC474C89F5}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="1"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="3"/>
+										<Property Name="LoopBegin" Type="Real64" Value="2"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="2"/>
+									</PropertyList>
+									<Language>English(US)</Language>
+									<AudioFile>WhisperVoices-02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="819896219"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{9B62457F-F39A-43C4-85A9-BEE1EB39058F}">
+									<PropertyList>
+										<Property Name="PanX" Type="Real64" Value="100"/>
+										<Property Name="PanY" Type="Real64" Value="100"/>
+									</PropertyList>
+								</Panner>
+							</PositioningInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="WhisperVoices-02" ID="{A953607A-3052-4BD7-8717-D9FC474C89F5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WhisperVoices-03" ID="{E56C742A-D717-45D8-8CB5-2A8030F60D22}" ShortID="772923438">
+							<PropertyList>
+								<Property Name="IsVoice" Type="bool" Value="True"/>
+								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Voice Bus" ID="{342CAA02-47A2-4C12-837A-6682E05C0D90}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WhisperVoices-03" ID="{D2CA4DD5-1EDA-458C-99D0-5E1C7F31EA77}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="1"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="3"/>
+										<Property Name="LoopBegin" Type="Real64" Value="2"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="2"/>
+									</PropertyList>
+									<Language>English(US)</Language>
+									<AudioFile>WhisperVoices-03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="365679400"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{3F87BA97-1211-418D-BC4C-62ADCAA8AF6E}">
+									<PropertyList>
+										<Property Name="PanX" Type="Real64" Value="-100"/>
+										<Property Name="PanY" Type="Real64" Value="-100"/>
+									</PropertyList>
+								</Panner>
+							</PositioningInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="WhisperVoices-03" ID="{D2CA4DD5-1EDA-458C-99D0-5E1C7F31EA77}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WhisperVoices-04" ID="{2037FBCD-D171-46A3-8560-29EA625B3B1B}" ShortID="141444369">
+							<PropertyList>
+								<Property Name="IsVoice" Type="bool" Value="True"/>
+								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DF148761-FD5A-4358-86B4-7E145B364B04}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Voice Bus" ID="{342CAA02-47A2-4C12-837A-6682E05C0D90}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WhisperVoices-04" ID="{AE8F71E0-A212-4453-8A6E-5479EA7568D1}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="1"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="3"/>
+										<Property Name="LoopBegin" Type="Real64" Value="2"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="2"/>
+									</PropertyList>
+									<Language>English(US)</Language>
+									<AudioFile>WhisperVoices-04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="855767861"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{0BDA4948-76D6-4B67-A63B-B0B9A60B4069}">
+									<PropertyList>
+										<Property Name="PanX" Type="Real64" Value="100"/>
+										<Property Name="PanY" Type="Real64" Value="-100"/>
+									</PropertyList>
+								</Panner>
+							</PositioningInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="WhisperVoices-04" ID="{AE8F71E0-A212-4453-8A6E-5479EA7568D1}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

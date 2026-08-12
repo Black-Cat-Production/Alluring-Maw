@@ -30,7 +30,7 @@
 							<Position X="1" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Menu - UI_MouseOver" ID="{CD28911D-7F38-4AE7-BDAD-AEBBD6F3035B}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+							<ObjectRef Name="Menu - UI_MouseOver1" ID="{CD28911D-7F38-4AE7-BDAD-AEBBD6F3035B}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
 							<Position X="1" Y="2"/>
 						</Module>
 						<Module>
@@ -50,7 +50,7 @@
 							<Position X="3" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Menu - UI_select2" ID="{767B9BAE-C124-47A8-84F9-42DDCF03A097}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
+							<ObjectRef Name="Menu - UI_Choose" ID="{767B9BAE-C124-47A8-84F9-42DDCF03A097}" WorkUnitID="{79F2383F-0BD4-4A9A-B251-C14A241F7158}"/>
 							<Position X="3" Y="2"/>
 						</Module>
 						<Module>

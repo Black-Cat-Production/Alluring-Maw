@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 1801504fbd1cb94e81bf956803befb65
     GuidInternal: 
-    m_lastTime: -8584153056439453389
+    m_lastTime: -8584150588814762742
     List:
     - name: Env_Big_Room
       guid: 4fc4582151266545ad3710bf8685777a
@@ -214,7 +214,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 6fee4f8286acc84394f7b8f67b517463
     GuidInternal: 
-    m_lastTime: -8584152390406666413
+    m_lastTime: -8584150555388584832
     List:
     - name: Main
       guid: 7d25f11f0d584f49bd3f5167772f2c93
@@ -242,7 +242,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: f4ccbb95d042c543bd560120d28efaf5
     GuidInternal: 
-    m_lastTime: -8584152146175230497
+    m_lastTime: -8584150487153975693
     List:
     - name: BOSS
       guid: 34d61693d5e42d419f8b799d1ffe5126
@@ -298,9 +298,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: INTRO
+    - name: INTRO_OUTRO
       guid: b59c6009acdfa14e8aee4be48519d312
-      id: 1125500713
+      id: 2601895609
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -308,10 +308,10 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: f4ccbb95d042c543bd560120d28efaf5
-      - ElementName: INTRO
+      - ElementName: INTRO_OUTRO
         ObjectType: 4
         guid: b59c6009acdfa14e8aee4be48519d312
-      Path: Events\Default Work Unit\INTRO
+      Path: Events\Default Work Unit\INTRO_OUTRO
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -349,6 +349,29 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: New_Event
+      guid: 10fd495d9187d848afaf4b51734b3dc2
+      id: 3050945240
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: ENEMY
+        ObjectType: 4
+        guid: 9a1392d046b91a489f1b14224a71d4ea
+      - ElementName: ZOMBIE
+        ObjectType: 4
+        guid: aa6be393ddf24e429a8074ee3a0af2ce
+      - ElementName: New_Event
+        ObjectType: 3
+        guid: 10fd495d9187d848afaf4b51734b3dc2
+      Path: Events\Default Work Unit\ENEMY\ZOMBIE\New_Event
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Atmo
       guid: d9edfbfcdcf6614e9dfe1e2314911ceb
       id: 3133186549
@@ -389,7 +412,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 8e2bcbba9a7d504b907702c35ff6457a
       Path: Events\Default Work Unit\ENEMY\BOSS\Play_Boss_Attack
-      maxAttenuation: 15
+      maxAttenuation: 22
       maxDuration: 2.1320503
       minDuration: 2.03575
     - name: Play_Boss_Dies
@@ -412,7 +435,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 2b294a212c384b41a034478ecbad3721
       Path: Events\Default Work Unit\ENEMY\BOSS\Play_Boss_Dies
-      maxAttenuation: 15
+      maxAttenuation: 22
       maxDuration: 3.9315624
       minDuration: 3.0666666
     - name: Play_Boss_FS
@@ -435,7 +458,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 4b9169fc9ec08f41abc08fb2404265f5
       Path: Events\Default Work Unit\ENEMY\BOSS\Play_Boss_FS
-      maxAttenuation: 15
+      maxAttenuation: 22
       maxDuration: 0.422625
       minDuration: 0.422625
     - name: Play_Boss_FS_Chain
@@ -458,7 +481,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: a0ac5a8d2f88fe41b09696ea925ec9b1
       Path: Events\Default Work Unit\ENEMY\BOSS\Play_Boss_FS_Chain
-      maxAttenuation: 15
+      maxAttenuation: 22
       maxDuration: 1.0556353
       minDuration: 0
     - name: Play_Boss_Hitmarker
@@ -481,7 +504,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 9949b71b79b5a74792d9d6d95bb2fd0d
       Path: Events\Default Work Unit\ENEMY\BOSS\Play_Boss_Hitmarker
-      maxAttenuation: 15
+      maxAttenuation: 22
       maxDuration: 0.6666875
       minDuration: 0.6666667
     - name: Play_Boss_Idle_Voice
@@ -504,7 +527,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: b497a02bc875e24a93825d46cf60d638
       Path: Events\Default Work Unit\ENEMY\BOSS\Play_Boss_Idle_Voice
-      maxAttenuation: 15
+      maxAttenuation: 22
       maxDuration: 6.7833543
       minDuration: 1.6833333
     - name: Play_Boss_Jump
@@ -527,7 +550,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: b1e768029933c74dbdaed056d5ff14bc
       Path: Events\Default Work Unit\ENEMY\BOSS\Play_Boss_Jump
-      maxAttenuation: 15
+      maxAttenuation: 22
       maxDuration: 2.8166876
       minDuration: 2.8166666
     - name: Play_Boss_Jump_Stomp
@@ -550,7 +573,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: e65752b817844e44b31d4f6507efe0f3
       Path: Events\Default Work Unit\ENEMY\BOSS\Play_Boss_Jump_Stomp
-      maxAttenuation: 15
+      maxAttenuation: 22
       maxDuration: 1.0103085
       minDuration: 0.71585274
     - name: Play_Boss_Music
@@ -573,6 +596,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Cutscene
+      guid: 3055d21f1b9b1f4998bbd59b0f978778
+      id: 2625316922
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: Play_Cutscene
+        ObjectType: 3
+        guid: 3055d21f1b9b1f4998bbd59b0f978778
+      Path: Events\Default Work Unit\Play_Cutscene
+      maxAttenuation: 0
+      maxDuration: 9.5625
+      minDuration: 9.5625
     - name: Play_daumen
       guid: 5b2cb0d8b238a7449d029fd5ac811056
       id: 209295608
@@ -763,13 +803,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: f4ccbb95d042c543bd560120d28efaf5
-      - ElementName: INTRO
+      - ElementName: INTRO_OUTRO
         ObjectType: 4
         guid: b59c6009acdfa14e8aee4be48519d312
       - ElementName: Play_Intro
         ObjectType: 3
         guid: c670aa04fe70ef418584830fb470d2d8
-      Path: Events\Default Work Unit\INTRO\Play_Intro
+      Path: Events\Default Work Unit\INTRO_OUTRO\Play_Intro
       maxAttenuation: 0
       maxDuration: 37.042213
       minDuration: 37.042213
@@ -793,6 +833,52 @@ MonoBehaviour:
       maxAttenuation: 10
       maxDuration: 9.643653
       minDuration: 0.85526276
+    - name: Play_Menu___UI_MouseOver2
+      guid: ff94a0dc36ef8b4dbd5d5ff19603b3a5
+      id: 2806707962
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: MENU
+        ObjectType: 4
+        guid: d5b00bb575b9f8448acb0ae52a065ad2
+      - ElementName: UI
+        ObjectType: 4
+        guid: abf80215975144419b66b3b4f8aa7dd1
+      - ElementName: Play_Menu___UI_MouseOver2
+        ObjectType: 3
+        guid: ff94a0dc36ef8b4dbd5d5ff19603b3a5
+      Path: Events\Default Work Unit\MENU\UI\Play_Menu___UI_MouseOver2
+      maxAttenuation: 0
+      maxDuration: 0.046020865
+      minDuration: 0.046020865
+    - name: Play_Menu___UI_Select2
+      guid: d65b15f29b2725469028aff75c55f173
+      id: 278397421
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: MENU
+        ObjectType: 4
+        guid: d5b00bb575b9f8448acb0ae52a065ad2
+      - ElementName: UI
+        ObjectType: 4
+        guid: abf80215975144419b66b3b4f8aa7dd1
+      - ElementName: Play_Menu___UI_Select2
+        ObjectType: 3
+        guid: d65b15f29b2725469028aff75c55f173
+      Path: Events\Default Work Unit\MENU\UI\Play_Menu___UI_Select2
+      maxAttenuation: 0
+      maxDuration: 1.4142135
+      minDuration: 1.4142135
     - name: Play_Menu_ATMO
       guid: bd394b4202938a46b39fb68384851c5c
       id: 1905734753
@@ -1003,8 +1089,28 @@ MonoBehaviour:
         guid: 121098fb424a8843ba4c0063a86e3492
       Path: Events\Default Work Unit\MUSIC\Play_Music_Start_Room_01
       maxAttenuation: 0
-      maxDuration: 24
-      minDuration: 24
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Outro
+      guid: 2f53484796997949996465a7bec526f6
+      id: 431014199
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: INTRO_OUTRO
+        ObjectType: 4
+        guid: b59c6009acdfa14e8aee4be48519d312
+      - ElementName: Play_Outro
+        ObjectType: 3
+        guid: 2f53484796997949996465a7bec526f6
+      Path: Events\Default Work Unit\INTRO_OUTRO\Play_Outro
+      maxAttenuation: 0
+      maxDuration: 14.576146
+      minDuration: 14.576146
     - name: Play_Player_Attack_LMC
       guid: 66f06f65effa084b9ae67f05bccd652a
       id: 104602405
@@ -1862,7 +1968,7 @@ MonoBehaviour:
     m_lastTime: -8584160789805466732
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 050000000600000007000000080000000b0000003300000066000000f6000000f70000006a0100006b010000
+  ExpandedWaapiItemIds: 05000000060000000a00000033000000660000009e000000f6000000f70000006a0100006b010000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
