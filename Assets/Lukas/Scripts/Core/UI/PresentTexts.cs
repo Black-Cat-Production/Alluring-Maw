@@ -58,6 +58,7 @@ namespace Scripts.Core.UI
 
             uiCanvas.gameObject.SetActive(false);
             yield return null;
+            AkSoundEngine.StopAll();
             _loadRoutine.allowSceneActivation = true;
         }
     }
