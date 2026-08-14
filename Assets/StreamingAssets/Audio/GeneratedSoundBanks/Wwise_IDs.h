@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID NEW_EVENT = 3050945240U;
+        static const AkUniqueID NEW_EVENT_01 = 1027751982U;
         static const AkUniqueID PLAY_ATMO = 3133186549U;
         static const AkUniqueID PLAY_BOSS_ATTACK = 4155093788U;
         static const AkUniqueID PLAY_BOSS_DIES = 515021733U;

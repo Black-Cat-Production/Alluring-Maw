@@ -16,6 +16,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	880339566	Play_Zombie_Idle_Voice			\Default Work Unit\ENEMY\ZOMBIE\Play_Zombie_Idle_Voice	
 	895956798	Play_Zombie_FS			\Default Work Unit\ENEMY\ZOMBIE\Play_Zombie_FS	
 	902186995	Play_Player_Dying_VO			\Default Work Unit\PLAYER\Play_Player_Dying_VO	
+	1027751982	New_Event_01			\Default Work Unit\INTRO_OUTRO\New_Event_01	
 	1058366323	Stop_Player_RMC_Charge			\Default Work Unit\PLAYER\Stop_Player_RMC_Charge	
 	1075280761	Play_Boss_FS			\Default Work Unit\ENEMY\BOSS\Play_Boss_FS	
 	1210216554	Play_Music_Start_Room_01			\Default Work Unit\MUSIC\Play_Music_Start_Room_01	

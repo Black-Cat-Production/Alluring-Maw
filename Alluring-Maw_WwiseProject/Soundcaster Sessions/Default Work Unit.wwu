@@ -65,7 +65,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Pause" ID="{7CE44FF1-1353-4A0D-8B20-17B684DAEBE5}"/>
+						<CurrentStateRef Name="NoPause" ID="{7F901721-27FA-4FD7-93CD-25BDD1A9ECAF}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
