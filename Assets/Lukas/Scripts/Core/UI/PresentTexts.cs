@@ -38,6 +38,7 @@ namespace Scripts.Core.UI
 
         public void PresentOutroText(AsyncOperation _loadRoutine)
         {
+            AkSoundEngine.StopAll();
             uiCanvas.gameObject.SetActive(true);
             StartCoroutine(ShowText(_loadRoutine, outroText, outroAudioEvent));
         }
@@ -58,7 +59,6 @@ namespace Scripts.Core.UI
 
             uiCanvas.gameObject.SetActive(false);
             yield return null;
-            AkSoundEngine.StopAll();
             _loadRoutine.allowSceneActivation = true;
         }
     }
