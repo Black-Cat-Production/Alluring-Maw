@@ -77,7 +77,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="English(US)" Hash="{B70E13FC-D738-5F14-FE3C-E503146DB6C7}">
+		<SoundBank Id="3161908922" Type="User" Language="English(US)" Hash="{342FB2A0-15AE-1852-5F9C-16BCD32FDA1D}">
 			<ShortName>Main</ShortName>
 			<Path>English(US)/Main.bnk</Path>
 			<Media>
@@ -2379,6 +2379,9 @@
 						<MediaRef Id="770709155"/>
 						<MediaRef Id="1034361387"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="2521112689" Name="Env_Big_Room"/>
+					</AuxBusRefs>
 				</Event>
 				<Event Id="104602405" Name="Play_Player_Attack_LMC" DurationType="OneShot" DurationMin="1.3765548" DurationMax="1.5011435">
 					<MediaRefs>
@@ -2774,5 +2777,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{17950085-7188-1B54-32FA-2512E6AAAE72}</FileHash>
+	<FileHash>{8537EB3F-52EB-95FA-0B6F-FCC53EFDCCDA}</FileHash>
 </SoundBanksInfo>

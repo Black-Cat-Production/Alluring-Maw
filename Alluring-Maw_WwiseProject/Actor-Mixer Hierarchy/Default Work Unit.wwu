@@ -3498,7 +3498,7 @@
 							<PropertyList>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>8</Value>
+										<Value>4</Value>
 									</ValueList>
 								</Property>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
@@ -6378,6 +6378,9 @@
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Voice Bus" ID="{342CAA02-47A2-4C12-837A-6682E05C0D90}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Env_Big_Room" ID="{2158C44F-2651-4565-AD37-10BF8685777A}" WorkUnitID="{4F500118-1CBD-4EB9-81BF-956803BEFB65}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
