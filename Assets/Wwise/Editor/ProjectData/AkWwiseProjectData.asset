@@ -242,7 +242,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: f4ccbb95d042c543bd560120d28efaf5
     GuidInternal: 
-    m_lastTime: -8584150437691537037
+    m_lastTime: -8584148703772739739
     List:
     - name: BOSS
       guid: 34d61693d5e42d419f8b799d1ffe5126
@@ -369,6 +369,26 @@ MonoBehaviour:
         ObjectType: 3
         guid: 10fd495d9187d848afaf4b51734b3dc2
       Path: Events\Default Work Unit\ENEMY\ZOMBIE\New_Event
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: New_Event_01
+      guid: 072f3bdeb4926043a8e3cb1fde896895
+      id: 1027751982
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f4ccbb95d042c543bd560120d28efaf5
+      - ElementName: INTRO_OUTRO
+        ObjectType: 4
+        guid: b59c6009acdfa14e8aee4be48519d312
+      - ElementName: New_Event_01
+        ObjectType: 3
+        guid: 072f3bdeb4926043a8e3cb1fde896895
+      Path: Events\Default Work Unit\INTRO_OUTRO\New_Event_01
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -830,9 +850,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: c97ae1656e6c15429ca1b86be6a83a31
       Path: Events\Default Work Unit\ENVIRONMENT\Play_Jumping_Atmo_Sound
-      maxAttenuation: 10
-      maxDuration: 9.643653
-      minDuration: 0.85526276
+      maxAttenuation: 25
+      maxDuration: 8.591518
+      minDuration: 0.96
     - name: Play_Menu___UI_MouseOver2
       guid: ff94a0dc36ef8b4dbd5d5ff19603b3a5
       id: 2806707962
